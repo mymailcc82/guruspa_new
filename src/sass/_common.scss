@@ -1,0 +1,46 @@
+@use 'setting' as *;
+
+.content-width{
+    width: 85%;
+    max-width: $content-width;
+    margin: 0 auto;
+}
+
+img.lazyload {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  img.lazyloaded {
+    opacity: 1 !important;
+  }
+
+
+.hidden-middle{
+    @include media(middle){
+        display: none !important;
+    }
+}
+.hidden-sm{
+    @include media(sm){
+        display: none !important;
+    }
+}
+.hidden-md{
+    @include media(md){
+        display: none !important;
+    }
+}
+
+.hidden-mobile{
+    @include media(mobile){
+        display: none !important;
+    }
+}
+
+.mb-0{
+    margin-bottom: 0 !important;
+}
+.mb-10{
+    margin-bottom: 10px !important;
+}

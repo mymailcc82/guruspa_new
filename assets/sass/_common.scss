@@ -1,0 +1,32 @@
+@use 'setting' as *;
+
+.content-width{
+    width: 85%;
+    max-width: $content-width;
+    margin: 0 auto;
+}
+
+
+.hidden-middle{
+    @include media(middle){
+        display: none !important;
+    }
+}
+.hidden-sm{
+    @include media(sm){
+        display: none !important;
+    }
+}
+
+.hidden-mobile{
+    @include media(mobile){
+        display: none !important;
+    }
+}
+
+.mb-0{
+    margin-bottom: 0 !important;
+}
+.mb-10{
+    margin-bottom: 10px !important;
+}

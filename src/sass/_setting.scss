@@ -1,0 +1,44 @@
+//コンテンツ幅
+$font-mincho:'Yu Mincho Light','YuMincho','Yu Mincho','游明朝体','ヒラギノ明朝 ProN','Hiragino Mincho ProN','メイリオ', Meiryo,sans-serif;
+$font-gothic:"Noto Sans JP",'游ゴシック体', 'Yu Gothic', 'YuGothic','Yu Gothic UI','ＭＳ ゴシック','ヒラギノ角ゴシック','Hiragino Sans','メイリオ', Meiryo,sans-serif;
+
+$font-en: 'Merriweather', serif;
+
+$default-font-size-title: 20px;
+$default-font-size-title-middle: 18px;
+$default-font-size: 16px;
+$default-font-size-middle: 16px;
+
+$letter-spacing: 0.12em;
+
+$content-width: 1080px;
+
+$color-main: #005993;
+$color-blue:#005993;
+$color-black: #000;
+$color-red: #cf0010;
+$color-bg: #eefcff;
+$contact-bg: #1f5e7d;
+
+
+$large: new-breakpoint(min-width 1200px 12);
+$middle: new-breakpoint(max-width 1199px 12);
+$middle-min: new-breakpoint(min-width 768px max-width 1199px 12);
+$mobile: new-breakpoint(max-width 767px 12);
+
+$breakpoints: (
+  'sm': 'screen and (min-width: 601px)',
+  'middle': 'screen and (max-width: 1024px)',
+  'mobile': 'screen and (max-width: 600px)',
+  'md': 'screen and (min-width: 1025px)',
+  'lg': 'screen and (max-width: 1200px)',
+  'llg': 'screen and (max-width: 1400px)',
+  'xl': 'screen and (min-width: 1200px)',
+) !default;
+
+
+@mixin media($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
