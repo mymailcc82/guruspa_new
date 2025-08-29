@@ -6,6 +6,15 @@
     margin: 0 auto;
 }
 
+img.lazyload {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  img.lazyloaded {
+    opacity: 1 !important;
+  }
+
 
 .hidden-middle{
     @include media(middle){
@@ -14,6 +23,11 @@
 }
 .hidden-sm{
     @include media(sm){
+        display: none !important;
+    }
+}
+.hidden-md{
+    @include media(md){
         display: none !important;
     }
 }

@@ -9,10 +9,11 @@ $default-font-size-title-middle: 18px;
 $default-font-size: 16px;
 $default-font-size-middle: 16px;
 
-
+$letter-spacing: 0.12em;
 
 $content-width: 1080px;
 
+$color-main: #005993;
 $color-blue:#005993;
 $color-black: #000;
 $color-red: #cf0010;
@@ -31,6 +32,7 @@ $breakpoints: (
   'mobile': 'screen and (max-width: 600px)',
   'md': 'screen and (min-width: 1025px)',
   'lg': 'screen and (max-width: 1200px)',
+  'llg': 'screen and (max-width: 1400px)',
   'xl': 'screen and (min-width: 1200px)',
 ) !default;
 

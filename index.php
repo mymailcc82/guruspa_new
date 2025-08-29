@@ -2,5 +2,229 @@
 
 <main class="top">
 
+    <div class="top_logo">
+        <div class="top_logo_img">
+            <!-- Generator: Adobe Illustrator 27.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+            <svg version="1.1" id="レイヤー_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                y="0px" viewBox="0 0 340.6 73.5" style="enable-background:new 0 0 340.6 73.5;" xml:space="preserve">
+                <style type="text/css">
+                    .st0 {
+                        fill: none;
+                    }
+
+                    .st1 {
+                        fill: #231815;
+                    }
+
+                    .st2 {
+                        fill: #E6211A;
+                        opacity: 0;
+                    }
+
+                    .st3 {
+                        fill: #F4BA1B;
+                        opacity: 1;
+                    }
+
+                    .st4 {
+                        fill: #204994;
+                        opacity: 0;
+                    }
+
+                    .st5 {
+                        fill: #5DB131;
+                        opacity: 0;
+                    }
+                </style>
+                <rect class="st0" width="340.6" height="73.5" />
+                <path id="path_1000" class="st1" d="M175,64.9c-12.1,0-20.9-4.8-21.6-19.1V14h10.9v31.2c0,2.2,0.6,4.4,1.8,6.3
+	c2.1,3,5,4.1,8.5,4.1c3.6,0,6.9-0.6,9.2-4.1c1.1-1.9,1.6-4,1.5-6.2l0.1-31.3h11.2v30.2C197,58.5,187,64.9,175,64.9" />
+                <path id="path_1001" class="st2" d="M66.4,68c0,1.7-1.4,3.1-3.1,3.1c-1.7,0-3.1-1.4-3.1-3.1c0-1.7,1.4-3.1,3.1-3.1
+	C65,64.8,66.4,66.2,66.4,68" />
+                <path id="path_1002" class="st2" d="M77.3,70.4c0,1.7-1.3,3.1-3.1,3.1c0,0,0,0,0,0c-1.8,0-3.2-1.4-3.2-3.2c0-1.7,1.4-3.1,3.1-3.1
+	c1.7,0,3.1,1.3,3.2,3C77.3,70.2,77.3,70.3,77.3,70.4" />
+                <path id="path_1003" class="st2" d="M87.8,68.1c0,1.7-1.4,3.1-3.1,3.1c-1.7,0-3.2-1.3-3.2-3.1c0-1.7,1.3-3.2,3.1-3.2
+	C86.3,64.9,87.7,66.3,87.8,68.1C87.8,68,87.8,68.1,87.8,68.1" />
+                <path id="path_1004" class="st1" d="M134.9,63.9l-12.6-18.5h-5.1v18.5h-11.1V13.9h17.7c13.9,0,20,5.8,20.6,15.1
+	c0.5,7-5.2,13-10.8,14.6l14.3,20.2L134.9,63.9z M133.8,29.1c0-3.9-4.5-6.1-9.1-6h-7.4v13h7.2C129.1,36.3,133.8,33.2,133.8,29.1" />
+                <path id="path_1005" class="st1" d="M238.9,25.2c-4.5-1.9-9.4-2.9-14.3-3c-3.1,0-8.7,0.3-8.7,5.4c0,10.6,25.9,0.3,25.9,22.1
+	c0,12.1-12.6,15.3-21.7,15.3c-5.3,0-10.5-1.2-15.3-3.4l-0.1-9.3c4.1,2.1,11.1,3,15.2,3.1c5.7,0.1,10.8-2.6,10.8-5.7
+	c0-10.6-25.7-2-25.7-21.1c0-11.1,7.7-15.8,21-15.8c4.4,0,9.2,1.8,12.9,3.1L238.9,25.2z" />
+                <path id="path_1007" class="st3" d="M286.3,14.1l-4.9-2l2-12.1l5.8,2.5L286.3,14.1z" />
+                <path id="path_1008" class="st3" d="M291.1,18.2l-4-3.5l5.8-10.8l4.7,4.3L291.1,18.2z" />
+                <path id="path_1011" class="st1" d="M21.7,36.2v9.2h11.4v10.1c-1.2,0-4.3,0.1-6.7,0.1c-10.5,0-15-7.6-15-16.8
+	c0-10.1,8.7-16.4,15.4-16.5c5.7-0.1,12.2,0.8,15.5,2.3v-9.7c-2.9-1.3-8.2-1.9-15.7-1.9C10.7,12.9,0,26.1,0,38.7
+	C0,54.4,8.7,65,26.8,65c5.8,0.1,11.6-0.9,17.1-2.7L44,45.3v-9.2H21.7z" />
+                <path id="path_1012" class="st4" d="M63.5,35.8c0,12.2-1.2,20.1,11,20.1c12.3,0,11-9,11-14.8c-2.4,0.4-6.8,1.6-9.2-1
+	C74,37.8,70,33.2,63.5,35.8" />
+                <path id="path_1013" class="st3" d="M280.6,31.9c-0.8,4.7-3.2,7.2-5.6,8.5c-2.3,1.3-5.9,1.8-7.9,0.8c-3.9-1.9-6.4-5.8-6.3-10.2
+	c0-2.4,0.9-4.7,2.5-6.5c2.7-3.2,6.7-4.9,10.8-4.6c1.5,0.7,2.9,1.8,4,3C280.1,25.5,281,28.7,280.6,31.9" />
+                <path id="path_1014" class="st5" d="M306.6,51.2h17.5l-8.6-23.3L306.6,51.2z" />
+                <g>
+                    <path class="st1" d="M273.3,11.7L273.3,11.7c-4.5-0.1-9,1.3-12.6,3.9v-3.2H249v51.5h11.7V47c3.7,2.7,8.1,4.1,12.6,4
+		c9.5,0,20.4-7.4,20.4-20C293.7,20.3,284.7,11.7,273.3,11.7z M273,42.7L273,42.7c-2,0-4-0.4-5.7-1.3c0.1,0,0.2,0.1,0.3,0.1
+		c-0.2-0.1-0.3-0.1-0.5-0.2c-3.9-1.9-6.4-5.8-6.3-10.2c0-2.4,0.9-4.7,2.5-6.5c2.7-3.2,6.7-4.9,10.8-4.6c0.1,0.1,0.2,0.1,0.3,0.2
+		c-0.1-0.1-0.2-0.1-0.3-0.2c6.1,0.3,11.3,5.5,11.3,11.3C285.3,37.7,279.7,42.7,273,42.7z" />
+                    <path class="st1" d="M273.1,41.2c0.2,0,0.3-0.1,0.5-0.2C273.4,41.1,273.2,41.2,273.1,41.2z" />
+                    <path class="st1" d="M268.4,41.6c-0.1,0-0.2,0-0.3-0.1C268.1,41.6,268.3,41.6,268.4,41.6z" />
+                    <path class="st1" d="M274.1,40.9c0.1,0,0.1,0,0.2-0.1C274.2,40.8,274.1,40.8,274.1,40.9z" />
+                    <path class="st1" d="M269.3,41.7c-0.1,0-0.2,0-0.3,0C269.1,41.7,269.2,41.7,269.3,41.7z" />
+                    <path class="st1" d="M271,41.7c0.1,0,0.3,0,0.4-0.1C271.2,41.6,271.1,41.6,271,41.7z" />
+                    <path class="st1" d="M269.9,41.7c0.1,0,0.2,0,0.3,0C270.2,41.7,270.1,41.7,269.9,41.7z" />
+                    <path class="st1" d="M272,41.5c0.2,0,0.3-0.1,0.5-0.1C272.3,41.4,272.2,41.5,272,41.5z" />
+                </g>
+                <g>
+                    <path class="st1" d="M85.3,14l0,27.1h0c0,5.7,1.3,14.6-10.6,14.6C62.9,55.6,64,47.8,64,35.8V14H52.9v31.9
+		C53.6,60.1,62.4,65,74.5,65c13.5,0,22-6.4,21.6-20.7l0,0V14H85.3z" />
+                </g>
+                <polygon class="st1" points="320.1,13.6 310.3,13.6 290.1,64.2 301.6,64.2 303.8,58.6 312.3,58.6 312.3,51.2 306.6,51.2 315.5,27.9 
+	324.1,51.2 317.3,51.2 317.3,58.5 326.9,58.5 329,64.2 340.6,64.2 " />
+            </svg>
+
+        </div>
+
+
+    </div>
+
 </main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"></script>
+<style>
+    /* 基本設定 */
+    .top_logo_img svg {
+        overflow: visible;
+    }
+
+    /* 下端基準で縦スケールする .st4（重要） */
+    .top_logo_img svg .st4 {
+        transform-box: fill-box;
+        -webkit-transform-box: fill-box;
+        transform-origin: 50% 0%;
+        -webkit-transform-origin: 50% 0%;
+        will-change: transform, opacity;
+    }
+
+    /* path の横スライド用に transform-box を念のため設定 */
+    .top_logo_img svg path,
+    .top_logo_img svg .st5 {
+        transform-box: fill-box;
+        -webkit-transform-box: fill-box;
+        will-change: transform, opacity;
+    }
+
+
+
+    /* reduced motion 対応のためのCSS（任意） */
+    @media (prefers-reduced-motion: reduce) {
+        .top_logo_img svg * {
+            transition: none !important;
+            animation: none !important;
+        }
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // ------------- セレクタ（英語ID / 日本語ID の両方に対応） -------------
+        const st2Sel = '.top_logo_img svg .st2';
+        const st4Sel = '.top_logo_img svg .st4';
+
+        // path の id は SVG で "path_1013" のように日本語名になっている可能性があるため、
+        // 英語版の #path_1013 と日本語版の [id="path_1013"] の両方を試すセレクタを使う
+        const path1013Sel = '#path_1013, [id="path_1013"], #path_1013, [id="path_1013"]';
+        const path1007Sel = '#path_1007, [id="path_1007"], #path_1007, [id="path_1007"]';
+        const path1008Sel = '#path_1008, [id="path_1008"], #path_1008, [id="path_1008"]';
+
+        const st5Sel = '.top_logo_img svg .st5';
+
+        // ------------- reduced motion チェック -------------
+        const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (prefersReduced) {
+            gsap.set([st2Sel, st4Sel, path1013Sel, path1007Sel, path1008Sel, st5Sel], {
+                opacity: 1,
+                x: 0,
+                y: 0,
+                scaleY: 1
+            });
+            return;
+        }
+
+        // ------------- 初期状態を確実にセット -------------
+        gsap.set(st2Sel, {
+            y: 8,
+            opacity: 0
+        }); // st2 は少し下からフェードイン
+        gsap.set(st4Sel, {
+            scaleY: 0,
+            opacity: 0
+        }); // st4 は縦スケールで登場（下端固定）
+        gsap.set(path1013Sel, {
+            opacity: 0
+        }); // st4 は縦スケールで登場（下端固定）
+        gsap.set([path1007Sel, path1008Sel], {
+            x: 0,
+            opacity: 0
+        }); // path は見えないように
+        // path1013 は左から出すので少し左に移動しておく
+        gsap.set(path1013Sel, {
+            x: -10,
+            opacity: 0
+        });
+
+        gsap.set(st5Sel, {
+            opacity: 0
+        }); // st5 はその場でフェードイン
+
+        // ------------- タイムライン -------------
+        const tl = gsap.timeline({
+            defaults: {
+                duration: 0.4,
+                ease: 'power2.out'
+            }
+        });
+
+        // 1) .st2 を時差でフェードイン（下から）
+        tl.to(st2Sel, {
+            y: 0,
+            opacity: 1,
+            stagger: 0.12
+        }, '+=0.01');
+
+        // 2) .st4 をその場から下端固定で上に伸ばす（縦方向scale）
+        tl.to(st4Sel, {
+            scaleY: 1,
+            opacity: 1,
+            duration: 0.8,
+            ease: 'power2.out',
+            stagger: 0.06
+        }, 'revealPaths');
+        tl.addLabel('revealPaths', '+=0.06');
+
+        // 3) #path_1013 を左から右にスライドイン（少し速め）
+        tl.to(path1013Sel, {
+            x: 0,
+            opacity: 1,
+            duration: .6,
+            ease: 'power2.out'
+        }, '+=0.06');
+
+        // 4) #path_1007 と #path_1008 をフェードイン（同時に、少しだけstagger）
+        tl.to([path1007Sel, path1008Sel], {
+            opacity: 1,
+            y: 0,
+            duration: 0.5,
+            stagger: 0.08,
+            ease: 'power2.out'
+        }, 'revealPaths');
+
+        // 5) 最後に .st5 をその場でフェードイン
+        tl.to(st5Sel, {
+            opacity: 1,
+            duration: 1,
+            ease: 'power2.out'
+        }, '+=0.08');
+
+        // ------------- end timeline -------------
+    });
+</script>
 <?php get_footer(); ?>
