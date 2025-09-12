@@ -2,14 +2,46 @@
 
 .top {
   height: 400px;
-
   .top_logo {
     position: fixed;
     width: 100%;
     height: 100vh;
     left: 0px;
     top: 0px;
-    z-index: 100;
+    z-index: 1000;
     background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .top_logo_img {
+      width: 340px;
+      height: 73.5px;
+    }
   }
+}
+
+.st0 {
+  clip-path: url(#SVGID_00000002343766910478080920000014404344425281323689_);
+}
+
+.st1 {
+  fill: #231815;
+}
+
+.st2 {
+  fill: #e6211a;
+  opacity: 0;
+}
+
+.st3 {
+  fill: #f4ba1b;
+}
+
+.st4 {
+  fill: #204994;
+}
+
+.st5 {
+  fill: #5db131;
 }
