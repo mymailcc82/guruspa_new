@@ -1,7 +1,7 @@
 
 
-  //.mwform-checkbox-fieldの.mwform-checkbox-field-textに<a href="/privacy" target="_blank" class="contact_inner_form-link">個人情報保護方針</a>に同意する'を追加
-  $(document).ready(function() {
+//.mwform-checkbox-fieldの.mwform-checkbox-field-textに<a href="/privacy" target="_blank" class="contact_inner_form-link">個人情報保護方針</a>に同意する'を追加
+$(document).ready(function () {
     // .mwform-checkbox-field の中の .mwform-checkbox-field-text を探す
     $('.mwform-checkbox-field .mwform-checkbox-field-text').html(
         '<a href="/privacy" target="_blank" class="contact_inner_form-link">個人情報保護方針</a>に同意する'
@@ -10,15 +10,15 @@
 
 
 
-$('.header-btn').on('click', function() {
-  $(".header-btn").toggleClass("header-btn-active");  
-  $(".header-drawer").toggleClass("header-drawer-active");  
-  $(".body").toggleClass("body-drawer");  
+$('.header-btn').on('click', function () {
+    $(".header-btn").toggleClass("header-btn-active");
+    $(".header-drawer").toggleClass("header-drawer-active");
+    $(".body").toggleClass("body-drawer");
 })
 
 
 
-$('.footer-link-btn').on('click', function() {
+$('.footer-link-btn').on('click', function () {
     $(this).toggleClass('footer-link-btn-active');
     $(this).parent().next().toggleClass("ul-active");
 })
@@ -26,20 +26,20 @@ $('.footer-link-btn').on('click', function() {
 //footerのsp版でメニュークリックすると開くギミック
 $(function () {
     $('.acdn-switch').on('click', function () {
-      $(this).next().slideToggle();
-      if ($(this).hasClass('open')) {
-        $(this).removeClass('open');
-      } else {
-        $(this).addClass('open');
-      }
+        $(this).next().slideToggle();
+        if ($(this).hasClass('open')) {
+            $(this).removeClass('open');
+        } else {
+            $(this).addClass('open');
+        }
     });
-  });
+});
 
-  
-  
+
+
 
 //
-$(document).ready(function() {
+$(document).ready(function () {
     // ハッシュが存在する場合（URLが#で終わっている）
     if (window.location.hash) {
         // ハッシュをターゲットに変換
@@ -49,24 +49,24 @@ $(document).ready(function() {
             // スクロール位置を取得し、50px上に余白を設定
             var position = target.offset().top - 50; // 50px上に設定
             // アニメーションでスクロール
-            $('html, body').animate({scrollTop: position}, 600, 'swing');
+            $('html, body').animate({ scrollTop: position }, 600, 'swing');
         }
     }
 });
 
 
 // #にダブルクォーテーションが必要
-$('a[href^="#"]').click(function() {
+$('a[href^="#"]').click(function () {
     var speed = 600;
-    var href= $(this).attr("href");
+    var href = $(this).attr("href");
     var target = $(href == "#" || href == "" ? 'html' : href);
     var position = target.offset().top - 120;
-    $('html, body').animate({scrollTop:position}, speed, 'swing'); // 修正箇所
+    $('html, body').animate({ scrollTop: position }, speed, 'swing'); // 修正箇所
     return false;
 });
- 
- 
- // すべての ".ani-fade" 要素を取得
+
+
+// すべての ".ani-fade" 要素を取得
 const elements_fade = document.querySelectorAll(".ani-fade");
 
 // 各要素に対してアニメーションを適用
@@ -118,43 +118,43 @@ titleElements.forEach(titleElement => {
 });
 
 
-    const elements_check = document.querySelectorAll(".title-ani");
+const elements_check = document.querySelectorAll(".title-ani");
 
-    // 各要素に対してアニメーションを適用
-    elements_check.forEach(element => {
-      gsap.fromTo(
-          element, // アニメーションさせる要素
-          {}, {
-              scrollTrigger: {
-                  trigger: element, // アニメーションが始まるトリガーとなる要素
-                  toggleActions: "play none none reverse", // 上スクロールで戻る
-                  start: "top center+=35%", // アニメーションの開始位置
-                  markers: false, // マーカー表示
-                  once: true, // 一度だけ発火
-                  //class追加
-                  onEnter: () => {
-                    // -visible クラスを追加
-                    //element.classList.add('-visible');
-                    // 各 span にアニメーションを適用（時間差あり）
-                    gsap.fromTo(
-                        element.querySelectorAll("span"),
-                        { 
-                            opacity: 0,
-                            y: "50%"
-                        },
-                        { 
-                            opacity: 1,
-                            y: "0%",
-                            duration: 0.1, // 0.6秒で変化
-                            stagger: 0.05, // 0.1秒ごとに順番にアニメーション
-                            //ease: "power2.out"
-                        }
-                    );
-                }
-              },
-          }
-      );
-  });
+// 各要素に対してアニメーションを適用
+elements_check.forEach(element => {
+    gsap.fromTo(
+        element, // アニメーションさせる要素
+        {}, {
+        scrollTrigger: {
+            trigger: element, // アニメーションが始まるトリガーとなる要素
+            toggleActions: "play none none reverse", // 上スクロールで戻る
+            start: "top center+=35%", // アニメーションの開始位置
+            markers: false, // マーカー表示
+            once: true, // 一度だけ発火
+            //class追加
+            onEnter: () => {
+                // -visible クラスを追加
+                //element.classList.add('-visible');
+                // 各 span にアニメーションを適用（時間差あり）
+                gsap.fromTo(
+                    element.querySelectorAll("span"),
+                    {
+                        opacity: 0,
+                        y: "50%"
+                    },
+                    {
+                        opacity: 1,
+                        y: "0%",
+                        duration: 0.1, // 0.6秒で変化
+                        stagger: 0.05, // 0.1秒ごとに順番にアニメーション
+                        //ease: "power2.out"
+                    }
+                );
+            }
+        },
+    }
+    );
+});
 
 /*
 // すべての ".ani-fade" 要素を取得
@@ -204,4 +204,47 @@ gsap.fromTo(
 
 
 
-  
+$(function () {
+    $(function () {
+        document.addEventListener('DOMContentLoaded', () => {
+            const animatedTitle = document.querySelector('.animated-title');
+            const titleSpans = animatedTitle.querySelectorAll('.title');
+            const sprout = animatedTitle.querySelector('.title-item-sprou');
+            const sun = animatedTitle.querySelector('.title-item-sun');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animatedTitle.classList.add('in-view');
+
+                        // 文字アニメーション（遅延はCSSで制御）
+                        titleSpans.forEach((span, index) => {
+                            span.classList.add('in-view');
+                        });
+
+                        // sprout の位置を最後の文字の右上に配置
+                        const lastTitle = titleSpans[titleSpans.length - 1];
+                        if (lastTitle && sprout) {
+                            const rect = lastTitle.getBoundingClientRect();
+                            const parentRect = animatedTitle.getBoundingClientRect();
+
+                            const offsetLeft = rect.left - parentRect.left + rect.width * 0.5;
+                            const offsetTop = rect.top - parentRect.top - sprout.offsetHeight * 0.8;
+
+                            sprout.style.left = `${offsetLeft}px`;
+                            sprout.style.top = `${offsetTop}px`;
+                        }
+
+                        observer.unobserve(animatedTitle);
+                    }
+                });
+            }, {
+                threshold: 0.5
+            });
+
+            observer.observe(animatedTitle);
+        });
+    });
+
+
+});

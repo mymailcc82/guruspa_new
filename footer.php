@@ -1,34 +1,80 @@
 <footer class="footer">
     <div class="content-width">
         <div class="footer-wrap">
-            <div class="footer-wrap-left">
-                <div class="footer-wrap-left-logo">
-                    <a href="<?php echo home_url(); ?>" class="footer-logo">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/logo.png" alt="会社名">
-                    </a>
-                </div>
-                <div class="footer-wrap-left-txt">
-                    <h2>会社名</h2>
-                </div>
+            <div class="footer-wrap-menu">
+                <dl>
+                    <dt><a href="<?php echo home_url(); ?>">ご利用案内</a></dt>
+                    <dd><a href="<?php echo home_url(); ?>">ー料金案内</a></dd>
+                    <dd><a href="<?php echo home_url(); ?>">ー営業時間</a></dd>
+                    <dd><a href="<?php echo home_url(); ?>">ー利用案内</a></dd>
+                    <dd><a href="<?php echo home_url(); ?>">ーアクセス</a></dd>
+                </dl>
+                <dl>
+                    <dt><a href="<?php echo home_url(); ?>">館内の楽しみ方</a></dt>
+                    <dd><a href="<?php echo home_url(); ?>">ー館内マップ</a></dd>
+                    <dd><a href="<?php echo home_url(); ?>">ーお風呂</a></dd>
+                    <dd><a href="<?php echo home_url(); ?>">ーサウナ</a></dd>
+                    <dd><a href="<?php echo home_url(); ?>">ー発汗エリア</a></dd>
+                    <dd><a href="<?php echo home_url(); ?>">ーご飲食</a></dd>
+                    <dd><a href="<?php echo home_url(); ?>">ーリラクゼーション</a></dd>
+                </dl>
+                <dl>
+                    <dt><a href="<?php echo home_url(); ?>">初めてのお客様へ</a></dt>
+                    <dd><a href="<?php echo home_url(); ?>">ーグルスパの魅力</a></dd>
+                    <dd><a href="<?php echo home_url(); ?>">ー入館の流れ</a></dd>
+                    <dd><a href="<?php echo home_url(); ?>">ー施設案内</a></dd>
+                </dl>
+                <dl>
+                    <dt><a href="<?php echo home_url(); ?>">イベント情報</a></dt>
+                    <dd><a href="<?php echo home_url(); ?>">ー当日のイベント</a></dd>
+                    <dd><a href="<?php echo home_url(); ?>">ーイベントスケジュール</a></dd>
+                </dl>
+                <dl>
+                    <dt><a href="<?php echo home_url(); ?>">お問い合わせ</a></dt>
+                    <dd><a href="<?php echo home_url(); ?>">ー個人のお客様</a></dd>
+                    <dd><a href="<?php echo home_url(); ?>">ー取材依頼・法人の方</a></dd>
+                </dl>
+                <dl>
+                    <dt><a href="<?php echo home_url(); ?>">お知らせ</a></dt>
+                    <dt><a href="<?php echo home_url(); ?>">FAQ</a></dt>
+                    <dt><a href="<?php echo home_url(); ?>">注意事項</a></dt>
+                    <dt><a href="<?php echo home_url(); ?>">採用情報</a></dt>
+                    <dt><a href="<?php echo home_url(); ?>">アメニティ</a></dt>
+                    <dt><a href="<?php echo home_url(); ?>">グッズ</a></dt>
+                </dl>
             </div>
-            <div class="footer-wrap-right">
-                <div class="footer-wrap-right-nav">
-                    <div class="footer-wrap-right-nav-col">
-                        <h3 class="hidden-middle"><a href="<?php echo home_url(); ?>/">私たちについて</a></h3>
-                        <h3 class="acdn-switch hidden-md"><a href="javascript:void(0);">私たちについて</a></h3>
-                        <div class="ul">
-                            <ul>
-                                <li class="hidden-md"><a href="<?php echo home_url(); ?>/service/">私たちについて トップ</a></li>
-                                <li><a href="<?php echo home_url(); ?>/service/#sec02">私たちについて</a></li>
-                                <li><a href="<?php echo home_url(); ?>/service/#sec03">選ばれる理由</a></li>
-                                <li><a href="<?php echo home_url(); ?>/service/#sec04">代表メッセージ</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="footer-wrap-right-nav-col">
-                        <h3><a href="<?php echo home_url(); ?>/store/">店舗一覧</a></h3>
-                        <h3><a href="<?php echo home_url(); ?>/store/">店舗一覧</a></h3>
-                    </div>
+
+            <ul class="footer-banner">
+                <li><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/banner-1.jpg" alt=""></a></li>
+                <li><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/banner-2.jpg" alt=""></a></li>
+                <li><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/banner-3.jpg" alt=""></a></li>
+                <li><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/banner-4.jpg" alt=""></a></li>
+            </ul>
+            <div class="footer-info">
+                <div class="footer-logo"><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/footer-logo.png" alt=""></a></div>
+                <div class="footer-access">
+                    <p>
+                        〒515-0813<br>
+                        三重県松阪市大塚町220-1<br>
+                        (イオンタウン松阪船江別棟)
+                    </p>
+                </div>
+                <div class="footer-info-wrap">
+                    <dl class="footer-info-wrap-time">
+                        <dt>営業時間</dt>
+                        <dd>
+                            【月〜木】10:00〜24:00<br>
+                            【土】7:00〜翌1:00
+                        </dd>
+                        <dd>
+                            【金】10:00〜翌1:00<br>
+                            【日】7:00〜24:00
+                        </dd>
+                    </dl>
+                    <dl class="footer-info-wrap-day">
+                        <dt>休館日</dt>
+                        <dd>年中無休</dd>
+                    </dl>
                 </div>
             </div>
         </div>
@@ -38,13 +84,15 @@
             <ul>
                 <li><a href="<?php echo home_url(); ?>/privacy/">個人情報保護方針</a></li>
                 <li><a href="<?php echo home_url(); ?>/sitemap/">サイトマップ</a></li>
+                <li><a href="<?php echo home_url(); ?>/privacy/">利用規約</a></li>
+                <li><a href="<?php echo home_url(); ?>/sitemap/">Cookieについて</a></li>
             </ul>
         </div>
-        <p class="copy">Copyright © 2024 <br class="hidden-sm">Copyright © 2024 All Rights Reserved.</p>
+        <p class="copy">©GURUSPA All rights reserved.</p>
     </div>
     <div class="footer-fixed">
         <a href="#">
-            ページの<br class="hidden-middle">先頭へ戻る<br><i></i>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-page-back.png" alt="">
         </a>
     </div>
 </footer>

@@ -1,91 +1,715 @@
 <?php get_header(); ?>
 
 <main class="top">
+    <div class="top-bg">
+        <p class="scroll-txt scroll-txt-change"><span class="blue">SPA</span>　<span class="green">RESORT</span><i></i><span class="yellow">GURU</span><span class="red">SPA</span></p>
+        <div class="top-visual">
+            <div class="top-visual-wrap">
+                <span class="bg-item-01"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/bg-item-01.png" alt=""></span>
+                <span class="bg-item-02"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/bg-item-02.png" alt=""></span>
+                <span class="icon-01"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01.png" alt=""></span>
+                <div class="top-visual-mv">
+                    <img class="top-visual-mv-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-dummy.png" alt="">
+                    <div class="top-visual-title">
+                        <h1>
+                            <div class="top_logo">
+                                <div class="top_logo_img">
+                                    <!-- Generator: Adobe Illustrator 27.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                                    <svg version="1.1" id="レイヤー_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                        y="0px" viewBox="0 0 340.6 73.5" style="enable-background:new 0 0 340.6 73.5;" xml:space="preserve">
+                                        <style type="text/css">
+                                            .st0 {
+                                                fill: none;
+                                            }
 
-    <div class="top_logo">
-        <div class="top_logo_img">
-            <!-- Generator: Adobe Illustrator 27.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-            <svg version="1.1" id="レイヤー_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                y="0px" viewBox="0 0 340.6 73.5" style="enable-background:new 0 0 340.6 73.5;" xml:space="preserve">
-                <style type="text/css">
-                    .st0 {
-                        fill: none;
-                    }
+                                            .st1 {
+                                                fill: #231815;
+                                            }
 
-                    .st1 {
-                        fill: #231815;
-                    }
+                                            .st2 {
+                                                fill: #E6211A;
+                                                opacity: 0;
+                                            }
 
-                    .st2 {
-                        fill: #E6211A;
-                        opacity: 0;
-                    }
+                                            .st3 {
+                                                fill: #F4BA1B;
+                                                opacity: 1;
+                                            }
 
-                    .st3 {
-                        fill: #F4BA1B;
-                        opacity: 1;
-                    }
+                                            .st4 {
+                                                fill: #204994;
+                                                opacity: 0;
+                                            }
 
-                    .st4 {
-                        fill: #204994;
-                        opacity: 0;
-                    }
-
-                    .st5 {
-                        fill: #5DB131;
-                        opacity: 0;
-                    }
-                </style>
-                <rect class="st0" width="340.6" height="73.5" />
-                <path id="path_1000" class="st1" d="M175,64.9c-12.1,0-20.9-4.8-21.6-19.1V14h10.9v31.2c0,2.2,0.6,4.4,1.8,6.3
+                                            .st5 {
+                                                fill: #5DB131;
+                                                opacity: 0;
+                                            }
+                                        </style>
+                                        <rect class="st0" width="340.6" height="73.5" />
+                                        <path id="path_1000" class="st1" d="M175,64.9c-12.1,0-20.9-4.8-21.6-19.1V14h10.9v31.2c0,2.2,0.6,4.4,1.8,6.3
 	c2.1,3,5,4.1,8.5,4.1c3.6,0,6.9-0.6,9.2-4.1c1.1-1.9,1.6-4,1.5-6.2l0.1-31.3h11.2v30.2C197,58.5,187,64.9,175,64.9" />
-                <path id="path_1001" class="st2" d="M66.4,68c0,1.7-1.4,3.1-3.1,3.1c-1.7,0-3.1-1.4-3.1-3.1c0-1.7,1.4-3.1,3.1-3.1
+                                        <path id="path_1001" class="st2" d="M66.4,68c0,1.7-1.4,3.1-3.1,3.1c-1.7,0-3.1-1.4-3.1-3.1c0-1.7,1.4-3.1,3.1-3.1
 	C65,64.8,66.4,66.2,66.4,68" />
-                <path id="path_1002" class="st2" d="M77.3,70.4c0,1.7-1.3,3.1-3.1,3.1c0,0,0,0,0,0c-1.8,0-3.2-1.4-3.2-3.2c0-1.7,1.4-3.1,3.1-3.1
+                                        <path id="path_1002" class="st2" d="M77.3,70.4c0,1.7-1.3,3.1-3.1,3.1c0,0,0,0,0,0c-1.8,0-3.2-1.4-3.2-3.2c0-1.7,1.4-3.1,3.1-3.1
 	c1.7,0,3.1,1.3,3.2,3C77.3,70.2,77.3,70.3,77.3,70.4" />
-                <path id="path_1003" class="st2" d="M87.8,68.1c0,1.7-1.4,3.1-3.1,3.1c-1.7,0-3.2-1.3-3.2-3.1c0-1.7,1.3-3.2,3.1-3.2
+                                        <path id="path_1003" class="st2" d="M87.8,68.1c0,1.7-1.4,3.1-3.1,3.1c-1.7,0-3.2-1.3-3.2-3.1c0-1.7,1.3-3.2,3.1-3.2
 	C86.3,64.9,87.7,66.3,87.8,68.1C87.8,68,87.8,68.1,87.8,68.1" />
-                <path id="path_1004" class="st1" d="M134.9,63.9l-12.6-18.5h-5.1v18.5h-11.1V13.9h17.7c13.9,0,20,5.8,20.6,15.1
+                                        <path id="path_1004" class="st1" d="M134.9,63.9l-12.6-18.5h-5.1v18.5h-11.1V13.9h17.7c13.9,0,20,5.8,20.6,15.1
 	c0.5,7-5.2,13-10.8,14.6l14.3,20.2L134.9,63.9z M133.8,29.1c0-3.9-4.5-6.1-9.1-6h-7.4v13h7.2C129.1,36.3,133.8,33.2,133.8,29.1" />
-                <path id="path_1005" class="st1" d="M238.9,25.2c-4.5-1.9-9.4-2.9-14.3-3c-3.1,0-8.7,0.3-8.7,5.4c0,10.6,25.9,0.3,25.9,22.1
+                                        <path id="path_1005" class="st1" d="M238.9,25.2c-4.5-1.9-9.4-2.9-14.3-3c-3.1,0-8.7,0.3-8.7,5.4c0,10.6,25.9,0.3,25.9,22.1
 	c0,12.1-12.6,15.3-21.7,15.3c-5.3,0-10.5-1.2-15.3-3.4l-0.1-9.3c4.1,2.1,11.1,3,15.2,3.1c5.7,0.1,10.8-2.6,10.8-5.7
 	c0-10.6-25.7-2-25.7-21.1c0-11.1,7.7-15.8,21-15.8c4.4,0,9.2,1.8,12.9,3.1L238.9,25.2z" />
-                <path id="path_1007" class="st3" d="M286.3,14.1l-4.9-2l2-12.1l5.8,2.5L286.3,14.1z" />
-                <path id="path_1008" class="st3" d="M291.1,18.2l-4-3.5l5.8-10.8l4.7,4.3L291.1,18.2z" />
-                <path id="path_1011" class="st1" d="M21.7,36.2v9.2h11.4v10.1c-1.2,0-4.3,0.1-6.7,0.1c-10.5,0-15-7.6-15-16.8
+                                        <path id="path_1007" class="st3" d="M286.3,14.1l-4.9-2l2-12.1l5.8,2.5L286.3,14.1z" />
+                                        <path id="path_1008" class="st3" d="M291.1,18.2l-4-3.5l5.8-10.8l4.7,4.3L291.1,18.2z" />
+                                        <path id="path_1011" class="st1" d="M21.7,36.2v9.2h11.4v10.1c-1.2,0-4.3,0.1-6.7,0.1c-10.5,0-15-7.6-15-16.8
 	c0-10.1,8.7-16.4,15.4-16.5c5.7-0.1,12.2,0.8,15.5,2.3v-9.7c-2.9-1.3-8.2-1.9-15.7-1.9C10.7,12.9,0,26.1,0,38.7
 	C0,54.4,8.7,65,26.8,65c5.8,0.1,11.6-0.9,17.1-2.7L44,45.3v-9.2H21.7z" />
-                <path id="path_1012" class="st4" d="M63.5,35.8c0,12.2-1.2,20.1,11,20.1c12.3,0,11-9,11-14.8c-2.4,0.4-6.8,1.6-9.2-1
+                                        <path id="path_1012" class="st4" d="M63.5,35.8c0,12.2-1.2,20.1,11,20.1c12.3,0,11-9,11-14.8c-2.4,0.4-6.8,1.6-9.2-1
 	C74,37.8,70,33.2,63.5,35.8" />
-                <path id="path_1013" class="st3" d="M280.6,31.9c-0.8,4.7-3.2,7.2-5.6,8.5c-2.3,1.3-5.9,1.8-7.9,0.8c-3.9-1.9-6.4-5.8-6.3-10.2
+                                        <path id="path_1013" class="st3" d="M280.6,31.9c-0.8,4.7-3.2,7.2-5.6,8.5c-2.3,1.3-5.9,1.8-7.9,0.8c-3.9-1.9-6.4-5.8-6.3-10.2
 	c0-2.4,0.9-4.7,2.5-6.5c2.7-3.2,6.7-4.9,10.8-4.6c1.5,0.7,2.9,1.8,4,3C280.1,25.5,281,28.7,280.6,31.9" />
-                <path id="path_1014" class="st5" d="M306.6,51.2h17.5l-8.6-23.3L306.6,51.2z" />
-                <g>
-                    <path class="st1" d="M273.3,11.7L273.3,11.7c-4.5-0.1-9,1.3-12.6,3.9v-3.2H249v51.5h11.7V47c3.7,2.7,8.1,4.1,12.6,4
+                                        <path id="path_1014" class="st5" d="M306.6,51.2h17.5l-8.6-23.3L306.6,51.2z" />
+                                        <g>
+                                            <path class="st1" d="M273.3,11.7L273.3,11.7c-4.5-0.1-9,1.3-12.6,3.9v-3.2H249v51.5h11.7V47c3.7,2.7,8.1,4.1,12.6,4
 		c9.5,0,20.4-7.4,20.4-20C293.7,20.3,284.7,11.7,273.3,11.7z M273,42.7L273,42.7c-2,0-4-0.4-5.7-1.3c0.1,0,0.2,0.1,0.3,0.1
 		c-0.2-0.1-0.3-0.1-0.5-0.2c-3.9-1.9-6.4-5.8-6.3-10.2c0-2.4,0.9-4.7,2.5-6.5c2.7-3.2,6.7-4.9,10.8-4.6c0.1,0.1,0.2,0.1,0.3,0.2
 		c-0.1-0.1-0.2-0.1-0.3-0.2c6.1,0.3,11.3,5.5,11.3,11.3C285.3,37.7,279.7,42.7,273,42.7z" />
-                    <path class="st1" d="M273.1,41.2c0.2,0,0.3-0.1,0.5-0.2C273.4,41.1,273.2,41.2,273.1,41.2z" />
-                    <path class="st1" d="M268.4,41.6c-0.1,0-0.2,0-0.3-0.1C268.1,41.6,268.3,41.6,268.4,41.6z" />
-                    <path class="st1" d="M274.1,40.9c0.1,0,0.1,0,0.2-0.1C274.2,40.8,274.1,40.8,274.1,40.9z" />
-                    <path class="st1" d="M269.3,41.7c-0.1,0-0.2,0-0.3,0C269.1,41.7,269.2,41.7,269.3,41.7z" />
-                    <path class="st1" d="M271,41.7c0.1,0,0.3,0,0.4-0.1C271.2,41.6,271.1,41.6,271,41.7z" />
-                    <path class="st1" d="M269.9,41.7c0.1,0,0.2,0,0.3,0C270.2,41.7,270.1,41.7,269.9,41.7z" />
-                    <path class="st1" d="M272,41.5c0.2,0,0.3-0.1,0.5-0.1C272.3,41.4,272.2,41.5,272,41.5z" />
-                </g>
-                <g>
-                    <path class="st1" d="M85.3,14l0,27.1h0c0,5.7,1.3,14.6-10.6,14.6C62.9,55.6,64,47.8,64,35.8V14H52.9v31.9
+                                            <path class="st1" d="M273.1,41.2c0.2,0,0.3-0.1,0.5-0.2C273.4,41.1,273.2,41.2,273.1,41.2z" />
+                                            <path class="st1" d="M268.4,41.6c-0.1,0-0.2,0-0.3-0.1C268.1,41.6,268.3,41.6,268.4,41.6z" />
+                                            <path class="st1" d="M274.1,40.9c0.1,0,0.1,0,0.2-0.1C274.2,40.8,274.1,40.8,274.1,40.9z" />
+                                            <path class="st1" d="M269.3,41.7c-0.1,0-0.2,0-0.3,0C269.1,41.7,269.2,41.7,269.3,41.7z" />
+                                            <path class="st1" d="M271,41.7c0.1,0,0.3,0,0.4-0.1C271.2,41.6,271.1,41.6,271,41.7z" />
+                                            <path class="st1" d="M269.9,41.7c0.1,0,0.2,0,0.3,0C270.2,41.7,270.1,41.7,269.9,41.7z" />
+                                            <path class="st1" d="M272,41.5c0.2,0,0.3-0.1,0.5-0.1C272.3,41.4,272.2,41.5,272,41.5z" />
+                                        </g>
+                                        <g>
+                                            <path class="st1" d="M85.3,14l0,27.1h0c0,5.7,1.3,14.6-10.6,14.6C62.9,55.6,64,47.8,64,35.8V14H52.9v31.9
 		C53.6,60.1,62.4,65,74.5,65c13.5,0,22-6.4,21.6-20.7l0,0V14H85.3z" />
-                </g>
-                <polygon class="st1" points="320.1,13.6 310.3,13.6 290.1,64.2 301.6,64.2 303.8,58.6 312.3,58.6 312.3,51.2 306.6,51.2 315.5,27.9 
+                                        </g>
+                                        <polygon class="st1" points="320.1,13.6 310.3,13.6 290.1,64.2 301.6,64.2 303.8,58.6 312.3,58.6 312.3,51.2 306.6,51.2 315.5,27.9 
 	324.1,51.2 317.3,51.2 317.3,58.5 326.9,58.5 329,64.2 340.6,64.2 " />
-            </svg>
+                                    </svg>
 
+                                </div>
+
+
+                            </div>
+                        </h1>
+                        <h2>心と身体がととのう、<span>ウェルビーイング</span>の楽園。</h2>
+                        <div class="top-news">
+                            <ul>
+                                <li>重要！</li>
+                                <li>
+                                    <a href="">
+                                        <h3><time>XX.XX.XX 更新</time>
+                                            ニュース内容が入ります。</h3>
+                                        <i></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
+        <section class="sec01">
+            <div class="sec01-wrap">
+                <div class="content-width-small">
+                    <div class="com-title center">
+                        <p>イベント情報</p>
+                        <h2 class="">
+                            <span class="title">E</span>
+                            <span class="title">V</span>
+                            <span class="title">E</span>
+                            <span class="title">N</span>
+                            <span class="title">T</span>
+                            <span class="title-item-sprout">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-sprout-blown.png" alt="">
+                            </span>
+                            <span class="title-item-sun">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/item-01.png" alt="">
+                            </span>
+                        </h2>
+                        <a href="">一覧を見る<i></i></a>
+                    </div>
 
+                    <div class="sec01-col">
+                        <ul class="sec01-col-select">
+                            <li class="active">すべて</li>
+                            <li>期間限定イベント</li>
+                            <li>定例イベント</li>
+                        </ul>
+
+                        <div class="sec01-col-main">
+                            <ul>
+                                <li><a href="">
+                                        <span class="hot">HOT!</span>
+                                        <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
+                                        <div class="img img-info">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-info.png" alt="">
+                                            <span class="title">INFOMATION</span>
+                                        </div>
+                                        <div class="text">
+                                            <span class="category category-info">ご案内</span>
+                                            <span class="term">XX.XX.XX〜</span>
+                                            <h3>イベントタイトルが入ります</h3>
+                                        </div>
+                                    </a></li>
+                                <li><a href="">
+                                        <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
+                                        <div class="img img-event">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-event.png" alt="">
+                                            <span class="title">EVENT</span>
+                                        </div>
+                                        <div class="text">
+                                            <span class="category category-event">イベント</span>
+                                            <span class="term">XX.XX.XX〜</span>
+                                            <h3>イベントタイトルが入ります</h3>
+                                        </div>
+                                    </a></li>
+                                <li><a href="">
+                                        <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
+                                        <div class="img img-food">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-food.png" alt="">
+                                            <span class="title">FOOD</span>
+                                        </div>
+                                        <div class="text">
+                                            <span class="category category-food">フード/キッチントキワ</span>
+                                            <span class="term">XX.XX.XX〜</span>
+                                            <h3>イベントタイトルが入ります</h3>
+                                        </div>
+                                    </a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="sec-01-col-under">
+                        <a href="">
+                            <div class="sec-01-col-under-img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-img-01.jpg" alt=""></div>
+                            <div class="sec-01-col-under-title">
+                                <h3>E<span>VENT</span><i class="icon-fire"></i><br>S<span>CHEDUL<span class="item-text">E</span></span><i class="icon-btn"></i></h3>
+                                <p>月間・毎日のイベントスケジュールをチェック！</p>
+                            </div>
+                            <div class="sec-01-col-under-move-item">
+                                <span><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-speaker.png" alt=""></span>
+                                <span><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-box.png" alt=""></span>
+                                <span><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-decoration-02.png" alt=""></span>
+                                <span><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-decoration-01.png" alt=""></span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sec02">
+            <div class="sec02-bg-top">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec02-bg-top.png" alt="">
+                <span class="bg-item-06"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/bg-item-06.png" alt=""></span>
+                <span class="bg-item-05"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/bg-item-05.png" alt=""></span>
+            </div>
+            <div class="sec02-bg">
+                <div class="sec02-wrap">
+                    <div class="com-title com-title-left com-title-white">
+                        <p class="color-white">イベント情報</p>
+                        <h2 class="color-white">
+                            <span class="title">N</span>
+                            <span class="title">E</span>
+                            <span class="title">W</span>
+                            <span class="title">S</span>
+                            <span class="title-item-sprout">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-sprout-white.png" alt="">
+                            </span>
+                            <span class="title-item-sun">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/item-01.png" alt="">
+                            </span>
+                        </h2>
+                        <a href="">一覧を見る<i></i></a>
+                    </div>
+
+                    <div class="content-width">
+                        <div class="sec02-list">
+                            <div class="sec02-list-wrap sec02-list-wrap-left">
+                                <h3>NEWS<a href="">一覧を見る<i></i></a></h3>
+
+                                <ul>
+                                    <li><a href="">
+                                            <div class="sec02-list-img">
+                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/dummy-small.jpg" alt="">
+                                            </div>
+                                            <div class="sec02-list-txt">
+                                                <span class="category">お知らせ</span>
+                                                <time>XX.XX.XX</time>
+                                                <h4>ニュースタイトルが入りますニュースタイトルが入ります</h4>
+                                            </div>
+                                        </a></li>
+                                    <li><a href="">
+                                            <div class="sec02-list-img">
+                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-img-02.jpg" alt="">
+                                            </div>
+                                            <div class="sec02-list-txt">
+                                                <span class="category">お知らせ</span>
+                                                <time>XX.XX.XX</time>
+                                                <h4>ニュースタイトルが入りますニュースタイトルが入ります</h4>
+                                            </div>
+                                        </a></li>
+                                    <li><a href="">
+                                            <div class="sec02-list-img">
+                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/dummy-small.jpg" alt="">
+                                            </div>
+                                            <div class="sec02-list-txt">
+                                                <span class="category">お知らせ</span>
+                                                <time>XX.XX.XX</time>
+                                                <h4>ニュースタイトルが入りますニュースタイトルが入ります</h4>
+                                            </div>
+                                        </a></li>
+                                </ul>
+                            </div>
+                            <div class="sec02-list-wrap sec02-list-wrap-right">
+                                <h3>MEDIA<a href="">一覧を見る<i></i></a></h3>
+                                <ul>
+                                    <li><a href="">
+                                            <div class="sec02-list-img">
+                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/dummy-small.jpg" alt="">
+                                            </div>
+                                            <div class="sec02-list-txt">
+                                                <span class="category">メディア掲載</span>
+                                                <time>XX.XX.XX</time>
+                                                <h4>ニュースタイトルが入りますニュースタイトルが入ります</h4>
+                                            </div>
+                                        </a></li>
+                                    <li><a href="">
+                                            <div class="sec02-list-img">
+                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-img-02.jpg" alt="">
+                                            </div>
+                                            <div class="sec02-list-txt">
+                                                <span class="category">メディア掲載</span>
+                                                <time>XX.XX.XX</time>
+                                                <h4>ニュースタイトルが入りますニュースタイトルが入ります</h4>
+                                            </div>
+                                        </a></li>
+                                    <li><a href="">
+                                            <div class="sec02-list-img">
+                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/dummy-small.jpg" alt="">
+                                            </div>
+                                            <div class="sec02-list-txt">
+                                                <span class="category">メディア掲載</span>
+                                                <time>XX.XX.XX</time>
+                                                <h4>ニュースタイトルが入りますニュースタイトルが入ります</h4>
+                                            </div>
+                                        </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sec02-bg-under">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec02-bg-under.png" alt="">
+                <span class="bg-item-04"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/bg-item-04.png" alt=""></span>
+            </div>
+        </section>
+
+        <section class="sec03">
+            <div class="sec03-col">
+                <div class="sec03-col-item">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec03-dummy-item.png" alt="">
+                </div>
+                <div class="sec03-col-txt">
+                    <div class="com-title com-title-big">
+                        <p class="">コンセプト</p>
+                        <h2 class="">
+                            <span class="title">C</span>
+                            <span class="title">O</span>
+                            <span class="title">N</span>
+                            <span class="title">C</span>
+                            <span class="title">E</span>
+                            <span class="title">P</span>
+                            <span class="title">T</span>
+                            <span class="title-item-sprout">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-sprout-white.png" alt="">
+                            </span>
+                            <span class="title-item-sun-big">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/item-01-big.png" alt="">
+                            </span>
+                        </h2>
+                    </div>
+                    <div class="com-title com-title-big">
+                        <h2>
+                            <!--
+                        <span class="title-item-1"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/item-01-big.png" alt=""></span>
+                        -->
+                            <span class="title-1">C</span>
+                            <span class="title-2">O</span>
+                            <span class="title-3">N</span>
+                            <span class="title-4">C</span>
+                            <span class="title-5">E</span>
+                            <span class="title-6">P</span>
+                            <span class="title-7">T</span>
+                        </h2>
+                    </div>
+                    <h3>Well-beingな時間を、<br>すべての人に。</h3>
+                    <p>
+                        松坂温泉グルスパは<br>
+                        「ウェルビーイング＝心身ともに満たされた状態」をテーマにしたスパリゾートです。<br><br>
+
+                        この地の恵みを活かした天然温泉・岩盤浴・食・休息。<br><br>
+
+                        すべての体験が、あなたの心と体を解き放つ<br>
+                        “ととのい”につながります。
+                    </p>
+                </div>
+            </div>
+
+            <div class="content-width">
+                <div class="sec03-col-under">
+                    <div class="sec03-col-under-wrap">
+                        <div class="sec03-col-under-title">
+                            <h3>A<span>BOUT</span><i class="icon-fire"></i><br>G<span>URUSP<span class="item-text">A</span></span></h3>
+                            <p>グルスパについて</p>
+                        </div>
+
+                        <div class="sec03-col-under-btn">
+                            <div class="com-btn sec03-col-under-btn-1"><a href="">初めてのお客様へ<i></i></a></div>
+                            <div class="com-btn"><a href="">ご利用案内<i></i></a></div>
+                        </div>
+                    </div>
+
+                    <div class="sec03-col-under-slider">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/slide-dummy.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sec04">
+            <div class="sec04-bg-top">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec04-bg-top.png" alt="">
+            </div>
+            <div class="sec04-bg">
+                <span class="shizuku-1"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/item-shizuku-1-1.png" alt=""></span>
+                <span class="shizuku-2"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/item-shizuku-1-2.png" alt=""></span>
+                <span class="shizuku-3"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/item-shizuku-1-3.png" alt=""></span>
+                <span class="shizuku-4"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/item-shizuku-2-1.png" alt=""></span>
+                <span class="shizuku-5"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/item-shizuku-2-2.png" alt=""></span>
+                <span class="ring-1"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec04-item-ring.png" alt=""></span>
+                <span class="ring-2"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec04-item-ring.png" alt=""></span>
+                <div class="content-width-small">
+                    <div class="sec04-wrap">
+                        <div class="com-title center com-title-white">
+                            <p>サービス内容</p>
+                            <h2 class="">
+                                <span class="title">S</span>
+                                <span class="title">E</span>
+                                <span class="title">R</span>
+                                <span class="title">V</span>
+                                <span class="title">I</span>
+                                <span class="title">C</span>
+                                <span class="title">E</span>
+                                <span class="title-item-sprout">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-sprout-white.png" alt="">
+                                </span>
+                                <span class="title-item-sun">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/item-01.png" alt="">
+                                </span>
+                            </h2>
+                        </div>
+                        <div class="sec04-wrap-txt">
+                            <p>
+                                （100文字程度）この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
+                            </p>
+                            <a href="">館内の楽しみ方<i></i></a>
+                        </div>
+                        <div class="sec04-wrap">
+                            <div class="sec04-wrap-col sec04-wrap-right">
+                                <div class="sec04-wrap-col-img">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-img-03.jpg" alt="">
+                                </div>
+                                <div class="sec04-wrap-col-txt">
+                                    <h3>お風呂</h3>
+                                    <p>
+                                        地下1,300ｍから汲み上げた天然温泉を使用。<br>
+                                        泉質はメタけい酸を豊富に含み、肌の新陳代謝を促し、セラミドを整える“美肌の湯”として知られています。大きな露天風呂をはじめ、様々な種類のお風呂をご用意しておりますので、四季の風を感じながら至福のひとときをお過ごしください。
+                                    </p>
+                                    <a href="">くわしく見る<i></i></a>
+                                </div>
+                            </div>
+                            <div class="sec04-wrap-col sec04-wrap-left">
+                                <div class="sec04-wrap-col-img">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-img-04.jpg" alt="">
+                                </div>
+                                <div class="sec04-wrap-col-txt">
+                                    <h3>サウナ</h3>
+                                    <p>
+                                        当館では、発汗・癒し・爽快感を存分に味わえるサウナの後には、7℃の極冷水風呂・16℃の水風呂・29℃のぬる湯と、好みに合わせて選べる3種類の水風呂もご用意。一気にクールダウンしたい方も、ゆっくり“ととのい”たい方も、自分だけのスタイルで楽しめます。<br>
+                                        ここでしか体験できないサウナ時間で、ぜひ“最高のととのい”を見つけてください。
+                                    </p>
+                                    <a href="">くわしく見る<i></i></a>
+                                </div>
+                            </div>
+                            <div class="sec04-wrap-col sec04-wrap-right">
+                                <div class="sec04-wrap-col-img">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-img-05.jpg" alt="">
+                                </div>
+                                <div class="sec04-wrap-col-txt">
+                                    <h3>発汗エリア(有料岩盤浴エリア)</h3>
+                                    <p>
+                                        岩盤浴・アトラクションサウナ・マンガ・リクライニング・テラスなどが揃った特別エリア。<br>
+                                        時間を忘れてゆったり過ごしたい方にぴったりの癒し空間です。<br>
+                                        館内とはひと味違う、深いリラックスをお楽しみください。
+                                    </p>
+                                    <a href="">くわしく見る<i></i></a>
+                                </div>
+                            </div>
+                            <div class="sec04-wrap-col sec04-wrap-left">
+                                <div class="sec04-wrap-col-img">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-img-06.jpg" alt="">
+                                </div>
+                                <div class="sec04-wrap-col-txt">
+                                    <h3>ご飲食</h3>
+                                    <p>
+                                        館内の飲食エリアでは、和食やクラフトビール、スイーツまで幅広くご用意。<br>
+                                        「キッチントキワ」では三重県産食材を使った料理やサ飯を、くつろぎ空間で。「スイートラボ」では珍しいスイーツやSNS映えするデザートを楽しめます。<br>
+                                        館内着のまま気軽にご利用ください。
+                                    </p>
+                                    <a href="">くわしく見る<i></i></a>
+                                </div>
+                            </div>
+                            <div class="sec04-wrap-col sec04-wrap-right">
+                                <div class="sec04-wrap-col-img">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-img-07.jpg" alt="">
+                                </div>
+                                <div class="sec04-wrap-col-txt">
+                                    <h3>リラクゼーション</h3>
+                                    <p>
+                                        ボディケア・あかすり・フットマッサージなど、豊富な施術をご用意。<br>
+                                        日々の疲れを芯から癒したい方におすすめです。<br>
+                                        予約制でスムーズにご案内でき、定期的にリラクイベントも開催中。贅沢なひとときをお過ごしください。
+                                    </p>
+                                    <a href="">くわしく見る<i></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sec04-bg-under">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec04-bg-under.png" alt="">
+                <span class="bg-item-07"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/bg-item-07.png" alt=""></span>
+            </div>
+        </section>
+
+        <section class="sec05">
+            <div class="sec05-wrap">
+                <div class="content-width">
+                    <div class="com-title center">
+                        <p>料金表</p>
+                        <h2 class="">
+                            <span class="title">M</span>
+                            <span class="title">E</span>
+                            <span class="title">N</span>
+                            <span class="title">U</span>
+                            <span class="title-item-sprout">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-sprout-blown.png" alt="">
+                            </span>
+                            <span class="title-item-sun">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/item-01.png" alt="">
+                            </span>
+                        </h2>
+                    </div>
+                    <div class="sec05-wrap-table">
+                        <table class="price-table">
+                            <thead>
+                                <tr>
+                                    <th class="col-left">入館料のみ</th>
+                                    <th class="col-center">平日</th>
+                                    <th class="col-right">土日祝日</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        大人<br><span class="note">※中学生以上</span>
+                                    </td>
+                                    <td><strong>980円</strong></td>
+                                    <td><strong>1,080円</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        小学生以下
+                                    </td>
+                                    <td><strong>600円</strong></td>
+                                    <td><strong>700円</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        未就学児<br><span class="note">※4歳以下</span>
+                                    </td>
+                                    <td colspan="2"><strong>無料</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="sec05-wrap-txt">
+                        <p>
+                            ※小学生以下は保護者同伴必須<br>
+                            ※18歳未満の方は保護者同伴なしの場合、22時まで利用可<br>
+                            ※入退場・入浴・トイレを自力で行えない方は同性付添人が必要<br>
+                            ※身長120cm以上のお子様は混浴禁止（条例に従う）
+                        </p>
+                    </div>
+                    <div class="sec05-wrap-under-item">
+                        <ul class="sec05-wrap-under">
+                            <li>発汗エリア<br><span>岩盤浴セット</span></li>
+                            <li>960円<br><span>※ 岩盤浴セットには専用ウェア・タオルが含まれます。</span></li>
+                        </ul>
+                    </div>
+                    <div class="sec05-wrap-under-link">
+                        <a href="">ご利用案内<i></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sec06">
+            <div class="sec06-bg-top">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec06-bg-top.png" alt="">
+            </div>
+            <div class="sec06-bg">
+                <div class="content-width">
+                    <div class="com-title center">
+                        <p>料金表</p>
+                        <h2 class="">
+                            <span class="title">A</span>
+                            <span class="title">C</span>
+                            <span class="title">C</span>
+                            <span class="title">E</span>
+                            <span class="title">S</span>
+                            <span class="title">S</span>
+                            <span class="title-item-sprout">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-sprout-blown.png" alt="">
+                            </span>
+                            <span class="title-item-sun">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/item-01-white.png" alt="">
+                            </span>
+                        </h2>
+                    </div>
+
+                    <ul class="sec06-map">
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <div class="sec06-wrap-under-link">
+                        <a href="">くわしく見る<i></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="sec06-bg-under">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec06-bg-under.png" alt="">
+            </div>
+        </section>
+
+        <section class="sec07">
+            <div class="content-width">
+                <div class="sec07-wrap">
+                    <div class="sec07-wrap-title">
+                        <div class="com-title com-title-faq center">
+                            <p>料金表</p>
+                            <h2 class="">
+                                <span class="title">F</span>
+                                <span class="title">A</span>
+                                <span class="title">Q</span>
+                                <span class="title-item-sprout">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-sprout-blown.png" alt="">
+                                </span>
+                                <span class="title-item-sun">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/item-01.png" alt="">
+                                </span>
+                            </h2>
+                            <a href="">一覧を見る<i></i></a>
+                        </div>
+                    </div>
+                    <div class="sec07-wrap-faq">
+                        <dl>
+                            <dt><i></i>岩盤浴ウェアやタオルは自分で持っていく必要がありますか？</dt>
+                            <dd></dd>
+                        </dl>
+                        <dl>
+                            <dt><i></i>天然温泉は源泉かけ流しですか？</dt>
+                            <dd></dd>
+                        </dl>
+                        <dl>
+                            <dt><i></i>混雑する時間帯はいつですか？</dt>
+                            <dd></dd>
+                        </dl>
+                        <dl>
+                            <dt><i></i>発汗エリアは誰でも利用できますか？</dt>
+                            <dd></dd>
+                        </dl>
+                        <dl>
+                            <dt><i></i>駐車場はありますか？</dt>
+                            <dd></dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <aside class="aside">
+            <div class="aside-bg-top"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/aside-bg-top.png" alt=""></div>
+            <div class="aside-bg">
+                <div class="content-width">
+                    <div class="aside-btn-1">
+                        <a href="">
+                            <div class="aside-btn-1-txt">
+                                <div class="aside-title">
+                                    <h2>
+                                        <span class="title">R</span>
+                                        <span class="title">E</span>
+                                        <span class="title">C</span>
+                                        <span class="title">R</span>
+                                        <span class="title">U</span>
+                                        <span class="title">I</span>
+                                        <span class="title">T</span>
+                                        <span class="title-item-sprout">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-sprout-white.png" alt="">
+                                        </span>
+                                        <span class="title-item-sun">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/item-01.png" alt="">
+                                        </span>
+                                    </h2>
+                                </div>
+                                <p>
+                                    お客様にもスタッフにも！<br>
+                                    元気と癒しを届ける仲間を募集中
+                                </p>
+                            </div>
+                            <div class="aside-btn-1-img">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/aside-img.jpg" alt=""><i></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="aside-btn-flex">
+                        <div class="aside-btn-2">
+                            <a href="">
+                                <h3><i></i>CONTACT</h3>
+                                <p>お客様お問い合わせ</p>
+                            </a>
+                        </div>
+                        <div class="aside-btn-3">
+                            <a href="">
+                                <h3><i></i>CONTACT</h3>
+                                <p>企業様お問い合わせ</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="aside-bg-under"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/aside-bg-under.png" alt=""></div>
+        </aside>
     </div>
-
 </main>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"></script>
@@ -227,4 +851,7 @@
         // ------------- end timeline -------------
     });
 </script>
+
+
+
 <?php get_footer(); ?>
