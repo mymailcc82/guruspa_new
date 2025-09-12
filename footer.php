@@ -103,6 +103,10 @@
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/jquery.tmpl.min.js?ver=1.0.1"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/all.min.js?ver=1.0.4"></script>
 <script src="https://yubinbango.github.io/yubinbango/yubinbango.js" charset="UTF-8"></script>
+
+
+
+
 <script>
     var lazyLoadInstance = new LazyLoad({
         elements_selector: ".lazyload",
