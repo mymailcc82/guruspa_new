@@ -1,25 +1,41 @@
 @use 'setting' as *;
 
 .body-header-active {
-  .header-fixed-menu {
-  }
+  .header-fixed-menu {}
 }
 
-body {
-}
+body {}
 
 .header-drawer {
   position: fixed;
   width: 100%;
   height: 100vh;
   //background-color: transparent;
-  background-color: #fefbf5;
+  //background-color: #fefbf5;
+  background: rgba(255, 255, 255, 0.3); // 背景色＋透明度
+  backdrop-filter: blur(10px); // 背景のぼかし
+  -webkit-backdrop-filter: blur(10px); // Safari対応
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   z-index: 202;
   top: 0px;
   left: 0px;
   transform: translateY(-100%);
   visibility: hidden;
   transition: all 0.5s ease;
+  overflow-y: scroll;
+
+  &::before {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 68%;
+    height: 100%;
+    background-color: #fefbf5;
+    right: 0;
+    top: 0;
+    z-index: 204;
+  }
 
   @include media(lg) {
     overflow-y: scroll;
@@ -40,11 +56,46 @@ body {
     //height: 100vh;
     //height: 100%;
     padding: 0px 5%;
-    //background-color: #FEFBF5;
+    background-color: #FEFBF5;
     margin-left: auto;
+    position: relative;
+    z-index: 206;
 
-    .com-title {
+    .com-title-header {
       text-align: left;
+
+      p {
+        font-size: 18px;
+        font-weight: 900;
+        letter-spacing: 0.1em;
+        margin-bottom: 0;
+        line-height: 1;
+        position: relative;
+        z-index: 3;
+        text-align: center;
+      }
+
+      h2 {
+        position: relative;
+        display: inline-block;
+
+        .title {
+          display: inline-block;
+          font-size: 65px;
+          font-weight: 900;
+          font-family: $font-en;
+          letter-spacing: 0.1em;
+          position: relative;
+        }
+
+        .title-item-sprout {
+          width: 40px;
+          height: auto;
+          position: absolute;
+          right: -3px;
+          top: -0px;
+        }
+      }
     }
 
     .header-drawer-wrap-table {
@@ -102,6 +153,18 @@ body {
 
       .business-hours tbody td:last-child {
         border-bottom-right-radius: 16px;
+      }
+    }
+
+    .header-drawer-wrap-txt {
+      margin-top: 12px;
+
+      p {
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: .1em;
+        line-height: 1.4;
+        margin-bottom: 0;
       }
     }
 
@@ -257,12 +320,9 @@ body {
 }
 
 .header-fixed {
-  //position: fixed;
-  //right: 2.5%;
-  //top: 18px;
-  position: absolute;
+  position: fixed;
   right: 5%;
-  top: 20px;
+  top: 18px;
   width: 50px;
   height: 50px;
   z-index: 1000;
@@ -293,20 +353,26 @@ body {
     position: relative;
 
     .header-btn-active {
-      background-color: #fff !important;
+      background-color: transparent !important;
+      border: none !important;
 
       span {
         //top: 0px !important;
         background-color: transparent;
 
         &:before {
-          //transform: rotate(45deg) !important;
-          //top: 0px !important;
+          transform: rotate(-30deg) !important;
+          top: 0px !important;
         }
 
         &::after {
-          transform: rotate(45deg) !important;
+          top: 0 !important;
+          transform: rotate(30deg) !important;
         }
+      }
+
+      p {
+        opacity: 1;
       }
     }
 
@@ -323,6 +389,18 @@ body {
         background-color: inherit;
         border: 0.5px solid #3c3636;
       }
+    }
+
+    p {
+      font-size: 10px;
+      font-weight: 900;
+      font-family: $font-en;
+      letter-spacing: .05em;
+      margin-bottom: 0;
+      opacity: 0;
+      position: absolute;
+      right: -30px;
+      top: 18px;
     }
 
     span {
@@ -394,65 +472,88 @@ body {
   }
 }
 
-.header-single {
+
+.header-wrap-bg {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translate(-50%, 100%);
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  transition: opacity .4s ease;
+
+  img {
+    width: 100%;
+  }
 }
 
-.header-page-normal {
-}
+.header-single {}
+
+.header-page-normal {}
 
 .body-header-active,
 .body-drawer {
   .header-fixed {
     @include media(lg) {
-      top: 10px !important;
+      //top: 10px !important;
     }
 
     a {
-      border: 2px solid $color-main !important;
+      //border: 2px solid $color-main !important;
 
       &:after {
-        color: $color-main !important;
+        //color: $color-main !important;
       }
 
       span {
-        background-color: $color-main !important;
+        //background-color: $color-main !important;
 
         &:before {
-          background-color: $color-main !important;
+          //background-color: $color-main !important;
         }
 
         &:after {
-          background-color: $color-main !important;
+          //background-color: $color-main !important;
         }
       }
     }
+  }
+
+  .header {
+    background-color: #FEFBF5;
+  }
+
+  .header-wrap-bg {
+    opacity: 1;
+
   }
 }
 
 .header-page,
 .body-drawer {
-  box-shadow: 0px 5px 15px rgba($color: #000000, $alpha: 0.15);
+  //box-shadow: 0px 5px 15px rgba($color: #000000, $alpha: 0.15);
 
   &:after {
-    transform: translateY(0%) !important;
+    //transform: translateY(0%) !important;
   }
 
   &:before {
-    transform: translateX(100%);
+    //transform: translateX(100%);
   }
 
   .header-wrap {
-    padding: 20px 100px 20px 0px !important;
+    //padding: 20px 100px 20px 0px !important;
 
     .header-wrap-logo {
       .header-wrap-logo-img-main {
-        visibility: hidden !important;
-        opacity: 0 !important;
+        //visibility: hidden !important;
+        //opacity: 0 !important;
       }
 
       .header-wrap-logo-img-prev {
-        visibility: visible !important;
-        opacity: 1 !important;
+        //visibility: visible !important;
+        //opacity: 1 !important;
       }
 
       p {
@@ -473,8 +574,8 @@ body {
 }
 
 .header {
-  //position: fixed;
-  position: absolute;
+  position: fixed;
+  //position: absolute;
   left: 0px;
   top: 0px;
   width: 100%;
@@ -595,6 +696,7 @@ body {
     .header-wrap-list {
       transition: all 0.3s ease;
       width: calc(100% - 215px);
+      padding-right: 60px;
 
       .header-wrap-list-ul {
         display: flex;
@@ -764,8 +866,7 @@ body {
         }
       }
 
-      .header-wrap-nav-top {
-      }
+      .header-wrap-nav-top {}
 
       .active {
         visibility: visible !important;

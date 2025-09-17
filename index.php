@@ -1,12 +1,11 @@
 <?php get_header(); ?>
 
 <main class="top">
-    <p class="scroll-txt scroll-txt-change">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/logo-left.svg" alt="">
-    </p>
     <div class="top-bg">
         <div class="top-visual">
             <div class="top-visual-wrap">
+
+                <?php /* */ ?>
                 <span class="bg-item-01"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/bg-item-01_v2.png" alt=""></span>
                 <span class="bg-item-02"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/bg-item-02_v2.png" alt=""></span>
                 <span class="icon-01"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01.png" alt=""></span>
@@ -96,6 +95,7 @@
                         </div>
                         <img class="top-visual-mv-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-main.jpg" alt="">
                     </div>
+
                     <div class="top-visual-title">
                         <h1>
                             <div class="top_logo">
@@ -199,18 +199,24 @@
                 </div>
             </div>
         </div>
-
+        <div class="top-visual">
+            <div class="loader">
+                <img class="flame-base" src="<?php echo get_template_directory_uri(); ?>/assets/img/mv/loader-base.png" alt="">
+                <img class="flame-color" src="<?php echo get_template_directory_uri(); ?>/assets/img/mv/loader-color.png" alt="">
+                <div class="loader-percent">0%</div>
+            </div>
+        </div>
         <section class="sec01">
             <div class="sec01-wrap">
                 <div class="content-width-small">
-                    <div class="com-title center">
+                    <div class="com-title center com-title-hidden">
                         <p>イベント情報</p>
                         <h2 class="">
                             <span class="title">E</span><span class="title">V</span><span class="title">E</span><span class="title">N</span><span class="title">T</span>
-                            <span class="title-item-sprout">
+                            <span class="title title-item-sprout">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-sprout-blown.png" alt="">
                             </span>
-                            <span class="title-item-sun">
+                            <span class="title title-item-sun">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/item-01.png" alt="">
                             </span>
                         </h2>
@@ -276,7 +282,7 @@
                                 <h3>E<span>VENT</span><i class="icon-fire"></i><br>S<span>CHEDUL<span class="item-text">E</span></span><i class="icon-btn"></i></h3>
                                 */
                                 ?>
-                                <h3><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/title-event-schedule.png" alt="EVENT SCHEDULE"></h3>
+                                <h3><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/title-event-schedule_v2.png" alt="EVENT SCHEDULE"><i class="icon-btn"></i></h3>
                                 <p>月間・毎日のイベントスケジュールをチェック！</p>
                             </div>
                             <div class="sec-01-col-under-move-item">
@@ -299,14 +305,14 @@
             </div>
             <div class="sec02-bg">
                 <div class="sec02-wrap">
-                    <div class="com-title com-title-left com-title-white">
+                    <div class="com-title com-title-left com-title-white com-title-hidden">
                         <p class="color-white">イベント情報</p>
                         <h2 class="color-white">
                             <span class="title">N</span><span class="title">E</span><span class="title">W</span><span class="title">S</span>
-                            <span class="title-item-sprout">
+                            <span class="title title-item-sprout">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-sprout-white.png" alt="">
                             </span>
-                            <span class="title-item-sun">
+                            <span class="title title-item-sun">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/item-01.png" alt="">
                             </span>
                         </h2>
@@ -399,37 +405,89 @@
         <section class="sec03">
             <div class="sec03-col">
                 <div class="sec03-col-item">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec03-dummy-item.png" alt="">
+
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+
+                    <svg version="1.1" id="レイヤー_1"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 369.5 369.5">
+                        <style type="text/css">
+                            .st0 {
+                                fill: none;
+                            }
+
+                            .st1 {
+                                fill: none;
+                                display: none;
+                            }
+                        </style>
+
+                        <g id="path_108236">
+                            <path class="st100" d="M184.8,0c102,0,184.8,82.7,184.8,184.8s-82.7,184.8-184.8,184.8S0,286.8,0,184.8S82.7,0,184.8,0z" />
+                            <path class="st1" d="M184.8,14C90.6,14,14,90.6,14,184.8s76.6,170.8,170.8,170.8s170.8-76.6,170.8-170.8S278.9,14,184.8,14
+      M184.8,0c102,0,184.8,82.7,184.8,184.8s-82.7,184.8-184.8,184.8S0,286.8,0,184.8S82.7,0,184.8,0z" />
+                        </g>
+                    </svg>
+
+                    <script>
+                        gsap.registerPlugin(ScrollTrigger);
+
+                        window.addEventListener('DOMContentLoaded', () => {
+                            const path = document.querySelector('path.st100');
+                            if (!path) return;
+
+                            // パス長を取得
+                            const length = path.getTotalLength();
+
+                            // stroke 属性など設定
+                            path.setAttribute('stroke', '#3C3636');
+                            path.setAttribute('stroke-width', 8);
+                            path.setAttribute('stroke-linecap', 'round');
+                            path.setAttribute('fill', 'none');
+
+                            // 初期状態（パスを非表示）
+                            path.style.strokeDasharray = length;
+                            path.style.strokeDashoffset = length;
+
+                            // ScrollTrigger で発火させる
+                            ScrollTrigger.create({
+                                trigger: '.sec03-col-item',
+                                start: 'top 80%',
+                                toggleActions: 'play none none none',
+                                once: true,
+                                onEnter: () => {
+                                    gsap.to(path, {
+                                        strokeDashoffset: 0,
+                                        duration: 2.6,
+                                        ease: "power1.inOut"
+                                    });
+                                }
+                            });
+                        });
+                    </script>
+
+
+                    <div class="sec03-col-item-child sec03-col-item-child-1"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec03-col-item-child-1.png" alt=""></div>
+                    <div class="sec03-col-item-child sec03-col-item-child-2"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec03-col-item-child-2.png" alt=""></div>
+                    <div class="sec03-col-item-child sec03-col-item-child-3"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec03-col-item-child-3.png" alt=""></div>
+                    <div class="sec03-col-item-child sec03-col-item-child-4"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec03-col-item-child-4.png" alt=""></div>
                 </div>
+
                 <div class="sec03-col-txt">
                     <div class="com-title com-title-big">
                         <p class="">コンセプト</p>
                         <h2 class="">
                             <span class="title">C</span><span class="title">O</span><span class="title">N</span><span class="title">C</span><span class="title">E</span><span class="title">P</span><span class="title">T</span>
-                            <span class="title-item-sprout">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-sprout-white.png" alt="">
+                            <span class="title title-item-sprout">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-sprout-blown.png" alt="">
                             </span>
-                            <span class="title-item-sun-big">
+                            <span class="title title-item-sun-big">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/item-01-big.png" alt="">
                             </span>
                         </h2>
                     </div>
-                    <?php /*
-                    <div class="com-title com-title-big">
-                        <h2>
-                            <!--
-                        <span class="title-item-1"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/item-01-big.png" alt=""></span>
-                        -->
-                            <span class="title-1">C</span>
-                            <span class="title-2">O</span>
-                            <span class="title-3">N</span>
-                            <span class="title-4">C</span>
-                            <span class="title-5">E</span>
-                            <span class="title-6">P</span>
-                            <span class="title-7">T</span>
-                        </h2>
-                    </div>
-                    */ ?>
+
                     <h3><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/title-well-being.svg" alt="Well-beiing">な時間を、<br>すべての人に。</h3>
 
                     <p>
@@ -465,8 +523,17 @@
                         </div>
                     </div>
 
-                    <div class="sec03-col-under-slider">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/slide-dummy.png" alt="">
+                    <div class="loop-slider">
+                        <div class="loop-track" id="sliderTrack">
+                            <?php for ($i = 0; $i < 2; $i++) : // 2セット 
+                            ?>
+                                <div class="loop-item"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-slider-01.jpg" alt=""></div>
+                                <div class="loop-item loop-item-2"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-slider-02.png" alt=""></div>
+                                <div class="loop-item"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-slider-03.jpg" alt=""></div>
+                                <div class="loop-item loop-item-2"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-slider-04.png" alt=""></div>
+                                <div class="loop-item"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-slider-05.jpg" alt=""></div>
+                            <?php endfor; ?>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -477,23 +544,35 @@
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec04-bg-top.png" alt="">
             </div>
             <div class="sec04-bg">
+                <div class="shizuku-group group-a">
+                    <span class="shizuku shizuku-1"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/item-shizuku-1-1.png" alt=""></span>
+                    <span class="shizuku shizuku-2"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/item-shizuku-1-2.png" alt=""></span>
+                    <span class="shizuku shizuku-3"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/item-shizuku-1-3.png" alt=""></span>
+                </div>
+                <div class="shizuku-group group-b">
+                    <span class="shizuku shizuku-4"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/item-shizuku-2-1.png" alt=""></span>
+                    <span class="shizuku shizuku-5"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/item-shizuku-2-2.png" alt=""></span>
+                </div>
+
+                <?php /*
                 <span class="shizuku-1"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/item-shizuku-1-1.png" alt=""></span>
                 <span class="shizuku-2"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/item-shizuku-1-2.png" alt=""></span>
                 <span class="shizuku-3"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/item-shizuku-1-3.png" alt=""></span>
                 <span class="shizuku-4"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/item-shizuku-2-1.png" alt=""></span>
                 <span class="shizuku-5"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/item-shizuku-2-2.png" alt=""></span>
+                */ ?>
                 <span class="ring-1"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec04-item-ring.png" alt=""></span>
                 <span class="ring-2"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec04-item-ring.png" alt=""></span>
                 <div class="content-width-small">
                     <div class="sec04-wrap">
-                        <div class="com-title center com-title-white">
+                        <div class="com-title center com-title-white com-title-hidden">
                             <p>サービス内容</p>
                             <h2 class="">
                                 <span class="title">S</span><span class="title">E</span><span class="title">R</span><span class="title">V</span><span class="title">I</span><span class="title">C</span><span class="title">E</span>
-                                <span class="title-item-sprout">
+                                <span class="title title-item-sprout">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-sprout-white.png" alt="">
                                 </span>
-                                <span class="title-item-sun">
+                                <span class="title title-item-sun">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/item-01.png" alt="">
                                 </span>
                             </h2>
@@ -586,14 +665,14 @@
         <section class="sec05">
             <div class="sec05-wrap">
                 <div class="content-width">
-                    <div class="com-title center">
+                    <div class="com-title center com-title-hidden">
                         <p>料金表</p>
                         <h2 class="">
                             <span class="title">M</span><span class="title">E</span><span class="title">N</span><span class="title">U</span>
-                            <span class="title-item-sprout">
+                            <span class="title title-item-sprout">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-sprout-blown.png" alt="">
                             </span>
-                            <span class="title-item-sun">
+                            <span class="title title-item-sun">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/item-01.png" alt="">
                             </span>
                         </h2>
@@ -659,13 +738,13 @@
             <div class="sec06-bg">
                 <div class="content-width">
                     <div class="com-title center">
-                        <p>料金表</p>
+                        <p>アクセス</p>
                         <h2 class="">
                             <span class="title">A</span><span class="title">C</span><span class="title">C</span><span class="title">E</span><span class="title">S</span><span class="title">S</span>
-                            <span class="title-item-sprout">
+                            <span class="title title-item-sprout">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-sprout-blown.png" alt="">
                             </span>
-                            <span class="title-item-sun">
+                            <span class="title title-item-sun">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/item-01-white.png" alt="">
                             </span>
                         </h2>
@@ -689,16 +768,14 @@
             <div class="content-width">
                 <div class="sec07-wrap">
                     <div class="sec07-wrap-title">
-                        <div class="com-title com-title-faq center">
-                            <p>料金表</p>
+                        <div class="com-title com-title-faq center com-title-hidden">
+                            <p>よくある質問</p>
                             <h2 class="">
-                                <span class="title">F</span>
-                                <span class="title">A</span>
-                                <span class="title">Q</span>
-                                <span class="title-item-sprout">
+                                <span class="title">F</span><span class="title">A</span><span class="title">Q</span>
+                                <span class="title title-item-sprout">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-sprout-blown.png" alt="">
                                 </span>
-                                <span class="title-item-sun">
+                                <span class="title title-item-sun">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/item-01.png" alt="">
                                 </span>
                             </h2>
@@ -918,6 +995,145 @@
 
         // ------------- end timeline -------------
     });
+</script>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const targets = document.querySelectorAll('.com-title .title');
+
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+            );
+        }
+
+        function checkInView() {
+            targets.forEach((el) => {
+                if (isInViewport(el)) {
+                    el.classList.add('in-view');
+                } else {
+                    el.classList.remove('in-view'); // 一度のみなら消さないようにしてOK
+                }
+            });
+        }
+
+        window.addEventListener('scroll', checkInView);
+        window.addEventListener('resize', checkInView);
+        checkInView(); // 初回実行
+    });
+</script>
+
+<script>
+    // Group A
+    (function() {
+        const groupA = document.querySelector(".group-a");
+        const shizukuA = groupA.querySelectorAll(".shizuku");
+        let aFired = false;
+
+        window.addEventListener("scroll", () => {
+            if (aFired) return;
+
+            const rect = groupA.getBoundingClientRect();
+            if (rect.top < 0 && rect.bottom < window.innerHeight) {
+                aFired = true;
+
+                shizukuA.forEach((el, i) => {
+                    el.classList.remove("animate");
+                    void el.offsetWidth; // トリガー再初期化
+                    setTimeout(() => {
+                        el.classList.add("animate");
+                    }, i * 300); // タイミングずらし
+                });
+
+                // 再発火可能にしたいなら一定時間後にリセット
+                setTimeout(() => {
+                    aFired = false;
+                }, 2000);
+            }
+        });
+    })();
+</script>
+
+<script>
+    // Group B
+    (function() {
+        const groupB = document.querySelector(".group-b");
+        const shizukuB = groupB.querySelectorAll(".shizuku");
+        let bFired = false;
+
+        window.addEventListener("scroll", () => {
+            if (bFired) return;
+
+            const rect = groupB.getBoundingClientRect();
+            if (rect.top < 0 && rect.bottom < window.innerHeight) {
+                bFired = true;
+
+                shizukuB.forEach((el, i) => {
+                    el.classList.remove("animate");
+                    void el.offsetWidth;
+                    setTimeout(() => {
+                        el.classList.add("animate");
+                    }, i * 300);
+                });
+
+                setTimeout(() => {
+                    bFired = false;
+                }, 2000);
+            }
+        });
+    })();
+</script>
+
+<script>
+    function observeRingAnimation(ringSelector) {
+        const ring = document.querySelector(ringSelector);
+        if (!ring) return;
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    ring.classList.add('ring-animate');
+                    observer.unobserve(entry.target); // 一度だけ発火
+                }
+            });
+        }, {
+            threshold: 0.5 // 画面に50%以上見えたら
+        });
+
+        observer.observe(ring);
+    }
+
+    observeRingAnimation('.ring-1');
+    observeRingAnimation('.ring-2');
+</script>
+
+<script>
+    window.addEventListener('load', function() {
+        const track = document.querySelector('.loop-track');
+        const items = Array.from(track.children);
+        const singleSetWidth = items.slice(0, items.length / 2).reduce((acc, item) => acc + item.offsetWidth + 20, 0);
+        track.style.setProperty('--scroll-width', `${singleSetWidth}px`);
+    });
+</script>
+
+<script>
+    let percent = 0;
+    const flameColor = document.querySelector('.flame-color');
+    const loaderPercent = document.querySelector('.loader-percent');
+
+    const loadingInterval = setInterval(() => {
+        percent++;
+        loaderPercent.textContent = percent + '%';
+        flameColor.style.clipPath = `inset(${100 - percent}% 0 0 0)`;
+
+        if (percent >= 100) {
+            clearInterval(loadingInterval);
+            // ローディング完了処理へ
+        }
+    }, 30);
 </script>
 
 

@@ -1,4 +1,5 @@
 <footer class="footer">
+
     <div class="content-width">
         <div class="footer-wrap">
             <div class="footer-wrap-menu">
@@ -92,9 +93,25 @@
     </div>
     <div class="footer-fixed">
         <a href="#">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-page-back.png" alt="">
+            <span class="footer-fixed-main"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/footer-fixed.png" alt=""></span>
+            <span class="footer-fixed-child footer-fixed-child-1"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/footer-fixed-1.png" alt=""></span>
+            <span class="footer-fixed-child footer-fixed-child-2"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/footer-fixed-2.png" alt=""></span>
+            <span class="footer-fixed-child footer-fixed-child-3"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/footer-fixed-3.png" alt=""></span>
+            <span class="footer-fixed-child footer-fixed-child-4"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/footer-fixed-4.png" alt=""></span>
+            <span class="footer-fixed-child footer-fixed-child-5"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/footer-fixed-5.png" alt=""></span>
+            <span class="footer-fixed-child footer-fixed-child-6"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/footer-fixed-6.png" alt=""></span>
+            <span class="footer-fixed-txt"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/footer-fixed-7.png" alt=""></span>
+
         </a>
     </div>
+    <p class="scroll-txt scroll-txt-change">
+        <span class="sub-title-01">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/sub-title-01.png" alt="">
+        </span>
+        <span class="sub-title-02">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/sub-title-02.png" alt="">
+        </span>
+    </p>
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -104,7 +121,107 @@
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/all.min.js?ver=1.0.4"></script>
 <script src="https://yubinbango.github.io/yubinbango/yubinbango.js" charset="UTF-8"></script>
 
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        // 初期位置を上にオフセット
+        gsap.set(".wave", {
+            y: "-100%"
+        });
+        gsap.set(".wave_nami_v2", {
+            opacity: 0,
+            y: 20
+        });
+        gsap.set(".wave_nami_v3", {
+            opacity: 0,
+            y: 20
+        });
 
+        const tl = gsap.timeline();
+
+        tl.to(".wave", {
+                y: "-30%", // ← まず中間まで一気に降ろす
+                duration: 0.7,
+                ease: "power2.out"
+            })
+            .to(".wave", {
+                y: "0%", // ← 最後はゆっくり着地
+                duration: 1.5,
+                ease: "power4.out",
+                onComplete: () => {
+                    // 装飾波フェードイン
+                    gsap.to(".wave_nami_v2", {
+                        opacity: 1,
+                        y: 0,
+                        duration: 1.2,
+                        ease: "power2.out"
+                    });
+                    gsap.to(".wave_nami_v3", {
+                        opacity: 1,
+                        y: 0,
+                        duration: 1.2,
+                        delay: 0.3,
+                        ease: "power2.out"
+                    });
+                }
+            });
+    });
+</script>
+
+<script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    // sec03-col-item-child-1
+    gsap.to('.sec03-col-item-child-1', {
+        scrollTrigger: {
+            trigger: '.sec03-col-item',
+            start: 'top 80%',
+            toggleActions: 'play none none none',
+        },
+        opacity: 1,
+        duration: 0.8,
+        delay: 0.2,
+        ease: "power2.out"
+    });
+
+    // sec03-col-item-child-2
+    gsap.to('.sec03-col-item-child-2', {
+        scrollTrigger: {
+            trigger: '.sec03-col-item',
+            start: 'top 80%',
+            toggleActions: 'play none none none',
+        },
+        opacity: 1,
+        duration: 0.8,
+        delay: 0.8,
+        ease: "power2.out"
+    });
+
+    // sec03-col-item-child-3
+    gsap.to('.sec03-col-item-child-3', {
+        scrollTrigger: {
+            trigger: '.sec03-col-item',
+            start: 'top 80%',
+            toggleActions: 'play none none none',
+        },
+        opacity: 1,
+        duration: 0.8,
+        delay: 1.2,
+        ease: "power2.out"
+    });
+
+    // sec03-col-item-child-4
+    gsap.to('.sec03-col-item-child-4', {
+        scrollTrigger: {
+            trigger: '.sec03-col-item',
+            start: 'top 80%',
+            toggleActions: 'play none none none',
+        },
+        opacity: 1,
+        duration: 0.8,
+        delay: 2.2,
+        ease: "power2.out"
+    });
+</script>
 
 
 <script>
@@ -251,6 +368,36 @@
 
         requestAnimationFrame(raf);
     }
+</script>
+
+
+<?php if (is_front_page()) : ?>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const scrollTxt = document.querySelector('.scroll-txt-change');
+
+            if (!scrollTxt) return;
+
+            scrollTxt.classList.add('show-title-01'); // 初期表示：タイトル01
+
+            window.addEventListener('scroll', function() {
+                const mv = document.querySelector('.top-visual') || document.querySelector('#top-visual'); // MVセクションを特定
+                if (!mv) return;
+
+                const mvBottom = mv.getBoundingClientRect().bottom;
+
+                if (mvBottom <= 0) {
+                    // MVを抜けたら02を表示
+                    scrollTxt.classList.remove('show-title-01');
+                } else {
+                    // MV内にいる間は01を表示
+                    scrollTxt.classList.add('show-title-01');
+                }
+            });
+        });
+    </script>
+<?php endif; ?>
+
 </script>
 <script>
     gsap.utils.toArray(".fadeup").forEach((el) => {

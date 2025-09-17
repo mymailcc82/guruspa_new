@@ -46,12 +46,14 @@
                 </ul>
             </div>
         </div>
+        <div class="header-wrap-bg"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/header/header-under-bg.png" alt=""></div>
     </header>
 
     <div class="header-fixed">
         <div class="header-fixed-menu">
             <a href="javascript:void(0);" class="header-btn">
                 <span></span>
+                <p>CLOSE</p>
             </a>
         </div>
     </div>
@@ -59,9 +61,10 @@
     <div class="header-drawer" data-lenis-prevent>
         <div class="header-drawer-container">
             <div class="header-drawer-wrap">
-                <div class="com-title">
-                    <p>メニュー</p>
+                <div class="com-title-header">
+
                     <h2 class="">
+                        <p>メニュー</p>
                         <span class="title">M</span>
                         <span class="title">E</span>
                         <span class="title">N</span>
@@ -92,6 +95,13 @@
                             </tr>
                         </tbody>
                     </table>
+                </div>
+
+                <div class="header-drawer-wrap-txt">
+                    <p>
+                        ※当館は年中無休で営業しております。<br>
+                        ※設備点検などに伴う臨時休館がある場合は、事前にお知らせページにてご案内いたします。
+                    </p>
                 </div>
 
                 <div class="header-drawer-wrap-menu">
