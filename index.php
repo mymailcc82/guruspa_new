@@ -1,14 +1,107 @@
 <?php get_header(); ?>
 
+
+<style>
+    .icon {
+        width: 160px;
+        height: 160px;
+        display: block;
+    }
+
+    /* clipRect を下端基準で縦スケールする */
+    .clip-rect {
+        transform-box: fill-box;
+        /* SVG要素の transform を fill-box 基準にする */
+        transform-origin: 50% 100%;
+    }
+
+    /* ループさせたい場合は alternate/ infinite を使う（コメント外して使って下さい） */
+    /* animation: reveal 2s ease-in-out infinite alternate; */
+
+
+    /* 見やすい背景 */
+</style>
+<div class="page-loading">
+    <div class="page-loading-wrap-container">
+        <div class="page-loading-wrap">
+            <svg class="icon" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <defs>
+                    <!-- clipPath: 内側の rect を scaleY で伸ばして赤を表示させる -->
+                    <clipPath id="clip">
+                        <!-- clip に使う rect。CSSで scaleY(0->1) させる -->
+                        <rect class="clip-rect" x="0" y="0" width="100%" height="100%"></rect>
+                    </clipPath>
+                </defs>
+
+                <!-- 1) 下地の白（初期表示） -->
+                <g>
+                    <path fill="#fff" class="st10" d="M506.4,287.1c-3.6-10.2-13.5-22-20.7-29c-17.2-16.7-35.7-25-44.8-29.9c-6.8-4-15.3-1.6-19.2,5.5
+		c-3.8,7.1-1.3,15.7,5.2,20.1c42.8,29.2,49.9,64.3,18.9,100.9c-9.3,10.9-21.6,19.6-39.8,29.8c-29.7,16.7-91.1,31.3-150,31.2
+		c-58.9,0.1-120.3-14.6-150-31.2c-18.2-10.2-30.5-18.8-39.8-29.8c-31-36.6-23.9-71.6,18.9-100.9c6.5-4.4,9-13.1,5.2-20.1
+		c-3.8-7.1-12.4-9.5-19.2-5.5C62,233,43.5,241.4,26.4,258c-7.3,7-17.2,18.8-20.8,29C2,297.3,0,308.4,0,320c0,12,2.2,23.8,6.4,34.7
+		c7.2,19.2,19.8,35.8,35.6,50c23.8,21.3,55.2,37.7,91.7,49.2c36.5,11.5,78.1,17.8,122.4,17.8s85.9-6.4,122.4-17.8
+		c36.5-11.5,67.9-27.9,91.7-49.2c15.8-14.2,28.4-30.8,35.6-50c4.1-11,6.4-22.7,6.4-34.7C512,308.4,510,297.3,506.4,287.1z" />
+                    <path fill="#fff" class="st10" d="M239.5,314.1c7,15.6,16,25.8,22.8,31.3c6.9,5.5,12.4,7.3,16.7,4.9c4.3-2.4,5.2-8.5,3.6-17
+		c-1.6-8.6-5.2-18.9-7.6-31.2c-2.5-12.2-4.2-27.9-4.2-45.3c0.1-8.5,0.7-17.1,2.4-25.6c1.7-8.5,4.6-17,8.5-27.5
+		c4-10.4,8.2-22.8,10.3-35c2.2-12.3,2.5-24.2,2-35.1c-1.3-21.4-5.6-40.5-12.6-56.1c-7-15.6-16-25.8-22.8-31.3
+		c-6.9-5.5-12.4-7.3-16.7-4.9c-4.3,2.4-5.2,8.5-3.6,17c1.6,8.6,5.2,18.9,7.6,31.2c2.5,12.2,4.2,27.9,4.2,45.3
+		c-0.1,8.5-0.7,17.1-2.4,25.6c-1.7,8.5-4.6,17-8.6,27.5c-4,10.5-8.2,22.8-10.3,35.1c-2.2,12.3-2.6,24.2-2,35.1
+		C228.2,279.3,232.5,298.4,239.5,314.1z" />
+                    <path fill="#fff" class="st10" d="M329.1,278.5c2.1,8.7,4.9,16.7,8.4,23.7c7.1,14.1,15.9,22.8,22.5,27.3c6.7,4.5,12,5.5,16.1,2.9s5-8.3,3.5-16.1
+		c-1.5-7.8-4.9-16.8-7.1-27.3c-2.3-10.4-3.8-24-3.6-39.1c0.2-7.4,0.9-14.6,2.6-21.7c1.7-7.2,4.6-14.3,8.6-23.6
+		c4-9.1,8.5-20.2,10.8-31.5c2.4-11.3,3-22.4,2.5-32.4c-0.5-10-1.9-19-3.9-27.7c-2.1-8.6-4.9-16.7-8.5-23.7
+		C374,75.1,365.2,66.4,358.6,62c-6.7-4.5-12-5.5-16.1-2.9s-5,8.3-3.5,16.1c1.5,7.8,4.9,16.8,7.1,27.3c2.3,10.4,3.8,24,3.6,39.1
+		c-0.2,7.4-0.9,14.6-2.7,21.7c-1.7,7.2-4.6,14.3-8.6,23.6c-4,9.1-8.5,20.2-10.8,31.6c-2.4,11.3-3,22.4-2.5,32.4
+		C325.7,260.8,327,269.8,329.1,278.5z" />
+                    <path fill="#fff" class="st0" d="M129.6,278.5c2.1,8.7,4.9,16.7,8.5,23.7c7.1,14.1,15.9,22.8,22.5,27.3c6.7,4.5,12,5.5,16.1,2.9
+		c4.2-2.6,5-8.3,3.5-16.st10-1.5-7.8-4.9-16.8-7.1-27.3c-2.3-10.4-3.8-24-3.6-39.1c0.2-7.4,0.9-14.6,2.7-21.7
+		c1.7-7.2,4.5-14.3,8.6-23.6c4-9.1,8.5-20.2,10.8-31.5c2.5-11.3,3-22.4,2.5-32.4c-0.5-10-1.9-19-3.9-27.7c-2.1-8.6-5-16.7-8.5-23.7
+		c-7.1-14.1-15.9-22.8-22.5-27.3c-6.7-4.5-12-5.5-16.2-2.9c-4.1,2.6-5,8.3-3.4,16.1c1.5,7.8,4.9,16.8,7.1,27.3
+		c2.3,10.4,3.8,24,3.6,39.1c-0.2,7.4-0.9,14.6-2.7,21.7c-1.7,7.2-4.6,14.3-8.6,23.6c-4,9.1-8.5,20.2-10.8,31.6
+		c-2.4,11.3-3,22.4-2.5,32.4C126.2,260.8,127.6,269.8,129.6,278.5z" />
+                </g>
+
+                <!-- 2) 上に重ねる赤。clip-path で高さを制御して「下から上へ」現れる -->
+                <g clip-path="url(#clip)">
+                    <path fill="#e53935" class="st10" d="M506.4,287.1c-3.6-10.2-13.5-22-20.7-29c-17.2-16.7-35.7-25-44.8-29.9c-6.8-4-15.3-1.6-19.2,5.5
+		c-3.8,7.1-1.3,15.7,5.2,20.1c42.8,29.2,49.9,64.3,18.9,100.9c-9.3,10.9-21.6,19.6-39.8,29.8c-29.7,16.7-91.1,31.3-150,31.2
+		c-58.9,0.1-120.3-14.6-150-31.2c-18.2-10.2-30.5-18.8-39.8-29.8c-31-36.6-23.9-71.6,18.9-100.9c6.5-4.4,9-13.1,5.2-20.1
+		c-3.8-7.1-12.4-9.5-19.2-5.5C62,233,43.5,241.4,26.4,258c-7.3,7-17.2,18.8-20.8,29C2,297.3,0,308.4,0,320c0,12,2.2,23.8,6.4,34.7
+		c7.2,19.2,19.8,35.8,35.6,50c23.8,21.3,55.2,37.7,91.7,49.2c36.5,11.5,78.1,17.8,122.4,17.8s85.9-6.4,122.4-17.8
+		c36.5-11.5,67.9-27.9,91.7-49.2c15.8-14.2,28.4-30.8,35.6-50c4.1-11,6.4-22.7,6.4-34.7C512,308.4,510,297.3,506.4,287.1z" />
+                    <path fill="#e53935" class="st10" d="M239.5,314.1c7,15.6,16,25.8,22.8,31.3c6.9,5.5,12.4,7.3,16.7,4.9c4.3-2.4,5.2-8.5,3.6-17
+		c-1.6-8.6-5.2-18.9-7.6-31.2c-2.5-12.2-4.2-27.9-4.2-45.3c0.1-8.5,0.7-17.1,2.4-25.6c1.7-8.5,4.6-17,8.5-27.5
+		c4-10.4,8.2-22.8,10.3-35c2.2-12.3,2.5-24.2,2-35.1c-1.3-21.4-5.6-40.5-12.6-56.1c-7-15.6-16-25.8-22.8-31.3
+		c-6.9-5.5-12.4-7.3-16.7-4.9c-4.3,2.4-5.2,8.5-3.6,17c1.6,8.6,5.2,18.9,7.6,31.2c2.5,12.2,4.2,27.9,4.2,45.3
+		c-0.1,8.5-0.7,17.1-2.4,25.6c-1.7,8.5-4.6,17-8.6,27.5c-4,10.5-8.2,22.8-10.3,35.1c-2.2,12.3-2.6,24.2-2,35.1
+		C228.2,279.3,232.5,298.4,239.5,314.1z" />
+                    <path fill="#e53935" class="st10" d="M329.1,278.5c2.1,8.7,4.9,16.7,8.4,23.7c7.1,14.1,15.9,22.8,22.5,27.3c6.7,4.5,12,5.5,16.1,2.9s5-8.3,3.5-16.1
+		c-1.5-7.8-4.9-16.8-7.1-27.3c-2.3-10.4-3.8-24-3.6-39.1c0.2-7.4,0.9-14.6,2.6-21.7c1.7-7.2,4.6-14.3,8.6-23.6
+		c4-9.1,8.5-20.2,10.8-31.5c2.4-11.3,3-22.4,2.5-32.4c-0.5-10-1.9-19-3.9-27.7c-2.1-8.6-4.9-16.7-8.5-23.7
+		C374,75.1,365.2,66.4,358.6,62c-6.7-4.5-12-5.5-16.1-2.9s-5,8.3-3.5,16.1c1.5,7.8,4.9,16.8,7.1,27.3c2.3,10.4,3.8,24,3.6,39.1
+		c-0.2,7.4-0.9,14.6-2.7,21.7c-1.7,7.2-4.6,14.3-8.6,23.6c-4,9.1-8.5,20.2-10.8,31.6c-2.4,11.3-3,22.4-2.5,32.4
+		C325.7,260.8,327,269.8,329.1,278.5z" />
+                    <path fill="#e53935" class="st10" d="M129.6,278.5c2.1,8.7,4.9,16.7,8.5,23.7c7.1,14.1,15.9,22.8,22.5,27.3c6.7,4.5,12,5.5,16.1,2.9
+		c4.2-2.6,5-8.3,3.5-16.1c-1.5-7.8-4.9-16.8-7.1-27.3c-2.3-10.4-3.8-24-3.6-39.1c0.2-7.4,0.9-14.6,2.7-21.7
+		c1.7-7.2,4.5-14.3,8.6-23.6c4-9.1,8.5-20.2,10.8-31.5c2.5-11.3,3-22.4,2.5-32.4c-0.5-10-1.9-19-3.9-27.7c-2.1-8.6-5-16.7-8.5-23.7
+		c-7.1-14.1-15.9-22.8-22.5-27.3c-6.7-4.5-12-5.5-16.2-2.9c-4.1,2.6-5,8.3-3.4,16.1c1.5,7.8,4.9,16.8,7.1,27.3
+		c2.3,10.4,3.8,24,3.6,39.1c-0.2,7.4-0.9,14.6-2.7,21.7c-1.7,7.2-4.6,14.3-8.6,23.6c-4,9.1-8.5,20.2-10.8,31.6
+		c-2.4,11.3-3,22.4-2.5,32.4C126.2,260.8,127.6,269.8,129.6,278.5z" />
+                </g>
+            </svg>
+
+            <p><span id="count">0</span>%</p>
+
+        </div>
+    </div>
+</div>
 <main class="top">
     <div class="top-bg">
         <div class="top-visual">
             <div class="top-visual-wrap">
-
-                <?php /* */ ?>
                 <span class="bg-item-01"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/bg-item-01_v2.png" alt=""></span>
                 <span class="bg-item-02"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/bg-item-02_v2.png" alt=""></span>
-                <span class="icon-01"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01.png" alt=""></span>
+                <span class="icon-01 icon-01_ani"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01.png" alt=""></span>
                 <div class="top-visual-mv">
                     <div class="top-visual-mv-container">
                         <div class="wave">
@@ -38,7 +131,6 @@
                                     <use href="#wavePath" transform="scale(1,-1)" fill="#FEFBF5" opacity="0.6" />
                                 </g>
                             </svg>
-
                             <style>
                                 /* 横にゆっくりループ（シームレスに見せるためにはパス幅を揃えて複数重ねるのが良い） */
                                 @keyframes slideX {
@@ -103,35 +195,6 @@
                                     <!-- Generator: Adobe Illustrator 27.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                     <svg version="1.1" id="レイヤー_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
                                         y="0px" viewBox="0 0 340.6 73.5" style="enable-background:new 0 0 340.6 73.5;" xml:space="preserve">
-                                        <style type="text/css">
-                                            .st0 {
-                                                fill: none;
-                                            }
-
-                                            .st1 {
-                                                fill: #231815;
-                                            }
-
-                                            .st2 {
-                                                fill: #E6211A;
-                                                opacity: 0;
-                                            }
-
-                                            .st3 {
-                                                fill: #F4BA1B;
-                                                opacity: 1;
-                                            }
-
-                                            .st4 {
-                                                fill: #204994;
-                                                opacity: 0;
-                                            }
-
-                                            .st5 {
-                                                fill: #5DB131;
-                                                opacity: 0;
-                                            }
-                                        </style>
                                         <rect class="st0" width="340.6" height="73.5" />
                                         <path id="path_1000" class="st1" d="M175,64.9c-12.1,0-20.9-4.8-21.6-19.1V14h10.9v31.2c0,2.2,0.6,4.4,1.8,6.3
 	c2.1,3,5,4.1,8.5,4.1c3.6,0,6.9-0.6,9.2-4.1c1.1-1.9,1.6-4,1.5-6.2l0.1-31.3h11.2v30.2C197,58.5,187,64.9,175,64.9" />
@@ -176,10 +239,7 @@
                                         <polygon class="st1" points="320.1,13.6 310.3,13.6 290.1,64.2 301.6,64.2 303.8,58.6 312.3,58.6 312.3,51.2 306.6,51.2 315.5,27.9 
 	324.1,51.2 317.3,51.2 317.3,58.5 326.9,58.5 329,64.2 340.6,64.2 " />
                                     </svg>
-
                                 </div>
-
-
                             </div>
                         </h1>
                         <h2>心と身体がととのう、<span>ウェルビーイング</span>の楽園。</h2>
@@ -197,13 +257,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="top-visual">
-            <div class="loader">
-                <img class="flame-base" src="<?php echo get_template_directory_uri(); ?>/assets/img/mv/loader-base.png" alt="">
-                <img class="flame-color" src="<?php echo get_template_directory_uri(); ?>/assets/img/mv/loader-color.png" alt="">
-                <div class="loader-percent">0%</div>
             </div>
         </div>
         <section class="sec01">
@@ -409,26 +462,6 @@
                     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
                     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
-
-                    <svg version="1.1" id="レイヤー_1"
-                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 369.5 369.5">
-                        <style type="text/css">
-                            .st0 {
-                                fill: none;
-                            }
-
-                            .st1 {
-                                fill: none;
-                                display: none;
-                            }
-                        </style>
-
-                        <g id="path_108236">
-                            <path class="st100" d="M184.8,0c102,0,184.8,82.7,184.8,184.8s-82.7,184.8-184.8,184.8S0,286.8,0,184.8S82.7,0,184.8,0z" />
-                            <path class="st1" d="M184.8,14C90.6,14,14,90.6,14,184.8s76.6,170.8,170.8,170.8s170.8-76.6,170.8-170.8S278.9,14,184.8,14
-      M184.8,0c102,0,184.8,82.7,184.8,184.8s-82.7,184.8-184.8,184.8S0,286.8,0,184.8S82.7,0,184.8,0z" />
-                        </g>
-                    </svg>
 
                     <script>
                         gsap.registerPlugin(ScrollTrigger);
@@ -892,8 +925,128 @@
     }
 </style>
 
+
+
+
+
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
+    // Group A
+    (function() {
+        const groupA = document.querySelector(".group-a");
+        const shizukuA = groupA.querySelectorAll(".shizuku");
+        let aFired = false;
+
+        window.addEventListener("scroll", () => {
+            if (aFired) return;
+
+            const rect = groupA.getBoundingClientRect();
+            if (rect.top < 0 && rect.bottom < window.innerHeight) {
+                aFired = true;
+
+                shizukuA.forEach((el, i) => {
+                    el.classList.remove("animate");
+                    void el.offsetWidth; // トリガー再初期化
+                    setTimeout(() => {
+                        el.classList.add("animate");
+                    }, i * 300); // タイミングずらし
+                });
+
+                // 再発火可能にしたいなら一定時間後にリセット
+                setTimeout(() => {
+                    aFired = false;
+                }, 2000);
+            }
+        });
+    })();
+</script>
+
+<script>
+    // Group B
+
+    (function() {
+        const groupB = document.querySelector(".group-b");
+        const shizukuB = groupB.querySelectorAll(".shizuku");
+        let bFired = false;
+
+        window.addEventListener("scroll", () => {
+            if (bFired) return;
+
+            const rect = groupB.getBoundingClientRect();
+            if (rect.top < 0 && rect.bottom < window.innerHeight) {
+                bFired = true;
+
+                shizukuB.forEach((el, i) => {
+                    el.classList.remove("animate");
+                    void el.offsetWidth;
+                    setTimeout(() => {
+                        el.classList.add("animate");
+                    }, i * 300);
+                });
+
+                setTimeout(() => {
+                    bFired = false;
+                }, 2000);
+            }
+        });
+    })();
+</script>
+
+<script>
+    function observeRingAnimation(ringSelector) {
+        const ring = document.querySelector(ringSelector);
+        if (!ring) return;
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    ring.classList.add('ring-animate');
+                    observer.unobserve(entry.target); // 一度だけ発火
+                }
+            });
+        }, {
+            threshold: 0.5 // 画面に50%以上見えたら
+        });
+
+        observer.observe(ring);
+    }
+
+    observeRingAnimation('.ring-1');
+    observeRingAnimation('.ring-2');
+</script>
+
+<script>
+    window.addEventListener('load', function() {
+        const track = document.querySelector('.loop-track');
+        const items = Array.from(track.children);
+        const singleSetWidth = items.slice(0, items.length / 2).reduce((acc, item) => acc + item.offsetWidth + 20, 0);
+        track.style.setProperty('--scroll-width', `${singleSetWidth}px`);
+    });
+</script>
+
+<script>
+    /*
+    let percent = 0;
+    const flameColor = document.querySelector('.flame-color');
+    const loaderPercent = document.querySelector('.loader-percent');
+
+    const loadingInterval = setInterval(() => {
+        percent++;
+        loaderPercent.textContent = percent + '%';
+        flameColor.style.clipPath = `inset(${100 - percent}% 0 0 0)`;
+
+        if (percent >= 100) {
+            clearInterval(loadingInterval);
+            // ローディング完了処理へ
+        }
+    }, 30);
+    */
+</script>
+
+
+
+
+<script>
+    function logoAnimation() {
         // ------------- セレクタ（英語ID / 日本語ID の両方に対応） -------------
         const st2Sel = '.top_logo_img svg .st2';
         const st4Sel = '.top_logo_img svg .st4';
@@ -992,150 +1145,235 @@
             duration: 1,
             ease: 'power2.out'
         }, '+=0.08');
-
-        // ------------- end timeline -------------
-    });
-</script>
-
-
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const targets = document.querySelectorAll('.com-title .title');
-
-        function isInViewport(element) {
-            const rect = element.getBoundingClientRect();
-            return (
-                rect.top >= 0 &&
-                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
-            );
-        }
-
-        function checkInView() {
-            targets.forEach((el) => {
-                if (isInViewport(el)) {
-                    el.classList.add('in-view');
-                } else {
-                    el.classList.remove('in-view'); // 一度のみなら消さないようにしてOK
-                }
-            });
-        }
-
-        window.addEventListener('scroll', checkInView);
-        window.addEventListener('resize', checkInView);
-        checkInView(); // 初回実行
-    });
-</script>
-
-<script>
-    // Group A
-    (function() {
-        const groupA = document.querySelector(".group-a");
-        const shizukuA = groupA.querySelectorAll(".shizuku");
-        let aFired = false;
-
-        window.addEventListener("scroll", () => {
-            if (aFired) return;
-
-            const rect = groupA.getBoundingClientRect();
-            if (rect.top < 0 && rect.bottom < window.innerHeight) {
-                aFired = true;
-
-                shizukuA.forEach((el, i) => {
-                    el.classList.remove("animate");
-                    void el.offsetWidth; // トリガー再初期化
-                    setTimeout(() => {
-                        el.classList.add("animate");
-                    }, i * 300); // タイミングずらし
-                });
-
-                // 再発火可能にしたいなら一定時間後にリセット
-                setTimeout(() => {
-                    aFired = false;
-                }, 2000);
-            }
-        });
-    })();
-</script>
-
-<script>
-    // Group B
-    (function() {
-        const groupB = document.querySelector(".group-b");
-        const shizukuB = groupB.querySelectorAll(".shizuku");
-        let bFired = false;
-
-        window.addEventListener("scroll", () => {
-            if (bFired) return;
-
-            const rect = groupB.getBoundingClientRect();
-            if (rect.top < 0 && rect.bottom < window.innerHeight) {
-                bFired = true;
-
-                shizukuB.forEach((el, i) => {
-                    el.classList.remove("animate");
-                    void el.offsetWidth;
-                    setTimeout(() => {
-                        el.classList.add("animate");
-                    }, i * 300);
-                });
-
-                setTimeout(() => {
-                    bFired = false;
-                }, 2000);
-            }
-        });
-    })();
-</script>
-
-<script>
-    function observeRingAnimation(ringSelector) {
-        const ring = document.querySelector(ringSelector);
-        if (!ring) return;
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    ring.classList.add('ring-animate');
-                    observer.unobserve(entry.target); // 一度だけ発火
-                }
-            });
-        }, {
-            threshold: 0.5 // 画面に50%以上見えたら
-        });
-
-        observer.observe(ring);
     }
 
-    observeRingAnimation('.ring-1');
-    observeRingAnimation('.ring-2');
-</script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const countEl = document.getElementById('count');
+        const progressEl = document.getElementById('progress');
+        const checkEl = document.getElementById('check');
+        if (!countEl) return;
 
-<script>
-    window.addEventListener('load', function() {
-        const track = document.querySelector('.loop-track');
-        const items = Array.from(track.children);
-        const singleSetWidth = items.slice(0, items.length / 2).reduce((acc, item) => acc + item.offsetWidth + 20, 0);
-        track.style.setProperty('--scroll-width', `${singleSetWidth}px`);
+        // --- 監視対象を集める（必要に応じて拡張） ---
+        const resources = [];
+        document.querySelectorAll('img').forEach(n => resources.push(n));
+        document.querySelectorAll('link[rel="stylesheet"]').forEach(n => resources.push(n));
+        document.querySelectorAll('iframe').forEach(n => resources.push(n));
+
+        let total = Math.max(1, resources.length) + 1; // +1 : window.load の保険
+        let loaded = 0;
+
+        // GSAP quickSetter
+        const setScaleY = gsap.quickSetter('.clip-rect', 'scaleY');
+        gsap.set('.clip-rect', {
+            scaleY: 0
+        });
+
+        // proxy.v を animate するためのオブジェクト
+        const proxy = {
+            v: 0
+        };
+        let tween = null;
+
+        // 完了判定フラグ（finish_fnc を一度だけ呼ぶ）
+        let finished = false;
+
+        // ユーザーが上書きできる finish_fnc（デフォルトの挙動）
+        // 例: window.finish_fnc = () => { location.href = '/home'; };
+        window.finish_fnc = window.finish_fnc || function() {
+            // デフォルトの完了処理（何もしない or console）
+            console.log('読み込み完了（デフォルト finish_fnc が呼ばれました）');
+        };
+
+        // 完了時のシーケンス（アニメ演出 → finish_fnc 実行）
+        function finishSequence() {
+            if (finished) return;
+            finished = true;
+
+            //logoAnimationを500ms遅延で実行
+            setTimeout(() => {
+                logoAnimation();
+            }, 1000);
+
+            //左上のimgを表示 .bg-item-01をopacity:1にする
+            gsap.to('.bg-item-01', {
+                opacity: 1,
+                duration: 1,
+                delay: 1,
+                ease: 'power2.out'
+            });
+            //右上のimgを表示 .bg-item-02をopacity:1にする
+            gsap.to('.bg-item-02', {
+                opacity: 1,
+                duration: 1,
+                delay: 1,
+                ease: 'power2.out'
+            });
+
+            //.waveをy:0に戻す
+            gsap.to('.wave', {
+                y: 0,
+                duration: 1,
+                ease: 'power2.out'
+            });
+            //.icon-01をopacity:1にする
+            gsap.to('.icon-01', {
+                opacity: 1,
+                duration: .5,
+                delay: 3.8,
+                ease: 'power2.out'
+            });
+            //page-loadingをgsapでy:100%にスライドアップ
+            gsap.to('.page-loading', {
+                opacity: 0,
+                duration: 0.3,
+                ease: 'power2.out',
+                onComplete: () => {
+                    gsap.set('.page-loading', {
+                        display: 'none'
+                    });
+
+                    // 完了イベントを発火
+                    const event = new CustomEvent('pageLoadingComplete', {
+                        detail: {
+                            message: 'Page loading is complete.'
+                        }
+                    });
+                    window.dispatchEvent(event);
+                }
+            });
+
+            //.page-loading-wrap-containerをdisplay:noneにする
+            gsap.to('.page-loading-wrap-container', {
+                opacity: 0,
+                duration: 0,
+                onComplete: () => {
+                    if (checkEl) checkEl.style.display = 'none';
+                }
+            });
+
+            //.footer-fixed-mainをopacity:1にする
+            gsap.to('.footer-fixed', {
+                opacity: 1,
+                duration: 0.8,
+                delay: .6,
+                ease: 'power2.out'
+            });
+        }
+
+        // 目的の値へ滑らかにアニメーションする関数
+        function animateTo(newPercent) {
+            if (tween) tween.kill();
+
+            const delta = Math.abs(newPercent - proxy.v);
+            // duration の決め方は自由（ここでは差分に応じて）
+            const dur = Math.max(0.6, Math.min(1.6, (delta / 100) * 1.2));
+
+            tween = gsap.to(proxy, {
+                v: newPercent,
+                duration: dur,
+                ease: 'power2.out',
+                onUpdate: () => {
+                    const val = proxy.v;
+                    countEl.textContent = Math.round(val);
+                    if (progressEl) progressEl.style.width = Math.round(val) + '%';
+                    setScaleY(Math.max(0, Math.min(1, val / 100)));
+                },
+                onComplete: () => {
+                    // 完了判定（丸めて100）
+                    if (Math.round(proxy.v) === 100) {
+                        // call finishSequence once
+                        finishSequence();
+                    }
+                }
+            });
+        }
+
+        // target 更新
+        function updateTarget() {
+            let target = Math.round((loaded / total) * 100);
+            if (target < 3 && loaded > 0) target = 3;
+            if (loaded >= total) target = 100;
+            animateTo(target);
+        }
+
+        function markOne() {
+            loaded = Math.min(total, loaded + 1);
+            updateTarget();
+        }
+
+        // 各リソースの読み込み監視
+        resources.forEach(node => {
+            const t = node.tagName && node.tagName.toLowerCase();
+            if (t === 'img') {
+                if (node.complete && node.naturalWidth !== 0) markOne();
+                else {
+                    node.addEventListener('load', markOne, {
+                        once: true
+                    });
+                    node.addEventListener('error', markOne, {
+                        once: true
+                    });
+                }
+            } else if (t === 'link') {
+                if (node.sheet) markOne();
+                else {
+                    node.addEventListener('load', markOne, {
+                        once: true
+                    });
+                    node.addEventListener('error', markOne, {
+                        once: true
+                    });
+                }
+            } else if (t === 'iframe') {
+                node.addEventListener('load', markOne, {
+                    once: true
+                });
+                node.addEventListener('error', markOne, {
+                    once: true
+                });
+            } else {
+                node.addEventListener('load', markOne, {
+                    once: true
+                });
+                node.addEventListener('error', markOne, {
+                    once: true
+                });
+            }
+        });
+
+        // フォント含めるなら total++ して待つ
+        if (document.fonts && document.fonts.ready) {
+            total += 1;
+            document.fonts.ready.then(markOne).catch(markOne);
+        }
+
+        // window.load 到達時の保険
+        window.addEventListener('load', () => {
+            const rem = total - loaded;
+            for (let i = 0; i < rem; i++) setTimeout(markOne, i * 30);
+        });
+
+        // ドキュメントがすでに complete の場合は即完了扱いへ
+        if (document.readyState === 'complete') {
+            setTimeout(() => {
+                while (loaded < total) markOne();
+                updateTarget();
+            }, 40);
+        } else {
+            // 初期を0にセット
+            animateTo(0);
+        }
+
+        // 例: 外部から finish_fnc を差し替える方法（任意）
+        // window.finish_fnc = (result) => {
+        //   // 例: 完了後1秒でトップへ遷移
+        //   return new Promise(resolve => {
+        //     setTimeout(() => { location.href = '/'; resolve(); }, 1000);
+        //   });
+        // };
+
+        // 例: 外部で完了イベントを拾う方法
+        // window.addEventListener('pageLoadingComplete', e => console.log('完了イベント', e.detail));
     });
 </script>
-
-<script>
-    let percent = 0;
-    const flameColor = document.querySelector('.flame-color');
-    const loaderPercent = document.querySelector('.loader-percent');
-
-    const loadingInterval = setInterval(() => {
-        percent++;
-        loaderPercent.textContent = percent + '%';
-        flameColor.style.clipPath = `inset(${100 - percent}% 0 0 0)`;
-
-        if (percent >= 100) {
-            clearInterval(loadingInterval);
-            // ローディング完了処理へ
-        }
-    }, 30);
-</script>
-
-
-
 <?php get_footer(); ?>

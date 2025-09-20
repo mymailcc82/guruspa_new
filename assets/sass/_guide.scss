@@ -1,0 +1,11 @@
+@use 'setting' as *;
+.guide {
+  .sec01 {
+    .sec01-desc {
+      p {
+        font-size: 16px;
+        text-align: center;
+      }
+    }
+  }
+}

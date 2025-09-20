@@ -204,47 +204,5 @@ gsap.fromTo(
 
 
 
-$(function () {
-    $(function () {
-        document.addEventListener('DOMContentLoaded', () => {
-            const animatedTitle = document.querySelector('.animated-title');
-            const titleSpans = animatedTitle.querySelectorAll('.title');
-            const sprout = animatedTitle.querySelector('.title-item-sprou');
-            const sun = animatedTitle.querySelector('.title-item-sun');
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        animatedTitle.classList.add('in-view');
-
-                        // 文字アニメーション（遅延はCSSで制御）
-                        titleSpans.forEach((span, index) => {
-                            span.classList.add('in-view');
-                        });
-
-                        // sprout の位置を最後の文字の右上に配置
-                        const lastTitle = titleSpans[titleSpans.length - 1];
-                        if (lastTitle && sprout) {
-                            const rect = lastTitle.getBoundingClientRect();
-                            const parentRect = animatedTitle.getBoundingClientRect();
-
-                            const offsetLeft = rect.left - parentRect.left + rect.width * 0.5;
-                            const offsetTop = rect.top - parentRect.top - sprout.offsetHeight * 0.8;
-
-                            sprout.style.left = `${offsetLeft}px`;
-                            sprout.style.top = `${offsetTop}px`;
-                        }
-
-                        observer.unobserve(animatedTitle);
-                    }
-                });
-            }, {
-                threshold: 0.5
-            });
-
-            observer.observe(animatedTitle);
-        });
-    });
 
 
-});

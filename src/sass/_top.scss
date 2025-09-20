@@ -1,5 +1,35 @@
 @use 'setting' as *;
 
+.top_logo_img {
+  .st0 {
+    fill: none;
+  }
+
+  .st1 {
+    fill: #231815;
+  }
+
+  .st2 {
+    fill: #e6211a;
+    opacity: 0;
+  }
+
+  .st3 {
+    fill: #f4ba1b;
+    opacity: 0;
+  }
+
+  .st4 {
+    fill: #204994;
+    opacity: 0;
+  }
+
+  .st5 {
+    fill: #5db131;
+    opacity: 0;
+  }
+}
+
 .st0 {
   clip-path: url(#SVGID_00000002343766910478080920000014404344425281323689_);
 }
@@ -23,6 +53,65 @@
 
 .st5 {
   fill: #5db131;
+}
+
+.wave {
+  transform: translateY(-100vh);
+  z-index: 1000;
+  &:before {
+    width: 100%;
+    height: 100vh;
+    content: '';
+    position: absolute;
+    bottom: calc(-100vh + 10px);
+    left: 0;
+    background-color: #fefbf5;
+  }
+}
+
+.page-loading {
+  position: fixed;
+  z-index: 100;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100vh;
+  background-color: #fefbf5;
+
+  .page-loading-wrap-container {
+    position: absolute;
+    width: 84%;
+    background-color: #fff;
+    height: 783px;
+    left: 50%;
+    top: 50%;
+    overflow: hidden;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .page-loading-wrap {
+      width: 200px;
+      text-align: center;
+      svg {
+        margin: 0 auto;
+      }
+      p {
+        font-family: $font-en;
+        font-size: 27px;
+        font-weight: 500;
+        margin-top: 20px;
+        font-weight: 900;
+        span {
+          font-family: $font-en;
+          font-size: 27px;
+          font-weight: 900;
+        }
+      }
+    }
+  }
 }
 
 .top {
@@ -78,6 +167,7 @@
         left: -30px;
         top: -162px;
         z-index: 2;
+        opacity: 0;
       }
 
       .bg-item-02 {
@@ -87,6 +177,7 @@
         right: -0px;
         top: -120px;
         z-index: 2;
+        opacity: 0;
       }
 
       .icon-01 {
@@ -96,6 +187,7 @@
         bottom: 0px;
         right: 200px;
         z-index: 12;
+        opacity: 0;
       }
 
       /*メインビジュアル*/
@@ -215,7 +307,6 @@
             left: -50%;
             width: 180vw;
             height: 318.1px;
-            animation: waveMove 10s linear infinite;
             z-index: 10;
             opacity: 1;
 
@@ -357,10 +448,6 @@
     }
   }
 
-
-
-
-
   /*mv*/
 
   .top-visual {
@@ -394,7 +481,6 @@
         font-size: 16px;
       }
     }
-
   }
 
   /*sec01イベント*/
@@ -627,7 +713,6 @@
           }
 
           &:hover {
-
             &::before {
               transform: translate(10px, -10px) rotate(10deg);
             }
@@ -647,20 +732,16 @@
                 &:nth-of-type(2) {
                   transform: translateY(-10px);
                 }
-
               }
             }
 
             .sec-01-col-under-title {
-
               h3 {
                 i {
                   transform: translate(15px, 5px);
                 }
               }
-
             }
-
           }
 
           .sec-01-col-under-img {
@@ -994,7 +1075,8 @@
         }
 
         /* non-scaling-stroke は拡大縮小時に stroke 幅を一定に保つ */
-        path {}
+        path {
+        }
 
         .sec03-col-item-child {
           position: absolute;
@@ -1195,7 +1277,6 @@
         background-image: url(("./assets/img/com/bg-blue-big.jpg"));
         background-size: contain;
         background-repeat: repeat;
-
       }
 
       @keyframes drop {
@@ -1272,7 +1353,6 @@
         animation-delay: 0s;
       }
 
-
       .shizuku-1 {
         position: absolute;
         width: 32px;
@@ -1345,7 +1425,6 @@
         height: auto;
       }
 
-
       .sec04-wrap {
         position: relative;
         z-index: 5;
@@ -1379,7 +1458,6 @@
           &:hover {
             i {
               transform: translateX(5px);
-
             }
           }
 
@@ -1476,7 +1554,6 @@
               &:hover {
                 i {
                   transform: translateX(5px);
-
                 }
               }
 
@@ -1670,7 +1747,6 @@
           &:hover {
             i {
               transform: translateX(5px);
-
             }
           }
 
@@ -1744,7 +1820,6 @@
           &:hover {
             i {
               transform: translateX(5px);
-
             }
           }
 
@@ -1936,7 +2011,7 @@
 
           img {
             width: 100%;
-            transition: transform .4s ease;
+            transition: transform 0.4s ease;
           }
 
           i {
@@ -1949,7 +2024,7 @@
             display: inline-block;
             right: 3px;
             bottom: 3px;
-            transition: transform .4s ease;
+            transition: transform 0.4s ease;
           }
         }
       }
@@ -1984,11 +2059,10 @@
             background-repeat: no-repeat;
             right: 20px;
             bottom: 20px;
-            transition: transform .4s ease;
+            transition: transform 0.4s ease;
           }
 
           &:hover {
-
             &::before {
               transform: translateX(5px);
             }
@@ -2050,7 +2124,7 @@
             background-repeat: no-repeat;
             right: 20px;
             bottom: 20px;
-            transition: transform .4s ease;
+            transition: transform 0.4s ease;
           }
 
           &:hover {

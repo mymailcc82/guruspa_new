@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="25.688" height="25.689" viewBox="0 0 25.688 25.689">
+  <g id="グループ_23648" data-name="グループ 23648" transform="translate(-505 -404.762)">
+    <g id="楕円形_21" data-name="楕円形 21" transform="translate(505 404.762)" fill="#3c3636" stroke="#222" stroke-width="0.5">
+      <ellipse cx="12.844" cy="12.844" rx="12.844" ry="12.844" stroke="none"/>
+      <ellipse cx="12.844" cy="12.844" rx="12.594" ry="12.594" fill="none"/>
+    </g>
+    <path id="多角形_16" data-name="多角形 16" d="M4.854.533a.5.5,0,0,1,.8,0L9.909,6.206a.5.5,0,0,1-.4.8H1a.5.5,0,0,1-.4-.8Z" transform="translate(523.509 422.692) rotate(180)" fill="#fff"/>
+  </g>
+</svg>

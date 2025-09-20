@@ -1,0 +1,99 @@
+@use 'setting' as *;
+
+.archive {
+  .sec {
+    padding-bottom: 100px;
+  }
+  .archive-wrap {
+    margin-top: 80px;
+    .archive-wrap-col {
+      margin-bottom: 20px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      a {
+        display: flex;
+        width: 100%;
+        height: 137px;
+        background-color: #fff;
+        border-radius: 30px;
+        overflow: hidden;
+        transition: transform 0.4s ease;
+        position: relative;
+        i {
+          position: absolute;
+          right: 40px;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 35px;
+          height: 35px;
+          background-image: url(("./assets/img/icon/icon-btn-blown.svg"));
+          background-size: contain;
+          background-repeat: no-repeat;
+          display: block;
+        }
+
+        &:hover {
+          .archive-wrap-col-img {
+            img {
+              transform: scale(1.1);
+            }
+          }
+        }
+
+        .archive-wrap-col-img {
+          width: 255px;
+          height: 100%;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transition: transform 0.4s ease;
+          }
+        }
+
+        .archive-wrap-col-txt {
+          width: calc(100% - 255px);
+          display: flex;
+          align-content: center;
+          flex-wrap: wrap;
+          padding: 0 50px 0 15px;
+          .archive-wrap-col-txt-info {
+            display: flex;
+            align-items: center;
+          }
+
+          .category {
+            display: inline-flex;
+            align-items: center;
+            padding: 5px 12px;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            border-radius: 25px;
+            border: solid 0.5px #3c3636;
+            max-height: 28px;
+            margin-right: 10px;
+          }
+
+          time {
+            font-size: 16px;
+            font-weight: 500;
+          }
+
+          h4 {
+            font-size: 16px;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            line-height: 1.5;
+            margin-top: 10px;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

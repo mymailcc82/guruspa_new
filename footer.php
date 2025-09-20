@@ -122,48 +122,30 @@
 <script src="https://yubinbango.github.io/yubinbango/yubinbango.js" charset="UTF-8"></script>
 
 <script>
-    window.addEventListener('DOMContentLoaded', () => {
-        // 初期位置を上にオフセット
-        gsap.set(".wave", {
-            y: "-100%"
-        });
-        gsap.set(".wave_nami_v2", {
-            opacity: 0,
-            y: 20
-        });
-        gsap.set(".wave_nami_v3", {
-            opacity: 0,
-            y: 20
-        });
+    document.addEventListener("DOMContentLoaded", function() {
+        const targets = document.querySelectorAll('.com-title .title');
 
-        const tl = gsap.timeline();
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+            );
+        }
 
-        tl.to(".wave", {
-                y: "-30%", // ← まず中間まで一気に降ろす
-                duration: 0.7,
-                ease: "power2.out"
-            })
-            .to(".wave", {
-                y: "0%", // ← 最後はゆっくり着地
-                duration: 1.5,
-                ease: "power4.out",
-                onComplete: () => {
-                    // 装飾波フェードイン
-                    gsap.to(".wave_nami_v2", {
-                        opacity: 1,
-                        y: 0,
-                        duration: 1.2,
-                        ease: "power2.out"
-                    });
-                    gsap.to(".wave_nami_v3", {
-                        opacity: 1,
-                        y: 0,
-                        duration: 1.2,
-                        delay: 0.3,
-                        ease: "power2.out"
-                    });
+        function checkInView() {
+            targets.forEach((el) => {
+                if (isInViewport(el)) {
+                    el.classList.add('in-view');
+                } else {
+                    el.classList.remove('in-view'); // 一度のみなら消さないようにしてOK
                 }
             });
+        }
+
+        window.addEventListener('scroll', checkInView);
+        window.addEventListener('resize', checkInView);
+        checkInView(); // 初回実行
     });
 </script>
 
@@ -232,52 +214,7 @@
         }
     });
 </script>
-<script>
-    (function() {
-        var hadr = document.querySelector(".contact-wrap-right form")
-        if (hadr) {
-            cancelFlag = true;
-            //イベントをキャンセルするリスナ
-            var onKeyupCanceller = function(e) {
-                if (cancelFlag) {
-                    e.stopImmediatePropagation();
-                }
-                return false;
-            };
 
-            // 郵便番号の入力欄
-            var postalcode = hadr.querySelectorAll(".p-postal-code"),
-                postalField = postalcode[postalcode.length - 1];
-
-            //通常の挙動をキャンセルできるようにイベントを追加
-            postalField.addEventListener("keyup", onKeyupCanceller, false);
-
-            //ボタンクリック時
-            var btn = hadr.querySelector(".zip-wrap-btn-a");
-            btn.addEventListener("click", function(e) {
-                //キャンセルを解除
-                cancelFlag = false;
-
-                //aタグ無効
-                e.preventDefault();
-
-                //発火
-                let event;
-                if (typeof Event === "function") {
-                    event = new Event("keyup");
-                } else {
-                    event = document.createEvent("Event");
-                    event.initEvent("keyup", true, true);
-                }
-                postalField.dispatchEvent(event);
-
-                //キャンセルを戻す
-                cancelFlag = true;
-            });
-        }
-
-    })();
-</script>
 
 
 <script>
@@ -295,83 +232,12 @@
 </script>
 
 
-<?php if (is_page("entry")):  ?>
-    <script>
-        //エントリーで誕生日自動付与
-        const input = document.getElementById('dateInput');
-        //typeをtextから数字に変更
-        input.type = 'tel';
 
-        input.addEventListener('input', (e) => {
-            let value = e.target.value;
 
-            // Remove all non-numeric characters except `/`
-            value = value.replace(/[^0-9/]/g, '');
-
-            // Add `/` after the 4th and 7th characters if not already present
-            if (value.length > 4 && value[4] !== '/') {
-                value = value.slice(0, 4) + '/' + value.slice(4);
-            }
-            if (value.length > 7 && value[7] !== '/') {
-                value = value.slice(0, 7) + '/' + value.slice(7);
-            }
-
-            // Limit the format to "YYYY/MM/DD"
-            if (value.length > 10) {
-                value = value.slice(0, 10);
-            }
-
-            e.target.value = value;
-        });
-    </script>
-<?php endif; ?>
-<script>
-    //aboutの沿革
-    gsap.fromTo('.sec03-wrap-right-history-border', {
-        y: "-100%",
-    }, {
-        y: "0%",
-        scrollTrigger: {
-            trigger: '.sec03-wrap-right-history',
-            start: 'top bottom-=150',
-            end: 'bottom center',
-            scrub: true,
-            markers: false,
-        },
-
-    });
-</script>
-<script>
-    $('.upload-1').on('change', function() {
-        var file = $(this).prop('files')[0];
-        $('.js-upload-filename-1').text(file.name);
-    });
-</script>
-<script>
-    // Safariを判定する関数
-    function isSafari() {
-        return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-    }
-
-    // モバイルの時は解除 & Safariの場合はLenisを無視
-    if (window.innerWidth > 600 && !isSafari()) {
-        const lenis = new Lenis({
-            duration: 0.8, // スクロールの速度
-            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // イージング関数
-            smooth: true, // スムーズスクロールを有効化
-        });
-
-        function raf(time) {
-            lenis.raf(time);
-            requestAnimationFrame(raf);
-        }
-
-        requestAnimationFrame(raf);
-    }
-</script>
 
 
 <?php if (is_front_page()) : ?>
+
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const scrollTxt = document.querySelector('.scroll-txt-change');
@@ -441,26 +307,6 @@
     });
 
     //footerにlineアイコンが差し掛かったらfedeuot
-
-    gsap.fromTo(".footer-fixed", {
-        opacity: 1,
-    }, {
-        opacity: 0,
-        duration: 0.5,
-        onStart: () => {
-            document.querySelector(".footer-fixed-line").style.pointerEvents = "none";
-        },
-        onReverseComplete: () => {
-            document.querySelector(".footer-fixed-line").style.pointerEvents = "auto";
-        },
-        scrollTrigger: {
-            trigger: "footer",
-            start: "top bottom",
-            end: "bottom top",
-            toggleActions: "play none none reverse",
-            markers: false // デバッグ用（本番時は削除）
-        }
-    });
 </script>
 <?php if (!is_404()): ?>
     <?php wp_footer(); ?>
