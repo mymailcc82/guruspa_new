@@ -463,6 +463,26 @@
                     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
 
+                    <svg version="1.1" id="レイヤー_1"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 369.5 369.5">
+                        <style type="text/css">
+                            .st0 {
+                                fill: none;
+                            }
+
+                            .st1 {
+                                fill: none;
+                                display: none;
+                            }
+                        </style>
+
+                        <g id="path_108236">
+                            <path class="st100" d="M184.8,0c102,0,184.8,82.7,184.8,184.8s-82.7,184.8-184.8,184.8S0,286.8,0,184.8S82.7,0,184.8,0z" />
+                            <path class="st1" d="M184.8,14C90.6,14,14,90.6,14,184.8s76.6,170.8,170.8,170.8s170.8-76.6,170.8-170.8S278.9,14,184.8,14
+      M184.8,0c102,0,184.8,82.7,184.8,184.8s-82.7,184.8-184.8,184.8S0,286.8,0,184.8S82.7,0,184.8,0z" />
+                        </g>
+                    </svg>
+
                     <script>
                         gsap.registerPlugin(ScrollTrigger);
 
