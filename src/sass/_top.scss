@@ -58,6 +58,7 @@
 .wave {
   transform: translateY(-100vh);
   z-index: 1000;
+
   &:before {
     width: 100%;
     height: 100vh;
@@ -95,15 +96,18 @@
     .page-loading-wrap {
       width: 200px;
       text-align: center;
+
       svg {
         margin: 0 auto;
       }
+
       p {
         font-family: $font-en;
         font-size: 27px;
         font-weight: 500;
         margin-top: 20px;
         font-weight: 900;
+
         span {
           font-family: $font-en;
           font-size: 27px;
@@ -505,22 +509,40 @@
 
           li {
             width: 33.333%;
-            width: 100%;
-            padding: 10px 0;
-            font-size: 16px;
-            font-weight: 500;
             text-align: center;
-            border-radius: 24px;
-            color: #3c3636;
+
+
+            a {
+              width: 100%;
+              display: block;
+              padding: 10px 0;
+              font-size: 16px;
+              font-weight: 500;
+              color: #3c3636;
+              border-radius: 24px;
+            }
           }
 
-          .active {
-            color: #fff !important;
-            background-color: #214995;
+          li.active {
+            a {
+              color: #fff !important;
+              background-color: #214995;
+            }
           }
         }
 
         /*イベントリスト*/
+        .area {
+          display: none;
+        }
+
+        .area.is-active {
+          display: block;
+          animation-name: displayAnime;
+          animation-duration: 2s;
+          animation-fill-mode: forwards;
+        }
+
         .sec01-col-main {
           ul {
             padding-top: 88px;
@@ -571,28 +593,15 @@
 
                 .img {
                   text-align: center;
-                  padding: 60px 0 30px;
-                  position: relative;
                   border-radius: 30px 30px 0 0;
                   border: solid 1px #3c3636;
+                  width: 100%;
+                  overflow: hidden;
 
                   img {
-                    display: inline-block;
-                    max-width: 114.5px;
-                    width: 90%;
+                    width: 100%;
                   }
 
-                  .title {
-                    position: absolute;
-                    left: 0;
-                    font-family: $font-en;
-                    top: 20px;
-                    writing-mode: vertical-rl;
-                    font-size: 17px;
-                    color: #fff;
-                    font-weight: 900;
-                    letter-spacing: 0.1em;
-                  }
                 }
 
                 .img-info {
@@ -630,18 +639,18 @@
                     border-radius: 25px;
                   }
 
-                  .category-info {
-                    background-color: #f4ba1d;
+                  .category-red {
+                    background-color: #e81e23;
+                    color: #fff !important;
                   }
 
-                  .category-event {
+                  .category-green {
                     background-color: #5cb232;
                     color: #fff !important;
                   }
 
-                  .category-food {
-                    background-color: #e81e23;
-                    color: #fff !important;
+                  .category-yellow {
+                    background-color: #f4ba1d;
                   }
 
                   .term {
@@ -907,7 +916,7 @@
         content: '';
         width: 100%;
         height: 100%;
-        background-image: url(("./assets/img/com/bg-green-big.jpg"));
+        background-image: url(("./assets/img/com/sec02-bg-main.jpg"));
         background-size: contain;
         background-repeat: repeat;
         z-index: 4;
@@ -1075,8 +1084,7 @@
         }
 
         /* non-scaling-stroke は拡大縮小時に stroke 幅を一定に保つ */
-        path {
-        }
+        path {}
 
         .sec03-col-item-child {
           position: absolute;
@@ -1264,7 +1272,7 @@
 
     .sec04-bg {
       background-color: #30559c;
-      padding: 10px 0 30px;
+      padding: 0px 0 30px;
       position: relative;
       z-index: 2;
 
@@ -1274,9 +1282,9 @@
         content: '';
         width: 100%;
         height: 100%;
-        background-image: url(("./assets/img/com/bg-blue-big.jpg"));
-        background-size: contain;
-        background-repeat: repeat;
+        background-image: url(("./assets/img/com/sec04-bg-main.jpg"));
+        background-size: cover;
+        background-repeat: no-repeat;
       }
 
       @keyframes drop {
@@ -1594,73 +1602,87 @@
           right: -100px;
           top: -100px;
         }
+      }
 
-        .price-table {
-          width: 100%;
-          border-collapse: separate;
-          border-spacing: 0;
-          border: 1px solid #707070;
-          border-radius: 20px;
-          overflow: hidden;
-          table-layout: fixed;
-          text-align: center;
-        }
+      h3 {
+        font-size: 25px;
+        font-weight: bold;
+        letter-spacing: .1em;
+        color: #3C3636;
+        margin: 0 0 20px 20px;
+      }
 
-        .price-table th,
-        .price-table td {
-          padding: 20px;
-          border-right: 1px solid #707070;
-          border-bottom: 1px solid #707070;
-          vertical-align: middle;
-        }
+      .price-table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        border: 1px solid #707070;
+        border-radius: 20px;
+        overflow: hidden;
+        table-layout: fixed;
+        text-align: center;
+      }
 
-        .price-table td:first-child {
-          //border-right: none;
-          font-size: 19px;
-          font-weight: bold;
-          color: #3c3636;
-        }
+      .price-table th,
+      .price-table td {
+        padding: 20px;
+        border-right: 1px solid #707070;
+        border-bottom: 1px solid #707070;
+        vertical-align: middle;
+      }
 
-        .price-table th:last-child,
-        .price-table td:last-child {
-          border-right: none;
-        }
+      .price-table td:first-child {
+        //border-right: none;
+        font-size: 19px;
+        font-weight: bold;
+        color: #3c3636;
+      }
 
-        .price-table tr:last-child td {
-          border-bottom: none;
-        }
+      .price-table th:last-child,
+      .price-table td:last-child {
+        border-right: none;
+      }
 
-        .price-table thead th {
-          background: #3e3733;
-          color: #fff;
-          font-size: 19px;
-          font-weight: bold;
-        }
+      .price-table tr:last-child td {
+        border-bottom: none;
+      }
 
-        .price-table tbody td span.note {
-          display: block;
-          font-size: 12px;
-          letter-spacing: 0.1em;
-          font-weight: bold;
-          color: #3c3636;
-          margin-top: 4px;
-        }
+      .price-table thead th {
+        background: #3e3733;
+        color: #fff;
+        font-size: 19px;
+        font-weight: bold;
+      }
 
-        strong {
-          font-size: 22px;
-        }
+      .price-table tbody td span.note {
+        display: block;
+        font-size: 12px;
+        letter-spacing: 0.1em;
+        font-weight: bold;
+        color: #3c3636;
+        margin-top: 4px;
+      }
 
-        .col-left {
-          width: 25%;
-        }
+      strong {
+        font-size: 22px;
+        letter-spacing: 0.1em;
+      }
 
-        .col-center {
-          width: 35%;
-        }
+      small {
+        font-size: 18px;
+        font-weight: bold;
+      }
 
-        .col-right {
-          width: 40%;
-        }
+      .col-left {
+        width: 25%;
+      }
+
+      .col-center {
+        width: 35%;
+      }
+
+      .col-right {
+        width: 40%;
       }
 
       .sec05-wrap-txt {
@@ -1689,7 +1711,7 @@
           background-size: contain;
           background-repeat: no-repeat;
           left: -120px;
-          top: -80px;
+          bottom: -80px;
         }
       }
 
@@ -1781,19 +1803,33 @@
         background-size: contain;
         background-repeat: no-repeat;
         right: -20px;
-        bottom: -80px;
+        bottom: -30px;
       }
     }
 
     .sec06-bg {
-      background-color: #f5be2a;
-      padding: 25px 0 15px;
+      //background-color: #f5be2a;
+      //padding: 25px 0 15px;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        display: block;
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-image: url(("./assets/img/com/sec06-bg-main.jpg"));
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
 
       .sec06-map {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         margin: 42px auto;
+        position: relative;
+        z-index: 3;
 
         li {
           width: 49%;
@@ -1816,6 +1852,8 @@
           width: 198px;
           padding-bottom: 5px;
           margin: 55px auto 0;
+          position: relative;
+          z-index: 3;
 
           &:hover {
             i {
@@ -1915,20 +1953,38 @@
 
 .aside {
   position: relative;
-  padding-bottom: 80px;
+  //padding-bottom: 80px;
 
   .aside-bg-under {
-    position: absolute;
+    //position: absolute;
     width: 100%;
-    bottom: -1.5px;
+    //bottom: -1.5px;
     left: 0;
   }
 
   .aside-bg {
-    background-color: #e54448;
-    padding: 45px 0 55px;
+    //background-color: #e54448;
+    padding: 0px 0 0px;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      display: block;
+      content: '';
+      width: 100%;
+      height: 100%;
+      background-image: url(("./assets/img/aside/aside-bg-main.jpg"));
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .content-width{
+      padding: 55px 0 30px;
+    }
 
     .aside-btn-1 {
+      position: relative;
+      z-index: 3;
       a {
         display: flex;
         flex-wrap: wrap;

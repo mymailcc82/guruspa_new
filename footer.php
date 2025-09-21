@@ -18,6 +18,7 @@
                     <dd><a href="<?php echo home_url(); ?>">ー発汗エリア</a></dd>
                     <dd><a href="<?php echo home_url(); ?>">ーご飲食</a></dd>
                     <dd><a href="<?php echo home_url(); ?>">ーリラクゼーション</a></dd>
+                    <dd><a href="<?php echo home_url(); ?>">ーアメニティ・グッズ</a></dd>
                 </dl>
                 <dl>
                     <dt><a href="<?php echo home_url(); ?>">初めてのお客様へ</a></dt>
@@ -40,8 +41,6 @@
                     <dt><a href="<?php echo home_url(); ?>">FAQ</a></dt>
                     <dt><a href="<?php echo home_url(); ?>">注意事項</a></dt>
                     <dt><a href="<?php echo home_url(); ?>">採用情報</a></dt>
-                    <dt><a href="<?php echo home_url(); ?>">アメニティ</a></dt>
-                    <dt><a href="<?php echo home_url(); ?>">グッズ</a></dt>
                 </dl>
             </div>
 
@@ -61,35 +60,23 @@
                     </p>
                 </div>
                 <div class="footer-info-wrap">
-                    <dl class="footer-info-wrap-time">
-                        <dt>営業時間</dt>
-                        <dd>
-                            【月〜木】10:00〜24:00<br>
-                            【土】7:00〜翌1:00
-                        </dd>
-                        <dd>
-                            【金】10:00〜翌1:00<br>
-                            【日】7:00〜24:00
-                        </dd>
-                    </dl>
-                    <dl class="footer-info-wrap-day">
-                        <dt>休館日</dt>
-                        <dd>年中無休</dd>
-                    </dl>
+                    <ul>
+                        <li><a href="<?php echo home_url(); ?>/sitemap/">サイトマップ</a></li>
+                        <li><a href="<?php echo home_url(); ?>/privacy/">プライバシーポリシー</a></li>
+                        <li><a href="<?php echo home_url(); ?>/privacy/">利用規約</a></li>
+                        <li><a href="<?php echo home_url(); ?>/sitemap/">Cookieについて</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
     <div class="footer-copy">
-        <div class="footer-copy-link">
-            <ul>
-                <li><a href="<?php echo home_url(); ?>/privacy/">個人情報保護方針</a></li>
-                <li><a href="<?php echo home_url(); ?>/sitemap/">サイトマップ</a></li>
-                <li><a href="<?php echo home_url(); ?>/privacy/">利用規約</a></li>
-                <li><a href="<?php echo home_url(); ?>/sitemap/">Cookieについて</a></li>
-            </ul>
-        </div>
         <p class="copy">©GURUSPA All rights reserved.</p>
+    </div>
+    <div class="top-fixed">
+        <a class="top-fixed-1" href="<?php echo home_url(); ?>">本日のイベント<i></i></a>
+        <a class="top-fixed-2" href="<?php echo home_url(); ?>">今すぐ行く！<i></i></a>
+        <a class="top-fixed-3" href="<?php echo home_url(); ?>">料金・<br>ご利用料金<i></i></a>
     </div>
     <div class="footer-fixed">
         <a href="#">
@@ -101,7 +88,6 @@
             <span class="footer-fixed-child footer-fixed-child-5"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/footer-fixed-5.png" alt=""></span>
             <span class="footer-fixed-child footer-fixed-child-6"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/footer-fixed-6.png" alt=""></span>
             <span class="footer-fixed-txt"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/footer-fixed-7.png" alt=""></span>
-
         </a>
     </div>
     <p class="scroll-txt scroll-txt-change">
@@ -135,10 +121,11 @@
 
         function checkInView() {
             targets.forEach((el) => {
+                // すでにin-viewクラスがあるならスキップ（1回だけにするため）
+                if (el.classList.contains('in-view')) return;
+
                 if (isInViewport(el)) {
                     el.classList.add('in-view');
-                } else {
-                    el.classList.remove('in-view'); // 一度のみなら消さないようにしてOK
                 }
             });
         }
@@ -148,6 +135,7 @@
         checkInView(); // 初回実行
     });
 </script>
+
 
 <script>
     gsap.registerPlugin(ScrollTrigger);
