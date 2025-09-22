@@ -97,7 +97,7 @@ img.lazyloaded {
     font-weight: bold;
 
     &:hover {
-      background-color: #2E549C !important;
+      background-color: #2e549c !important;
 
       i {
         transform: translateX(10px);
@@ -189,6 +189,16 @@ img.lazyloaded {
   position: relative;
   //overflow: hidden;
   //padding-top: 20px;
+  &.com-title--small {
+    h2 {
+      .title {
+        font-size: 45px !important;
+      }
+    }
+    .title-item-sprout {
+      transform: translateY(0px) !important;
+    }
+  }
 
   p {
     font-size: 18px;
@@ -210,7 +220,7 @@ img.lazyloaded {
       font-size: 65px;
       font-weight: 900;
       font-family: $font-en;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.04em;
       position: relative;
       z-index: 2;
       opacity: 0;
@@ -236,23 +246,23 @@ img.lazyloaded {
     }
 
     .title:nth-child(4).in-view {
-      transition-delay: .5s;
+      transition-delay: 0.5s;
     }
 
     .title:nth-child(5).in-view {
-      transition-delay: .6s;
+      transition-delay: 0.6s;
     }
 
     .title:nth-child(6).in-view {
-      transition-delay: .7s;
+      transition-delay: 0.7s;
     }
 
     .title:nth-child(7).in-view {
-      transition-delay: .8s;
+      transition-delay: 0.8s;
     }
 
     .title:nth-child(8).in-view {
-      transition-delay: .9s;
+      transition-delay: 0.9s;
     }
 
     .title:nth-child(9).in-view {
@@ -264,7 +274,10 @@ img.lazyloaded {
       position: absolute;
       opacity: 0;
       transform: translateY(20px);
+      top: -42px !important;
+      width: 20px !important;
       //transition: all 0.5s ease;
+      right: 7px !important;
     }
 
     .title-item-sun {
@@ -349,8 +362,8 @@ img.lazyloaded {
 }
 
 .com-title-concept {
-  h2{
-    .com-title-p-hidden{
+  h2 {
+    .com-title-p-hidden {
       line-height: 1 !important;
       overflow: hidden !important;
     }
@@ -413,6 +426,45 @@ img.lazyloaded {
       width: 28px;
       height: 28px;
       background-image: url(("./assets/img/icon/icon-arrow-right.svg"));
+      background-size: contain;
+      background-repeat: no-repeat;
+      display: inline-block;
+      transition: transform 0.4s ease;
+      &.icon-opacity {
+        background-image: url(("./assets/img/icon/icon-arrow-right-opacity.svg")) !important;
+      }
+    }
+  }
+}
+.com-btn-border--210 {
+  a {
+    width: 210px !important;
+  }
+}
+.com-btn-border-white {
+  a {
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    color: #fff;
+    border-bottom: solid 1px #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    //width: 198px;
+    padding-bottom: 5px;
+    margin: 0px auto 0;
+
+    &:hover {
+      i {
+        transform: translateX(5px);
+      }
+    }
+
+    i {
+      width: 28px;
+      height: 28px;
+      background-image: url(("./assets/img/icon/icon-arrow-right-white-circle.svg"));
       background-size: contain;
       background-repeat: no-repeat;
       display: inline-block;

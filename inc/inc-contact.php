@@ -1,5 +1,5 @@
 <aside class="aside">
-    <div class="aside-bg-top"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/aside-bg-top.png" alt=""></div>
+    <div class="aside-bg-top"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-top.png" alt=""></div>
     <div class="aside-bg">
         <div class="content-width">
             <div class="aside-btn-1">
@@ -42,5 +42,5 @@
             </div>
         </div>
     </div>
-    <div class="aside-bg-under"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/aside-bg-under.png" alt=""></div>
+    <div class="aside-bg-under"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-under_v2.png" alt=""></div>
 </aside>

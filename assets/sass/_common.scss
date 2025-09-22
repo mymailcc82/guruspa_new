@@ -349,12 +349,18 @@ img.lazyloaded {
 }
 
 .com-title-concept {
+  h2{
+    .com-title-p-hidden{
+      line-height: 1 !important;
+      overflow: hidden !important;
+    }
+  }
   .title-item-sprout {
     width: 40px;
     height: auto;
     position: absolute;
     right: -10px;
-    top: -42px !important;
+    //top: -42px !important;
   }
 }
 
