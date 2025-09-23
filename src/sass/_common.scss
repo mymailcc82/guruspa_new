@@ -105,11 +105,23 @@ img.lazyloaded {
 
       .icon-btn--1 {
         transform: translate(10px, -5px) rotate(10deg);
+
+        @include media(middle){
+          transform: translate(10px, -10px) rotate(10deg);
+        }
       }
 
       .icon-btn--2 {
         transform: translate(10px, -15px);
+
+        @include media(middle){
+          transform: translate(10px, -20px);
+        }
       }
+    }
+
+    @include media(middle){
+      font-size: 16px;
     }
 
     i {
@@ -122,6 +134,11 @@ img.lazyloaded {
       transition: transform 0.4s ease;
       right: 25px;
       position: absolute;
+
+      @include media(middle){
+        width: 28.85px;
+        height: 28.85px;
+      }
     }
 
     .icon-btn--1 {
@@ -131,6 +148,12 @@ img.lazyloaded {
       display: inline-block;
       transform: translate(10px, -5px);
       transition: transform 0.4s ease;
+
+      @include media(middle){
+        width: 14.26px;
+        height: 24.15px;
+        transform: translate(10px, -10px);
+      }
     }
 
     .icon-btn--2 {
@@ -139,6 +162,12 @@ img.lazyloaded {
       display: inline-block;
       transform: translate(10px, -10px);
       transition: transform 0.4s ease;
+
+      @include media(middle){
+        width: 23.03px;
+        height: 22.41px;
+        transform: translate(10px, -15px);
+      }
     }
   }
 }
@@ -335,6 +364,10 @@ img.lazyloaded {
       i {
         transform: translateX(5px);
       }
+    }
+
+    @include media(mobile){
+      display: none;
     }
 
     i {

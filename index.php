@@ -279,8 +279,8 @@
                     <div class="sec01-col">
                         <ul class="sec01-col-select tab">
                             <li class="active"><a href="javascript:void(0)" data-id="#area01">すべて</a></li>
-                            <li><a href="javascript:void(0)" data-id="#area02">期間限定イベント</a></li>
-                            <li><a href="javascript:void(0)" data-id="#area03">定例イベント</a></li>
+                            <li><a href="javascript:void(0)" data-id="#area02">期間限定<br class="hidden-sm">イベント</a></li>
+                            <li><a href="javascript:void(0)" data-id="#area03">定例<br class="hidden-sm">イベント</a></li>
                         </ul>
                         <div id="area01" class="area is-active">
                             <div class="sec01-col-main">
