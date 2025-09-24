@@ -29,6 +29,7 @@ $mobile: new-breakpoint(max-width 767px 12);
 
 $breakpoints: (
   'sm': 'screen and (min-width: 601px)',
+  'middle-small': 'screen and (max-width: 780px)',
   'middle': 'screen and (max-width: 1024px)',
   'mobile': 'screen and (max-width: 600px)',
   'md': 'screen and (min-width: 1025px)',
