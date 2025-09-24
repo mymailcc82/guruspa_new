@@ -275,156 +275,176 @@
                         </h2>
                         <a href="">一覧を見る<i></i></a>
                     </div>
-
-                    <div class="sec01-col">
-                        <ul class="sec01-col-select tab">
-                            <li class="active"><a href="javascript:void(0)" data-id="#area01">すべて</a></li>
-                            <li><a href="javascript:void(0)" data-id="#area02">期間限定<br class="hidden-sm">イベント</a></li>
-                            <li><a href="javascript:void(0)" data-id="#area03">定例<br class="hidden-sm">イベント</a></li>
-                        </ul>
-                        <div id="area01" class="area is-active">
-                            <div class="sec01-col-main">
-                                <ul>
-                                    <li><a href="">
-                                            <span class="hot">HOT!</span>
-                                            <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
-                                            <div class="img img-info">
-                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-red.jpg" alt="">
-                                            </div>
-                                            <div class="text">
-                                                <span class="category category-red">ご案内</span>
-                                                <span class="term">XX.XX.XX〜</span>
-                                                <h3>イベントタイトルが入ります</h3>
-                                            </div>
-                                        </a></li>
-                                    <li><a href="">
-                                            <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
-                                            <div class="img img-event">
-                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-green.jpg" alt="">
-                                            </div>
-                                            <div class="text">
-                                                <span class="category category-green">イベント</span>
-                                                <span class="term">XX.XX.XX〜</span>
-                                                <h3>イベントタイトルが入ります</h3>
-                                            </div>
-                                        </a></li>
-                                    <li><a href="">
-                                            <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
-                                            <div class="img img-food">
-                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-yellow.jpg" alt="">
-                                            </div>
-                                            <div class="text">
-                                                <span class="category category-yellow">フード/キッチントキワ</span>
-                                                <span class="term">XX.XX.XX〜</span>
-                                                <h3>イベントタイトルが入ります</h3>
-                                            </div>
-                                        </a></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div id="area02" class="area">
-                            <div class="sec01-col-main">
-                                <ul>
-                                    <li><a href="">
-                                            <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
-                                            <div class="img img-event">
-                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-green.jpg" alt="">
-                                            </div>
-                                            <div class="text">
-                                                <span class="category category-green">イベント</span>
-                                                <span class="term">XX.XX.XX〜</span>
-                                                <h3>イベントタイトルが入ります</h3>
-                                            </div>
-                                        </a></li>
-                                    <li><a href="">
-                                            <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
-                                            <div class="img img-event">
-                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-green.jpg" alt="">
-                                            </div>
-                                            <div class="text">
-                                                <span class="category category-green">イベント</span>
-                                                <span class="term">XX.XX.XX〜</span>
-                                                <h3>イベントタイトルが入ります</h3>
-                                            </div>
-                                        </a></li>
-                                    <li><a href="">
-                                            <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
-                                            <div class="img img-event">
-                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-green.jpg" alt="">
-                                            </div>
-                                            <div class="text">
-                                                <span class="category category-green">イベント</span>
-                                                <span class="term">XX.XX.XX〜</span>
-                                                <h3>イベントタイトルが入ります</h3>
-                                            </div>
-                                        </a></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div id="area03" class="area">
-                            <div class="sec01-col-main">
-                                <ul>
-                                    <li><a href="">
-                                            <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
-                                            <div class="img img-food">
-                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-yellow.jpg" alt="">
-                                            </div>
-                                            <div class="text">
-                                                <span class="category category-yellow">フード/キッチントキワ</span>
-                                                <span class="term">XX.XX.XX〜</span>
-                                                <h3>イベントタイトルが入ります</h3>
-                                            </div>
-                                        </a></li>
-                                    <li><a href="">
-                                            <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
-                                            <div class="img img-food">
-                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-yellow.jpg" alt="">
-                                            </div>
-                                            <div class="text">
-                                                <span class="category category-yellow">フード/キッチントキワ</span>
-                                                <span class="term">XX.XX.XX〜</span>
-                                                <h3>イベントタイトルが入ります</h3>
-                                            </div>
-                                        </a></li>
-                                    <li><a href="">
-                                            <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
-                                            <div class="img img-food">
-                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-yellow.jpg" alt="">
-                                            </div>
-                                            <div class="text">
-                                                <span class="category category-yellow">フード/キッチントキワ</span>
-                                                <span class="term">XX.XX.XX〜</span>
-                                                <h3>イベントタイトルが入ります</h3>
-                                            </div>
-                                        </a></li>
-                                </ul>
+                </div>
+                <div class="sec01-col">
+                    <ul class="sec01-col-select tab">
+                        <li class="active"><a href="javascript:void(0)" data-id="#area01">すべて</a></li>
+                        <li><a href="javascript:void(0)" data-id="#area02">期間限定<br class="hidden-sm">イベント</a></li>
+                        <li><a href="javascript:void(0)" data-id="#area03">定例<br class="hidden-sm">イベント</a></li>
+                    </ul>
+                    <div id="area01" class="area is-active">
+                        <div class="swiper swiper-event sec01-col-main">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="">
+                                        <span class="hot">HOT!</span>
+                                        <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
+                                        <div class="img img-info">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-red.jpg" alt="">
+                                        </div>
+                                        <div class="text">
+                                            <span class="category category-red">ご案内</span>
+                                            <span class="term">XX.XX.XX〜</span>
+                                            <h3>イベントタイトルが入ります</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="">
+                                        <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
+                                        <div class="img img-event">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-green.jpg" alt="">
+                                        </div>
+                                        <div class="text">
+                                            <span class="category category-green">イベント</span>
+                                            <span class="term">XX.XX.XX〜</span>
+                                            <h3>イベントタイトルが入ります</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="">
+                                        <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
+                                        <div class="img img-food">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-yellow.jpg" alt="">
+                                        </div>
+                                        <div class="text">
+                                            <span class="category category-yellow">フード/キッチントキワ</span>
+                                            <span class="term">XX.XX.XX〜</span>
+                                            <h3>イベントタイトルが入ります</h3>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="sec-01-col-under">
-                        <a href="">
-                            <div class="sec-01-col-under-img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-img-01.jpg" alt=""></div>
-                            <div class="sec-01-col-under-title">
-                                <?php
-                                /*
-                                <h3>E<span>VENT</span><i class="icon-fire"></i><br>S<span>CHEDUL<span class="item-text">E</span></span><i class="icon-btn"></i></h3>
-                                */
-                                ?>
-                                <h3><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/title-event-schedule_v2.png" alt="EVENT SCHEDULE"><i class="icon-btn"></i></h3>
-                                <p>イベントはこちらをチェック！</p>
+                    <div id="area02" class="area">
+                        <div class="swiper swiper-event_2 sec01-col-main">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="">
+                                        <span class="hot">HOT!</span>
+                                        <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
+                                        <div class="img img-info">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-red.jpg" alt="">
+                                        </div>
+                                        <div class="text">
+                                            <span class="category category-red">ご案内</span>
+                                            <span class="term">XX.XX.XX〜</span>
+                                            <h3>イベントタイトルが入ります</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="">
+                                        <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
+                                        <div class="img img-event">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-green.jpg" alt="">
+                                        </div>
+                                        <div class="text">
+                                            <span class="category category-green">イベント</span>
+                                            <span class="term">XX.XX.XX〜</span>
+                                            <h3>イベントタイトルが入ります</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="">
+                                        <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
+                                        <div class="img img-food">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-yellow.jpg" alt="">
+                                        </div>
+                                        <div class="text">
+                                            <span class="category category-yellow">フード/キッチントキワ</span>
+                                            <span class="term">XX.XX.XX〜</span>
+                                            <h3>イベントタイトルが入ります</h3>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
-                            <div class="sec-01-col-under-move-item">
-                                <span><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-speaker.png" alt=""></span>
-                                <span><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-box.png" alt=""></span>
-                                <span><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-decoration-02.png" alt=""></span>
-                                <span><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-decoration-01.png" alt=""></span>
+                        </div>
+                    </div>
+
+                    <div id="area03" class="area">
+                        <div class="swiper swiper-event_3 sec01-col-main">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="">
+                                        <span class="hot">HOT!</span>
+                                        <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
+                                        <div class="img img-info">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-red.jpg" alt="">
+                                        </div>
+                                        <div class="text">
+                                            <span class="category category-red">ご案内</span>
+                                            <span class="term">XX.XX.XX〜</span>
+                                            <h3>イベントタイトルが入ります</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="">
+                                        <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
+                                        <div class="img img-event">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-green.jpg" alt="">
+                                        </div>
+                                        <div class="text">
+                                            <span class="category category-green">イベント</span>
+                                            <span class="term">XX.XX.XX〜</span>
+                                            <h3>イベントタイトルが入ります</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="">
+                                        <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
+                                        <div class="img img-food">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-yellow.jpg" alt="">
+                                        </div>
+                                        <div class="text">
+                                            <span class="category category-yellow">フード/キッチントキワ</span>
+                                            <span class="term">XX.XX.XX〜</span>
+                                            <h3>イベントタイトルが入ります</h3>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
-                        </a>
+                        </div>
                     </div>
                 </div>
+                <div class="com-btn-sp"><a href="">一覧を見る<i class="black"></i></a></div>
+                <div class="sec-01-col-under">
+                    <a href="">
+                        <div class="sec-01-col-under-img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-img-01.jpg" alt=""></div>
+                        <div class="sec-01-col-under-title">
+                            <?php
+                            /*
+                                <h3>E<span>VENT</span><i class="icon-fire"></i><br>S<span>CHEDUL<span class="item-text">E</span></span><i class="icon-btn"></i></h3>
+                                */
+                            ?>
+                            <h3><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/title-event-schedule_v2.png" alt="EVENT SCHEDULE"><i class="icon-btn"></i></h3>
+                            <p>イベントはこちらをチェック！</p>
+                        </div>
+                        <div class="sec-01-col-under-move-item">
+                            <span><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-speaker.png" alt=""></span>
+                            <span><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-box.png" alt=""></span>
+                            <span><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-decoration-02.png" alt=""></span>
+                            <span><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-decoration-01.png" alt=""></span>
+                        </div>
+                    </a>
+                </div>
+
             </div>
         </section>
 
@@ -449,7 +469,7 @@
                         </h2>
                         <a href="">一覧を見る<i></i></a>
                     </div>
-
+                    <div class="com-btn-sp"><a href="">お知らせ一覧を見る<i class="green"></i></a></div>
                     <div class="content-width">
                         <div class="sec02-list">
                             <div class="sec02-list-wrap sec02-list-wrap-left">
@@ -525,6 +545,7 @@
                             </div>
                         </div>
                     </div>
+                    <div class="com-btn-sp"><a href="">NEWS一覧を見る<i class="green"></i></a></div>
                 </div>
             </div>
             <div class="sec02-bg-under">
@@ -535,6 +556,36 @@
 
         <section class="sec03">
             <div class="sec03-col">
+
+
+                <div class="sec03-col-txt">
+                    <div class="com-title com-title-big com-title-concept">
+                        <p class="">コンセプト</p>
+                        <h2 class="">
+                            <p class="com-title-p-hidden">
+                                <span class="title">C</span><span class="title">O</span><span class="title">N</span><span class="title">C</span><span class="title">E</span><span class="title">P</span><span class="title">T</span>
+                            </p>
+                            <span class="title title-item-sprout">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-sprout-blown.png" alt="">
+                            </span>
+                            <span class="title title-item-sun-big">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/item-01-big.png" alt="">
+                            </span>
+                        </h2>
+                    </div>
+
+                    <h3><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/title-well-being.svg" alt="Well-beiing">な時間を、<br>すべての人に。</h3>
+
+                    <p>
+                        松坂温泉グルスパは<br>
+                        「ウェルビーイング＝心身ともに満たされた状態」をテーマにしたスパリゾートです。<br><br>
+
+                        この地の恵みを活かした天然温泉・岩盤浴・食・休息。<br><br>
+
+                        すべての体験が、あなたの心と体を解き放つ<br>
+                        “ととのい”につながります。
+                    </p>
+                </div>
                 <div class="sec03-col-item">
 
                     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -603,35 +654,6 @@
                     <div class="sec03-col-item-child sec03-col-item-child-2"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec03-col-item-child-2.png" alt=""></div>
                     <div class="sec03-col-item-child sec03-col-item-child-3"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec03-col-item-child-3.png" alt=""></div>
                     <div class="sec03-col-item-child sec03-col-item-child-4"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec03-col-item-child-4.png" alt=""></div>
-                </div>
-
-                <div class="sec03-col-txt">
-                    <div class="com-title com-title-big com-title-concept">
-                        <p class="">コンセプト</p>
-                        <h2 class="">
-                            <p class="com-title-p-hidden">
-                                <span class="title">C</span><span class="title">O</span><span class="title">N</span><span class="title">C</span><span class="title">E</span><span class="title">P</span><span class="title">T</span>
-                            </p>
-                            <span class="title title-item-sprout">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-sprout-blown.png" alt="">
-                            </span>
-                            <span class="title title-item-sun-big">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/item-01-big.png" alt="">
-                            </span>
-                        </h2>
-                    </div>
-
-                    <h3><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/title-well-being.svg" alt="Well-beiing">な時間を、<br>すべての人に。</h3>
-
-                    <p>
-                        松坂温泉グルスパは<br>
-                        「ウェルビーイング＝心身ともに満たされた状態」をテーマにしたスパリゾートです。<br><br>
-
-                        この地の恵みを活かした天然温泉・岩盤浴・食・休息。<br><br>
-
-                        すべての体験が、あなたの心と体を解き放つ<br>
-                        “ととのい”につながります。
-                    </p>
                 </div>
             </div>
 
@@ -748,7 +770,7 @@
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-img-05.jpg" alt="">
                                 </div>
                                 <div class="sec04-wrap-col-txt">
-                                    <h3>発汗エリア(有料岩盤浴エリア)</h3>
+                                    <h3>発汗エリア<br class="hidden-sm">(有料岩盤浴エリア)</h3>
                                     <p>
                                         岩盤浴・アトラクションサウナ・マンガ・リクライニング・中温ホール・テラスなどが揃った特別エリア。<br>
                                         時間を忘れてゆったり過ごしたい方にぴったりの癒し空間です。<br>
@@ -822,7 +844,7 @@
                             <tbody>
                                 <tr>
                                     <td>
-                                        一般<br><span class="note">※〇〇以上</span>
+                                        一般<br><span class="note">※中学生以上</span>
                                     </td>
                                     <td><strong>980</strong><small>円</small></td>
                                     <td><strong>1,180</strong><small>円</small></td>
@@ -836,10 +858,16 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        子供<br><span class="note">※〇〇以上</span>
+                                        子供<br><span class="note">※小学生以下</span>
                                     </td>
                                     <td><strong>400</strong><small>円</small></td>
                                     <td><strong>500</strong><small>円</small></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        幼児<br><span class="note">※3歳以下</span>
+                                    </td>
+                                    <td colspan="2"><strong>無料</strong></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -865,7 +893,7 @@
                             <tbody>
                                 <tr>
                                     <td>
-                                        一般<br><span class="note">※〇〇以上</span>
+                                        一般<br><span class="note">※中学生以上</span>
                                     </td>
                                     <td><strong>860</strong><small>円</small></td>
                                     <td><strong>960</strong><small>円</small></td>
@@ -879,10 +907,16 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        子供<br><span class="note">※〇〇以上</span>
+                                        子供<br><span class="note">※小学生以下</span>
                                     </td>
                                     <td><strong>300</strong><small>円</small></td>
                                     <td><strong>400</strong><small>円</small></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        幼児<br><span class="note">※3歳以下</span>
+                                    </td>
+                                    <td colspan="2"><strong>無料</strong></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -973,6 +1007,7 @@
                             <dd></dd>
                         </dl>
                     </div>
+                    <div class="com-btn-sp"><a href="">一覧を見る<i class="black"></i></a></div>
                 </div>
             </div>
         </section>
@@ -983,6 +1018,9 @@
                 <div class="content-width">
                     <div class="aside-btn-1">
                         <a href="">
+                            <div class="aside-btn-1-img">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/aside-img.jpg" alt=""><i></i>
+                            </div>
                             <div class="aside-btn-1-txt">
                                 <div class="aside-title">
                                     <h2>
@@ -997,11 +1035,8 @@
                                 </div>
                                 <p>
                                     お客様にもスタッフにも！<br>
-                                    元気と癒しを届ける仲間を募集中
+                                    元気と癒しを届ける仲間を募集中<i></i>
                                 </p>
-                            </div>
-                            <div class="aside-btn-1-img">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/aside-img.jpg" alt=""><i></i>
                             </div>
                         </a>
                     </div>

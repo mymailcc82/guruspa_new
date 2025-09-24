@@ -37,7 +37,88 @@
       gap: 45px;
       margin-bottom: 48px;
 
+      @include media(middle-small) {
+        gap: 0;
+      }
+
+      .accordion {
+        @include media(middle-small) {
+          width: 100%;
+          border-bottom: solid 1px #3C3636;
+          padding-bottom: 20px;
+          margin-bottom: 20px;
+        }
+
+        a {
+          font-size: 16px;
+          font-weight: bold;
+          letter-spacing: 0.1em;
+
+          &::before {
+            display: none;
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 15px;
+            height: 2.5px;
+            background-color: #3C3636;
+            transition: transform 0.3s ease;
+
+            @include media(middle-small) {
+              display: block;
+            }
+          }
+
+          &::after {
+            display: none;
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%) rotate(90deg);
+            width: 15px;
+            height: 2.5px;
+            background-color: #3C3636;
+            transition: transform 0.3s ease;
+
+            @include media(middle-small) {
+              display: block;
+            }
+          }
+
+          &.open::after {
+            transform: translateY(-50%) rotate(0deg); // マイナスになる
+          }
+
+          @include media(middle-small) {
+            width: 100%;
+            display: block;
+            position: relative;
+          }
+        }
+      }
+
+      .accordion-none {
+        width: 100%;
+
+        dt {
+          @include media(middle-small) {
+            width: 100%;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            border-bottom: solid 1px #3C3636;
+          }
+
+          a {
+            display: block;
+          }
+        }
+      }
+
       dl {
+
         dt {
           margin-bottom: 20px;
 
@@ -45,24 +126,66 @@
             margin-bottom: 0;
           }
 
+          @include media(middle-small) {
+            margin-bottom: 0;
+          }
+
           a {
             font-size: 16px;
             font-weight: bold;
             letter-spacing: 0.1em;
+
+
+            &.open::after {
+              transform: translateY(-50%) rotate(0deg); // マイナスになる
+            }
+
+            @include media(middle-small) {
+              width: 100%;
+              display: block;
+              position: relative;
+            }
           }
         }
 
         dd {
           margin-bottom: 10px;
 
+          @include media(middle-small) {
+            margin-bottom: 0;
+            max-height: 0;
+            transition: max-height 0.5s ease, opacity 0.5s ease;
+          }
+
+
           &:last-child {
             margin-bottom: 0;
           }
+
 
           a {
             font-size: 16px;
             font-weight: 500;
             letter-spacing: 0.1em;
+
+            @include media(middle-small) {
+              line-height: 2;
+              opacity: 0;
+            }
+          }
+        }
+
+        &.active {
+          dd {
+            @include media(middle-small) {
+              max-height: 1000px; // 十分な高さを指定
+              transition: max-height 0.5s ease, opacity 0.4s ease;
+            }
+
+            a {
+              opacity: 1;
+            }
+
           }
         }
       }
@@ -74,8 +197,18 @@
       gap: 15px;
       margin-bottom: 25px;
 
+      @include media(middle-small) {
+        display: block;
+      }
+
       li {
         width: 23.5%;
+
+        @include media(middle-small) {
+          width: 100%;
+          max-width: 247px;
+          margin: 0 auto 18px;
+        }
       }
     }
 
@@ -83,11 +216,18 @@
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-
       gap: 15px;
+
+      @include media(middle-small) {
+        display: block;
+      }
 
       .footer-logo {
         width: 203px;
+
+        @include media(middle-small) {
+          margin: 0 auto 15px;
+        }
 
         img {
           width: 100%;
@@ -101,6 +241,11 @@
           letter-spacing: 0.1em;
           line-height: 1.35;
           margin-bottom: 0;
+
+          @include media(middle-small) {
+            text-align: center;
+            margin-bottom: 15px;
+          }
         }
       }
 
@@ -110,9 +255,17 @@
         align-items: center;
         margin-left: auto;
 
+        @include media(middle-small) {
+          justify-content: center;
+        }
+
         ul {
           display: flex;
           justify-content: center;
+
+          @include media(middle-small) {
+            flex-wrap: wrap;
+          }
 
           li {
             padding: 0 10px;
@@ -123,6 +276,10 @@
                   display: none;
                 }
               }
+            }
+
+            @include media(middle-small) {
+              line-height: 1;
             }
 
             a {
@@ -155,6 +312,15 @@
     bottom: 20px;
     z-index: 5;
     opacity: 0;
+
+    @include media(mobile){
+      position: absolute;
+      opacity: 1;
+      top: -120px;
+      left: 50%;
+      transform: translate(-50%);
+      width: 132px;
+    }
 
     a {
       display: block;
@@ -310,6 +476,10 @@
   top: 150px;
   margin-bottom: 0;
 
+  @include media(mobile) {
+    display: none;
+  }
+
   span {
     display: block;
     width: 37px;
@@ -350,6 +520,10 @@
   right: 0;
   top: 123px;
   z-index: 100;
+
+  @include media(middle) {
+    display: none;
+  }
 
   a {
     writing-mode: vertical-rl;

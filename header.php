@@ -77,42 +77,13 @@
                         </span>
                     </h2>
                 </div>
-                <div class="header-drawer-wrap-table">
-                    <table class="business-hours">
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th>月〜木</th>
-                                <th>金</th>
-                                <th>土</th>
-                                <th>日</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>営業時間</td>
-                                <td>10:00〜24:00</td>
-                                <td>10:00〜翌1:00</td>
-                                <td>7:00〜翌1:00</td>
-                                <td>7:00〜24:00</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <div class="header-drawer-wrap-txt">
-                    <p>
-                        ※当館は年中無休で営業しております。<br>
-                        ※設備点検などに伴う臨時休館がある場合は、事前にお知らせページにてご案内いたします。
-                    </p>
-                </div>
 
                 <div class="header-drawer-wrap-menu">
                     <dl class="header-drawer-wrap-menu-top">
                         <dt>TOP</dt>
                         <dd><a href=""><img src="<?php echo get_template_directory_uri(); ?>/assets/img/header/header-logo.png" alt=""></a></dd>
                     </dl>
-                    <dl class="header-drawer-wrap-menu-child">
+                    <dl class="header-drawer-wrap-menu-child menu-child-green">
                         <dt><span class="en-title">GUIDE</span><span class="jp-title">ご利用案内</span></dt>
                         <dd>
                             <a href="">料金案内</a>
@@ -130,9 +101,10 @@
                             <a href="">発汗エリア</a>
                             <a href="">ご飲食</a>
                             <a href="">リラクゼーション</a>
+                            <a href="">アメニティ・グッズ</a>
                         </dd>
                     </dl>
-                    <dl class="header-drawer-wrap-menu-child menu-child-green">
+                    <dl class="header-drawer-wrap-menu-child menu-child-red">
                         <dt><span class="en-title">FIRST-TIME</span><span class="jp-title">初めてのお客様へ</span></dt>
                         <dd>
                             <a href="">グルスパの魅力</a>
@@ -156,12 +128,10 @@
                     </dl>
                     <ul class="header-drawer-wrap-menu-child-under">
                         <li></li>
-                        <li><a href="">お知らせ</a></li>
-                        <li><a href="">FAQ</a></li>
-                        <li><a href="">注意事項</a></li>
-                        <li><a href="">採用情報</a></li>
-                        <li><a href="">アメニティ</a></li>
-                        <li><a href="">グッズ</a></li>
+                        <li><a href="">お知らせ<i></i></a></li>
+                        <li><a href="">FAQ<i></i></a></li>
+                        <li><a href="">注意事項<i></i></a></li>
+                        <li><a href="">採用情報<i></i></a></li>
                     </ul>
                 </div>
             </div>

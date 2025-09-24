@@ -106,7 +106,7 @@ img.lazyloaded {
       .icon-btn--1 {
         transform: translate(10px, -5px) rotate(10deg);
 
-        @include media(middle){
+        @include media(middle) {
           transform: translate(10px, -10px) rotate(10deg);
         }
       }
@@ -114,13 +114,13 @@ img.lazyloaded {
       .icon-btn--2 {
         transform: translate(10px, -15px);
 
-        @include media(middle){
+        @include media(middle) {
           transform: translate(10px, -20px);
         }
       }
     }
 
-    @include media(middle){
+    @include media(middle) {
       font-size: 16px;
     }
 
@@ -135,7 +135,7 @@ img.lazyloaded {
       right: 25px;
       position: absolute;
 
-      @include media(middle){
+      @include media(middle) {
         width: 28.85px;
         height: 28.85px;
       }
@@ -149,7 +149,7 @@ img.lazyloaded {
       transform: translate(10px, -5px);
       transition: transform 0.4s ease;
 
-      @include media(middle){
+      @include media(middle) {
         width: 14.26px;
         height: 24.15px;
         transform: translate(10px, -10px);
@@ -163,7 +163,7 @@ img.lazyloaded {
       transform: translate(10px, -10px);
       transition: transform 0.4s ease;
 
-      @include media(middle){
+      @include media(middle) {
         width: 23.03px;
         height: 22.41px;
         transform: translate(10px, -15px);
@@ -199,6 +199,10 @@ img.lazyloaded {
     position: static !important;
     //display: block !important;
     margin-top: 20px;
+
+    @include media(middle-small) {
+      position: absolute !important;
+    }
   }
 }
 
@@ -216,6 +220,11 @@ img.lazyloaded {
 
 .com-title {
   position: relative;
+
+  @include media(mobile) {
+    text-align: center;
+  }
+
   //overflow: hidden;
   //padding-top: 20px;
   &.com-title--small {
@@ -224,6 +233,7 @@ img.lazyloaded {
         font-size: 45px !important;
       }
     }
+
     .title-item-sprout {
       transform: translateY(0px) !important;
     }
@@ -237,12 +247,17 @@ img.lazyloaded {
     line-height: 1;
     position: relative;
     z-index: 3;
+
+    @include media(middle) {
+      font-size: 13px;
+    }
   }
 
   h2 {
     position: relative;
     display: inline-block;
     z-index: 2;
+
 
     .title {
       display: inline-block;
@@ -255,6 +270,10 @@ img.lazyloaded {
       opacity: 0;
       transform: translateY(100%);
       transition: transform 0.6s ease, opacity 0.6s ease;
+
+      @include media(middle) {
+        font-size: 45px;
+      }
     }
 
     .title.in-view {
@@ -332,6 +351,12 @@ img.lazyloaded {
       width: 312px;
       z-index: 1;
       position: absolute;
+
+      @include media(middle) {
+        width: 170px;
+        top: -60px;
+        right: -50px;
+      }
     }
 
     &.in-view .title-item-sun {
@@ -366,7 +391,14 @@ img.lazyloaded {
       }
     }
 
-    @include media(mobile){
+    @include media(middle) {
+      font-size: 14px;
+      width: 100px;
+      bottom: 15px;
+      margin-left: 10px;
+    }
+
+    @include media(mobile) {
       display: none;
     }
 
@@ -401,6 +433,7 @@ img.lazyloaded {
       overflow: hidden !important;
     }
   }
+
   .title-item-sprout {
     width: 40px;
     height: auto;
@@ -463,17 +496,20 @@ img.lazyloaded {
       background-repeat: no-repeat;
       display: inline-block;
       transition: transform 0.4s ease;
+
       &.icon-opacity {
         background-image: url(("./assets/img/icon/icon-arrow-right-opacity.svg")) !important;
       }
     }
   }
 }
+
 .com-btn-border--210 {
   a {
     width: 210px !important;
   }
 }
+
 .com-btn-border-white {
   a {
     font-size: 18px;
@@ -566,6 +602,54 @@ img.lazyloaded {
       background-repeat: no-repeat;
       display: inline-block;
       transition: transform 0.4s ease;
+    }
+  }
+}
+
+.com-btn-sp {
+  a {
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    color: #3c3636;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 279px;
+    height: 51px;
+    margin: 0 auto 0;
+    background-color: #fff;
+    border: solid 1px #3C3636;
+    border-radius: 26px;
+    position: relative;
+
+    &:hover {
+      i {
+        transform: translateX(5px);
+      }
+    }
+
+    @include media(sm) {
+      display: none !important;
+    }
+
+    i {
+      width: 22px;
+      height: 22px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      display: inline-block;
+      transition: transform 0.4s ease;
+      position: absolute;
+      right: 20px;
+    }
+
+    .black {
+      background-image: url(("./assets/img/icon/icon-btn-blown-2.png"));
+    }
+
+    .yellow {
+      background-image: url(("./assets/img/icon/icon-btn-yellow.png"));
     }
   }
 }
