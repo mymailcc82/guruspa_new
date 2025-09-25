@@ -2,13 +2,20 @@
     <div class="content-width">
         <ul>
             <li>
-                <a href="">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/page/page-bnr-event.jpg" alt="">
+                <a href="<?php echo home_url(); ?>/event/">
+                    <picture>
+                        <source media="(max-width: 601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/bnr/page-bnr-event-sp.jpg">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/bnr/page-bnr-event.jpg" alt="">
+                    </picture>
+
                 </a>
             </li>
             <li>
-                <a href="">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/page/page-bnr-news.jpg" alt="">
+                <a href="<?php echo home_url(); ?>/archive/">
+                    <picture>
+                        <source media="(max-width: 601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/bnr/page-bnr-news-sp.jpg">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/bnr/page-bnr-news.jpg" alt="">
+                    </picture>
                 </a>
             </li>
         </ul>

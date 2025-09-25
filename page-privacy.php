@@ -24,7 +24,7 @@
         </nav>
     </div>
     <section class="sec01">
-        <div class="content-width">
+        <div class="content-width-lg">
             <div class="com-title center com-title-hidden">
                 <p>プライバシーポリシー</p>
                 <h1 class="">

@@ -69,7 +69,7 @@
     </section>
     <section class="sec02" id="sec02">
         <div class="content-width">
-            <div class="page-title--has-icon">
+            <div class="page-title--has-icon page-title--has-icon--font-23">
                 <h2><i></i>施設・設備について</h2></span>
             </div>
             <div class="faq-dl accordion">
@@ -110,7 +110,7 @@
 
     <section class="sec02" id="sec03">
         <div class="content-width">
-            <div class="page-title--has-icon">
+            <div class="page-title--has-icon page-title--has-icon--font-23">
                 <h2><i></i>お風呂について</h2></span>
             </div>
             <div class="faq-dl accordion">
@@ -151,7 +151,7 @@
 
     <section class="sec02" id="sec04">
         <div class="content-width">
-            <div class="page-title--has-icon">
+            <div class="page-title--has-icon page-title--has-icon--font-23">
                 <h2><i></i>サウナについて</h2></span>
             </div>
             <div class="faq-dl accordion">
@@ -192,7 +192,7 @@
 
     <section class="sec02" id="sec05">
         <div class="content-width">
-            <div class="page-title--has-icon">
+            <div class="page-title--has-icon page-title--has-icon--font-23">
                 <h2><i></i>発汗エリアについて</h2></span>
             </div>
             <div class="faq-dl accordion">
@@ -233,7 +233,7 @@
 
     <section class="sec02" id="sec06">
         <div class="content-width">
-            <div class="page-title--has-icon">
+            <div class="page-title--has-icon page-title--has-icon--font-23">
                 <h2><i></i>リラクゼーションについて</h2></span>
             </div>
             <div class="faq-dl accordion">
@@ -274,7 +274,7 @@
 
     <section class="sec02" id="sec06">
         <div class="content-width">
-            <div class="page-title--has-icon">
+            <div class="page-title--has-icon page-title--has-icon--font-23">
                 <h2><i></i>衛生・安全面について</h2></span>
             </div>
             <div class="faq-dl accordion">
@@ -315,7 +315,7 @@
 
     <section class="sec02" id="sec07">
         <div class="content-width">
-            <div class="page-title--has-icon">
+            <div class="page-title--has-icon page-title--has-icon--font-23">
                 <h2><i></i>利用料金・予約について</h2></span>
             </div>
             <div class="faq-dl accordion">
@@ -356,7 +356,7 @@
 
     <section class="sec02" id="sec07">
         <div class="content-width">
-            <div class="page-title--has-icon">
+            <div class="page-title--has-icon page-title--has-icon--font-23">
                 <h2><i></i>アクセス・その他</h2></span>
             </div>
             <div class="faq-dl accordion">
@@ -397,12 +397,18 @@
 
 
     <section class="sec03">
-        <div class="content-width">
-            <p>
-                その他のご質問がございましたら、<br>
-                お気軽にスタッフまたは<a href="<?php echo home_url(); ?>/contact/">お問い合わせフォーム</a>までご連絡ください。
-            </p>
+        <div class="sec03-bg">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-gray-top.png" alt="">
         </div>
+        <div class="sec03-container">
+            <div class="content-width">
+                <p>
+                    その他のご質問がございましたら、<br>
+                    お気軽にスタッフまたは<a href="<?php echo home_url(); ?>/contact/">お問い合わせフォーム</a>までご連絡ください。
+                </p>
+            </div>
+        </div>
+
     </section>
     <?php get_template_part('inc/inc-contact'); ?>
 </main>

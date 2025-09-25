@@ -49,6 +49,10 @@ img.lazyloaded {
   }
 }
 
+.text-sm {
+  font-size: 14px !important;
+}
+
 .hidden-sm {
   @include media(sm) {
     display: none !important;
@@ -253,6 +257,7 @@ img.lazyloaded {
     }
   }
 
+  h1,
   h2 {
     position: relative;
     display: inline-block;

@@ -44,10 +44,10 @@
                         <a href="<?php echo home_url(); ?>/guide/">ご利用案内<i></i></a>
                     </h2>
                     <ul>
-                        <li><a href="">料金案内</a></li>
-                        <li><a href="">営業時間</a></li>
-                        <li><a href="">利用案内</a></li>
-                        <li><a href="">アクセス</a></li>
+                        <li><a href="<?php echo home_url(); ?>/guide/#sec02">料金案内</a></li>
+                        <li><a href="<?php echo home_url(); ?>/guide/#sec03">営業時間</a></li>
+                        <li><a href="<?php echo home_url(); ?>/guide/#sec04">利用案内</a></li>
+                        <li><a href="<?php echo home_url(); ?>/guide/#sec05">アクセス</a></li>
                     </ul>
                 </div>
                 <div class="sec01-wrap-col">
