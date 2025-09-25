@@ -507,6 +507,7 @@
                                             </div>
                                         </a></li>
                                 </ul>
+                                <div class="com-btn-sp"><a href="">NEWS一覧を見る<i class="black"></i></a></div>
                             </div>
                             <div class="sec02-list-wrap sec02-list-wrap-right">
                                 <h3>MEDIA<a href="">一覧を見る<i></i></a></h3>
@@ -542,10 +543,11 @@
                                             </div>
                                         </a></li>
                                 </ul>
+                                <div class="com-btn-sp"><a href="">MEDIA一覧を見る<i class="black"></i></a></div>
                             </div>
                         </div>
                     </div>
-                    <div class="com-btn-sp"><a href="">NEWS一覧を見る<i class="green"></i></a></div>
+
                 </div>
             </div>
             <div class="sec02-bg-under">
@@ -1056,7 +1058,22 @@
                     </div>
                 </div>
             </div>
-            <div class="aside-bg-under"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-under_v2.png" alt=""></div>
+            
+            <div class="footer-fixed footer-fixed-sp">
+                <a href="#">
+                    <span class="footer-fixed-main"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/footer-fixed.png" alt=""></span>
+                    <span class="footer-fixed-child footer-fixed-child-1"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/footer-fixed-1.png" alt=""></span>
+                    <span class="footer-fixed-child footer-fixed-child-2"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/footer-fixed-2.png" alt=""></span>
+                    <span class="footer-fixed-child footer-fixed-child-3"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/footer-fixed-3.png" alt=""></span>
+                    <span class="footer-fixed-child footer-fixed-child-4"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/footer-fixed-4.png" alt=""></span>
+                    <span class="footer-fixed-child footer-fixed-child-5"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/footer-fixed-5.png" alt=""></span>
+                    <span class="footer-fixed-child footer-fixed-child-6"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/footer-fixed-6.png" alt=""></span>
+                    <span class="footer-fixed-txt">
+                        <img class="footer-fixed-txt-1" src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/footer-fixed-7.png" alt="">
+                        <img class="footer-fixed-txt-2" src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/footer-fixed-7-sp.png" alt="">
+                    </span>
+                </a>
+            </div>
         </aside>
     </div>
 </main>

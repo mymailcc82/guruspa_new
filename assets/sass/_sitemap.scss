@@ -1,44 +1,12 @@
 @use 'setting' as *;
 .sitemap {
-  .sec01 {
-    padding-bottom: 60px;
-    @include media(middle) {
-      padding-bottom: 60px;
-    }
-  }
   .sec01-wrap {
     display: flex;
     flex-wrap: wrap;
-    gap: 3%;
+    gap: 50px;
     margin-top: 60px;
-    @include media(middle) {
-      gap: 2%;
-      margin-top: 40px;
-      justify-content: right;
-    }
-    @include media(mobile) {
-      gap: 0%;
-    }
     .sec01-wrap-col {
-      width: 22%;
-      margin-bottom: 50px;
-      @include media(middle) {
-        width: 32%;
-        margin-bottom: 20px;
-      }
-      @include media(mobile) {
-        width: 100%;
-      }
-      &:nth-child(6) {
-        @include media(middle) {
-          margin-bottom: 0px;
-        }
-      }
-      &:last-child {
-        @include media(mobile) {
-          margin-bottom: 0px;
-        }
-      }
+      width: 21%;
       h2 {
         margin-bottom: 20px;
         &.no-border {

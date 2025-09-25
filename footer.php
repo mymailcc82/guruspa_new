@@ -1,14 +1,41 @@
 <footer class="footer">
-
+    <img class="footer-bg-top footer-bg-top-pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/footer-bg-item.png" alt="">
+    <img class="footer-bg-top footer-bg-top-sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/footer-bg-item-sp.png" alt="">
+    <div class="top-fixed-sp">
+        <div class="top-fixed-sp-btn"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-sp-btn.png" alt=""></div>
+        <div class="top-fixed-sp-wrap">
+            <a class="top-fixed-1" href="<?php echo home_url(); ?>"><i></i>本日の<br>イベント</a>
+            <a class="top-fixed-2" href="<?php echo home_url(); ?>"><i></i>今すぐ<br>行く！</a>
+            <a class="top-fixed-3" href="<?php echo home_url(); ?>"><i></i>料金・<br>ご利用料金</a>
+        </div>
+    </div>
+    <div class="footer-fixed footer-fixed-pc">
+        <a href="#">
+            <span class="footer-fixed-main"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/footer-fixed.png" alt=""></span>
+            <span class="footer-fixed-child footer-fixed-child-1"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/footer-fixed-1.png" alt=""></span>
+            <span class="footer-fixed-child footer-fixed-child-2"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/footer-fixed-2.png" alt=""></span>
+            <span class="footer-fixed-child footer-fixed-child-3"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/footer-fixed-3.png" alt=""></span>
+            <span class="footer-fixed-child footer-fixed-child-4"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/footer-fixed-4.png" alt=""></span>
+            <span class="footer-fixed-child footer-fixed-child-5"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/footer-fixed-5.png" alt=""></span>
+            <span class="footer-fixed-child footer-fixed-child-6"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/footer-fixed-6.png" alt=""></span>
+            <span class="footer-fixed-txt">
+                <img class="footer-fixed-txt-1" src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/footer-fixed-7.png" alt="">
+                <img class="footer-fixed-txt-2" src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/footer-fixed-7-sp.png" alt="">
+            </span>
+        </a>
+    </div>
+    
     <div class="content-width">
         <div class="footer-wrap">
             <div class="footer-wrap-menu">
                 <dl class="accordion">
                     <dt><a href="javascript:void(0);">ご利用案内</a></dt>
-                    <dd><a href="<?php echo home_url(); ?>">ー料金案内</a></dd>
-                    <dd><a href="<?php echo home_url(); ?>">ー営業時間</a></dd>
-                    <dd><a href="<?php echo home_url(); ?>">ー利用案内</a></dd>
-                    <dd><a href="<?php echo home_url(); ?>">ーアクセス</a></dd>
+                    <dd>
+                        <a href="<?php echo home_url(); ?>">ー料金案内</a>
+                        <a href="<?php echo home_url(); ?>">ー営業時間</a>
+                        <a href="<?php echo home_url(); ?>">ー利用案内</a>
+                        <a href="<?php echo home_url(); ?>">ーアクセス</a>
+                    </dd>
                 </dl>
                 <dl class="accordion">
                     <dt><a href="javascript:void(0);">館内の楽しみ方</a></dt>
@@ -88,18 +115,7 @@
         <a class="top-fixed-2" href="<?php echo home_url(); ?>">今すぐ行く！<i></i></a>
         <a class="top-fixed-3" href="<?php echo home_url(); ?>">料金・<br>ご利用料金<i></i></a>
     </div>
-    <div class="footer-fixed">
-        <a href="#">
-            <span class="footer-fixed-main"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/footer-fixed.png" alt=""></span>
-            <span class="footer-fixed-child footer-fixed-child-1"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/footer-fixed-1.png" alt=""></span>
-            <span class="footer-fixed-child footer-fixed-child-2"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/footer-fixed-2.png" alt=""></span>
-            <span class="footer-fixed-child footer-fixed-child-3"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/footer-fixed-3.png" alt=""></span>
-            <span class="footer-fixed-child footer-fixed-child-4"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/footer-fixed-4.png" alt=""></span>
-            <span class="footer-fixed-child footer-fixed-child-5"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/footer-fixed-5.png" alt=""></span>
-            <span class="footer-fixed-child footer-fixed-child-6"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/footer-fixed-6.png" alt=""></span>
-            <span class="footer-fixed-txt"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/footer-fixed-7.png" alt=""></span>
-        </a>
-    </div>
+
     <p class="scroll-txt scroll-txt-change">
         <span class="sub-title-01">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/sub-title-01.png" alt="">
@@ -150,7 +166,7 @@
     const swiper = new Swiper('.swiper-event', {
         slidesPerView: 'auto', // 幅固定 or auto
         spaceBetween: 24, // スライド間の余白
-        centeredSlides: false, // 常に中央スライドをセンターに
+        centeredSlides: true, // 常に中央スライドをセンターに
         loop: true, // 無限ループ
         autoplay: {
             delay: 3000, // 3秒ごとに切り替え
@@ -183,7 +199,7 @@
     const swiper_2 = new Swiper('.swiper-event_2', {
         slidesPerView: 'auto', // 幅固定 or auto
         spaceBetween: 24, // スライド間の余白
-        centeredSlides: false, // 常に中央スライドをセンターに
+        centeredSlides: true, // 常に中央スライドをセンターに
         loop: true, // 無限ループ
         autoplay: {
             delay: 3000, // 3秒ごとに切り替え
@@ -216,7 +232,7 @@
     const swiper_3 = new Swiper('.swiper-event_3', {
         slidesPerView: 'auto', // 幅固定 or auto
         spaceBetween: 24, // スライド間の余白
-        centeredSlides: false, // 常に中央スライドをセンターに
+        centeredSlides: true, // 常に中央スライドをセンターに
         loop: true, // 無限ループ
         autoplay: {
             delay: 3000, // 3秒ごとに切り替え
@@ -244,6 +260,17 @@
                 //slidesPerView: 2.2
             },
         }
+    });
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const btn = document.querySelector(".top-fixed-sp-btn");
+        const wrap = document.querySelector(".top-fixed-sp-wrap");
+
+        btn.addEventListener("click", function() {
+            wrap.classList.toggle("is-show");
+        });
     });
 </script>
 

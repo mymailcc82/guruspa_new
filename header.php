@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css?ver=1.2.3">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css?ver=1.2.4">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yakuhanjp@4.1.1/dist/css/yakuhanjp.css">
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -49,7 +49,7 @@
                 </ul>
             </div>
         </div>
-        <div class="header-wrap-bg"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/header/header-under-bg_v2.png" alt=""></div>
+        <img class="header-wrap-bg" src="<?php echo get_template_directory_uri(); ?>/assets/img/header/header-under-bg_v2.png" alt="">
     </header>
 
     <div class="header-fixed">
@@ -67,6 +67,9 @@
                 <div class="com-title-header">
 
                     <h2 class="">
+                        <span class="title title-item-sun">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/item-01.png" alt="">
+                        </span>
                         <p>メニュー</p>
                         <span class="title">M</span>
                         <span class="title">E</span>
