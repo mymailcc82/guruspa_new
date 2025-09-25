@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<main class="page-main guide faq">
+<main class="page-main faq">
     <div class="page-main-left-img">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/page/page-img-left.png" alt="">
     </div>
@@ -26,9 +26,9 @@
     <section class="sec01">
         <div class="content-width">
             <div class="com-title center com-title-hidden">
-                <p>ご利用案内</p>
+                <p>よくある質問</p>
                 <h2 class="">
-                    <span class="title">G</span><span class="title">U</span><span class="title">I</span><span class="title">D</span><span class="title">E</span>
+                    <span class="title">F</span><span class="title">A</span><span class="title">Q</span>
                     <span class="title title-item-sprout">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-sprout-blown.png" alt="">
                     </span>
@@ -37,400 +37,373 @@
                     </span>
                 </h2>
             </div>
-            <div class="page-desc">
-                <p>
-                    松阪温泉 GURUSPA の営業時間、料金、ご利用にあたっての注意点をご案内いたします。<br>
-                    はじめてご来館の方も、リピーターの方も、安心してお楽しみいただけるようご確認ください。
-                </p>
-            </div>
-
             <div class="page-btn">
                 <ul>
                     <li>
-                        <a href="#sec02">料金案内<i></i></a>
+                        <a href="#sec02">施設・設備について<i></i></a>
                     </li>
                     <li>
-                        <a href="#sec03">営業時間<i></i></a>
+                        <a href="#sec03">お風呂について<i></i></a>
                     </li>
                     <li>
-                        <a href="#sec04">ご利用案内<i></i></a>
+                        <a href="#sec04">サウナについて<i></i></a>
                     </li>
                     <li>
-                        <a href="#sec05">アクセス<i></i></a>
+                        <a href="#sec05">発汗エリアについて<i></i></a>
+                    </li>
+                    <li>
+                        <a href="#sec06">リラクゼーションについて<i></i></a>
+                    </li>
+                    <li>
+                        <a href="#sec07">衛生・安全面について<i></i></a>
+                    </li>
+                    <li>
+                        <a href="#sec08">利用料金・予約について<i></i></a>
+                    </li>
+                    <li>
+                        <a href="#sec09">アクセス・その他<i></i></a>
                     </li>
                 </ul>
             </div>
         </div>
     </section>
-    <section class="sec02">
-        <div class="content-width" id="sec02">
+    <section class="sec02" id="sec02">
+        <div class="content-width">
             <div class="page-title--has-icon">
-                <h2><i></i>料金案内</h2><span>※料金は全て税込です。</span>
+                <h2><i></i>施設・設備について</h2></span>
             </div>
-
-            <div class="sec02-container">
-                <h3>通常入泉</h3>
-                <div class="sec02-table">
-                    <table>
-                        <tr>
-                            <th></th>
-                            <th>平日</th>
-                            <th>土日祝日</th>
-                        </tr>
-                        <tr>
-                            <td>
-                                一般<br><span>※〇〇以上</span>
-                            </td>
-                            <td>
-                                <strong>980</strong>円
-                            </td>
-                            <td>
-                                <strong>1,180</strong>円
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                会員
-                            </td>
-                            <td>
-                                <strong>930</strong>円
-                            </td>
-                            <td>
-                                <strong>1,130</strong>円
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                子供<br><span>※〇〇以下</span>
-                            </td>
-                            <td>
-                                <strong>400</strong>円
-                            </td>
-                            <td>
-                                <strong>500</strong>円
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-                <p>
-                    ※小学生以下は保護者同伴必須<br>
-                    ※18歳未満の方は保護者同伴なしの場合、22時まで利用可<br>
-                    ※入退場・入浴・トイレを自力で行えない方は同性付添人が必要<br>
-                    ※身長120cm以上のお子様は混浴禁止（条例に従う）
-                </p>
-            </div>
-
-            <div class="sec02-container">
-                <h3>朝風呂</h3>
-                <div class="sec02-table sec02-table--col-2">
-                    <table>
-                        <tr>
-                            <th></th>
-                            <th>土日祝日</th>
-                        </tr>
-                        <tr>
-                            <td>
-                                一般<br><span>※〇〇以上</span>
-                            </td>
-                            <td>
-                                <strong>980</strong>円
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                会員
-                            </td>
-                            <td>
-                                <strong>930</strong>円
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                子供<br><span>※〇〇以下</span>
-                            </td>
-                            <td>
-                                <strong>400</strong>円
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-                <p>
-                    ※朝風呂は土日祝日のみの営業となります
-                </p>
-            </div>
-
-            <div class="sec02-container">
-                <h3>発汗エリア(有料岩盤浴)</h3>
-                <div class="sec02-table">
-                    <table>
-                        <tr>
-                            <th></th>
-                            <th>平日</th>
-                            <th>土日祝日</th>
-                        </tr>
-                        <tr>
-                            <td>
-                                一般<br><span>※〇〇以上</span>
-                            </td>
-                            <td>
-                                <strong>860</strong>円
-                            </td>
-                            <td>
-                                <strong>960</strong>円
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                会員
-                            </td>
-                            <td>
-                                <strong>810</strong>円
-                            </td>
-                            <td>
-                                <strong>910</strong>円
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                子供<br><span>※〇〇以下</span>
-                            </td>
-                            <td>
-                                <strong>300</strong>円
-                            </td>
-                            <td>
-                                <strong>400</strong>円
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-                <p>
-                    ※ 岩盤浴セットには専用ウェア・タオルが含まれます。
-                </p>
-            </div>
-
-            <div class="sec01-center">
-                <div class="sec01-center-wrap">
-                    <div class="sec01-center-wrap-col">
+            <div class="faq-dl accordion">
+                <?php
+                $args = array(
+                    'post_type' => 'faq',
+                    'posts_per_page' => -1,
+                    'orderby' => 'date',
+                    'order' => 'ASC',
+                    'tax_query' => array(
+                        array(
+                            'taxonomy' => 'faq_category',
+                            'field'    => 'slug',
+                            'terms'    => 'facility', // 施設・設備について
+                        ),
+                    ),
+                );
+                $the_query = new WP_Query($args);
+                if ($the_query->have_posts()) :
+                    while ($the_query->have_posts()) : $the_query->the_post();
+                ?>
                         <dl>
-                            <dt>会員入会金</dt>
+                            <dt><i></i><?php the_title(); ?></dt>
                             <dd>
-                                <p>
-                                    200<span>円</span>
-                                </p>
+                                <i></i><?php the_content(); ?>
                             </dd>
                         </dl>
-                    </div>
-                    <div class="sec01-center-wrap-col">
-                        <dl>
-                            <dt>会員平日入泉回数券<br>(11枚)</dt>
-                            <dd>
-                                <p>
-                                    200<span>円</span><br>
-                                    <small>※1枚あたり800円</small>
-                                </p>
-                            </dd>
-                        </dl>
-                    </div>
-                    <div class="sec01-center-wrap-col">
-                        <dl>
-                            <dt>ギフト用全日入泉券<br>(10枚)</dt>
-                            <dd>
-                                <p>
-                                    11,000<span>円</span><br>
-                                    <small>※1枚あたり1,100円</small>
-                                </p>
-                            </dd>
-                        </dl>
-                    </div>
-                </div>
-            </div>
-            <div class="sec01-bottom">
-                <div class="page-title--has-icon">
-                    <h2><i></i>営業時間(年中無休)</h2>
-                </div>
-                <div class="sec01-bottom-table">
-                    <table>
-                        <tr>
-                            <th></th>
-                            <th>月〜木</th>
-                            <th>金</th>
-                            <th>土</th>
-                            <th>日</th>
-                            <th>祝日</th>
-                            <th>祝日前</th>
-                        </tr>
-                        <tr>
-                            <td>朝風呂</td>
-                            <td>
-                                <span class="none"></span>
-                            </td>
-                            <td><span class="none"></span></td>
-                            <td>7:00〜10:00</td>
-                            <td>7:00〜10:00</td>
-                            <td>7:00〜10:00</td>
-                            <td><span class="none"></span></td>
-                        </tr>
-                        <tr>
-                            <td>通常入泉</td>
-                            <td>
-                                10:00〜24:00
-                            </td>
-                            <td>10:00〜翌1:00</td>
-                            <td>10:00〜翌1:00</td>
-                            <td>10:00〜24:00</td>
-                            <td>10:00〜24:00</td>
-                            <td>10:00〜翌1:00</td>
-                        </tr>
-                        <tr>
-                            <td>発汗エリア<br><small>(有料岩盤浴)</small></td>
-                            <td>
-                                10:00〜23:15
-                            </td>
-                            <td>10:00〜23:15</td>
-                            <td>10:00〜23:15</td>
-                            <td>10:00〜23:15</td>
-                            <td>10:00〜23:15</td>
-                            <td>10:00〜23:15</td>
-                        </tr>
-                        <tr>
-                            <td>朝風呂</td>
-                            <td>11:00〜23:00</td>
-                            <td>11:00〜24:00</td>
-                            <td>11:00〜24:00</td>
-                            <td>11:00〜23:00</td>
-                            <td>11:00〜23:00</td>
-                            <td>11:00〜24:00</td>
-                        </tr>
-                    </table>
-                </div>
-                <p class="sec01-bottom-attention">
-                    ※当館は年中無休で営業しております。<br>
-                    ※設備点検などに伴う臨時休館がある場合は、事前にお知らせページにてご案内いたします。
-                </p>
-            </div>
-
-            <div class="com-btn-border-black">
-                <a href="">館内の楽しみ方<i></i></a>
+                    <?php
+                    endwhile;
+                    wp_reset_postdata();
+                else :
+                    ?>
+                    <p class="text-sm">投稿が見つかりませんでした。</p>
+                <?php endif; ?>
             </div>
         </div>
     </section>
-    <section class="sec03" id="sec03">
-        <div class="content-width-sm">
+
+    <section class="sec02" id="sec03">
+        <div class="content-width">
             <div class="page-title--has-icon">
-                <h2><i></i>ご利用案内</h2>
+                <h2><i></i>お風呂について</h2></span>
             </div>
-            <div class="sec03-container">
-                <div class="sec03-wrap">
-                    <div class="sec03-wrap-col">
-                        <div class="sec03-wrap-col-img">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/guide/sec03-img-01.jpg" alt="">
-                        </div>
-                        <p>
-                            入館時は<span>券売機または受付でのチェックイン</span>をお願いいたします。
-                        </p>
-                    </div>
-                    <div class="sec03-wrap-col">
-                        <div class="sec03-wrap-col-img">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/guide/sec03-img-02.jpg" alt="">
-                        </div>
-                        <p>
-                            発汗エリア（岩盤浴）は<span>別料金・専用ウェア着用必須です。</span>
-                        </p>
-                    </div>
-                </div>
-                <div class="com-btn-border-green">
-                    <a href="">初めてのお客様へ<i></i></a>
-                </div>
-            </div>
-            <div class="sec03-container">
-                <div class="page-title--has-icon">
-                    <h2><i></i>ご利用いただけない方</h2>
-                </div>
-                <div class="sec03-col">
-                    <div class="sec03-col-img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/guide/sec03-img-03.jpg" alt="">
-                    </div>
-                    <div class="sec03-col-txt">
-                        <ul>
-                            <li>刺青・タトゥー（シール含む）のある方</li>
-                            <li>泥酔状態の方、伝染病・皮膚病等の疾患をお持ちの方</li>
-                            <li>暴力団関係者や反社会的勢力に属する方</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="sec03-container">
-                <div class="page-title--has-icon">
-                    <h2><i></i>年齢制限・お子様のご利用</h2>
-                </div>
-                <div class="sec03-col">
-                    <div class="sec03-col-img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/guide/sec03-img-04.jpg" alt="">
-                    </div>
-                    <div class="sec03-col-txt">
-                        <ul>
-                            <li>小学生以下のお子様は必ず保護者の同伴が必要です。</li>
-                            <li>中学生以下のお客様は<span>21:00までのご利用</span>となります。</li>
-                            <li>身長120cm以上のお子様は混浴禁止（条例に準じます）。</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="sec03-container">
-                <div class="page-title--has-icon">
-                    <h2><i></i>安全・荷物について</h2>
-                </div>
-                <div class="sec03-col">
-                    <div class="sec03-col-img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/guide/sec03-img-05.jpg" alt="">
-                    </div>
-                    <div class="sec03-col-txt">
-                        <ul>
-                            <li>館内での怪我・盗難・紛失について、当店に過失がない場合は責任を負いかねます。</li>
-                            <li>忘れ物は一定期間保管後、貴重品は警察へ届け、それ以外は廃棄いたします。</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="sec03-container">
-                <div class="page-title--has-icon">
-                    <h2><i></i>その他</h2>
-                </div>
-                <div class="sec03-col">
-                    <div class="sec03-col-img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/guide/sec03-img-06.jpg" alt="">
-                    </div>
-                    <div class="sec03-col-txt">
-                        <ul>
-                            <li>設備点検等により臨時休館となる場合があります。その際は「お知らせ」にてご案内します。</li>
-                            <li>やむを得ない事情により営業時間を変更する場合があります。</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="com-btn-border-green">
-                <a href="">よくある質問はこちら<i></i></a>
-            </div>
-        </div>
-    </section>
-    <section class="sec04" id="sec04">
-        <div class="content-width-sm">
-            <div class="page-title-center--has-icon">
-                <h2><i></i>アクセス</h2>
-            </div>
-            <div class="sec04-desc">
-                <h3>伊勢志摩観光のついでに立ち寄れる！</h3>
-                <p>
-                    伊勢神宮・鳥羽水族館・志摩スペイン村など、人気観光地からの立ち寄りに最適な場所に位置しています！<br>
-                    名古屋・大阪方面の帰路に便利な「松阪IC」近く、そして国道23号線沿いで車移動にもぴったりです。
-                </p>
+            <div class="faq-dl accordion">
+                <?php
+                $args = array(
+                    'post_type' => 'faq',
+                    'posts_per_page' => -1,
+                    'orderby' => 'date',
+                    'order' => 'ASC',
+                    'tax_query' => array(
+                        array(
+                            'taxonomy' => 'faq_category',
+                            'field'    => 'slug',
+                            'terms'    => 'onsen', // 施設・設備について
+                        ),
+                    ),
+                );
+                $the_query = new WP_Query($args);
+                if ($the_query->have_posts()) :
+                    while ($the_query->have_posts()) : $the_query->the_post();
+                ?>
+                        <dl>
+                            <dt><i></i><?php the_title(); ?></dt>
+                            <dd>
+                                <i></i><?php the_content(); ?>
+                            </dd>
+                        </dl>
+                    <?php
+                    endwhile;
+                    wp_reset_postdata();
+                else :
+                    ?>
+                    <p class="text-sm">投稿が見つかりませんでした。</p>
+                <?php endif; ?>
             </div>
         </div>
     </section>
 
+    <section class="sec02" id="sec04">
+        <div class="content-width">
+            <div class="page-title--has-icon">
+                <h2><i></i>サウナについて</h2></span>
+            </div>
+            <div class="faq-dl accordion">
+                <?php
+                $args = array(
+                    'post_type' => 'faq',
+                    'posts_per_page' => -1,
+                    'orderby' => 'date',
+                    'order' => 'ASC',
+                    'tax_query' => array(
+                        array(
+                            'taxonomy' => 'faq_category',
+                            'field'    => 'slug',
+                            'terms'    => 'sauna',
+                        ),
+                    ),
+                );
+                $the_query = new WP_Query($args);
+                if ($the_query->have_posts()) :
+                    while ($the_query->have_posts()) : $the_query->the_post();
+                ?>
+                        <dl>
+                            <dt><i></i><?php the_title(); ?></dt>
+                            <dd>
+                                <i></i><?php the_content(); ?>
+                            </dd>
+                        </dl>
+                    <?php
+                    endwhile;
+                    wp_reset_postdata();
+                else :
+                    ?>
+                    <p class="text-sm">投稿が見つかりませんでした。</p>
+                <?php endif; ?>
+            </div>
+        </div>
+    </section>
 
-    <?php get_template_part('inc/inc-bnr'); ?>
+    <section class="sec02" id="sec05">
+        <div class="content-width">
+            <div class="page-title--has-icon">
+                <h2><i></i>発汗エリアについて</h2></span>
+            </div>
+            <div class="faq-dl accordion">
+                <?php
+                $args = array(
+                    'post_type' => 'faq',
+                    'posts_per_page' => -1,
+                    'orderby' => 'date',
+                    'order' => 'ASC',
+                    'tax_query' => array(
+                        array(
+                            'taxonomy' => 'faq_category',
+                            'field'    => 'slug',
+                            'terms'    => 'hakkan',
+                        ),
+                    ),
+                );
+                $the_query = new WP_Query($args);
+                if ($the_query->have_posts()) :
+                    while ($the_query->have_posts()) : $the_query->the_post();
+                ?>
+                        <dl>
+                            <dt><i></i><?php the_title(); ?></dt>
+                            <dd>
+                                <i></i><?php the_content(); ?>
+                            </dd>
+                        </dl>
+                    <?php
+                    endwhile;
+                    wp_reset_postdata();
+                else :
+                    ?>
+                    <p class="text-sm">投稿が見つかりませんでした。</p>
+                <?php endif; ?>
+            </div>
+        </div>
+    </section>
+
+    <section class="sec02" id="sec06">
+        <div class="content-width">
+            <div class="page-title--has-icon">
+                <h2><i></i>リラクゼーションについて</h2></span>
+            </div>
+            <div class="faq-dl accordion">
+                <?php
+                $args = array(
+                    'post_type' => 'faq',
+                    'posts_per_page' => -1,
+                    'orderby' => 'date',
+                    'order' => 'ASC',
+                    'tax_query' => array(
+                        array(
+                            'taxonomy' => 'faq_category',
+                            'field'    => 'slug',
+                            'terms'    => 'relax',
+                        ),
+                    ),
+                );
+                $the_query = new WP_Query($args);
+                if ($the_query->have_posts()) :
+                    while ($the_query->have_posts()) : $the_query->the_post();
+                ?>
+                        <dl>
+                            <dt><i></i><?php the_title(); ?></dt>
+                            <dd>
+                                <i></i><?php the_content(); ?>
+                            </dd>
+                        </dl>
+                    <?php
+                    endwhile;
+                    wp_reset_postdata();
+                else :
+                    ?>
+                    <p class="text-sm">投稿が見つかりませんでした。</p>
+                <?php endif; ?>
+            </div>
+        </div>
+    </section>
+
+    <section class="sec02" id="sec06">
+        <div class="content-width">
+            <div class="page-title--has-icon">
+                <h2><i></i>衛生・安全面について</h2></span>
+            </div>
+            <div class="faq-dl accordion">
+                <?php
+                $args = array(
+                    'post_type' => 'faq',
+                    'posts_per_page' => -1,
+                    'orderby' => 'date',
+                    'order' => 'ASC',
+                    'tax_query' => array(
+                        array(
+                            'taxonomy' => 'faq_category',
+                            'field'    => 'slug',
+                            'terms'    => 'safe',
+                        ),
+                    ),
+                );
+                $the_query = new WP_Query($args);
+                if ($the_query->have_posts()) :
+                    while ($the_query->have_posts()) : $the_query->the_post();
+                ?>
+                        <dl>
+                            <dt><i></i><?php the_title(); ?></dt>
+                            <dd>
+                                <i></i><?php the_content(); ?>
+                            </dd>
+                        </dl>
+                    <?php
+                    endwhile;
+                    wp_reset_postdata();
+                else :
+                    ?>
+                    <p class="text-sm">投稿が見つかりませんでした。</p>
+                <?php endif; ?>
+            </div>
+        </div>
+    </section>
+
+    <section class="sec02" id="sec07">
+        <div class="content-width">
+            <div class="page-title--has-icon">
+                <h2><i></i>利用料金・予約について</h2></span>
+            </div>
+            <div class="faq-dl accordion">
+                <?php
+                $args = array(
+                    'post_type' => 'faq',
+                    'posts_per_page' => -1,
+                    'orderby' => 'date',
+                    'order' => 'ASC',
+                    'tax_query' => array(
+                        array(
+                            'taxonomy' => 'faq_category',
+                            'field'    => 'slug',
+                            'terms'    => 'price',
+                        ),
+                    ),
+                );
+                $the_query = new WP_Query($args);
+                if ($the_query->have_posts()) :
+                    while ($the_query->have_posts()) : $the_query->the_post();
+                ?>
+                        <dl>
+                            <dt><i></i><?php the_title(); ?></dt>
+                            <dd>
+                                <i></i><?php the_content(); ?>
+                            </dd>
+                        </dl>
+                    <?php
+                    endwhile;
+                    wp_reset_postdata();
+                else :
+                    ?>
+                    <p class="text-sm">投稿が見つかりませんでした。</p>
+                <?php endif; ?>
+            </div>
+        </div>
+    </section>
+
+    <section class="sec02" id="sec07">
+        <div class="content-width">
+            <div class="page-title--has-icon">
+                <h2><i></i>アクセス・その他</h2></span>
+            </div>
+            <div class="faq-dl accordion">
+                <?php
+                $args = array(
+                    'post_type' => 'faq',
+                    'posts_per_page' => -1,
+                    'orderby' => 'date',
+                    'order' => 'ASC',
+                    'tax_query' => array(
+                        array(
+                            'taxonomy' => 'faq_category',
+                            'field'    => 'slug',
+                            'terms'    => 'others',
+                        ),
+                    ),
+                );
+                $the_query = new WP_Query($args);
+                if ($the_query->have_posts()) :
+                    while ($the_query->have_posts()) : $the_query->the_post();
+                ?>
+                        <dl>
+                            <dt><i></i><?php the_title(); ?></dt>
+                            <dd>
+                                <i></i><?php the_content(); ?>
+                            </dd>
+                        </dl>
+                    <?php
+                    endwhile;
+                    wp_reset_postdata();
+                else :
+                    ?>
+                    <p class="text-sm">投稿が見つかりませんでした。</p>
+                <?php endif; ?>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="sec03">
+        <div class="content-width">
+            <p>
+                その他のご質問がございましたら、<br>
+                お気軽にスタッフまたは<a href="<?php echo home_url(); ?>/contact/">お問い合わせフォーム</a>までご連絡ください。
+            </p>
+        </div>
+    </section>
     <?php get_template_part('inc/inc-contact'); ?>
 </main>
 <?php get_footer(); ?>

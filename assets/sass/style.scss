@@ -10,6 +10,8 @@
 
 @use 'first';
 
+@use 'event';
+
 @use 'enjoy';
 
 @use 'sauna';
@@ -21,5 +23,11 @@
 @use 'food';
 @use 'goods';
 
+@use 'today';
+
+@use 'schedule';
+
 @use 'hakkan';
 @use 'common';
+
+@use 'faq';
