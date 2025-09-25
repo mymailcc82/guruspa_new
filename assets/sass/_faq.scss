@@ -3,18 +3,47 @@
 .faq {
   .sec02 {
     padding-bottom: 80px;
+    @include media(middle) {
+      padding-bottom: 60px;
+    }
   }
   .sec03 {
+    position: relative;
+    &:after {
+      width: 100%;
+      height: calc(200 * (100vw / 1200));
+      content: '';
+      position: absolute;
+      bottom: calc(-200 * (100vw / 1200));
+      left: 0px;
+      background-color: #e5e5e5;
+      display: block;
+    }
+    .sec03-bg {
+      img {
+        width: 100%;
+      }
+    }
+    .sec03-container {
+      background-color: #e5e5e5;
+      padding: 75px 0px 0px;
+    }
     p {
       font-size: 18px;
       font-weight: bold;
       text-align: center;
       line-height: 1.7;
+      @include media(middle) {
+        font-size: 15px;
+      }
       a {
         font-size: 18px;
         font-weight: 900;
         text-decoration: underline;
         color: #e81e23;
+        @include media(middle) {
+          font-size: 15px;
+        }
       }
     }
   }
@@ -33,12 +62,20 @@
       dt {
         font-size: 16px;
         font-weight: 800;
-        padding: 15px 0px;
+        padding: 20px 0px;
         color: #3c3636;
         display: flex;
         align-items: center;
         position: relative;
         transition: all 0.3s;
+        padding-left: 50px;
+        padding-right: 10px;
+        @include media(middle) {
+          padding: 15px 0px;
+          padding-right: 10px;
+          font-size: 14px;
+          padding-left: 35px;
+        }
         &:hover {
           cursor: pointer;
           opacity: 0.5;
@@ -58,6 +95,9 @@
           background-color: #3c3636;
           border-radius: 5px;
           right: 0;
+          @include media(middle) {
+            right: -5px;
+          }
         }
 
         &::after {
@@ -71,6 +111,9 @@
           border-radius: 5px;
           right: 0;
           transform: rotate(90deg);
+          @include media(middle) {
+            right: -5px;
+          }
         }
 
         i {
@@ -79,8 +122,17 @@
           background-image: url(("./assets/img/icon/icon-q.png"));
           background-size: contain;
           background-repeat: no-repeat;
-          display: inline-block;
+          display: block;
           margin-right: 20px;
+          position: absolute;
+          left: 0px;
+          top: 14px;
+          @include media(middle) {
+            width: 30px;
+            height: 30px;
+            top: 10px;
+            left: -5px;
+          }
         }
       }
 
