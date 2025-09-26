@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css?ver=1.2.4">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css?ver=1.2.5">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yakuhanjp@4.1.1/dist/css/yakuhanjp.css">
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,9 +19,6 @@
     <?php if (!is_404()): ?>
         <?php wp_head(); ?>
     <?php endif; ?>
-
-
-
 </head>
 
 <body <?php body_class('body'); ?>>
@@ -38,14 +35,19 @@
             </div>
             <div class="header-wrap-list">
                 <ul class="header-wrap-list-ul">
-                    <li class="header-wrap-list-ul-item"><a href="javascript:void(0)" class="no-link">ご利用案内</a></li>
-                    <li class="header-wrap-list-ul-item"><a href="javascript:void(0)" class="no-link">館内の楽しみ方</a></li>
-                    <li class="header-wrap-list-ul-item"><a href="javascript:void(0)" class="no-link">初めてのお客様へ</a></li>
-                    <li class="header-wrap-list-ul-item"><a href="javascript:void(0)" class="no-link">イベント情報</a></li>
-                    <li class="header-wrap-list-ul-item"><a href="javascript:void(0)" class="no-link">お知らせ</a></li>
-                    <li class="header-wrap-list-ul-item"><a href="javascript:void(0)" class="no-link">FAQ</a></li>
+                    <li class="header-wrap-list-ul-item"><a href="<?php echo home_url(); ?>/guide/" class="no-link">ご利用案内</a></li>
+                    <li class="header-wrap-list-ul-item"><a href="<?php echo home_url(); ?>/enjoy/" class="no-link">館内の楽しみ方</a></li>
+                    <li class="header-wrap-list-ul-item"><a href="<?php echo home_url(); ?>/first-time/" class="no-link">初めてのお客様へ</a></li>
+                    <li class="header-wrap-list-ul-item"><a href="<?php echo home_url(); ?>/event/" class="no-link">イベント情報</a></li>
+                    <li class="header-wrap-list-ul-item"><a href="<?php echo home_url(); ?>/archive/" class="no-link">お知らせ</a></li>
+                    <li class="header-wrap-list-ul-item"><a href="<?php echo home_url(); ?>/faq/" class="no-link">FAQ</a></li>
                     <li class="header-wrap-list-ul-icon"><a href="javascript:void(0)" class="no-link"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-insta.png" alt=""></a></li>
-                    <li class="header-wrap-list-ul-btn"><a href="javascript:void(0)" class="no-link">営業時間<i></i></a></li>
+                    <?php if (is_page("guide")): ?>
+                        <li class="header-wrap-list-ul-btn"><a href="#sec03" class="no-link">営業時間<i></i></a></li>
+                    <?php else: ?>
+                        <li class="header-wrap-list-ul-btn"><a href="<?php echo home_url(); ?>/guide/#sec03" class="no-link">営業時間<i></i></a></li>
+                    <?php endif; ?>
+
                 </ul>
             </div>
         </div>
@@ -65,7 +67,6 @@
         <div class="header-drawer-container">
             <div class="header-drawer-wrap">
                 <div class="com-title-header">
-
                     <h2 class="">
                         <span class="title title-item-sun">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/item-01.png" alt="">
@@ -84,42 +85,59 @@
                 <div class="header-drawer-wrap-menu">
                     <dl class="header-drawer-wrap-menu-top">
                         <dt>TOP</dt>
-                        <dd><a href=""><img src="<?php echo get_template_directory_uri(); ?>/assets/img/header/header-logo.png" alt=""></a></dd>
+                        <dd><a href="<?php echo home_url(); ?>/"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/header/header-logo.png" alt=""></a></dd>
                     </dl>
                     <dl class="header-drawer-wrap-menu-child menu-child-green">
                         <dt><span class="en-title">GUIDE</span><span class="jp-title">ご利用案内</span></dt>
-                        <dd>
-                            <a href="">料金案内</a>
-                            <a href="">営業時間</a>
-                            <a href="">利用案内</a>
-                            <a href="">アクセス</a>
-                        </dd>
+                        <?php if (is_page("guide")): ?>
+                            <dd>
+                                <a href="#sec02">料金案内</a>
+                                <a href="#sec03">営業時間</a>
+                                <a href="#sec04">利用案内</a>
+                                <a href="#sec05">アクセス</a>
+                            </dd>
+                        <?php else: ?>
+                            <dd>
+                                <a href="<?php echo home_url(); ?>/guide/#sec02">料金案内</a>
+                                <a href="<?php echo home_url(); ?>/guide/#sec03">営業時間</a>
+                                <a href="<?php echo home_url(); ?>/guide/#sec04">利用案内</a>
+                                <a href="<?php echo home_url(); ?>/guide/#sec05">アクセス</a>
+                            </dd>
+                        <?php endif; ?>
                     </dl>
                     <dl class="header-drawer-wrap-menu-child menu-child-blue">
                         <dt><span class="en-title">ENJOY</span><span class="jp-title">館内の楽しみ方</span></dt>
                         <dd>
-                            <a href="">館内マップ</a>
-                            <a href="">お風呂</a>
-                            <a href="">サウナ</a>
-                            <a href="">発汗エリア</a>
-                            <a href="">ご飲食</a>
-                            <a href="">リラクゼーション</a>
-                            <a href="">アメニティ・グッズ</a>
+                            <a href="<?php echo home_url(); ?>/enjoy/">館内マップ</a>
+                            <a href="<?php echo home_url(); ?>/enjoy/spa/">お風呂</a>
+                            <a href="<?php echo home_url(); ?>/enjoy/sauna/">サウナ</a>
+                            <a href="<?php echo home_url(); ?>/enjoy/sweating/">発汗エリア</a>
+                            <a href="<?php echo home_url(); ?>/enjoy/food/">ご飲食</a>
+                            <a href="<?php echo home_url(); ?>/enjoy/relaxation/">リラクゼーション</a>
+                            <a href="<?php echo home_url(); ?>/enjoy/goods/">アメニティ・グッズ</a>
                         </dd>
                     </dl>
                     <dl class="header-drawer-wrap-menu-child menu-child-red">
                         <dt><span class="en-title">FIRST-TIME</span><span class="jp-title">初めてのお客様へ</span></dt>
-                        <dd>
-                            <a href="">グルスパの魅力</a>
-                            <a href="">入館の流れ</a>
-                            <a href="">施設案内</a>
-                        </dd>
+                        <?php if (is_page("first-time")): ?>
+                            <dd>
+                                <a href="#sec02">グルスパの魅力</a>
+                                <a href="#sec03">入館の流れ</a>
+                                <a href="#sec04">施設案内</a>
+                            </dd>
+                        <?php else: ?>
+                            <dd>
+                                <a href="<?php echo home_url(); ?>/first-time/#sec02">グルスパの魅力</a>
+                                <a href="<?php echo home_url(); ?>/first-time/#sec03">入館の流れ</a>
+                                <a href="<?php echo home_url(); ?>/first-time/#sec04">施設案内</a>
+                            </dd>
+                        <?php endif; ?>
                     </dl>
                     <dl class="header-drawer-wrap-menu-child menu-child-yellow">
                         <dt><span class="en-title">EVENT</span><span class="jp-title">イベント情報</span></dt>
                         <dd>
-                            <a href="">当日のイベント</a>
-                            <a href="">イベントスケジュール</a>
+                            <a href="<?php echo home_url(); ?>/today/">当日のイベント</a>
+                            <a href="<?php echo home_url(); ?>/schedule/">イベントスケジュール</a>
                         </dd>
                     </dl>
                     <dl class="header-drawer-wrap-menu-child menu-child-bed">
@@ -131,10 +149,10 @@
                     </dl>
                     <ul class="header-drawer-wrap-menu-child-under">
                         <li></li>
-                        <li><a href="">お知らせ<i></i></a></li>
-                        <li><a href="">FAQ<i></i></a></li>
-                        <li><a href="">注意事項<i></i></a></li>
-                        <li><a href="">採用情報<i></i></a></li>
+                        <li><a href="<?php echo home_url(); ?>/archive/">お知らせ<i></i></a></li>
+                        <li><a href="<?php echo home_url(); ?>/faq/">FAQ<i></i></a></li>
+                        <li><a href="<?php echo home_url(); ?>/rules/">注意事項<i></i></a></li>
+                        <li><a href="<?php echo home_url(); ?>/recruit/">採用情報<i></i></a></li>
                     </ul>
                 </div>
             </div>

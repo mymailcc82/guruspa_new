@@ -1,11 +1,88 @@
 @use 'setting' as *;
 .food {
+  .sec01 {
+    .enjoy-wrap {
+      @include media(middle) {
+        padding-bottom: 100px;
+      }
+    }
+  }
+  .relative {
+    position: relative;
+    overflow: hidden;
+    .sec02-icon-01 {
+      width: 350px;
+      position: absolute;
+      left: -50px;
+      top: 80px;
+      @include media(middle) {
+        width: 150px;
+        top: -10px;
+      }
+    }
+    .sec02-icon-02 {
+      width: 350px;
+      position: absolute;
+      right: -50px;
+      bottom: 160px;
+      @include media(middle) {
+        width: 150px;
+        bottom: inherit;
+        top: 60px;
+      }
+    }
+    .sec02-icon-03 {
+      width: 102px;
+      position: absolute;
+      left: 90px;
+      bottom: 250px;
+      z-index: 2;
+      @include media(middle) {
+        display: none;
+      }
+      img {
+        width: 100%;
+      }
+    }
+    .sec02-icon-04 {
+      width: 102px;
+      position: absolute;
+      right: 90px;
+      bottom: 30%;
+      z-index: 2;
+      @include media(middle) {
+        display: none;
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .area {
+    position: relative;
+  }
   .sec02 {
     h2 {
       text-align: center;
+      position: relative;
+      z-index: 3;
+      @include media(mobile) {
+        padding: 40px 0px;
+      }
       img {
         width: 90%;
         max-width: 365px;
+        &.logo-01 {
+          @include media(middle) {
+            width: 223px;
+          }
+        }
+        &.logo-02 {
+          @include media(middle) {
+            width: 272px;
+          }
+        }
       }
       span {
         font-size: 16px;
@@ -21,14 +98,28 @@
       font-size: 18px;
       font-weight: 600;
       line-height: 2.3;
+      @include media(middle) {
+        font-size: 14px;
+        margin: 15px 0px 30px;
+        line-height: 2;
+      }
     }
   }
   .sec03 {
     padding-bottom: 80px;
+    @include media(middle) {
+      padding-bottom: 40px;
+    }
     .sec03-img {
       margin-bottom: 30px;
       img {
         border-radius: 30px;
+        @include media(mobile) {
+          width: 100%;
+          border-radius: 0px;
+          height: 260px;
+          object-fit: cover;
+        }
       }
     }
     .sec03-desc {
@@ -36,16 +127,30 @@
       font-weight: 500;
       margin: 0px;
       line-height: 2;
+      @include media(middle) {
+        font-size: 14px;
+        line-height: 1.8;
+      }
+      @include media(mobile) {
+        padding: 0px 7.5%;
+      }
     }
   }
   .sec04 {
     padding-bottom: 80px;
+    @include media(middle) {
+      padding-bottom: 40px;
+    }
     .sec04-desc {
       font-size: 16px;
       font-weight: 500;
       margin: 0px;
       line-height: 2;
       margin-bottom: 30px;
+      @include media(middle) {
+        font-size: 14px;
+        line-height: 2;
+      }
       span {
         font-size: 16px;
         font-weight: bold;
@@ -57,6 +162,16 @@
       justify-content: space-between;
       .sec04-wrap-col {
         width: 32%;
+        @include media(mobile) {
+          width: 100%;
+          margin-bottom: 20px;
+        }
+        .sec04-wrap-col-img {
+          img {
+            border-radius: 30px;
+            width: 100%;
+          }
+        }
         p {
           font-size: 16px;
           font-weight: 500;
@@ -100,15 +215,24 @@
       border-radius: 30px;
       padding: 15px 0px;
       dl {
+        @include media(middle) {
+          padding: 0 20px;
+        }
         dt {
           font-size: 20px;
           font-weight: bold;
           text-align: center;
+          @include media(middle) {
+            font-size: 18px;
+          }
         }
         dd {
           font-size: 16px;
           font-weight: 500;
           text-align: center;
+          @include media(middle) {
+            font-size: 14px;
+          }
         }
       }
     }
@@ -118,6 +242,10 @@
       height: 700px;
       background-color: #eeeeee;
       margin: 30px auto 30px;
+      border-radius: 30px;
+      @include media(middle) {
+        height: 450px;
+      }
     }
     .sec05-event {
       .sec01-col-main {
@@ -265,12 +393,23 @@
         left: 0px;
         top: 145px;
         z-index: -1;
+        @include media(mobile) {
+          top: 0px;
+          left: 50%;
+          width: 20px;
+          height: 100%;
+          transform: translateX(-50%);
+        }
       }
       .sec03-wrap-col {
         width: 23.5%;
         overflow: hidden;
         border-radius: 30px;
         background-color: #fff;
+        @include media(mobile) {
+          width: 100%;
+          margin-bottom: 20px;
+        }
         .sec03-wrap-col-img {
           position: relative;
           margin-bottom: 0px;
@@ -305,6 +444,12 @@
           margin: 0px;
           padding: 10px 20px;
           font-weight: 500;
+          @include media(middle) {
+            font-size: 14px;
+          }
+          @include media(mobile) {
+            min-height: 100px;
+          }
         }
       }
     }
@@ -313,10 +458,21 @@
     .sec07-wrap {
       display: flex;
       flex-wrap: wrap;
+      @include media(mobile) {
+        flex-direction: column-reverse;
+      }
       .sec07-wrap-left {
         width: 43%;
+        @include media(mobile) {
+          width: 100%;
+          margin-top: 20px;
+        }
         h3 {
           margin-bottom: 20px;
+          font-size: 20px;
+          @include media(middle) {
+            margin-bottom: 10px;
+          }
         }
         .sec07-dl {
           dl {
@@ -328,17 +484,26 @@
               font-size: 16px;
               font-weight: bold;
               margin-bottom: 5px;
+              @include media(middle) {
+                font-size: 14px;
+              }
             }
             dd {
               font-size: 16px;
               font-weight: 500;
               letter-spacing: 0.1em;
+              @include media(middle) {
+                font-size: 14px;
+              }
             }
           }
         }
       }
       .sec07-wrap-right {
         width: 57%;
+        @include media(mobile) {
+          width: 100%;
+        }
         img {
           border-radius: 30px;
         }

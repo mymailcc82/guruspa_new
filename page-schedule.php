@@ -42,7 +42,7 @@
     </section>
     <section class="sec01">
         <div class="content-width">
-            <div class="page-title-center--has-icon">
+            <div class="page-title-center--has-icon page-title--has-icon--mobile-20">
                 <h2><i></i>月間スケジュール</h2>
             </div>
             <div class="sec01-swiper swiper">
@@ -64,17 +64,17 @@
     </section>
     <section class="sec02">
         <div class="content-width">
-            <div class="page-title--has-icon">
+            <div class="page-title--has-icon page-title--has-icon--mobile-20">
                 <h2><i></i>その他イベント案内</h2>
             </div>
             <div class="sec02-wrap">
                 <div class="sec02-wrap-col">
-                    <a href="">
+                    <a href="<?php echo home_url(); ?>/today/">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/bnr/bnr-02.jpg" alt="イベント案内1">
                     </a>
                 </div>
                 <div class="sec02-wrap-col">
-                    <a href="">
+                    <a href="<?php echo home_url(); ?>/event/">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/bnr/bnr-01.jpg" alt="イベント案内1">
                     </a>
                 </div>

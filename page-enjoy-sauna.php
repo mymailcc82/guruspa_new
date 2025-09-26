@@ -91,57 +91,65 @@ Template Name: enjoy-sauna
         </div>
     </section>
     <section class="sec02">
-        <div class="content-width-sm">
-            <div class="page-title-center--has-icon">
-                <h2><i></i>特徴・魅力</h2>
-            </div>
-            <div class="sec03-wrap">
-                <div class="sec03-wrap-col">
-                    <div class="sec03-wrap-col-left">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sauna/sec02-img-01.jpg" alt="">
-                    </div>
-                    <div class="sec03-wrap-col-right">
-                        <h3>オートロウリュ完備</h3>
-                        <p>
-                            0分・20分・40分ごとに蒸気がサウナ室を包み込み、深い発汗と爽快感を体感できます。
-                        </p>
-                    </div>
+        <div class="page-deco-bg">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-yellow-top.png" alt="">
+        </div>
+        <div class="page-deco-container page-deco-container--yellow">
+            <div class="content-width-sm">
+                <div class="page-title-center--has-icon">
+                    <h2><i></i>特徴・魅力</h2>
                 </div>
-                <div class="sec03-wrap-col">
-                    <div class="sec03-wrap-col-left">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sauna/sec02-img-02.jpg" alt="">
+                <div class="sec03-wrap">
+                    <div class="sec03-wrap-col">
+                        <div class="sec03-wrap-col-left">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sauna/sec02-img-01.jpg" alt="">
+                        </div>
+                        <div class="sec03-wrap-col-right">
+                            <h3>オートロウリュ完備</h3>
+                            <p>
+                                0分・20分・40分ごとに蒸気がサウナ室を包み込み、深い発汗と爽快感を体感できます。
+                            </p>
+                        </div>
                     </div>
-                    <div class="sec03-wrap-col-right">
-                        <h3>熱波師によるアウフグース</h3>
-                        <p>
-                            定時開催で熱波を浴びる特別体験。週末限定イベントも実施。
-                        </p>
+                    <div class="sec03-wrap-col">
+                        <div class="sec03-wrap-col-left">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sauna/sec02-img-02.jpg" alt="">
+                        </div>
+                        <div class="sec03-wrap-col-right">
+                            <h3>熱波師によるアウフグース</h3>
+                            <p>
+                                定時開催で熱波を浴びる特別体験。週末限定イベントも実施。
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div class="sec03-wrap-col">
-                    <div class="sec03-wrap-col-left">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sauna/sec02-img-03.jpg" alt="">
+                    <div class="sec03-wrap-col">
+                        <div class="sec03-wrap-col-left">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sauna/sec02-img-03.jpg" alt="">
+                        </div>
+                        <div class="sec03-wrap-col-right">
+                            <h3>水風呂バリエーション</h3>
+                            <p>
+                                7℃の極冷水風呂、16℃の水風呂、29℃のぬる湯と3種類を用意。体調や好みに応じて選べます。
+                            </p>
+                        </div>
                     </div>
-                    <div class="sec03-wrap-col-right">
-                        <h3>水風呂バリエーション</h3>
-                        <p>
-                            7℃の極冷水風呂、16℃の水風呂、29℃のぬる湯と3種類を用意。体調や好みに応じて選べます。
-                        </p>
+                    <div class="sec03-wrap-col">
+                        <div class="sec03-wrap-col-left">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sauna/sec02-img-04.jpg" alt="">
+                        </div>
+                        <div class="sec03-wrap-col-right">
+                            <h3>初心者も安心</h3>
+                            <p>
+                                高温サウナ・塩サウナなど、多彩なスタイルで無理なく楽しめます。
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div class="sec03-wrap-col">
-                    <div class="sec03-wrap-col-left">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sauna/sec02-img-04.jpg" alt="">
-                    </div>
-                    <div class="sec03-wrap-col-right">
-                        <h3>初心者も安心</h3>
-                        <p>
-                            高温サウナ・塩サウナなど、多彩なスタイルで無理なく楽しめます。
-                        </p>
-                    </div>
-                </div>
 
+                </div>
             </div>
+        </div>
+        <div class="page-bg-deco-bg-bottom">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-yellow-bottom.png" alt="">
         </div>
     </section>
 
@@ -238,8 +246,7 @@ Template Name: enjoy-sauna
                 <h2><i></i>ととのいスペース</h2>
             </div>
             <p class="sec05-desc">
-                サウナの後は“ととのう”時間。<br>
-                グルスパでは、ととのいスペースにも徹底的にこだわっています。
+                サウナの後は“ととのう”時間。<br class="hidden-mobile">グルスパでは、ととのいスペースにも徹底的にこだわっています。
             </p>
             <div class="sec05-wrap">
                 <div class="sec05-wrap-col">
@@ -280,88 +287,98 @@ Template Name: enjoy-sauna
         </div>
     </section>
     <section class="sec06" id="sec06">
-        <div class="content-width-sm">
-            <div class="page-title-center--has-icon">
-                <h2><i></i>サウナイベント情報</h2>
-            </div>
+        <div class="page-deco-bg">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-yellow-top.png" alt="">
+        </div>
+        <div class="page-deco-container page-deco-container--yellow">
+            <div class="content-width-sm">
+                <div class="page-title-center--has-icon">
+                    <h2><i></i>サウナイベント情報</h2>
+                </div>
 
-            <div class="sec06-top">
-                <div class="sec01-col-main">
-                    <ul>
-                        <li><a href="">
-                                <span class="hot">HOT!</span>
-                                <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
-                                <div class="img img-event">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-green.jpg" alt="">
-                                </div>
-                                <div class="text">
-                                    <span class="category category-green">ご案内</span>
-                                    <span class="term">XX.XX.XX〜</span>
-                                    <h3>イベントタイトルが入ります</h3>
-                                </div>
-                            </a></li>
-                        <li><a href="">
-                                <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
-                                <div class="img img-event">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-green.jpg" alt="">
-                                </div>
-                                <div class="text">
-                                    <span class="category category-green">イベント</span>
-                                    <span class="term">XX.XX.XX〜</span>
-                                    <h3>イベントタイトルが入ります</h3>
-                                </div>
-                            </a></li>
-                        <li><a href="">
-                                <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
-                                <div class="img img-event">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-green.jpg" alt="">
-                                </div>
-                                <div class="text">
-                                    <span class="category category-green">フード/キッチントキワ</span>
-                                    <span class="term">XX.XX.XX〜</span>
-                                    <h3>イベントタイトルが入ります</h3>
+                <div class="sec06-top">
+                    <div class="sec01-col-main">
+                        <ul>
+                            <li><a href="">
+                                    <span class="hot">HOT!</span>
+                                    <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
+                                    <div class="img img-event">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-green.jpg" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <span class="category category-green">ご案内</span>
+                                        <span class="term">XX.XX.XX〜</span>
+                                        <h3>イベントタイトルが入ります</h3>
+                                    </div>
+                                </a></li>
+                            <li><a href="">
+                                    <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
+                                    <div class="img img-event">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-green.jpg" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <span class="category category-green">イベント</span>
+                                        <span class="term">XX.XX.XX〜</span>
+                                        <h3>イベントタイトルが入ります</h3>
+                                    </div>
+                                </a></li>
+                            <li><a href="">
+                                    <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
+                                    <div class="img img-event">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-green.jpg" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <span class="category category-green">フード/キッチントキワ</span>
+                                        <span class="term">XX.XX.XX〜</span>
+                                        <h3>イベントタイトルが入ります</h3>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="com-btn-border-black">
+                        <a href="<?php echo home_url(); ?>/event/">イベント情報一覧を見る<i></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="content-width">
+                <div class="page-title-center--has-icon">
+                    <h2><i></i>イベントスケジュール</h2>
+                </div>
+                <div class="sec06-desc">
+                    グルスパでは定期的にロウリュイベントやアウフグース（熱波）サービスを実施中。<br>
+                    週末限定のスペシャルロウリュや、季節に応じたアロマ水使用など、訪れるたびに新しい楽しみをご用意しています。
+                </div>
+
+                <div class="sec06-bottom">
+                    <div class="sec06-bottom-col">
+                        <div class="sec-01-col-under">
+                            <a href="">
+                                <div class="sec-01-col-under-img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/bnr/page-bnr-today-img.jpg" alt=""></div>
+                                <div class="sec-01-col-under-title">
+                                    <h3><img src="<?php echo get_template_directory_uri(); ?>/assets/img/bnr/page-bnr-today-txt.png" alt="EVENT SCHEDULE"><i class="icon-btn"></i></h3>
+                                    <p>本日開催しているイベントをチェック！</p>
                                 </div>
                             </a>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
+                    <div class="sec06-bottom-col">
+                        <div class="sec-01-col-under">
+                            <a href="">
+                                <div class="sec-01-col-under-img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/bnr/page-bnr-event-img.jpg" alt=""></div>
+                                <div class="sec-01-col-under-title">
+                                    <h3><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/title-event-schedule_v2.png" alt="EVENT SCHEDULE"><i class="icon-btn"></i></h3>
+                                    <p>イベントはこちらをチェック！</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
-        <div class="content-width">
-
-            <div class="page-title-center--has-icon">
-                <h2><i></i>イベントスケジュール</h2>
-            </div>
-            <div class="sec06-desc">
-                グルスパでは定期的にロウリュイベントやアウフグース（熱波）サービスを実施中。<br>
-                週末限定のスペシャルロウリュや、季節に応じたアロマ水使用など、訪れるたびに新しい楽しみをご用意しています。
-            </div>
-
-            <div class="sec06-bottom">
-                <div class="sec06-bottom-col">
-                    <div class="sec-01-col-under">
-                        <a href="">
-                            <div class="sec-01-col-under-img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-img-01.jpg" alt=""></div>
-                            <div class="sec-01-col-under-title">
-                                <h3><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/title-event-schedule_v2.png" alt="EVENT SCHEDULE"><i class="icon-btn"></i></h3>
-                                <p>イベントはこちらをチェック！</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="sec06-bottom-col">
-                    <div class="sec-01-col-under">
-                        <a href="">
-                            <div class="sec-01-col-under-img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-img-01.jpg" alt=""></div>
-                            <div class="sec-01-col-under-title">
-                                <h3><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/title-event-schedule_v2.png" alt="EVENT SCHEDULE"><i class="icon-btn"></i></h3>
-                                <p>イベントはこちらをチェック！</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-            </div>
+        <div class="page-bg-deco-bg-bottom">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-yellow-bottom.png" alt="">
         </div>
     </section>
 
@@ -371,8 +388,7 @@ Template Name: enjoy-sauna
                 <h2><i></i>脱衣所・浴室ご利用時のご案内</h2>
             </div>
             <p class="sec07-desc">
-                当館ではお客様に気持ちよくご利用いただくため、<br>
-                下記の事項をお守りくださいますようお願い申し上げます。
+                当館ではお客様に気持ちよくご利用いただくため、<br class="hidden-mobile">下記の事項をお守りくださいますようお願い申し上げます。
             </p>
             <div class="sec07-wrap">
                 <ul>
@@ -395,11 +411,11 @@ Template Name: enjoy-sauna
                     <div class="page-title--has-icon">
                         <h2><i></i>よくある質問</h2>
                     </div>
-                    <div class="sec07-btn">
-                        <a href="">一覧を見る<i></i></a>
+                    <div class="sec07-btn hidden-mobile">
+                        <a href="<?php echo home_url(); ?>/faq/">一覧を見る<i></i></a>
                     </div>
                 </div>
-                <div class="sec07-wrap-faq">
+                <div class="sec07-wrap-faq accordion">
                     <dl>
                         <dt><i></i>岩盤浴ウェアやタオルは自分で持っていく必要がありますか？</dt>
                         <dd></dd>
@@ -420,7 +436,12 @@ Template Name: enjoy-sauna
                         <dt><i></i>駐車場はありますか？</dt>
                         <dd></dd>
                     </dl>
+
+                    <div class="com-btn-mobile hidden-sm">
+                        <a href="<?php echo home_url(); ?>/faq/">一覧を見る<i></i></a>
+                    </div>
                 </div>
+
             </div>
         </div>
     </section>

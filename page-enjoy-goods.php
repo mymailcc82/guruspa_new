@@ -130,7 +130,7 @@ Template Name: enjoy-goods
     <section class="sec03" id="sec03">
         <div class="content-width-sm">
             <div class="page-title-center--has-icon">
-                <h2><i></i>レンタルアイテム（有料）</h2>
+                <h2 class="letter-spacing-0-mobile"><i></i>レンタルアイテム（有料）</h2>
             </div>
             <p class="sec03-desc">
                 身軽にご来館いただけるよう、各種レンタルサービスもご用意しております。<br>
@@ -153,112 +153,119 @@ Template Name: enjoy-goods
         </div>
     </section>
     <section class="sec04" id="sec04">
-        <div class="content-width-sm">
-            <div class="page-title-center--has-icon">
-                <h2><i></i>グルスパオリジナルグッズ</h2>
-            </div>
-            <p class="sec04-desc">
-                お気に入りを“ととのい記念”に。<br>
-                オリジナルグッズをはじめ、サウナー心をくすぐるアイテムを館内で販売中です。
-            </p>
-            <div class="sec04-list">
-                <dl>
-                    <dt>商品カテゴリ</dt>
-                    <dd>
-                        <ul>
-                            <li><a href="" class="color-green">オリジナルグッズ</a></li>
-                            <li><a href="" class="color-blue">サウナハット</a></li>
-                            <li><a href="" class="color-red">アパレル</a></li>
-                            <li><a href="" class="color-yellow">コスメ</a></li>
-                        </ul>
-                    </dd>
-                </dl>
-                <dl>
-                    <dt>販売状況</dt>
-                    <dd>
-                        <ul>
-                            <li><a href="">販売中</a></li>
-                            <li><a href="">入荷待ち</a></li>
-                            <li><a href="">販売終了</a></li>
-                        </ul>
-                    </dd>
-                </dl>
-            </div>
-            <div class="sec04-wrap">
-                <div class="sec04-wrap-col">
-                    <div class="sec04-wrap-col-img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/goods/sec04-img-01.jpg" alt="">
-                    </div>
-                    <div class="sec04-wrap-col-cat">
-                        <ul>
-                            <li><a href="" class="color-green">オリジナルグッズ</a></li>
-                            <li><a href="" class="color-white">販売中</a></li>
-                        </ul>
-                    </div>
-                    <h3>グッズのタイトルが入ります。<br>グッズのタイトルが入ります。</h3>
-                    <p class="sec04-price"><strong>2,500</strong>円<small>（税込）</small></p>
+        <div class="page-deco-bg">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-red-top.png" alt="">
+        </div>
+        <div class="page-deco-container page-deco-container--red">
+            <div class="content-width-sm">
+                <div class="page-title-center--has-icon">
+                    <h2><i></i>グルスパオリジナルグッズ</h2>
                 </div>
-                <div class="sec04-wrap-col">
-                    <div class="sec04-wrap-col-img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/goods/sec04-img-01.jpg" alt="">
-                    </div>
-                    <div class="sec04-wrap-col-cat">
-                        <ul>
-                            <li><a href="" class="color-green">オリジナルグッズ</a></li>
-                            <li><a href="" class="color-white">販売中</a></li>
-                        </ul>
-                    </div>
-                    <h3>グッズのタイトルが入ります。<br>グッズのタイトルが入ります。</h3>
-                    <p class="sec04-price"><strong>2,500</strong>円<small>（税込）</small></p>
-                </div>
-                <div class="sec04-wrap-col">
-                    <div class="sec04-wrap-col-img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/goods/sec04-img-01.jpg" alt="">
-                    </div>
-                    <div class="sec04-wrap-col-cat">
-                        <ul>
-                            <li><a href="" class="color-green">オリジナルグッズ</a></li>
-                            <li><a href="" class="color-white">販売中</a></li>
-                        </ul>
-                    </div>
-                    <h3>グッズのタイトルが入ります。<br>グッズのタイトルが入ります。</h3>
-                    <p class="sec04-price"><strong>2,500</strong>円<small>（税込）</small></p>
-                </div>
-                <div class="sec04-wrap-col">
-                    <div class="sec04-wrap-col-img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/goods/sec04-img-01.jpg" alt="">
-                    </div>
-                    <div class="sec04-wrap-col-cat">
-                        <ul>
-                            <li><a href="" class="color-green">オリジナルグッズ</a></li>
-                            <li><a href="" class="color-white">販売中</a></li>
-                        </ul>
-                    </div>
-                    <h3>グッズのタイトルが入ります。<br>グッズのタイトルが入ります。</h3>
-                    <p class="sec04-price"><strong>2,500</strong>円<small>（税込）</small></p>
-                </div>
-            </div>
-
-            <div class="sec04-info">
-                <div class="sec04-info-img">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/goods/sec04-info.jpg" alt="">
-                </div>
-                <div class="sec04-info-txt">
+                <p class="sec04-desc">
+                    お気に入りを“ととのい記念”に。<br>
+                    オリジナルグッズをはじめ、サウナー心をくすぐるアイテムを館内で販売中です。
+                </p>
+                <div class="sec04-list">
                     <dl>
-                        <dt>販売場所</dt>
-                        <dd>○階 ○○○○○</dd>
+                        <dt>商品カテゴリ</dt>
+                        <dd>
+                            <ul>
+                                <li><a href="" class="color-green">オリジナルグッズ</a></li>
+                                <li><a href="" class="color-blue">サウナハット</a></li>
+                                <li><a href="" class="color-red">アパレル</a></li>
+                                <li><a href="" class="color-yellow">コスメ</a></li>
+                            </ul>
+                        </dd>
                     </dl>
                     <dl>
-                        <dt>販売時間</dt>
-                        <dd>10:00〜22:00</dd>
+                        <dt>販売状況</dt>
+                        <dd>
+                            <ul>
+                                <li><a href="">販売中</a></li>
+                                <li><a href="">入荷待ち</a></li>
+                                <li><a href="">販売終了</a></li>
+                            </ul>
+                        </dd>
                     </dl>
-                    <p>
-                        ※ネットショップは行っておりません。お買い求めの際は店頭にお越しください。
-                    </p>
+                </div>
+                <div class="sec04-wrap">
+                    <div class="sec04-wrap-col">
+                        <div class="sec04-wrap-col-img">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/goods/sec04-img-01.jpg" alt="">
+                        </div>
+                        <div class="sec04-wrap-col-cat">
+                            <ul>
+                                <li><a href="" class="color-green">オリジナルグッズ</a></li>
+                                <li><a href="" class="color-white">販売中</a></li>
+                            </ul>
+                        </div>
+                        <h3>グッズのタイトルが入ります。<br>グッズのタイトルが入ります。</h3>
+                        <p class="sec04-price"><strong>2,500</strong>円<small>（税込）</small></p>
+                    </div>
+                    <div class="sec04-wrap-col">
+                        <div class="sec04-wrap-col-img">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/goods/sec04-img-01.jpg" alt="">
+                        </div>
+                        <div class="sec04-wrap-col-cat">
+                            <ul>
+                                <li><a href="" class="color-green">オリジナルグッズ</a></li>
+                                <li><a href="" class="color-white">販売中</a></li>
+                            </ul>
+                        </div>
+                        <h3>グッズのタイトルが入ります。<br>グッズのタイトルが入ります。</h3>
+                        <p class="sec04-price"><strong>2,500</strong>円<small>（税込）</small></p>
+                    </div>
+                    <div class="sec04-wrap-col">
+                        <div class="sec04-wrap-col-img">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/goods/sec04-img-01.jpg" alt="">
+                        </div>
+                        <div class="sec04-wrap-col-cat">
+                            <ul>
+                                <li><a href="" class="color-green">オリジナルグッズ</a></li>
+                                <li><a href="" class="color-white">販売中</a></li>
+                            </ul>
+                        </div>
+                        <h3>グッズのタイトルが入ります。<br>グッズのタイトルが入ります。</h3>
+                        <p class="sec04-price"><strong>2,500</strong>円<small>（税込）</small></p>
+                    </div>
+                    <div class="sec04-wrap-col">
+                        <div class="sec04-wrap-col-img">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/goods/sec04-img-01.jpg" alt="">
+                        </div>
+                        <div class="sec04-wrap-col-cat">
+                            <ul>
+                                <li><a href="" class="color-green">オリジナルグッズ</a></li>
+                                <li><a href="" class="color-white">販売中</a></li>
+                            </ul>
+                        </div>
+                        <h3>グッズのタイトルが入ります。<br>グッズのタイトルが入ります。</h3>
+                        <p class="sec04-price"><strong>2,500</strong>円<small>（税込）</small></p>
+                    </div>
                 </div>
 
+                <div class="sec04-info">
+                    <div class="sec04-info-img">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/goods/sec04-info.jpg" alt="">
+                    </div>
+                    <div class="sec04-info-txt">
+                        <dl>
+                            <dt>販売場所</dt>
+                            <dd>○階 ○○○○○</dd>
+                        </dl>
+                        <dl>
+                            <dt>販売時間</dt>
+                            <dd>10:00〜22:00</dd>
+                        </dl>
+                        <p>
+                            ※ネットショップは行っておりません。お買い求めの際は店頭にお越しください。
+                        </p>
+                    </div>
+
+                </div>
             </div>
         </div>
+        <div class="page-bg-deco-bg-bottom-red"></div>
+
     </section>
     <?php get_template_part('inc/inc-contact'); ?>
 

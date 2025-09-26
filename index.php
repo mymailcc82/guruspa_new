@@ -273,7 +273,7 @@
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/item-01.png" alt="">
                             </span>
                         </h2>
-                        <a href="">一覧を見る<i></i></a>
+                        <a href="<?php echo home_url(); ?>/event/">一覧を見る<i></i></a>
                     </div>
                 </div>
                 <div class="sec01-col">
@@ -423,9 +423,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="com-btn-sp"><a href="">一覧を見る<i class="black"></i></a></div>
+                <div class="com-btn-sp"><a href="<?php echo home_url(); ?>/event/">一覧を見る<i class="black"></i></a></div>
                 <div class="sec-01-col-under">
-                    <a href="">
+                    <a href="<?php echo home_url(); ?>/schedule/">
                         <div class="sec-01-col-under-img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-img-01.jpg" alt=""></div>
                         <div class="sec-01-col-under-title">
                             <?php
@@ -467,13 +467,13 @@
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/item-01.png" alt="">
                             </span>
                         </h2>
-                        <a href="">一覧を見る<i></i></a>
+                        <a href="<?php echo home_url(); ?>/archive/">一覧を見る<i></i></a>
                     </div>
-                    <div class="com-btn-sp"><a href="">お知らせ一覧を見る<i class="green"></i></a></div>
+                    <div class="com-btn-sp"><a href="<?php echo home_url(); ?>/archive/">お知らせ一覧を見る<i class="green"></i></a></div>
                     <div class="content-width">
                         <div class="sec02-list">
                             <div class="sec02-list-wrap sec02-list-wrap-left">
-                                <h3>NEWS<a href="">一覧を見る<i></i></a></h3>
+                                <h3>NEWS<a href="<?php echo home_url(); ?>/archive/">一覧を見る<i></i></a></h3>
 
                                 <ul>
                                     <li><a href="">
@@ -675,8 +675,8 @@
                         </div>
 
                         <div class="sec03-col-under-btn">
-                            <div class="com-btn sec03-col-under-btn-1"><a href="">初めてのお客様へ<span class="icon-btn--1"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-btn--1.png" alt=""></span><i></i></a></div>
-                            <div class="com-btn"><a href="">ご利用案内<span class="icon-btn--2"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-btn--2.png" alt=""></span></span><i></i></a></div>
+                            <div class="com-btn sec03-col-under-btn-1"><a href="<?php echo home_url(); ?>/first-time/">初めてのお客様へ<span class="icon-btn--1"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-btn--1.png" alt=""></span><i></i></a></div>
+                            <div class="com-btn"><a href="<?php echo home_url(); ?>/guide/">ご利用案内<span class="icon-btn--2"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-btn--2.png" alt=""></span></span><i></i></a></div>
                         </div>
                     </div>
 
@@ -738,7 +738,7 @@
                             <p>
                                 （100文字程度）この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
                             </p>
-                            <a href="">館内の楽しみ方<i></i></a>
+                            <a href="<?php echo home_url(); ?>/enjoy/">館内の楽しみ方<i></i></a>
                         </div>
                         <div class="sec04-wrap">
                             <div class="sec04-wrap-col sec04-wrap-right">
@@ -751,7 +751,7 @@
                                         地下1,300ｍから汲み上げた天然温泉を使用。<br>
                                         泉質はメタけい酸を豊富に含み、肌の新陳代謝を促し、セラミドを整える“美肌の湯”として知られています。大きな露天風呂をはじめ、様々な種類のお風呂をご用意しておりますので、四季の風を感じながら至福のひとときをお過ごしください。
                                     </p>
-                                    <a href="">くわしく見る<i></i></a>
+                                    <a href="<?php echo home_url(); ?>/enjoy/spa/">くわしく見る<i></i></a>
                                 </div>
                             </div>
                             <div class="sec04-wrap-col sec04-wrap-left">
@@ -764,7 +764,7 @@
                                         当館では、発汗・癒し・爽快感を存分に味わえるサウナの後には、7℃の極冷水風呂・16℃の水風呂・29℃のぬる湯と、好みに合わせて選べる3種類の水風呂もご用意。一気にクールダウンしたい方も、ゆっくり“ととのい”たい方も、自分だけのスタイルで楽しめます。<br>
                                         ここでしか体験できないサウナ時間で、ぜひ“最高のととのい”を見つけてください。
                                     </p>
-                                    <a href="">くわしく見る<i></i></a>
+                                    <a href="<?php echo home_url(); ?>/enjoy/sauna/">くわしく見る<i></i></a>
                                 </div>
                             </div>
                             <div class="sec04-wrap-col sec04-wrap-right">
@@ -778,7 +778,7 @@
                                         時間を忘れてゆったり過ごしたい方にぴったりの癒し空間です。<br>
                                         館内とはひと味違う、深いリラックスをお楽しみください。
                                     </p>
-                                    <a href="">くわしく見る<i></i></a>
+                                    <a href="<?php echo home_url(); ?>/enjoy/sweating/">くわしく見る<i></i></a>
                                 </div>
                             </div>
                             <div class="sec04-wrap-col sec04-wrap-left">
@@ -791,7 +791,7 @@
                                         館内の飲食エリアでは、和食や洋食、クラフトビール、スイーツまで幅広いお客様にご満足いただけるメニューをご用意。<br>
                                         「キッチントキワ」では三重県産食材を使った料理やサ飯を、くつろぎ空間で。「スイートラボ」では珍しいスイーツやSNS映えするデザートを楽しめます。
                                     </p>
-                                    <a href="">くわしく見る<i></i></a>
+                                    <a href="<?php echo home_url(); ?>/enjoy/food/">くわしく見る<i></i></a>
                                 </div>
                             </div>
                             <div class="sec04-wrap-col sec04-wrap-right">
@@ -805,7 +805,7 @@
                                         日々の疲れを芯から癒したい方におすすめです。<br>
                                         予約制でスムーズにご案内でき、定期的にリラクイベントも開催中。贅沢なひとときをお過ごしください。
                                     </p>
-                                    <a href="">くわしく見る<i></i></a>
+                                    <a href="<?php echo home_url(); ?>/enjoy/relaxation/">くわしく見る<i></i></a>
                                 </div>
                             </div>
                         </div>
@@ -930,7 +930,7 @@
                         </p>
                     </div>
                     <div class="sec05-wrap-under-link">
-                        <a href="">ご利用案内<i></i></a>
+                        <a href="<?php echo home_url(); ?>/guide/">ご利用案内<i></i></a>
                     </div>
                 </div>
             </div>
@@ -960,7 +960,7 @@
                         <li></li>
                     </ul>
                     <div class="sec06-wrap-under-link">
-                        <a href="">くわしく見る<i></i></a>
+                        <a href="<?php echo home_url(); ?>/guide/#sec05">くわしく見る<i></i></a>
                     </div>
                 </div>
             </div>
@@ -969,7 +969,9 @@
             </div>
         </section>
 
-        <section class="sec07">
+
+
+        <section class="sec07-com sec07">
             <div class="content-width">
                 <div class="sec07-wrap">
                     <div class="sec07-wrap-title">
@@ -987,7 +989,7 @@
                             <a href="">一覧を見る<i></i></a>
                         </div>
                     </div>
-                    <div class="sec07-wrap-faq">
+                    <div class="sec07-wrap-faq accordion">
                         <dl>
                             <dt><i></i>岩盤浴ウェアやタオルは自分で持っていく必要がありますか？</dt>
                             <dd></dd>
@@ -1008,8 +1010,11 @@
                             <dt><i></i>駐車場はありますか？</dt>
                             <dd></dd>
                         </dl>
+
+                        <div class="com-btn-mobile hidden-sm">
+                            <a href="<?php echo home_url(); ?>/faq/">一覧を見る<i></i></a>
+                        </div>
                     </div>
-                    <div class="com-btn-sp"><a href="">一覧を見る<i class="black"></i></a></div>
                 </div>
             </div>
         </section>
@@ -1058,7 +1063,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="footer-fixed footer-fixed-sp">
                 <a href="#">
                     <span class="footer-fixed-main"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/footer-fixed.png" alt=""></span>

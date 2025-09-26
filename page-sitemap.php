@@ -52,72 +52,71 @@
                 </div>
                 <div class="sec01-wrap-col">
                     <h2>
-                        <a href="<?php echo home_url(); ?>/guide/">館内の楽しみ方<i></i></a>
+                        <a href="<?php echo home_url(); ?>/enjoy/">館内の楽しみ方<i></i></a>
                     </h2>
                     <ul>
-                        <li><a href="">館内マップ</a></li>
-                        <li><a href="">お風呂</a></li>
-                        <li><a href="">サウナ&水風呂</a></li>
-                        <li><a href="">発汗エリア</a></li>
-                        <li><a href="">ご飲食</a></li>
-                        <li><a href="">リラクゼーション</a></li>
-                        <li><a href="">アメニティ・グッズ</a></li>
+                        <li><a href="<?php echo home_url(); ?>/enjoy/">館内マップ</a></li>
+                        <li><a href="<?php echo home_url(); ?>/enjoy/spa/">お風呂</a></li>
+                        <li><a href="<?php echo home_url(); ?>/enjoy/sauna/">サウナ</a></li>
+                        <li><a href="<?php echo home_url(); ?>/enjoy/sweating/">発汗エリア</a></li>
+                        <li><a href="<?php echo home_url(); ?>/enjoy/food/">ご飲食</a></li>
+                        <li><a href="<?php echo home_url(); ?>/enjoy/relaxation/">リラクゼーション</a></li>
+                        <li><a href="<?php echo home_url(); ?>/enjoy/goods/">アメニティ・グッズ</a></li>
                     </ul>
                 </div>
                 <div class="sec01-wrap-col">
                     <h2>
-                        <a href="<?php echo home_url(); ?>/guide/">初めてのお客様へ<i></i></a>
+                        <a href="<?php echo home_url(); ?>/first-time/">初めてのお客様へ<i></i></a>
                     </h2>
                     <ul>
-                        <li><a href="">グルスパの魅力</a></li>
-                        <li><a href="">入館の流れ</a></li>
-                        <li><a href="">利用案内</a></li>
-                        <li><a href="">施設案内</a></li>
+                        <li><a href="<?php echo home_url(); ?>/first-time/#sec02">グルスパの魅力</a></li>
+                        <li><a href="<?php echo home_url(); ?>/first-time/#sec03">入館の流れ</a></li>
+                        <li><a href="<?php echo home_url(); ?>/first-time/#sec04">施設案内</a></li>
                     </ul>
                 </div>
 
                 <div class="sec01-wrap-col">
                     <h2>
-                        <a href="<?php echo home_url(); ?>/guide/">イベント情報<i></i></a>
+                        <a href="<?php echo home_url(); ?>/event/">イベント情報<i></i></a>
                     </h2>
                     <ul>
-                        <li><a href="">当日のイベント</a></li>
-                        <li><a href="">イベントスケジュール</a></li>
+                        <li><a href="<?php echo home_url(); ?>/today/">当日のイベント</a></li>
+                        <li><a href="<?php echo home_url(); ?>/schedule/">イベントスケジュール</a></li>
                     </ul>
                 </div>
 
                 <div class="sec01-wrap-col">
                     <h2>
-                        <a href="<?php echo home_url(); ?>/guide/">お問い合わせ<i></i></a>
+                        <a href="<?php echo home_url(); ?>/contact/">お問い合わせ<i></i></a>
                     </h2>
                     <ul>
-                        <li><a href="">個人のお客様</a></li>
-                        <li><a href="">取材依頼・法人の方</a></li>
+                        <li><a href="<?php echo home_url(); ?>/contact/">個人のお客様</a></li>
+                        <li><a href="<?php echo home_url(); ?>/contact/">取材依頼・法人の方</a></li>
                     </ul>
                 </div>
                 <div class="sec01-wrap-col">
                     <h2 class="no-border">
-                        <a href="<?php echo home_url(); ?>/guide/">お知らせ<i></i></a>
+                        <a href="<?php echo home_url(); ?>/archive/">お知らせ<i></i></a>
                     </h2>
                     <h2 class="no-border">
-                        <a href="<?php echo home_url(); ?>/guide/">FAQ<i></i></a>
+                        <a href="<?php echo home_url(); ?>/faq/">FAQ<i></i></a>
                     </h2>
                     <h2 class="no-border">
-                        <a href="<?php echo home_url(); ?>/guide/">注意事項<i></i></a>
+                        <a href="<?php echo home_url(); ?>/rules/">注意事項<i></i></a>
                     </h2>
                     <h2 class="no-border">
-                        <a href="<?php echo home_url(); ?>/guide/">採用情報<i></i></a>
+                        <a href="<?php echo home_url(); ?>/recruit/">採用情報<i></i></a>
                     </h2>
                 </div>
                 <div class="sec01-wrap-col">
                     <h2 class="no-border">
-                        <a href="<?php echo home_url(); ?>/guide/">プライバシーポリシー<i></i></a>
+                        <a href="<?php echo home_url(); ?>/privacy/">プライバシーポリシー<i></i></a>
                     </h2>
                     <h2 class="no-border">
-                        <a href="<?php echo home_url(); ?>/guide/">利用規約<i></i></a>
+                        <a href="<?php echo home_url(); ?>/terms/">利用規約<i></i></a>
                     </h2>
                     <h2 class="no-border">
-                        <a href="<?php echo home_url(); ?>/guide/">Cookieについて<i></i></a>
+                        <a href="<?php echo home_url(); ?>/cookie/">Cookieについて<i></i></a>
                     </h2>
                 </div>
 

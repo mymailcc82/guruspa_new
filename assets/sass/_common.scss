@@ -9,27 +9,36 @@
   --font-size-18: 18px;
   --font-size-65: 65px;
 }
-
+.content-width--mobile-full {
+  @include media(mobile) {
+    width: 100% !important;
+  }
+}
+.content-width--middle-full {
+  @include media(middle) {
+    width: 100% !important;
+  }
+}
 .content-width-lg {
-  width: 90%;
+  width: 85%;
   max-width: 1155px;
   margin: 0 auto;
 }
 
 .content-width {
-  width: 90%;
+  width: 85%;
   max-width: 1088px;
   margin: 0 auto;
 }
 
 .content-width-small {
-  width: 90%;
+  width: 85%;
   max-width: 996px;
   margin: 0 auto;
 }
 
 .content-width-sm {
-  width: 90%;
+  width: 85%;
   max-width: 950px;
   margin: 0 auto;
 }
@@ -82,7 +91,74 @@ img.lazyloaded {
 .center {
   text-align: center;
 }
+.com-btn-mobile {
+  width: 100%;
+  max-width: 279px;
+  margin: 0 auto;
+  a {
+    background-color: #fff;
+    display: flex;
 
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 51px;
+    padding: 17px 25px 17px 30px;
+    border-radius: 26px;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    border: 1px solid #3c3636;
+
+    &:hover {
+      background-color: #2e549c !important;
+
+      i {
+        transform: translateX(10px);
+      }
+
+      .icon-btn--1 {
+        transform: translate(10px, -5px) rotate(10deg);
+
+        @include media(middle) {
+          transform: translate(10px, -10px) rotate(10deg);
+        }
+      }
+
+      .icon-btn--2 {
+        transform: translate(10px, -15px);
+
+        @include media(middle) {
+          transform: translate(10px, -20px);
+        }
+      }
+    }
+
+    @include media(middle) {
+      font-size: 16px;
+    }
+
+    i {
+      width: 22px;
+      height: 22px;
+      background-image: url(("./assets/img/icon/icon-btn-blown.svg"));
+      background-size: contain;
+      background-repeat: no-repeat;
+      display: block;
+      transition: transform 0.4s ease;
+      right: 20px;
+      position: absolute;
+
+      &.icon-green {
+        background-image: url(("./assets/img/icon/icon-btn-green-2.png")) !important;
+      }
+      &.icon-blue {
+        background-image: url(("./assets/img/icon/icon-arrow-blue-right.svg")) !important;
+      }
+    }
+  }
+}
 .com-btn {
   width: 100%;
   max-width: 453px;
@@ -326,10 +402,10 @@ img.lazyloaded {
       position: absolute;
       opacity: 0;
       transform: translateY(20px);
-      top: -42px !important;
-      width: 20px !important;
+      //top: -42px;
+      //width: 20px;
       //transition: all 0.5s ease;
-      right: 7px !important;
+      right: 7px;
     }
 
     .title-item-sun {
@@ -339,6 +415,13 @@ img.lazyloaded {
       height: 93px;
       z-index: 1;
       position: absolute;
+
+      @include media(middle) {
+        width: 43px;
+        height: 43px;
+        top: -20px;
+        left: -30px;
+      }
     }
 
     .title-item-sprout {
@@ -347,6 +430,14 @@ img.lazyloaded {
       position: absolute;
       right: -10px;
       top: -59px;
+
+      @include media(middle) {
+        width: 18px;
+        height: 17px;
+        top: -20px;
+        right: -5px;
+        top: -40px;
+      }
     }
 
     .title-item-sun-big {
@@ -452,6 +543,10 @@ img.lazyloaded {
   max-width: 1200px;
   margin: 0 auto;
   padding-left: 40px;
+
+  @include media(mobile){
+    padding-left: 0;
+  }
 }
 
 .com-title-hidden {

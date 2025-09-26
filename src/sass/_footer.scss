@@ -11,9 +11,10 @@
   background-color: #fefbf5;
   position: relative;
   padding: 75px 0px 20px;
-  z-index: 4;
+  z-index: 90;
 
   @include media(middle) {
+    padding: 75px 0px 80px;
     //padding: 45px 0px 80px;
   }
 
@@ -44,7 +45,7 @@
       .accordion {
         @include media(middle-small) {
           width: 100%;
-          border-bottom: solid 1px #3C3636;
+          border-bottom: solid 1px #3c3636;
           padding-bottom: 20px;
           margin-bottom: 20px;
         }
@@ -53,8 +54,6 @@
           font-size: 16px;
           font-weight: bold;
           letter-spacing: 0.1em;
-
-
         }
       }
 
@@ -63,13 +62,12 @@
           width: 100%;
         }
 
-
         dt {
           @include media(middle-small) {
             width: 100%;
             padding-bottom: 20px;
             margin-bottom: 20px;
-            border-bottom: solid 1px #3C3636;
+            border-bottom: solid 1px #3c3636;
           }
 
           a {
@@ -79,7 +77,6 @@
       }
 
       dl {
-
         dt {
           margin-bottom: 20px;
 
@@ -98,14 +95,14 @@
 
             &::before {
               display: none;
-              content: "";
+              content: '';
               position: absolute;
               right: 0;
               top: 50%;
               transform: translateY(-50%);
               width: 15px;
               height: 2.5px;
-              background-color: #3C3636;
+              background-color: #3c3636;
               transition: transform 0.3s ease;
 
               @include media(middle-small) {
@@ -115,14 +112,14 @@
 
             &::after {
               display: none;
-              content: "";
+              content: '';
               position: absolute;
               right: 0;
               top: 50%;
               transform: translateY(-50%) rotate(90deg);
               width: 15px;
               height: 2.5px;
-              background-color: #3C3636;
+              background-color: #3c3636;
               transition: transform 0.3s ease;
 
               @include media(middle-small) {
@@ -139,7 +136,6 @@
               display: block;
               position: relative;
             }
-
 
             &.open::after {
               transform: translateY(-50%) rotate(0deg); // マイナスになる
@@ -163,11 +159,9 @@
             transition: max-height 0.5s ease, opacity 0.5s ease;
           }
 
-
           &:last-child {
             margin-bottom: 0;
           }
-
 
           a {
             font-size: 16px;
@@ -182,7 +176,6 @@
               opacity: 0;
             }
           }
-
         }
 
         &.active {
@@ -195,7 +188,6 @@
             a {
               opacity: 1;
             }
-
           }
         }
       }
@@ -316,8 +308,6 @@
     }
   }
 
-
-
   .footer-copy {
     width: 90%;
     margin: 0 auto;
@@ -360,6 +350,7 @@
     left: 0;
     opacity: 0;
     transition: opacity 0.4s ease;
+    z-index: 900;
   }
 
   .sub-title-02 {
@@ -398,7 +389,7 @@
     font-weight: bold;
     padding: 19px 0;
     border-radius: 20px 0 0 20px;
-    border: solid 1px #3C3636;
+    border: solid 1px #3c3636;
 
     @include media(middle) {
       font-size: 14px;
@@ -415,9 +406,9 @@
   }
 
   .top-fixed-1 {
-    background-color: #F4BA1D;
+    background-color: #f4ba1d;
     margin-bottom: 11px;
-    color: #3C3636;
+    color: #3c3636;
 
     i {
       width: 24.87px;
@@ -427,7 +418,7 @@
   }
 
   .top-fixed-2 {
-    background-color: #E81E23;
+    background-color: #e81e23;
     color: #fff;
     margin-bottom: 11px;
 
@@ -440,7 +431,7 @@
 
   .top-fixed-3 {
     background-color: #fff;
-    color: #3C3636;
+    color: #3c3636;
 
     i {
       width: 30px;
@@ -449,7 +440,6 @@
     }
   }
 }
-
 
 .top-fixed-sp {
   width: 100%;
@@ -499,7 +489,7 @@
       justify-content: center;
       height: 68px;
       width: 33.333%;
-      border: solid 1px #3C3636;
+      border: solid 1px #3c3636;
       //font-size: 15px;
       font-size: 3vw;
       font-weight: bold;
@@ -515,8 +505,8 @@
     }
 
     .top-fixed-1 {
-      background-color: #F4BA1D;
-      color: #3C3636;
+      background-color: #f4ba1d;
+      color: #3c3636;
 
       i {
         width: 26.28px;
@@ -526,7 +516,7 @@
     }
 
     .top-fixed-2 {
-      background-color: #E81E23;
+      background-color: #e81e23;
       color: #fff;
 
       i {
@@ -538,7 +528,7 @@
 
     .top-fixed-3 {
       background-color: #fff;
-      color: #3C3636;
+      color: #3c3636;
 
       i {
         width: 33px;
@@ -546,10 +536,7 @@
         background-image: url(("./assets/img/icon/icon-fixed-3.png"));
       }
     }
-
   }
-
-
 }
 
 .footer-fixed-pc {

@@ -100,7 +100,7 @@
         </div>
 
         <div class="content-width">
-            <div class="page-title--has-icon">
+            <div class="page-title--has-icon page-title--has-icon--mobile-20">
                 <h2><i></i>本日のイベント</h2>
             </div>
             <?php
@@ -149,54 +149,80 @@
             </div>
         </div>
     </section>
-    <section class="sec01">
-        <div class="content-width">
-            <div class="page-title-center--has-icon">
-                <h2><i></i>月間スケジュール</h2>
-            </div>
-            <div class="sec01-swiper swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/test/test-sche.jpg" alt="1月のイベントスケジュール">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/test/test-sche.jpg" alt="1月のイベントスケジュール">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/test/test-sche.jpg" alt="1月のイベントスケジュール">
-                    </div>
-                </div>
-                <div class="swiper-button-prev swiper-button-prev-01"></div>
-                <div class="swiper-button-next swiper-button-next-01"></div>
-                <div class="swiper-pagination"></div>
-            </div>
-            <div class="sec01-btn">
-                <div class="com-btn-border-black">
-                    <a href="<?php echo home_url(); ?>/event/">発汗エリア(有料エリア)について<i></i></a>
-                </div>
-            </div>
+    <div class="relative">
+        <div class="page-deco-bg">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-yellow-top.png" alt="">
+        </div>
+        <div class="page-deco-container page-deco-container--yellow">
+            <section class="sec01">
 
-        </div>
-    </section>
-    <section class="sec02">
-        <div class="content-width">
-            <div class="page-title--has-icon">
-                <h2><i></i>その他イベント案内</h2>
-            </div>
-            <div class="sec02-wrap">
-                <div class="sec02-wrap-col">
-                    <a href="">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/bnr/bnr-02.jpg" alt="イベント案内1">
-                    </a>
+
+                <div class="content-width">
+                    <div class="page-title-center--has-icon page-title--has-icon--mobile-20">
+                        <h2><i></i>月間スケジュール</h2>
+                    </div>
+                    <div class="sec01-swiper swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/test/test-sche.jpg" alt="1月のイベントスケジュール">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/test/test-sche.jpg" alt="1月のイベントスケジュール">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/test/test-sche.jpg" alt="1月のイベントスケジュール">
+                            </div>
+                        </div>
+                        <div class="swiper-button-prev swiper-button-prev-01"></div>
+                        <div class="swiper-button-next swiper-button-next-01"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <div class="sec01-btn">
+                        <div class="com-btn-border-black">
+                            <a href="<?php echo home_url(); ?>/enjoy/sweating/">発汗エリア(有料エリア)について<i></i></a>
+                        </div>
+                    </div>
+
                 </div>
-                <div class="sec02-wrap-col">
-                    <a href="">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/bnr/bnr-01.jpg" alt="イベント案内1">
-                    </a>
+            </section>
+            <section class="sec02">
+
+                <div class="content-width">
+                    <div class="page-title--has-icon page-title--has-icon--mobile-20">
+                        <h2><i></i>その他イベント案内</h2>
+                    </div>
+                    <div class="sec06-bottom">
+                        <div class="sec06-bottom-col">
+                            <div class="sec-01-col-under">
+                                <a href="<?php echo home_url(); ?>/event/">
+                                    <div class="sec-01-col-under-img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/bnr/page-bnr-today-img.jpg" alt=""></div>
+                                    <div class="sec-01-col-under-title">
+                                        <h3><img src="<?php echo get_template_directory_uri(); ?>/assets/img/bnr/page-bnr-today-txt.png" alt="EVENT SCHEDULE"><i class="icon-btn"></i></h3>
+                                        <p>本日開催しているイベントをチェック！</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="sec06-bottom-col">
+                            <div class="sec-01-col-under">
+                                <a href="<?php echo home_url(); ?>/schedule/">
+                                    <div class="sec-01-col-under-img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/bnr/page-bnr-event-img.jpg" alt=""></div>
+                                    <div class="sec-01-col-under-title">
+                                        <h3><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/title-event-schedule_v2.png" alt="EVENT SCHEDULE"><i class="icon-btn"></i></h3>
+                                        <p>イベントはこちらをチェック！</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
+
+            </section>
         </div>
-    </section>
+        <div class="page-bg-deco-bg-bottom-yellow"></div>
+    </div>
+
+
     <?php get_template_part('inc/inc-contact'); ?>
 </main>
 

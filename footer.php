@@ -3,10 +3,10 @@
     <img class="footer-bg-top footer-bg-top-sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/footer-bg-item-sp.png" alt="">
     <div class="top-fixed-sp">
         <div class="top-fixed-sp-btn"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-sp-btn.png" alt=""></div>
-        <div class="top-fixed-sp-wrap">
-            <a class="top-fixed-1" href="<?php echo home_url(); ?>"><i></i>本日の<br>イベント</a>
+        <div class="top-fixed-sp-wrap is-show">
+            <a class="top-fixed-1" href="<?php echo home_url(); ?>/today/"><i></i>本日の<br>イベント</a>
             <a class="top-fixed-2" href="<?php echo home_url(); ?>"><i></i>今すぐ<br>行く！</a>
-            <a class="top-fixed-3" href="<?php echo home_url(); ?>"><i></i>料金・<br>ご利用料金</a>
+            <a class="top-fixed-3" href="<?php echo home_url(); ?>/price/"><i></i>料金・<br>ご利用料金</a>
         </div>
     </div>
     <div class="footer-fixed footer-fixed-pc">
@@ -24,44 +24,67 @@
             </span>
         </a>
     </div>
-    
+
     <div class="content-width">
         <div class="footer-wrap">
             <div class="footer-wrap-menu">
                 <dl class="accordion">
-                    <dt><a href="javascript:void(0);">ご利用案内</a></dt>
+                    <dt class="hidden-mobile"><a href="<?php echo home_url(); ?>/guide/">ご利用案内</a></dt>
+                    <dt class="hidden-sm"><a href="javascript:void(0);">ご利用案内</a></dt>
+                    <?php if (is_page("guide")): ?>
+                        <dd>
+                            <a href="#sec02">ー料金案内</a>
+                            <a href="#sec03">ー営業時間</a>
+                            <a href="#sec04">ー利用案内</a>
+                            <a href="#sec05">ーアクセス</a>
+                        </dd>
+                    <?php else: ?>
+                        <dd>
+                            <a href="<?php echo home_url(); ?>/guide/#sec02">ー料金案内</a>
+                            <a href="<?php echo home_url(); ?>/guide/#sec03">ー営業時間</a>
+                            <a href="<?php echo home_url(); ?>/guide/#sec04">ー利用案内</a>
+                            <a href="<?php echo home_url(); ?>/guide/#sec05">ーアクセス</a>
+                        </dd>
+                    <?php endif; ?>
+                </dl>
+                <dl class="accordion">
+                    <dt class="hidden-mobile"><a href="<?php echo home_url(); ?>/enjoy/">館内の楽しみ方</a></dt>
+                    <dt class="hidden-sm"><a href="javascript:void(0);">館内の楽しみ方</a></dt>
                     <dd>
-                        <a href="<?php echo home_url(); ?>">ー料金案内</a>
-                        <a href="<?php echo home_url(); ?>">ー営業時間</a>
-                        <a href="<?php echo home_url(); ?>">ー利用案内</a>
-                        <a href="<?php echo home_url(); ?>">ーアクセス</a>
+                        <a href="<?php echo home_url(); ?>/enjoy/">ー館内マップ</a>
+                        <a href="<?php echo home_url(); ?>/enjoy/spa/">ーお風呂</a>
+                        <a href="<?php echo home_url(); ?>/enjoy/sauna/">ーサウナ</a>
+                        <a href="<?php echo home_url(); ?>/enjoy/sweating/">ー発汗エリア</a>
+                        <a href="<?php echo home_url(); ?>/enjoy/food/">ーご飲食</a>
+                        <a href="<?php echo home_url(); ?>/enjoy/relaxation/">ーリラクゼーション</a>
+                        <a href="<?php echo home_url(); ?>/enjoy/goods/">ーアメニティ・グッズ</a>
+
                     </dd>
                 </dl>
                 <dl class="accordion">
-                    <dt><a href="javascript:void(0);">館内の楽しみ方</a></dt>
-                    <dd>
-                        <a href="<?php echo home_url(); ?>">ー館内マップ</a>
-                        <a href="<?php echo home_url(); ?>">ーお風呂</a>
-                        <a href="<?php echo home_url(); ?>">ーサウナ</a>
-                        <a href="<?php echo home_url(); ?>">ー発汗エリア</a>
-                        <a href="<?php echo home_url(); ?>">ーご飲食</a>
-                        <a href="<?php echo home_url(); ?>">ーリラクゼーション</a>
-                        <a href="<?php echo home_url(); ?>">ーアメニティ・グッズ</a>
-                    </dd>
+                    <dt class="hidden-mobile"><a href="<?php echo home_url(); ?>/first-time/">初めてのお客様へ</a></dt>
+                    <dt class="hidden-sm"><a href="javascript:void(0);">初めてのお客様へ</a></dt>
+
+                    <?php if (is_page("first-time")): ?>
+                        <dd>
+                            <a href="#sec02">グルスパの魅力</a>
+                            <a href="#sec03">入館の流れ</a>
+                            <a href="#sec04">施設案内</a>
+                        </dd>
+                    <?php else: ?>
+                        <dd>
+                            <a href="<?php echo home_url(); ?>/first-time/#sec02">グルスパの魅力</a>
+                            <a href="<?php echo home_url(); ?>/first-time/#sec03">入館の流れ</a>
+                            <a href="<?php echo home_url(); ?>/first-time/#sec04">施設案内</a>
+                        </dd>
+                    <?php endif; ?>
                 </dl>
                 <dl class="accordion">
-                    <dt><a href="javascript:void(0);">初めてのお客様へ</a></dt>
+                    <dt class="hidden-mobile"><a href="<?php echo home_url(); ?>/event/">イベント情報</a></dt>
+                    <dt class="hidden-sm"><a href="javascript:void(0);">イベント情報</a></dt>
                     <dd>
-                        <a href="<?php echo home_url(); ?>">ーグルスパの魅力</a>
-                        <a href="<?php echo home_url(); ?>">ー入館の流れ</a>
-                        <a href="<?php echo home_url(); ?>">ー施設案内</a>
-                    </dd>
-                </dl>
-                <dl class="accordion">
-                    <dt><a href="javascript:void(0);">イベント情報</a></dt>
-                    <dd>
-                        <a href="<?php echo home_url(); ?>">ー当日のイベント</a>
-                        <a href="<?php echo home_url(); ?>">ーイベントスケジュール</a>
+                        <a href="<?php echo home_url(); ?>/today/">当日のイベント</a>
+                        <a href="<?php echo home_url(); ?>/schedule/">イベントスケジュール</a>
                     </dd>
                 </dl>
                 <dl class="accordion">
@@ -74,18 +97,18 @@
                     </dd>
                 </dl>
                 <dl class="accordion-none">
-                    <dt><a href="javascript:void(0);">お知らせ</a></dt>
-                    <dt><a href="<?php echo home_url(); ?>">FAQ</a></dt>
-                    <dt><a href="<?php echo home_url(); ?>">注意事項</a></dt>
-                    <dt><a href="<?php echo home_url(); ?>">採用情報</a></dt>
+                    <dt><a href="<?php echo home_url(); ?>/archive/">お知らせ</a></dt>
+                    <dt><a href="<?php echo home_url(); ?>/faq/">FAQ</a></dt>
+                    <dt><a href="<?php echo home_url(); ?>/rules/">注意事項</a></dt>
+                    <dt><a href="<?php echo home_url(); ?>/recruit/">採用情報</a></dt>
                 </dl>
             </div>
 
             <ul class="footer-banner">
-                <li><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/banner-1.jpg" alt=""></a></li>
-                <li><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/banner-2.jpg" alt=""></a></li>
-                <li><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/banner-3.jpg" alt=""></a></li>
-                <li><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/banner-4.jpg" alt=""></a></li>
+                <li><a href="https://sauna-ikitai.com/" target="_blank" rel="noopener noreferrer"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/banner-1.jpg" alt=""></a></li>
+                <li><a href="https://sauna-eagle.jp/" target="_blank" rel="noopener noreferrer"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/banner-2.jpg" alt=""></a></li>
+                <li><a href="https://royal-gr.jp/" target="_blank" rel="noopener noreferrer"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/banner-3.jpg" alt=""></a></li>
+                <li><a href="https://royal-gr.jp/recruit/" target="_blank" rel="noopener noreferrer"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/banner-4.jpg" alt=""></a></li>
             </ul>
             <div class="footer-info">
                 <div class="footer-logo"><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/footer-logo.png" alt=""></a></div>
@@ -100,8 +123,8 @@
                     <ul>
                         <li><a href="<?php echo home_url(); ?>/sitemap/">サイトマップ</a></li>
                         <li><a href="<?php echo home_url(); ?>/privacy/">プライバシーポリシー</a></li>
-                        <li><a href="<?php echo home_url(); ?>/privacy/">利用規約</a></li>
-                        <li><a href="<?php echo home_url(); ?>/sitemap/">Cookieについて</a></li>
+                        <li><a href="<?php echo home_url(); ?>/terms/">利用規約</a></li>
+                        <li><a href="<?php echo home_url(); ?>/cookie/">Cookieについて</a></li>
                     </ul>
                 </div>
             </div>
@@ -111,9 +134,16 @@
         <p class="copy">©GURUSPA All rights reserved.</p>
     </div>
     <div class="top-fixed">
-        <a class="top-fixed-1" href="<?php echo home_url(); ?>">本日のイベント<i></i></a>
-        <a class="top-fixed-2" href="<?php echo home_url(); ?>">今すぐ行く！<i></i></a>
-        <a class="top-fixed-3" href="<?php echo home_url(); ?>">料金・<br>ご利用料金<i></i></a>
+        <a class="top-fixed-1" href="<?php echo home_url(); ?>/today/">本日のイベント<i></i></a>
+        <?php if (is_page("guide")): ?>
+            <a class="top-fixed-2" href="#sec05">今すぐ行く！<i></i></a>
+        <?php else: ?>
+            <a class="top-fixed-2" href="<?php echo home_url(); ?>/guide/#sec05">今すぐ行く！<i></i></a>
+        <?php endif; ?>
+
+
+        <a class="top-fixed-3" href="<?php echo home_url(); ?>/guide/">料金・<br>ご利用料金<i></i></a>
+
     </div>
 
     <p class="scroll-txt scroll-txt-change">
@@ -448,6 +478,43 @@
     });
 
     //footerにlineアイコンが差し掛かったらfedeuot
+
+
+    //波の背景が出現するアニメーション
+    document.addEventListener('DOMContentLoaded', () => {
+        // reduced motion 配慮
+        if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            gsap.set('.page-deco-bg', {
+                y: 0,
+                opacity: 1
+            });
+            return;
+        }
+
+        gsap.registerPlugin(ScrollTrigger);
+
+        // 初期状態を明示
+        gsap.set('.page-deco-bg', {
+            y: 100,
+            opacity: 1
+        });
+
+        gsap.to('.page-deco-bg', {
+            y: 0,
+            opacity: 1,
+            duration: 0.8,
+            ease: 'power3.out',
+            immediateRender: false,
+            scrollTrigger: {
+                trigger: '.page-deco-bg',
+                start: 'top 90%', // 要素の top がビューポートの 90% の位置に来たら発火
+                // end: 'top 60%',  // 必要なら指定
+                toggleActions: 'play none none none',
+                //once: true, // 一度だけ再生
+                scrub: true // スクロールに同期
+            }
+        });
+    });
 </script>
 <?php if (!is_404()): ?>
     <?php wp_footer(); ?>

@@ -44,7 +44,7 @@ Template Name: enjoy
             </div>
             <div class="page-desc">
                 <p>
-                    グルスパでの1日は、過ごし方も楽しみ方も自由自在。<br>
+                    グルスパでの1日は、<br class="hidden-sm">過ごし方も楽しみ方も自由自在。<br>
                     館内に揃った多彩な施設をチェックして、思い思いのリラックスタイムをお楽しみください。
                 </p>
             </div>
@@ -90,6 +90,66 @@ Template Name: enjoy
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-icon-white.png" alt="">
                                 </a>
                             </div>
+                        </div>
+                        <div class="sec01-col-sp">
+                            <ul>
+                                <li>
+                                    <div class="com-btn-mobile com-btn-mobile--full">
+                                        <a href="javascript:void(0)" class="popup-btn" data-id="enjoy-03">
+                                            お風呂<i></i>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="com-btn-mobile com-btn-mobile--full">
+                                        <a href="javascript:void(0)" class="popup-btn" data-id="enjoy-03">
+                                            サウナ・水風呂<i></i>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="com-btn-mobile com-btn-mobile--full">
+                                        <a href="javascript:void(0)" class="popup-btn" data-id="enjoy-03">
+                                            発汗エリア（有料岩盤浴エリア）<i></i>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="com-btn-mobile com-btn-mobile--full">
+                                        <a href="javascript:void(0)" class="popup-btn" data-id="enjoy-03">
+                                            ご飲食<i></i>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="com-btn-mobile com-btn-mobile--full">
+                                        <a href="javascript:void(0)" class="popup-btn" data-id="enjoy-03">
+                                            リラクゼーション<i></i>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="com-btn-mobile com-btn-mobile--full">
+                                        <a href="javascript:void(0)" class="popup-btn" data-id="enjoy-03">
+                                            アメニティ・グッズ<i></i>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="com-btn-mobile com-btn-mobile--full">
+                                        <a href="javascript:void(0)" class="popup-btn" data-id="enjoy-03">
+                                            待合ホール<i></i>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="com-btn-mobile com-btn-mobile--full">
+                                        <a href="javascript:void(0)" class="popup-btn" data-id="enjoy-03">
+                                            ゲームコーナー<i></i>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                     <div id="area02" class="area">
@@ -157,7 +217,88 @@ Template Name: enjoy
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-icon.png" alt="">
                                 </a>
                             </div>
+                        </div>
 
+                        <div class="sec01-col-sp">
+                            <ul>
+                                <li>
+                                    <div class="com-btn-mobile com-btn-mobile--full">
+                                        <a href="javascript:void(0)" class="popup-btn" data-id="enjoy-03">
+                                            炭酸風呂<i></i>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="com-btn-mobile com-btn-mobile--full">
+                                        <a href="javascript:void(0)" class="popup-btn" data-id="enjoy-03">
+                                            極冷水風呂(7℃)<i></i>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="com-btn-mobile com-btn-mobile--full">
+                                        <a href="javascript:void(0)" class="popup-btn" data-id="enjoy-03">
+                                            水風呂(17℃)<i></i>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="com-btn-mobile com-btn-mobile--full">
+                                        <a href="javascript:void(0)" class="popup-btn" data-id="enjoy-03">
+                                            電気風呂<i></i>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="com-btn-mobile com-btn-mobile--full">
+                                        <a href="javascript:void(0)" class="popup-btn" data-id="enjoy-03">
+                                            ジェットバス<i></i>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="com-btn-mobile com-btn-mobile--full">
+                                        <a href="javascript:void(0)" class="popup-btn" data-id="enjoy-03">
+                                            スーパージェットバス<i></i>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="com-btn-mobile com-btn-mobile--full">
+                                        <a href="javascript:void(0)" class="popup-btn" data-id="enjoy-03">
+                                            天然温泉<i></i>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="com-btn-mobile com-btn-mobile--full">
+                                        <a href="javascript:void(0)" class="popup-btn" data-id="enjoy-03">
+                                            美泡壺風呂<i></i>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="com-btn-mobile com-btn-mobile--full">
+                                        <a href="javascript:void(0)" class="popup-btn" data-id="enjoy-03">
+                                            高温サウナ<i></i>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="com-btn-mobile com-btn-mobile--full">
+                                        <a href="javascript:void(0)" class="popup-btn" data-id="enjoy-03">
+                                            塩サウナ<i></i>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="com-btn-mobile com-btn-mobile--full">
+                                        <a href="javascript:void(0)" class="popup-btn" data-id="enjoy-03">
+                                            アカスリ<i></i>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>

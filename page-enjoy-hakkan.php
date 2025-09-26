@@ -50,13 +50,13 @@ Template Name: enjoy-hakkan
 
                     <h2>じっくり、ゆっくり。<br>心も身体も整う、温熱体験の楽園へ。</h2>
                     <p>
-                        火照りと冷たさ、静けさと心地よさ。ここは五感すべてで“ととのう”場所。<br>
-                        館内は男女共用の有料エリアとなっており、岩塩やトルマリンなどの天然鉱石で体の内側から温まり、ゆったり過ごせる“ととのいの聖域”。<br>
+                        火照りと冷たさ、静けさと心地よさ。<br class="hidden-sm">ここは五感すべてで“ととのう”場所。<br>
+                        館内は男女共用の有料エリアとなっており、岩塩やトルマリンなどの天然鉱石で体の内側から温まり、ゆったり過ごせる“ととのいの聖域”。<br><br class="hidden-sm">
                         個性豊かな岩盤浴ルームや迫力のアトラクションサウナ、そして仕上げのクールルームやテラスまで。<br>
                         まるで“サウナリゾート”にいるような感覚で、日常を忘れ、自分と向き合う特別な時間をお楽しみください。
                     </p>
                 </div>
-                <div class="enjoy-wrap-img">
+                <div class="enjoy-wrap-img enjoy-wrap-img--sweating">
                     <ul>
                         <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/hakkan-img-01.jpg" alt=""></li>
                         <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/hakkan-img-02.jpg" alt=""></li>
@@ -80,13 +80,13 @@ Template Name: enjoy-hakkan
                         <a href="#sec05">ザ・リゾートヴィラ<i></i></a>
                     </li>
                     <li>
-                        <a href="#sec05">よくある質問<i></i></a>
+                        <a href="#sec07">よくある質問<i></i></a>
                     </li>
                 </ul>
             </div>
         </div>
     </section>
-    <section class="sec02">
+    <section class="sec02" id="sec02">
         <div class="content-width-sm">
             <div class="page-title-center--has-icon">
                 <h2><i></i>館内図</h2>
@@ -104,7 +104,10 @@ Template Name: enjoy-hakkan
             </div>
             <div class="sec02-area">
                 <div class="sec02-area-bg">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/hakkan-area.jpg" alt="">
+                    <picture>
+                        <source media="(max-width: 601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/hakkan-area-sp.jpg">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/hakkan-area.jpg" alt="">
+                    </picture>
                 </div>
                 <div class="sec02-area-01">
                     <a href="#">
@@ -132,56 +135,116 @@ Template Name: enjoy-hakkan
                     </a>
                 </div>
             </div>
+            <div class="sec01-col-sp">
+                <ul>
+                    <li>
+                        <div class="com-btn-mobile com-btn-mobile--full">
+                            <a href="javascript:void(0)" class="popup-btn" data-id="enjoy-03">
+                                賛照堂<i></i>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="com-btn-mobile com-btn-mobile--full">
+                            <a href="javascript:void(0)" class="popup-btn" data-id="enjoy-03">
+                                岩盤房<i></i>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="com-btn-mobile com-btn-mobile--full">
+                            <a href="javascript:void(0)" class="popup-btn" data-id="enjoy-03">
+                                岩塩房<i></i>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="com-btn-mobile com-btn-mobile--full">
+                            <a href="javascript:void(0)" class="popup-btn" data-id="enjoy-03">
+                                清涼房<i></i>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="com-btn-mobile com-btn-mobile--full">
+                            <a href="javascript:void(0)" class="popup-btn" data-id="enjoy-03">
+                                ザ・リゾートヴィラ<i></i>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
     </section>
-    <section class="sec03">
-        <div class="content-width-sm">
-            <div class="page-title-center--has-icon">
-                <h2><i></i>特徴・魅力</h2>
-            </div>
-            <div class="sec03-wrap">
-                <div class="sec03-wrap-col">
-                    <div class="sec03-wrap-col-left">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec03-img-01.jpg" alt="">
-                    </div>
-                    <div class="sec03-wrap-col-right">
-                        <h3>多彩な岩盤浴と薬石の癒し</h3>
-                        <p>
-                            遠赤外線とマイナスイオンを放つ天然鉱石を贅沢に使用した岩盤浴。<br>
-                            トルマリンやゲルマニウム、岩塩などの薬石が体の内側からじんわり温め、新陳代謝を促進します。<br>
-                            デトックスや美肌効果、冷えやむくみの改善など、心身をリフレッシュへ導きます。
-                        </p>
-                    </div>
-                </div>
-                <div class="sec03-wrap-col">
-                    <div class="sec03-wrap-col-left">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec03-img-02.jpg" alt="">
-                    </div>
-                    <div class="sec03-wrap-col-right">
-                        <h3>エンターテイメント型アトラクションサウナ</h3>
-                        <p>
-                            最大40名収容の大型サウナ「賛照堂」では、音・光・映像・熱波が融合した迫力のロウリュを体感。<br>
-                            ただ汗をかくだけではなく、観て・聴いて・感じて楽しむ新感覚の“エンターテイメントサウナ”で、仲間と盛り上がれる特別な時間をお過ごしいただけます。
-                        </p>
-                    </div>
-                </div>
-                <div class="sec03-wrap-col">
-                    <div class="sec03-wrap-col-left">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec03-img-03.jpg" alt="">
-                    </div>
-                    <div class="sec03-wrap-col-right">
-                        <h3>“ととのい”を完成させるクールダウン空間</h3>
-                        <p>
-                            火照った体を一気にクールダウンできる「清涼房」や、リゾート気分でくつろげる「リクライニングエリア」を完備。<br>
-                            温と冷を繰り返すことで自律神経が整い、心身がリセット。静けさの中で、自分と深く向き合える極上のリラックスタイムが待っています。
-                        </p>
-                    </div>
-                </div>
+    <section class="sec03" id="sec03">
+        <div class="sec02-icon-01">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec02-icon-01.png" alt="">
+        </div>
+        <div class="sec02-icon-02">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec02-icon-02.png" alt="">
+        </div>
+        <div class="sec02-icon-03">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec02-icon-03.svg" alt="">
+        </div>
+        <div class="sec02-icon-04">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec02-icon-04.svg" alt="">
+        </div>
 
+        <div class="page-deco-bg">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-red-top.png" alt="">
+        </div>
+        <div class="page-deco-container page-deco-container--red">
+            <div class="content-width-sm">
+                <div class="page-title-center--has-icon">
+                    <h2><i></i>特徴・魅力</h2>
+                </div>
+                <div class="sec03-wrap">
+                    <div class="sec03-wrap-col">
+                        <div class="sec03-wrap-col-left">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec03-img-01.jpg" alt="">
+                        </div>
+                        <div class="sec03-wrap-col-right">
+                            <h3>多彩な岩盤浴と薬石の癒し</h3>
+                            <p>
+                                遠赤外線とマイナスイオンを放つ天然鉱石を贅沢に使用した岩盤浴。<br>
+                                トルマリンやゲルマニウム、岩塩などの薬石が体の内側からじんわり温め、新陳代謝を促進します。<br>
+                                デトックスや美肌効果、冷えやむくみの改善など、心身をリフレッシュへ導きます。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="sec03-wrap-col">
+                        <div class="sec03-wrap-col-left">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec03-img-02.jpg" alt="">
+                        </div>
+                        <div class="sec03-wrap-col-right">
+                            <h3>エンターテイメント型アトラクションサウナ</h3>
+                            <p>
+                                最大40名収容の大型サウナ「賛照堂」では、音・光・映像・熱波が融合した迫力のロウリュを体感。<br>
+                                ただ汗をかくだけではなく、観て・聴いて・感じて楽しむ新感覚の“エンターテイメントサウナ”で、仲間と盛り上がれる特別な時間をお過ごしいただけます。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="sec03-wrap-col">
+                        <div class="sec03-wrap-col-left">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec03-img-03.jpg" alt="">
+                        </div>
+                        <div class="sec03-wrap-col-right">
+                            <h3>“ととのい”を完成させるクールダウン空間</h3>
+                            <p>
+                                火照った体を一気にクールダウンできる「清涼房」や、リゾート気分でくつろげる「リクライニングエリア」を完備。<br>
+                                温と冷を繰り返すことで自律神経が整い、心身がリセット。静けさの中で、自分と深く向き合える極上のリラックスタイムが待っています。
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
+        <div class="page-bg-deco-bg-bottom">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-red-bottom.png" alt="">
+        </div>
     </section>
-    <section class="sec04">
+    <section class="sec04" id="sec04">
         <div class="content-width-sm">
             <div class="page-title-center--has-icon">
                 <h2><i></i>エリアガイド</h2>
@@ -193,7 +256,7 @@ Template Name: enjoy-hakkan
             </div>
             <div class="sec04-wrap">
                 <h3>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-logo-01.jpg" alt="">
+                    <img class="logo-01" src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-logo-01.jpg" alt="">
                 </h3>
                 <h4>音と光が織りなす、灼熱のエンターテイメントサウナ</h4>
                 <p>
@@ -237,7 +300,7 @@ Template Name: enjoy-hakkan
             </div>
             <div class="sec04-wrap">
                 <h3>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-logo-02.svg" alt="">
+                    <img class="logo-02" src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-logo-02.svg" alt="">
                 </h3>
                 <p>
                     岩盤房は、遠赤外線の温熱効果によって皮脂腺から汗をかくことができます。皮脂腺から汗をかくことで、新陳代謝が活性化し、体内の毒素や老廃物を排出。美容やダイエット、冷え、むくみなど様々な悩みに効果があります。<br>
@@ -249,64 +312,67 @@ Template Name: enjoy-hakkan
                     <h3>岩盤房の入り方</h3>
                 </div>
             </div>
-            <div class="content-width">
-                <div class="sec03-wrap">
-                    <div class="sec03-wrap-col">
-                        <div class="sec03-wrap-col-img">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/test/test-01.jpg" alt="">
-                            <div class="sec03-wrap-col-img-span">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-06.svg" alt="">
+            <div class="content-width content-width--middle-full">
+                <div class="sec03-scroll">
+                    <div class="sec03-wrap">
+                        <div class="sec03-wrap-col">
+                            <div class="sec03-wrap-col-img">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/test/test-01.jpg" alt="">
+                                <div class="sec03-wrap-col-img-span">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-06.svg" alt="">
+                                </div>
                             </div>
+                            <p>
+                                専用の岩盤浴着を着て岩盤浴へ。
+                            </p>
                         </div>
-                        <p>
-                            専用の岩盤浴着を着て岩盤浴へ。
-                        </p>
-                    </div>
-                    <div class="sec03-wrap-col">
-                        <div class="sec03-wrap-col-img">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/test/test-01.jpg" alt="">
-                            <div class="sec03-wrap-col-img-span">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-07.svg" alt="">
+                        <div class="sec03-wrap-col">
+                            <div class="sec03-wrap-col-img">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/test/test-01.jpg" alt="">
+                                <div class="sec03-wrap-col-img-span">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-07.svg" alt="">
+                                </div>
                             </div>
+                            <p>
+                                岩盤房・岩塩房を選び入室。
+                            </p>
                         </div>
-                        <p>
-                            岩盤房・岩塩房を選び入室。
-                        </p>
-                    </div>
-                    <div class="sec03-wrap-col">
-                        <div class="sec03-wrap-col-img">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/test/test-01.jpg" alt="">
-                            <div class="sec03-wrap-col-img-span">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-08.svg" alt="">
+                        <div class="sec03-wrap-col">
+                            <div class="sec03-wrap-col-img">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/test/test-01.jpg" alt="">
+                                <div class="sec03-wrap-col-img-span">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-08.svg" alt="">
+                                </div>
                             </div>
+                            <p>
+                                大判タオルを敷き10～15分うつ伏せ・仰向けになって寝転ぶ。
+                            </p>
                         </div>
-                        <p>
-                            大判タオルを敷き10～15分うつ伏せ・仰向けになって寝転ぶ。
-                        </p>
-                    </div>
-                    <div class="sec03-wrap-col">
-                        <div class="sec03-wrap-col-img">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/test/test-01.jpg" alt="">
-                            <div class="sec03-wrap-col-img-span">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-09.svg" alt="">
+                        <div class="sec03-wrap-col">
+                            <div class="sec03-wrap-col-img">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/test/test-01.jpg" alt="">
+                                <div class="sec03-wrap-col-img-span">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-09.svg" alt="">
+                                </div>
                             </div>
+                            <p>
+                                岩盤房・岩塩房から出て水分補給をする。
+                            </p>
                         </div>
-                        <p>
-                            岩盤房・岩塩房から出て水分補給をする。
-                        </p>
-                    </div>
-                    <div class="sec03-wrap-col">
-                        <div class="sec03-wrap-col-img">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/test/test-01.jpg" alt="">
-                            <div class="sec03-wrap-col-img-span">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-10.svg" alt="">
+                        <div class="sec03-wrap-col">
+                            <div class="sec03-wrap-col-img">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/test/test-01.jpg" alt="">
+                                <div class="sec03-wrap-col-img-span">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-10.svg" alt="">
+                                </div>
                             </div>
+                            <p>
+                                2～4を2～3回繰り返す。
+                            </p>
                         </div>
-                        <p>
-                            2～4を2～3回繰り返す。
-                        </p>
                     </div>
                 </div>
+
             </div>
             <div class="content-width-sm">
                 <div class="sec04-center">
@@ -415,8 +481,7 @@ Template Name: enjoy-hakkan
                 <div class="sec04-bottom">
                     <h3>薬石岩盤浴ご利用時のご案内</h3>
                     <p>
-                        当館ではお客様に気持ちよくご利用いただくため、<br>
-                        下記の事項をお守りくださいますようお願い申し上げます。
+                        当館ではお客様に気持ちよくご利用いただくため、<br class="hidden-mobile">下記の事項をお守りくださいますようお願い申し上げます。
                     </p>
                     <div class="sec04-bottom-wrap">
                         <ul>
@@ -435,7 +500,7 @@ Template Name: enjoy-hakkan
             </div>
             <div class="sec04-wrap">
                 <h3>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-logo-03.svg" alt="">
+                    <img class="logo-03" src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-logo-03.svg" alt="">
                 </h3>
                 <p>
                     長い年月をかけて結晶化した岩塩を使用。鉄分やカリウムなど、豊富なミネラルを含んだ空間で心身を癒やします。
@@ -475,7 +540,7 @@ Template Name: enjoy-hakkan
             </div>
             <div class="sec04-wrap">
                 <h3>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-logo-04.svg" alt="">
+                    <img class="logo-04" src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-logo-04.svg" alt="">
                 </h3>
                 <p>
                     火照った体を一気にクールダウンできる冷涼空間。発汗後の熱を引かせ、自律神経を整えることで、より深い“ととのい”を体感できます。音や光を控えた静寂な設計で、集中してリセットできる特別なひとときを。
@@ -549,138 +614,146 @@ Template Name: enjoy-hakkan
             </div>
         </div>
     </section>
-    <section class="sec05">
-        <div class="content-width-sm">
-            <h2>
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-logo.svg" alt="">
-            </h2>
-            <h3>ととのい後の余韻を味わう、静かな脱力空間</h3>
-            <p>
-                サウナや岩盤浴でたっぷり汗をかいた後は、心も身体も“ふわっ”と軽くなる瞬間。<br>
-                その余韻を存分に味わえるよう、リゾート気分でゆったり過ごせる特別な空間をご用意しました。<br>
-                静かに本を読むのも、仲間と語らうのも、自分のペースでリラックスできるエリアです。<br>
-                ※ザ・リゾートヴィラは男女共用の有料エリアです。
-            </p>
+    <section class="sec05" id="sec05">
+        <div class="page-deco-bg">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-red-top.png" alt="">
         </div>
-        <div class="sec05-yoko">
-            <ul>
-                <li>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-01.png" alt="">
-                </li>
-                <li>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-02.png" alt="">
-                </li>
-                <li>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-03.png" alt="">
-                </li>
-                <li>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-04.png" alt="">
-                </li>
-                <li>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-05.png" alt="">
-                </li>
-                <li>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-05.png" alt="">
-                </li>
-                <li>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-01.png" alt="">
-                </li>
-                <li>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-02.png" alt="">
-                </li>
-                <li>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-03.png" alt="">
-                </li>
-                <li>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-04.png" alt="">
-                </li>
-                <li>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-05.png" alt="">
-                </li>
-                <li>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-05.png" alt="">
-                </li>
-            </ul>
-        </div>
-        <div class="content-width-sm">
-            <h4>施設紹介</h4>
-            <div class="sec05-bottom">
-                <div class="sec05-bottom-col">
-                    <div class="sec05-bottom-col-left">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-06.jpg" alt="">
+        <div class="page-deco-container page-deco-container--red">
+            <div class="content-width-sm">
+                <h2>
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-logo.svg" alt="">
+                </h2>
+                <h3>ととのい後の余韻を味わう、<br class="hidden-sm">静かな脱力空間</h3>
+                <p>
+                    サウナや岩盤浴でたっぷり汗をかいた後は、心も身体も“ふわっ”と軽くなる瞬間。<br>
+                    その余韻を存分に味わえるよう、リゾート気分でゆったり過ごせる特別な空間をご用意しました。<br>
+                    静かに本を読むのも、仲間と語らうのも、自分のペースでリラックスできるエリアです。<br>
+                    ※ザ・リゾートヴィラは男女共用の有料エリアです。
+                </p>
+            </div>
+            <div class="sec05-yoko">
+                <ul>
+                    <li>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-01.png" alt="">
+                    </li>
+                    <li>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-02.png" alt="">
+                    </li>
+                    <li>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-03.png" alt="">
+                    </li>
+                    <li>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-04.png" alt="">
+                    </li>
+                    <li>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-05.png" alt="">
+                    </li>
+                    <li>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-05.png" alt="">
+                    </li>
+                    <li>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-01.png" alt="">
+                    </li>
+                    <li>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-02.png" alt="">
+                    </li>
+                    <li>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-03.png" alt="">
+                    </li>
+                    <li>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-04.png" alt="">
+                    </li>
+                    <li>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-05.png" alt="">
+                    </li>
+                    <li>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-05.png" alt="">
+                    </li>
+                </ul>
+            </div>
+            <div class="content-width-sm">
+                <h4>施設紹介</h4>
+                <div class="sec05-bottom">
+                    <div class="sec05-bottom-col">
+                        <div class="sec05-bottom-col-left">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-06.jpg" alt="">
+                        </div>
+                        <div class="sec05-bottom-col-right">
+                            <h5>漫画コーナー</h5>
+                            <p>
+                                約15,000冊の漫画・雑誌をラインナップ。<br>
+                                サウナや岩盤浴でととのった後、好きな作品に没頭する贅沢な時間をお楽しみいただけます。
+                            </p>
+                        </div>
                     </div>
-                    <div class="sec05-bottom-col-right">
-                        <h5>漫画コーナー</h5>
-                        <p>
-                            約15,000冊の漫画・雑誌をラインナップ。<br>
-                            サウナや岩盤浴でととのった後、好きな作品に没頭する贅沢な時間をお楽しみいただけます。
-                        </p>
+                    <div class="sec05-bottom-col">
+                        <div class="sec05-bottom-col-left">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-07.jpg" alt="">
+                        </div>
+                        <div class="sec05-bottom-col-right">
+                            <h5>テレビ付きリクライニングシート</h5>
+                            <p>
+                                個別モニターを備えたリクライニングシートで、映画やテレビを見ながらご休憩いただけます。<br>
+                                全身をゆったり預けられるので、仮眠や長時間のくつろぎにも最適です。
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div class="sec05-bottom-col">
-                    <div class="sec05-bottom-col-left">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-07.jpg" alt="">
+                    <div class="sec05-bottom-col">
+                        <div class="sec05-bottom-col-left">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-08.jpg" alt="">
+                        </div>
+                        <div class="sec05-bottom-col-right">
+                            <h5>コワーキングスペース</h5>
+                            <p>
+                                電源やWi-Fiを完備したコワーキングスペース。<br>
+                                「ととのい」と「仕事時間」を両立できる、ちょっと贅沢なワークスタイルを実現します。
+                            </p>
+                        </div>
                     </div>
-                    <div class="sec05-bottom-col-right">
-                        <h5>テレビ付きリクライニングシート</h5>
-                        <p>
-                            個別モニターを備えたリクライニングシートで、映画やテレビを見ながらご休憩いただけます。<br>
-                            全身をゆったり預けられるので、仮眠や長時間のくつろぎにも最適です。
-                        </p>
+                    <div class="sec05-bottom-col">
+                        <div class="sec05-bottom-col-left">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-09.jpg" alt="">
+                        </div>
+                        <div class="sec05-bottom-col-right">
+                            <h5>カウチベッド</h5>
+                            <p>
+                                体を伸ばしてゴロゴロできるカウチベッドをご用意。<br>
+                                まるでリゾートホテルにいるかのような、ゆったりとしたリラックスタイムをどうぞ。
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div class="sec05-bottom-col">
-                    <div class="sec05-bottom-col-left">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-08.jpg" alt="">
-                    </div>
-                    <div class="sec05-bottom-col-right">
-                        <h5>コワーキングスペース</h5>
-                        <p>
-                            電源やWi-Fiを完備したコワーキングスペース。<br>
-                            「ととのい」と「仕事時間」を両立できる、ちょっと贅沢なワークスタイルを実現します。
-                        </p>
-                    </div>
-                </div>
-                <div class="sec05-bottom-col">
-                    <div class="sec05-bottom-col-left">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-09.jpg" alt="">
-                    </div>
-                    <div class="sec05-bottom-col-right">
-                        <h5>カウチベッド</h5>
-                        <p>
-                            体を伸ばしてゴロゴロできるカウチベッドをご用意。<br>
-                            まるでリゾートホテルにいるかのような、ゆったりとしたリラックスタイムをどうぞ。
-                        </p>
-                    </div>
-                </div>
-                <div class="sec05-bottom-col">
-                    <div class="sec05-bottom-col-left">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-10.jpg" alt="">
-                    </div>
-                    <div class="sec05-bottom-col-right">
-                        <h5>屋外テラス</h5>
-                        <p>
-                            風を感じながら深呼吸できる開放的な空間。<br>
-                            人工芝が敷かれた芝生エリアでは裸足でリラックスしたり、ヨガやストレッチにもご利用いただけます。
-                        </p>
+                    <div class="sec05-bottom-col">
+                        <div class="sec05-bottom-col-left">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-10.jpg" alt="">
+                        </div>
+                        <div class="sec05-bottom-col-right">
+                            <h5>屋外テラス</h5>
+                            <p>
+                                風を感じながら深呼吸できる開放的な空間。<br>
+                                人工芝が敷かれた芝生エリアでは裸足でリラックスしたり、ヨガやストレッチにもご利用いただけます。
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="page-bg-deco-bg-bottom">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-red-bottom.png" alt="">
+        </div>
     </section>
 
-    <section class="sec07-com">
+    <section class="sec07-com" id="sec07">
         <div class="content-width">
             <div class="sec07-wrap">
                 <div class="sec07-wrap-title">
                     <div class="page-title--has-icon">
                         <h2><i></i>よくある質問</h2>
                     </div>
-                    <div class="sec07-btn">
-                        <a href="">一覧を見る<i></i></a>
+                    <div class="sec07-btn hidden-mobile">
+                        <a href="<?php echo home_url(); ?>/faq/">一覧を見る<i></i></a>
                     </div>
                 </div>
-                <div class="sec07-wrap-faq">
+                <div class="sec07-wrap-faq accordion">
                     <dl>
                         <dt><i></i>岩盤浴ウェアやタオルは自分で持っていく必要がありますか？</dt>
                         <dd></dd>
@@ -701,7 +774,12 @@ Template Name: enjoy-hakkan
                         <dt><i></i>駐車場はありますか？</dt>
                         <dd></dd>
                     </dl>
+
+                    <div class="com-btn-mobile hidden-sm">
+                        <a href="<?php echo home_url(); ?>/faq/">一覧を見る<i></i></a>
+                    </div>
                 </div>
+
             </div>
         </div>
     </section>

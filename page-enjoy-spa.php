@@ -50,9 +50,9 @@ Template Name: enjoy-spa
 
                     <h2>心と体を満たす、<br>ウェルビーイング空間。</h2>
                     <p>
-                        日々の忙しさを忘れて、自分をいたわる特別な時間を過ごしませんか？<br>
-                        天然温泉のやさしい湯に浸かれば、疲れもストレスも静かに溶けていく。<br>
-                        広々とした内風呂と自然を感じる露天風呂で、四季の移ろいとともに、心と身体が深くほどけていく感覚を味わえます。
+                        日々の忙しさを忘れて、自分をいたわる特別な<br class="hidden-sm">時間を過ごしませんか？<br>
+                        天然温泉のやさしい湯に浸かれば、疲れも<br class="hidden-sm">ストレスも静かに溶けていく。<br>
+                        広々とした内風呂と自然を感じる露天風呂で、<br class="hidden-sm">四季の移ろいとともに、心と身体が深くほどけていく感覚を味わえます。
                     </p>
                 </div>
                 <div class="enjoy-wrap-img">
@@ -85,51 +85,73 @@ Template Name: enjoy-spa
         </div>
     </section>
     <section class="sec02">
-        <div class="content-width-sm">
-            <div class="page-title-center--has-icon">
-                <h2><i></i>特徴・魅力</h2>
-            </div>
-            <div class="sec03-wrap">
-                <div class="sec03-wrap-col">
-                    <div class="sec03-wrap-col-left">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec02-img-01.jpg" alt="">
-                    </div>
-                    <div class="sec03-wrap-col-right">
-                        <h3>天然温泉100％の恵み</h3>
-                        <p>
-                            地下1,300mから湧き出た単純温泉を贅沢に使用。<br>
-                            保湿成分「メタけい酸」を豊富に含み、美肌の湯としても親しまれています。<br>
-                            湯上がり後もぽかぽかと温かさが続き、敏感肌の方やお子様も安心です。
-                        </p>
-                    </div>
-                </div>
-                <div class="sec03-wrap-col">
-                    <div class="sec03-wrap-col-left">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec02-img-02.jpg" alt="">
-                    </div>
-                    <div class="sec03-wrap-col-right">
-                        <h3>気分に合わせて選べる多彩な湯船</h3>
-                        <p>
-                            ぬる湯・炭酸泉・極冷水風呂・ジェットバスなど、体調や気分に合わせて選べる浴槽を多数ご用意。<br>
-                            サウナ後のクールダウンにも最適な水風呂も完備し、“ととのい”をサポートします。
-                        </p>
-                    </div>
-                </div>
-                <div class="sec03-wrap-col">
-                    <div class="sec03-wrap-col-left">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec02-img-03.jpg" alt="">
-                    </div>
-                    <div class="sec03-wrap-col-right">
-                        <h3>露天風呂で自然と調和する癒し</h3>
-                        <p>
-                            開放感あふれる露天風呂では、空を仰ぎながら風を感じる特別な時間を。<br>
-                            季節ごとに変わる“変わり湯”や、一人でゆったり楽しめる壺風呂など、自然と一体化する感覚をお楽しみください。
-                        </p>
-                    </div>
-                </div>
+        <div class="sec02-icon-01">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec02-icon-01.png" alt="">
+        </div>
+        <div class="sec02-icon-02">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec02-icon-02.png" alt="">
+        </div>
+        <div class="sec02-icon-03">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec02-icon-03.svg" alt="">
+        </div>
+        <div class="sec02-icon-04">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec02-icon-04.svg" alt="">
+        </div>
 
+        <div class="page-bg-deco-bg">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-blue-top_v2.png" alt="">
+        </div>
+        <div class="page-deco-container page-deco-container--blue">
+            <div class="content-width-sm">
+                <div class="page-title-center--has-icon">
+                    <h2><i></i>特徴・魅力</h2>
+                </div>
+                <div class="sec03-wrap">
+                    <div class="sec03-wrap-col">
+                        <div class="sec03-wrap-col-left">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec02-img-01.jpg" alt="">
+                        </div>
+                        <div class="sec03-wrap-col-right">
+                            <h3>天然温泉100％の恵み</h3>
+                            <p>
+                                地下1,300mから湧き出た単純温泉を贅沢に使用。<br>
+                                保湿成分「メタけい酸」を豊富に含み、美肌の湯としても親しまれています。<br>
+                                湯上がり後もぽかぽかと温かさが続き、敏感肌の方やお子様も安心です。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="sec03-wrap-col">
+                        <div class="sec03-wrap-col-left">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec02-img-02.jpg" alt="">
+                        </div>
+                        <div class="sec03-wrap-col-right">
+                            <h3>気分に合わせて選べる多彩な湯船</h3>
+                            <p>
+                                ぬる湯・炭酸泉・極冷水風呂・ジェットバスなど、体調や気分に合わせて選べる浴槽を多数ご用意。<br>
+                                サウナ後のクールダウンにも最適な水風呂も完備し、“ととのい”をサポートします。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="sec03-wrap-col">
+                        <div class="sec03-wrap-col-left">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec02-img-03.jpg" alt="">
+                        </div>
+                        <div class="sec03-wrap-col-right">
+                            <h3>露天風呂で自然と調和する癒し</h3>
+                            <p>
+                                開放感あふれる露天風呂では、空を仰ぎながら風を感じる特別な時間を。<br>
+                                季節ごとに変わる“変わり湯”や、一人でゆったり楽しめる壺風呂など、自然と一体化する感覚をお楽しみください。
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
+        <div class="page-deco-bg-bottom">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-blue-bottom.png" alt="">
+        </div>
+
     </section>
 
     <section class="sec04">
@@ -217,90 +239,157 @@ Template Name: enjoy-spa
                             ・重度の心疾患<br>
                             ・神経衰弱症
                         </p>
+                        <div class="sec04-wrap-blue-col-icon">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-icon-01.svg" alt="">
+                        </div>
                     </div>
                 </div>
                 <div class="sec04-center">
+                    <h3>他のお風呂</h3>
                     <div class="sec04-center-wrap">
                         <div class="sec04-center-wrap-col">
-                            <div class="sec04-center-wrap-col-img">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-img-05.jpg" alt="">
-                                <div class="sec04-center-wrap-col-img-span">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-title-01.svg" alt="">
+                            <div class="sec04-center-wrap-col-img-dt">
+                                <div class="sec04-center-wrap-col-img">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-img-05.jpg" alt="">
+                                    <div class="sec04-center-wrap-col-img-span hidden-mobile">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-title-01.svg" alt="">
+                                    </div>
                                 </div>
+                                <h4>極冷水風呂(7℃)</h4>
                             </div>
-                            <h4>極冷水風呂(7℃)</h4>
-                            <p>サウナ後の究極のクールダウン。刺激的な冷たさが交感神経を一気に活性化し、爽快感抜群の「ととのい」体験を楽しめます。</p>
-                            <dl>
-                                <dt>効能</dt>
-                                <dd>自律神経調整、代謝アップ、瞬時のリフレッシュ</dd>
-                            </dl>
+                            <div class="sec04-center-wrap-col-img-dd">
+                                <div class="hidden-sm">
+                                    <div class="sec04-center-wrap-col-img-sp">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-img-05.jpg" alt="">
+                                        <div class="sec04-center-wrap-col-img-span">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-title-01.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <h4>極冷水風呂(7℃)</h4>
+                                </div>
+                                <p>サウナ後の究極のクールダウン。刺激的な冷たさが交感神経を一気に活性化し、爽快感抜群の「ととのい」体験を楽しめます。</p>
+                                <dl>
+                                    <dt>効能</dt>
+                                    <dd>自律神経調整、代謝アップ、瞬時のリフレッシュ</dd>
+                                </dl>
+                            </div>
                         </div>
 
                         <div class="sec04-center-wrap-col">
-                            <div class="sec04-center-wrap-col-img">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-img-06.jpg" alt="">
-                                <div class="sec04-center-wrap-col-img-span">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-title-01.svg" alt="">
+                            <div class="sec04-center-wrap-col-img-dt">
+                                <div class="sec04-center-wrap-col-img">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-img-06.jpg" alt="">
+                                    <div class="sec04-center-wrap-col-img-span hidden-mobile">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-title-01.svg" alt="">
+                                    </div>
                                 </div>
-
+                                <h4>水風呂(17℃)</h4>
                             </div>
-                            <h4>水風呂(17℃)</h4>
-                            <p>スタンダードな水風呂は、程よい冷たさで誰もが入りやすい温度。<br>サウナ後の体を優しく引き締め、深いリラックスへ導きます。</p>
-                            <dl>
-                                <dt>効能</dt>
-                                <dd>血流促進、免疫力向上、疲労回復</dd>
-                            </dl>
+                            <div class="sec04-center-wrap-col-img-dd">
+                                <div class="hidden-sm">
+                                    <div class="sec04-center-wrap-col-img-sp">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-img-06.jpg" alt="">
+                                        <div class="sec04-center-wrap-col-img-span">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-title-01.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <h4>水風呂(17℃)</h4>
+                                </div>
+                                <p>スタンダードな水風呂は、程よい冷たさで誰もが入りやすい温度。<br>サウナ後の体を優しく引き締め、深いリラックスへ導きます。</p>
+                                <dl>
+                                    <dt>効能</dt>
+                                    <dd>血流促進、免疫力向上、疲労回復</dd>
+                                </dl>
+                            </div>
                         </div>
 
                         <div class="sec04-center-wrap-col">
-                            <div class="sec04-center-wrap-col-img">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-img-07.jpg" alt="">
-                                <div class="sec04-center-wrap-col-img-span">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-title-01.svg" alt="">
+                            <div class="sec04-center-wrap-col-img-dt">
+                                <div class="sec04-center-wrap-col-img">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-img-07.jpg" alt="">
+                                    <div class="sec04-center-wrap-col-img-span hidden-mobile">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-title-01.svg" alt="">
+                                    </div>
+                                </div>
+                                <h4>電気風呂</h4>
+                            </div>
+                            <div class="sec04-center-wrap-col-img-dd">
+                                <div class="hidden-sm">
+                                    <div class="sec04-center-wrap-col-img-sp">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-img-07.jpg" alt="">
+                                        <div class="sec04-center-wrap-col-img-span">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-title-01.svg" alt="">
+                                        </div>
+                                        <h4>電気風呂</h4>
+                                    </div>
                                 </div>
 
+                                <p>電極板からの電流により筋肉を刺激し血行を促進します。<br>これにより、肩こり、腰痛、関節痛、筋肉痛の緩和や 冷え性、疲労回復効果が期待できます。</p>
+                                <dl>
+                                    <dt>泉質</dt>
+                                    <dd>単純温泉</dd>
+                                    <dt>効能</dt>
+                                    <dd>血行促進、コリ改善、疲労回復</dd>
+                                </dl>
                             </div>
-                            <h4>電気風呂</h4>
-                            <p>電極板からの電流により筋肉を刺激し血行を促進します。<br>これにより、肩こり、腰痛、関節痛、筋肉痛の緩和や 冷え性、疲労回復効果が期待できます。</p>
-                            <dl>
-                                <dt>泉質</dt>
-                                <dd>単純温泉</dd>
-                                <dt>効能</dt>
-                                <dd>血行促進、コリ改善、疲労回復</dd>
-                            </dl>
                         </div>
 
                         <div class="sec04-center-wrap-col">
-                            <div class="sec04-center-wrap-col-img">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-img-08.jpg" alt="">
-                                <div class="sec04-center-wrap-col-img-span">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-title-01.svg" alt="">
+                            <div class="sec04-center-wrap-col-img-dt">
+                                <div class="sec04-center-wrap-col-img">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-img-08.jpg" alt="">
+                                    <div class="sec04-center-wrap-col-img-span hidden-mobile">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-title-01.svg" alt="">
+                                    </div>
+                                </div>
+                                <h4>ジェットバス</h4>
+                            </div>
+                            <div class="sec04-center-wrap-col-img-dd">
+                                <div class="hidden-sm">
+                                    <div class="sec04-center-wrap-col-img-sp">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-img-08.jpg" alt="">
+                                        <div class="sec04-center-wrap-col-img-span">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-title-01.svg" alt="">
+                                        </div>
+                                        <h4>ジェットバス</h4>
+                                    </div>
                                 </div>
 
+                                <p>
+                                    肩・腰・脚を水流と気泡によって刺激し、温熱効果と相まって血行促進や筋肉痛の緩和が期待できます。
+                                </p>
+                                <dl>
+                                    <dt>効能</dt>
+                                    <dd>血行促進、筋肉疲労回復、ストレス軽減</dd>
+                                </dl>
                             </div>
-                            <h4>ジェットバス</h4>
-                            <p>
-                                肩・腰・脚を水流と気泡によって刺激し、温熱効果と相まって血行促進や筋肉痛の緩和が期待できます。
-                            </p>
-                            <dl>
-                                <dt>効能</dt>
-                                <dd>血行促進、筋肉疲労回復、ストレス軽減</dd>
-                            </dl>
                         </div>
                         <div class="sec04-center-wrap-col">
-                            <div class="sec04-center-wrap-col-img">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-img-09.jpg" alt="">
-                                <div class="sec04-center-wrap-col-img-span">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-title-01.svg" alt="">
+                            <div class="sec04-center-wrap-col-img-dt">
+                                <div class="sec04-center-wrap-col-img">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-img-09.jpg" alt="">
+                                    <div class="sec04-center-wrap-col-img-span hidden-mobile">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-title-01.svg" alt="">
+                                    </div>
                                 </div>
-
+                                <h4>スーパージェットバス</h4>
                             </div>
-                            <h4>スーパージェットバス</h4>
-                            <p>強力な水圧が脂肪部分まで刺激して、温熱効果と相まって血行促進や筋肉通の緩和、ダイエット効果が期待できます。</p>
-                            <dl>
-                                <dt>効能</dt>
-                                <dd>血流促進、疲労回復、爽快リフレッシュ</dd>
-                            </dl>
+                            <div class="sec04-center-wrap-col-img-dd">
+                                <div class="hidden-sm">
+                                    <div class="sec04-center-wrap-col-img-sp">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-img-09.jpg" alt="">
+                                        <div class="sec04-center-wrap-col-img-span">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-title-01.svg" alt="">
+                                        </div>
+                                        <h4>スーパージェットバス</h4>
+                                    </div>
+                                </div>
+                                <p>強力な水圧が脂肪部分まで刺激して、温熱効果と相まって血行促進や筋肉通の緩和、ダイエット効果が期待できます。</p>
+                                <dl>
+                                    <dt>効能</dt>
+                                    <dd>血流促進、疲労回復、爽快リフレッシュ</dd>
+                                </dl>
+                            </div>
                         </div>
 
                     </div>
@@ -343,6 +432,9 @@ Template Name: enjoy-spa
                             ・消化管出血、目に見える出血があるとき<br>
                             ・慢性の病気の急性増悪期
                         </p>
+                        <div class="sec04-wrap-blue-col-icon">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-icon-01.svg" alt="">
+                        </div>
                     </div>
                 </div>
 
@@ -375,36 +467,44 @@ Template Name: enjoy-spa
     </section>
 
     <section class="sec05">
-        <div class="content-width-sm">
-            <div class="page-title-center--has-icon">
-                <h2><i></i>脱衣所・浴室ご利用時のご案内</h2>
-            </div>
-            <p class="sec05-desc">
-                当館ではお客様に気持ちよくご利用いただくため、<br>
-                下記の事項をお守りくださいますようお願い申し上げます。
-            </p>
-            <div class="sec05-wrap">
-                <ul>
-                    <li>泥酔の方のご利用はお控えください。</li>
-                    <li>生理中の方は湯船へのご入浴をお控えください。</li>
-                    <li>脱衣所・浴室内でのスマートフォン・タブレット等の撮影機器のご利用は固くお断りいたします。</li>
-                    <li>浴室内は滑りやすくなっておりますので、お足元には十分ご注意ください。</li>
-                    <li>湯船に入る前には身体を洗い、必ず掛け湯・水風呂での掛け水をお願いいたします。</li>
-                    <li>湯船の中でのタオルのご使用はご遠慮ください。</li>
-                    <li>髪の長い方は髪が湯船につからないよう、まとめてご入浴ください。</li>
-                    <li>湯船の中では泳いだり潜ったりしないでください。</li>
-                    <li>染髪はご遠慮ください。</li>
-                    <li>風呂桶や手荷物などによる場所取りはご遠慮ください。</li>
-                    <li>浴室内でのご飲食・喫煙・読書はご遠慮ください。</li>
-                    <li>お子様のみでのご利用はご遠慮ください。</li>
-                    <li>リストバンドは常に身につけ、紛失にはご注意ください。紛失された場合は実費2,000円をご請求いたします。</li>
-                </ul>
-            </div>
-            <p class="sec05-desc">
-                また、他のお客様のご迷惑となる行為や不潔な行為は固くお断りいたします。<br>
-                当店が悪質と判断した場合はその場で警察に通報させていただきます。
-            </p>
+        <div class="page-bg-deco-bg">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-blue-top_v2.png" alt="">
         </div>
+        <div class="page-deco-container page-deco-container--blue">
+            <div class="content-width-sm">
+                <div class="page-title-center--has-icon">
+                    <h2><i></i>脱衣所・浴室<br class="hidden-sm">ご利用時のご案内</h2>
+                </div>
+                <p class="sec05-desc">
+                    当館ではお客様に気持ちよくご利用いただくため、<br class="hidden-mobile">下記の事項をお守りくださいますようお願い申し上げます。
+                </p>
+                <div class="sec05-wrap">
+                    <ul>
+                        <li>泥酔の方のご利用はお控えください。</li>
+                        <li>生理中の方は湯船へのご入浴をお控えください。</li>
+                        <li>脱衣所・浴室内でのスマートフォン・タブレット等の撮影機器のご利用は固くお断りいたします。</li>
+                        <li>浴室内は滑りやすくなっておりますので、お足元には十分ご注意ください。</li>
+                        <li>湯船に入る前には身体を洗い、必ず掛け湯・水風呂での掛け水をお願いいたします。</li>
+                        <li>湯船の中でのタオルのご使用はご遠慮ください。</li>
+                        <li>髪の長い方は髪が湯船につからないよう、まとめてご入浴ください。</li>
+                        <li>湯船の中では泳いだり潜ったりしないでください。</li>
+                        <li>染髪はご遠慮ください。</li>
+                        <li>風呂桶や手荷物などによる場所取りはご遠慮ください。</li>
+                        <li>浴室内でのご飲食・喫煙・読書はご遠慮ください。</li>
+                        <li>お子様のみでのご利用はご遠慮ください。</li>
+                        <li>リストバンドは常に身につけ、紛失にはご注意ください。紛失された場合は実費2,000円をご請求いたします。</li>
+                    </ul>
+                </div>
+                <p class="sec05-desc">
+                    また、他のお客様のご迷惑となる行為や不潔な行為は固くお断りいたします。<br>
+                    当店が悪質と判断した場合はその場で警察に通報させていただきます。
+                </p>
+            </div>
+        </div>
+        <div class="page-deco-bg-bottom">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-blue-bottom.png" alt="">
+        </div>
+
     </section>
 
     <section class="sec07-com">
@@ -414,11 +514,11 @@ Template Name: enjoy-spa
                     <div class="page-title--has-icon">
                         <h2><i></i>よくある質問</h2>
                     </div>
-                    <div class="sec07-btn">
-                        <a href="">一覧を見る<i></i></a>
+                    <div class="sec07-btn hidden-mobile">
+                        <a href="<?php echo home_url(); ?>/faq/">一覧を見る<i></i></a>
                     </div>
                 </div>
-                <div class="sec07-wrap-faq">
+                <div class="sec07-wrap-faq accordion">
                     <dl>
                         <dt><i></i>岩盤浴ウェアやタオルは自分で持っていく必要がありますか？</dt>
                         <dd></dd>
@@ -439,7 +539,12 @@ Template Name: enjoy-spa
                         <dt><i></i>駐車場はありますか？</dt>
                         <dd></dd>
                     </dl>
+
+                    <div class="com-btn-mobile hidden-sm">
+                        <a href="<?php echo home_url(); ?>/faq/">一覧を見る<i></i></a>
+                    </div>
                 </div>
+
             </div>
         </div>
     </section>

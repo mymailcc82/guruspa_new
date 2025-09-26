@@ -84,6 +84,56 @@
                                             <i></i>
                                         </a>
                                     </div>
+                                    <div class="archive-wrap-col">
+                                        <a href="<?php the_permalink(); ?>">
+                                            <div class="archive-wrap-col-img">
+                                                <?php if (has_post_thumbnail()) : ?>
+                                                    <?php the_post_thumbnail('medium'); // サムネイルを表示 
+                                                    ?>
+                                                <?php else : ?>
+                                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/dummy-small.jpg" alt="デフォルト画像">
+                                                <?php endif; ?>
+                                            </div>
+                                            <div class="archive-wrap-col-txt">
+                                                <div class="archive-wrap-col-txt-info">
+                                                    <?php
+                                                    $categories = get_the_category();
+                                                    if (! empty($categories)) {
+                                                        echo '<span class="category">' . esc_html($categories[0]->name) . '</span>';
+                                                    }
+                                                    ?>
+                                                    <time><?php echo get_the_date('Y.m.d'); ?></time>
+                                                </div>
+                                                <h4><?php the_title(); ?></h4>
+                                            </div>
+                                            <i></i>
+                                        </a>
+                                    </div>
+                                    <div class="archive-wrap-col">
+                                        <a href="<?php the_permalink(); ?>">
+                                            <div class="archive-wrap-col-img">
+                                                <?php if (has_post_thumbnail()) : ?>
+                                                    <?php the_post_thumbnail('medium'); // サムネイルを表示 
+                                                    ?>
+                                                <?php else : ?>
+                                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/dummy-small.jpg" alt="デフォルト画像">
+                                                <?php endif; ?>
+                                            </div>
+                                            <div class="archive-wrap-col-txt">
+                                                <div class="archive-wrap-col-txt-info">
+                                                    <?php
+                                                    $categories = get_the_category();
+                                                    if (! empty($categories)) {
+                                                        echo '<span class="category">' . esc_html($categories[0]->name) . '</span>';
+                                                    }
+                                                    ?>
+                                                    <time><?php echo get_the_date('Y.m.d'); ?></time>
+                                                </div>
+                                                <h4><?php the_title(); ?></h4>
+                                            </div>
+                                            <i></i>
+                                        </a>
+                                    </div>
                                 <?php endwhile; ?>
                                 <?php wp_reset_postdata(); ?>
                             <?php else : ?>
