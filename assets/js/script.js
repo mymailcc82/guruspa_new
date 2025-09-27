@@ -1,3 +1,26 @@
+//600以下の画面幅の時、.sec04-center-wrap-col-img-dtをクリックすると.sec04-center-wrap-col-img-ddがスライドダウンする
+$(document).ready(function () {
+  function adjustAccordion() {
+    if (window.innerWidth <= 600) {
+      // 600px以下のときの処理
+      $('.sec04-center-wrap-col-img-dt')
+        .off('click')
+        .on('click', function () {
+          $(this).next('.sec04-center-wrap-col-img-dd').slideToggle();
+          $(this).toggleClass('active');
+        });
+    }
+  }
+
+  // 初回実行
+  adjustAccordion();
+
+  // ウィンドウリサイズ時に再度チェック
+  $(window).on('resize', function () {
+    adjustAccordion();
+  });
+});
+
 //.accordion dl dtクリックで開閉
 $('.accordion dl dt').on('click', function () {
   //クリックされたdtにactiveクラスを付与し、他のdtからはactiveクラスを削除
@@ -20,6 +43,13 @@ $('.header-btn').on('click', function () {
   $('.header-btn').toggleClass('header-btn-active');
   $('.header-drawer').toggleClass('header-drawer-active');
   $('.body').toggleClass('body-drawer');
+});
+
+//header-drawerのaタグがクリックされたら、.header-drawerからactiveを削除
+$('.header-drawer a').on('click', function () {
+  $('.header-btn').removeClass('header-btn-active');
+  $('.header-drawer').removeClass('header-drawer-active');
+  $('.body').removeClass('body-drawer');
 });
 
 $('.footer-link-btn').on('click', function () {
@@ -47,8 +77,12 @@ $(document).ready(function () {
     var target = $(window.location.hash);
     // ターゲットが存在する場合
     if (target.length) {
+      //headerの高さを取得
+      var headerHeight = $('header').outerHeight();
+      // ターゲットの位置を取得
+
       // スクロール位置を取得し、50px上に余白を設定
-      var position = target.offset().top - 50; // 50px上に設定
+      var position = target.offset().top - headerHeight - 20; // 50px上に設定
       // アニメーションでスクロール
       $('html, body').animate({ scrollTop: position }, 600, 'swing');
     }

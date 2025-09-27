@@ -95,6 +95,9 @@ img.lazyloaded {
   width: 100%;
   max-width: 279px;
   margin: 0 auto;
+  &.com-btn-mobile--full {
+    max-width: 100%;
+  }
   a {
     background-color: #fff;
     display: flex;
@@ -274,6 +277,10 @@ img.lazyloaded {
 .com-title-faq {
   text-align: left;
   padding-left: 40px;
+  @include media(mobile) {
+    text-align: center;
+    padding-left: 0;
+  }
 
   a {
     position: static !important;
@@ -395,6 +402,39 @@ img.lazyloaded {
 
     .title:nth-child(9).in-view {
       transition-delay: 1s;
+    }
+    .title:nth-child(10).in-view {
+      transition-delay: 1.1s;
+    }
+    .title:nth-child(11).in-view {
+      transition-delay: 1.2s;
+    }
+    .title:nth-child(12).in-view {
+      transition-delay: 1.3s;
+    }
+    .title:nth-child(13).in-view {
+      transition-delay: 1.4s;
+    }
+    .title:nth-child(14).in-view {
+      transition-delay: 1.5s;
+    }
+    .title:nth-child(15).in-view {
+      transition-delay: 1.6s;
+    }
+    .title:nth-child(16).in-view {
+      transition-delay: 1.7s;
+    }
+    .title:nth-child(17).in-view {
+      transition-delay: 1.8s;
+    }
+    .title:nth-child(18).in-view {
+      transition-delay: 1.9s;
+    }
+    .title:nth-child(19).in-view {
+      transition-delay: 2s;
+    }
+    .title:nth-child(20).in-view {
+      transition-delay: 2.1s;
     }
 
     .title-item-sun,
@@ -544,7 +584,7 @@ img.lazyloaded {
   margin: 0 auto;
   padding-left: 40px;
 
-  @include media(mobile){
+  @include media(mobile) {
     padding-left: 0;
   }
 }

@@ -161,7 +161,8 @@ a {
   -webkit-tap-highlight-color: transparent;
   transition: all 0.3s ease;
   &:hover {
-    //opacity: 0.5;
+    cursor: pointer;
+    opacity: 0.5;
     color: $color-black;
     text-decoration: none;
   }

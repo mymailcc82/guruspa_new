@@ -1,6 +1,11 @@
 @use 'setting' as *;
 
 .sauna {
+  .sec01 {
+    .enjoy-wrap {
+      padding-bottom: 100px;
+    }
+  }
   .sec02 {
     .sec03-wrap {
       flex-wrap: wrap;
@@ -9,6 +14,10 @@
       .sec03-wrap-col {
         width: 48%;
         margin-bottom: 70px;
+        @include media(mobile) {
+          width: 100%;
+          margin-bottom: 50px;
+        }
         .sec03-wrap-col-left {
           width: 100%;
           img {
@@ -18,14 +27,23 @@
         .sec03-wrap-col-right {
           width: 100%;
           margin-top: 30px;
+          @include media(mobile) {
+            margin-top: 20px;
+          }
           h3 {
             margin-bottom: 10px;
             font-size: 20px;
             letter-spacing: 0.1em;
+            @include media(mobile) {
+              text-align: center;
+            }
           }
           p {
             font-size: 16px;
             line-height: 2;
+            @include media(middle) {
+              font-size: 14px;
+            }
           }
         }
       }
@@ -34,7 +52,7 @@
 
   .sec04 {
     padding-bottom: 120px;
-    padding-top: 100px;
+    padding-top: 60px;
     .sec04-bg {
       position: relative;
       .sec04-bg-icon {
@@ -43,6 +61,16 @@
         top: 30px;
         left: calc(50% - 450px);
         z-index: 3;
+        img {
+          min-height: auto !important;
+        }
+      }
+      img {
+        @include media(middle) {
+          width: 100%;
+          object-fit: cover;
+          min-height: 283px;
+        }
       }
     }
     .sec04-container {
@@ -57,6 +85,9 @@
       background-position: center;
       padding: 25px 0px;
       border-radius: 30px;
+      @include media(middle) {
+        padding: 25px 20px;
+      }
       dl {
         dt {
           font-size: 20px;
@@ -68,6 +99,10 @@
           font-size: 16px;
           font-weight: 500;
           text-align: center;
+          @include media(middle) {
+            font-size: 14px;
+            text-align: left;
+          }
         }
       }
     }
@@ -82,10 +117,16 @@
 
       background-color: #fefbf5;
       border-radius: 30px 30px 0px 0px;
+      @include media(middle) {
+        padding: 30px 20px;
+      }
       h3 {
         text-align: center;
         margin-bottom: 20px;
         font-size: 25px;
+        @include media(middle) {
+          font-size: 20px;
+        }
         img {
           width: 245px;
         }
@@ -98,6 +139,9 @@
         line-height: 2;
         margin: 10px 0px 0px;
         font-weight: 500;
+        @include media(middle) {
+          font-size: 14px;
+        }
         span {
           font-size: 16px;
           font-weight: bold;
@@ -111,6 +155,9 @@
         margin-bottom: 30px;
         font-size: 25px;
         font-weight: bold;
+        @include media(middle) {
+          font-size: 20px;
+        }
       }
       .sec04-center-wrap {
         display: flex;
@@ -168,6 +215,11 @@
             margin: 10px 0px 0px;
             text-align: left;
             min-height: 140px;
+            @include media(middle) {
+              font-size: 14px;
+              min-height: auto;
+              padding: 0px 10px;
+            }
           }
         }
       }
@@ -188,6 +240,13 @@
         left: 0px;
         top: 145px;
         z-index: -1;
+        @include media(mobile) {
+          height: 100%;
+          width: 20px;
+          top: 0px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
       }
       .sec03-wrap-col {
         width: 23.5%;
@@ -195,6 +254,13 @@
         border-radius: 30px;
         background-color: #fff;
         border: 1px solid #222222;
+        @include media(mobile) {
+          width: 100%;
+          margin-bottom: 30px;
+        }
+        &:last-child {
+          margin-bottom: 0px;
+        }
 
         .sec03-wrap-col-img {
           position: relative;
@@ -202,6 +268,11 @@
           img {
             border-radius: 30px 30px 0px 0px;
             display: block;
+            @include media(mobile) {
+              height: calc(162 * (100vw / 390));
+              object-fit: cover;
+              width: 100%;
+            }
           }
           .sec03-wrap-col-img-span {
             position: absolute;
@@ -230,6 +301,13 @@
           margin: 0px;
           padding: 10px 30px;
           font-weight: 500;
+          @include media(middle) {
+            font-size: 14px;
+            padding: 15px 15px;
+          }
+          @include media(mobile) {
+            padding: 15px 30px;
+          }
         }
       }
     }
@@ -241,6 +319,10 @@
       .sec04-wrap-yellow-2-1-left {
         width: 50%;
         position: relative;
+        @include media(mobile) {
+          width: 100%;
+          margin-bottom: 20px;
+        }
         img {
           border-radius: 30px;
         }
@@ -248,13 +330,25 @@
       .sec04-wrap-yellow-2-1-right {
         width: 50%;
         padding-left: 30px;
+        @include media(mobile) {
+          width: 100%;
+          padding-left: 0px;
+        }
         h3 {
           font-size: 20px;
+          @include media(middle) {
+            font-size: 18px;
+            text-align: center;
+          }
         }
         p {
           font-size: 16px;
           line-height: 2;
           margin: 20px 0px;
+          @include media(middle) {
+            font-size: 14px;
+            margin: 15px 0px;
+          }
         }
         .sec04-wrap-yellow-2-1-right-dl {
           background-image: url('./assets/img/sauna/sec04-bg-yellow.jpg');
@@ -264,11 +358,18 @@
           padding: 15px 25px;
           display: flex;
           justify-content: space-between;
+          @include media(middle) {
+            padding: 25px 20px;
+          }
           dl {
             dt {
               color: var(--color-black);
               font-size: 20px;
               font-weight: bold;
+              @include media(middle) {
+                text-align: center;
+                margin-bottom: 5px;
+              }
             }
             dd {
               color: var(--color-black);
@@ -282,11 +383,20 @@
 
   .sec05 {
     padding-bottom: 120px;
+    @include media(middle) {
+      padding-bottom: 0px;
+    }
     .sec05-desc {
       text-align: center;
       font-size: 18px;
       font-weight: 600;
       line-height: 2.3;
+      @include media(middle) {
+        font-size: 14px;
+        line-height: 2;
+        font-weight: 500;
+        text-align: left;
+      }
     }
     .sec05-wrap {
       display: flex;
@@ -294,6 +404,10 @@
       justify-content: space-between;
       .sec05-wrap-col {
         width: 30%;
+        @include media(mobile) {
+          width: 100%;
+          margin-bottom: 30px;
+        }
         .sec05-wrap-col-img {
           margin-bottom: 15px;
           img {
@@ -311,22 +425,36 @@
           line-height: 1.8;
           font-weight: 500;
           margin: 0px;
+          @include media(middle) {
+            font-size: 14px;
+          }
         }
       }
     }
   }
   .sec06 {
     padding-bottom: 120px;
+    @include media(middle) {
+      padding-bottom: 60px;
+    }
     .sec06-desc {
       text-align: center;
       font-size: 18px;
       font-weight: 600;
       line-height: 2.3;
       margin-bottom: 60px;
+      @include media(middle) {
+        font-size: 14px;
+        line-height: 2;
+        font-weight: 500;
+        text-align: left;
+        margin-bottom: 30px;
+      }
     }
     .sec06-top {
       margin-bottom: 60px;
       .sec01-col-main {
+        margin-bottom: 30px;
         ul {
           padding-top: 88px;
           display: flex;
@@ -458,6 +586,27 @@
       justify-content: space-between;
       .sec06-bottom-col {
         width: 48%;
+        @include media(mobile) {
+          width: 100%;
+          margin-bottom: 30px;
+        }
+        &:first-child {
+          a {
+            &:before {
+              display: none !important;
+            }
+            .sec-01-col-under-title {
+              img {
+                width: 80%;
+                max-width: 221px;
+              }
+              .icon-btn {
+                bottom: 15px;
+                right: 90px;
+              }
+            }
+          }
+        }
       }
       .sec-01-col-under {
         width: 100%;
@@ -526,6 +675,9 @@
             height: 100%;
             border-radius: 22px;
             overflow: hidden;
+            @include media(middle) {
+              width: 125px;
+            }
 
             img {
               width: 100%;
@@ -538,15 +690,20 @@
           .sec-01-col-under-title {
             width: calc(100% - 192px);
             padding: 0 10px;
+            @include media(middle) {
+              width: calc(100% - 125px);
+              padding: 0 5px;
+            }
 
             h3 {
               font-size: 57px;
+              position: relative;
               color: #000;
               font-family: $font-en;
               display: flex;
               img {
                 width: 100%;
-                max-width: 378px;
+                max-width: 218px;
               }
 
               span {
@@ -574,8 +731,11 @@
                 background-size: contain;
                 background-repeat: no-repeat;
                 //display: block;
+                position: absolute;
                 display: inline-block;
                 transform: translate(10px, 5px);
+                right: 30px;
+                bottom: 10px;
                 transition: transform 0.4s ease;
               }
             }
@@ -625,12 +785,22 @@
       font-size: 18px;
       font-weight: 600;
       line-height: 2.3;
+      @include media(middle) {
+        font-size: 14px;
+        line-height: 2;
+        font-weight: 500;
+        text-align: left;
+      }
     }
     .sec07-wrap {
       margin: 50px 0px;
       background-color: #fff;
       border-radius: 30px;
       padding: 80px 90px;
+      @include media(middle) {
+        padding: 40px 25px;
+        margin-bottom: 0px;
+      }
       ul {
         li {
           padding-left: 40px;
@@ -638,13 +808,17 @@
           font-size: 20px;
           font-weight: 600;
           margin-bottom: 20px;
+          @include media(middle) {
+            font-size: 14px;
+            margin-bottom: 15px;
+          }
           &:last-child {
             margin-bottom: 0px;
           }
           &:before {
             width: 30px;
             height: 30px;
-            background-image: url(("./assets/img/icon/icon-01-small.png"));
+            background-image: url(("./assets/img/icon/icon-01.png"));
             background-size: contain;
             background-repeat: no-repeat;
             position: absolute;
@@ -653,6 +827,11 @@
             display: block;
             content: '';
             transform: translateY(5px);
+            @include media(middle) {
+              width: 23px;
+              height: 23px;
+              transform: translateY(2px);
+            }
           }
         }
       }

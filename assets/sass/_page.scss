@@ -3,7 +3,12 @@
   padding-top: 100px;
   position: relative;
   background-color: #fefbf5;
+  z-index: 3;
   overflow: hidden;
+  .relative {
+    position: relative;
+    z-index: 3;
+  }
   .page-main-left-img {
     width: 253px;
     position: absolute;
@@ -27,6 +32,8 @@
   }
   .page-deco-bg {
     width: 100%;
+    position: relative;
+    z-index: -1;
     img {
       width: 100%;
     }
@@ -38,6 +45,13 @@
       background-repeat: repeat;
       background-size: 200px;
     }
+    &.page-deco-container--yellow {
+      //background-color: #dce7fb !important;
+      background-image: url(("./assets/img/aside/aside-bg-yellow-content.jpg"));
+      background-repeat: repeat;
+      background-size: 200px;
+    }
+
     &.page-deco-container--blue {
       //background-color: #dce7fb !important;
       background-image: url(("./assets/img/aside/aside-bg-blue-content.jpg"));
@@ -54,6 +68,16 @@
       padding-top: 20px;
       padding-bottom: 30px;
     }
+  }
+  .page-bg-deco-bg-bottom-yellow {
+    background-image: url(("./assets/img/aside/aside-bg-yellow-content.jpg"));
+    background-repeat: repeat;
+    background-size: 200px;
+    position: absolute;
+    width: 100%;
+    height: calc(200 * (100vw / 1240));
+    bottom: calc(-200 * (100vw / 1240));
+    left: 0;
   }
   .page-bg-deco-bg-bottom-red {
     background-image: url(("./assets/img/aside/aside-bg-red-content.jpg"));
@@ -181,6 +205,11 @@
   @include media(middle) {
     margin-bottom: 20px;
   }
+  .letter-spacing-0-mobile {
+    @include media(mobile) {
+      letter-spacing: 0em !important;
+    }
+  }
   h2,
   h3 {
     display: flex;
@@ -188,6 +217,7 @@
     font-size: 25px;
     font-weight: 700;
     letter-spacing: 0.1em;
+
     i {
       width: 30px;
       height: 43px;
