@@ -1,6 +1,14 @@
 @use 'setting' as *;
 .today {
   background-color: #fefbf5;
+  .sec {
+    padding-bottom: 20px;
+  }
+  .sec01-col-main {
+    ul {
+      padding-top: 40px !important;
+    }
+  }
   .sec00 {
     padding-bottom: 100px;
     .sec00-container {
@@ -37,15 +45,28 @@
     .sec00-swiper {
       .swiper-slide {
         width: 97px !important;
+        transition: all 0.3s ease;
+        opacity: 0.5;
         @include media(middle) {
           width: 80px !important;
+        }
+        &.swiper-slide-active {
+          opacity: 1 !important;
+          .swiper-slide-text {
+            border: 3px solid #e81e23 !important;
+          }
+        }
+        &.active-event {
+          .swiper-slide-text {
+            background-color: rgba($color: #e81e23, $alpha: 0.2) !important;
+          }
         }
       }
       .swiper-slide-text {
         width: 97px;
         height: 96px;
-        border: 3px solid #e81e23;
-        background-color: rgba($color: #e81e23, $alpha: 0.2);
+        border: 3px solid #fff;
+
         border-radius: 50%;
         display: flex;
         align-items: center;
@@ -59,13 +80,27 @@
           font-weight: 900;
           line-height: 1;
           padding-bottom: 10px;
+          text-align: center;
           @include media(middle) {
             font-size: 20px;
           }
+          &.swiper-sat {
+            color: #214995 !important;
+            * {
+              color: #214995 !important;
+            }
+          }
+          &.swiper-sun {
+            color: #e81e23 !important;
+            * {
+              color: #e81e23 !important;
+            }
+          }
           strong {
-            font-size: 42px;
+            font-size: 38px;
             font-weight: 900;
             position: relative;
+            letter-spacing: -0.05em;
             top: 10px;
             @include media(middle) {
               font-size: 34px;

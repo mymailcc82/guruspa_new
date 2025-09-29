@@ -1,3 +1,16 @@
+<?php
+// クエリパラメータからタームスラッグを取得
+if (isset($_GET['event_category'])) {
+    $event_category = sanitize_text_field($_GET['event_category']);
+} else {
+    $event_category = '';
+}
+if (isset($_GET['event_tag'])) {
+    $event_tag = sanitize_text_field($_GET['event_tag']);
+} else {
+    $event_tag = '';
+}
+?>
 <?php get_header(); ?>
 <main class="page-main archive event">
     <div class="page-main-left-img">
@@ -41,17 +54,42 @@
         </div>
 
         <div class="sec01-col">
-            <ul class="sec01-col-select tab">
-                <li class="active"><a href="javascript:void(0)" data-id="#area01">すべて</a></li>
-                <li><a href="javascript:void(0)" data-id="#area02">期間限定<br class="hidden-sm">イベント</a></li>
-                <li><a href="javascript:void(0)" data-id="#area03">定例<br class="hidden-sm">イベント</a></li>
+            <ul class="sec01-col-select">
+                <?php if ($event_tag === ''): ?>
+                    <li class="active"><a href="<?php echo home_url(); ?>/event/">すべて</a></li>
+                <?php else: ?>
+                    <li><a href="<?php echo home_url(); ?>/event/">すべて</a></li>
+                <?php endif; ?>
+                <?php if ($event_tag === 'limit'): ?>
+                    <li class="active"><a href="<?php echo home_url(); ?>/event/?event_tag=new&event_category=<?php echo $event_category; ?>" data-id="#area01">新着<br class="hidden-sm">イベント</a></li>
+                <?php else: ?>
+                    <li><a href="<?php echo home_url(); ?>/event/?event_tag=limit&event_category=<?php echo $event_category; ?>" data-id="#area02">期間限定<br class="hidden-sm">イベント</a></li>
+                <?php endif; ?>
+                <?php if ($event_tag === 'per_event'): ?>
+                    <li class="active"><a href="<?php echo home_url(); ?>/event/?event_tag=per_event&event_category=<?php echo $event_category; ?>" data-id="#area03">定例<br class="hidden-sm">イベント</a></li>
+                <?php else: ?>
+                    <li><a href="<?php echo home_url(); ?>/event/?event_tag=per_event&event_category=<?php echo $event_category; ?>" data-id="#area03">定例<br class="hidden-sm">イベント</a></li>
+                <?php endif; ?>
             </ul>
             <div class="content-width">
                 <div class="select">
                     <select name="category" id="category" onchange="location.href=value;">
-                        <option value="<?php echo home_url(); ?>/archive-event/" selected>すべて</option>
-                        <option value="<?php echo home_url(); ?>/archive-event/category/limited/">期間限定イベント</option>
-                        <option value="<?php echo home_url(); ?>/archive-event/category/regular/">定例イベント</option>
+                        <?php
+                        //event_categoryをtermを取得して、optionでselectedを設定
+                        $terms = get_terms(array(
+                            'taxonomy' => 'event_category',
+                            'hide_empty' => false,
+                        ));
+                        ?>
+                        <!--すべて -->
+                        <option value="<?php echo home_url(); ?>/event/?category_tag=<?php echo $event_tag; ?>">すべて</option>
+                        <?php foreach ($terms as $term) : ?>
+                            <option value="<?php echo home_url(); ?>/event/?event_category=<?php echo $term->slug; ?><?php if ($event_tag) {
+                                                                                                                            echo '&event_tag=' . $event_tag;
+                                                                                                                        } ?>" <?php if ($event_category === $term->slug) {
+                                                                                                                                    echo 'selected';
+                                                                                                                                } ?>><?php echo $term->name; ?></option>
+                        <?php endforeach; ?>
                     </select>
                 </div>
             </div>
@@ -60,10 +98,32 @@
                 <div class="area-container">
                     <div class="content-width">
                         <?php
+                        //$event_categoryがあるなら、そのタームに基づいてクエリを設定
+                        $tax_query = array();
+                        if ($event_category) {
+                            $tax_query = array(
+                                array(
+                                    'taxonomy' => 'event_category',
+                                    'field'    => 'slug',
+                                    'terms'    => $event_category,
+                                ),
+                            );
+                        }
+                        if ($event_tag) {
+                            $tax_query[] = array(
+                                'taxonomy' => 'event_tag',
+                                'field'    => 'slug',
+                                'terms'    => $event_tag,
+                            );
+                        }
+                        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
                         $args = array(
+                            'paged' => $paged,
                             'post_type' => 'event', // 投稿タイプを指定
-                            'posts_per_page' => 3, // 表示する投稿数を指定
+                            'posts_per_page' => 9, // 表示する投稿数を指定
                             //'category_name' => 'news', // カテゴリースラッグを指定
+                            //taxonomyでevent_tagを指定し、fieldでslugを指定、termsで$event_tagを指定
+                            'tax_query' => $tax_query,
                         );
                         ?>
                         <?php $the_query = new WP_Query($args); ?>
@@ -71,89 +131,77 @@
                             <ul>
                                 <?php if ($the_query->have_posts()) : ?>
                                     <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+                                        <?php
+                                        $event_category = get_the_terms(get_the_ID(), 'event_category');
+                                        $event_start_date = get_field('event_start_date'); // 開始日
+                                        $is_hot = get_field('hot'); // HOT! フラグ
+                                        ?>
                                         <li>
                                             <a href="<?php the_permalink(); ?>">
+                                                <?php if ($is_hot) : ?>
+                                                    <span class="hot"><?php echo $is_hot; ?></span>
+                                                <?php endif; ?>
                                                 <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
                                                 <div class="img img-event">
                                                     <?php if (has_post_thumbnail()) : ?>
                                                         <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>">
                                                     <?php else : ?>
-                                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-green.jpg" alt="">
+                                                        <?php if ($event_category && !is_wp_error($event_category)) : ?>
+                                                            <?php
+                                                            // カテゴリーに応じたデフォルト画像を設定
+                                                            $category_slug = $event_category[0]->slug;
+                                                            $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-default.jpg'; // デフォルト画像
+
+                                                            if ($category_slug === 'information') {
+                                                                $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-red.jpg';
+                                                            } elseif ($category_slug === 'event') {
+                                                                $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-green.jpg';
+                                                            } elseif ($category_slug === 'food') {
+                                                                $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-yellow.jpg';
+                                                            }
+                                                            ?>
+                                                            <img src="<?php echo esc_url($default_image_url); ?>" alt="<?php the_title(); ?>">
+                                                        <?php else : ?>
+                                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-default.jpg" alt="<?php the_title(); ?>">
+                                                        <?php endif; ?>
                                                     <?php endif; ?>
                                                 </div>
                                                 <div class="text">
-                                                    <span class="category category-green">
+                                                    <div class="text-info">
                                                         <?php
-                                                        $categories = get_the_category();
-                                                        if (! empty($categories)) {
-                                                            echo esc_html($categories[0]->name);
+                                                        if ($category_slug === 'information') {
+                                                            $cats_class = 'category-red';
+                                                        } elseif ($category_slug === 'event') {
+                                                            $cats_class = 'category-green';
+                                                        } elseif ($category_slug === 'food') {
+                                                            $cats_class = 'category-yellow';
                                                         }
                                                         ?>
-                                                    </span>
-                                                    <span class="term"><?php echo get_the_date('Y.m.d'); ?></span>
+                                                        <div class="text-info-cat">
+                                                            <span class="category <?php echo esc_attr($cats_class); ?>"><?php echo esc_html($event_category[0]->name); ?></span>
+                                                        </div>
+                                                        <div class="text-info-term">
+                                                            <span class="term"><?php echo $event_start_date; ?></span>
+                                                        </div>
+
+                                                    </div>
                                                     <h3><?php the_title(); ?></h3>
                                                 </div>
                                             </a>
                                         </li>
-                                        <li>
-                                            <a href="<?php the_permalink(); ?>">
-                                                <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
-                                                <div class="img img-event">
-                                                    <?php if (has_post_thumbnail()) : ?>
-                                                        <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>">
-                                                    <?php else : ?>
-                                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-green.jpg" alt="">
-                                                    <?php endif; ?>
-                                                </div>
-                                                <div class="text">
-                                                    <span class="category category-green">
-                                                        <?php
-                                                        $categories = get_the_category();
-                                                        if (! empty($categories)) {
-                                                            echo esc_html($categories[0]->name);
-                                                        }
-                                                        ?>
-                                                    </span>
-                                                    <span class="term"><?php echo get_the_date('Y.m.d'); ?></span>
-                                                    <h3><?php the_title(); ?></h3>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="<?php the_permalink(); ?>">
-                                                <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
-                                                <div class="img img-event">
-                                                    <?php if (has_post_thumbnail()) : ?>
-                                                        <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>">
-                                                    <?php else : ?>
-                                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-green.jpg" alt="">
-                                                    <?php endif; ?>
-                                                </div>
-                                                <div class="text">
-                                                    <span class="category category-green">
-                                                        <?php
-                                                        $categories = get_the_category();
-                                                        if (! empty($categories)) {
-                                                            echo esc_html($categories[0]->name);
-                                                        }
-                                                        ?>
-                                                    </span>
-                                                    <span class="term"><?php echo get_the_date('Y.m.d'); ?></span>
-                                                    <h3><?php the_title(); ?></h3>
-                                                </div>
-                                            </a>
-                                        </li>
+
                                     <?php endwhile; ?>
 
                                     <?php wp_reset_postdata(); ?>
                                 <?php else : ?>
-                                    <p>投稿が見つかりませんでした。</p>
+                                    <p class="text-base">投稿が見つかりませんでした。</p>
                                 <?php endif; ?>
                             </ul>
                         </div>
                     </div>
-
-
+                    <div class="content-width">
+                        <?php custom_pagination($the_query); ?>
+                    </div>
                 </div>
             </div>
 

@@ -119,44 +119,103 @@ Template Name: enjoy-relaxation
                                     <div class="page-title-center--has-icon">
                                         <h2><i></i>イベント情報</h2>
                                     </div>
-                                    <div class="sec01-col-main">
-                                        <ul>
-                                            <li><a href="">
-                                                    <span class="hot">HOT!</span>
-                                                    <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
-                                                    <div class="img img-event">
-                                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-green.jpg" alt="">
-                                                    </div>
-                                                    <div class="text">
-                                                        <span class="category category-green">ご案内</span>
-                                                        <span class="term">XX.XX.XX〜</span>
-                                                        <h3>イベントタイトルが入ります</h3>
-                                                    </div>
-                                                </a></li>
-                                            <li><a href="">
-                                                    <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
-                                                    <div class="img img-event">
-                                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-green.jpg" alt="">
-                                                    </div>
-                                                    <div class="text">
-                                                        <span class="category category-green">イベント</span>
-                                                        <span class="term">XX.XX.XX〜</span>
-                                                        <h3>イベントタイトルが入ります</h3>
-                                                    </div>
-                                                </a></li>
-                                            <li><a href="">
-                                                    <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
-                                                    <div class="img img-event">
-                                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-green.jpg" alt="">
-                                                    </div>
-                                                    <div class="text">
-                                                        <span class="category category-green">フード/キッチントキワ</span>
-                                                        <span class="term">XX.XX.XX〜</span>
-                                                        <h3>イベントタイトルが入ります</h3>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                        </ul>
+                                </div>
+                                <div class="content-width-small content-width--mobile-full">
+                                    <div class="area-event">
+                                        <div class="swiper swiper-event sec01-col-main">
+                                            <div class="swiper-wrapper">
+                                                <?php
+                                                $args = array(
+                                                    'post_type' => 'event', // カスタム投稿タイプ名
+                                                    'posts_per_page' => 3, // 表示する記事数
+                                                    'orderby' => 'date', // 日付でソート
+                                                    'order' => 'DESC', // 降順
+                                                    //event_categoryが'event'のものを取得
+                                                    'tax_query' => array(
+                                                        array(
+                                                            'taxonomy' => 'event_category',
+                                                            'field'    => 'slug',
+                                                            'terms'    => 'relax', // ここに取得したいカテゴリーのスラッグを指定
+                                                        ),
+                                                    ),
+                                                );
+                                                ?>
+                                                <?php
+                                                $the_query = new WP_Query($args);
+                                                if ($the_query->have_posts()) :
+                                                    while ($the_query->have_posts()) : $the_query->the_post();
+                                                        $event_category = get_the_terms(get_the_ID(), 'event_category');
+                                                        $event_start_date = get_field('event_start_date'); // 開始日
+                                                        $is_hot = get_field('hot'); // HOT! フラグ
+                                                ?>
+
+                                                        <div class="swiper-slide">
+                                                            <a href="<?php the_permalink(); ?>">
+                                                                <?php if ($is_hot) : ?>
+                                                                    <span class="hot"><?php echo $is_hot; ?></span>
+                                                                <?php endif; ?>
+                                                                <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
+                                                                <div class="img img-info">
+                                                                    <?php if (has_post_thumbnail()) : ?>
+                                                                        <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>">
+                                                                    <?php else : ?>
+                                                                        <?php if ($event_category && !is_wp_error($event_category)) : ?>
+                                                                            <?php
+                                                                            // カテゴリーに応じたデフォルト画像を設定
+                                                                            $category_slug = $event_category[0]->slug;
+                                                                            $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-default.jpg'; // デフォルト画像
+
+                                                                            if ($category_slug === 'information') {
+                                                                                $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-red.jpg';
+                                                                            } elseif ($category_slug === 'event') {
+                                                                                $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-green.jpg';
+                                                                            } elseif ($category_slug === 'food') {
+                                                                                $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-yellow.jpg';
+                                                                            } elseif ($category_slug === 'relax') {
+                                                                                $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-blue.jpg';
+                                                                            }
+                                                                            ?>
+                                                                            <img src="<?php echo esc_url($default_image_url); ?>" alt="<?php the_title(); ?>">
+                                                                        <?php else : ?>
+                                                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-default.jpg" alt="<?php the_title(); ?>">
+                                                                        <?php endif; ?>
+                                                                    <?php endif; ?>
+                                                                </div>
+                                                                <div class="text">
+                                                                    <div class="text-info">
+                                                                        <?php
+                                                                        if ($category_slug === 'information') {
+                                                                            $cats_class = 'category-red';
+                                                                        } elseif ($category_slug === 'event') {
+                                                                            $cats_class = 'category-green';
+                                                                        } elseif ($category_slug === 'food') {
+                                                                            $cats_class = 'category-yellow';
+                                                                        } elseif ($category_slug === 'relax') {
+                                                                            $cats_class = 'category-blue';
+                                                                        }
+                                                                        ?>
+                                                                        <div class="text-info-cat">
+                                                                            <span class="category <?php echo esc_attr($cats_class); ?>"><?php echo esc_html($event_category[0]->name); ?></span>
+                                                                        </div>
+                                                                        <div class="text-info-term">
+                                                                            <span class="term"><?php echo $event_start_date; ?></span>
+                                                                        </div>
+
+                                                                    </div>
+
+                                                                    <h3><?php the_title(); ?></h3>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                <?php
+                                                    endwhile;
+                                                    wp_reset_postdata();
+                                                else :
+                                                    echo '<p class="text-base">現在掲載されているイベントがありません。</p>';
+                                                endif;
+                                                ?>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -373,44 +432,104 @@ Template Name: enjoy-relaxation
                                     <div class="page-title-center--has-icon">
                                         <h2><i></i>イベント情報</h2>
                                     </div>
-                                    <div class="sec01-col-main">
-                                        <ul>
-                                            <li><a href="">
-                                                    <span class="hot">HOT!</span>
-                                                    <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
-                                                    <div class="img img-event">
-                                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-green.jpg" alt="">
-                                                    </div>
-                                                    <div class="text">
-                                                        <span class="category category-green">ご案内</span>
-                                                        <span class="term">XX.XX.XX〜</span>
-                                                        <h3>イベントタイトルが入ります</h3>
-                                                    </div>
-                                                </a></li>
-                                            <li><a href="">
-                                                    <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
-                                                    <div class="img img-event">
-                                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-green.jpg" alt="">
-                                                    </div>
-                                                    <div class="text">
-                                                        <span class="category category-green">イベント</span>
-                                                        <span class="term">XX.XX.XX〜</span>
-                                                        <h3>イベントタイトルが入ります</h3>
-                                                    </div>
-                                                </a></li>
-                                            <li><a href="">
-                                                    <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
-                                                    <div class="img img-event">
-                                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-green.jpg" alt="">
-                                                    </div>
-                                                    <div class="text">
-                                                        <span class="category category-green">フード/キッチントキワ</span>
-                                                        <span class="term">XX.XX.XX〜</span>
-                                                        <h3>イベントタイトルが入ります</h3>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                        </ul>
+                                </div>
+                                <div class="content-width-small content-width--mobile-full">
+                                    <div class="area-event">
+                                        <div class="swiper swiper-event sec01-col-main">
+                                            <div class="swiper-wrapper">
+                                                <?php
+                                                $args = array(
+                                                    'post_type' => 'event', // カスタム投稿タイプ名
+                                                    'posts_per_page' => 3, // 表示する記事数
+                                                    'orderby' => 'date', // 日付でソート
+                                                    'order' => 'DESC', // 降順
+                                                    //event_categoryが'relax'と'akasuri'のものを取得
+                                                    'tax_query' => array(
+                                                        array(
+                                                            'taxonomy' => 'event_category',
+                                                            'field'    => 'slug',
+                                                            'terms'    => array('relax', 'akasuri'), // ここに取得したいカテゴリーのスラッグを指定
+                                                        ),
+
+                                                    ),
+                                                );
+                                                ?>
+                                                <?php
+                                                $the_query = new WP_Query($args);
+                                                if ($the_query->have_posts()) :
+                                                    while ($the_query->have_posts()) : $the_query->the_post();
+                                                        $event_category = get_the_terms(get_the_ID(), 'event_category');
+                                                        $event_start_date = get_field('event_start_date'); // 開始日
+                                                        $is_hot = get_field('hot'); // HOT! フラグ
+                                                ?>
+
+                                                        <div class="swiper-slide">
+                                                            <a href="<?php the_permalink(); ?>">
+                                                                <?php if ($is_hot) : ?>
+                                                                    <span class="hot"><?php echo $is_hot; ?></span>
+                                                                <?php endif; ?>
+                                                                <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
+                                                                <div class="img img-info">
+                                                                    <?php if (has_post_thumbnail()) : ?>
+                                                                        <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>">
+                                                                    <?php else : ?>
+                                                                        <?php if ($event_category && !is_wp_error($event_category)) : ?>
+                                                                            <?php
+                                                                            // カテゴリーに応じたデフォルト画像を設定
+                                                                            $category_slug = $event_category[0]->slug;
+                                                                            $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-default.jpg'; // デフォルト画像
+
+                                                                            if ($category_slug === 'information') {
+                                                                                $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-red.jpg';
+                                                                            } elseif ($category_slug === 'event') {
+                                                                                $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-green.jpg';
+                                                                            } elseif ($category_slug === 'food') {
+                                                                                $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-yellow.jpg';
+                                                                            } elseif ($category_slug === 'relax') {
+                                                                                $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-blue.jpg';
+                                                                            }
+                                                                            ?>
+                                                                            <img src="<?php echo esc_url($default_image_url); ?>" alt="<?php the_title(); ?>">
+                                                                        <?php else : ?>
+                                                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-default.jpg" alt="<?php the_title(); ?>">
+                                                                        <?php endif; ?>
+                                                                    <?php endif; ?>
+                                                                </div>
+                                                                <div class="text">
+                                                                    <div class="text-info">
+                                                                        <?php
+                                                                        if ($category_slug === 'information') {
+                                                                            $cats_class = 'category-red';
+                                                                        } elseif ($category_slug === 'event') {
+                                                                            $cats_class = 'category-green';
+                                                                        } elseif ($category_slug === 'food') {
+                                                                            $cats_class = 'category-yellow';
+                                                                        } elseif ($category_slug === 'relax') {
+                                                                            $cats_class = 'category-blue';
+                                                                        }
+                                                                        ?>
+                                                                        <div class="text-info-cat">
+                                                                            <span class="category <?php echo esc_attr($cats_class); ?>"><?php echo esc_html($event_category[0]->name); ?></span>
+                                                                        </div>
+                                                                        <div class="text-info-term">
+                                                                            <span class="term"><?php echo $event_start_date; ?></span>
+                                                                        </div>
+
+                                                                    </div>
+
+                                                                    <h3><?php the_title(); ?></h3>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                <?php
+                                                    endwhile;
+                                                    wp_reset_postdata();
+                                                else :
+                                                    echo '<p class="text-base">現在掲載されているイベントがありません。</p>';
+                                                endif;
+                                                ?>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
 

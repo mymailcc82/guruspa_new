@@ -180,8 +180,8 @@ Template Name: enjoy-spa
                 </p>
             </div>
             <div class="content-width-sm">
-                <div class="sec03-wrap">
-                    <div class="sec03-wrap-col">
+                <div class="sec03-wrap fadeup-timelug">
+                    <div class="sec03-wrap-col fadeup-item">
                         <div class="sec03-wrap-col-img">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-img-01.jpg" alt="">
                         </div>
@@ -189,7 +189,7 @@ Template Name: enjoy-spa
                             サウナで毛穴の汚れを落とし、炭酸を吸収しやすい状態にしてから15分以上じっくり浸かるのがおすすめです。
                         </p>
                     </div>
-                    <div class="sec03-wrap-col">
+                    <div class="sec03-wrap-col fadeup-item">
                         <div class="sec03-wrap-col-img">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-img-02.jpg" alt="">
                         </div>
@@ -197,7 +197,7 @@ Template Name: enjoy-spa
                             炭酸が気化しないように波を立てず、ゆっくりと入りましょう。
                         </p>
                     </div>
-                    <div class="sec03-wrap-col">
+                    <div class="sec03-wrap-col fadeup-item">
                         <div class="sec03-wrap-col-img">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-img-03.jpg" alt="">
                         </div>
@@ -205,7 +205,7 @@ Template Name: enjoy-spa
                             体についた気泡はわらずに上がるのが効果的です。
                         </p>
                     </div>
-                    <div class="sec03-wrap-col">
+                    <div class="sec03-wrap-col fadeup-item">
                         <div class="sec03-wrap-col-img">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-img-04.jpg" alt="">
                         </div>
@@ -247,7 +247,7 @@ Template Name: enjoy-spa
                 <div class="sec04-center">
                     <h3>他のお風呂</h3>
                     <div class="sec04-center-wrap">
-                        <div class="sec04-center-wrap-col">
+                        <div class="sec04-center-wrap-col" id="else-01">
                             <div class="sec04-center-wrap-col-img-dt">
                                 <div class="sec04-center-wrap-col-img">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-img-05.jpg" alt="">
@@ -275,7 +275,7 @@ Template Name: enjoy-spa
                             </div>
                         </div>
 
-                        <div class="sec04-center-wrap-col">
+                        <div class="sec04-center-wrap-col" id="else-02">
                             <div class="sec04-center-wrap-col-img-dt">
                                 <div class="sec04-center-wrap-col-img">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-img-06.jpg" alt="">
@@ -303,7 +303,7 @@ Template Name: enjoy-spa
                             </div>
                         </div>
 
-                        <div class="sec04-center-wrap-col">
+                        <div class="sec04-center-wrap-col" id="else-03">
                             <div class="sec04-center-wrap-col-img-dt">
                                 <div class="sec04-center-wrap-col-img">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-img-07.jpg" alt="">
@@ -334,7 +334,7 @@ Template Name: enjoy-spa
                             </div>
                         </div>
 
-                        <div class="sec04-center-wrap-col">
+                        <div class="sec04-center-wrap-col" id="else-04">
                             <div class="sec04-center-wrap-col-img-dt">
                                 <div class="sec04-center-wrap-col-img">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-img-08.jpg" alt="">
@@ -364,7 +364,7 @@ Template Name: enjoy-spa
                                 </dl>
                             </div>
                         </div>
-                        <div class="sec04-center-wrap-col">
+                        <div class="sec04-center-wrap-col" id="else-05">
                             <div class="sec04-center-wrap-col-img-dt">
                                 <div class="sec04-center-wrap-col-img">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-img-09.jpg" alt="">
@@ -405,7 +405,7 @@ Template Name: enjoy-spa
                 </div>
 
             </div>
-            <div class="sec04-wrap">
+            <div class="sec04-wrap" id="natural">
                 <h3>天然温泉</h3>
                 <p>
                     当店の天然温泉は、保湿成分の1つであるメタけい酸が多く含まれているため、 肌の新陳代謝を促し、美肌効果が期待できる美肌の湯と呼ばれています。<br>
@@ -438,7 +438,7 @@ Template Name: enjoy-spa
                     </div>
                 </div>
 
-                <div class="sec04-wrap-blue-2-1">
+                <div class="sec04-wrap-blue-2-1" id="bihou">
                     <div class="sec04-wrap-blue-2-1-left">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-img-10.jpg" alt="">
                         <div class="sec04-wrap-blue-2-1-left-span">
@@ -478,7 +478,7 @@ Template Name: enjoy-spa
                 <p class="sec05-desc">
                     当館ではお客様に気持ちよくご利用いただくため、<br class="hidden-mobile">下記の事項をお守りくださいますようお願い申し上げます。
                 </p>
-                <div class="sec05-wrap">
+                <div class="sec05-wrap fadeup">
                     <ul>
                         <li>泥酔の方のご利用はお控えください。</li>
                         <li>生理中の方は湯船へのご入浴をお控えください。</li>

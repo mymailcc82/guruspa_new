@@ -130,6 +130,54 @@
 
 
 
+
+
+            <div class="sec02-container">
+                <h3>朝風呂</h3>
+                <div class="sec02-table sec02-table--col-2">
+                    <table>
+                        <tr>
+                            <th></th>
+                            <th>土日祝日</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                一般<br><span>※中学生以下</span>
+                            </td>
+                            <td>
+                                <strong>980</strong>円
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                会員
+                            </td>
+                            <td>
+                                <strong>930</strong>円
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                子供<br><span>※小学生以下</span>
+                            </td>
+                            <td>
+                                <strong>400</strong>円
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                幼児<br><span>※3歳以下</span>
+                            </td>
+                            <td colspan="2">
+                                <strong>無料</strong>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <p>
+                    ※朝風呂は土日祝日のみの営業となります
+                </p>
+            </div>
             <div class="sec02-container">
                 <h3>発汗エリア(有料岩盤浴)</h3>
                 <div class="sec02-table">
@@ -185,53 +233,6 @@
                 <p>
                     ※発汗エリアセットには専用ウェア・タオルが含まれます。<br>
                     ※小学生未満のお子様はご利用できません。
-                </p>
-            </div>
-
-            <div class="sec02-container">
-                <h3>朝風呂</h3>
-                <div class="sec02-table sec02-table--col-2">
-                    <table>
-                        <tr>
-                            <th></th>
-                            <th>土日祝日</th>
-                        </tr>
-                        <tr>
-                            <td>
-                                一般<br><span>※中学生以下</span>
-                            </td>
-                            <td>
-                                <strong>980</strong>円
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                会員
-                            </td>
-                            <td>
-                                <strong>930</strong>円
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                子供<br><span>※小学生以下</span>
-                            </td>
-                            <td>
-                                <strong>400</strong>円
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                幼児<br><span>※3歳以下</span>
-                            </td>
-                            <td colspan="2">
-                                <strong>無料</strong>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-                <p>
-                    ※朝風呂は土日祝日のみの営業となります
                 </p>
             </div>
 
@@ -489,10 +490,10 @@
             </div>
 
             <div class="com-btn-border-black hidden-mobile">
-                <a href="">館内の楽しみ方<i></i></a>
+                <a href="<?php echo home_url(); ?>/enjoy/">館内の楽しみ方<i></i></a>
             </div>
             <div class="com-btn-mobile hidden-sm">
-                <a href="">館内の楽しみ方<i></i></a>
+                <a href="<?php echo home_url(); ?>/enjoy/">館内の楽しみ方<i></i></a>
             </div>
         </div>
     </section>
@@ -525,10 +526,10 @@
                         </div>
                     </div>
                     <div class="com-btn-border-black hidden-mobile">
-                        <a href="">初めてのお客様へ<i></i></a>
+                        <a href="<?php echo home_url(); ?>/first-time/">初めてのお客様へ<i class="icon-green"></i></a>
                     </div>
                     <div class="com-btn-mobile hidden-sm">
-                        <a href="">初めてのお客様へ<i class="icon-green"></i></a>
+                        <a href="<?php echo home_url(); ?>/first-time/">初めてのお客様へ<i class="icon-green"></i></a>
                     </div>
                 </div>
                 <div class="sec03-container">
@@ -631,10 +632,10 @@
                 </div>
 
                 <div class="com-btn-border-black hidden-mobile">
-                    <a href="">よくある質問はこちら<i></i></a>
+                    <a href="<?php echo home_url(); ?>/faq/">よくある質問はこちら<i class="icon-green"></i></a>
                 </div>
                 <div class="com-btn-mobile hidden-sm">
-                    <a href="">よくある質問はこちら<i class="icon-green"></i></a>
+                    <a href="<?php echo home_url(); ?>/faq/">よくある質問はこちら<i class="icon-green"></i></a>
                 </div>
             </div>
         </div>
@@ -653,6 +654,15 @@
                     伊勢神宮・鳥羽水族館・志摩スペイン村など、人気観光地からの立ち寄りに最適な場所に位置しています！<br>
                     名古屋・大阪方面の帰路に便利な「松阪IC」近く、そして国道23号線沿いで車移動にもぴったりです。
                 </p>
+            </div>
+        </div>
+
+        <div class="spotMapInner">
+            <div class="spotMapBox">
+                <div class="spotMapBoxCanvas" id="map_canvas"></div>
+            </div>
+            <div class="spotMapListWrap" data-simplebar data-simplebar-auto-hide="false">
+                <ul class="spotMapList" id="mapList"></ul>
             </div>
         </div>
     </section>

@@ -1,0 +1,61 @@
+<?php
+/*
+Template Name: お問い合わせ(法人のお客様向け)確認
+*/
+?>
+<?php get_header(); ?>
+<main class="page-main contact">
+
+    <div class="page-breadcrumbs">
+        <nav aria-label="パンくずリスト">
+            <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a itemprop="item" href="<?php echo home_url(); ?>">
+                        <span itemprop="name">ホーム</span>
+                    </a>
+                    <meta itemprop="position" content="1" />
+                </li>
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a itemprop="item" href="<?php echo home_url(); ?>/contact-corporate/">
+                        <span itemprop="name">お問い合わせ(法人・企業様向け)</span>
+                    </a>
+                    <meta itemprop="position" content="2" />
+                </li>
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <span itemprop="name">確認</span>
+                    <meta itemprop="position" content="3" />
+                </li>
+            </ol>
+        </nav>
+    </div>
+
+    <section class="contact-sec">
+        <div class="content-width">
+            <div class="contact-mokuji step-02">
+                <ul class="">
+                    <li>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-contact-active.png" alt="">
+                        <p>情報入力</p>
+                    </li>
+                    <li class="active">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-contact-active.png" alt="">
+                        <p>内容確認</p>
+                    </li>
+                    <li>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-contact-normal.png" alt="">
+                        <p>送信完了</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="contact-container">
+                <p class="contact-container-desc">下記内容をご確認の上、送信ボタンを押してください。</p>
+                <div class="contact-wrap-right">
+                    <?php echo do_shortcode('[mwform_formkey key="105"]'); ?>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <?php get_template_part('inc/inc-contact'); ?>
+</main>
+<?php get_footer(); ?>

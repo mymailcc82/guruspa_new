@@ -1,3 +1,35 @@
+<?php
+
+$mont_data_origin = array(
+    '1' => 161,
+    '2' => 163,
+    '3' => 165,
+    '4' => 167,
+    '5' => 169,
+    '6' => 171,
+    '7' => 173,
+    '8' => 175,
+    '9' => 177,
+    '10' => 179,
+    '11' => 181,
+    '12' => 183,
+);
+//現在の月を取得
+$current_month = date('n');
+
+
+$mont_data = [];
+for ($i = 0; $i < 12; $i++) {
+    // 計算は 1..12 の範囲に戻す
+    $m = ($current_month + $i - 1) % 12 + 1;
+    $key = (string) $m; // 元の配列のキーが文字列なので文字列に変換
+    if (isset($mont_data_origin[$key])) {
+        $mont_data[$key] = $mont_data_origin[$key];
+    }
+}
+
+
+?>
 <?php get_header(); ?>
 <main class="page-main archive schedule">
     <div class="page-main-left-img">
@@ -47,15 +79,14 @@
             </div>
             <div class="sec01-swiper swiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/test/test-sche.jpg" alt="1月のイベントスケジュール">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/test/test-sche.jpg" alt="1月のイベントスケジュール">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/test/test-sche.jpg" alt="1月のイベントスケジュール">
-                    </div>
+                    <?php foreach ($mont_data as $key => $value) : ?>
+                        <div class="swiper-slide">
+                            <?php //$valueのpost_idから画像URLを取得
+                            $image_url = get_the_post_thumbnail_url($value, 'full');
+                            ?>
+                            <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($key); ?>月のイベントスケジュール">
+                        </div>
+                    <?php endforeach; ?>
                 </div>
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>

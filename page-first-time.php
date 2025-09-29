@@ -130,8 +130,8 @@
                         ウェルビーイングとは単なる健康だけでなく、<br class="hidden-sm">心身ともに満たされた状態を意味する言葉です。
                     </p>
                 </div>
-                <div class="sec02-list">
-                    <div class="sec02-list-item">
+                <div class="sec02-list fadeup-timelug">
+                    <div class="sec02-list-item fadeup-item">
                         <p>
                             忙しい日常に、<br>
                             ほっとする時間を。
@@ -140,7 +140,7 @@
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/first/sec02-list-01.png" alt="">
                         </div>
                     </div>
-                    <div class="sec02-list-item">
+                    <div class="sec02-list-item fadeup-item">
                         <p>
                             人とのつながりを<br>
                             感じられる場所に。
@@ -149,7 +149,7 @@
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/first/sec02-list-02.png" alt="">
                         </div>
                     </div>
-                    <div class="sec02-list-item">
+                    <div class="sec02-list-item fadeup-item">
                         <p>
                             心ゆくまでリラックスし、満たされる空間を。
                         </p>
@@ -175,7 +175,7 @@
                         グルスパの<span>ここに注目</span><i></i>
                     </h2>
                     <div class="sec02-bottom-wrap">
-                        <div class="sec02-bottom-wrap-col">
+                        <div class="sec02-bottom-wrap-col fadeup">
                             <div class="sec02-bottom-wrap-col-img">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/first/sec02-bottom-01.jpg" alt="">
                                 <div class="sec02-bottom-wrap-col-img-num">
@@ -191,7 +191,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="sec02-bottom-wrap-col">
+                        <div class="sec02-bottom-wrap-col fadeup">
                             <div class="sec02-bottom-wrap-col-img">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/first/sec02-bottom-02.jpg" alt="">
                                 <div class="sec02-bottom-wrap-col-img-num">
@@ -207,7 +207,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="sec02-bottom-wrap-col">
+                        <div class="sec02-bottom-wrap-col fadeup">
                             <div class="sec02-bottom-wrap-col-img">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/first/sec02-bottom-03.jpg" alt="">
                                 <div class="sec02-bottom-wrap-col-img-num">
@@ -225,10 +225,10 @@
                         </div>
                     </div>
                     <div class="com-btn-border-blue hidden-mobile">
-                        <a href="<?php echo home_url('/facility/'); ?>">施設紹介はこちら<i></i></a>
+                        <a href="<?php echo home_url('/enjoy/'); ?>">施設紹介はこちら<i></i></a>
                     </div>
                     <div class="com-btn-mobile hidden-sm">
-                        <a href="<?php echo home_url('/facility/'); ?>">施設紹介はこちら<i class="icon-blue"></i></a>
+                        <a href="<?php echo home_url('/enjoy/'); ?>">施設紹介はこちら<i class="icon-blue"></i></a>
                     </div>
                 </div>
             </div>
@@ -244,7 +244,7 @@
             </div>
 
             <div class="sec03-scroll">
-                <div class="sec03-wrap">
+                <div class="sec03-wrap fadeup">
                     <div class="sec03-wrap-col">
                         <div class="sec03-wrap-col-img">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/first/sec03-img-01.jpg" alt="">
@@ -256,10 +256,10 @@
                                 入館後はこちらのリストバンドにてキャッシュレスでお食事やお買い物が可能です。
                             </p>
                             <div class="com-btn-border-black com-btn-border-black--small hidden-mobile">
-                                <a href="<?php echo home_url('/price/'); ?>">料金案内はこちら<i></i></a>
+                                <a href="<?php echo home_url('/guide/#sec02'); ?>">料金案内はこちら<i></i></a>
                             </div>
                             <div class="com-btn-mobile hidden-sm">
-                                <a href="<?php echo home_url('/price/'); ?>">料金案内はこちら<i class="icon-black"></i></a>
+                                <a href="<?php echo home_url('/guide/#sec02'); ?>">料金案内はこちら<i class="icon-black"></i></a>
                             </div>
                         </div>
 
@@ -275,10 +275,10 @@
                             </p>
 
                             <div class="com-btn-border-black com-btn-border-black--small hidden-mobile">
-                                <a href="<?php echo home_url('/price/'); ?>">アメニティ詳細はこちら<i></i></a>
+                                <a href="<?php echo home_url('/enjoy/goods/#sec02'); ?>">アメニティ詳細はこちら<i></i></a>
                             </div>
                             <div class="com-btn-mobile hidden-sm">
-                                <a href="<?php echo home_url('/price/'); ?>">アメニティ詳細はこちら<i class="icon-black"></i></a>
+                                <a href="<?php echo home_url('/enjoy/goods/#sec02'); ?>">アメニティ詳細はこちら<i class="icon-black"></i></a>
                             </div>
                         </div>
 
@@ -294,10 +294,10 @@
                                 発汗エリア、リラクゼーションのご利用は別料金となります。
                             </p>
                             <div class="com-btn-border-black com-btn-border-black--small hidden-mobile">
-                                <a href="<?php echo home_url('/enjoy/hakkan/'); ?>">発汗エリアについて<i></i></a>
+                                <a href="<?php echo home_url('/enjoy/sweating/'); ?>">発汗エリアについて<i></i></a>
                             </div>
                             <div class="com-btn-mobile hidden-sm">
-                                <a href="<?php echo home_url('/enjoy/hakkan/'); ?>">発汗エリアについて<i class="icon-black"></i></a>
+                                <a href="<?php echo home_url('/enjoy/sweating/'); ?>">発汗エリアについて<i class="icon-black"></i></a>
                             </div>
                         </div>
 
@@ -376,12 +376,12 @@
                             <ul>
                                 <li>
                                     <div class="com-btn-border-black com-btn-border-black--small">
-                                        <a href="">Google Mapで開く<i></i></a>
+                                        <a href="https://maps.app.goo.gl/Vgrzvju7K94dyGY89" target="_blank" rel="noopener noreferrer">Google Mapで開く<i></i></a>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="com-btn-border-black com-btn-border-black--small">
-                                        <a href="">ご利用案内はこちら<i></i></a>
+                                        <a href="<?php echo home_url(); ?>/guid/">ご利用案内はこちら<i></i></a>
                                     </div>
                                 </li>
                             </ul>

@@ -1,3 +1,37 @@
+<?php
+$mont_data_origin = array(
+    '1' => 161,
+    '2' => 163,
+    '3' => 165,
+    '4' => 167,
+    '5' => 169,
+    '6' => 171,
+    '7' => 173,
+    '8' => 175,
+    '9' => 177,
+    '10' => 179,
+    '11' => 181,
+    '12' => 183,
+);
+//現在の月を取得
+$current_month = date('n');
+
+$mont_data = [];
+for ($i = 0; $i < 12; $i++) {
+    // 計算は 1..12 の範囲に戻す
+    $m = ($current_month + $i - 1) % 12 + 1;
+    $key = (string) $m; // 元の配列のキーが文字列なので文字列に変換
+    if (isset($mont_data_origin[$key])) {
+        $mont_data[$key] = $mont_data_origin[$key];
+    }
+}
+
+
+//今月の月と日にちを今日を初めに、昨日を終わりに配列にする
+$days = days_from_today_for_months();
+
+
+?>
 <?php get_header(); ?>
 <main class="page-main event schedule today">
     <div class="page-main-left-img">
@@ -43,54 +77,16 @@
         <div class="sec00-container">
             <div class="sec00-swiper swiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="swiper-slide-text">
-                            <div class="swiper-slide-text-container">
-                                8/<strong>4</strong><br>
-                                <span>mon.</span>
+                    <?php foreach ($days as $day): ?>
+                        <div class="swiper-slide" data-current-day="<?php echo $day["y"]; ?>-<?php echo $day["m"]; ?>-<?php echo $day["d"]; ?>">
+                            <div class="swiper-slide-text">
+                                <div class="swiper-slide-text-container swiper-<?php echo $day["week_class"]; ?>">
+                                    <?php echo $day["m"]; ?>/<strong><?php echo $day["d"]; ?></strong><br>
+                                    <span><?php echo $day["week"]; ?></span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="swiper-slide-text">
-                            <div class="swiper-slide-text-container">
-                                8/<strong>4</strong><br>
-                                <span>mon.</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="swiper-slide-text">
-                            <div class="swiper-slide-text-container">
-                                8/<strong>4</strong><br>
-                                <span>mon.</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="swiper-slide-text">
-                            <div class="swiper-slide-text-container">
-                                8/<strong>4</strong><br>
-                                <span>mon.</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="swiper-slide-text">
-                            <div class="swiper-slide-text-container">
-                                8/<strong>4</strong><br>
-                                <span>mon.</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="swiper-slide-text">
-                            <div class="swiper-slide-text-container">
-                                8/<strong>4</strong><br>
-                                <span>mon.</span>
-                            </div>
-                        </div>
-                    </div>
+                    <?php endforeach; ?>
                 </div>
             </div>
             <div class="swiper-button-prev swiper-button-prev-00"></div>
@@ -103,37 +99,98 @@
                 <h2><i></i>本日のイベント</h2>
             </div>
             <?php
+            // 例: "2025-09-28:00:00:00"
+            $now_day = date('Y-m-d 00:00:00');
+
             $args = array(
                 'post_type' => 'event', // 投稿タイプを指定
                 'posts_per_page' => 3, // 表示する投稿数を指定
-                //'category_name' => 'news', // カテゴリースラッグを指定
+                'meta_query' => [
+                    'relation' => 'OR',
+                    // グループA: sys_start_day <= $today AND sys_finish_day >= $today
+                    [
+                        'relation' => 'AND',
+                        [
+                            'key'     => 'sys_start_day',
+                            'value'   => $now_day,
+                            'compare' => '<=',
+                            'type'    => 'DATE',
+                        ],
+                        [
+                            'key'     => 'sys_finish_day',
+                            'value'   => $now_day,
+                            'compare' => '>=',
+                            'type'    => 'DATE',
+                        ],
+                    ],
+
+                    // グループB: event_loop_*_day が $today と一致する（meta_key にワイルドカードを使う）
+                    [
+                        'key' => 'event_loop_$_day', // 例：'prices'
+                        'value' => $now_day,
+                        'compare' => '=', // データベースでどのように比較するか（詳細は後述）
+                    ]
+                ],
             );
             ?>
             <?php $the_query = new WP_Query($args); ?>
             <div class="sec01-col-main">
-                <ul>
+                <ul id="post_list">
                     <?php if ($the_query->have_posts()) : ?>
                         <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+                            <?php
+                            $event_category = get_the_terms(get_the_ID(), 'event_category');
+                            $event_start_date = get_field('event_start_date'); // 開始日
+                            $is_hot = get_field('hot'); // HOT! フラグ
+                            ?>
                             <li>
                                 <a href="<?php the_permalink(); ?>">
+                                    <?php if ($is_hot) : ?>
+                                        <span class="hot"><?php echo $is_hot; ?></span>
+                                    <?php endif; ?>
                                     <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
                                     <div class="img img-event">
                                         <?php if (has_post_thumbnail()) : ?>
                                             <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>">
                                         <?php else : ?>
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-green.jpg" alt="">
+                                            <?php if ($event_category && !is_wp_error($event_category)) : ?>
+                                                <?php
+                                                // カテゴリーに応じたデフォルト画像を設定
+                                                $category_slug = $event_category[0]->slug;
+                                                $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-default.jpg'; // デフォルト画像
+
+                                                if ($category_slug === 'information') {
+                                                    $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-red.jpg';
+                                                } elseif ($category_slug === 'event') {
+                                                    $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-green.jpg';
+                                                } elseif ($category_slug === 'food') {
+                                                    $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-yellow.jpg';
+                                                }
+                                                ?>
+                                                <img src="<?php echo esc_url($default_image_url); ?>" alt="<?php the_title(); ?>">
+                                            <?php else : ?>
+                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-default.jpg" alt="<?php the_title(); ?>">
+                                            <?php endif; ?>
                                         <?php endif; ?>
                                     </div>
                                     <div class="text">
-                                        <span class="category category-green">
+                                        <div class="text-info">
                                             <?php
-                                            $categories = get_the_category();
-                                            if (! empty($categories)) {
-                                                echo esc_html($categories[0]->name);
+                                            if ($category_slug === 'information') {
+                                                $cats_class = 'category-red';
+                                            } elseif ($category_slug === 'event') {
+                                                $cats_class = 'category-green';
+                                            } elseif ($category_slug === 'food') {
+                                                $cats_class = 'category-yellow';
                                             }
                                             ?>
-                                        </span>
-                                        <span class="term"><?php echo get_the_date('Y.m.d'); ?></span>
+                                            <div class="text-info-cat">
+                                                <span class="category <?php echo esc_attr($cats_class); ?>"><?php echo esc_html($event_category[0]->name); ?></span>
+                                            </div>
+                                            <div class="text-info-term">
+                                                <span class="term"><?php echo $event_start_date; ?></span>
+                                            </div>
+                                        </div>
                                         <h3><?php the_title(); ?></h3>
                                     </div>
                                 </a>
@@ -154,23 +211,20 @@
         </div>
         <div class="page-deco-container page-deco-container--yellow">
             <section class="sec01">
-
-
                 <div class="content-width">
                     <div class="page-title-center--has-icon page-title--has-icon--mobile-20">
                         <h2><i></i>月間スケジュール</h2>
                     </div>
                     <div class="sec01-swiper swiper">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/test/test-sche.jpg" alt="1月のイベントスケジュール">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/test/test-sche.jpg" alt="1月のイベントスケジュール">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/test/test-sche.jpg" alt="1月のイベントスケジュール">
-                            </div>
+                            <?php foreach ($mont_data as $key => $value) : ?>
+                                <div class="swiper-slide">
+                                    <?php //$valueのpost_idから画像URLを取得
+                                    $image_url = get_the_post_thumbnail_url($value, 'full');
+                                    ?>
+                                    <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($key); ?>月のイベントスケジュール">
+                                </div>
+                            <?php endforeach; ?>
                         </div>
                         <div class="swiper-button-prev swiper-button-prev-01"></div>
                         <div class="swiper-button-next swiper-button-next-01"></div>
@@ -181,7 +235,6 @@
                             <a href="<?php echo home_url(); ?>/enjoy/sweating/">発汗エリア(有料エリア)について<i></i></a>
                         </div>
                     </div>
-
                 </div>
             </section>
             <section class="sec02">
@@ -224,20 +277,74 @@
 
     <?php get_template_part('inc/inc-contact'); ?>
 </main>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
     //swiper
     const swiper_00 = new Swiper('.sec00-swiper', {
         // Optional parameters
         loop: true,
         slidesPerView: "auto",
-        spaceBetween: 3.5,
-        centeredSlides: true,
+        spaceBetween: 4,
+        //centeredSlides: true,
         // Navigation arrows
         navigation: {
             nextEl: '.swiper-button-next-00',
             prevEl: '.swiper-button-prev-00',
         },
+        on: {
+            slideChangeTransitionEnd: function() {
+                // 現在の activeになっているdata-current-dayを取得
+                var currentDay = this.slides[this.activeIndex].getAttribute('data-current-day');
+                //./ajax/get_event_flg.phpにcurrentDayを渡して、イベントがあるかどうかを取得
+
+                $.ajax({
+                    url: '<?php echo get_template_directory_uri(); ?>/ajax/get_event_post.php',
+                    type: 'GET',
+                    data: {
+                        today: currentDay
+                    },
+                    dataType: 'json',
+                    //swiper-slideのdata-current-dayと
+                    success: function(response) {
+                        console.log(response);
+                        // post_listの中身をresponse.post_dataで置き換え
+                        var postList = $('#post_list');
+                        postList.empty(); // 既存の内容をクリア
+                        if (response.post_data.length > 0) {
+                            response.post_data.forEach(function(post) {
+                                console.log(post);
+                                var listItem = '<li>' +
+                                    '<a href="' + post.link + '">' +
+                                    (post.is_hot ? '<span class="hot">' + post.is_hot + '</span>' : '') +
+                                    '<span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>' +
+                                    '<div class="img img-event">' +
+                                    '<img src="' + post.thumbnail + '" alt="' + post.title + '">' +
+                                    '</div>' +
+                                    '<div class="text">' +
+                                    '<div class="text-info">' +
+                                    '<div class="text-info-cat">' +
+                                    '<span class="category ' + post.category_class + '">' + post.category_name + '</span>' +
+                                    '</div>' +
+                                    '<div class="text-info-term">' +
+                                    '<span class="term">' + post.event_start_date + '</span>' +
+                                    '</div>' +
+                                    '</div>' +
+                                    '<h3>' + post.title + '</h3>' +
+                                    '</div>' +
+                                    '</a>' +
+                                    '</li>';
+                                postList.append(listItem);
+                            });
+                        } else {
+                            postList.append('<p class="text-base center">イベントが見つかりませんでした。</p>');
+                        }
+                    }
+                });
+            }
+
+        }
+        //initの時に実行
+        // 現在の active スライド要素
     });
 
     //swiper
@@ -261,6 +368,30 @@
             prevEl: '.swiper-button-prev-01',
         },
 
+    });
+
+    //読み込み完了後実行
+    $(window).on('load', function() {
+        $.ajax({
+            url: '<?php echo get_template_directory_uri(); ?>/ajax/get_event_flg.php',
+            type: 'GET',
+            data: {
+                //today: currentDay
+            },
+            dataType: 'json',
+            //swiper-slideのdata-current-dayと
+            success: function(response) {
+                //console.log(response);
+                //response.days_flgをループして、data-current-dayと一致する場合、
+                //そのswiper-slideにclass active-eventを追加
+                $('.sec00-swiper .swiper-slide').each(function() {
+                    var currentDay = $(this).data('current-day');
+                    if (response.days_flg[currentDay] === '1') {
+                        $(this).addClass('active-event');
+                    }
+                });
+            }
+        });
     });
 </script>
 <?php get_footer(); ?>

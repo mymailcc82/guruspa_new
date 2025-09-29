@@ -17,7 +17,7 @@
         </nav>
     </div>
     <div class="notfound">
-        <div class="content-width">
+        <div class="content-width content-width--mobile-full">
             <div class="com-bnr">
                 <div class="sec02-icon-04">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/first/sec02-icon-04.png" alt="">
@@ -49,10 +49,12 @@
                     <h3>リクエストいただいたページが存在しません。</h3>
                     <p>
                         リクエストいただいたページは見つかりませんでした。<br>
-                        URLが間違っているか、<br>
-                        すでに削除されたページの可能性がございます。
+                        URLが間違っているか、<br class="hidden-mobile">すでに削除されたページの可能性がございます。
                     </p>
-                    <div class="com-btn-arrow-left com-btn-arrow-left--text-left">
+                    <div class="com-btn-arrow-left com-btn-arrow-left--text-left hidden-mobile">
+                        <a href="<?php echo home_url(); ?>/"><i></i>TOPへ戻る</a>
+                    </div>
+                    <div class="com-btn-mobile-reverse hidden-sm">
                         <a href="<?php echo home_url(); ?>/"><i></i>TOPへ戻る</a>
                     </div>
                 </div>

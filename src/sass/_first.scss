@@ -128,12 +128,38 @@
         padding-top: 150px;
         padding-bottom: 150px;
       }
+      &.sec02-about-active {
+        .sec02-icon-01 {
+          opacity: 1 !important;
+          transition-delay: 0.5s;
+        }
+        .sec02-icon-02 {
+          opacity: 1 !important;
+          transition-delay: 1s;
+        }
+        .sec02-icon-03 {
+          opacity: 1 !important;
+          transition-delay: 0.2s;
+        }
+        .sec02-icon-04 {
+          opacity: 1 !important;
+          transition-delay: 0.2s;
+        }
+        .sec02-icon-05 {
+          opacity: 1 !important;
+        }
+        .sec02-icon-06 {
+          opacity: 1 !important;
+        }
+      }
       .sec02-icon-04 {
         width: 308px;
         position: absolute;
         left: -100px;
         top: -50px;
+        opacity: 0;
         //リンク無効
+        transition: all 1s ease;
         pointer-events: none;
         @include media(middle) {
           width: 143px;
@@ -144,7 +170,9 @@
       .sec02-icon-05 {
         //リンク無効
         display: none;
+        opacity: 0;
         pointer-events: none;
+        transition: all 1s ease;
         @include media(middle) {
           width: 308px;
           position: absolute;
@@ -189,6 +217,8 @@
         width: 270px;
         position: absolute;
         right: -50px;
+        opacity: 0;
+        transition: all 1s ease;
         top: -50px;
         @include media(middle) {
           width: 140px;
@@ -198,6 +228,8 @@
       }
       .sec02-icon-02 {
         width: 386px;
+        opacity: 0;
+        transition: all 1s ease;
         position: absolute;
         right: -50px;
         bottom: -115px;
@@ -211,6 +243,8 @@
         width: 143px;
         position: absolute;
         left: 30px;
+        transition: all 1s ease;
+        opacity: 0;
         bottom: 30px;
         @include media(middle) {
           width: 120px;

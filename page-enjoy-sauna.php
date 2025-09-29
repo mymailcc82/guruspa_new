@@ -28,7 +28,7 @@ Template Name: enjoy-sauna
                     <meta itemprop="position" content="2" />
                 </li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <span itemprop="name">お風呂</span>
+                    <span itemprop="name">サウナ・水風呂</span>
                     <meta itemprop="position" content="3" />
                 </li>
             </ol>
@@ -39,7 +39,7 @@ Template Name: enjoy-sauna
             <div class="enjoy-wrap">
                 <div class="enjoy-wrap-txt">
                     <div class="com-title com-title--small com-title-hidden">
-                        <p>お風呂</p>
+                        <p>サウナ・水風呂</p>
                         <h2 class="">
                             <span class="title">S</span><span class="title">A</span><span class="title">U</span><span class="title">N</span><span class="title">A</span>
                             <span class="title title-item-sprout">
@@ -163,7 +163,7 @@ Template Name: enjoy-sauna
             <div class="sec04-bg">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sauna/sec04-bg-01.jpg" alt="">
             </div>
-            <div class="sec04-wrap">
+            <div class="sec04-wrap" id="hot">
                 <h3>ドライサウナ（高温サウナ）</h3>
                 <p>
                     しっかりと汗をかきたい方におすすめの本格派ドライサウナ。温度は約90〜100℃で、毎時20分おきのオートロウリュ。<br>
@@ -181,7 +181,7 @@ Template Name: enjoy-sauna
                     <div class="sec04-wrap-yellow-2-1-left">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sauna/sec04-img-01.jpg" alt="">
                     </div>
-                    <div class="sec04-wrap-yellow-2-1-right">
+                    <div class="sec04-wrap-yellow-2-1-right" id="salt">
                         <h3>塩サウナ</h3>
                         <p>
                             肌に塩を塗って、マッサージしながら入ることで発汗とともに古い角質を除去。<br>
@@ -201,8 +201,8 @@ Template Name: enjoy-sauna
                     <h3>塩サウナ入浴方法</h3>
                 </div>
 
-                <div class="sec03-wrap">
-                    <div class="sec03-wrap-col">
+                <div class="sec03-wrap fadeup-timelug">
+                    <div class="sec03-wrap-col fadeup-item">
                         <div class="sec03-wrap-col-img">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sauna/sec04-img-02.jpg" alt="">
                         </div>
@@ -210,7 +210,7 @@ Template Name: enjoy-sauna
                             5〜10分入って汗を出します。
                         </p>
                     </div>
-                    <div class="sec03-wrap-col">
+                    <div class="sec03-wrap-col fadeup-item">
                         <div class="sec03-wrap-col-img">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sauna/sec04-img-03.jpg" alt="">
                         </div>
@@ -218,7 +218,7 @@ Template Name: enjoy-sauna
                             塩を大さじ3杯ほど軽く押し付けるようにつけます。
                         </p>
                     </div>
-                    <div class="sec03-wrap-col">
+                    <div class="sec03-wrap-col fadeup-item">
                         <div class="sec03-wrap-col-img">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sauna/sec04-img-04.jpg" alt="">
                         </div>
@@ -226,7 +226,7 @@ Template Name: enjoy-sauna
                             塩が溶けたら優しくマッサージします。
                         </p>
                     </div>
-                    <div class="sec03-wrap-col">
+                    <div class="sec03-wrap-col fadeup-item">
                         <div class="sec03-wrap-col-img">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sauna/sec04-img-05.jpg" alt="">
                         </div>
@@ -295,47 +295,103 @@ Template Name: enjoy-sauna
                 <div class="page-title-center--has-icon">
                     <h2><i></i>サウナイベント情報</h2>
                 </div>
-
+            </div>
+            <div class="content-width-small content-width--mobile-full">
                 <div class="sec06-top">
-                    <div class="sec01-col-main">
-                        <ul>
-                            <li><a href="">
-                                    <span class="hot">HOT!</span>
-                                    <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
-                                    <div class="img img-event">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-green.jpg" alt="">
-                                    </div>
-                                    <div class="text">
-                                        <span class="category category-green">ご案内</span>
-                                        <span class="term">XX.XX.XX〜</span>
-                                        <h3>イベントタイトルが入ります</h3>
-                                    </div>
-                                </a></li>
-                            <li><a href="">
-                                    <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
-                                    <div class="img img-event">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-green.jpg" alt="">
-                                    </div>
-                                    <div class="text">
-                                        <span class="category category-green">イベント</span>
-                                        <span class="term">XX.XX.XX〜</span>
-                                        <h3>イベントタイトルが入ります</h3>
-                                    </div>
-                                </a></li>
-                            <li><a href="">
-                                    <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
-                                    <div class="img img-event">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-green.jpg" alt="">
-                                    </div>
-                                    <div class="text">
-                                        <span class="category category-green">フード/キッチントキワ</span>
-                                        <span class="term">XX.XX.XX〜</span>
-                                        <h3>イベントタイトルが入ります</h3>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
+                    <div class="area-event">
+                        <div class="swiper swiper-event sec01-col-main">
+                            <div class="swiper-wrapper">
+                                <?php
+                                $args = array(
+                                    'post_type' => 'event', // カスタム投稿タイプ名
+                                    'posts_per_page' => 3, // 表示する記事数
+                                    'orderby' => 'date', // 日付でソート
+                                    'order' => 'DESC', // 降順
+                                    //event_categoryが'event'のものを取得
+                                    'tax_query' => array(
+                                        array(
+                                            'taxonomy' => 'event_category',
+                                            'field'    => 'slug',
+                                            'terms'    => 'event', // ここに取得したいカテゴリーのスラッグを指定
+                                        ),
+                                    ),
+                                );
+                                ?>
+                                <?php
+                                $the_query = new WP_Query($args);
+                                if ($the_query->have_posts()) :
+                                    while ($the_query->have_posts()) : $the_query->the_post();
+                                        $event_category = get_the_terms(get_the_ID(), 'event_category');
+                                        $event_start_date = get_field('event_start_date'); // 開始日
+                                        $is_hot = get_field('hot'); // HOT! フラグ
+                                ?>
+
+                                        <div class="swiper-slide">
+                                            <a href="<?php the_permalink(); ?>">
+                                                <?php if ($is_hot) : ?>
+                                                    <span class="hot"><?php echo $is_hot; ?></span>
+                                                <?php endif; ?>
+                                                <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
+                                                <div class="img img-info">
+                                                    <?php if (has_post_thumbnail()) : ?>
+                                                        <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>">
+                                                    <?php else : ?>
+                                                        <?php if ($event_category && !is_wp_error($event_category)) : ?>
+                                                            <?php
+                                                            // カテゴリーに応じたデフォルト画像を設定
+                                                            $category_slug = $event_category[0]->slug;
+                                                            $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-default.jpg'; // デフォルト画像
+
+                                                            if ($category_slug === 'information') {
+                                                                $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-red.jpg';
+                                                            } elseif ($category_slug === 'event') {
+                                                                $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-green.jpg';
+                                                            } elseif ($category_slug === 'food') {
+                                                                $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-yellow.jpg';
+                                                            }
+                                                            ?>
+                                                            <img src="<?php echo esc_url($default_image_url); ?>" alt="<?php the_title(); ?>">
+                                                        <?php else : ?>
+                                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-default.jpg" alt="<?php the_title(); ?>">
+                                                        <?php endif; ?>
+                                                    <?php endif; ?>
+                                                </div>
+                                                <div class="text">
+                                                    <div class="text-info">
+                                                        <?php
+                                                        if ($category_slug === 'information') {
+                                                            $cats_class = 'category-red';
+                                                        } elseif ($category_slug === 'event') {
+                                                            $cats_class = 'category-green';
+                                                        } elseif ($category_slug === 'food') {
+                                                            $cats_class = 'category-yellow';
+                                                        }
+                                                        ?>
+                                                        <div class="text-info-cat">
+                                                            <span class="category <?php echo esc_attr($cats_class); ?>"><?php echo esc_html($event_category[0]->name); ?></span>
+                                                        </div>
+                                                        <div class="text-info-term">
+                                                            <span class="term"><?php echo $event_start_date; ?></span>
+                                                        </div>
+
+                                                    </div>
+
+                                                    <h3><?php the_title(); ?></h3>
+                                                </div>
+                                            </a>
+                                        </div>
+                                <?php
+                                    endwhile;
+                                    wp_reset_postdata();
+                                else :
+                                    echo '<p class="text-base">イベントが見つかりませんでした。</p>';
+                                endif;
+                                ?>
+                            </div>
+                        </div>
                     </div>
+
+
                     <div class="com-btn-border-black">
                         <a href="<?php echo home_url(); ?>/event/">イベント情報一覧を見る<i></i></a>
                     </div>
@@ -353,7 +409,7 @@ Template Name: enjoy-sauna
                 <div class="sec06-bottom">
                     <div class="sec06-bottom-col">
                         <div class="sec-01-col-under">
-                            <a href="">
+                            <a href="<?php echo home_url(); ?>/today/">
                                 <div class="sec-01-col-under-img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/bnr/page-bnr-today-img.jpg" alt=""></div>
                                 <div class="sec-01-col-under-title">
                                     <h3><img src="<?php echo get_template_directory_uri(); ?>/assets/img/bnr/page-bnr-today-txt.png" alt="EVENT SCHEDULE"><i class="icon-btn"></i></h3>
@@ -364,7 +420,7 @@ Template Name: enjoy-sauna
                     </div>
                     <div class="sec06-bottom-col">
                         <div class="sec-01-col-under">
-                            <a href="">
+                            <a href="<?php echo home_url(); ?>/schedule/">
                                 <div class="sec-01-col-under-img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/bnr/page-bnr-event-img.jpg" alt=""></div>
                                 <div class="sec-01-col-under-title">
                                     <h3><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/title-event-schedule_v2.png" alt="EVENT SCHEDULE"><i class="icon-btn"></i></h3>

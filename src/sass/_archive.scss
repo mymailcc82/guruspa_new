@@ -238,6 +238,18 @@
         border: 1px solid var(--color-black);
         font-size: 14px;
         margin-right: 10px;
+        &.cat-event {
+          background-color: #5cb232;
+          color: #fff;
+        }
+        &.cat-info {
+          background-color: #f4ba1d;
+          color: #fff;
+        }
+        &.cat-food {
+          background-color: #e81e23;
+          color: #fff;
+        }
       }
       time {
         font-size: 16px;

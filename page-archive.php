@@ -17,7 +17,7 @@
                     <meta itemprop="position" content="1" />
                 </li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <span itemprop="name">NEWS</span>
+                    <span itemprop="name">お知らせ</span>
                     <meta itemprop="position" content="2" />
                 </li>
             </ol>
@@ -40,16 +40,18 @@
             </div>
         </div>
         <div class="sec01-col">
-            <ul class="sec01-col-select tab">
+            <ul class="sec01-col-select">
                 <li class="active"><a href="javascript:void(0)" data-id="#area01">すべて</a></li>
-                <li><a href="javascript:void(0)" data-id="#area02">期間限定<br class="hidden-sm">イベント</a></li>
-                <li><a href="javascript:void(0)" data-id="#area03">定例<br class="hidden-sm">イベント</a></li>
+                <li><a href="<?php echo home_url(); ?>/category/news/">お知らせ</a></li>
+                <li><a href="<?php echo home_url(); ?>/category/media/">メディア</a></li>
             </ul>
             <div id="area01" class="area is-active">
                 <div class="swiper swiper-event sec01-col-main">
                     <div class="content-width">
                         <?php
+                        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
                         $args = array(
+                            'paged' => $paged,
                             'post_type' => 'post', // 投稿タイプを指定
                             'posts_per_page' => 3, // 表示する投稿数を指定
                             //'category_name' => 'news', // カテゴリースラッグを指定
@@ -141,6 +143,9 @@
                             <?php endif; ?>
                         </div>
                     </div>
+                </div>
+                <div class="content-width">
+                    <?php custom_pagination($the_query); ?>
                 </div>
             </div>
         </div>

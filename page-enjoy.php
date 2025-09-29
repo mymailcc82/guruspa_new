@@ -158,42 +158,42 @@ Template Name: enjoy
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-img-02.jpg" alt="">
                             </div>
                             <div class="sec01-col-main-02-01">
-                                <a href="javascript:void(0)" class="pulse-btn popup-btn" data-id="enjoy-06">
+                                <a href="<?php echo home_url(); ?>/enjoy/sauna/#hot" class="pulse-btn">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-icon.png" alt="">
                                 </a>
                             </div>
                             <div class="sec01-col-main-02-02">
-                                <a href="javascript:void(0)" class="pulse-btn popup-btn" data-id="enjoy-06">
+                                <a href="<?php echo home_url(); ?>/enjoy/sauna/#salt" class="pulse-btn">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-icon.png" alt="">
                                 </a>
                             </div>
                             <div class="sec01-col-main-02-03">
-                                <a href="javascript:void(0)" class="pulse-btn popup-btn" data-id="enjoy-06">
+                                <a href="<?php echo home_url(); ?>/enjoy/spa/#else-01" class="pulse-btn">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-icon.png" alt="">
                                 </a>
                             </div>
                             <div class="sec01-col-main-02-04">
-                                <a href="javascript:void(0)" class="pulse-btn popup-btn" data-id="enjoy-06">
+                                <a href="<?php echo home_url(); ?>/enjoy/spa/#else-03" class="pulse-btn">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-icon.png" alt="">
                                 </a>
                             </div>
                             <div class="sec01-col-main-02-05">
-                                <a href="javascript:void(0)" class="pulse-btn popup-btn" data-id="enjoy-06">
+                                <a href="<?php echo home_url(); ?>/enjoy/spa/#natural" class="pulse-btn">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-icon.png" alt="">
                                 </a>
                             </div>
                             <div class="sec01-col-main-02-06">
-                                <a href="javascript:void(0)" class="pulse-btn popup-btn" data-id="enjoy-06">
+                                <a href="<?php echo home_url(); ?>/enjoy/relaxation/" class="pulse-btn">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-icon.png" alt="">
                                 </a>
                             </div>
                             <div class="sec01-col-main-02-07">
-                                <a href="javascript:void(0)" class="pulse-btn popup-btn" data-id="enjoy-06">
+                                <a href="<?php echo home_url(); ?>/enjoy/spa/#else-04" class="pulse-btn">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-icon.png" alt="">
                                 </a>
                             </div>
                             <div class="sec01-col-main-02-08">
-                                <a href="javascript:void(0)" class="pulse-btn popup-btn" data-id="enjoy-06">
+                                <a href="<?php echo home_url(); ?>/enjoy/spa/#else-04" class="pulse-btn">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-icon.png" alt="">
                                 </a>
                             </div>
@@ -203,17 +203,17 @@ Template Name: enjoy
                                 </a>
                             </div>
                             <div class="sec01-col-main-02-10">
-                                <a href="javascript:void(0)" class="pulse-btn popup-btn" data-id="enjoy-06">
+                                <a href="<?php echo home_url(); ?>/enjoy/spa/#else-01" class="pulse-btn">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-icon.png" alt="">
                                 </a>
                             </div>
                             <div class="sec01-col-main-02-11">
-                                <a href="javascript:void(0)" class="pulse-btn popup-btn" data-id="enjoy-06">
+                                <a href="<?php echo home_url(); ?>/enjoy/spa/#bihou" class="pulse-btn">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-icon.png" alt="">
                                 </a>
                             </div>
                             <div class="sec01-col-main-02-12">
-                                <a href="javascript:void(0)" class="pulse-btn popup-btn" data-id="enjoy-06">
+                                <a href="<?php echo home_url(); ?>/enjoy/spa/#bihou" class="pulse-btn">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-icon.png" alt="">
                                 </a>
                             </div>
@@ -337,7 +337,7 @@ Template Name: enjoy
                             大きな露天風呂をはじめ、様々な種類のお風呂をご用意しておりますので、四季の風を感じながら至福のひとときをお過ごしください。
                         </p>
                         <div class="com-btn-border-white com-btn-border--210">
-                            <a href="">くわしく見る<i></i></a>
+                            <a href="<?php echo home_url(); ?>/enjoy/spa/">くわしく見る<i></i></a>
                         </div>
                     </div>
                 </div>
@@ -368,7 +368,7 @@ Template Name: enjoy
                             ここでしか体験できないサウナ時間で、ぜひ“最高のととのい”を見つけてください。
                         </p>
                         <div class="com-btn-border-black com-btn-border--210">
-                            <a href="">くわしく見る<i class="icon-opacity"></i></a>
+                            <a href="<?php echo home_url(); ?>/enjoy/sauna/">くわしく見る<i></i></a>
                         </div>
                     </div>
                 </div>
@@ -399,7 +399,7 @@ Template Name: enjoy
                             館内とはひと味違う、深いリラックスをお楽しみください。
                         </p>
                         <div class="com-btn-border-white com-btn-border--210">
-                            <a href="">くわしく見る<i></i></a>
+                            <a href="<?php echo home_url(); ?>/enjoy/sweating/">くわしく見る<i></i></a>
                         </div>
                     </div>
                 </div>
@@ -429,7 +429,7 @@ Template Name: enjoy
                             館内着のまま気軽にご利用ください。
                         </p>
                         <div class="com-btn-border-black com-btn-border--210">
-                            <a href="">くわしく見る<i class="icon-opacity"></i></a>
+                            <a href="<?php echo home_url(); ?>/enjoy/food/">くわしく見る<i></i></a>
                         </div>
                     </div>
                 </div>
@@ -459,7 +459,7 @@ Template Name: enjoy
                             予約制でスムーズにご案内でき、定期的にリラクイベントも開催中。贅沢なひとときをお過ごしください。
                         </p>
                         <div class="com-btn-border-white com-btn-border--210">
-                            <a href="">くわしく見る<i></i></a>
+                            <a href="<?php echo home_url(); ?>/enjoy/relaxation/">くわしく見る<i></i></a>
                         </div>
                     </div>
                 </div>
@@ -489,7 +489,7 @@ Template Name: enjoy
                             オリジナルグッズも取り揃えており、お土産や記念品としてもおすすめです。
                         </p>
                         <div class="com-btn-border-white com-btn-border--210">
-                            <a href="">くわしく見る<i></i></a>
+                            <a href="<?php echo home_url(); ?>/enjoy/goods/">くわしく見る<i></i></a>
                         </div>
                     </div>
                 </div>

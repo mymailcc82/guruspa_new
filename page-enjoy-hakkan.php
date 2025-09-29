@@ -110,27 +110,27 @@ Template Name: enjoy-hakkan
                     </picture>
                 </div>
                 <div class="sec02-area-01">
-                    <a href="#">
+                    <a href="#area-guide-01">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/hakkan-icon-01.png" alt="">
                     </a>
                 </div>
                 <div class="sec02-area-02">
-                    <a href="#">
+                    <a href="#area-guide-02">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/hakkan-icon-02.png" alt="">
                     </a>
                 </div>
                 <div class="sec02-area-03">
-                    <a href="#">
+                    <a href="#area-guide-03">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/hakkan-icon-03.png" alt="">
                     </a>
                 </div>
                 <div class="sec02-area-04">
-                    <a href="#">
+                    <a href="#area-guide-04">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/hakkan-icon-04.png" alt="">
                     </a>
                 </div>
                 <div class="sec02-area-05">
-                    <a href="#">
+                    <a href="#area-guide-05">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/hakkan-icon-05.png" alt="">
                     </a>
                 </div>
@@ -254,7 +254,7 @@ Template Name: enjoy-hakkan
             <div class="sec04-bg">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-01.jpg" alt="">
             </div>
-            <div class="sec04-wrap">
+            <div class="sec04-wrap" id="area-guide-01">
                 <h3>
                     <img class="logo-01" src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-logo-01.jpg" alt="">
                 </h3>
@@ -298,7 +298,7 @@ Template Name: enjoy-hakkan
             <div class="sec04-bg">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-05.jpg" alt="">
             </div>
-            <div class="sec04-wrap">
+            <div class="sec04-wrap" id="area-guide-02">
                 <h3>
                     <img class="logo-02" src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-logo-02.svg" alt="">
                 </h3>
@@ -314,7 +314,7 @@ Template Name: enjoy-hakkan
             </div>
             <div class="content-width content-width--middle-full">
                 <div class="sec03-scroll">
-                    <div class="sec03-wrap">
+                    <div class="sec03-wrap fadeup">
                         <div class="sec03-wrap-col">
                             <div class="sec03-wrap-col-img">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/test/test-01.jpg" alt="">
@@ -379,7 +379,7 @@ Template Name: enjoy-hakkan
                     <h3>薬石紹介</h3>
                     <div class="sec04-center-col-4-1">
                         <div class="sec04-center-col-4-1-item">
-                            <a href="">
+                            <a href="javascript:void(0);" class="stone-btn" data-id="stone-01">
                                 <div class="sec04-center-col-4-1-item-img">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-11.jpg" alt="">
                                 </div>
@@ -391,7 +391,7 @@ Template Name: enjoy-hakkan
                             </a>
                         </div>
                         <div class="sec04-center-col-4-1-item">
-                            <a href="">
+                            <a href="javascript:void(0);" class="stone-btn" data-id="stone-02">
                                 <div class="sec04-center-col-4-1-item-img">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-11.jpg" alt="">
                                 </div>
@@ -403,7 +403,7 @@ Template Name: enjoy-hakkan
                             </a>
                         </div>
                         <div class="sec04-center-col-4-1-item">
-                            <a href="">
+                            <a href="javascript:void(0);" class="stone-btn" data-id="stone-03">
                                 <div class="sec04-center-col-4-1-item-img">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-11.jpg" alt="">
                                 </div>
@@ -415,7 +415,7 @@ Template Name: enjoy-hakkan
                             </a>
                         </div>
                         <div class="sec04-center-col-4-1-item">
-                            <a href="">
+                            <a href="javascript:void(0);" class="stone-btn" data-id="stone-04">
                                 <div class="sec04-center-col-4-1-item-img">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-11.jpg" alt="">
                                 </div>
@@ -427,7 +427,7 @@ Template Name: enjoy-hakkan
                             </a>
                         </div>
                         <div class="sec04-center-col-4-1-item">
-                            <a href="">
+                            <a href="javascript:void(0);" class="stone-btn" data-id="stone-05">
                                 <div class="sec04-center-col-4-1-item-img">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-11.jpg" alt="">
                                 </div>
@@ -439,7 +439,7 @@ Template Name: enjoy-hakkan
                             </a>
                         </div>
                         <div class="sec04-center-col-4-1-item">
-                            <a href="">
+                            <a href="javascript:void(0);" class="stone-btn" data-id="stone-06">
                                 <div class="sec04-center-col-4-1-item-img">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-11.jpg" alt="">
                                 </div>
@@ -451,7 +451,7 @@ Template Name: enjoy-hakkan
                             </a>
                         </div>
                         <div class="sec04-center-col-4-1-item">
-                            <a href="">
+                            <a href="javascript:void(0);" class="stone-btn" data-id="stone-07">
                                 <div class="sec04-center-col-4-1-item-img">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-11.jpg" alt="">
                                 </div>
@@ -463,7 +463,7 @@ Template Name: enjoy-hakkan
                             </a>
                         </div>
                         <div class="sec04-center-col-4-1-item">
-                            <a href="">
+                            <a href="javascript:void(0);" class="stone-btn" data-id="stone-08">
                                 <div class="sec04-center-col-4-1-item-img">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-11.jpg" alt="">
                                 </div>
@@ -498,7 +498,7 @@ Template Name: enjoy-hakkan
             <div class="sec04-bg">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-12.jpg" alt="">
             </div>
-            <div class="sec04-wrap">
+            <div class="sec04-wrap" id="area-guide-03">
                 <h3>
                     <img class="logo-03" src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-logo-03.svg" alt="">
                 </h3>
@@ -538,7 +538,7 @@ Template Name: enjoy-hakkan
             <div class="sec04-bg">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-13.jpg" alt="">
             </div>
-            <div class="sec04-wrap">
+            <div class="sec04-wrap" id="area-guide-04">
                 <h3>
                     <img class="logo-04" src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-logo-04.svg" alt="">
                 </h3>
@@ -618,7 +618,7 @@ Template Name: enjoy-hakkan
         <div class="page-deco-bg">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-red-top.png" alt="">
         </div>
-        <div class="page-deco-container page-deco-container--red">
+        <div class="page-deco-container page-deco-container--red" id="area-guide-05">
             <div class="content-width-sm">
                 <h2>
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-logo.svg" alt="">
@@ -786,7 +786,413 @@ Template Name: enjoy-hakkan
     <?php get_template_part('inc/inc-contact'); ?>
 
 
+    <div class="stone-fixed">
+        <div class="stone-fixed-bg stone-fixed-btn-close"></div>
+        <div class="stone-fixed-container">
+            <div class="stone-fixed-container-wrap" id="stone-01">
+                <div class="stone-fixed-container-wrap-close stone-fixed-btn-close">
+                    <a href="javascript:void(0)"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close.svg" alt="閉じる"></a>
+                </div>
+                <div class="stone-fixed-container-wrap-bg">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-bg.jpg" alt="">
+                </div>
+                <div class="stone-fixed-container-wrap-content">
+                    <div class="stone-fixed-container-wrap-content-img">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-img-02.jpg" alt="">
+                        <div class="stone-fixed-container-wrap-content-img-left">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-bg-left.svg" alt="">
+                        </div>
+                        <div class="stone-fixed-container-wrap-content-img-right">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-bg-right.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="stone-fixed-container-wrap-content-txt">
+                        <h3>トルマリン石</h3>
+                        <p>
+                            地球上にはたくさんの鉱物が存在しますが、その中で唯一自ら電気を帯びる鉱石として「電気石」と呼ばれています。<br>
+                            「電気石」であるがゆえに永久に放つマイナスイオンは人間の躯を精神的、肉体的にリラックスさせ、リフレッシュ効果、体質改善、免疫力向上、疲労回復などの効果を及ぼすと言われています。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="stone-fixed-container-wrap" id="stone-02">
+                <div class="stone-fixed-container-wrap-close stone-fixed-btn-close">
+                    <a href="javascript:void(0)"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close.svg" alt="閉じる"></a>
+                </div>
+                <div class="stone-fixed-container-wrap-bg">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-bg.jpg" alt="">
+                </div>
+                <div class="stone-fixed-container-wrap-content">
+                    <div class="stone-fixed-container-wrap-content-img">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-img-02.jpg" alt="">
+                        <div class="stone-fixed-container-wrap-content-img-left">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-bg-left.svg" alt="">
+                        </div>
+                        <div class="stone-fixed-container-wrap-content-img-right">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-bg-right.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="stone-fixed-container-wrap-content-txt">
+                        <h3>ブラックゲルマ</h3>
+                        <p>
+                            地球上にはたくさんの鉱物が存在しますが、その中で唯一自ら電気を帯びる鉱石として「電気石」と呼ばれています。<br>
+                            「電気石」であるがゆえに永久に放つマイナスイオンは人間の躯を精神的、肉体的にリラックスさせ、リフレッシュ効果、体質改善、免疫力向上、疲労回復などの効果を及ぼすと言われています。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="stone-fixed-container-wrap" id="stone-03">
+                <div class="stone-fixed-container-wrap-close stone-fixed-btn-close">
+                    <a href="javascript:void(0)"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close.svg" alt="閉じる"></a>
+                </div>
+                <div class="stone-fixed-container-wrap-bg">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-bg.jpg" alt="">
+                </div>
+                <div class="stone-fixed-container-wrap-content">
+                    <div class="stone-fixed-container-wrap-content-img">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-img-02.jpg" alt="">
+                        <div class="stone-fixed-container-wrap-content-img-left">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-bg-left.svg" alt="">
+                        </div>
+                        <div class="stone-fixed-container-wrap-content-img-right">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-bg-right.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="stone-fixed-container-wrap-content-txt">
+                        <h3>イエロオニキス</h3>
+                        <p>
+                            地球上にはたくさんの鉱物が存在しますが、その中で唯一自ら電気を帯びる鉱石として「電気石」と呼ばれています。<br>
+                            「電気石」であるがゆえに永久に放つマイナスイオンは人間の躯を精神的、肉体的にリラックスさせ、リフレッシュ効果、体質改善、免疫力向上、疲労回復などの効果を及ぼすと言われています。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="stone-fixed-container-wrap" id="stone-04">
+                <div class="stone-fixed-container-wrap-close stone-fixed-btn-close">
+                    <a href="javascript:void(0)"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close.svg" alt="閉じる"></a>
+                </div>
+                <div class="stone-fixed-container-wrap-bg">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-bg.jpg" alt="">
+                </div>
+                <div class="stone-fixed-container-wrap-content">
+                    <div class="stone-fixed-container-wrap-content-img">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-img-02.jpg" alt="">
+                        <div class="stone-fixed-container-wrap-content-img-left">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-bg-left.svg" alt="">
+                        </div>
+                        <div class="stone-fixed-container-wrap-content-img-right">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-bg-right.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="stone-fixed-container-wrap-content-txt">
+                        <h3>木紋石</h3>
+                        <p>
+                            地球上にはたくさんの鉱物が存在しますが、その中で唯一自ら電気を帯びる鉱石として「電気石」と呼ばれています。<br>
+                            「電気石」であるがゆえに永久に放つマイナスイオンは人間の躯を精神的、肉体的にリラックスさせ、リフレッシュ効果、体質改善、免疫力向上、疲労回復などの効果を及ぼすと言われています。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="stone-fixed-container-wrap" id="stone-05">
+                <div class="stone-fixed-container-wrap-close stone-fixed-btn-close">
+                    <a href="javascript:void(0)"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close.svg" alt="閉じる"></a>
+                </div>
+                <div class="stone-fixed-container-wrap-bg">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-bg.jpg" alt="">
+                </div>
+                <div class="stone-fixed-container-wrap-content">
+                    <div class="stone-fixed-container-wrap-content-img">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-img-02.jpg" alt="">
+                        <div class="stone-fixed-container-wrap-content-img-left">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-bg-left.svg" alt="">
+                        </div>
+                        <div class="stone-fixed-container-wrap-content-img-right">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-bg-right.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="stone-fixed-container-wrap-content-txt">
+                        <h3>薬宝緑玉石（甲翠）</h3>
+                        <p>
+                            地球上にはたくさんの鉱物が存在しますが、その中で唯一自ら電気を帯びる鉱石として「電気石」と呼ばれています。<br>
+                            「電気石」であるがゆえに永久に放つマイナスイオンは人間の躯を精神的、肉体的にリラックスさせ、リフレッシュ効果、体質改善、免疫力向上、疲労回復などの効果を及ぼすと言われています。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="stone-fixed-container-wrap" id="stone-06">
+                <div class="stone-fixed-container-wrap-close stone-fixed-btn-close">
+                    <a href="javascript:void(0)"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close.svg" alt="閉じる"></a>
+                </div>
+                <div class="stone-fixed-container-wrap-bg">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-bg.jpg" alt="">
+                </div>
+                <div class="stone-fixed-container-wrap-content">
+                    <div class="stone-fixed-container-wrap-content-img">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-img-02.jpg" alt="">
+                        <div class="stone-fixed-container-wrap-content-img-left">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-bg-left.svg" alt="">
+                        </div>
+                        <div class="stone-fixed-container-wrap-content-img-right">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-bg-right.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="stone-fixed-container-wrap-content-txt">
+                        <h3>麦飯石(紅)</h3>
+                        <p>
+                            地球上にはたくさんの鉱物が存在しますが、その中で唯一自ら電気を帯びる鉱石として「電気石」と呼ばれています。<br>
+                            「電気石」であるがゆえに永久に放つマイナスイオンは人間の躯を精神的、肉体的にリラックスさせ、リフレッシュ効果、体質改善、免疫力向上、疲労回復などの効果を及ぼすと言われています。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="stone-fixed-container-wrap" id="stone-07">
+                <div class="stone-fixed-container-wrap-close stone-fixed-btn-close">
+                    <a href="javascript:void(0)"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close.svg" alt="閉じる"></a>
+                </div>
+                <div class="stone-fixed-container-wrap-bg">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-bg.jpg" alt="">
+                </div>
+                <div class="stone-fixed-container-wrap-content">
+                    <div class="stone-fixed-container-wrap-content-img">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-img-02.jpg" alt="">
+                        <div class="stone-fixed-container-wrap-content-img-left">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-bg-left.svg" alt="">
+                        </div>
+                        <div class="stone-fixed-container-wrap-content-img-right">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-bg-right.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="stone-fixed-container-wrap-content-txt">
+                        <h3>麦飯石(白)</h3>
+                        <p>
+                            地球上にはたくさんの鉱物が存在しますが、その中で唯一自ら電気を帯びる鉱石として「電気石」と呼ばれています。<br>
+                            「電気石」であるがゆえに永久に放つマイナスイオンは人間の躯を精神的、肉体的にリラックスさせ、リフレッシュ効果、体質改善、免疫力向上、疲労回復などの効果を及ぼすと言われています。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="stone-fixed-container-wrap" id="stone-08">
+                <div class="stone-fixed-container-wrap-close stone-fixed-btn-close">
+                    <a href="javascript:void(0)"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close.svg" alt="閉じる"></a>
+                </div>
+                <div class="stone-fixed-container-wrap-bg">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-bg.jpg" alt="">
+                </div>
+                <div class="stone-fixed-container-wrap-content">
+                    <div class="stone-fixed-container-wrap-content-img">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-img-02.jpg" alt="">
+                        <div class="stone-fixed-container-wrap-content-img-left">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-bg-left.svg" alt="">
+                        </div>
+                        <div class="stone-fixed-container-wrap-content-img-right">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-bg-right.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="stone-fixed-container-wrap-content-txt">
+                        <h3>鳳緑石</h3>
+                        <p>
+                            地球上にはたくさんの鉱物が存在しますが、その中で唯一自ら電気を帯びる鉱石として「電気石」と呼ばれています。<br>
+                            「電気石」であるがゆえに永久に放つマイナスイオンは人間の躯を精神的、肉体的にリラックスさせ、リフレッシュ効果、体質改善、免疫力向上、疲労回復などの効果を及ぼすと言われています。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="enjoy-fixed">
+        <div class="enjoy-fixed-bg enjoy-fixed-btn-close"></div>
+        <div class="enjoy-fixed-container">
+            <div class="enjoy-fixed-container-wrap" id="enjoy-01">
+                <div class="enjoy-fixed-container-wrap-close enjoy-fixed-btn-close">
+                    <a href="javascript:void(0)"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close.svg" alt="閉じる"></a>
+                </div>
+                <div class="enjoy-fixed-container-wrap-bg">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-bg-blue.jpg" alt="">
+                </div>
+
+                <div class="enjoy-fixed-container-wrap-content">
+                    <div class="enjoy-fixed-container-wrap-content-img">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-img-01.jpg" alt="">
+                        <div class="enjoy-fixed-container-wrap-content-img-left">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-left.png" alt="">
+                        </div>
+                        <div class="enjoy-fixed-container-wrap-content-img-right">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-right.png" alt="">
+                        </div>
+                    </div>
+                    <div class="enjoy-fixed-container-wrap-content-txt">
+                        <h3>お風呂</h3>
+                        <p>
+                            地下1,300ｍから汲み上げた天然温泉を使用。<br>
+                            泉質はメタけい酸を豊富に含み、肌の新陳代謝を促し、セラミドを整える“美肌の湯”として知られています。<br>
+                            大きな露天風呂をはじめ、様々な種類のお風呂をご用意しておりますので、四季の風を感じながら至福のひとときをお過ごしください。
+                        </p>
+                        <div class="com-btn-border-white com-btn-border--210">
+                            <a href="">くわしく見る<i></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="enjoy-fixed-container-wrap" id="enjoy-02">
+                <div class="enjoy-fixed-container-wrap-close enjoy-fixed-btn-close">
+                    <a href="javascript:void(0)"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close-black.svg" alt="閉じる"></a>
+                </div>
+                <div class="enjoy-fixed-container-wrap-bg">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-bg-yellow.jpg" alt="">
+                </div>
+                <div class="enjoy-fixed-container-wrap-content">
+                    <div class="enjoy-fixed-container-wrap-content-img">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-img-02.jpg" alt="">
+                        <div class="enjoy-fixed-container-wrap-content-img-left">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-left.png" alt="">
+                        </div>
+                        <div class="enjoy-fixed-container-wrap-content-img-right">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-right.png" alt="">
+                        </div>
+                    </div>
+                    <div class="enjoy-fixed-container-wrap-content-txt color--black">
+                        <h3>サウナ・水風呂</h3>
+                        <p>
+                            当館では、発汗・癒し・爽快感を存分に味わえるサウナの後には、7℃の極冷水風呂・16℃の水風呂・29℃のぬる湯と、好みに合わせて選べる3種類の水風呂もご用意。<br>
+                            一気にクールダウンしたい方も、ゆっくり“ととのい”たい方も、自分だけのスタイルで楽しめます。<br>
+                            ここでしか体験できないサウナ時間で、ぜひ“最高のととのい”を見つけてください。
+                        </p>
+                        <div class="com-btn-border-black com-btn-border--210">
+                            <a href="">くわしく見る<i class="icon-opacity"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="enjoy-fixed-container-wrap" id="enjoy-03">
+                <div class="enjoy-fixed-container-wrap-close enjoy-fixed-btn-close">
+                    <a href="javascript:void(0)"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close.svg" alt="閉じる"></a>
+                </div>
+                <div class="enjoy-fixed-container-wrap-bg">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-bg-red.jpg" alt="">
+                </div>
+                <div class="enjoy-fixed-container-wrap-content">
+                    <div class="enjoy-fixed-container-wrap-content-img">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-img-03.jpg" alt="">
+                        <div class="enjoy-fixed-container-wrap-content-img-left">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-left.png" alt="">
+                        </div>
+                        <div class="enjoy-fixed-container-wrap-content-img-right">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-right.png" alt="">
+                        </div>
+                    </div>
+                    <div class="enjoy-fixed-container-wrap-content-txt">
+                        <h3>発汗エリア（有料岩盤浴エリア）</h3>
+                        <p>
+                            岩盤浴・アトラクションサウナ・マンガ・リクライニング・テラスなどが揃った特別エリア。<br>
+                            時間を忘れてゆったり過ごしたい方にぴったりの癒し空間です。<br>
+                            館内とはひと味違う、深いリラックスをお楽しみください。
+                        </p>
+                        <div class="com-btn-border-white com-btn-border--210">
+                            <a href="">くわしく見る<i></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="enjoy-fixed-container-wrap" id="enjoy-04">
+                <div class="enjoy-fixed-container-wrap-close enjoy-fixed-btn-close">
+                    <a href="javascript:void(0)"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close-black.svg" alt="閉じる"></a>
+                </div>
+                <div class="enjoy-fixed-container-wrap-bg">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-bg-yellow.jpg" alt="">
+                </div>
+                <div class="enjoy-fixed-container-wrap-content">
+                    <div class="enjoy-fixed-container-wrap-content-img">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-img-04.jpg" alt="">
+                        <div class="enjoy-fixed-container-wrap-content-img-left">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-left.png" alt="">
+                        </div>
+                        <div class="enjoy-fixed-container-wrap-content-img-right">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-right.png" alt="">
+                        </div>
+                    </div>
+                    <div class="enjoy-fixed-container-wrap-content-txt color--black">
+                        <h3>ご飲食</h3>
+                        <p>
+                            館内の飲食エリアでは、和食・洋食やクラフトビール、スイーツまで幅広くご用意。「キッチントキワ」では三重県産食材を使った料理やサ飯を、くつろぎ空間で。「スイートラボ」では珍しいスイーツやSNS映えするデザートを楽しめます。<br>
+                            館内着のまま気軽にご利用ください。
+                        </p>
+                        <div class="com-btn-border-black com-btn-border--210">
+                            <a href="">くわしく見る<i class="icon-opacity"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="enjoy-fixed-container-wrap" id="enjoy-05">
+                <div class="enjoy-fixed-container-wrap-close enjoy-fixed-btn-close">
+                    <a href="javascript:void(0)"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close.svg" alt="閉じる"></a>
+                </div>
+                <div class="enjoy-fixed-container-wrap-bg">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-bg-blue.jpg" alt="">
+                </div>
+                <div class="enjoy-fixed-container-wrap-content">
+                    <div class="enjoy-fixed-container-wrap-content-img">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-img-05.jpg" alt="">
+                        <div class="enjoy-fixed-container-wrap-content-img-left">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-left.png" alt="">
+                        </div>
+                        <div class="enjoy-fixed-container-wrap-content-img-right">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-right.png" alt="">
+                        </div>
+                    </div>
+                    <div class="enjoy-fixed-container-wrap-content-txt">
+                        <h3>リラクゼーション</h3>
+                        <p>
+                            ボディケア・あかすり・フットマッサージなど、豊富な施術をご用意。日々の疲れを芯から癒したい方におすすめです。<br>
+                            予約制でスムーズにご案内でき、定期的にリラクイベントも開催中。贅沢なひとときをお過ごしください。
+                        </p>
+                        <div class="com-btn-border-white com-btn-border--210">
+                            <a href="">くわしく見る<i></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="enjoy-fixed-container-wrap" id="enjoy-06">
+                <div class="enjoy-fixed-container-wrap-close enjoy-fixed-btn-close">
+                    <a href="javascript:void(0)"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close.svg" alt="閉じる"></a>
+                </div>
+                <div class="enjoy-fixed-container-wrap-bg">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-bg-red.jpg" alt="">
+                </div>
+                <div class="enjoy-fixed-container-wrap-content">
+                    <div class="enjoy-fixed-container-wrap-content-img">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-img-06.jpg" alt="">
+                        <div class="enjoy-fixed-container-wrap-content-img-left">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-left.png" alt="">
+                        </div>
+                        <div class="enjoy-fixed-container-wrap-content-img-right">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-right.png" alt="">
+                        </div>
+                    </div>
+                    <div class="enjoy-fixed-container-wrap-content-txt">
+                        <h3>アメニティ・グッズ</h3>
+                        <p>
+                            シャンプーやボディソープのアメニティはもちろん無料。タオルもご希望のお客様はレンタルまたは購入が可能なので、手ぶらでも安心してお越しいただけます。<br>
+                            オリジナルグッズも取り揃えており、お土産や記念品としてもおすすめです。
+                        </p>
+                        <div class="com-btn-border-white com-btn-border--210">
+                            <a href="">くわしく見る<i></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
 </main>
+
+
 
 
 

@@ -193,15 +193,25 @@
 </script>
 
 <script>
+    //600以上の時はloopしない
+    var loop_flg = true;
+    var centeredSlides_flg = true;
+    if (window.innerWidth > 600) {
+        loop_flg = false;
+        centeredSlides_flg = false;
+    }
+
     const swiper = new Swiper('.swiper-event', {
         slidesPerView: 'auto', // 幅固定 or auto
         spaceBetween: 24, // スライド間の余白
-        centeredSlides: true, // 常に中央スライドをセンターに
-        loop: true, // 無限ループ
+        centeredSlides: centeredSlides_flg, // 常に中央スライドをセンターに
+        loop: loop_flg, // 無限ループ
+
         autoplay: {
             delay: 3000, // 3秒ごとに切り替え
             disableOnInteraction: false, // 操作後も自動再生を継続
         },
+
         navigation: {
             nextEl: '.swiper-button-next', // 「次へ」ボタン要素のクラス
             prevEl: '.swiper-button-prev', // 「前へ」ボタン要素のクラス
@@ -229,8 +239,8 @@
     const swiper_2 = new Swiper('.swiper-event_2', {
         slidesPerView: 'auto', // 幅固定 or auto
         spaceBetween: 24, // スライド間の余白
-        centeredSlides: true, // 常に中央スライドをセンターに
-        loop: true, // 無限ループ
+        centeredSlides: centeredSlides_flg, // 常に中央スライドをセンターに
+        loop: loop_flg, // 無限ループ
         autoplay: {
             delay: 3000, // 3秒ごとに切り替え
             disableOnInteraction: false, // 操作後も自動再生を継続
@@ -262,8 +272,8 @@
     const swiper_3 = new Swiper('.swiper-event_3', {
         slidesPerView: 'auto', // 幅固定 or auto
         spaceBetween: 24, // スライド間の余白
-        centeredSlides: true, // 常に中央スライドをセンターに
-        loop: true, // 無限ループ
+        centeredSlides: centeredSlides_flg, // 常に中央スライドをセンターに
+        loop: loop_flg, // 無限ループ
         autoplay: {
             delay: 3000, // 3秒ごとに切り替え
             disableOnInteraction: false, // 操作後も自動再生を継続
@@ -515,10 +525,104 @@
             }
         });
     });
+
+    //初めてのお客様への波の背景が出現するアニメーション
+    //.sec02-aboutに差し掛かったら.sec02-about-activeのクラスを付与
+    document.addEventListener('DOMContentLoaded', () => {
+        const target = document.querySelector('.sec02-about');
+        const decoBg = document.querySelector('.sec02-about-bg');
+
+        if (!target || !decoBg) return;
+
+        // reduced motion 配慮
+        if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            decoBg.classList.add('sec02-about-active');
+            return;
+        }
+
+        gsap.registerPlugin(ScrollTrigger);
+
+        ScrollTrigger.create({
+            trigger: target,
+            start: 'top 80%',
+            end: 'bottom 20%',
+            onEnter: () => target.classList.add('sec02-about-active'),
+            // onLeaveBack: () => decoBg.classList.remove('sec02-about-active'), // 戻ったときにクラスを外す場合
+            // once: true // 一度だけ発火させたい場合
+        });
+    });
+
+    //.sec02-icon-03に差し掛かったら、下から上に上がるアニメーション
+    document.addEventListener('DOMContentLoaded', () => {
+        const target = document.querySelector('.sec02-icon-03');
+        if (!target) return;
+        // reduced motion 配慮
+        if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            gsap.set(target, {
+                y: 0,
+                opacity: 1
+            });
+            return;
+        }
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.fromTo(target, {
+                y: 150,
+                opacity: 0
+            }, // 初期状態
+            {
+                y: 0,
+                opacity: 1,
+                duration: 1.2,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: target,
+                    start: "top 80%", // ビューポートの80%で発火
+                    toggleActions: "play none none reverse",
+                    scrub: true // スクロールに同期
+                }
+            }
+        );
+    });
+    document.addEventListener('DOMContentLoaded', () => {
+        const target = document.querySelector('.sec02-icon-04');
+        if (!target) return;
+        // reduced motion 配慮
+        if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            gsap.set(target, {
+                y: 0,
+                opacity: 1
+            });
+            return;
+        }
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.fromTo(target, {
+                y: 150,
+                opacity: 0
+            }, // 初期状態
+            {
+                y: 0,
+                opacity: 1,
+                duration: 1.2,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: target,
+                    start: "top 80%", // ビューポートの80%で発火
+                    toggleActions: "play none none reverse",
+                    scrub: true // スクロールに同期
+                }
+            }
+        );
+    });
 </script>
+
+<?php if (is_page("guide")): ?>
+    <?php get_template_part('inc/guide-js'); ?>
+<?php endif; ?>
 <?php if (!is_404()): ?>
     <?php wp_footer(); ?>
 <?php endif; ?>
+
+
 
 </body>
 

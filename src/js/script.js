@@ -285,3 +285,43 @@ $(document).ready(function () {
     $('.enjoy-fixed-container-wrap').fadeOut(0);
   });
 });
+
+//enjoy .popup-btnが押されたら、data-idからidを取得して、.popupにactiveを追加
+$(document).ready(function () {
+  $('.stone-btn').on('click', function () {
+    //.enjoy-fixedを表示
+    $('.stone-fixed').addClass('stone-fixed-active');
+    //.enjoy-fixed-container-wrapを非表示
+    $('.stone-fixed-container-wrap').fadeOut(0);
+    var popupId = $(this).data('id'); // data-idの値を取得
+    $('#' + popupId).fadeIn(); // idを使って要素をフェードイン
+    //$('.body').addClass('body-drawer'); // 追加
+  });
+});
+//.enjoy-fixed-btn-closeが押されたら、.enjoy-fixedからactiveを削除
+$(document).ready(function () {
+  $('.stone-fixed-btn-close').on('click', function () {
+    $('.stone-fixed').removeClass('stone-fixed-active');
+    $('.stone-fixed-container-wrap').fadeOut(0);
+  });
+});
+
+//enjoy .popup-btnが押されたら、data-idからidを取得して、.popupにactiveを追加
+$(document).ready(function () {
+  $('.goods-btn').on('click', function () {
+    //.enjoy-fixedを表示
+    $('.goods-fixed').addClass('goods-fixed-active');
+    //.enjoy-fixed-container-wrapを非表示
+    $('.goods-fixed-container-wrap').fadeOut(0);
+    var popupId = $(this).data('id'); // data-idの値を取得
+    $('#' + popupId).fadeIn(); // idを使って要素をフェードイン
+    //$('.body').addClass('body-drawer'); // 追加
+  });
+});
+//.enjoy-fixed-btn-closeが押されたら、.enjoy-fixedからactiveを削除
+$(document).ready(function () {
+  $('.goods-fixed-btn-close').on('click', function () {
+    $('.goods-fixed').removeClass('goods-fixed-active');
+    $('.goods-fixed-container-wrap').fadeOut(0);
+  });
+});

@@ -1,5 +1,5 @@
 <div class="com-sec-01-col-under">
-    <a href="">
+    <a href="<?php echo home_url(); ?>/schedule/">
         <div class="sec-01-col-under-img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-img-01.jpg" alt=""></div>
         <div class="sec-01-col-under-title">
             <?php

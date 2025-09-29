@@ -165,15 +165,20 @@ Template Name: enjoy-goods
                     お気に入りを“ととのい記念”に。<br>
                     オリジナルグッズをはじめ、サウナー心をくすぐるアイテムを館内で販売中です。
                 </p>
+                <?php
+                // クエリの設定
+                $goods_category = isset($_GET['goods_category']) ? sanitize_text_field($_GET['goods_category']) : ''; // URLパラメータからカテゴリを取得
+                $goods_status = isset($_GET['goods_status']) ? sanitize_text_field($_GET['goods_status']) : ''; // URLパラメータからステータスを取得
+                ?>
                 <div class="sec04-list">
                     <dl>
                         <dt>商品カテゴリ</dt>
                         <dd>
                             <ul>
-                                <li><a href="" class="color-green">オリジナルグッズ</a></li>
-                                <li><a href="" class="color-blue">サウナハット</a></li>
-                                <li><a href="" class="color-red">アパレル</a></li>
-                                <li><a href="" class="color-yellow">コスメ</a></li>
+                                <li><a href="<?php echo home_url(); ?>/enjoy/goods/?goods_category=original&goods_status=<?php echo $goods_status; ?>#sec04" class="color-green">オリジナルグッズ</a></li>
+                                <li><a href="<?php echo home_url(); ?>/enjoy/goods/?goods_category=hat&goods_status=<?php echo $goods_status; ?>#sec04" class="color-blue">サウナハット</a></li>
+                                <li><a href="<?php echo home_url(); ?>/enjoy/goods/?goods_category=aparel&goods_status=<?php echo $goods_status; ?>#sec04" class="color-red">アパレル</a></li>
+                                <li><a href="<?php echo home_url(); ?>/enjoy/goods/?goods_category=cosme&goods_status=<?php echo $goods_status; ?>#sec04" class="color-yellow">コスメ</a></li>
                             </ul>
                         </dd>
                     </dl>
@@ -181,66 +186,87 @@ Template Name: enjoy-goods
                         <dt>販売状況</dt>
                         <dd>
                             <ul>
-                                <li><a href="">販売中</a></li>
-                                <li><a href="">入荷待ち</a></li>
-                                <li><a href="">販売終了</a></li>
+                                <li><a href="<?php echo home_url(); ?>/enjoy/goods/?goods_category=<?php echo $goods_category; ?>&goods_status=normal#sec04" class="color-white">販売中</a></li>
+                                <li><a href="<?php echo home_url(); ?>/enjoy/goods/?goods_category=<?php echo $goods_category; ?>&goods_status=wait#sec04" class="color-black">入荷待ち</a></li>
+                                <li><a href="<?php echo home_url(); ?>/enjoy/goods/?goods_category=<?php echo $goods_category; ?>&goods_status=finish#sec04" class="color-black">販売終了</a></li>
                             </ul>
                         </dd>
                     </dl>
                 </div>
                 <div class="sec04-wrap">
-                    <div class="sec04-wrap-col">
-                        <div class="sec04-wrap-col-img">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/goods/sec04-img-01.jpg" alt="">
-                        </div>
-                        <div class="sec04-wrap-col-cat">
-                            <ul>
-                                <li><a href="" class="color-green">オリジナルグッズ</a></li>
-                                <li><a href="" class="color-white">販売中</a></li>
-                            </ul>
-                        </div>
-                        <h3>グッズのタイトルが入ります。<br>グッズのタイトルが入ります。</h3>
-                        <p class="sec04-price"><strong>2,500</strong>円<small>（税込）</small></p>
-                    </div>
-                    <div class="sec04-wrap-col">
-                        <div class="sec04-wrap-col-img">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/goods/sec04-img-01.jpg" alt="">
-                        </div>
-                        <div class="sec04-wrap-col-cat">
-                            <ul>
-                                <li><a href="" class="color-green">オリジナルグッズ</a></li>
-                                <li><a href="" class="color-white">販売中</a></li>
-                            </ul>
-                        </div>
-                        <h3>グッズのタイトルが入ります。<br>グッズのタイトルが入ります。</h3>
-                        <p class="sec04-price"><strong>2,500</strong>円<small>（税込）</small></p>
-                    </div>
-                    <div class="sec04-wrap-col">
-                        <div class="sec04-wrap-col-img">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/goods/sec04-img-01.jpg" alt="">
-                        </div>
-                        <div class="sec04-wrap-col-cat">
-                            <ul>
-                                <li><a href="" class="color-green">オリジナルグッズ</a></li>
-                                <li><a href="" class="color-white">販売中</a></li>
-                            </ul>
-                        </div>
-                        <h3>グッズのタイトルが入ります。<br>グッズのタイトルが入ります。</h3>
-                        <p class="sec04-price"><strong>2,500</strong>円<small>（税込）</small></p>
-                    </div>
-                    <div class="sec04-wrap-col">
-                        <div class="sec04-wrap-col-img">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/goods/sec04-img-01.jpg" alt="">
-                        </div>
-                        <div class="sec04-wrap-col-cat">
-                            <ul>
-                                <li><a href="" class="color-green">オリジナルグッズ</a></li>
-                                <li><a href="" class="color-white">販売中</a></li>
-                            </ul>
-                        </div>
-                        <h3>グッズのタイトルが入ります。<br>グッズのタイトルが入ります。</h3>
-                        <p class="sec04-price"><strong>2,500</strong>円<small>（税込）</small></p>
-                    </div>
+                    <?php
+
+                    $tax_query = array();
+                    if (!empty($goods_category)) {
+                        $tax_query[] = array(
+                            'taxonomy' => 'goods_category',
+                            'field'    => 'slug',
+                            'terms'    => $goods_category,
+                        );
+                    }
+                    if (!empty($goods_status)) {
+                        $tax_query[] = array(
+                            'taxonomy' => 'goods_status',
+                            'field'    => 'slug',
+                            'terms'    => $goods_status,
+                        );
+                    }
+                    $args = array(
+                        'post_type' => 'goods', // カスタム投稿タイプ名
+                        'posts_per_page' => -1, // 取得する投稿数（-1で全件取得）
+                        'tax_query' => $tax_query,
+                    );
+                    ?>
+                    <?php $the_query = new WP_Query($args); ?>
+                    <?php if ($the_query->have_posts()) : ?>
+                        <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+                            <?php
+                            $price = get_field('price'); // カスタムフィールド「price」の値を取得
+                            $desc = get_field('desc'); // カスタムフィールド「desc」の値を取得
+                            $goods_cat = get_the_terms($post->ID, 'goods_category'); // タクソノミー「goods_category」の値を取得
+                            $goods_st = get_the_terms($post->ID, 'goods_status'); // タ
+
+                            ?>
+
+                            <?php
+                            if ($goods_st && $goods_st[0]->slug === 'finish' || $goods_st[0]->slug === 'wait') {
+                                $class_col = 'col-finish';
+                            } else {
+                                $class_col = '';
+                            }
+                            ?>
+                            <div class="sec04-wrap-col <?php echo $class_col; ?>">
+                                <a href="javacript:void(0);" class="goods-btn" data-id="goods_<?php echo $post->ID; ?>">
+                                    <div class="sec04-wrap-col-img">
+                                        <?php if (has_post_thumbnail()): ?>
+                                            <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>">
+                                        <?php else: ?>
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-default.jpg" alt="デフォルト画像">
+                                        <?php endif; ?>
+                                        <?php if ($class_col): ?>
+                                            <div class="sec04-wrap-col-img-span">
+                                                SOLD OUT
+                                            </div>
+                                        <?php endif; ?>
+
+
+
+                                    </div>
+                                    <div class="sec04-wrap-col-cat">
+                                        <ul>
+                                            <li><span class="color-<?php echo $goods_cat[0]->slug; ?>"><?php echo $goods_cat[0]->name; ?></span></li>
+                                            <li><span class="color-<?php echo $goods_st[0]->slug; ?>"><?php echo $goods_st[0]->name; ?></span></li>
+                                        </ul>
+                                    </div>
+                                    <h3><?php the_title(); ?></h3>
+                                    <p class="sec04-price"><strong><?php echo $price; ?></strong>円<small>（税込）</small></p>
+                                </a>
+                            </div>
+                        <?php endwhile; ?>
+                    <?php else : ?>
+                        <p class="text-base">該当する商品が見つかりませんでした。</p>
+                    <?php endif; ?>
+                    <?php wp_reset_postdata(); ?>
                 </div>
 
                 <div class="sec04-info">
@@ -270,10 +296,172 @@ Template Name: enjoy-goods
     <?php get_template_part('inc/inc-contact'); ?>
 
 
+
+
 </main>
 
+<div class="goods-fixed">
+    <div class="goods-fixed-bg goods-fixed-btn-close">
+
+    </div>
+    <div class="goods-fixed-container">
+        <?php if ($the_query->have_posts()) : ?>
+            <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+                <?php
+                $price = get_field('price'); // カスタムフィールド「price」の値を取得
+                $desc = get_field('desc'); // カスタムフィールド「desc」の値を取得
+                $goods_cat = get_the_terms($post->ID, 'goods_category'); // タクソノミー「goods_category」の値を取得
+                $goods_st = get_the_terms($post->ID, 'goods_status'); // タ
+                $loop_img = get_field('loop_img'); // カスタムフィールド「loop_img」の値を取得
+
+                ?>
+                <div class="goods-fixed-container-wrap" id="goods_<?php echo get_the_ID(); ?>">
+                    <div class="goods-fixed-container-wrap-close goods-fixed-btn-close">
+                        <a href="javascript:void(0)"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close-black.svg" alt="閉じる"></a>
+                    </div>
+                    <div class="goods-fixed-container-wrap-bg"></div>
+                    <div class="goods-fixed-container-wrap-content">
+                        <div class="goods-fixed-container-wrap-content-main">
+                            <div class="goods-fixed-container-wrap-content-main-img">
+                                <div class="goods-swiper swiper">
+                                    <div class="swiper-wrapper">
+                                        <?php if ($loop_img): ?>
+                                            <?php foreach ($loop_img as $img): ?>
+                                                <div class="swiper-slide">
+                                                    <img src="<?php echo esc_url($img['loop_img_item']); ?>" alt="<?php echo esc_attr($img['alt']); ?>">
+                                                </div>
+                                            <?php endforeach; ?>
+                                        <?php else: ?>
+                                            <div class="swiper-slide">
+                                                <?php if (has_post_thumbnail()): ?>
+                                                    <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>">
+                                                <?php else: ?>
+                                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-default.jpg" alt="デフォルト画像">
+                                                <?php endif; ?>
+                                            </div>
+                                        <?php endif; ?>
+                                    </div>
+                                </div>
+                                <div class="goods-swiper-thum swiper">
+                                    <div class="swiper-wrapper">
+                                        <?php if ($loop_img): ?>
+                                            <?php foreach ($loop_img as $img): ?>
+                                                <div class="swiper-slide">
+                                                    <img src="<?php echo esc_url($img['loop_img_item']); ?>" alt="<?php echo esc_attr($img['alt']); ?>">
+                                                </div>
+                                            <?php endforeach; ?>
+                                        <?php else: ?>
+                                            <div class="swiper-slide">
+                                                <?php if (has_post_thumbnail()): ?>
+                                                    <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>">
+                                                <?php else: ?>
+                                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-default.jpg" alt="デフォルト画像">
+                                                <?php endif; ?>
+                                            </div>
+                                        <?php endif; ?>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="goods-fixed-container-wrap-content-main-txt">
+                                <h3><?php the_title(); ?></h3>
+                                <div class="sec04-wrap-col-cat">
+                                    <ul>
+                                        <li><span class="color-<?php echo $goods_cat[0]->slug; ?>"><?php echo $goods_cat[0]->name; ?></span></li>
+                                        <li><span class="color-<?php echo $goods_st[0]->slug; ?>"><?php echo $goods_st[0]->name; ?></span></li>
+                                    </ul>
+                                </div>
+                                <p class="sec04-price"><strong><?php echo $price; ?></strong>円<small>（税込）</small></p>
+                                <h4>商品説明</h4>
+                                <p class="sec04-desc"><?php echo nl2br($desc); ?></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sec04-info">
+                        <div class="sec04-info-img">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/goods/sec04-info.jpg" alt="">
+                        </div>
+                        <div class="sec04-info-txt">
+                            <dl>
+                                <dt>販売場所</dt>
+                                <dd>○階 ○○○○○</dd>
+                            </dl>
+                            <dl>
+                                <dt>販売時間</dt>
+                                <dd>10:00〜22:00</dd>
+                            </dl>
+                            <p>
+                                ※ネットショップは行っておりません。お買い求めの際は店頭にお越しください。
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            <?php endwhile; ?>
 
 
+        <?php endif; ?>
+    </div>
+</div>
+
+
+
+<script>
+    // DOM 準備後に初期化
+    document.addEventListener('DOMContentLoaded', function() {
+        // スライド数チェック（セレクタはテンプレートに合わせてあります）
+        const mainWrapper = document.querySelector('.goods-swiper .swiper-wrapper');
+        const slideCount = mainWrapper ? mainWrapper.children.length : 0;
+
+        // サムネイル側 Swiper（先に作る）
+        const thumbSwiper = new Swiper('.goods-swiper-thum', {
+            direction: 'horizontal',
+            loop: false, // スライドが1枚だけなら loop を無効化
+            spaceBetween: 8,
+            //slidesPerView: Math.min(6, Math.max(1, slideCount)), // 最大6個表示
+            slidesPerView: 5,
+            freeMode: true,
+            watchSlidesProgress: true,
+            watchSlidesVisibility: true,
+            slideToClickedSlide: true, // クリックでメインを切替
+            breakpoints: {
+                480: {
+                    slidesPerView: Math.min(4, slideCount)
+                },
+                768: {
+                    slidesPerView: 5
+                }
+            }
+        });
+
+        // メインの Swiper（thumbs オプションで紐付け）
+        const mainSwiper = new Swiper('.goods-swiper', {
+            loop: slideCount > 1,
+            spaceBetween: 10,
+            preloadImages: false,
+            lazy: {
+                loadPrevNext: true
+            },
+            // 必要ならナビゲーションを追加（テンプレートに next/prev ボタンがあれば有効）
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            // ここで thumbSwiper を渡すだけで連動します（Swiper の thumbs 機能を利用）
+            thumbs: {
+                swiper: thumbSwiper
+            },
+            // 見た目のエフェクト（お好みで）
+            effect: 'slide', // 'fade' にしても良い
+            speed: 400
+        });
+
+        // スライドが1枚だけのときは、サムネイルのクリック無効化や見た目調整
+        if (slideCount <= 1) {
+            const thumEl = document.querySelector('.goods-swiper-thum');
+            if (thumEl) thumEl.classList.add('goods-thum--single');
+        }
+    });
+</script>
 
 
 <?php get_footer(); ?>

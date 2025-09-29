@@ -31,13 +31,16 @@
     </div>
 
     <article class="article">
+        <?php
+        $event_start_date = get_field('event_start_date'); // 開始日
+        ?>
         <div class="content-width">
             <div class="article-info">
-                <?php $cats = get_the_category(); ?>
-                <?php if ($cats[0]): ?>
-                    <span class="cat"><?php echo $cats[0]->name; ?></span>
+                <?php $category_event = get_the_terms($post->ID, 'event_category'); ?>
+                <?php if ($category_event[0]): ?>
+                    <span class="cat cat-<?php echo $category_event[0]->slug; ?>"><?php echo $category_event[0]->name; ?></span>
                 <?php endif; ?>
-                <time datetime="<?php the_time('c'); ?>"><?php the_time('Y.m.d'); ?></time>
+                <time><?php echo $event_start_date; ?></time>
             </div>
             <h1><?php the_title(); ?></h1>
             <?php if (has_post_thumbnail()): ?>

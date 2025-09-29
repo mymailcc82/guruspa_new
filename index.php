@@ -243,18 +243,42 @@
                             </div>
                         </h1>
                         <h2>心と身体がととのう、<span>ウェルビーイング</span>の楽園。</h2>
-                        <div class="top-news">
-                            <ul>
-                                <li>重要！</li>
-                                <li>
-                                    <a href="">
-                                        <h3><time>XX.XX.XX 更新</time>
-                                            ニュース内容が入ります。</h3>
-                                        <i></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+                        <?php
+                        $args = array(
+                            'post_type' => 'post', // カスタム投稿タイプ名
+                            'posts_per_page' => 1, // 表示する記事数
+                            'orderby' => 'date', // 日付でソート
+                            'order' => 'DESC', // 降順
+                            'category_name' => 'important', // 特定のカテゴリーを指定する場合
+                        );
+
+                        $important_title = get_field('important_title', 111); // 固定ページIDを指定
+                        ?>
+                        <?php
+                        $the_query = new WP_Query($args);
+                        if ($the_query->have_posts()) : ?>
+                            <div class="top-news">
+                                <ul>
+                                    <li><?php echo $important_title; ?></li>
+                                    <li>
+
+
+                                        <?php
+                                        while ($the_query->have_posts()) : $the_query->the_post();
+                                        ?>
+                                            <a href="<?php the_permalink(); ?>">
+                                                <h3><time><?php the_time('Y.m.d'); ?> 更新</time>
+                                                    <?php the_title(); ?></h3>
+                                                <i></i>
+                                            </a>
+                                        <?php
+                                        endwhile;
+                                        wp_reset_postdata();
+                                        ?>
+                                    </li>
+                                </ul>
+                            </div>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
@@ -264,7 +288,7 @@
                 <div class="content-width-small">
                     <div class="com-title center com-title-hidden">
                         <p>イベント情報</p>
-                        <h2 class="">
+                        <h2>
                             <span class="title">E</span><span class="title">V</span><span class="title">E</span><span class="title">N</span><span class="title">T</span>
                             <span class="title title-item-sprout">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-sprout-blown.png" alt="">
@@ -285,46 +309,84 @@
                     <div id="area01" class="area is-active">
                         <div class="swiper swiper-event sec01-col-main">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <a href="">
-                                        <span class="hot">HOT!</span>
-                                        <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
-                                        <div class="img img-info">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-red.jpg" alt="">
+                                <?php
+                                $args = array(
+                                    'post_type' => 'event', // カスタム投稿タイプ名
+                                    'posts_per_page' => 3, // 表示する記事数
+                                    'orderby' => 'date', // 日付でソート
+                                    'order' => 'DESC', // 降順
+                                );
+                                ?>
+                                <?php
+                                $the_query = new WP_Query($args);
+                                if ($the_query->have_posts()) :
+                                    while ($the_query->have_posts()) : $the_query->the_post();
+                                        $event_category = get_the_terms(get_the_ID(), 'event_category');
+                                        $event_start_date = get_field('event_start_date'); // 開始日
+                                        $is_hot = get_field('hot'); // HOT! フラグ
+                                ?>
+
+                                        <div class="swiper-slide">
+                                            <a href="<?php the_permalink(); ?>">
+                                                <?php if ($is_hot) : ?>
+                                                    <span class="hot"><?php echo $is_hot; ?></span>
+                                                <?php endif; ?>
+                                                <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
+                                                <div class="img img-info">
+                                                    <?php if (has_post_thumbnail()) : ?>
+                                                        <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>">
+                                                    <?php else : ?>
+                                                        <?php if ($event_category && !is_wp_error($event_category)) : ?>
+                                                            <?php
+                                                            // カテゴリーに応じたデフォルト画像を設定
+                                                            $category_slug = $event_category[0]->slug;
+                                                            $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-default.jpg'; // デフォルト画像
+
+                                                            if ($category_slug === 'information') {
+                                                                $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-red.jpg';
+                                                            } elseif ($category_slug === 'event') {
+                                                                $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-green.jpg';
+                                                            } elseif ($category_slug === 'food') {
+                                                                $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-yellow.jpg';
+                                                            }
+                                                            ?>
+                                                            <img src="<?php echo esc_url($default_image_url); ?>" alt="<?php the_title(); ?>">
+                                                        <?php else : ?>
+                                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-default.jpg" alt="<?php the_title(); ?>">
+                                                        <?php endif; ?>
+                                                    <?php endif; ?>
+                                                </div>
+                                                <div class="text">
+                                                    <div class="text-info">
+                                                        <?php
+                                                        if ($category_slug === 'information') {
+                                                            $cats_class = 'category-red';
+                                                        } elseif ($category_slug === 'event') {
+                                                            $cats_class = 'category-green';
+                                                        } elseif ($category_slug === 'food') {
+                                                            $cats_class = 'category-yellow';
+                                                        }
+                                                        ?>
+                                                        <div class="text-info-cat">
+                                                            <span class="category <?php echo esc_attr($cats_class); ?>"><?php echo esc_html($event_category[0]->name); ?></span>
+                                                        </div>
+                                                        <div class="text-info-term">
+                                                            <span class="term"><?php echo $event_start_date; ?></span>
+                                                        </div>
+
+                                                    </div>
+
+                                                    <h3><?php the_title(); ?></h3>
+                                                </div>
+                                            </a>
                                         </div>
-                                        <div class="text">
-                                            <span class="category category-red">ご案内</span>
-                                            <span class="term">XX.XX.XX〜</span>
-                                            <h3>イベントタイトルが入ります</h3>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="">
-                                        <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
-                                        <div class="img img-event">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-green.jpg" alt="">
-                                        </div>
-                                        <div class="text">
-                                            <span class="category category-green">イベント</span>
-                                            <span class="term">XX.XX.XX〜</span>
-                                            <h3>イベントタイトルが入ります</h3>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="">
-                                        <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
-                                        <div class="img img-food">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-yellow.jpg" alt="">
-                                        </div>
-                                        <div class="text">
-                                            <span class="category category-yellow">フード/キッチントキワ</span>
-                                            <span class="term">XX.XX.XX〜</span>
-                                            <h3>イベントタイトルが入ります</h3>
-                                        </div>
-                                    </a>
-                                </div>
+                                <?php
+                                    endwhile;
+                                    wp_reset_postdata();
+                                else :
+                                    echo '<p class="text-base">イベントが見つかりませんでした。</p>';
+                                endif;
+                                ?>
                             </div>
                         </div>
                     </div>
@@ -332,46 +394,94 @@
                     <div id="area02" class="area">
                         <div class="swiper swiper-event_2 sec01-col-main">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <a href="">
-                                        <span class="hot">HOT!</span>
-                                        <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
-                                        <div class="img img-info">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-red.jpg" alt="">
+                                <?php
+                                $args = array(
+                                    'post_type' => 'event', // カスタム投稿タイプ名
+                                    'posts_per_page' => 3, // 表示する記事数
+                                    'orderby' => 'date', // 日付でソート
+                                    'order' => 'DESC', // 降順
+                                    //event_tagがlumitedのものを取得
+                                    'tax_query' => array(
+                                        array(
+                                            'taxonomy' => 'event_tag',
+                                            'field'    => 'slug',
+                                            'terms'    => 'limit',
+                                        ),
+                                    ),
+                                );
+                                ?>
+                                <?php
+                                $the_query = new WP_Query($args);
+                                if ($the_query->have_posts()) :
+                                    while ($the_query->have_posts()) : $the_query->the_post();
+                                        $event_category = get_the_terms(get_the_ID(), 'event_category');
+                                        $event_start_date = get_field('event_start_date'); // 開始日
+
+
+                                        $is_hot = get_field('hot'); // HOT! フラグ
+                                ?>
+
+                                        <div class="swiper-slide">
+                                            <a href="<?php the_permalink(); ?>">
+                                                <?php if ($is_hot) : ?>
+                                                    <span class="hot"><?php echo $is_hot; ?></span>
+                                                <?php endif; ?>
+                                                <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
+                                                <div class="img img-info">
+                                                    <?php if (has_post_thumbnail()) : ?>
+                                                        <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>">
+                                                    <?php else : ?>
+                                                        <?php if ($event_category && !is_wp_error($event_category)) : ?>
+                                                            <?php
+                                                            // カテゴリーに応じたデフォルト画像を設定
+                                                            $category_slug = $event_category[0]->slug;
+                                                            $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-default.jpg'; // デフォルト画像
+
+                                                            if ($category_slug === 'information') {
+                                                                $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-red.jpg';
+                                                            } elseif ($category_slug === 'event') {
+                                                                $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-green.jpg';
+                                                            } elseif ($category_slug === 'food') {
+                                                                $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-yellow.jpg';
+                                                            }
+                                                            ?>
+                                                            <img src="<?php echo esc_url($default_image_url); ?>" alt="<?php the_title(); ?>">
+                                                        <?php else : ?>
+                                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-default.jpg" alt="<?php the_title(); ?>">
+                                                        <?php endif; ?>
+                                                    <?php endif; ?>
+                                                </div>
+                                                <div class="text">
+                                                    <div class="text-info">
+                                                        <?php
+                                                        if ($category_slug === 'information') {
+                                                            $cats_class = 'category-red';
+                                                        } elseif ($category_slug === 'event') {
+                                                            $cats_class = 'category-green';
+                                                        } elseif ($category_slug === 'food') {
+                                                            $cats_class = 'category-yellow';
+                                                        }
+                                                        ?>
+                                                        <div class="text-info-cat">
+                                                            <span class="category <?php echo esc_attr($cats_class); ?>"><?php echo esc_html($event_category[0]->name); ?></span>
+                                                        </div>
+                                                        <div class="text-info-term">
+                                                            <span class="term"><?php echo $event_start_date; ?></span>
+                                                        </div>
+
+                                                    </div>
+
+                                                    <h3><?php the_title(); ?></h3>
+                                                </div>
+                                            </a>
                                         </div>
-                                        <div class="text">
-                                            <span class="category category-red">ご案内</span>
-                                            <span class="term">XX.XX.XX〜</span>
-                                            <h3>イベントタイトルが入ります</h3>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="">
-                                        <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
-                                        <div class="img img-event">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-green.jpg" alt="">
-                                        </div>
-                                        <div class="text">
-                                            <span class="category category-green">イベント</span>
-                                            <span class="term">XX.XX.XX〜</span>
-                                            <h3>イベントタイトルが入ります</h3>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="">
-                                        <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
-                                        <div class="img img-food">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-yellow.jpg" alt="">
-                                        </div>
-                                        <div class="text">
-                                            <span class="category category-yellow">フード/キッチントキワ</span>
-                                            <span class="term">XX.XX.XX〜</span>
-                                            <h3>イベントタイトルが入ります</h3>
-                                        </div>
-                                    </a>
-                                </div>
+                                <?php
+                                    endwhile;
+                                    wp_reset_postdata();
+                                else :
+                                    echo '<p class="text-base">イベントが見つかりませんでした。</p>';
+                                endif;
+                                ?>
                             </div>
                         </div>
                     </div>
@@ -379,46 +489,94 @@
                     <div id="area03" class="area">
                         <div class="swiper swiper-event_3 sec01-col-main">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <a href="">
-                                        <span class="hot">HOT!</span>
-                                        <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
-                                        <div class="img img-info">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-red.jpg" alt="">
+                                <?php
+                                $args = array(
+                                    'post_type' => 'event', // カスタム投稿タイプ名
+                                    'posts_per_page' => 3, // 表示する記事数
+                                    'orderby' => 'date', // 日付でソート
+                                    'order' => 'DESC', // 降順
+                                    //event_tagがlumitedのものを取得
+                                    'tax_query' => array(
+                                        array(
+                                            'taxonomy' => 'event_tag',
+                                            'field'    => 'slug',
+                                            'terms'    => 'per_event',
+                                        ),
+                                    ),
+                                );
+                                ?>
+                                <?php
+                                $the_query = new WP_Query($args);
+                                if ($the_query->have_posts()) :
+                                    while ($the_query->have_posts()) : $the_query->the_post();
+                                        $event_category = get_the_terms(get_the_ID(), 'event_category');
+                                        $event_start_date = get_field('event_start_date'); // 開始日
+
+
+                                        $is_hot = get_field('hot'); // HOT! フラグ
+                                ?>
+
+                                        <div class="swiper-slide">
+                                            <a href="<?php the_permalink(); ?>">
+                                                <?php if ($is_hot) : ?>
+                                                    <span class="hot"><?php echo $is_hot; ?></span>
+                                                <?php endif; ?>
+                                                <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
+                                                <div class="img img-info">
+                                                    <?php if (has_post_thumbnail()) : ?>
+                                                        <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>">
+                                                    <?php else : ?>
+                                                        <?php if ($event_category && !is_wp_error($event_category)) : ?>
+                                                            <?php
+                                                            // カテゴリーに応じたデフォルト画像を設定
+                                                            $category_slug = $event_category[0]->slug;
+                                                            $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-default.jpg'; // デフォルト画像
+
+                                                            if ($category_slug === 'information') {
+                                                                $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-red.jpg';
+                                                            } elseif ($category_slug === 'event') {
+                                                                $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-green.jpg';
+                                                            } elseif ($category_slug === 'food') {
+                                                                $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-yellow.jpg';
+                                                            }
+                                                            ?>
+                                                            <img src="<?php echo esc_url($default_image_url); ?>" alt="<?php the_title(); ?>">
+                                                        <?php else : ?>
+                                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-default.jpg" alt="<?php the_title(); ?>">
+                                                        <?php endif; ?>
+                                                    <?php endif; ?>
+                                                </div>
+                                                <div class="text">
+                                                    <div class="text-info">
+                                                        <?php
+                                                        if ($category_slug === 'information') {
+                                                            $cats_class = 'category-red';
+                                                        } elseif ($category_slug === 'event') {
+                                                            $cats_class = 'category-green';
+                                                        } elseif ($category_slug === 'food') {
+                                                            $cats_class = 'category-yellow';
+                                                        }
+                                                        ?>
+                                                        <div class="text-info-cat">
+                                                            <span class="category <?php echo esc_attr($cats_class); ?>"><?php echo esc_html($event_category[0]->name); ?></span>
+                                                        </div>
+                                                        <div class="text-info-term">
+                                                            <span class="term"><?php echo $event_start_date; ?></span>
+                                                        </div>
+
+                                                    </div>
+
+                                                    <h3><?php the_title(); ?></h3>
+                                                </div>
+                                            </a>
                                         </div>
-                                        <div class="text">
-                                            <span class="category category-red">ご案内</span>
-                                            <span class="term">XX.XX.XX〜</span>
-                                            <h3>イベントタイトルが入ります</h3>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="">
-                                        <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
-                                        <div class="img img-event">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-green.jpg" alt="">
-                                        </div>
-                                        <div class="text">
-                                            <span class="category category-green">イベント</span>
-                                            <span class="term">XX.XX.XX〜</span>
-                                            <h3>イベントタイトルが入ります</h3>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="">
-                                        <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
-                                        <div class="img img-food">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-yellow.jpg" alt="">
-                                        </div>
-                                        <div class="text">
-                                            <span class="category category-yellow">フード/キッチントキワ</span>
-                                            <span class="term">XX.XX.XX〜</span>
-                                            <h3>イベントタイトルが入ります</h3>
-                                        </div>
-                                    </a>
-                                </div>
+                                <?php
+                                    endwhile;
+                                    wp_reset_postdata();
+                                else :
+                                    echo '<p class="text-base">イベントが見つかりませんでした。</p>';
+                                endif;
+                                ?>
                             </div>
                         </div>
                     </div>
@@ -469,81 +627,90 @@
                         </h2>
                         <a href="<?php echo home_url(); ?>/archive/">一覧を見る<i></i></a>
                     </div>
-                    <div class="com-btn-sp"><a href="<?php echo home_url(); ?>/archive/">お知らせ一覧を見る<i class="green"></i></a></div>
+                    <div class="com-btn-sp"><a href="<?php echo home_url(); ?>/category/news/">お知らせ一覧を見る<i class="green"></i></a></div>
                     <div class="content-width">
                         <div class="sec02-list">
                             <div class="sec02-list-wrap sec02-list-wrap-left">
-                                <h3>NEWS<a href="<?php echo home_url(); ?>/archive/">一覧を見る<i></i></a></h3>
-
+                                <h3>NEWS<a href="<?php echo home_url(); ?>/category/news/">一覧を見る<i></i></a></h3>
+                                <?php
+                                $args = array(
+                                    'post_type' => 'post', // 投稿タイプ
+                                    'posts_per_page' => 3, // 表示件数
+                                    'orderby' => 'date', // 日付でソート
+                                    'order' => 'DESC', // 降順
+                                    'category_name' => 'news', // 特定のカテゴリーを指定する場合
+                                );
+                                ?>
                                 <ul>
-                                    <li><a href="">
-                                            <div class="sec02-list-img">
-                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/dummy-small.jpg" alt="">
-                                            </div>
-                                            <div class="sec02-list-txt">
-                                                <span class="category">お知らせ</span>
-                                                <time>XX.XX.XX</time>
-                                                <h4>ニュースタイトルが入りますニュースタイトルが入ります</h4>
-                                            </div>
-                                        </a></li>
-                                    <li><a href="">
-                                            <div class="sec02-list-img">
-                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-img-02.jpg" alt="">
-                                            </div>
-                                            <div class="sec02-list-txt">
-                                                <span class="category">お知らせ</span>
-                                                <time>XX.XX.XX</time>
-                                                <h4>ニュースタイトルが入りますニュースタイトルが入ります</h4>
-                                            </div>
-                                        </a></li>
-                                    <li><a href="">
-                                            <div class="sec02-list-img">
-                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/dummy-small.jpg" alt="">
-                                            </div>
-                                            <div class="sec02-list-txt">
-                                                <span class="category">お知らせ</span>
-                                                <time>XX.XX.XX</time>
-                                                <h4>ニュースタイトルが入りますニュースタイトルが入ります</h4>
-                                            </div>
-                                        </a></li>
+                                    <?php
+                                    $the_query = new WP_Query($args);
+                                    if ($the_query->have_posts()) :
+                                        while ($the_query->have_posts()) : $the_query->the_post();
+                                    ?>
+                                            <li><a href="<?php the_permalink(); ?>">
+                                                    <div class="sec02-list-img">
+                                                        <?php if (has_post_thumbnail()) : ?>
+                                                            <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>">
+                                                        <?php else : ?>
+                                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/dummy-small.jpg" alt="<?php the_title(); ?>">
+                                                        <?php endif; ?>
+                                                    </div>
+                                                    <div class="sec02-list-txt">
+                                                        <span class="category">お知らせ</span>
+                                                        <time><?php the_time('Y.m.d'); ?></time>
+                                                        <h4><?php the_title(); ?></h4>
+                                                    </div>
+                                                </a></li>
+                                    <?php
+                                        endwhile;
+                                        wp_reset_postdata();
+                                    else :
+                                        echo '<p class="text-base color-white">ニュースが見つかりませんでした。</p>';
+                                    endif;
+                                    ?>
                                 </ul>
-                                <div class="com-btn-sp"><a href="">NEWS一覧を見る<i class="black"></i></a></div>
+                                <div class="com-btn-sp"><a href="<?php echo home_url(); ?>/category/news/">NEWS一覧を見る<i class="black"></i></a></div>
                             </div>
                             <div class="sec02-list-wrap sec02-list-wrap-right">
-                                <h3>MEDIA<a href="">一覧を見る<i></i></a></h3>
+                                <h3>MEDIA<a href="<?php echo home_url(); ?>/category/media/">一覧を見る<i></i></a></h3>
+                                <?php
+                                $args = array(
+                                    'post_type' => 'post', // 投稿タイプ
+                                    'posts_per_page' => 3, // 表示件数
+                                    'orderby' => 'date', // 日付でソート
+                                    'order' => 'DESC', // 降順
+                                    'category_name' => 'media', // 特定のカテゴリーを指定する場合
+                                );
+                                ?>
                                 <ul>
-                                    <li><a href="">
-                                            <div class="sec02-list-img">
-                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/dummy-small.jpg" alt="">
-                                            </div>
-                                            <div class="sec02-list-txt">
-                                                <span class="category">メディア掲載</span>
-                                                <time>XX.XX.XX</time>
-                                                <h4>ニュースタイトルが入りますニュースタイトルが入ります</h4>
-                                            </div>
-                                        </a></li>
-                                    <li><a href="">
-                                            <div class="sec02-list-img">
-                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-img-02.jpg" alt="">
-                                            </div>
-                                            <div class="sec02-list-txt">
-                                                <span class="category">メディア掲載</span>
-                                                <time>XX.XX.XX</time>
-                                                <h4>ニュースタイトルが入りますニュースタイトルが入ります</h4>
-                                            </div>
-                                        </a></li>
-                                    <li><a href="">
-                                            <div class="sec02-list-img">
-                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/dummy-small.jpg" alt="">
-                                            </div>
-                                            <div class="sec02-list-txt">
-                                                <span class="category">メディア掲載</span>
-                                                <time>XX.XX.XX</time>
-                                                <h4>ニュースタイトルが入りますニュースタイトルが入ります</h4>
-                                            </div>
-                                        </a></li>
+                                    <?php
+                                    $the_query = new WP_Query($args);
+                                    if ($the_query->have_posts()) :
+                                        while ($the_query->have_posts()) : $the_query->the_post();
+                                    ?>
+                                            <li><a href="<?php the_permalink(); ?>">
+                                                    <div class="sec02-list-img">
+                                                        <?php if (has_post_thumbnail()) : ?>
+                                                            <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>">
+                                                        <?php else : ?>
+                                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/dummy-small.jpg" alt="<?php the_title(); ?>">
+                                                        <?php endif; ?>
+                                                    </div>
+                                                    <div class="sec02-list-txt">
+                                                        <span class="category">お知らせ</span>
+                                                        <time><?php the_time('Y.m.d'); ?></time>
+                                                        <h4><?php the_title(); ?></h4>
+                                                    </div>
+                                                </a></li>
+                                    <?php
+                                        endwhile;
+                                        wp_reset_postdata();
+                                    else :
+                                        echo '<p class="color-white text-base">ニュースが見つかりませんでした。</p>';
+                                    endif;
+                                    ?>
                                 </ul>
-                                <div class="com-btn-sp"><a href="">MEDIA一覧を見る<i class="black"></i></a></div>
+                                <div class="com-btn-sp"><a href="<?php echo home_url(); ?>/category/media/">MEDIA一覧を見る<i class="black"></i></a></div>
                             </div>
                         </div>
                     </div>
