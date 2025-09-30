@@ -122,11 +122,13 @@
         @include media(middle) {
           height: 112px;
         }
+
         i {
           position: absolute;
           right: 40px;
           top: 50%;
           transform: translateY(-50%);
+          transition: all 0.3s ease;
           width: 35px;
           height: 35px;
           background-image: url(("./assets/img/icon/icon-btn-blown.svg"));
@@ -139,10 +141,17 @@
         }
 
         &:hover {
+          opacity: 1;
           .archive-wrap-col-img {
             img {
               transform: scale(1.1);
             }
+          }
+          .archive-wrap-col-txt {
+            opacity: 0.5;
+          }
+          i {
+            transform: translateX(10px) translateY(-50%);
           }
         }
 
@@ -164,6 +173,7 @@
         }
 
         .archive-wrap-col-txt {
+          transition: all 0.3s ease;
           width: calc(100% - 255px);
           display: flex;
           align-content: center;

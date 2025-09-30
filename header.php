@@ -41,7 +41,7 @@
                     <li class="header-wrap-list-ul-item"><a href="<?php echo home_url(); ?>/event/" class="no-link">イベント情報</a></li>
                     <li class="header-wrap-list-ul-item"><a href="<?php echo home_url(); ?>/archive/" class="no-link">お知らせ</a></li>
                     <li class="header-wrap-list-ul-item"><a href="<?php echo home_url(); ?>/faq/" class="no-link">FAQ</a></li>
-                    <li class="header-wrap-list-ul-icon"><a href="javascript:void(0)" class="no-link"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-insta.png" alt=""></a></li>
+                    <li class="header-wrap-list-ul-icon"><a href="https://www.instagram.com/guruspa_/" target="_blank" rel="noopener noreferrer"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-insta.png" alt=""></a></li>
                     <?php if (is_page("guide")): ?>
                         <li class="header-wrap-list-ul-btn"><a href="#sec03" class="no-link">営業時間<i></i></a></li>
                     <?php else: ?>
@@ -93,14 +93,14 @@
                             <dd>
                                 <a href="#sec02">料金案内</a>
                                 <a href="#sec03">営業時間</a>
-                                <a href="#sec04">利用案内</a>
+                                <a href="#sec04">ご利用案内</a>
                                 <a href="#sec05">アクセス</a>
                             </dd>
                         <?php else: ?>
                             <dd>
                                 <a href="<?php echo home_url(); ?>/guide/#sec02">料金案内</a>
                                 <a href="<?php echo home_url(); ?>/guide/#sec03">営業時間</a>
-                                <a href="<?php echo home_url(); ?>/guide/#sec04">利用案内</a>
+                                <a href="<?php echo home_url(); ?>/guide/#sec04">ご利用案内</a>
                                 <a href="<?php echo home_url(); ?>/guide/#sec05">アクセス</a>
                             </dd>
                         <?php endif; ?>
@@ -110,7 +110,7 @@
                         <dd>
                             <a href="<?php echo home_url(); ?>/enjoy/">館内マップ</a>
                             <a href="<?php echo home_url(); ?>/enjoy/spa/">お風呂</a>
-                            <a href="<?php echo home_url(); ?>/enjoy/sauna/">サウナ</a>
+                            <a href="<?php echo home_url(); ?>/enjoy/sauna/">サウナ&水風呂</a>
                             <a href="<?php echo home_url(); ?>/enjoy/sweating/">発汗エリア</a>
                             <a href="<?php echo home_url(); ?>/enjoy/food/">ご飲食</a>
                             <a href="<?php echo home_url(); ?>/enjoy/relaxation/">リラクゼーション</a>
@@ -136,15 +136,15 @@
                     <dl class="header-drawer-wrap-menu-child menu-child-yellow">
                         <dt><span class="en-title">EVENT</span><span class="jp-title">イベント情報</span></dt>
                         <dd>
-                            <a href="<?php echo home_url(); ?>/today/">当日のイベント</a>
+                            <a href="<?php echo home_url(); ?>/today/">本日のイベント</a>
                             <a href="<?php echo home_url(); ?>/schedule/">イベントスケジュール</a>
                         </dd>
                     </dl>
                     <dl class="header-drawer-wrap-menu-child menu-child-bed">
                         <dt><span class="en-title">CONTACT</span><span class="jp-title">お問い合わせ</span></dt>
                         <dd>
-                            <a href="">個人のお客様</a>
-                            <a href="">取材依頼・法人の方</a>
+                            <a href="<?php echo home_url(); ?>/contact/">個人のお客様</a>
+                            <a href="<?php echo home_url(); ?>/contact-corporate/">取材依頼・法人の方</a>
                         </dd>
                     </dl>
                     <ul class="header-drawer-wrap-menu-child-under">

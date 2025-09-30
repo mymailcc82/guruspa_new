@@ -6,7 +6,7 @@
         <div class="top-fixed-sp-wrap is-show">
             <a class="top-fixed-1" href="<?php echo home_url(); ?>/today/"><i></i>本日の<br>イベント</a>
             <a class="top-fixed-2" href="<?php echo home_url(); ?>"><i></i>今すぐ<br>行く！</a>
-            <a class="top-fixed-3" href="<?php echo home_url(); ?>/price/"><i></i>料金・<br>ご利用料金</a>
+            <a class="top-fixed-3" href="<?php echo home_url(); ?>/price/"><i></i>料金・<br>ご利用案内</a>
         </div>
     </div>
     <div class="footer-fixed footer-fixed-pc">
@@ -35,14 +35,14 @@
                         <dd>
                             <a href="#sec02">ー料金案内</a>
                             <a href="#sec03">ー営業時間</a>
-                            <a href="#sec04">ー利用案内</a>
+                            <a href="#sec04">ーご利用案内</a>
                             <a href="#sec05">ーアクセス</a>
                         </dd>
                     <?php else: ?>
                         <dd>
                             <a href="<?php echo home_url(); ?>/guide/#sec02">ー料金案内</a>
                             <a href="<?php echo home_url(); ?>/guide/#sec03">ー営業時間</a>
-                            <a href="<?php echo home_url(); ?>/guide/#sec04">ー利用案内</a>
+							<a href="<?php echo home_url(); ?>/guide/#sec04">ーご利用案内</a>
                             <a href="<?php echo home_url(); ?>/guide/#sec05">ーアクセス</a>
                         </dd>
                     <?php endif; ?>
@@ -53,7 +53,7 @@
                     <dd>
                         <a href="<?php echo home_url(); ?>/enjoy/">ー館内マップ</a>
                         <a href="<?php echo home_url(); ?>/enjoy/spa/">ーお風呂</a>
-                        <a href="<?php echo home_url(); ?>/enjoy/sauna/">ーサウナ</a>
+                        <a href="<?php echo home_url(); ?>/enjoy/sauna/">ーサウナ&水風呂</a>
                         <a href="<?php echo home_url(); ?>/enjoy/sweating/">ー発汗エリア</a>
                         <a href="<?php echo home_url(); ?>/enjoy/food/">ーご飲食</a>
                         <a href="<?php echo home_url(); ?>/enjoy/relaxation/">ーリラクゼーション</a>
@@ -67,15 +67,15 @@
 
                     <?php if (is_page("first-time")): ?>
                         <dd>
-                            <a href="#sec02">グルスパの魅力</a>
-                            <a href="#sec03">入館の流れ</a>
-                            <a href="#sec04">施設案内</a>
+                            <a href="#sec02">ーグルスパの魅力</a>
+                            <a href="#sec03">ー入館の流れ</a>
+                            <a href="#sec04">ー施設案内</a>
                         </dd>
                     <?php else: ?>
                         <dd>
-                            <a href="<?php echo home_url(); ?>/first-time/#sec02">グルスパの魅力</a>
-                            <a href="<?php echo home_url(); ?>/first-time/#sec03">入館の流れ</a>
-                            <a href="<?php echo home_url(); ?>/first-time/#sec04">施設案内</a>
+                            <a href="<?php echo home_url(); ?>/first-time/#sec02">ーグルスパの魅力</a>
+                            <a href="<?php echo home_url(); ?>/first-time/#sec03">ー入館の流れ</a>
+                            <a href="<?php echo home_url(); ?>/first-time/#sec04">ー施設案内</a>
                         </dd>
                     <?php endif; ?>
                 </dl>
@@ -83,8 +83,8 @@
                     <dt class="hidden-mobile"><a href="<?php echo home_url(); ?>/event/">イベント情報</a></dt>
                     <dt class="hidden-sm"><a href="javascript:void(0);">イベント情報</a></dt>
                     <dd>
-                        <a href="<?php echo home_url(); ?>/today/">当日のイベント</a>
-                        <a href="<?php echo home_url(); ?>/schedule/">イベントスケジュール</a>
+						<a href="<?php echo home_url(); ?>/today/">ー当日のイベント</a>
+                        <a href="<?php echo home_url(); ?>/schedule/">ーイベントスケジュール</a>
                     </dd>
                 </dl>
                 <dl class="accordion">
@@ -105,7 +105,7 @@
             </div>
 
             <ul class="footer-banner">
-                <li><a href="https://sauna-ikitai.com/" target="_blank" rel="noopener noreferrer"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/banner-1.jpg" alt=""></a></li>
+                <li><a href="https://sauna-ikitai.com/saunas/94099" target="_blank" rel="noopener noreferrer"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/banner-1.jpg" alt=""></a></li>
                 <li><a href="https://sauna-eagle.jp/" target="_blank" rel="noopener noreferrer"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/banner-2.jpg" alt=""></a></li>
                 <li><a href="https://royal-gr.jp/" target="_blank" rel="noopener noreferrer"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/banner-3.jpg" alt=""></a></li>
                 <li><a href="https://royal-gr.jp/recruit/" target="_blank" rel="noopener noreferrer"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/banner-4.jpg" alt=""></a></li>
@@ -142,7 +142,7 @@
         <?php endif; ?>
 
 
-        <a class="top-fixed-3" href="<?php echo home_url(); ?>/guide/">料金・<br>ご利用料金<i></i></a>
+        <a class="top-fixed-3" href="<?php echo home_url(); ?>/guide/">料金・<br>ご利用案内<i></i></a>
 
     </div>
 

@@ -79,7 +79,7 @@
                         </tr>
                         <tr>
                             <td>
-                                一般<br><span>※中学生以下</span>
+								一般<br><span>※中学生以上</span>
                             </td>
                             <td>
                                 <strong>980</strong>円
@@ -142,7 +142,7 @@
                         </tr>
                         <tr>
                             <td>
-                                一般<br><span>※中学生以下</span>
+								一般<br><span>※中学生以上</span>
                             </td>
                             <td>
                                 <strong>980</strong>円
@@ -189,7 +189,7 @@
                         </tr>
                         <tr>
                             <td>
-                                一般<br><span>※中学生以下</span>
+								一般<br><span>※中学生以上</span>
                             </td>
                             <td>
                                 <strong>860</strong>円
@@ -513,7 +513,7 @@
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/guide/sec03-img-01.jpg" alt="">
                             </div>
                             <p>
-                                入館時は<span>券売機または受付でのチェックイン</span>をお願いいたします。
+								入館は<span>下足ロッカーのリストバンドを券売機にて受付</span>し、ゲートをお通りくださいませ。
                             </p>
                         </div>
                         <div class="sec03-wrap-col">
@@ -652,7 +652,7 @@
                 <h3>伊勢志摩観光のついでに立ち寄れる！</h3>
                 <p>
                     伊勢神宮・鳥羽水族館・志摩スペイン村など、人気観光地からの立ち寄りに最適な場所に位置しています！<br>
-                    名古屋・大阪方面の帰路に便利な「松阪IC」近く、そして国道23号線沿いで車移動にもぴったりです。
+					名古屋・大阪方面の帰路に便利な「松阪IC」や、国道23号もすぐ近くでお車でのアクセスが抜群です。
                 </p>
             </div>
         </div>
