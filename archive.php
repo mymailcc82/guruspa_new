@@ -47,19 +47,12 @@ $category_slug = $category->slug;
             </div>
         </div>
         <div class="sec01-col">
-            <ul class="sec01-col-select">
-                <li><a href="<?php echo home_url(); ?>/archive">すべて</a></li>
-                <?php if ($category_slug === 'news') : ?>
-                    <li class="active"><a href="<?php echo home_url(); ?>/category/news/">お知らせ</a></li>
-                <?php else : ?>
-                    <li><a href="<?php echo home_url(); ?>/category/news/">お知らせ</a></li>
-                <?php endif; ?>
-                <?php if ($category_slug === 'media') : ?>
-                    <li class="active"><a href="<?php echo home_url(); ?>/category/media/">メディア</a></li>
-                <?php else : ?>
-                    <li><a href="<?php echo home_url(); ?>/category/media/">メディア</a></li>
-                <?php endif; ?>
+            <ul class="sec01-col-select tab">
+                <li class="active"><a href="javascript:void(0)" data-id="#area01">すべて</a></li>
+                <li><a href="javascript:void(0)" data-id="#area02">期間限定<br class="hidden-sm">イベント</a></li>
+                <li><a href="javascript:void(0)" data-id="#area03">定例<br class="hidden-sm">イベント</a></li>
             </ul>
+
             <div id="area01" class="area is-active">
                 <div class="swiper-event sec01-col-main">
                     <div class="content-width">

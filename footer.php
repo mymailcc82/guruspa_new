@@ -6,7 +6,8 @@
         <div class="top-fixed-sp-wrap is-show">
             <a class="top-fixed-1" href="<?php echo home_url(); ?>/today/"><i></i>本日の<br>イベント</a>
             <a class="top-fixed-2" href="<?php echo home_url(); ?>"><i></i>今すぐ<br>行く！</a>
-            <a class="top-fixed-3" href="<?php echo home_url(); ?>/price/"><i></i>料金・<br>ご利用案内</a>
+
+            <a class="top-fixed-3" href="<?php echo home_url(); ?>/price/"><i></i>料金・<br>ご利用案内</a>
         </div>
     </div>
     <div class="footer-fixed footer-fixed-pc">
@@ -35,14 +36,14 @@
                         <dd>
                             <a href="#sec02">ー料金案内</a>
                             <a href="#sec03">ー営業時間</a>
-                            <a href="#sec04">ーご利用案内</a>
+                            <a href="#sec04">ーご利用案内</a>
                             <a href="#sec05">ーアクセス</a>
                         </dd>
                     <?php else: ?>
                         <dd>
                             <a href="<?php echo home_url(); ?>/guide/#sec02">ー料金案内</a>
                             <a href="<?php echo home_url(); ?>/guide/#sec03">ー営業時間</a>
-							<a href="<?php echo home_url(); ?>/guide/#sec04">ーご利用案内</a>
+                            <a href="<?php echo home_url(); ?>/guide/#sec04">ーご利用案内</a>
                             <a href="<?php echo home_url(); ?>/guide/#sec05">ーアクセス</a>
                         </dd>
                     <?php endif; ?>
@@ -68,7 +69,7 @@
                     <?php if (is_page("first-time")): ?>
                         <dd>
                             <a href="#sec02">ーグルスパの魅力</a>
-                            <a href="#sec03">ー入館の流れ</a>
+                            <a href="#sec03">ー入館の流れ</a>
                             <a href="#sec04">ー施設案内</a>
                         </dd>
                     <?php else: ?>
@@ -83,7 +84,7 @@
                     <dt class="hidden-mobile"><a href="<?php echo home_url(); ?>/event/">イベント情報</a></dt>
                     <dt class="hidden-sm"><a href="javascript:void(0);">イベント情報</a></dt>
                     <dd>
-						<a href="<?php echo home_url(); ?>/today/">ー当日のイベント</a>
+                        <a href="<?php echo home_url(); ?>/today/">ー当日のイベント</a>
                         <a href="<?php echo home_url(); ?>/schedule/">ーイベントスケジュール</a>
                     </dd>
                 </dl>
@@ -141,8 +142,7 @@
             <a class="top-fixed-2" href="<?php echo home_url(); ?>/guide/#sec05">今すぐ行く！<i></i></a>
         <?php endif; ?>
 
-
-        <a class="top-fixed-3" href="<?php echo home_url(); ?>/guide/">料金・<br>ご利用案内<i></i></a>
+        <a class="top-fixed-3" href="<?php echo home_url(); ?>/guide/">料金・<br>ご利用案内<i></i></a>
 
     </div>
 
@@ -612,6 +612,14 @@
                 }
             }
         );
+    });
+
+    //.footer-fixed-mainをopacity:1にする
+    gsap.to('.footer-fixed', {
+        opacity: 1,
+        duration: 0.8,
+        delay: .6,
+        ease: 'power2.out'
     });
 </script>
 

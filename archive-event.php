@@ -54,6 +54,7 @@ if (isset($_GET['event_tag'])) {
         </div>
 
         <div class="sec01-col">
+            <?php /*
             <ul class="sec01-col-select">
                 <?php if ($event_tag === ''): ?>
                     <li class="active"><a href="<?php echo home_url(); ?>/event/">すべて</a></li>
@@ -71,6 +72,12 @@ if (isset($_GET['event_tag'])) {
                     <li><a href="<?php echo home_url(); ?>/event/?event_tag=per_event&event_category=<?php echo $event_category; ?>" data-id="#area03">定例<br class="hidden-sm">イベント</a></li>
                 <?php endif; ?>
             </ul>
+            */ ?>
+            <ul class="sec01-col-select tab">
+                <li class="active"><a href="javascript:void(0)" data-id="#area01">すべて</a></li>
+                <li><a href="javascript:void(0)" data-id="#area02">期間限定<br class="hidden-sm">イベント</a></li>
+                <li><a href="javascript:void(0)" data-id="#area03">定例<br class="hidden-sm">イベント</a></li>
+            </ul>
             <div class="content-width">
                 <div class="select">
                     <select name="category" id="category" onchange="location.href=value;">
@@ -83,7 +90,13 @@ if (isset($_GET['event_tag'])) {
                         ?>
                         <!--すべて -->
                         <option value="<?php echo home_url(); ?>/event/?category_tag=<?php echo $event_tag; ?>">すべて</option>
+
                         <?php foreach ($terms as $term) : ?>
+                            <?php
+                            if ($term->slug == "akasuri" || $term->slug == "sweet" || $term->slug == "tokiwa") {
+                                continue;
+                            }
+                            ?>
                             <option value="<?php echo home_url(); ?>/event/?event_category=<?php echo $term->slug; ?><?php if ($event_tag) {
                                                                                                                             echo '&event_tag=' . $event_tag;
                                                                                                                         } ?>" <?php if ($event_category === $term->slug) {
@@ -150,14 +163,26 @@ if (isset($_GET['event_tag'])) {
                                                             <?php
                                                             // カテゴリーに応じたデフォルト画像を設定
                                                             $category_slug = $event_category[0]->slug;
+                                                            $category_slug_parent = '';
+                                                            //$event_category[0]の親カテゴリーを取得
+                                                            //var_dump($event_category[0]);
+                                                            if ($event_category[0]->parent) {
+                                                                $parent_term = get_term($event_category[0]->parent, 'event_category');
+                                                                if ($parent_term && !is_wp_error($parent_term)) {
+                                                                    $category_slug_parent_id = $parent_term->term_id;
+                                                                }
+                                                            }
                                                             $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-default.jpg'; // デフォルト画像
 
-                                                            if ($category_slug === 'information') {
+                                                            if ($category_slug === 'information' || $category_slug_parent === 'information') {
                                                                 $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-red.jpg';
-                                                            } elseif ($category_slug === 'event') {
+                                                            } elseif ($category_slug === 'event' || $category_slug_parent === 'event') {
                                                                 $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-green.jpg';
-                                                            } elseif ($category_slug === 'food') {
+                                                            } elseif ($category_slug === 'food' || $category_slug_parent === 'food') {
                                                                 $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-yellow.jpg';
+                                                            } elseif ($category_slug === 'relax' || $category_slug_parent === 'relax') {
+                                                                $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-blue.jpg';
+                                                            } elseif ($category_slug === 'tokiwa') {
                                                             }
                                                             ?>
                                                             <img src="<?php echo esc_url($default_image_url); ?>" alt="<?php the_title(); ?>">
@@ -169,16 +194,18 @@ if (isset($_GET['event_tag'])) {
                                                 <div class="text">
                                                     <div class="text-info">
                                                         <?php
-                                                        if ($category_slug === 'information') {
+                                                        if ($category_slug === 'information' || $category_slug_parent === 'information') {
                                                             $cats_class = 'category-red';
-                                                        } elseif ($category_slug === 'event') {
+                                                        } elseif ($category_slug === 'event' || $category_slug_parent === 'event') {
                                                             $cats_class = 'category-green';
-                                                        } elseif ($category_slug === 'food') {
+                                                        } elseif ($category_slug === 'food' || $category_slug_parent === 'food') {
                                                             $cats_class = 'category-yellow';
+                                                        } elseif ($category_slug === 'relaxation' || $category_slug_parent === 'relaxation') {
+                                                            $cats_class = 'category-blue';
                                                         }
                                                         ?>
                                                         <div class="text-info-cat">
-                                                            <span class="category <?php echo esc_attr($cats_class); ?>"><?php echo esc_html($event_category[0]->name); ?></span>
+                                                            <span class="category <?php echo esc_attr($cats_class); ?> cat-<?php echo esc_attr($category_slug); ?>"><?php echo esc_html($event_category[0]->name); ?></span>
                                                         </div>
                                                         <div class="text-info-term">
                                                             <span class="term"><?php echo $event_start_date; ?></span>

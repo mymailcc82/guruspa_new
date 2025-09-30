@@ -405,6 +405,7 @@
       flex-wrap: wrap;
       justify-content: space-between;
       padding: 0px 10px;
+      margin-bottom: 30px;
       @include media(middle) {
         margin-bottom: 30px;
       }
@@ -575,5 +576,398 @@
         }
       }
     }
+  }
+  .spotMapInner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: stretch;
+    margin-top: 50px;
+
+    .infoWindowBox.s_current {
+      display: none;
+      border-color: #980820;
+      color: #fff;
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+    .spotMapBoxCanvas_pin_num {
+      width: 2.3rem;
+      height: 3.1rem;
+      font-size: 1.6rem;
+      line-height: 1;
+      display: flex;
+      justify-content: center;
+      color: #fff;
+      letter-spacing: 0.03em;
+      padding-top: 0.6rem;
+      display: none;
+    }
+    .spotMapList_itemInner_img {
+      width: 100%;
+      position: relative;
+      margin-bottom: 20px;
+      .spotMapList_itemInner_imgWrap {
+        width: 100%;
+        height: 278px;
+        border-radius: 30px;
+        overflow: hidden;
+        display: block;
+        position: relative;
+        @include media(mobile) {
+          height: 192px;
+        }
+        img {
+          position: absolute;
+          object-fit: cover;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 100%;
+          width: 100%;
+          margin: auto;
+          transition: 0.5s ease;
+        }
+      }
+    }
+    .spotMapList_item.clicked .spotMapList_itemInner_imgWrap img {
+      animation-name: mapClickAnim02;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      animation-delay: 0s;
+    }
+    @keyframes mapClickAnim02 {
+      0% {
+        height: 100%;
+        width: 100%;
+      }
+      50% {
+        height: 120%;
+        width: 120%;
+      }
+      100% {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    .spotMapList_itemInner_infoTtl_num {
+      width: 23px;
+      height: 37px;
+      background-image: url(../../src/img/spot_ico02_orange.png);
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      font-size: 1.4rem;
+      line-height: 1;
+      display: flex;
+      justify-content: center;
+      color: #fff;
+      letter-spacing: 0.03em;
+      padding-top: 0.5rem;
+    }
+    .spotMapList_itemInner_infoTtl_txt {
+      width: calc(100% - 33px);
+      font-size: 20px;
+      @include media(middle) {
+        font-size: 18px;
+      }
+    }
+  }
+  .spotMapBox {
+    width: 55%;
+    height: 736px;
+    @include media(mobile) {
+      width: 100%;
+      height: 269px;
+    }
+  }
+  .spotMapBoxCanvas {
+    width: 100%;
+    padding-top: 736px;
+    @include media(mobile) {
+      padding-top: 269px;
+    }
+  }
+  .spotMapBox iframe {
+    width: 100%;
+    height: 736px;
+    @include media(mobile) {
+      height: 269px;
+    }
+  }
+
+  .gm-style .gm-style-iw-c {
+    padding: 0 !important;
+    top: 1.8rem !important;
+    background: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    overflow: unset !important;
+  }
+  .gm-style .gm-style-iw-d {
+    padding: 0 !important;
+    overflow: unset !important;
+  }
+  .gm-style .gm-style-iw-tc {
+    display: none !important;
+  }
+  .gm-ui-hover-effect {
+    opacity: 1 !important;
+    border-radius: 50%;
+    background: #fff !important;
+    top: -2rem !important;
+    right: -2rem !important;
+    display: none !important;
+  }
+  .infoWindowBox {
+    font-size: 1.7rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 0.6rem 2rem;
+    border: 2px solid #aaa;
+    background: #fff;
+    border-radius: 100px;
+  }
+  .spotMapListWrap {
+    width: 45%;
+    height: 736px;
+    //overflow-y: scroll;
+    overflow: hidden;
+    //スクロールバー非表示
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    //safari
+    -webkit-overflow-scrolling: touch;
+    @include media(mobile) {
+      width: 100%;
+      height: 540px;
+      margin-top: 30px;
+    }
+  }
+  .spotMapListWrap::-webkit-scrollbar {
+    display: none;
+  }
+  .simplebar-track {
+    right: 0.5rem !important;
+    top: 1rem !important;
+    bottom: 1rem !important;
+  }
+  .spotMapList {
+    //padding: 35px 0;
+    background: #fff;
+  }
+  .spotMapList_item {
+    width: 100%;
+    height: 736px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    @include media(mobile) {
+      height: 540px;
+    }
+  }
+  .spotMapList_item:hover {
+    opacity: 0.7;
+    transition: 0.5s ease;
+  }
+
+  .spotMapList_itemInner {
+    width: 70%;
+    margin: 0 auto;
+    @include media(middle) {
+      width: 90%;
+    }
+  }
+
+  .spotMapList_itemInner_imgNavi {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    border: 1px solid #aaa;
+    background: #fff;
+    position: absolute;
+    right: 6rem;
+    top: -3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 0.05em;
+  }
+  .spotMapList_itemInner_imgNavi p {
+    text-align: center;
+    line-height: 1.4;
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding-top: 0.3rem;
+  }
+  .spotMapList_itemInner_imgNavi p span {
+    font-size: 1.7rem;
+  }
+  .spotMapList_itemInner_info {
+  }
+  .spotMapList_itemInner_infoTtl {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  .spotMapList_itemInner_infoList {
+    @include media(mobile) {
+      margin-bottom: 10px;
+    }
+    .spotMapList_itemInner_infoListLi {
+      padding: 25px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-top: 1px solid #e5e5e5;
+      @include media(middle) {
+        padding: 15px 0;
+      }
+      &:nth-child(2) {
+        border-top: none !important;
+        padding-top: 0px !important;
+      }
+    }
+    .spotMapList_itemInner_infoListLi_ttl {
+      width: 100px;
+      font-weight: bold;
+      margin: 0px;
+      font-size: 16px;
+      color: #868686;
+      @include media(middle) {
+        font-size: 14px;
+        width: 80px;
+      }
+    }
+    .spotMapList_itemInner_infoListLi_txt {
+      width: calc(100% - 100px);
+      font-size: 16px;
+      margin: 0px;
+      @include media(middle) {
+        font-size: 14px;
+        width: calc(100% - 80px);
+      }
+    }
+  }
+
+  /* Leisure Spot */
+  .spotMapList_item.leisure {
+    background: #fff4e9;
+  }
+  .spotMapList_item.leisure .spotMapList_itemInner_cat {
+    background-image: url(../../src/img/spot_ico01_orange.png);
+    color: #f27800;
+  }
+  .spotMapList_item.leisure .spotMapList_itemInner_cat:before {
+    content: 'Leisure Spot';
+  }
+  .spotMapList_item.leisure .spotMapList_itemInner_cat:after {
+    content: '遊べる施設';
+  }
+  .spotMapList_item.leisure .spotMapList_itemInner_imgNavi {
+    border-color: #f27800;
+    color: #f27800;
+  }
+  .spotMapList_item.leisure .spotMapList_itemInner_infoTtl_num {
+    background-image: url(../../src/img/spot_ico02_orange.png);
+  }
+  .spotMapList_item.leisure .spotMapList_itemInner_infoTtl_txt {
+    color: #f27800;
+  }
+  .infoWindowBox.leisure {
+    border-color: #f27800;
+    color: #f27800;
+  }
+
+  /* Shopping Spot */
+  .spotMapList_item.shopping {
+    background: #f0f7ff;
+  }
+  .spotMapList_item.shopping .spotMapList_itemInner_cat {
+    background-image: url(../../src/img/spot_ico01_blue.png);
+    color: #1a62c3;
+  }
+  .spotMapList_item.shopping .spotMapList_itemInner_cat:before {
+    content: 'Shopping Spot';
+  }
+  .spotMapList_item.shopping .spotMapList_itemInner_cat:after {
+    content: '買い物ができる施設';
+  }
+  .spotMapList_item.shopping .spotMapList_itemInner_imgNavi {
+    border-color: #1a62c3;
+    color: #1a62c3;
+  }
+  .spotMapList_item.shopping .spotMapList_itemInner_infoTtl_num {
+    background-image: url(../../src/img/spot_ico02_blue.png);
+  }
+  .spotMapList_item.shopping .spotMapList_itemInner_infoTtl_txt {
+    color: #1a62c3;
+  }
+  .infoWindowBox.shopping {
+    border-color: #1a62c3;
+    color: #1a62c3;
+  }
+
+  /* Food Spot */
+  .spotMapList_item.food {
+    background: #fff5fc;
+  }
+  .spotMapList_item.food .spotMapList_itemInner_cat {
+    background-image: url(../../src/img/spot_ico01_ppl.png);
+    color: #dd37a3;
+  }
+  .spotMapList_item.food .spotMapList_itemInner_cat:before {
+    content: 'Food Spot';
+  }
+  .spotMapList_item.food .spotMapList_itemInner_cat:after {
+    content: '飲食ができる施設';
+  }
+  .spotMapList_item.food .spotMapList_itemInner_imgNavi {
+    border-color: #dd37a3;
+    color: #dd37a3;
+  }
+  .spotMapList_item.food .spotMapList_itemInner_infoTtl_num {
+    background-image: url(../../src/img/spot_ico02_ppl.png);
+  }
+  .spotMapList_item.food .spotMapList_itemInner_infoTtl_txt {
+    color: #dd37a3;
+  }
+  .infoWindowBox.food {
+    border-color: #dd37a3;
+    color: #dd37a3;
+  }
+
+  /* Event Spot */
+  .spotMapList_item.event {
+    background: #f5fff5;
+  }
+  .spotMapList_item.event .spotMapList_itemInner_cat {
+    background-image: url(../../src/img/spot_ico01_green.png);
+    color: #1aa815;
+  }
+  .spotMapList_item.event .spotMapList_itemInner_cat:before {
+    content: 'Event Spot';
+  }
+  .spotMapList_item.event .spotMapList_itemInner_cat:after {
+    content: 'おでかけにオススメな施設';
+  }
+  .spotMapList_item.event .spotMapList_itemInner_imgNavi {
+    border-color: #1aa815;
+    color: #1aa815;
+  }
+  .spotMapList_item.event .spotMapList_itemInner_infoTtl_num {
+    background-image: url(../../src/img/spot_ico02_green.png);
+  }
+  .spotMapList_item.event .spotMapList_itemInner_infoTtl_txt {
+    color: #1aa815;
+  }
+  .infoWindowBox.event {
+    border-color: #1aa815;
+    color: #1aa815;
   }
 }

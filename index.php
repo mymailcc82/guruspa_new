@@ -1611,13 +1611,6 @@
                 }
             });
 
-            //.footer-fixed-mainをopacity:1にする
-            gsap.to('.footer-fixed', {
-                opacity: 1,
-                duration: 0.8,
-                delay: .6,
-                ease: 'power2.out'
-            });
         }
 
         // 目的の値へ滑らかにアニメーションする関数
