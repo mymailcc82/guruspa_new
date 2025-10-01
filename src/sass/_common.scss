@@ -77,6 +77,12 @@ img.lazyloaded {
   }
 }
 
+.hidden-middle-small{
+  @include media(middle-small){
+    display: none !important;
+  }
+}
+
 .hidden-mobile {
   @include media(mobile) {
     display: none !important;
@@ -351,7 +357,7 @@ img.lazyloaded {
 
 .com-title-faq {
   text-align: left;
-  padding-left: 40px;
+  padding-left: 52px;
   @include media(mobile) {
     text-align: center;
     padding-left: 0;

@@ -848,7 +848,7 @@
 
                         <div class="sec03-col-under-btn">
                             <div class="com-btn sec03-col-under-btn-1"><a href="<?php echo home_url(); ?>/first-time/">初めてのお客様へ<span class="icon-btn--1"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-btn--1.png" alt=""></span><i></i></a></div>
-                            <div class="com-btn"><a href="<?php echo home_url(); ?>/guide/">ご利用案内<span class="icon-btn--2"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-btn--2.png" alt=""></span></span><i></i></a></div>
+                            <div class="com-btn sec03-col-under-btn-2"><a href="<?php echo home_url(); ?>/guide/">ご利用案内<span class="icon-btn--2"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-btn--2.png" alt=""></span></span><i></i></a></div>
                         </div>
                     </div>
 
@@ -1102,7 +1102,7 @@
                         </p>
                     </div>
                     <div class="sec05-wrap-under-link">
-                        <a href="<?php echo home_url(); ?>/guide/">ご利用案内<i></i></a>
+                        <a href="<?php echo home_url(); ?>/guide/">くわしく見る<i></i></a>
                     </div>
                 </div>
             </div>
@@ -1128,8 +1128,8 @@
                     </div>
 
                     <ul class="sec06-map">
-                        <li></li>
-                        <li></li>
+                        <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/map-1.jpg" alt="guruspa"></li>
+                        <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/map-2.jpg" alt="guruspa"></li>
                     </ul>
                     <div class="sec06-wrap-under-link">
                         <a href="<?php echo home_url(); ?>/guide/#sec05">くわしく見る<i></i></a>
@@ -1158,35 +1158,37 @@
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/item-01.png" alt="">
                                 </span>
                             </h2>
-                            <a href="">一覧を見る<i></i></a>
+                            <a href="<?php echo home_url(); ?>/faq">一覧を見る<i></i></a>
                         </div>
                     </div>
                     <div class="sec07-wrap-faq accordion">
-                        <dl>
-                            <dt><i></i>岩盤浴ウェアやタオルは自分で持っていく必要がありますか？</dt>
-                            <dd></dd>
-                        </dl>
-                        <dl>
-                            <dt><i></i>天然温泉は源泉かけ流しですか？</dt>
-                            <dd></dd>
-                        </dl>
-                        <dl>
-                            <dt><i></i>混雑する時間帯はいつですか？</dt>
-                            <dd></dd>
-                        </dl>
-                        <dl>
-                            <dt><i></i>発汗エリアは誰でも利用できますか？</dt>
-                            <dd></dd>
-                        </dl>
-                        <dl>
-                            <dt><i></i>駐車場はありますか？</dt>
-                            <dd></dd>
-                        </dl>
+                        <?php
+                        $faq_query = new WP_Query(array(
+                            'post_type'      => 'faq',     // 投稿タイプ
+                            'posts_per_page' => 5,         // 表示件数
+                            'orderby'        => 'date',
+                            'order'          => 'DESC'
+                        ));
+                        if ($faq_query->have_posts()) :
+                            while ($faq_query->have_posts()) : $faq_query->the_post();
+                        ?>
+                                <dl>
+                                    <dt><i></i><?php the_title(); ?></dt>
+                                    <dd><?php the_content(); ?></dd>
+                                </dl>
+                            <?php
+                            endwhile;
+                            wp_reset_postdata();
+                        else :
+                            ?>
+                            <p>FAQがまだ登録されていません。</p>
+                        <?php endif; ?>
 
                         <div class="com-btn-mobile hidden-sm">
                             <a href="<?php echo home_url(); ?>/faq/">一覧を見る<i></i></a>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
@@ -1221,13 +1223,13 @@
                     </div>
                     <div class="aside-btn-flex">
                         <div class="aside-btn-2">
-                            <a href="">
+                            <a href="<?php echo home_url(); ?>/contact">
                                 <h3><i></i>CONTACT</h3>
                                 <p>お客様お問い合わせ</p>
                             </a>
                         </div>
                         <div class="aside-btn-3">
-                            <a href="">
+                            <a href="<?php echo home_url(); ?>/contact-corporate">
                                 <h3><i></i>CONTACT</h3>
                                 <p>企業様お問い合わせ</p>
                             </a>

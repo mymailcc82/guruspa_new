@@ -1387,6 +1387,12 @@
                         transform: scale(1.1);
                       }
                     }
+
+                    span,
+                    time,
+                    h4 {
+                      opacity: .5;
+                    }
                   }
 
                   @include media(middle) {
@@ -1725,6 +1731,21 @@
           .sec03-col-under-btn-1 {
             margin-bottom: 10px;
           }
+
+          .sec03-col-under-btn-1,
+          .sec03-col-under-btn-2 {
+            height: 73.5px;
+
+            @include media(middle) {
+              height: 61.5px;
+            }
+
+            a {
+              padding: 0 20px 0 30px;
+              width: 100%;
+              height: 100%;
+            }
+          }
         }
       }
 
@@ -1803,6 +1824,7 @@
       padding: 0px 0 30px;
       position: relative;
       z-index: 2;
+      overflow: hidden;
 
       &::before {
         position: absolute;
@@ -1933,8 +1955,39 @@
         animation: ringExpand 1.2s ease-out forwards;
       }
 
-      .ring-1 {
+      .ring-1,
+      .ring-2 {
         position: absolute;
+        transform-origin: center center;
+        opacity: 0;
+        /* 完全に見えない状態 */
+        transform: scale(0);
+        /* サイズ0 */
+      }
+
+      .ring-animate {
+        animation: ringExpand 1.5s ease-out forwards;
+      }
+
+      @keyframes ringExpand {
+        0% {
+          opacity: 0;
+          transform: scale(0);
+        }
+
+        30% {
+          opacity: 1;
+          transform: scale(0.7);
+        }
+
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      /* 配置はそのまま */
+      .ring-1 {
         width: 565px;
         top: 30%;
         left: -15%;
@@ -1946,7 +1999,6 @@
       }
 
       .ring-2 {
-        position: absolute;
         bottom: 0;
         right: -10%;
         width: 435px;
@@ -1957,17 +2009,14 @@
         }
       }
 
-      .ring-1.ring-2 {
-        transform-origin: center center;
-        transform: scale(1.2);
-      }
-
       .ring-1 img,
       .ring-2 img {
         display: block;
         width: 100%;
         height: auto;
       }
+
+
 
       .sec04-wrap {
         position: relative;
@@ -1977,6 +2026,11 @@
       .sec04-wrap-txt {
         text-align: center;
         margin-bottom: 58px;
+        margin-top: 30px;
+
+        @include media(mobile) {
+          margin-top: 20px;
+        }
 
         p {
           font-size: 16px;
@@ -2136,7 +2190,7 @@
 
             p {
               font-size: 16px;
-              font-weight: 600;
+              font-weight: 400;
               letter-spacing: 0.1em;
               line-height: 2.3;
               color: #fff;
@@ -2148,8 +2202,8 @@
             }
 
             a {
-              font-size: 18px;
-              font-weight: bold;
+              font-size: 19px;
+              font-weight: 500;
               letter-spacing: 0.08em;
               color: #fff;
               border-bottom: solid 1px #fff;
@@ -2392,7 +2446,7 @@
           background-size: contain;
           background-repeat: no-repeat;
           left: -120px;
-          bottom: -80px;
+          bottom: -150px;
 
           @include media(middle) {
             width: 74px;
@@ -2574,10 +2628,12 @@
           width: 49%;
           background-color: #e8e8e8;
           border-radius: 30px;
-          height: 400px;
+          //height: 400px;
+          overflow: hidden;
 
           @include media(middle-small) {
             width: 100%;
+            //height: 100%;
             margin-bottom: 30px;
           }
         }
@@ -2663,6 +2719,16 @@
           width: 350px;
         }
       }
+
+      .sec07-wrap-faq{
+        @include media(middle){
+          padding-left: 0;
+        }
+        @include media(middle-small){
+          width: 100% !important;
+          max-width: 100% !important;
+        }
+      }
     }
   }
 }
@@ -2697,7 +2763,7 @@
 
   .aside-bg {
     //background-color: #e54448;
-    padding: 0px 0 0px;
+    padding: 0px 0 80px;
     position: relative;
 
     &::before {
@@ -2798,8 +2864,8 @@
               }
 
               .title-item-sun {
-                left: -50px;
-                top: -30px;
+                left: -43px;
+                top: -23px;
                 width: 70px;
                 height: 70px;
                 z-index: 1;

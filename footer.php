@@ -29,9 +29,9 @@
     <div class="content-width">
         <div class="footer-wrap">
             <div class="footer-wrap-menu">
-                <dl class="accordion">
+                <dl class="footer-accordion">
                     <dt class="hidden-mobile"><a href="<?php echo home_url(); ?>/guide/">ご利用案内</a></dt>
-                    <dt class="hidden-sm"><a href="javascript:void(0);">ご利用案内</a></dt>
+                    <dt class="footer-accordion-switch hidden-sm"><a href="javascript:void(0);">ご利用案内</a></dt>
                     <?php if (is_page("guide")): ?>
                         <dd>
                             <a href="#sec02">ー料金案内</a>
@@ -48,9 +48,9 @@
                         </dd>
                     <?php endif; ?>
                 </dl>
-                <dl class="accordion">
+                <dl class="footer-accordion">
                     <dt class="hidden-mobile"><a href="<?php echo home_url(); ?>/enjoy/">館内の楽しみ方</a></dt>
-                    <dt class="hidden-sm"><a href="javascript:void(0);">館内の楽しみ方</a></dt>
+                    <dt class="footer-accordion-switch hidden-sm"><a href="javascript:void(0);">館内の楽しみ方</a></dt>
                     <dd>
                         <a href="<?php echo home_url(); ?>/enjoy/">ー館内マップ</a>
                         <a href="<?php echo home_url(); ?>/enjoy/spa/">ーお風呂</a>
@@ -62,9 +62,9 @@
 
                     </dd>
                 </dl>
-                <dl class="accordion">
+                <dl class="footer-accordion">
                     <dt class="hidden-mobile"><a href="<?php echo home_url(); ?>/first-time/">初めてのお客様へ</a></dt>
-                    <dt class="hidden-sm"><a href="javascript:void(0);">初めてのお客様へ</a></dt>
+                    <dt class="footer-accordion-switch hidden-sm"><a href="javascript:void(0);">初めてのお客様へ</a></dt>
 
                     <?php if (is_page("first-time")): ?>
                         <dd>
@@ -80,21 +80,21 @@
                         </dd>
                     <?php endif; ?>
                 </dl>
-                <dl class="accordion">
+                <dl class="footer-accordion">
                     <dt class="hidden-mobile"><a href="<?php echo home_url(); ?>/event/">イベント情報</a></dt>
-                    <dt class="hidden-sm"><a href="javascript:void(0);">イベント情報</a></dt>
+                    <dt class="footer-accordion-switch hidden-sm"><a href="javascript:void(0);">イベント情報</a></dt>
                     <dd>
                         <a href="<?php echo home_url(); ?>/today/">ー当日のイベント</a>
                         <a href="<?php echo home_url(); ?>/schedule/">ーイベントスケジュール</a>
                     </dd>
                 </dl>
-                <dl class="accordion">
-                    <dt>
-                        <a href="javascript:void(0);">お問い合わせ</a>
-                    </dt>
+                <dl class="footer-accordion">
+                    <dt class="hidden-mobile"><a href="<?php echo home_url(); ?>/contact">お問い合わせ</a></dt>
+                    <dt class="footer-accordion-switch hidden-sm"><a href="javascript:void(0);">お問い合わせ</a></dt>
+
                     <dd>
-                        <a href="<?php echo home_url(); ?>">ー個人のお客様</a>
-                        <a href="<?php echo home_url(); ?>">ー取材依頼・法人の方</a>
+                        <a href="<?php echo home_url(); ?>/contact/">ー個人のお客様</a>
+                        <a href="<?php echo home_url(); ?>/contact-corporate/">ー取材依頼・法人の方</a>
                     </dd>
                 </dl>
                 <dl class="accordion-none">
@@ -397,6 +397,29 @@
     </script>
 <?php endif; ?>
 
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const footer = document.querySelector('footer'); // ページ最下部のフッターを指定
+        const fixed = document.querySelector('.footer-fixed.footer-fixed-pc');
+
+        if (footer && fixed) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        fixed.classList.add('show'); // 表示用クラスを付与
+                    } else {
+                        fixed.classList.remove('show');
+                    }
+                });
+            }, {
+                threshold: 0 // フッターが1pxでも見えたら発火
+            });
+
+            observer.observe(footer);
+        }
+    });
+</script>
+
 
 
 <script>
@@ -558,13 +581,7 @@
     });
 
 
-    //.footer-fixed-mainをopacity:1にする
-    gsap.to('.footer-fixed', {
-        opacity: 1,
-        duration: 0.8,
-        delay: .6,
-        ease: 'power2.out'
-    });
+    
 </script>
 
 <?php if (is_page("guide")): ?>

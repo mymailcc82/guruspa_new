@@ -31,6 +31,28 @@ $('.accordion dl dt').on('click', function () {
   $(this).parent().siblings().find('dt').removeClass('active');
 });
 
+// footer-accordion 専用 (SPだけでスライド)
+$(function () {
+  $('.footer-accordion-switch').on('click', function() {
+  const $dd = $(this).next('dd');
+  const isActive = $dd.hasClass('active');
+
+  if (!isActive) {
+    const h = $dd.prop('scrollHeight');
+    $dd.css('max-height', h + 'px');
+    $dd.addClass('active');
+  } else {
+    $dd.css('max-height', 0);
+    $dd.removeClass('active');
+  }
+});
+});
+
+
+
+
+
+
 //.mwform-checkbox-fieldの.mwform-checkbox-field-textに<a href="/privacy" target="_blank" class="contact_inner_form-link">個人情報保護方針</a>に同意する'を追加
 $(document).ready(function () {
   // .mwform-checkbox-field の中の .mwform-checkbox-field-text を探す
