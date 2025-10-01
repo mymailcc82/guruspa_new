@@ -524,8 +524,8 @@ img.lazyloaded {
     }
 
     .title-item-sun {
-      left: -50px;
-      top: -30px;
+      left: -62px;
+      top: -38px;
       width: 94px;
       height: 93px;
       z-index: 1;
@@ -594,6 +594,7 @@ img.lazyloaded {
     bottom: 20px;
     border-bottom: solid 1px #3c3636;
     padding-bottom: 5px;
+    margin-left: 20px;
 
     &:hover {
       i {
@@ -657,7 +658,7 @@ img.lazyloaded {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
-  padding-left: 40px;
+  padding-left: 52px;
 
   @include media(mobile) {
     padding-left: 0;

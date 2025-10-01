@@ -61,32 +61,32 @@ Template Name: enjoy
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-img-01.jpg" alt="">
                             </div>
                             <div class="sec01-col-main-01-01">
-                                <a href="javascript:void(0)" class="popup-btn" data-id="enjoy-01">
+                                <a href="javascript:void(0)" class="popup-btn" data-id="enjoy-03">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-01.png" alt="">
                                 </a>
                             </div>
                             <div class="sec01-col-main-01-02">
-                                <a href="javascript:void(0)" class="popup-btn" data-id="enjoy-02">
+                                <a href="javascript:void(0)" class="popup-btn" data-id="enjoy-04">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-02.png" alt="">
                                 </a>
                             </div>
                             <div class="sec01-col-main-01-03">
-                                <a href="javascript:void(0)" class="pulse-btn popup-btn" data-id="enjoy-03">
+                                <a href="javascript:void(0)" class="pulse-btn popup-btn" data-id="enjoy-06">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-icon.png" alt="">
                                 </a>
                             </div>
                             <div class="sec01-col-main-01-04">
-                                <a href="javascript:void(0)" class="pulse-btn popup-btn" data-id="enjoy-04">
+                                <a href="javascript:void(0)" class="pulse-btn popup-btn" data-id="enjoy-05">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-icon.png" alt="">
                                 </a>
                             </div>
                             <div class="sec01-col-main-01-05">
-                                <a href="javascript:void(0)" class="pulse-btn popup-btn" data-id="enjoy-05">
+                                <a href="javascript:void(0)" class="pulse-btn popup-btn" data-id="enjoy-07">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-icon-white.png" alt="">
                                 </a>
                             </div>
                             <div class="sec01-col-main-01-06">
-                                <a href="javascript:void(0)" class="pulse-btn popup-btn" data-id="enjoy-06">
+                                <a href="javascript:void(0)" class="pulse-btn popup-btn" data-id="enjoy-08">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-icon-white.png" alt="">
                                 </a>
                             </div>
@@ -95,14 +95,14 @@ Template Name: enjoy
                             <ul>
                                 <li>
                                     <div class="com-btn-mobile com-btn-mobile--full">
-                                        <a href="javascript:void(0)" class="popup-btn" data-id="enjoy-03">
+                                        <a href="javascript:void(0)" class="popup-btn" data-id="enjoy-01">
                                             お風呂<i></i>
                                         </a>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="com-btn-mobile com-btn-mobile--full">
-                                        <a href="javascript:void(0)" class="popup-btn" data-id="enjoy-03">
+                                        <a href="javascript:void(0)" class="popup-btn" data-id="enjoy-02">
                                             サウナ・水風呂<i></i>
                                         </a>
                                     </div>
@@ -116,35 +116,35 @@ Template Name: enjoy
                                 </li>
                                 <li>
                                     <div class="com-btn-mobile com-btn-mobile--full">
-                                        <a href="javascript:void(0)" class="popup-btn" data-id="enjoy-03">
+                                        <a href="javascript:void(0)" class="popup-btn" data-id="enjoy-04">
                                             ご飲食<i></i>
                                         </a>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="com-btn-mobile com-btn-mobile--full">
-                                        <a href="javascript:void(0)" class="popup-btn" data-id="enjoy-03">
+                                        <a href="javascript:void(0)" class="popup-btn" data-id="enjoy-05">
                                             リラクゼーション<i></i>
                                         </a>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="com-btn-mobile com-btn-mobile--full">
-                                        <a href="javascript:void(0)" class="popup-btn" data-id="enjoy-03">
+                                        <a href="javascript:void(0)" class="popup-btn" data-id="enjoy-06">
                                             アメニティ・グッズ<i></i>
                                         </a>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="com-btn-mobile com-btn-mobile--full">
-                                        <a href="javascript:void(0)" class="popup-btn" data-id="enjoy-03">
+                                        <a href="javascript:void(0)" class="popup-btn" data-id="enjoy-07">
                                             待合ホール<i></i>
                                         </a>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="com-btn-mobile com-btn-mobile--full">
-                                        <a href="javascript:void(0)" class="popup-btn" data-id="enjoy-03">
+                                        <a href="javascript:void(0)" class="popup-btn" data-id="enjoy-08">
                                             ゲームコーナー<i></i>
                                         </a>
                                     </div>
@@ -385,10 +385,10 @@ Template Name: enjoy
                     <div class="enjoy-fixed-container-wrap-content-img">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-img-03.jpg" alt="">
                         <div class="enjoy-fixed-container-wrap-content-img-left">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-left.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-left-red.png" alt="">
                         </div>
                         <div class="enjoy-fixed-container-wrap-content-img-right">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-right.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-right-red.png" alt="">
                         </div>
                     </div>
                     <div class="enjoy-fixed-container-wrap-content-txt">
@@ -446,10 +446,10 @@ Template Name: enjoy
                     <div class="enjoy-fixed-container-wrap-content-img">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-img-05.jpg" alt="">
                         <div class="enjoy-fixed-container-wrap-content-img-left">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-left.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-left-blue.png" alt="">
                         </div>
                         <div class="enjoy-fixed-container-wrap-content-img-right">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-right.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-right-blue.png" alt="">
                         </div>
                     </div>
                     <div class="enjoy-fixed-container-wrap-content-txt">
@@ -476,10 +476,10 @@ Template Name: enjoy
                     <div class="enjoy-fixed-container-wrap-content-img">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-img-06.jpg" alt="">
                         <div class="enjoy-fixed-container-wrap-content-img-left">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-left.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-left-red.png" alt="">
                         </div>
                         <div class="enjoy-fixed-container-wrap-content-img-right">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-right.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-right-red.png" alt="">
                         </div>
                     </div>
                     <div class="enjoy-fixed-container-wrap-content-txt">
@@ -491,6 +491,60 @@ Template Name: enjoy
                         <div class="com-btn-border-white com-btn-border--210">
                             <a href="<?php echo home_url(); ?>/enjoy/goods/">くわしく見る<i></i></a>
                         </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="enjoy-fixed-container-wrap" id="enjoy-07">
+                <div class="enjoy-fixed-container-wrap-close enjoy-fixed-btn-close">
+                    <a href="javascript:void(0)"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close.svg" alt="閉じる"></a>
+                </div>
+                <div class="enjoy-fixed-container-wrap-bg">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-bg-green.jpg" alt="">
+                </div>
+                <div class="enjoy-fixed-container-wrap-content">
+                    <div class="enjoy-fixed-container-wrap-content-img">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-img-07.jpg" alt="">
+                        <div class="enjoy-fixed-container-wrap-content-img-left">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-left-green.png" alt="">
+                        </div>
+                        <div class="enjoy-fixed-container-wrap-content-img-right">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-right-green.png" alt="">
+                        </div>
+                    </div>
+                    <div class="enjoy-fixed-container-wrap-content-txt">
+                        <h3>待合ホール</h3>
+                        <p>
+                            寝転んでくつろげるスペースや椅子、自動販売機、ドリンクカウンター「スイートラボ」などを備えた、ゆったりと過ごせるホールです。<br>
+                            ご入浴前後の休憩や、待ち合わせにもぴったりの空間となっております。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="enjoy-fixed-container-wrap" id="enjoy-08">
+                <div class="enjoy-fixed-container-wrap-close enjoy-fixed-btn-close">
+                    <a href="javascript:void(0)"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close.svg" alt="閉じる"></a>
+                </div>
+                <div class="enjoy-fixed-container-wrap-bg">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-bg-green.jpg" alt="">
+                </div>
+                <div class="enjoy-fixed-container-wrap-content">
+                    <div class="enjoy-fixed-container-wrap-content-img">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-img-08.jpg" alt="">
+                        <div class="enjoy-fixed-container-wrap-content-img-left">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-left-green.png" alt="">
+                        </div>
+                        <div class="enjoy-fixed-container-wrap-content-img-right">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-right-green.png" alt="">
+                        </div>
+                    </div>
+                    <div class="enjoy-fixed-container-wrap-content-txt">
+                        <h3>ゲームコーナー</h3>
+                        <p>
+                            お子さまから大人まで楽しめる、ゲームコーナーも完備。<br>
+                            お風呂上がりのちょっとしたリフレッシュや、待ち時間にもおすすめです。
+                        </p>
                     </div>
                 </div>
             </div>

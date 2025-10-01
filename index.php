@@ -305,6 +305,7 @@
                         <li class="active"><a href="javascript:void(0)" data-id="#area01">すべて</a></li>
                         <li><a href="javascript:void(0)" data-id="#area02">期間限定<br class="hidden-sm">イベント</a></li>
                         <li><a href="javascript:void(0)" data-id="#area03">定例<br class="hidden-sm">イベント</a></li>
+                        <div class="slide-bg"></div>
                     </ul>
                     <div id="area01" class="area is-active">
                         <div class="swiper swiper-event sec01-col-main">
@@ -346,6 +347,8 @@
                                                                 $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-red.jpg';
                                                             } elseif ($category_slug === 'event') {
                                                                 $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-green.jpg';
+                                                            } elseif ($category_slug === 'relax') {
+                                                                $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-blue.jpg';
                                                             } elseif ($category_slug === 'food') {
                                                                 $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-yellow.jpg';
                                                             }
@@ -365,6 +368,8 @@
                                                             $cats_class = 'category-green';
                                                         } elseif ($category_slug === 'food') {
                                                             $cats_class = 'category-yellow';
+                                                        } elseif ($category_slug === 'relax') {
+                                                            $cats_class = 'category-blue';
                                                         }
                                                         ?>
                                                         <div class="text-info-cat">

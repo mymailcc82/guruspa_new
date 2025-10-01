@@ -135,14 +135,14 @@
         <p class="copy">©GURUSPA All rights reserved.</p>
     </div>
     <div class="top-fixed">
-        <a class="top-fixed-1" href="<?php echo home_url(); ?>/today/">本日のイベント<i></i></a>
+        <a class="top-fixed-1" href="<?php echo home_url(); ?>/today/"><span>本日のイベント</span><i></i></a>
         <?php if (is_page("guide")): ?>
-            <a class="top-fixed-2" href="#sec05">今すぐ行く！<i></i></a>
+            <a class="top-fixed-2" href="#sec05"><span>今すぐ行く！</span><i></i></a>
         <?php else: ?>
-            <a class="top-fixed-2" href="<?php echo home_url(); ?>/guide/#sec05">今すぐ行く！<i></i></a>
+            <a class="top-fixed-2" href="<?php echo home_url(); ?>/guide/#sec05"><span>今すぐ行く！</span><i></i></a>
         <?php endif; ?>
 
-        <a class="top-fixed-3" href="<?php echo home_url(); ?>/guide/">料金・<br>ご利用案内<i></i></a>
+        <a class="top-fixed-3" href="<?php echo home_url(); ?>/guide/"><span>料金・<br>ご利用案内</span><i></i></a>
 
     </div>
 
@@ -381,20 +381,22 @@
 </script>
 
 
-
-<script>
-    $(document).ready(function() {
-        $(window).on('scroll', function() {
-            if ($(window).scrollTop() > 200) {
-                $('.header').addClass('header-page');
-                $('.body').addClass('body-header-active');
-            } else {
-                $('.header').removeClass('header-page');
-                $('.body').removeClass('body-header-active');
-            }
+<?php if (is_home() || is_front_page()): ?>
+    <script>
+        $(document).ready(function() {
+            $(window).on('scroll', function() {
+                if ($(window).scrollTop() > 200) {
+                    $('.header').addClass('header-page');
+                    $('.body').addClass('body-header-active');
+                } else {
+                    $('.header').removeClass('header-page');
+                    $('.body').removeClass('body-header-active');
+                }
+            });
         });
-    });
-</script>
+    </script>
+<?php endif; ?>
+
 
 
 <script>
@@ -418,32 +420,35 @@
 
 
 <?php if (is_front_page()) : ?>
-
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const scrollTxt = document.querySelector('.scroll-txt-change');
+            const sec01 = document.querySelector('.sec01'); // sec01を基準にする
 
-            if (!scrollTxt) return;
+            if (!scrollTxt || !sec01) return;
 
             scrollTxt.classList.add('show-title-01'); // 初期表示：タイトル01
 
             window.addEventListener('scroll', function() {
-                const mv = document.querySelector('.top-visual') || document.querySelector('#top-visual'); // MVセクションを特定
-                if (!mv) return;
+                const sec01Top = sec01.getBoundingClientRect().top;
 
-                const mvBottom = mv.getBoundingClientRect().bottom;
-
-                if (mvBottom <= 0) {
-                    // MVを抜けたら02を表示
+                if (sec01Top <= window.innerHeight && sec01Top > 0) {
+                    // sec01 が画面の下端に触れた瞬間ではなく
+                    // 画面の上から入り始めた瞬間で切り替え
+                    scrollTxt.classList.remove('show-title-01');
+                } else if (sec01Top <= 0) {
+                    // 完全に画面に入った状態
                     scrollTxt.classList.remove('show-title-01');
                 } else {
-                    // MV内にいる間は01を表示
+                    // まだ画面に入っていない
                     scrollTxt.classList.add('show-title-01');
                 }
             });
         });
     </script>
 <?php endif; ?>
+
+
 
 </script>
 <script>
@@ -552,67 +557,6 @@
         });
     });
 
-    //.sec02-icon-03に差し掛かったら、下から上に上がるアニメーション
-    document.addEventListener('DOMContentLoaded', () => {
-        const target = document.querySelector('.sec02-icon-03');
-        if (!target) return;
-        // reduced motion 配慮
-        if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-            gsap.set(target, {
-                y: 0,
-                opacity: 1
-            });
-            return;
-        }
-        gsap.registerPlugin(ScrollTrigger);
-        gsap.fromTo(target, {
-                y: 150,
-                opacity: 0
-            }, // 初期状態
-            {
-                y: 0,
-                opacity: 1,
-                duration: 1.2,
-                ease: "power2.out",
-                scrollTrigger: {
-                    trigger: target,
-                    start: "top 80%", // ビューポートの80%で発火
-                    toggleActions: "play none none reverse",
-                    scrub: true // スクロールに同期
-                }
-            }
-        );
-    });
-    document.addEventListener('DOMContentLoaded', () => {
-        const target = document.querySelector('.sec02-icon-04');
-        if (!target) return;
-        // reduced motion 配慮
-        if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-            gsap.set(target, {
-                y: 0,
-                opacity: 1
-            });
-            return;
-        }
-        gsap.registerPlugin(ScrollTrigger);
-        gsap.fromTo(target, {
-                y: 150,
-                opacity: 0
-            }, // 初期状態
-            {
-                y: 0,
-                opacity: 1,
-                duration: 1.2,
-                ease: "power2.out",
-                scrollTrigger: {
-                    trigger: target,
-                    start: "top 80%", // ビューポートの80%で発火
-                    toggleActions: "play none none reverse",
-                    scrub: true // スクロールに同期
-                }
-            }
-        );
-    });
 
     //.footer-fixed-mainをopacity:1にする
     gsap.to('.footer-fixed', {

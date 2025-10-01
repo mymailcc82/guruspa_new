@@ -73,14 +73,15 @@ if (isset($_GET['event_tag'])) {
                 <?php endif; ?>
             </ul>
             */ ?>
-            <ul class="sec01-col-select tab">
-                <li class="active"><a href="javascript:void(0)" data-id="#area01">すべて</a></li>
-                <li><a href="javascript:void(0)" data-id="#area02">期間限定<br class="hidden-sm">イベント</a></li>
-                <li><a href="javascript:void(0)" data-id="#area03">定例<br class="hidden-sm">イベント</a></li>
+            <ul class="sec01-col-select">
+                <li class="active"><a href="javascript:void(0)" class="tab-btn" data-id="">すべて</a></li>
+                <li><a href="javascript:void(0)" class="tab-btn" data-id="limit">期間限定<br class="hidden-sm">イベント</a></li>
+                <li><a href="javascript:void(0)" class="tab-btn" data-id="per_event">定例<br class="hidden-sm">イベント</a></li>
             </ul>
+            <input type="hidden" id="event_tag" value="<?php echo $event_tag; ?>">
             <div class="content-width">
                 <div class="select">
-                    <select name="category" id="category" onchange="location.href=value;">
+                    <select name="category" id="category_type">
                         <?php
                         //event_categoryをtermを取得して、optionでselectedを設定
                         $terms = get_terms(array(
@@ -89,7 +90,7 @@ if (isset($_GET['event_tag'])) {
                         ));
                         ?>
                         <!--すべて -->
-                        <option value="<?php echo home_url(); ?>/event/?category_tag=<?php echo $event_tag; ?>">すべて</option>
+                        <option value="">すべて</option>
 
                         <?php foreach ($terms as $term) : ?>
                             <?php
@@ -97,11 +98,9 @@ if (isset($_GET['event_tag'])) {
                                 continue;
                             }
                             ?>
-                            <option value="<?php echo home_url(); ?>/event/?event_category=<?php echo $term->slug; ?><?php if ($event_tag) {
-                                                                                                                            echo '&event_tag=' . $event_tag;
-                                                                                                                        } ?>" <?php if ($event_category === $term->slug) {
-                                                                                                                                    echo 'selected';
-                                                                                                                                } ?>><?php echo $term->name; ?></option>
+                            <option value="<?php echo $term->slug; ?>" <?php if ($event_category === $term->slug) {
+                                                                            echo 'selected';
+                                                                        } ?>><?php echo $term->name; ?></option>
                         <?php endforeach; ?>
                     </select>
                 </div>
@@ -141,7 +140,7 @@ if (isset($_GET['event_tag'])) {
                         ?>
                         <?php $the_query = new WP_Query($args); ?>
                         <div class="sec01-col-main">
-                            <ul>
+                            <ul id="result">
                                 <?php if ($the_query->have_posts()) : ?>
                                     <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
                                         <?php
@@ -170,6 +169,7 @@ if (isset($_GET['event_tag'])) {
                                                                 $parent_term = get_term($event_category[0]->parent, 'event_category');
                                                                 if ($parent_term && !is_wp_error($parent_term)) {
                                                                     $category_slug_parent_id = $parent_term->term_id;
+                                                                    $category_slug_parent = $parent_term->slug;
                                                                 }
                                                             }
                                                             $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-default.jpg'; // デフォルト画像
@@ -227,7 +227,7 @@ if (isset($_GET['event_tag'])) {
                         </div>
                     </div>
                     <div class="content-width">
-                        <?php custom_pagination($the_query); ?>
+                        <div class="pagination" id="pagination"></div>
                     </div>
                 </div>
             </div>
@@ -239,5 +239,145 @@ if (isset($_GET['event_tag'])) {
     </section>
     <?php get_template_part('inc/inc-bnr-full'); ?>
     <?php get_template_part('inc/inc-contact'); ?>
+
+
 </main>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+
+<script>
+    $(document).ready(function() {
+        function get_event_ajax(page = 1) {
+            //#category_typeのselectedを取得
+            var category_type = $('#category_type option:selected');
+
+
+            //#category_typeのslectedを取得
+            var event_tag = $('#event_tag').val();
+            console.log(category_type.val());
+
+
+
+            //ajaxでget_event_data.phpにevent_categoryを送信し、結果を受け取る
+            $.ajax({
+                url: '<?php echo get_template_directory_uri(); ?>/ajax/get_event_data.php',
+                type: 'GET',
+                data: {
+                    event_tag: event_tag,
+                    category_type: category_type.val(),
+                    page_ajax: page
+                },
+                dataType: 'json',
+                success: function(response) {
+                    console.log(response);
+                    //#resultを空にする
+                    $('#result').empty();
+                    //response.post_dataのobjectがあるかどうかを確認
+                    if (response.post_data && response.post_data.length > 0) {
+                        //post_dataの中身をループで回す
+                        $.each(response.post_data, function(index, post) {
+                            var post_html = '<li>';
+                            post_html += '<a href="' + post.link + '">';
+                            if (post.is_hot) {
+                                post_html += '<span class="hot">' + post.is_hot + '</span>';
+                            }
+                            post_html += '<span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>';
+                            post_html += '<div class="img img-event">';
+                            post_html += '<img src="' + post.thumbnail + '" alt="' + post.title + '">';
+                            post_html += '</div>';
+                            post_html += `
+                            <div class="text">
+                                <div class="text-info">
+                                    <div class="text-info-cat">
+                                        <span class="category ${post.category_class} cat-${post.category_slug}">${post.category}</span>
+                                    </div>
+                                    <div class="text-info-term">
+                                        <span class="term"><?php echo $event_start_date; ?></span>
+                                    </div>
+                                </div>
+                                <h3>${post.title}</h3>
+                            </div>
+                            
+                            `;
+                            post_html += '</a>';
+                            post_html += '</li>';
+                            $('#result').append(post_html);
+                        });
+                    } else {
+                        $('#result').append('<p class="text-base">投稿が見つかりませんでした。</p>');
+                    }
+
+                    create_pagination(response.post_count, response.page_ajax);
+                }
+            })
+        }
+
+        function create_pagination(post_count, page) {
+            var posts_per_page = 9;
+
+            var total_pages = Math.ceil(post_count / posts_per_page);
+            $('#pagination').empty();
+            if (page > 1) {
+                var prev_link = '<a href="javascript:void(0)" class="page-link first" data-page="' + 1 + '"><i class="fa-solid fa-angles-left"></i></a>';
+                prev_link += '<a href="javascript:void(0)" class="page-link previous" data-page="' + (page - 1) + '"><i class="fa-solid fa-angle-left"></i></a>';
+                $('#pagination').append(prev_link);
+            }
+            for (var i = 1; i <= total_pages; i++) {
+                if (i == page) {
+                    var page_link = '<span class="current" data-page="' + i + '">' + i + '</span>';
+                } else {
+                    var page_link = '<a href="javascript:void(0)" class="page-link" data-page="' + i + '">' + i + '</a>';
+                }
+
+                $('#pagination').append(page_link);
+            }
+
+            //最初のページをアクティブにする
+            $('#pagination a:first').addClass('active');
+
+            if (page < total_pages) {
+                var next_link = '<a href="javascript:void(0)" class="page-link next" data-page="' + (page + 1) + '"><i class="fa-solid fa-angle-right"></i></a>';
+                next_link += '<a href="javascript:void(0)" class="page-link last" data-page="' + total_pages + '"><i class="fa-solid fa-angles-right"></i></a>';
+                $('#pagination').append(next_link);
+            }
+        }
+
+
+        //.page-linkがクリックされたら、そのページ番号を取得し、ajaxでそのページの投稿を取得
+        $(document).on('click', '.page-link', function() {
+            var page = $(this).data('page');
+            get_event_ajax(page);
+            console.log(page);
+            //クリックされたページをアクティブにする
+            $('.page-link').removeClass('active');
+            $(this).addClass('active');
+            //#resultまでスクロール
+            $('html, body').animate({
+                scrollTop: $('#result').offset().top - 100
+            }, 500);
+        })
+        //.tab-btnがクリックされたら
+        $(document).on('click', '.tab-btn', function() {
+            var slug = $(this).data('id');
+            $('#event_tag').val(slug);
+            get_event_ajax();
+
+            //thisの親のliにactiveを付与し、他のliからはactiveを外す
+            $('.sec01-col-select li').removeClass('active');
+            //thisの親のliにactiveを付与
+            $(this).parent().addClass('active');
+        })
+
+        //#category_typeが変更されたら、その値を取得し、ajaxでそのカテゴリーの投稿を取得
+        $('#category_type').on('change', function() {
+            get_event_ajax();
+        })
+
+
+        get_event_ajax();
+    });
+</script>
+
+
 <?php get_footer(); ?>

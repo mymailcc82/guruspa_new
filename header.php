@@ -21,14 +21,23 @@
     <?php endif; ?>
 </head>
 
-<body <?php body_class('body'); ?>>
-    <header class="header">
+<?php $header_class = 'header header-page'; ?>
+<?php $body_class = "body body-header-active"; ?>
+<?php if (is_home() || is_front_page()): ?>
+    <?php $header_class = 'header'; ?>
+    <?php $body_class = 'body'; ?>
+<?php endif; ?>
+
+<body <?php body_class($body_class); ?>>
+
+
+    <header class="<?php echo $header_class; ?>">
         <div class="header-wrap">
             <div class="header-wrap-logo">
                 <h1>
                     <a href="<?php echo home_url(); ?>">
                         <div class="header-wrap-logo-img">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/header/header-logo.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/header/header-logo_V2.png" alt="">
                         </div>
                     </a>
                 </h1>
@@ -41,6 +50,7 @@
                     <li class="header-wrap-list-ul-item"><a href="<?php echo home_url(); ?>/event/" class="no-link">イベント情報</a></li>
                     <li class="header-wrap-list-ul-item"><a href="<?php echo home_url(); ?>/archive/" class="no-link">お知らせ</a></li>
                     <li class="header-wrap-list-ul-item"><a href="<?php echo home_url(); ?>/faq/" class="no-link">FAQ</a></li>
+                    <li class="header-wrap-list-ul-icon"><a href="https://x.com/GURUSPA_/" target="_blank" rel="noopener noreferrer"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-x.png" alt=""></a></li>
                     <li class="header-wrap-list-ul-icon"><a href="https://www.instagram.com/guruspa_/" target="_blank" rel="noopener noreferrer"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-insta.png" alt=""></a></li>
                     <?php if (is_page("guide")): ?>
                         <li class="header-wrap-list-ul-btn"><a href="#sec03" class="no-link">営業時間<i></i></a></li>

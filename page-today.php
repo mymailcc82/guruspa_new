@@ -284,9 +284,11 @@ $days = days_from_today_for_months();
         // Optional parameters
         loop: true,
         slidesPerView: "auto",
-        spaceBetween: 4,
+        spaceBetween: 0,
         //centeredSlides: true,
         // Navigation arrows
+
+
         navigation: {
             nextEl: '.swiper-button-next-00',
             prevEl: '.swiper-button-prev-00',
@@ -345,6 +347,27 @@ $days = days_from_today_for_months();
         }
         //initの時に実行
         // 現在の active スライド要素
+    });
+
+    // Swiper の click イベントを使う方法（推奨）
+    swiper_00.on('click', function(swiper, e) {
+        // クリックされた DOM ノードから .swiper-slide を探す
+        const slideEl = e.target.closest('.swiper-slide');
+        if (!slideEl) return;
+
+        // 重複スライドでも正しいインデックスが取れる data 属性
+        const realIndexAttr = slideEl.getAttribute('data-swiper-slide-index');
+        if (realIndexAttr != null) {
+            const realIndex = Number(realIndexAttr);
+            // ループを考慮してそのスライドへ移動（active になる）
+            swiper.slideToLoop(realIndex, 300); // 300ms のアニメーション
+            return;
+        }
+
+        // 保険：clickedIndex が使える場合
+        if (typeof swiper.clickedIndex === 'number' && swiper.clickedIndex >= 0) {
+            swiper.slideToLoop(swiper.clickedIndex, 300);
+        }
     });
 
     //swiper

@@ -113,7 +113,7 @@
                         グルスパの名前は、愛知県知立市で<br class="hidden-sm">多くのお客様に愛され続けている<br>
                         当社の温浴施設一号店、<br class="hidden-sm">「サウナイーグル」の基盤や理念を受け継ぎ、<br>
                         さらに発展させるという願いを込め<br>
-                        「SAUNA EAGLE SPA&RESORT」から<br class="hidden-sm">名付けられました。<br><br>
+                        <span>「SAUNA EAGLE SPA&RESORT」</span>から<br class="hidden-sm">名付けられました。<br><br>
                         ロゴにはコンセプトである<br class="hidden-sm">「ウェルビーイング」を育むための<br>
                         「水・火・光・緑」といった<br class="hidden-sm">自然のエネルギーを表現。<br><br>
                         松坂という自然豊かな地で<br class="hidden-sm">心を体を癒し、より良い毎日を<br>
@@ -288,7 +288,7 @@
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/first/sec03-img-03.jpg" alt="">
                         </div>
                         <div class="sec03-wrap-col-txt">
-                            <h3 class="h3-small">温泉・サウナ・岩盤浴・リラクゼーションなどをお楽しみください</h3>
+                            <h3 class="h3-small">温泉・サウナ・岩盤浴・<br class="hidden-middle">リラクゼーションなどを<br class="hidden-middle">お楽しみください</h3>
                             <p>
                                 様々な温浴設備で癒しのひと時をお過ごしください。<br>
                                 発汗エリア、リラクゼーションのご利用は別料金となります。
@@ -359,26 +359,26 @@
                         </dl>
                         <dl>
                             <dt>TEL</dt>
-							<dd>0598-54-2626</dd>
+                            <dd>0598-54-2626</dd>
                         </dl>
                         <dl>
                             <dt>営業時間</dt>
                             <dd>
-								月〜木曜日 10:00〜24:00<br>
-								金曜日 10:00〜25:00<br>
-								土曜日 07:00〜25:00<br>
-								日曜日 07:00〜24:00<br>
-								祝日　 07:00〜24:00<br>
-								祝日前 10:00〜25:00<br>
+                                月〜木曜日 10:00〜24:00<br>
+                                金曜日 10:00〜25:00<br>
+                                土曜日 07:00〜25:00<br>
+                                日曜日 07:00〜24:00<br>
+                                祝日　 07:00〜24:00<br>
+                                祝日前 10:00〜25:00<br>
                             </dd>
                         </dl>
                         <dl>
                             <dt>定休日</dt>
                             <dd>年中無休</dd>
                         </dl>
-						<dl>
+                        <dl>
                             <dt>駐車場</dt>
-							<dd>イオンタウン松阪船江駐車場をご利用ください。</dd>
+                            <dd>イオンタウン松阪船江駐車場をご利用ください。</dd>
                         </dl>
                         <div class="sec04-wrap-btn">
                             <ul>

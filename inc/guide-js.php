@@ -252,11 +252,13 @@ $lc_spots = array(
                 // 生成されたli要素へのイベントリスナーの付与。
                 .then(() => {
                     maplistLi = document.querySelectorAll("#mapList li.spotMapList_item")
+                    /*
                     maplistLi.forEach((listItem, index) => {
                         listItem.addEventListener("click", () => {
                             google.maps.event.trigger(maplist[index], "click")
                         })
                     })
+                        */
                 })
         }
 
