@@ -61,7 +61,11 @@
     </section>
     <section class="sec02" id="sec02">
         <div class="page-deco-bg">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-blue-top_v2.png" alt="">
+            <picture>
+                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-blue-top-sp_v2.png" media="(max-width: 601px)">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-blue-top_v2.png" alt="">
+            </picture>
+
         </div>
         <div class="page-deco-container page-deco-container--blue">
             <div class="content-width">
@@ -123,7 +127,6 @@
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/logo.svg" alt="GURUSPA">
                     </div>
                 </div>
-
                 <div class="sec02-desc sec02-desc--left">
                     <p>
                         グルスパが目指すのは <br class="hidden-sm">「<span>ウェルビーイング（Well-being）</span>」 の提供です。<br><br class="hidden-sm">
@@ -337,8 +340,12 @@
         </div>
     </section>
     <section class="sec04" id="sec04">
-        <div class="page-bg-deco-bg">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-red-top.png" alt="">
+        <div class="page-deco-bg">
+            <picture>
+                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-red-top-sp.png" media="(max-width: 601px)">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-red-top.png" alt="">
+            </picture>
+
         </div>
         <div class="page-deco-container page-deco-container--red">
             <div class="content-width">

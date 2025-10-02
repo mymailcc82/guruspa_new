@@ -38,7 +38,7 @@ Template Name: enjoy-sauna
         <div class="content-width">
             <div class="enjoy-wrap">
                 <div class="enjoy-wrap-txt">
-                    <div class="com-title com-title--small com-title-hidden">
+                    <div class="com-title com-title--page com-title-hidden">
                         <p>サウナ・水風呂</p>
                         <h2 class="">
                             <span class="title">S</span><span class="title">A</span><span class="title">U</span><span class="title">N</span><span class="title">A</span>
@@ -69,28 +69,41 @@ Template Name: enjoy-sauna
                         <a href="#sec02">特徴・魅力<i></i></a>
                     </li>
                     <li>
-                        <a href="#sec03">サウナラインナップ<i></i></a>
+                        <a href="#sec04">サウナラインナップ<i></i></a>
                     </li>
                     <li>
-                        <a href="#sec04">ととのいスペース<i></i></a>
+                        <a href="#sec05">ととのいスペース<i></i></a>
                     </li>
                     <li>
-                        <a href="#sec05">サウナイベント情報<i></i></a>
+                        <a href="#sec06">サウナイベント情報<i></i></a>
                     </li>
                     <li>
-                        <a href="#sec05">イベントスケジュール<i></i></a>
+                        <a href="#sec07">イベントスケジュール<i></i></a>
                     </li>
                     <li>
-                        <a href="#sec05">注意事項<i></i></a>
+                        <a href="#sec08">注意事項<i></i></a>
                     </li>
                     <li>
-                        <a href="#sec05">よくある質問<i></i></a>
+                        <a href="#sec09">よくある質問<i></i></a>
                     </li>
                 </ul>
             </div>
         </div>
     </section>
-    <section class="sec02">
+    <section class="sec02" id="sec02">
+        <div class="sec02-icon-01">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec02-icon-01.png" alt="">
+        </div>
+        <div class="sec02-icon-02">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec02-icon-02.png" alt="">
+        </div>
+        <div class="sec02-icon-03">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sauna/sec02-icon-03.svg" alt="">
+        </div>
+        <div class="sec02-icon-04">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sauna/sec02-icon-04.svg" alt="">
+        </div>
+
         <div class="page-deco-bg">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-yellow-top.png" alt="">
         </div>
@@ -153,7 +166,7 @@ Template Name: enjoy-sauna
         </div>
     </section>
 
-    <section class="sec04">
+    <section class="sec04" id="sec04">
         <div class="content-width-sm">
             <div class="page-title-center--has-icon">
                 <h2><i></i>サウナラインナップ</h2>
@@ -177,12 +190,14 @@ Template Name: enjoy-sauna
                         <dd>発汗によるデトックス効果、血行促進・疲労回復、リフレッシュ・ストレス解消</dd>
                     </dl>
                 </div>
+                <div class="sec04-center" id="salt">
+                    <h3>塩サウナ</h3>
+                </div>
                 <div class="sec04-wrap-yellow-2-1">
                     <div class="sec04-wrap-yellow-2-1-left">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sauna/sec04-img-01.jpg" alt="">
                     </div>
-                    <div class="sec04-wrap-yellow-2-1-right" id="salt">
-                        <h3>塩サウナ</h3>
+                    <div class="sec04-wrap-yellow-2-1-right">
                         <p>
                             肌に塩を塗って、マッサージしながら入ることで発汗とともに古い角質を除去。<br>
                             つるすべ肌に導く、美容に嬉しいサウナ体験です。<br>
@@ -397,7 +412,7 @@ Template Name: enjoy-sauna
                     </div>
                 </div>
             </div>
-            <div class="content-width">
+            <div class="content-width" id="sec07">
                 <div class="page-title-center--has-icon">
                     <h2><i></i>イベントスケジュール</h2>
                 </div>
@@ -438,7 +453,7 @@ Template Name: enjoy-sauna
         </div>
     </section>
 
-    <section class="sec07">
+    <section class="sec07" id="sec08">
         <div class="content-width-sm">
             <div class="page-title-center--has-icon">
                 <h2><i></i>脱衣所・浴室ご利用時のご案内</h2>
@@ -446,7 +461,7 @@ Template Name: enjoy-sauna
             <p class="sec07-desc">
                 当館ではお客様に気持ちよくご利用いただくため、<br class="hidden-mobile">下記の事項をお守りくださいますようお願い申し上げます。
             </p>
-            <div class="sec07-wrap">
+            <div class="sec07-wrap fadeup">
                 <ul>
                     <li>タオルを絞らないでください。</li>
                     <li>新聞、雑誌、飲食物を持ち込まないでください。</li>
@@ -460,7 +475,7 @@ Template Name: enjoy-sauna
         </div>
     </section>
 
-    <section class="sec07-com">
+    <section class="sec07-com" id="sec09">
         <div class="content-width">
             <div class="sec07-wrap">
                 <div class="sec07-wrap-title">
@@ -472,26 +487,38 @@ Template Name: enjoy-sauna
                     </div>
                 </div>
                 <div class="sec07-wrap-faq accordion">
-                    <dl>
-                        <dt><i></i>岩盤浴ウェアやタオルは自分で持っていく必要がありますか？</dt>
-                        <dd></dd>
-                    </dl>
-                    <dl>
-                        <dt><i></i>天然温泉は源泉かけ流しですか？</dt>
-                        <dd></dd>
-                    </dl>
-                    <dl>
-                        <dt><i></i>混雑する時間帯はいつですか？</dt>
-                        <dd></dd>
-                    </dl>
-                    <dl>
-                        <dt><i></i>発汗エリアは誰でも利用できますか？</dt>
-                        <dd></dd>
-                    </dl>
-                    <dl>
-                        <dt><i></i>駐車場はありますか？</dt>
-                        <dd></dd>
-                    </dl>
+                    <?php
+                    $args = array(
+                        'post_type' => 'faq', // カスタム投稿タイプ名
+                        'posts_per_page' => 3, // 表示する記事数
+                        'orderby' => 'date', // 日付で並び替え
+                        'order' => 'DESC', // 降順
+                        //faq_categoryのonsenを表示
+                        'tax_query' => array(
+                            array(
+                                'taxonomy' => 'faq_category',
+                                'field'    => 'slug',
+                                'terms'    => 'sauna',
+                            ),
+                        ),
+                    );
+                    ?>
+                    <?php
+                    $faq_query = new WP_Query($args);
+                    if ($faq_query->have_posts()) :
+                        while ($faq_query->have_posts()) : $faq_query->the_post();
+                    ?>
+                            <dl>
+                                <dt><i></i><?php the_title(); ?></dt>
+                                <dd><?php the_content(); ?></dd>
+                            </dl>
+                    <?php
+                        endwhile;
+                        wp_reset_postdata();
+                    else :
+                        echo '<p>まだ記事がありません。</p>';
+                    endif;
+                    ?>
 
                     <div class="com-btn-mobile hidden-sm">
                         <a href="<?php echo home_url(); ?>/faq/">一覧を見る<i></i></a>

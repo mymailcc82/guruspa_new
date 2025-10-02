@@ -38,7 +38,7 @@ Template Name: enjoy-food
         <div class="content-width">
             <div class="enjoy-wrap">
                 <div class="enjoy-wrap-txt">
-                    <div class="com-title com-title--small com-title-hidden">
+                    <div class="com-title com-title--food com-title-hidden">
                         <p>ご飲食</p>
                         <h2 class="">
                             <span class="title">F</span><span class="title">O</span><span class="title">O</span><span class="title">D</span><span class="title">&</span><span class="title">D</span><span class="title">R</span><span class="title">I</span><span class="title">N</span><span class="title">K</span>
@@ -72,14 +72,15 @@ Template Name: enjoy-food
             </ul>
 
             <div class="area01 area is-active" id="area01">
+                <div class="sec02-icon-01">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec02-icon-01.png" alt="">
+                </div>
                 <div class="page-deco-bg">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-yellow-top.png" alt="">
                 </div>
                 <div class="page-deco-container page-deco-container--yellow">
                     <div class="relative">
-                        <div class="sec02-icon-01">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec02-icon-01.png" alt="">
-                        </div>
+
                         <div class="sec02-icon-02">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec02-icon-02.png" alt="">
                         </div>
@@ -164,7 +165,7 @@ Template Name: enjoy-food
                                         <div class="sec04-wrap-col-img">
                                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec04-img-03.jpg" alt="">
                                         </div>
-                                        <p>座敷席</p>
+                                        <p>特別ご予約席</p>
                                     </div>
                                 </div>
                             </div>
@@ -190,7 +191,10 @@ Template Name: enjoy-food
                                     </dl>
                                 </div>
                                 <div class="sec05-pdf">
-
+                                    <?php
+                                    //ショートコード
+                                    echo do_shortcode('[dflip id="241"][/dflip]');
+                                    ?>
                                 </div>
                                 <div class="sec05-title">
                                     <dl>
@@ -244,16 +248,26 @@ Template Name: enjoy-food
                                                                     <?php
                                                                     // カテゴリーに応じたデフォルト画像を設定
                                                                     $category_slug = $event_category[0]->slug;
+                                                                    $category_slug_parent = '';
+                                                                    //$event_category[0]の親カテゴリーを取得
+                                                                    if ($event_category[0]->parent) {
+                                                                        $parent_term = get_term($event_category[0]->parent, 'event_category');
+                                                                        if ($parent_term && !is_wp_error($parent_term)) {
+                                                                            $category_slug_parent_id = $parent_term->term_id;
+                                                                            $category_slug_parent = $parent_term->slug;
+                                                                        }
+                                                                    }
                                                                     $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-default.jpg'; // デフォルト画像
 
-                                                                    if ($category_slug === 'information') {
+                                                                    if ($category_slug === 'information' || $category_slug_parent === 'information') {
                                                                         $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-red.jpg';
-                                                                    } elseif ($category_slug === 'event') {
+                                                                    } elseif ($category_slug === 'event' || $category_slug_parent === 'event') {
                                                                         $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-green.jpg';
-                                                                    } elseif ($category_slug === 'food') {
+                                                                    } elseif ($category_slug === 'food' || $category_slug_parent === 'food') {
                                                                         $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-yellow.jpg';
-                                                                    } elseif ($category_slug === 'relax') {
+                                                                    } elseif ($category_slug === 'relax' || $category_slug_parent === 'relax') {
                                                                         $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-blue.jpg';
+                                                                    } elseif ($category_slug === 'tokiwa') {
                                                                     }
                                                                     ?>
                                                                     <img src="<?php echo esc_url($default_image_url); ?>" alt="<?php the_title(); ?>">
@@ -265,13 +279,13 @@ Template Name: enjoy-food
                                                         <div class="text">
                                                             <div class="text-info">
                                                                 <?php
-                                                                if ($category_slug === 'information') {
+                                                                if ($category_slug === 'information' || $category_slug_parent === 'information') {
                                                                     $cats_class = 'category-red';
-                                                                } elseif ($category_slug === 'event') {
+                                                                } elseif ($category_slug === 'event' || $category_slug_parent === 'event') {
                                                                     $cats_class = 'category-green';
-                                                                } elseif ($category_slug === 'food' || $category_slug === 'tokiwa' || $category_slug === 'sweet') {
+                                                                } elseif ($category_slug === 'food' || $category_slug_parent === 'food') {
                                                                     $cats_class = 'category-yellow';
-                                                                } elseif ($category_slug === 'relax') {
+                                                                } elseif ($category_slug === 'relaxation' || $category_slug_parent === 'relaxation') {
                                                                     $cats_class = 'category-blue';
                                                                 }
                                                                 ?>
@@ -281,9 +295,7 @@ Template Name: enjoy-food
                                                                 <div class="text-info-term">
                                                                     <span class="term"><?php echo $event_start_date; ?></span>
                                                                 </div>
-
                                                             </div>
-
                                                             <h3><?php the_title(); ?></h3>
                                                         </div>
                                                     </a>
@@ -292,7 +304,7 @@ Template Name: enjoy-food
                                             endwhile;
                                             wp_reset_postdata();
                                         else :
-                                            echo '<p class="text-base">イベントが見つかりませんでした。</p>';
+                                            echo '<p class="text-base text-center w-full">投稿が見つかりませんでした。</p>';
                                         endif;
                                         ?>
                                     </div>
@@ -383,14 +395,14 @@ Template Name: enjoy-food
                 <div class="page-bg-deco-bg-bottom-yellow"></div>
             </div>
             <div class="area02 area" id="area02">
+                <div class="sec02-icon-01">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec02-icon-01.png" alt="">
+                </div>
                 <div class="page-deco-bg">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-yellow-top.png" alt="">
                 </div>
                 <div class="page-deco-container page-deco-container--yellow">
                     <div class="relative">
-                        <div class="sec02-icon-01">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec02-icon-01.png" alt="">
-                        </div>
                         <div class="sec02-icon-02">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec02-icon-02.png" alt="">
                         </div>
@@ -525,7 +537,10 @@ Template Name: enjoy-food
                                     </dl>
                                 </div>
                                 <div class="sec05-pdf">
-
+                                    <?php
+                                    //ショートコード
+                                    echo do_shortcode('[dflip id="246"][/dflip]');
+                                    ?>
                                 </div>
                                 <div class="sec05-title">
                                     <dl>
@@ -577,16 +592,26 @@ Template Name: enjoy-food
                                                                         <?php
                                                                         // カテゴリーに応じたデフォルト画像を設定
                                                                         $category_slug = $event_category[0]->slug;
+                                                                        $category_slug_parent = '';
+                                                                        //$event_category[0]の親カテゴリーを取得
+                                                                        if ($event_category[0]->parent) {
+                                                                            $parent_term = get_term($event_category[0]->parent, 'event_category');
+                                                                            if ($parent_term && !is_wp_error($parent_term)) {
+                                                                                $category_slug_parent_id = $parent_term->term_id;
+                                                                                $category_slug_parent = $parent_term->slug;
+                                                                            }
+                                                                        }
                                                                         $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-default.jpg'; // デフォルト画像
 
-                                                                        if ($category_slug === 'information') {
+                                                                        if ($category_slug === 'information' || $category_slug_parent === 'information') {
                                                                             $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-red.jpg';
-                                                                        } elseif ($category_slug === 'event') {
+                                                                        } elseif ($category_slug === 'event' || $category_slug_parent === 'event') {
                                                                             $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-green.jpg';
-                                                                        } elseif ($category_slug === 'food') {
+                                                                        } elseif ($category_slug === 'food' || $category_slug_parent === 'food') {
                                                                             $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-yellow.jpg';
-                                                                        } elseif ($category_slug === 'relax') {
+                                                                        } elseif ($category_slug === 'relax' || $category_slug_parent === 'relax') {
                                                                             $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-blue.jpg';
+                                                                        } elseif ($category_slug === 'tokiwa') {
                                                                         }
                                                                         ?>
                                                                         <img src="<?php echo esc_url($default_image_url); ?>" alt="<?php the_title(); ?>">
@@ -598,15 +623,16 @@ Template Name: enjoy-food
                                                             <div class="text">
                                                                 <div class="text-info">
                                                                     <?php
-                                                                    if ($category_slug === 'information') {
+                                                                    if ($category_slug === 'information' || $category_slug_parent === 'information') {
                                                                         $cats_class = 'category-red';
-                                                                    } elseif ($category_slug === 'event') {
+                                                                    } elseif ($category_slug === 'event' || $category_slug_parent === 'event') {
                                                                         $cats_class = 'category-green';
-                                                                    } elseif ($category_slug === 'food' || $category_slug === 'tokiwa' || $category_slug === 'sweet') {
+                                                                    } elseif ($category_slug === 'food' || $category_slug_parent === 'food') {
                                                                         $cats_class = 'category-yellow';
-                                                                    } elseif ($category_slug === 'relax') {
+                                                                    } elseif ($category_slug === 'relax' || $category_slug_parent === 'relax') {
                                                                         $cats_class = 'category-blue';
                                                                     }
+                                                                    ?>
                                                                     ?>
                                                                     <div class="text-info-cat">
                                                                         <span class="category <?php echo esc_attr($cats_class); ?>"><?php echo esc_html($event_category[0]->name); ?></span>
@@ -625,7 +651,7 @@ Template Name: enjoy-food
                                                 endwhile;
                                                 wp_reset_postdata();
                                             else :
-                                                echo '<p class="text-base">イベントが見つかりませんでした。</p>';
+                                                echo '<p class="text-base text-center w-full">投稿が見つかりませんでした。</p>';
                                             endif;
                                             ?>
                                         </div>

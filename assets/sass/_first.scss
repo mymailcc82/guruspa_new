@@ -2,10 +2,16 @@
 
 .first {
   .sec02 {
+    .page-deco-container {
+      padding-top: 60px;
+      @include media(middle) {
+        padding-top: 30px;
+      }
+    }
     .sec02-wrap {
       display: flex;
       flex-wrap: wrap;
-      padding-bottom: 200px;
+      padding-bottom: 280px;
       @include media(middle) {
         padding-bottom: 120px;
       }
@@ -25,7 +31,7 @@
         &:before {
           width: 150px;
           height: 150px;
-          background-image: url(("./assets/img/first/title-deco_v2.png"));
+          background-image: url(("./assets/img/first/title-deco_v2_1.png"));
           background-size: contain;
           background-repeat: no-repeat;
           content: '';
@@ -255,14 +261,22 @@
       p {
         text-align: center;
         font-size: 18px;
-        font-weight: 800;
+        font-weight: 500;
         line-height: 2.3;
+        letter-spacing: 0.1em;
         margin: 0px 0px 50px;
         @include media(middle) {
           font-size: 16px;
           margin-bottom: 30px;
-          font-weight: 600;
+          font-weight: 500;
           line-height: 2;
+        }
+        span {
+          font-size: 18px;
+          font-weight: bold;
+          @include media(middle) {
+            font-size: 16px;
+          }
         }
       }
       .sec02-about-logo {
@@ -282,7 +296,7 @@
         &:before {
           width: 70px;
           height: 70px;
-          background-image: url(("./assets/img/first/title-deco_v4.png"));
+          background-image: url(("./assets/img/first/title-deco_v4_1.png"));
           background-size: contain;
           background-repeat: no-repeat;
           content: '';
@@ -304,7 +318,7 @@
         &:before {
           width: 59px;
           height: 59px;
-          background-image: url(("./assets/img/first/title-deco_v5.png"));
+          background-image: url(("./assets/img/first/title-deco_v5_1.png"));
           background-size: contain;
           background-repeat: no-repeat;
           content: '';
@@ -322,8 +336,9 @@
       p {
         font-size: 18px;
         text-align: center;
-        font-weight: bold;
+        font-weight: 500;
         margin: 0px;
+        letter-spacing: 0.1em;
         line-height: 2.3;
         @include media(middle) {
           font-size: 16px;
@@ -387,7 +402,7 @@
       }
     }
     .sec02-bottom {
-      margin-top: 60px;
+      margin-top: 100px;
       background-color: #fff;
       padding: 50px 80px;
       border-radius: 30px;
@@ -401,23 +416,26 @@
         margin-bottom: 30px;
       }
       .sec02-bottom-icon-top {
-        display: none;
-        @include media(mobile) {
-          display: block;
+        display: block;
+        width: 360px;
+        position: absolute;
+        left: -100px;
+        top: -130px;
+        @include media(middle) {
           width: 200px;
-          position: absolute;
           left: -50px;
           top: -60px;
         }
       }
       .sec02-bottom-icon-bottom {
-        display: none;
-        @include media(mobile) {
-          display: block;
-          width: 250px;
-          position: absolute;
+        display: block;
+        width: 400px;
+        position: absolute;
+        right: -120px;
+        bottom: -160px;
+        @include media(middle) {
           right: -60px;
-          bottom: -120px;
+          width: 250px;
         }
       }
       h2 {

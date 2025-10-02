@@ -147,11 +147,27 @@
           max-width: 672px;
           margin: 0 auto;
           border-radius: 24px;
-          background-color: #ffffff;
-          border: solid 1px #3c3636;
-          overflow: hidden;
+          //border: solid 1px #3c3636;
+          //overflow: hidden;
+          overflow: visible;
           margin-bottom: 30px;
-
+          position: relative;
+          z-index: 2;
+          &:after {
+            width: calc(100% - 2px);
+            height: calc(100% - 2px);
+            border: solid 1px #222;
+            border-radius: 24px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: '';
+            display: block;
+            z-index: -1;
+            //リンク無効
+            pointer-events: none;
+            background-color: #ffffff;
+          }
           li {
             width: 50%;
             text-align: center;
@@ -174,6 +190,7 @@
             a {
               color: #222222 !important;
               background-color: #f4ba1d !important;
+              border: 1px solid #222;
             }
           }
         }
@@ -196,10 +213,28 @@
         max-width: 672px;
         margin: 0 auto;
         border-radius: 24px;
-        background-color: #ffffff;
-        border: solid 1px #3c3636;
-        overflow: hidden;
+        //background-color: #ffffff;
+        //overflow: hidden;
         margin-bottom: 30px;
+        position: relative;
+        border: none;
+        z-index: 2;
+
+        &:after {
+          width: calc(100% - 2px);
+          height: calc(100% - 2px);
+          border: solid 1px #222;
+          border-radius: 24px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          content: '';
+          display: block;
+          z-index: -1;
+          //リンク無効
+          pointer-events: none;
+          background-color: #ffffff;
+        }
 
         li {
           width: 50%;
@@ -211,10 +246,15 @@
             padding: 10px 0;
             font-size: 16px;
             font-weight: 500;
-            color: #3c3636;
+            color: #222222;
             border-radius: 24px;
+            transition: all 0s;
             @include media(middle) {
               font-size: 14px;
+            }
+            &:hover {
+              opacity: 1;
+              cursor: pointer;
             }
           }
         }
@@ -574,12 +614,23 @@
         width: 48px;
         right: 20px;
         top: 20px;
+        @include media(middle) {
+          width: 16px;
+          right: 15px;
+          top: 15px;
+          img {
+            width: 100%;
+          }
+        }
       }
       .enjoy-fixed-container-wrap {
         overflow: hidden;
         border-radius: 30px;
         padding: 75px 100px;
         display: none;
+        @include media(middle) {
+          padding: 45px 35px;
+        }
       }
       .enjoy-fixed-container-wrap-bg {
         position: absolute;
@@ -605,16 +656,28 @@
             position: absolute;
             left: -50px;
             top: -50px;
+            @include media(middle) {
+              width: 80px;
+              left: -30px;
+              top: -30px;
+            }
           }
           .enjoy-fixed-container-wrap-content-img-right {
             width: 136px;
             position: absolute;
             right: -50px;
             bottom: -50px;
+            @include media(middle) {
+              width: 80px;
+              right: -30px;
+              bottom: -25px;
+            }
           }
         }
         .enjoy-fixed-container-wrap-content-txt {
           margin-top: 20px;
+          position: relative;
+          z-index: 130;
           &.color--black {
             h3,
             p {
@@ -632,6 +695,10 @@
             line-height: 2;
             color: #ffffff;
             margin: 20px 0px 60px;
+            @include media(middle) {
+              font-size: 14px;
+              margin: 10px 0px 20px;
+            }
           }
         }
       }
@@ -840,7 +907,10 @@
               flex-wrap: wrap;
               justify-content: space-between;
               align-items: center;
-              padding: 21px 12px 30px;
+              padding: 21px 20px 30px;
+              @include media(middle) {
+                padding: 15px 10px 20px;
+              }
               .text-info {
                 display: flex;
                 width: 100%;
@@ -884,6 +954,10 @@
                 background-color: #214995;
                 color: #fff !important;
               }
+              .cat-tokiwa {
+                font-size: 11px;
+                padding: 3px 8px;
+              }
 
               .term {
                 font-size: 13px;
@@ -894,7 +968,7 @@
               h3 {
                 margin-top: 10px;
                 font-size: 16px;
-                width: 50%;
+                width: 100%;
                 font-weight: 500;
                 letter-spacing: 0.1em;
 
@@ -932,9 +1006,9 @@
   }
 }
 .sec07-com {
-  padding-bottom: 100px;
+  padding-bottom: 0px;
   @include media(middle) {
-    padding-bottom: 50px;
+    padding-bottom: 30px;
   }
   .sec07-wrap {
     display: flex;
@@ -944,6 +1018,16 @@
       width: 230px;
       @include media(mobile) {
         width: 100%;
+      }
+      .page-title--has-icon {
+        h2 {
+          font-size: 30px !important;
+          //折り返し禁止
+          white-space: nowrap;
+          @include media(middle) {
+            font-size: 20px !important;
+          }
+        }
       }
 
       .sec07-btn {
@@ -1005,7 +1089,7 @@
           padding-left: 50px;
           padding-right: 10px;
           @include media(middle) {
-            padding: 15px 0px;
+            padding: 15px 10px 15px 0px;
             padding-right: 10px;
             font-size: 14px;
             padding-left: 35px;
@@ -1028,7 +1112,7 @@
             height: 2.5px;
             background-color: #3c3636;
             border-radius: 5px;
-            right: 0;
+            right: 10px;
             @include media(middle) {
               right: -5px;
             }
@@ -1043,7 +1127,7 @@
             height: 2.5px;
             background-color: #3c3636;
             border-radius: 5px;
-            right: 0;
+            right: 10px;
             transform: rotate(90deg);
             @include media(middle) {
               right: -5px;

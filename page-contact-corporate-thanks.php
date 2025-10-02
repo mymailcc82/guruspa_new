@@ -49,12 +49,12 @@ Template Name: お問い合わせ(法人のお客様向け)完了
             </div>
         </div>
         <div class="content-width content-width--mobile-full">
-            <div class="com-bnr">
+            <div class="com-bnr com-bnr--contact">
                 <div class="sec02-icon-04">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/first/sec02-icon-04.png" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/first/sec02-icon-04_v3.png" alt="">
                 </div>
                 <div class="sec02-icon-05">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/first/sec02-icon-05.png" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/first/sec02-icon-05_v3.png" alt="">
                 </div>
                 <div class="sec02-icon-06">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/first/sec02-icon-06.svg" alt="">
@@ -62,7 +62,7 @@ Template Name: お問い合わせ(法人のお客様向け)完了
 
                 <div class="sec02-about-bg">
                     <div class="sec02-icon-01">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/first/sec02-icon-01.png" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/first/sec02-icon-01_v2.png" alt="">
                     </div>
                     <div class="sec02-icon-02">
                         <picture>

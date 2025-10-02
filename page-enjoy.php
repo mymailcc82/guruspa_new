@@ -48,14 +48,16 @@ Template Name: enjoy
                     館内に揃った多彩な施設をチェックして、思い思いのリラックスタイムをお楽しみください。
                 </p>
             </div>
+        </div>
 
-            <div class="page-toggle">
-                <div class="sec01-col">
-                    <ul class="sec01-col-select tab">
-                        <li class="active"><a href="javascript:void(0)" data-id="#area01">1F</a></li>
-                        <li><a href="javascript:void(0)" data-id="#area02">2F</a></li>
-                    </ul>
-                    <div id="area01" class="area is-active">
+        <div class="page-toggle">
+            <div class="sec01-col">
+                <ul class="sec01-col-select tab">
+                    <li class="active"><a href="javascript:void(0)" data-id="#area01">1F</a></li>
+                    <li><a href="javascript:void(0)" data-id="#area02">2F</a></li>
+                </ul>
+                <div id="area01" class="area is-active">
+                    <div class="content-width-sm">
                         <div class="sec01-col-main">
                             <div class="sec01-col-main-bg">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-img-01.jpg" alt="">
@@ -152,7 +154,9 @@ Template Name: enjoy
                             </ul>
                         </div>
                     </div>
-                    <div id="area02" class="area">
+                </div>
+                <div id="area02" class="area">
+                    <div class="content-width-sm">
                         <div class="sec01-col-main">
                             <div class="sec01-col-main-bg">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-img-02.jpg" alt="">
@@ -223,77 +227,77 @@ Template Name: enjoy
                             <ul>
                                 <li>
                                     <div class="com-btn-mobile com-btn-mobile--full">
-                                        <a href="javascript:void(0)" class="popup-btn" data-id="enjoy-03">
+                                        <a href="<?php echo home_url(); ?>/enjoy/spa/#sec04">
                                             炭酸風呂<i></i>
                                         </a>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="com-btn-mobile com-btn-mobile--full">
-                                        <a href="javascript:void(0)" class="popup-btn" data-id="enjoy-03">
+                                        <a href="<?php echo home_url(); ?>/enjoy/spa/#else-01">
                                             極冷水風呂(7℃)<i></i>
                                         </a>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="com-btn-mobile com-btn-mobile--full">
-                                        <a href="javascript:void(0)" class="popup-btn" data-id="enjoy-03">
+                                        <a href="<?php echo home_url(); ?>/enjoy/spa/#else-02">
                                             水風呂(17℃)<i></i>
                                         </a>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="com-btn-mobile com-btn-mobile--full">
-                                        <a href="javascript:void(0)" class="popup-btn" data-id="enjoy-03">
+                                        <a href="<?php echo home_url(); ?>/enjoy/spa/#else-03">
                                             電気風呂<i></i>
                                         </a>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="com-btn-mobile com-btn-mobile--full">
-                                        <a href="javascript:void(0)" class="popup-btn" data-id="enjoy-03">
+                                        <a href="<?php echo home_url(); ?>/enjoy/spa/#else-04">
                                             ジェットバス<i></i>
                                         </a>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="com-btn-mobile com-btn-mobile--full">
-                                        <a href="javascript:void(0)" class="popup-btn" data-id="enjoy-03">
+                                        <a href="<?php echo home_url(); ?>/enjoy/spa/#else-05">
                                             スーパージェットバス<i></i>
                                         </a>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="com-btn-mobile com-btn-mobile--full">
-                                        <a href="javascript:void(0)" class="popup-btn" data-id="enjoy-03">
+                                        <a href="<?php echo home_url(); ?>/enjoy/spa/#sec05">
                                             天然温泉<i></i>
                                         </a>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="com-btn-mobile com-btn-mobile--full">
-                                        <a href="javascript:void(0)" class="popup-btn" data-id="enjoy-03">
+                                        <a href="<?php echo home_url(); ?>/enjoy/spa/#bohou">
                                             美泡壺風呂<i></i>
                                         </a>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="com-btn-mobile com-btn-mobile--full">
-                                        <a href="javascript:void(0)" class="popup-btn" data-id="enjoy-03">
+                                        <a href="<?php echo home_url(); ?>/enjoy/sauna/#hot">
                                             高温サウナ<i></i>
                                         </a>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="com-btn-mobile com-btn-mobile--full">
-                                        <a href="javascript:void(0)" class="popup-btn" data-id="enjoy-03">
+                                        <a href="<?php echo home_url(); ?>/enjoy/sauna/#salt">
                                             塩サウナ<i></i>
                                         </a>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="com-btn-mobile com-btn-mobile--full">
-                                        <a href="javascript:void(0)" class="popup-btn" data-id="enjoy-03">
+                                        <a href="<?php echo home_url(); ?>/enjoy/relaxation/">
                                             アカスリ<i></i>
                                         </a>
                                     </div>
@@ -313,7 +317,13 @@ Template Name: enjoy
         <div class="enjoy-fixed-container">
             <div class="enjoy-fixed-container-wrap" id="enjoy-01">
                 <div class="enjoy-fixed-container-wrap-close enjoy-fixed-btn-close">
-                    <a href="javascript:void(0)"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close.svg" alt="閉じる"></a>
+
+                    <a href="javascript:void(0)">
+                        <picture>
+                            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close-sp.svg" media="(max-width: 601px)">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close.svg" alt="閉じる">
+                        </picture>
+                    </a>
                 </div>
                 <div class="enjoy-fixed-container-wrap-bg">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-bg-blue.jpg" alt="">
@@ -345,7 +355,12 @@ Template Name: enjoy
 
             <div class="enjoy-fixed-container-wrap" id="enjoy-02">
                 <div class="enjoy-fixed-container-wrap-close enjoy-fixed-btn-close">
-                    <a href="javascript:void(0)"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close-black.svg" alt="閉じる"></a>
+                    <a href="javascript:void(0)">
+                        <picture>
+                            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close-sp.svg" media="(max-width: 601px)">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close.svg" alt="閉じる">
+                        </picture>
+                    </a>
                 </div>
                 <div class="enjoy-fixed-container-wrap-bg">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-bg-yellow.jpg" alt="">
@@ -376,7 +391,12 @@ Template Name: enjoy
 
             <div class="enjoy-fixed-container-wrap" id="enjoy-03">
                 <div class="enjoy-fixed-container-wrap-close enjoy-fixed-btn-close">
-                    <a href="javascript:void(0)"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close.svg" alt="閉じる"></a>
+                    <a href="javascript:void(0)">
+                        <picture>
+                            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close-sp.svg" media="(max-width: 601px)">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close.svg" alt="閉じる">
+                        </picture>
+                    </a>
                 </div>
                 <div class="enjoy-fixed-container-wrap-bg">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-bg-red.jpg" alt="">
@@ -398,8 +418,15 @@ Template Name: enjoy
                             時間を忘れてゆったり過ごしたい方にぴったりの癒し空間です。<br>
                             館内とはひと味違う、深いリラックスをお楽しみください。
                         </p>
-                        <div class="com-btn-border-white com-btn-border--210">
+                        <div class="com-btn-border-white com-btn-border--210 hidden-mobile">
                             <a href="<?php echo home_url(); ?>/enjoy/sweating/">くわしく見る<i></i></a>
+                        </div>
+                        <div class="com-btn-mobile hidden-sm">
+                            <div class="com-btn-mobile com-btn-mobile--full">
+                                <a href="<?php echo home_url(); ?>/enjoy/sweating/">
+                                    くわしく見る<i></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -407,7 +434,12 @@ Template Name: enjoy
 
             <div class="enjoy-fixed-container-wrap" id="enjoy-04">
                 <div class="enjoy-fixed-container-wrap-close enjoy-fixed-btn-close">
-                    <a href="javascript:void(0)"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close-black.svg" alt="閉じる"></a>
+                    <a href="javascript:void(0)">
+                        <picture>
+                            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close-sp.svg" media="(max-width: 601px)">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close.svg" alt="閉じる">
+                        </picture>
+                    </a>
                 </div>
                 <div class="enjoy-fixed-container-wrap-bg">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-bg-yellow.jpg" alt="">
@@ -428,8 +460,15 @@ Template Name: enjoy
                             館内の飲食エリアでは、和食・洋食やクラフトビール、スイーツまで幅広くご用意。「キッチントキワ」では三重県産食材を使った料理やサ飯を、くつろぎ空間で。「スイートラボ」では珍しいスイーツやSNS映えするデザートを楽しめます。<br>
                             館内着のまま気軽にご利用ください。
                         </p>
-                        <div class="com-btn-border-black com-btn-border--210">
+                        <div class="com-btn-border-black com-btn-border--210 hidden-mobile">
                             <a href="<?php echo home_url(); ?>/enjoy/food/">くわしく見る<i></i></a>
+                        </div>
+                        <div class="com-btn-mobile hidden-sm">
+                            <div class="com-btn-mobile com-btn-mobile--full">
+                                <a href="<?php echo home_url(); ?>/enjoy/food/">
+                                    くわしく見る<i></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -437,7 +476,12 @@ Template Name: enjoy
 
             <div class="enjoy-fixed-container-wrap" id="enjoy-05">
                 <div class="enjoy-fixed-container-wrap-close enjoy-fixed-btn-close">
-                    <a href="javascript:void(0)"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close.svg" alt="閉じる"></a>
+                    <a href="javascript:void(0)">
+                        <picture>
+                            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close-sp.svg" media="(max-width: 601px)">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close.svg" alt="閉じる">
+                        </picture>
+                    </a>
                 </div>
                 <div class="enjoy-fixed-container-wrap-bg">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-bg-blue.jpg" alt="">
@@ -458,16 +502,29 @@ Template Name: enjoy
                             ボディケア・あかすり・フットマッサージなど、豊富な施術をご用意。日々の疲れを芯から癒したい方におすすめです。<br>
                             予約制でスムーズにご案内でき、定期的にリラクイベントも開催中。贅沢なひとときをお過ごしください。
                         </p>
-                        <div class="com-btn-border-white com-btn-border--210">
+                        <div class="com-btn-border-white com-btn-border--210 hidden-mobile">
                             <a href="<?php echo home_url(); ?>/enjoy/relaxation/">くわしく見る<i></i></a>
                         </div>
+                        <div class="com-btn-mobile hidden-sm">
+                            <div class="com-btn-mobile com-btn-mobile--full">
+                                <a href="<?php echo home_url(); ?>/enjoy/relaxation/">
+                                    くわしく見る<i></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
             </div>
 
             <div class="enjoy-fixed-container-wrap" id="enjoy-06">
                 <div class="enjoy-fixed-container-wrap-close enjoy-fixed-btn-close">
-                    <a href="javascript:void(0)"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close.svg" alt="閉じる"></a>
+                    <a href="javascript:void(0)">
+                        <picture>
+                            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close-sp.svg" media="(max-width: 601px)">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close.svg" alt="閉じる">
+                        </picture>
+                    </a>
                 </div>
                 <div class="enjoy-fixed-container-wrap-bg">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-bg-red.jpg" alt="">
@@ -488,8 +545,15 @@ Template Name: enjoy
                             シャンプーやボディソープのアメニティはもちろん無料。タオルもご希望のお客様はレンタルまたは購入が可能なので、手ぶらでも安心してお越しいただけます。<br>
                             オリジナルグッズも取り揃えており、お土産や記念品としてもおすすめです。
                         </p>
-                        <div class="com-btn-border-white com-btn-border--210">
+                        <div class="com-btn-border-white com-btn-border--210 hidden-mobile">
                             <a href="<?php echo home_url(); ?>/enjoy/goods/">くわしく見る<i></i></a>
+                        </div>
+                        <div class="com-btn-mobile hidden-sm">
+                            <div class="com-btn-mobile com-btn-mobile--full">
+                                <a href="<?php echo home_url(); ?>/enjoy/goods/">
+                                    くわしく見る<i></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -497,7 +561,12 @@ Template Name: enjoy
 
             <div class="enjoy-fixed-container-wrap" id="enjoy-07">
                 <div class="enjoy-fixed-container-wrap-close enjoy-fixed-btn-close">
-                    <a href="javascript:void(0)"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close.svg" alt="閉じる"></a>
+                    <a href="javascript:void(0)">
+                        <picture>
+                            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close-sp.svg" media="(max-width: 601px)">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close.svg" alt="閉じる">
+                        </picture>
+                    </a>
                 </div>
                 <div class="enjoy-fixed-container-wrap-bg">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-bg-green.jpg" alt="">
@@ -524,7 +593,12 @@ Template Name: enjoy
 
             <div class="enjoy-fixed-container-wrap" id="enjoy-08">
                 <div class="enjoy-fixed-container-wrap-close enjoy-fixed-btn-close">
-                    <a href="javascript:void(0)"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close.svg" alt="閉じる"></a>
+                    <a href="javascript:void(0)">
+                        <picture>
+                            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close-sp.svg" media="(max-width: 601px)">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close.svg" alt="閉じる">
+                        </picture>
+                    </a>
                 </div>
                 <div class="enjoy-fixed-container-wrap-bg">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-bg-green.jpg" alt="">

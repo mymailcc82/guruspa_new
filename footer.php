@@ -101,7 +101,7 @@
                     <dt><a href="<?php echo home_url(); ?>/archive/">お知らせ</a></dt>
                     <dt><a href="<?php echo home_url(); ?>/faq/">FAQ</a></dt>
                     <dt><a href="<?php echo home_url(); ?>/rules/">注意事項</a></dt>
-                    <dt><a href="<?php echo home_url(); ?>/recruit/">採用情報</a></dt>
+                    <dt><a href="<?php echo home_url(); ?>/recruit_top/">採用情報</a></dt>
                 </dl>
             </div>
 
@@ -162,6 +162,97 @@
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/jquery.tmpl.min.js?ver=1.0.1"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/all.min.js?ver=1.0.4"></script>
 <script src="https://yubinbango.github.io/yubinbango/yubinbango.js" charset="UTF-8"></script>
+
+
+<script>
+    (function() {
+        var hadr = document.querySelector(".contact-wrap-right form")
+        if (hadr) {
+            cancelFlag = true;
+            //イベントをキャンセルするリスナ
+            var onKeyupCanceller = function(e) {
+                if (cancelFlag) {
+                    e.stopImmediatePropagation();
+                }
+                return false;
+            };
+
+            // 郵便番号の入力欄
+            var postalcode = hadr.querySelectorAll(".p-postal-code"),
+                postalField = postalcode[postalcode.length - 1];
+
+            //通常の挙動をキャンセルできるようにイベントを追加
+            postalField.addEventListener("keyup", onKeyupCanceller, false);
+
+            //ボタンクリック時
+            var btn = hadr.querySelector(".zip-wrap-btn-a");
+            btn.addEventListener("click", function(e) {
+                //キャンセルを解除
+                cancelFlag = false;
+
+                //aタグ無効
+                e.preventDefault();
+
+                //発火
+                let event;
+                if (typeof Event === "function") {
+                    event = new Event("keyup");
+                } else {
+                    event = document.createEvent("Event");
+                    event.initEvent("keyup", true, true);
+                }
+                postalField.dispatchEvent(event);
+
+                //キャンセルを戻す
+                cancelFlag = true;
+            });
+        }
+
+    })();
+</script>
+<script>
+    //エントリーで誕生日自動付与
+    const input = document.getElementById('dateInput');
+    //typeをtextから数字に変更
+    input.type = 'tel';
+</script>
+
+
+<script>
+    $(document).ready(function() {
+        var val = $('.mw-wp-form_file input[name="upload"]').val();
+        if (val) {
+            //valの最初のupload-を削除
+            //val = val.replace(/upload-/, '');
+            $(".js-upload-filename-1").text(val);
+            //$(".preview").css("display", "block");
+
+        } else {
+            $(".js-upload-filename-1").text('選択されていません');
+        }
+    });
+
+    $(document).on('change', '.upload-1', function() {
+        var file = $(this).prop('files')[0];
+        /*
+        if (file && file.type.startsWith('image/')) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                $('.preview').attr('src', e.target.result);
+            };
+            reader.readAsDataURL(file); // ← base64で読み込み
+        }
+        */
+
+        if (file) {
+            $(this).closest('.upload-box').find('.js-upload-filename-1').text(file.name);
+            //$(".preview").css("display", "block");
+        } else {
+            $(this).closest('.upload-box').find('.js-upload-filename-1').text('選択されていません');
+        }
+    });
+</script>
+
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
@@ -510,49 +601,20 @@
                     trigger: section,
                     start: "top 80%", // ビューポートの80%で発火
                     toggleActions: "play none none reverse"
-                }
+                },
+                //thisに.fadeup-timelug-activeを付与
+                onEnter: () => section.classList.add('fadeup-timelug-active'),
             }
+
         );
     });
+
 
     //footerにlineアイコンが差し掛かったらfedeuot
 
 
     //波の背景が出現するアニメーション
-    document.addEventListener('DOMContentLoaded', () => {
-        // reduced motion 配慮
-        if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-            gsap.set('.page-deco-bg', {
-                y: 0,
-                opacity: 1
-            });
-            return;
-        }
 
-        gsap.registerPlugin(ScrollTrigger);
-
-        // 初期状態を明示
-        gsap.set('.page-deco-bg', {
-            y: 100,
-            opacity: 1
-        });
-
-        gsap.to('.page-deco-bg', {
-            y: 0,
-            opacity: 1,
-            duration: 0.8,
-            ease: 'power3.out',
-            immediateRender: false,
-            scrollTrigger: {
-                trigger: '.page-deco-bg',
-                start: 'top 90%', // 要素の top がビューポートの 90% の位置に来たら発火
-                // end: 'top 60%',  // 必要なら指定
-                toggleActions: 'play none none none',
-                //once: true, // 一度だけ再生
-                scrub: true // スクロールに同期
-            }
-        });
-    });
 
     //初めてのお客様への波の背景が出現するアニメーション
     //.sec02-aboutに差し掛かったら.sec02-about-activeのクラスを付与
@@ -579,9 +641,69 @@
             // once: true // 一度だけ発火させたい場合
         });
     });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // 必要なら先に gsap と ScrollTrigger を読み込んでおくこと
+        // <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js">
+        // <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js">
 
+        gsap.registerPlugin(ScrollTrigger);
 
-    
+        const elems = gsap.utils.toArray('.page-deco-bg');
+
+        // reduced motion 配慮
+        const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (prefersReduced) {
+            gsap.set(elems, {
+                y: 0,
+                opacity: 1
+            });
+            return;
+        }
+
+        const getYSize = () => (window.innerWidth <= 600 ? 50 : 100);
+
+        // 初期状態を一括でセット
+        gsap.set(elems, {
+            y: getYSize(),
+            opacity: 1
+        });
+
+        elems.forEach((el) => {
+            // 各要素ごとに独立した ScrollTrigger を作る
+            gsap.fromTo(el, {
+                y: getYSize(),
+            }, {
+                y: 0,
+                duration: 0.8,
+                ease: 'power3.out',
+                immediateRender: false,
+                scrollTrigger: {
+                    trigger: el, // 要素自身をトリガーにする
+                    start: 'top 90%', // 要素 top がビューポートの 90% に来たら開始
+                    end: 'top 60%', // 任意：終了位置
+                    toggleActions: 'play none none none',
+                    // scrub: true, // スクロールと完全同期させたい場合は有効にする（duration は無視される）
+                    scrub: 0.4, // 軽いスクラブで自然に同期させる（数値にすると滑らか）
+                    // once: true, // 一度だけ動かしたい場合はコメント解除
+                }
+            });
+        });
+
+        // ウィンドウ幅が変わったら y を再セットして ScrollTrigger をリフレッシュ
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(() => {
+                const y = getYSize();
+                elems.forEach(el => gsap.set(el, {
+                    y
+                }));
+                ScrollTrigger.refresh();
+            }, 120);
+        });
+    });
 </script>
 
 <?php if (is_page("guide")): ?>

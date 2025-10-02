@@ -34,36 +34,35 @@
     .footer-wrap-menu {
       display: flex;
       flex-wrap: wrap;
-      //justify-content: space-between;
+      justify-content: space-between;
       gap: 30px;
       margin-bottom: 48px;
 
-      @include media(middle-small) {
+      @include media(middle) {
+        justify-content: flex-start;
+      }
+
+      @include media(mobile) {
         gap: 0;
       }
 
-      .accordion {
-        @include media(middle-small) {
+      .footer-accordion {
+        @include media(mobile) {
           width: 100%;
           border-bottom: solid 1px #3c3636;
           padding-bottom: 20px;
           margin-bottom: 20px;
         }
 
-        a {
-          font-size: 16px;
-          font-weight: bold;
-          letter-spacing: 0.1em;
-        }
       }
 
       .accordion-none {
-        @include media(middle-small) {
+        @include media(mobile) {
           width: 100%;
         }
 
         dt {
-          @include media(middle-small) {
+          @include media(mobile) {
             width: 100%;
             padding-bottom: 20px;
             margin-bottom: 20px;
@@ -72,6 +71,14 @@
 
           a {
             display: block;
+
+            &::before,
+            &::after {
+              @include media(mobile) {
+                display: none !important;
+              }
+
+            }
           }
         }
       }
@@ -84,7 +91,7 @@
             margin-bottom: 0;
           }
 
-          @include media(middle-small) {
+          @include media(mobile) {
             margin-bottom: 0;
           }
 
@@ -92,7 +99,30 @@
             font-size: 16px;
             font-weight: bold;
             letter-spacing: 0.1em;
+          }
+        }
 
+        .footer-accordion-switch {
+          &.open {
+            a {
+              &::before {
+                transform: translateY(-50%) rotate(0deg); // マイナスになる
+              }
+
+              &::after {
+                transform: translateY(-50%) rotate(0deg) !important; // マイナスになる
+              }
+            }
+          }
+
+          @include media(mobile) {
+            width: 100%;
+            display: block;
+            position: relative;
+            line-height: 2;
+          }
+
+          a {
             &::before {
               display: none;
               content: '';
@@ -105,7 +135,7 @@
               background-color: #3c3636;
               transition: transform 0.3s ease;
 
-              @include media(middle-small) {
+              @include media(mobile) {
                 display: block;
               }
             }
@@ -122,38 +152,19 @@
               background-color: #3c3636;
               transition: transform 0.3s ease;
 
-              @include media(middle-small) {
+              @include media(mobile) {
                 display: block;
               }
-            }
-
-            &.open::after {
-              transform: translateY(-50%) rotate(0deg); // マイナスになる
-            }
-
-            @include media(middle-small) {
-              width: 100%;
-              display: block;
-              position: relative;
-            }
-
-            &.open::after {
-              transform: translateY(-50%) rotate(0deg); // マイナスになる
-            }
-
-            @include media(middle-small) {
-              width: 100%;
-              display: block;
-              position: relative;
-              line-height: 2;
             }
           }
         }
 
         dd {
           margin-bottom: 10px;
+          //display: block !important;
 
-          @include media(middle-small) {
+          @include media(mobile) {
+
             margin-bottom: 0;
             max-height: 0;
             transition: max-height 0.5s ease, opacity 0.5s ease;
@@ -164,30 +175,34 @@
           }
 
           a {
-            font-size: 16px;
+            font-size: 14px;
             font-weight: 500;
             letter-spacing: 0.1em;
             display: block;
             width: 100%;
             line-height: 2;
 
-            @include media(middle-small) {
+            @include media(sm) {
+              margin-bottom: 10px;
+            }
+
+            @include media(mobile) {
               line-height: 2;
               opacity: 0;
             }
           }
-        }
 
-        &.active {
-          dd {
-            @include media(middle-small) {
-              max-height: 1000px; // 十分な高さを指定
+          &.active {
+
+            @include media(mobile) {
+              max-height: 500px; // 十分な高さを指定
               transition: max-height 0.5s ease, opacity 0.4s ease;
             }
 
             a {
               opacity: 1;
             }
+
           }
         }
       }
@@ -196,6 +211,7 @@
     .footer-banner {
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
       gap: 15px;
       margin-bottom: 25px;
 
@@ -243,6 +259,8 @@
           letter-spacing: 0.1em;
           line-height: 1.35;
           margin-bottom: 0;
+
+
 
           @include media(middle-small) {
             text-align: center;
@@ -459,7 +477,7 @@
     color: #3c3636;
     height: 176px;
 
-    span{
+    span {
       line-height: 1.1;
     }
 
@@ -570,6 +588,13 @@
 }
 
 .footer-fixed-pc {
+  opacity: 0;
+  
+  &.show {
+    bottom: 20px; // 画面内に出す位置
+    opacity: 1;
+  }
+
   @include media(mobile) {
     display: none;
   }

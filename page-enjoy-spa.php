@@ -38,7 +38,7 @@ Template Name: enjoy-spa
         <div class="content-width">
             <div class="enjoy-wrap">
                 <div class="enjoy-wrap-txt">
-                    <div class="com-title com-title--small com-title-hidden">
+                    <div class="com-title--page com-title com-title-hidden">
                         <p>お風呂</p>
                         <h2 class="">
                             <span class="title">S</span><span class="title">P</span><span class="title">A</span>
@@ -69,22 +69,22 @@ Template Name: enjoy-spa
                         <a href="#sec02">特徴・魅力<i></i></a>
                     </li>
                     <li>
-                        <a href="#sec03">湯めぐり案内(内風呂)<i></i></a>
+                        <a href="#sec04">湯めぐり案内(内風呂)<i></i></a>
                     </li>
                     <li>
-                        <a href="#sec04">湯めぐり案内(露天風呂)<i></i></a>
+                        <a href="#sec05">湯めぐり案内(露天風呂)<i></i></a>
                     </li>
                     <li>
-                        <a href="#sec05">脱衣所・浴室ご利用のご案内<i></i></a>
+                        <a href="#sec06">脱衣所・浴室ご利用のご案内<i></i></a>
                     </li>
                     <li>
-                        <a href="#sec05">よくある質問<i></i></a>
+                        <a href="#sec07">よくある質問<i></i></a>
                     </li>
                 </ul>
             </div>
         </div>
     </section>
-    <section class="sec02">
+    <section class="sec02" id="sec02">
         <div class="sec02-icon-01">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec02-icon-01.png" alt="">
         </div>
@@ -98,7 +98,7 @@ Template Name: enjoy-spa
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec02-icon-04.svg" alt="">
         </div>
 
-        <div class="page-bg-deco-bg">
+        <div class="page-deco-bg">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-blue-top_v2.png" alt="">
         </div>
         <div class="page-deco-container page-deco-container--blue">
@@ -128,7 +128,7 @@ Template Name: enjoy-spa
                             <h3>気分に合わせて選べる多彩な湯船</h3>
                             <p>
                                 ぬる湯・炭酸泉・極冷水風呂・ジェットバスなど、体調や気分に合わせて選べる浴槽を多数ご用意。<br>
-                                サウナ後のクールダウンにも最適な水風呂も完備し、“ととのい”をサポートします。
+                                サウナ後のクールダウンにも最適な水風呂も完備し、<br class="hidden-mobile">“ととのい”をサポートします。
                             </p>
                         </div>
                     </div>
@@ -154,7 +154,7 @@ Template Name: enjoy-spa
 
     </section>
 
-    <section class="sec04">
+    <section class="sec04" id="sec04">
         <div class="content-width-sm">
             <div class="page-title-center--has-icon">
                 <h2><i></i>湯めぐり案内</h2>
@@ -397,7 +397,7 @@ Template Name: enjoy-spa
             </div>
         </div>
 
-        <div class="sec04-container">
+        <div class="sec04-container" id="sec05">
             <div class="sec04-bg">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-bg-02.jpg" alt="">
                 <div class="sec04-bg-icon">
@@ -466,8 +466,8 @@ Template Name: enjoy-spa
         </div>
     </section>
 
-    <section class="sec05">
-        <div class="page-bg-deco-bg">
+    <section class="sec05" id="sec06">
+        <div class="page-deco-bg">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-blue-top_v2.png" alt="">
         </div>
         <div class="page-deco-container page-deco-container--blue">
@@ -507,7 +507,7 @@ Template Name: enjoy-spa
 
     </section>
 
-    <section class="sec07-com">
+    <section class="sec07-com" id="sec07">
         <div class="content-width">
             <div class="sec07-wrap">
                 <div class="sec07-wrap-title">
@@ -519,26 +519,38 @@ Template Name: enjoy-spa
                     </div>
                 </div>
                 <div class="sec07-wrap-faq accordion">
-                    <dl>
-                        <dt><i></i>岩盤浴ウェアやタオルは自分で持っていく必要がありますか？</dt>
-                        <dd></dd>
-                    </dl>
-                    <dl>
-                        <dt><i></i>天然温泉は源泉かけ流しですか？</dt>
-                        <dd></dd>
-                    </dl>
-                    <dl>
-                        <dt><i></i>混雑する時間帯はいつですか？</dt>
-                        <dd></dd>
-                    </dl>
-                    <dl>
-                        <dt><i></i>発汗エリアは誰でも利用できますか？</dt>
-                        <dd></dd>
-                    </dl>
-                    <dl>
-                        <dt><i></i>駐車場はありますか？</dt>
-                        <dd></dd>
-                    </dl>
+                    <?php
+                    $args = array(
+                        'post_type' => 'faq', // カスタム投稿タイプ名
+                        'posts_per_page' => 3, // 表示する記事数
+                        'orderby' => 'date', // 日付で並び替え
+                        'order' => 'DESC', // 降順
+                        //faq_categoryのonsenを表示
+                        'tax_query' => array(
+                            array(
+                                'taxonomy' => 'faq_category',
+                                'field'    => 'slug',
+                                'terms'    => 'onsen',
+                            ),
+                        ),
+                    );
+                    ?>
+                    <?php
+                    $faq_query = new WP_Query($args);
+                    if ($faq_query->have_posts()) :
+                        while ($faq_query->have_posts()) : $faq_query->the_post();
+                    ?>
+                            <dl>
+                                <dt><i></i><?php the_title(); ?></dt>
+                                <dd><?php the_content(); ?></dd>
+                            </dl>
+                    <?php
+                        endwhile;
+                        wp_reset_postdata();
+                    else :
+                        echo '<p>まだ記事がありません。</p>';
+                    endif;
+                    ?>
 
                     <div class="com-btn-mobile hidden-sm">
                         <a href="<?php echo home_url(); ?>/faq/">一覧を見る<i></i></a>

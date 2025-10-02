@@ -32,6 +32,7 @@
       z-index: 2;
       max-width: 350px;
       margin: 40px auto 40px;
+      width: 100%;
       &:after {
         width: 350px;
         height: 5px;
@@ -43,6 +44,9 @@
         transform: translateX(-50%);
         z-index: -2;
         display: block;
+        @include media(mobile) {
+          width: 100%;
+        }
       }
       &.step-02 {
         &:before {
@@ -74,6 +78,11 @@
         display: flex;
         justify-content: center;
         gap: 100px;
+        position: relative;
+        @include media(mobile) {
+          gap: 20px;
+          justify-content: space-between;
+        }
         li {
           width: 62px;
           p {
@@ -83,7 +92,10 @@
             white-space: nowrap;
             font-size: 14px;
             font-weight: 500;
-            margin: 10px 0px 0px;
+            margin: 15px 0px 0px;
+            @include media(middle) {
+              font-size: 12px;
+            }
           }
         }
       }
@@ -184,10 +196,6 @@
               @include media(middle) {
                 font-size: 17px;
                 padding-left: 10px;
-              }
-              &:hover {
-                opacity: 0.5;
-                cursor: pointer;
               }
             }
           }
@@ -545,7 +553,7 @@
             appearance: none; /* 標準のスタイルを無効化 */
             width: 20px;
             height: 20px;
-            border: 2px solid #71360b; /* ボーダーの色 */
+            border: 2px solid #3c3636; /* ボーダーの色 */
             border-radius: 0px; /* 角を丸める（オプション） */
             background-color: white; /* チェックボックスの背景色 */
             padding: 0px;
@@ -554,8 +562,8 @@
           }
           /* チェックが入ったときのスタイル */
           input[type='checkbox']:checked {
-            background-color: #71360b; /* チェック時の背景色 */
-            border-color: #71360b; /* チェック時のボーダー色 */
+            background-color: #3c3636; /* チェック時の背景色 */
+            border-color: #3c3636; /* チェック時のボーダー色 */
           }
           /* チェックマークのスタイル */
           input[type='checkbox']:checked::after {
@@ -589,6 +597,7 @@
             background-size: 38px;
             background-repeat: no-repeat;
             background-position: right 20px center;
+            transition: all 0.3s;
             width: 100%;
             display: block;
             padding: 20px 0px;
@@ -609,7 +618,8 @@
               padding-right: 30px;
             }
             &:hover {
-              opacity: 0.5;
+              opacity: 1;
+              background-position: right 10px center;
               cursor: pointer;
             }
           }

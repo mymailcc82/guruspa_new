@@ -4,13 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css?ver=1.2.5">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yakuhanjp@4.1.1/dist/css/yakuhanjp.css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css?ver=1.2.6">
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Iceberg&family=Barlow+Semi+Condensed:wght@400;600;700&family=Urbanist:wght@600&family=Noto+Serif+JP:wght@200..900&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Barlow+Semi+Condensed:wght@400;600;700&family=Urbanist:wght@600&family=Noto+Serif+JP:wght@200..900&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
     <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
@@ -162,7 +160,7 @@
                         <li><a href="<?php echo home_url(); ?>/archive/">お知らせ<i></i></a></li>
                         <li><a href="<?php echo home_url(); ?>/faq/">FAQ<i></i></a></li>
                         <li><a href="<?php echo home_url(); ?>/rules/">注意事項<i></i></a></li>
-                        <li><a href="<?php echo home_url(); ?>/recruit/">採用情報<i></i></a></li>
+                        <li><a href="<?php echo home_url(); ?>/recruit_top/">採用情報<i></i></a></li>
                     </ul>
                 </div>
             </div>

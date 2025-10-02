@@ -10,9 +10,9 @@
     overflow: hidden;
     position: relative;
     .sec02-icon-01 {
-      width: 350px;
+      width: calc(390 * (100vw / 1360));
       position: absolute;
-      left: -50px;
+      left: -100px;
       top: 80px;
       @include media(middle) {
         width: 150px;
@@ -120,10 +120,10 @@
   }
   .sec04 {
     padding-top: 80px;
-    padding-bottom: 120px;
+    padding-bottom: 40px;
     @include media(middle) {
       padding-top: 40px;
-      padding-bottom: 60px;
+      padding-bottom: 30px;
     }
     .sec04-bg {
       position: relative;
@@ -363,10 +363,13 @@
               color: #fff;
               font-size: 14px;
               font-weight: bold;
+              line-height: 1.6;
+              margin-bottom: 2px;
             }
             dd {
               color: #fff;
               font-size: 14px;
+              line-height: 1.6;
             }
           }
 
@@ -391,8 +394,16 @@
       justify-content: space-between;
       position: relative;
       z-index: 2;
+      &.fadeup-timelug-active {
+        &:before {
+          width: 100% !important;
+          opacity: 1 !important;
+        }
+      }
       &:before {
-        width: 100%;
+        width: 0%;
+        opacity: 0;
+        transition: all 2.5s;
         height: 20px;
         background-color: #214995;
         content: '';
@@ -540,7 +551,7 @@
         }
         p {
           font-size: 16px;
-          font-weight: 500;
+          font-weight: 400;
           margin: 10px 0px 0px;
           color: #fff;
           letter-spacing: 0.1em;
@@ -637,6 +648,12 @@
     }
     .page-title-center--has-icon {
       h2 {
+      }
+    }
+    .page-deco-container {
+      padding-top: 40px;
+      @include media(middle) {
+        padding-top: 10px;
       }
     }
     .sec05-desc {

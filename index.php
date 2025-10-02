@@ -341,16 +341,27 @@
                                                             <?php
                                                             // カテゴリーに応じたデフォルト画像を設定
                                                             $category_slug = $event_category[0]->slug;
+                                                            $category_slug_parent = '';
+                                                            //$event_category[0]の親カテゴリーを取得
+                                                            //var_dump($event_category[0]);
+                                                            if ($event_category[0]->parent) {
+                                                                $parent_term = get_term($event_category[0]->parent, 'event_category');
+                                                                if ($parent_term && !is_wp_error($parent_term)) {
+                                                                    $category_slug_parent_id = $parent_term->term_id;
+                                                                    $category_slug_parent = $parent_term->slug;
+                                                                }
+                                                            }
                                                             $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-default.jpg'; // デフォルト画像
 
-                                                            if ($category_slug === 'information') {
+                                                            if ($category_slug === 'information' || $category_slug_parent === 'information') {
                                                                 $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-red.jpg';
-                                                            } elseif ($category_slug === 'event') {
+                                                            } elseif ($category_slug === 'event' || $category_slug_parent === 'event') {
                                                                 $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-green.jpg';
-                                                            } elseif ($category_slug === 'relax') {
-                                                                $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-blue.jpg';
-                                                            } elseif ($category_slug === 'food') {
+                                                            } elseif ($category_slug === 'food' || $category_slug_parent === 'food') {
                                                                 $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-yellow.jpg';
+                                                            } elseif ($category_slug === 'relax' || $category_slug_parent === 'relax') {
+                                                                $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-blue.jpg';
+                                                            } elseif ($category_slug === 'tokiwa') {
                                                             }
                                                             ?>
                                                             <img src="<?php echo esc_url($default_image_url); ?>" alt="<?php the_title(); ?>">

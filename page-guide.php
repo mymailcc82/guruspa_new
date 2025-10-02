@@ -262,17 +262,6 @@
                             </dd>
                         </dl>
                     </div>
-                    <div class="sec01-center-wrap-col">
-                        <dl>
-                            <dt>ギフト用全日入泉券<br class="hidden-middle">(10枚)</dt>
-                            <dd>
-                                <p>
-                                    11,000<span>円</span><br>
-                                    <small>※1枚あたり1,100円</small>
-                                </p>
-                            </dd>
-                        </dl>
-                    </div>
                 </div>
             </div>
             <div class="sec01-bottom" id="sec03">
@@ -345,7 +334,7 @@
                             <table>
                                 <tr>
                                     <th>通常入泉</th>
-                                    <td>10:00〜翌1:00</td>
+                                    <td>10:00〜24:00</td>
                                 </tr>
                                 <tr>
                                     <th>発汗エリア<br><small>(有料岩盤浴)</small></th>
@@ -359,7 +348,7 @@
                                 </tr>
                                 <tr>
                                     <th>ご飲食</th>
-                                    <td>11:00〜24:00</td>
+                                    <td>11:00〜23:00</td>
                                 </tr>
                             </table>
                         </dd>
@@ -420,7 +409,7 @@
                             <table>
                                 <tr>
                                     <th>通常入泉</th>
-                                    <td>10:00〜翌1:00</td>
+                                    <td>10:00〜24:00</td>
                                 </tr>
                                 <tr>
                                     <th>発汗エリア<br><small>(有料岩盤浴)</small></th>
@@ -434,7 +423,7 @@
                                 </tr>
                                 <tr>
                                     <th>ご飲食</th>
-                                    <td>11:00〜24:00</td>
+                                    <td>11:00〜23:00</td>
                                 </tr>
                             </table>
                         </dd>
@@ -445,7 +434,7 @@
                             <table>
                                 <tr>
                                     <th>通常入泉</th>
-                                    <td>10:00〜翌1:00</td>
+                                    <td>10:00〜24:00</td>
                                 </tr>
                                 <tr>
                                     <th>発汗エリア<br><small>(有料岩盤浴)</small></th>
@@ -459,7 +448,7 @@
                                 </tr>
                                 <tr>
                                     <th>ご飲食</th>
-                                    <td>11:00〜24:00</td>
+                                    <td>11:00〜23:00</td>
                                 </tr>
                             </table>
                         </dd>
@@ -506,7 +495,11 @@
     </section>
     <section class="sec03" id="sec04">
         <div class="page-deco-bg">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-green-top-v3.png" alt="">
+            <picture>
+                <source media="(max-width: 601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-green-top-sp_v3.png">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-green-top-v3.png" alt="">
+            </picture>
+
         </div>
         <div class="page-deco-container page-deco-container--green">
             <div class="content-width-sm">
@@ -520,7 +513,7 @@
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/guide/sec03-img-01.jpg" alt="">
                             </div>
                             <p>
-                                入館は<span>下足ロッカーのリストバンドを券売機にて受付</span>し、ゲートをお通りくださいませ。
+                                入館時は<span>券売機または受付でのチェックイン</span>をお願いいたします。
                             </p>
                         </div>
                         <div class="sec03-wrap-col">
@@ -592,9 +585,10 @@
                         </div>
                         <div class="sec03-col-txt">
                             <ul>
-                                <li>小学生以下のお子様は必ず保護者の同伴が必要です。</li>
-                                <li>中学生以下のお客様は<span>21:00までのご利用</span>となります。</li>
-                                <li>身長120cm以上のお子様は混浴禁止（条例に準じます）。</li>
+                                <li>指定場所以外での喫煙は禁止です。</li>
+                                <li>飲食物の持ち込みはご遠慮ください。</li>
+                                <li>浴室・脱衣場での<span>写真撮影・動画撮影は禁止</span>です。</li>
+                                <li>大声・暴力行為・威圧的な言動など、他のお客様の迷惑となる行為はご遠慮ください。当店が悪質と判断した場合はその場で警察に通報させていただきます。</li>
                             </ul>
                         </div>
                     </div>

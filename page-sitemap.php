@@ -25,7 +25,7 @@
     </div>
     <section class="sec01">
         <div class="content-width">
-            <div class="com-title center com-title-hidden">
+            <div class="com-title com-title--sitemap center com-title-hidden">
                 <p>サイトマップ</p>
                 <h1 class="">
                     <span class="title">S</span><span class="title">I</span><span class="title">T</span><span class="title">E</span>　<span class="title">M</span><span class="title">A</span><span class="title">P</span>
@@ -46,7 +46,7 @@
                     <ul>
                         <li><a href="<?php echo home_url(); ?>/guide/#sec02">料金案内</a></li>
                         <li><a href="<?php echo home_url(); ?>/guide/#sec03">営業時間</a></li>
-                        <li><a href="<?php echo home_url(); ?>/guide/#sec04">利用案内</a></li>
+                        <li><a href="<?php echo home_url(); ?>/guide/#sec04">ご利用案内</a></li>
                         <li><a href="<?php echo home_url(); ?>/guide/#sec05">アクセス</a></li>
                     </ul>
                 </div>
@@ -80,7 +80,7 @@
                         <a href="<?php echo home_url(); ?>/event/">イベント情報<i></i></a>
                     </h2>
                     <ul>
-                        <li><a href="<?php echo home_url(); ?>/today/">当日のイベント</a></li>
+                        <li><a href="<?php echo home_url(); ?>/today/">本日のイベント</a></li>
                         <li><a href="<?php echo home_url(); ?>/schedule/">イベントスケジュール</a></li>
                     </ul>
                 </div>
@@ -91,7 +91,7 @@
                     </h2>
                     <ul>
                         <li><a href="<?php echo home_url(); ?>/contact/">個人のお客様</a></li>
-                        <li><a href="<?php echo home_url(); ?>/contact/">取材依頼・法人の方</a></li>
+                        <li><a href="<?php echo home_url(); ?>/contact-corporate/">取材依頼・法人の方</a></li>
                     </ul>
                 </div>
                 <div class="sec01-wrap-col">

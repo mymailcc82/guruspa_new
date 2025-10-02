@@ -38,7 +38,7 @@ Template Name: enjoy-goods
         <div class="content-width">
             <div class="enjoy-wrap">
                 <div class="enjoy-wrap-txt">
-                    <div class="com-title com-title--small com-title-hidden">
+                    <div class="com-title com-title--goods com-title-hidden">
                         <p>アメニティ・グッズ</p>
                         <h2 class="">
                             <span class="title">A</span><span class="title">M</span><span class="title">E</span><span class="title">N</span><span class="title">I</span><span class="title">T</span><span class="title">Y</span><span class="title">&</span><br><span class="title">G</span><span class="title">O</span><span class="title">O</span><span class="title">D</span><span class="title">S</span>
@@ -77,7 +77,7 @@ Template Name: enjoy-goods
     </section>
     <section class="sec02" id="sec02">
         <div class="content-width-sm">
-            <div class="page-title-center--has-icon">
+            <div class="page-title-center--has-icon page-title-center--has-icon--font-30 mb-20">
                 <h2><i></i>備え付けアメニティ(無料)</h2>
             </div>
             <p class="sec02-desc">
@@ -129,7 +129,7 @@ Template Name: enjoy-goods
     </section>
     <section class="sec03" id="sec03">
         <div class="content-width-sm">
-            <div class="page-title-center--has-icon">
+            <div class="page-title-center--has-icon page-title-center--has-icon--font-30 mb-20">
                 <h2 class="letter-spacing-0-mobile"><i></i>レンタルアイテム（有料）</h2>
             </div>
             <p class="sec03-desc">
@@ -271,17 +271,19 @@ Template Name: enjoy-goods
 
                 <div class="sec04-info">
                     <div class="sec04-info-img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/goods/sec04-info.jpg" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/goods/sec04-info_v2.jpg" alt="">
                     </div>
                     <div class="sec04-info-txt">
                         <dl>
                             <dt>販売場所</dt>
-                            <dd>○階 ○○○○○</dd>
+                            <dd>1F 待合ホール スイートラボ前</dd>
                         </dl>
+                        <?php /*
                         <dl>
                             <dt>販売時間</dt>
                             <dd>10:00〜22:00</dd>
                         </dl>
+                        */ ?>
                         <p>
                             ※ネットショップは行っておりません。お買い求めの際は店頭にお越しください。
                         </p>
@@ -378,7 +380,7 @@ Template Name: enjoy-goods
                     </div>
                     <div class="sec04-info">
                         <div class="sec04-info-img">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/goods/sec04-info.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/goods/sec04-info_v2.jpg" alt="">
                         </div>
                         <div class="sec04-info-txt">
                             <dl>

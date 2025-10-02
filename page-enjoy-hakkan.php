@@ -38,7 +38,7 @@ Template Name: enjoy-hakkan
         <div class="content-width">
             <div class="enjoy-wrap">
                 <div class="enjoy-wrap-txt">
-                    <div class="com-title com-title--small com-title-hidden">
+                    <div class="com-title com-title--page com-title-hidden">
                         <p>発汗エリア（有料岩盤浴エリア）</p>
                         <h2 class="">
                             <span class="title">S</span><span class="title">W</span><span class="title">E</span><span class="title">A</span><span class="title">T</span><span class="title">I</span><span class="title">N</span><span class="title">G</span><span class="title">A</span><span class="title">R</span><span class="title">E</span><span class="title">A</span>
@@ -176,7 +176,7 @@ Template Name: enjoy-hakkan
             </div>
         </div>
     </section>
-    <section class="sec03" id="sec03">
+    <section class="sec03">
         <div class="sec02-icon-01">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec02-icon-01.png" alt="">
         </div>
@@ -193,7 +193,7 @@ Template Name: enjoy-hakkan
         <div class="page-deco-bg">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-red-top.png" alt="">
         </div>
-        <div class="page-deco-container page-deco-container--red">
+        <div class="page-deco-container page-deco-container--red" id="sec03">
             <div class="content-width-sm">
                 <div class="page-title-center--has-icon">
                     <h2><i></i>特徴・魅力</h2>
@@ -483,7 +483,7 @@ Template Name: enjoy-hakkan
                     <p>
                         当館ではお客様に気持ちよくご利用いただくため、<br class="hidden-mobile">下記の事項をお守りくださいますようお願い申し上げます。
                     </p>
-                    <div class="sec04-bottom-wrap">
+                    <div class="sec04-bottom-wrap fadeup">
                         <ul>
                             <li>手荷物・タオル等による場所取りはご遠慮ください（スタッフにより撤去させていただきます）</li>
                             <li>大声・騒音などを出さないでください。</li>
@@ -754,26 +754,38 @@ Template Name: enjoy-hakkan
                     </div>
                 </div>
                 <div class="sec07-wrap-faq accordion">
-                    <dl>
-                        <dt><i></i>岩盤浴ウェアやタオルは自分で持っていく必要がありますか？</dt>
-                        <dd></dd>
-                    </dl>
-                    <dl>
-                        <dt><i></i>天然温泉は源泉かけ流しですか？</dt>
-                        <dd></dd>
-                    </dl>
-                    <dl>
-                        <dt><i></i>混雑する時間帯はいつですか？</dt>
-                        <dd></dd>
-                    </dl>
-                    <dl>
-                        <dt><i></i>発汗エリアは誰でも利用できますか？</dt>
-                        <dd></dd>
-                    </dl>
-                    <dl>
-                        <dt><i></i>駐車場はありますか？</dt>
-                        <dd></dd>
-                    </dl>
+                    <?php
+                    $args = array(
+                        'post_type' => 'faq', // カスタム投稿タイプ名
+                        'posts_per_page' => 3, // 表示する記事数
+                        'orderby' => 'date', // 日付で並び替え
+                        'order' => 'DESC', // 降順
+                        //faq_categoryのonsenを表示
+                        'tax_query' => array(
+                            array(
+                                'taxonomy' => 'faq_category',
+                                'field'    => 'slug',
+                                'terms'    => 'hakkan',
+                            ),
+                        ),
+                    );
+                    ?>
+                    <?php
+                    $faq_query = new WP_Query($args);
+                    if ($faq_query->have_posts()) :
+                        while ($faq_query->have_posts()) : $faq_query->the_post();
+                    ?>
+                            <dl>
+                                <dt><i></i><?php the_title(); ?></dt>
+                                <dd><?php the_content(); ?></dd>
+                            </dl>
+                    <?php
+                        endwhile;
+                        wp_reset_postdata();
+                    else :
+                        echo '<p>まだ記事がありません。</p>';
+                    endif;
+                    ?>
 
                     <div class="com-btn-mobile hidden-sm">
                         <a href="<?php echo home_url(); ?>/faq/">一覧を見る<i></i></a>
@@ -798,7 +810,7 @@ Template Name: enjoy-hakkan
                 </div>
                 <div class="stone-fixed-container-wrap-content">
                     <div class="stone-fixed-container-wrap-content-img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-img-02.jpg" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-pop-11.jpg" alt="">
                         <div class="stone-fixed-container-wrap-content-img-left">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-bg-left.svg" alt="">
                         </div>
@@ -824,7 +836,7 @@ Template Name: enjoy-hakkan
                 </div>
                 <div class="stone-fixed-container-wrap-content">
                     <div class="stone-fixed-container-wrap-content-img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-img-02.jpg" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-pop-11.jpg" alt="">
                         <div class="stone-fixed-container-wrap-content-img-left">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-bg-left.svg" alt="">
                         </div>
@@ -835,8 +847,8 @@ Template Name: enjoy-hakkan
                     <div class="stone-fixed-container-wrap-content-txt">
                         <h3>ブラックゲルマ</h3>
                         <p>
-                            地球上にはたくさんの鉱物が存在しますが、その中で唯一自ら電気を帯びる鉱石として「電気石」と呼ばれています。<br>
-                            「電気石」であるがゆえに永久に放つマイナスイオンは人間の躯を精神的、肉体的にリラックスさせ、リフレッシュ効果、体質改善、免疫力向上、疲労回復などの効果を及ぼすと言われています。
+                            ラジウム等の微量の放射線を放出し、この微量の放射線が刺激となり、発汗作用を促し、自然治癒力を高めます。<br>
+                            また、水の浄化作用や悪臭などの分解、電磁波の抑制など多岐にわたっての効果が期待できます。
                         </p>
                     </div>
                 </div>
@@ -850,7 +862,7 @@ Template Name: enjoy-hakkan
                 </div>
                 <div class="stone-fixed-container-wrap-content">
                     <div class="stone-fixed-container-wrap-content-img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-img-02.jpg" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-pop-11.jpg" alt="">
                         <div class="stone-fixed-container-wrap-content-img-left">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-bg-left.svg" alt="">
                         </div>
@@ -861,8 +873,8 @@ Template Name: enjoy-hakkan
                     <div class="stone-fixed-container-wrap-content-txt">
                         <h3>イエロオニキス</h3>
                         <p>
-                            地球上にはたくさんの鉱物が存在しますが、その中で唯一自ら電気を帯びる鉱石として「電気石」と呼ばれています。<br>
-                            「電気石」であるがゆえに永久に放つマイナスイオンは人間の躯を精神的、肉体的にリラックスさせ、リフレッシュ効果、体質改善、免疫力向上、疲労回復などの効果を及ぼすと言われています。
+                            遠赤外線、マイナスイオンを放出し、環境を浄化する力があります。<br>
+                            環境を浄化する事でストレス緩和にも役立ち、ストレスの多い現代社会において非常に高い効果が期待でき、また不眠、老化防止、解毒作用や血液浄化作用があると言われています。
                         </p>
                     </div>
                 </div>
@@ -876,7 +888,7 @@ Template Name: enjoy-hakkan
                 </div>
                 <div class="stone-fixed-container-wrap-content">
                     <div class="stone-fixed-container-wrap-content-img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-img-02.jpg" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-pop-11.jpg" alt="">
                         <div class="stone-fixed-container-wrap-content-img-left">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-bg-left.svg" alt="">
                         </div>
@@ -887,8 +899,8 @@ Template Name: enjoy-hakkan
                     <div class="stone-fixed-container-wrap-content-txt">
                         <h3>木紋石</h3>
                         <p>
-                            地球上にはたくさんの鉱物が存在しますが、その中で唯一自ら電気を帯びる鉱石として「電気石」と呼ばれています。<br>
-                            「電気石」であるがゆえに永久に放つマイナスイオンは人間の躯を精神的、肉体的にリラックスさせ、リフレッシュ効果、体質改善、免疫力向上、疲労回復などの効果を及ぼすと言われています。
+                            木目のような美しい模様のある貴重な石で、高い遠赤外線効果、マイナスイオンの放出、脱臭・殺菌効果があります。<br>
+                            また、身体の基礎機能を向上させる効果もあり、細胞の活性化、体内時計を正確に戻す作用が期待されます。
                         </p>
                     </div>
                 </div>
@@ -902,7 +914,7 @@ Template Name: enjoy-hakkan
                 </div>
                 <div class="stone-fixed-container-wrap-content">
                     <div class="stone-fixed-container-wrap-content-img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-img-02.jpg" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-pop-11.jpg" alt="">
                         <div class="stone-fixed-container-wrap-content-img-left">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-bg-left.svg" alt="">
                         </div>
@@ -913,8 +925,8 @@ Template Name: enjoy-hakkan
                     <div class="stone-fixed-container-wrap-content-txt">
                         <h3>薬宝緑玉石（甲翠）</h3>
                         <p>
-                            地球上にはたくさんの鉱物が存在しますが、その中で唯一自ら電気を帯びる鉱石として「電気石」と呼ばれています。<br>
-                            「電気石」であるがゆえに永久に放つマイナスイオンは人間の躯を精神的、肉体的にリラックスさせ、リフレッシュ効果、体質改善、免疫力向上、疲労回復などの効果を及ぼすと言われています。
+                            この石は古来より奇跡の健康玉石と呼ばれ、パワーストーンとして最も歴史のある天然石のひとつです。<br>
+                            遠赤外線を放出しミネラル成分を多く含み、代謝機能の促進や体内への酸素補給の増加が期待できます。
                         </p>
                     </div>
                 </div>
@@ -928,7 +940,7 @@ Template Name: enjoy-hakkan
                 </div>
                 <div class="stone-fixed-container-wrap-content">
                     <div class="stone-fixed-container-wrap-content-img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-img-02.jpg" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-pop-11.jpg" alt="">
                         <div class="stone-fixed-container-wrap-content-img-left">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-bg-left.svg" alt="">
                         </div>
@@ -939,8 +951,8 @@ Template Name: enjoy-hakkan
                     <div class="stone-fixed-container-wrap-content-txt">
                         <h3>麦飯石(紅)</h3>
                         <p>
-                            地球上にはたくさんの鉱物が存在しますが、その中で唯一自ら電気を帯びる鉱石として「電気石」と呼ばれています。<br>
-                            「電気石」であるがゆえに永久に放つマイナスイオンは人間の躯を精神的、肉体的にリラックスさせ、リフレッシュ効果、体質改善、免疫力向上、疲労回復などの効果を及ぼすと言われています。
+                            中国 内モンゴル自治区。薬石としては最も有名で、多く使用されている石です。<br>
+                            遠赤外線、マイナスイオンを放出し、ミネラル成分を多く含み消臭・抗菌に優れ、代謝機能を活発にし、解毒作用や血液の浄化作用等、身体の内外から多様な効果をもたらします。
                         </p>
                     </div>
                 </div>
@@ -954,7 +966,7 @@ Template Name: enjoy-hakkan
                 </div>
                 <div class="stone-fixed-container-wrap-content">
                     <div class="stone-fixed-container-wrap-content-img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-img-02.jpg" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-pop-11.jpg" alt="">
                         <div class="stone-fixed-container-wrap-content-img-left">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-bg-left.svg" alt="">
                         </div>
@@ -965,8 +977,8 @@ Template Name: enjoy-hakkan
                     <div class="stone-fixed-container-wrap-content-txt">
                         <h3>麦飯石(白)</h3>
                         <p>
-                            地球上にはたくさんの鉱物が存在しますが、その中で唯一自ら電気を帯びる鉱石として「電気石」と呼ばれています。<br>
-                            「電気石」であるがゆえに永久に放つマイナスイオンは人間の躯を精神的、肉体的にリラックスさせ、リフレッシュ効果、体質改善、免疫力向上、疲労回復などの効果を及ぼすと言われています。
+                            中国 山東省。薬石としては最も有名で、多く使用されている石です。<br>
+                            遠赤外線、マイナスイオンを放出し、ミネラル成分を多く含み消臭・抗菌に優れ、代謝機能を活発にし、解毒作用や血液の浄化作用等、身体の内外から多様な効果をもたらします。
                         </p>
                     </div>
                 </div>
@@ -980,7 +992,7 @@ Template Name: enjoy-hakkan
                 </div>
                 <div class="stone-fixed-container-wrap-content">
                     <div class="stone-fixed-container-wrap-content-img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-img-02.jpg" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-pop-11.jpg" alt="">
                         <div class="stone-fixed-container-wrap-content-img-left">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-bg-left.svg" alt="">
                         </div>
@@ -991,8 +1003,8 @@ Template Name: enjoy-hakkan
                     <div class="stone-fixed-container-wrap-content-txt">
                         <h3>鳳緑石</h3>
                         <p>
-                            地球上にはたくさんの鉱物が存在しますが、その中で唯一自ら電気を帯びる鉱石として「電気石」と呼ばれています。<br>
-                            「電気石」であるがゆえに永久に放つマイナスイオンは人間の躯を精神的、肉体的にリラックスさせ、リフレッシュ効果、体質改善、免疫力向上、疲労回復などの効果を及ぼすと言われています。
+                            この石は古来より健康玉石として幅広く活用され、パワーストーンとして歴史ある天然石のひとつです。<br>
+                            遠赤外線、マイナスイオンを放出し、ミネラル成分を多く含み、新陳代謝を活発にし、酸素補給の増加が見込まれると言われます。
                         </p>
                     </div>
                 </div>

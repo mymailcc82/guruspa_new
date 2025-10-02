@@ -200,7 +200,7 @@ if (isset($_GET['event_tag'])) {
                                                             $cats_class = 'category-green';
                                                         } elseif ($category_slug === 'food' || $category_slug_parent === 'food') {
                                                             $cats_class = 'category-yellow';
-                                                        } elseif ($category_slug === 'relaxation' || $category_slug_parent === 'relaxation') {
+                                                        } elseif ($category_slug === 'relax' || $category_slug_parent === 'relax') {
                                                             $cats_class = 'category-blue';
                                                         }
                                                         ?>

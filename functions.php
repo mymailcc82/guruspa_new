@@ -332,3 +332,325 @@ function create_post_type_goods()
     );
 }
 add_action('init', 'create_post_type_goods');
+
+
+add_action('init', 'recruit_custom_post_type');
+function recruit_custom_post_type()
+{
+    // カスタム投稿タイプ「求人情報」を登録
+    register_post_type('recruit', [
+        'labels' => [
+            'name' => '求人情報',
+            'singular_name' => '求人情報ページ',
+            'add_new' => '新しい求人情報を追加',
+            'add_new_item' => '新しい求人情報を追加',
+            'edit_item' => '求人情報を編集',
+            'new_item' => '新しい求人情報',
+            'view_item' => '求人情報を表示',
+            'search_items' => '求人情報を検索',
+            'not_found' => '求人情報が見つかりません',
+            'not_found_in_trash' => 'ゴミ箱に求人情報が見つかりません',
+            'all_items' => 'すべての求人情報',
+            'archives' => '求人情報のアーカイブ',
+            'insert_into_item' => '求人情報に挿入',
+            'uploaded_to_this_item' => 'この求人情報にアップロード',
+            'filter_items_list' => '求人情報のリストをフィルター',
+            'items_list_navigation' => '求人情報のリストナビゲーション',
+            'items_list' => '求人情報のリスト',
+        ],
+        'public' => true,
+        'has_archive' => true,
+        'menu_position' => 5,
+        'show_in_rest' => true,
+        'supports' => ['title', 'editor', 'thumbnail'],
+        //'taxonomies' => ['recruit_type'],
+    ]);
+
+    // カスタムタクソノミー「カテゴリー」
+    /*
+    register_taxonomy('recruit_type', 'recruit', [
+        'label' => 'カテゴリー',
+        'show_in_rest' => true,
+        'hierarchical' => true,
+        'public' => true,
+        'show_admin_column' => true,
+    ]);
+    */
+
+    // 勤務地タクソノミー
+    register_taxonomy('work_location', 'recruit', [
+        'label' => '勤務地',
+        'show_in_rest' => true,
+        'hierarchical' => true,
+        'public' => true,
+        'show_admin_column' => true,
+    ]);
+
+    // 雇用形態タクソノミー
+    register_taxonomy('employment_status', 'recruit', [
+        'label' => '雇用形態',
+        'show_in_rest' => true,
+        'hierarchical' => true,
+        'public' => true,
+        'show_admin_column' => true,
+    ]);
+
+    // 勤務開始タクソノミー
+    register_taxonomy('start_work', 'recruit', [
+        'label' => '勤務開始',
+        'show_in_rest' => true,
+        'hierarchical' => true,
+        'public' => true,
+        'show_admin_column' => true,
+    ]);
+
+    // 業務内容タクソノミー
+    register_taxonomy('duties', 'recruit', [
+        'label' => '業務内容',
+        'show_in_rest' => true,
+        'hierarchical' => true,
+        'public' => true,
+        'show_admin_column' => true,
+    ]);
+
+    // その他タクソノミー
+    register_taxonomy('others', 'recruit', [
+        'label' => 'その他',
+        'show_in_rest' => true,
+        'hierarchical' => true,
+        'public' => true,
+        'show_admin_column' => true,
+    ]);
+}
+
+
+
+
+
+
+//エントリーの募集職種にカスタム投稿のタイトルを追加
+add_filter('mwform_choices_mw-wp-form-531', function ($choices, $atts) {
+    // フォーム内の特定のname属性を確認
+    if ($atts['name'] === 'occupatation') {
+        // recruit投稿タイプの投稿を取得
+        $posts = get_posts([
+            'post_type' => 'recruit',
+            'posts_per_page' => -1, // すべての投稿を取得
+            'post_status' => 'publish', // 公開済みのみ
+        ]);
+
+        // 投稿タイトルをchoicesに追加
+        $choices = [];
+        foreach ($posts as $post) {
+            $choices[] = $post->post_title;
+        }
+    }
+    return $choices;
+}, 10, 2);
+
+
+function add_yubinbango_class()
+{
+    echo <<<EOC
+<script>
+  jQuery('.mw_wp_form form').addClass('h-adr');
+</script>
+EOC;
+}
+add_action('wp_print_footer_scripts', 'add_yubinbango_class');
+
+
+
+function filter_recruit_posts()
+{
+    $filter_type = $_POST['filter_type'];
+    $post_id = $_POST['post_id'];
+
+    $tax_query = array('relation' => 'OR');
+    $taxonomies = ['work_location', 'employment_status', 'start_work', 'duties', 'others'];
+
+    if ($filter_type) {
+        $terms = get_the_terms($post_id, $filter_type);
+        if ($terms) {
+            $term_slugs = wp_list_pluck($terms, 'slug');
+            $tax_query[] = [
+                'taxonomy' => $filter_type,
+                'field'    => 'slug',
+                'terms'    => $term_slugs,
+            ];
+        }
+    } else {
+        foreach ($taxonomies as $taxonomy) {
+            $terms = get_the_terms($post_id, $taxonomy);
+            if ($terms) {
+                $term_slugs = wp_list_pluck($terms, 'slug');
+                $tax_query[] = [
+                    'taxonomy' => $taxonomy,
+                    'field'    => 'slug',
+                    'terms'    => $term_slugs,
+                ];
+            }
+        }
+    }
+
+    $args = [
+        'post_type'      => 'recruit',
+        'posts_per_page' => 10,
+        'orderby'        => 'date',
+        'order'          => 'DESC',
+        'post__not_in'   => [$post_id],
+        'tax_query'      => $tax_query,
+    ];
+
+    $query = new WP_Query($args);
+
+    if ($query->have_posts()) :
+        while ($query->have_posts()) : $query->the_post();
+?>
+            <div class="recruit_list">
+                <a href="<?php the_permalink(); ?>">
+                    <div class="recruit_category">
+                        <?php
+                        foreach ($taxonomies as $taxonomy) {
+                            $terms = get_the_terms(get_the_ID(), $taxonomy);
+                            if ($terms && !is_wp_error($terms)) :
+                                foreach ($terms as $term) :
+                        ?>
+                                    <span class="recruit_category_wrap"><?php echo esc_html($term->name); ?></span>
+                        <?php
+                                endforeach;
+                            endif;
+                        }
+                        ?>
+                    </div>
+                    <h3><?php the_title(); ?></h3>
+                    <?php /*
+                    <time><?php echo get_the_date('Y.m.d'); ?></time>
+					*/ ?>
+                </a>
+            </div>
+<?php
+        endwhile;
+        wp_reset_postdata();
+    else :
+        echo '<p>現在、求人情報はありません。</p>';
+    endif;
+
+    wp_die();
+}
+
+add_action('wp_ajax_filter_recruit_posts', 'filter_recruit_posts');
+add_action('wp_ajax_nopriv_filter_recruit_posts', 'filter_recruit_posts');
+
+
+function add_front_page_admin_menu()
+{
+    $front_page_id = get_option('page_on_front'); // フロントページのIDを取得
+    if ($front_page_id) {
+        add_menu_page(
+            'フロントページ編集', // メニュー名
+            'フロントページ', // サイドメニューに表示される名前
+            'edit_pages', // 権限（編集者以上）
+            'post.php?post=' . $front_page_id . '&action=edit', // リンク先
+            '',
+            'dashicons-admin-page', // アイコン（お好みで変更）
+            3 // メニューの表示位置（3: 「投稿」の下あたり）
+        );
+    }
+}
+add_action('admin_menu', 'add_front_page_admin_menu');
+
+/*
+add_filter('mwform_redirect_url_mw-wp-form-52', function ($url, $data) {
+    $params = ['occupation', 'type', 'location', 'employment', 'start_work', 'duties', 'others'];
+    $query_args = [];
+
+    foreach ($params as $param) {
+        if (!empty($_GET[$param])) {
+            // 配列の場合はカンマ区切りの文字列に変換
+            if (is_array($_GET[$param])) {
+                $param_value = implode(',', array_map('sanitize_text_field', $_GET[$param]));
+            } else {
+                $param_value = sanitize_text_field($_GET[$param]);
+            }
+            // パラメータを追加
+            $query_args[$param] = rawurlencode($param_value);
+        }
+    }
+
+    // すべてのパラメータを一括で追加
+    if (!empty($query_args)) {
+        $url = add_query_arg($query_args, $url);
+    }
+
+    return $url;
+}, 10, 2);
+
+*/
+/*
+function add_recruit_page_url_to_mail($Mail)
+{
+    if (!isset($Mail->body)) {
+        $Mail->body = ''; // デフォルト値を設定
+    }
+
+    // MW WP Form の `$_POST` データを取得
+    $form_data = isset($_POST) ? $_POST : [];
+    
+    if (!empty($form_data['occupatation'])) {
+        $occupation_title = sanitize_text_field($form_data['occupatation']);
+
+        // 投稿を取得
+        $recruit_post = get_page_by_title($occupation_title, OBJECT, 'recruit');
+
+        if ($recruit_post && isset($recruit_post->ID)) {
+            $recruit_url = get_permalink($recruit_post->ID);
+            if ($recruit_url) {
+                $Mail->body .= "\n\n【関連するページ】\n" . $recruit_url;
+            }
+        }
+    }
+    $Mail->subject = "【応募】test";
+
+    return $Mail;
+}
+add_filter('mwform_admin_mail_mw-wp-form-52', 'add_recruit_page_url_to_mail', 10, 1);
+*/
+
+function my_mail($Mail_raw, $values, $Data)
+{
+    // to, cc, bcc では {キー} は使用できません。
+    // $Data->get( 'hoge' ) で送信されたデータが取得できます。
+    //$Mail_raw->subject = "受け付けました。"; // 件名を変更
+    if (!empty($Data->get('occupatation'))) {
+        $occupation_title = sanitize_text_field($Data->get('occupatation'));
+        $recruit_post = get_page_by_title($occupation_title, OBJECT, 'recruit');
+        if ($recruit_post && isset($recruit_post->ID)) {
+            $recruit_url = get_permalink($recruit_post->ID);
+            if ($recruit_url) {
+                $Mail_raw->body .= "\n\n【関連するページ】\n" . $recruit_url;
+            }
+        }
+    }
+    return $Mail_raw;
+}
+add_filter('mwform_admin_mail_mw-wp-form-531', 'my_mail', 10, 3);
+
+
+add_filter('mwform_redirect_url_mw-wp-form-531', function ($url, $data) {
+    $params_to_copy = ['occupation', 'location', 'employment', 'start_work', 'duties', 'others'];
+
+    foreach ($params_to_copy as $param) {
+        if (isset($_GET[$param])) {
+            $value = is_array($_GET[$param])
+                ? implode(',', array_map('sanitize_text_field', $_GET[$param]))
+                : sanitize_text_field($_GET[$param]);
+
+            $encoded_value = rawurlencode($value);
+
+            $url = add_query_arg($param, $encoded_value, $url);
+        }
+    }
+
+    return $url; // ← htmlspecialchars は不要！
+}, 10, 2);

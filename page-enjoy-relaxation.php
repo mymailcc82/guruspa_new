@@ -67,20 +67,20 @@ Template Name: enjoy-relaxation
     </section>
     <div class="page-toggle">
         <div class="sec01-col">
-            <ul class="sec01-col-select tab">
+            <ul class="sec01-col-select tab mb-0">
                 <li class="active"><a href="javascript:void(0)" data-id="#area01">リラクゼーション</a></li>
                 <li><a href="javascript:void(0)" data-id="#area02">アカスリ</a></li>
             </ul>
 
             <div class="area01 area is-active" id="area01">
+                <div class="sec02-icon-01">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec02-icon-01.png" alt="">
+                </div>
                 <div class="page-deco-bg">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-blue-top_v2.png" alt="">
                 </div>
                 <div class="page-deco-container page-deco-container--blue">
                     <div class="relative">
-                        <div class="sec02-icon-01">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec02-icon-01.png" alt="">
-                        </div>
                         <div class="sec02-icon-02">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec02-icon-02.png" alt="">
                         </div>
@@ -95,19 +95,16 @@ Template Name: enjoy-relaxation
                                 <div class="page-btn">
                                     <ul>
                                         <li>
-                                            <a href="#sec03">味へのこだわり<i></i></a>
+                                            <a href="#sec03">イベント情報<i></i></a>
                                         </li>
                                         <li>
-                                            <a href="#sec04">さまざまな席タイプ<i></i></a>
+                                            <a href="#sec04">特徴・魅力<i></i></a>
                                         </li>
                                         <li>
                                             <a href="#sec05">メニュー<i></i></a>
                                         </li>
                                         <li>
-                                            <a href="#sec06">ご利用方法<i></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#sec07">店舗情報<i></i></a>
+                                            <a href="#sec06">予約方法<i></i></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -116,7 +113,7 @@ Template Name: enjoy-relaxation
                         <section class="sec03" id="sec03">
                             <div class="sec03-event">
                                 <div class="content-width-sm">
-                                    <div class="page-title-center--has-icon">
+                                    <div class="page-title-center--has-icon page-title-center--has-icon--font-30">
                                         <h2><i></i>イベント情報</h2>
                                     </div>
                                 </div>
@@ -154,6 +151,19 @@ Template Name: enjoy-relaxation
                                                                 <?php if ($is_hot) : ?>
                                                                     <span class="hot"><?php echo $is_hot; ?></span>
                                                                 <?php endif; ?>
+                                                                <?php
+                                                                // カテゴリーに応じたデフォルト画像を設定
+                                                                $category_slug = $event_category[0]->slug;
+                                                                $category_slug_parent = '';
+                                                                //$event_category[0]の親カテゴリーを取得
+                                                                if ($event_category[0]->parent) {
+                                                                    $parent_term = get_term($event_category[0]->parent, 'event_category');
+                                                                    if ($parent_term && !is_wp_error($parent_term)) {
+                                                                        $category_slug_parent_id = $parent_term->term_id;
+                                                                        $category_slug_parent = $parent_term->slug;
+                                                                    }
+                                                                }
+                                                                ?>
                                                                 <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
                                                                 <div class="img img-info">
                                                                     <?php if (has_post_thumbnail()) : ?>
@@ -161,18 +171,18 @@ Template Name: enjoy-relaxation
                                                                     <?php else : ?>
                                                                         <?php if ($event_category && !is_wp_error($event_category)) : ?>
                                                                             <?php
-                                                                            // カテゴリーに応じたデフォルト画像を設定
-                                                                            $category_slug = $event_category[0]->slug;
+
                                                                             $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-default.jpg'; // デフォルト画像
 
-                                                                            if ($category_slug === 'information') {
+                                                                            if ($category_slug === 'information' || $category_slug_parent === 'information') {
                                                                                 $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-red.jpg';
-                                                                            } elseif ($category_slug === 'event') {
+                                                                            } elseif ($category_slug === 'event' || $category_slug_parent === 'event') {
                                                                                 $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-green.jpg';
-                                                                            } elseif ($category_slug === 'food') {
+                                                                            } elseif ($category_slug === 'food' || $category_slug_parent === 'food') {
                                                                                 $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-yellow.jpg';
-                                                                            } elseif ($category_slug === 'relax') {
+                                                                            } elseif ($category_slug === 'relax' || $category_slug_parent === 'relax') {
                                                                                 $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-blue.jpg';
+                                                                            } elseif ($category_slug === 'tokiwa') {
                                                                             }
                                                                             ?>
                                                                             <img src="<?php echo esc_url($default_image_url); ?>" alt="<?php the_title(); ?>">
@@ -184,18 +194,18 @@ Template Name: enjoy-relaxation
                                                                 <div class="text">
                                                                     <div class="text-info">
                                                                         <?php
-                                                                        if ($category_slug === 'information') {
+                                                                        if ($category_slug === 'information' || $category_slug_parent === 'information') {
                                                                             $cats_class = 'category-red';
-                                                                        } elseif ($category_slug === 'event') {
+                                                                        } elseif ($category_slug === 'event' || $category_slug_parent === 'event') {
                                                                             $cats_class = 'category-green';
-                                                                        } elseif ($category_slug === 'food') {
+                                                                        } elseif ($category_slug === 'food' || $category_slug_parent === 'food') {
                                                                             $cats_class = 'category-yellow';
-                                                                        } elseif ($category_slug === 'relax') {
+                                                                        } elseif ($category_slug === 'relax' || $category_slug_parent === 'relax') {
                                                                             $cats_class = 'category-blue';
                                                                         }
                                                                         ?>
                                                                         <div class="text-info-cat">
-                                                                            <span class="category <?php echo esc_attr($cats_class); ?>"><?php echo esc_html($event_category[0]->name); ?></span>
+                                                                            <span class="category <?php echo esc_attr($cats_class); ?> cat-<?php echo esc_attr($category_slug); ?>"><?php echo esc_html($event_category[0]->name); ?></span>
                                                                         </div>
                                                                         <div class="text-info-term">
                                                                             <span class="term"><?php echo $event_start_date; ?></span>
@@ -223,9 +233,10 @@ Template Name: enjoy-relaxation
                         </section>
                         <section class="sec04" id="sec04">
                             <div class="content-width-sm">
-                                <div class="page-title-center--has-icon">
+                                <div class="page-title-center--has-icon page-title-center--has-icon--font-30">
                                     <h2><i></i>特徴・魅力</h2>
                                 </div>
+
                                 <div class="sec04-wrap">
                                     <div class="sec04-wrap-col">
                                         <div class="sec04-wrap-col-img">
@@ -261,7 +272,7 @@ Template Name: enjoy-relaxation
 
                     <section class="sec05" id="sec05">
                         <div class="content-width-sm">
-                            <div class="page-title-center--has-icon">
+                            <div class="page-title-center--has-icon page-title-center--has-icon--font-30 mb-20">
                                 <h2><i></i>メニュー</h2>
                             </div>
                             <p class="sec05-desc">
@@ -351,7 +362,7 @@ Template Name: enjoy-relaxation
                     </section>
                     <section class="sec06" id="sec06">
                         <div class="content-width-sm">
-                            <div class="page-title-center--has-icon">
+                            <div class="page-title-center--has-icon page-title-center--has-icon--font-30">
                                 <h2><i></i>予約方法</h2>
                             </div>
                             <div class="sec06-wrap">
@@ -391,11 +402,11 @@ Template Name: enjoy-relaxation
                 <div class="page-deco-bg">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-blue-top_v2.png" alt="">
                 </div>
+                <div class="sec02-icon-01">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec02-icon-01.png" alt="">
+                </div>
                 <div class="page-deco-container page-deco-container--blue">
                     <div class="relative">
-                        <div class="sec02-icon-01">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec02-icon-01.png" alt="">
-                        </div>
                         <div class="sec02-icon-02">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec02-icon-02.png" alt="">
                         </div>
@@ -429,7 +440,7 @@ Template Name: enjoy-relaxation
                         <section class="sec03" id="sec08">
                             <div class="sec03-event">
                                 <div class="content-width-sm">
-                                    <div class="page-title-center--has-icon">
+                                    <div class="page-title-center--has-icon page-title-center--has-icon--font-30">
                                         <h2><i></i>イベント情報</h2>
                                     </div>
                                 </div>
@@ -468,6 +479,19 @@ Template Name: enjoy-relaxation
                                                                 <?php if ($is_hot) : ?>
                                                                     <span class="hot"><?php echo $is_hot; ?></span>
                                                                 <?php endif; ?>
+                                                                <?php
+                                                                // カテゴリーに応じたデフォルト画像を設定
+                                                                $category_slug = $event_category[0]->slug;
+                                                                $category_slug_parent = '';
+                                                                //$event_category[0]の親カテゴリーを取得
+                                                                if ($event_category[0]->parent) {
+                                                                    $parent_term = get_term($event_category[0]->parent, 'event_category');
+                                                                    if ($parent_term && !is_wp_error($parent_term)) {
+                                                                        $category_slug_parent_id = $parent_term->term_id;
+                                                                        $category_slug_parent = $parent_term->slug;
+                                                                    }
+                                                                }
+                                                                ?>
                                                                 <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
                                                                 <div class="img img-info">
                                                                     <?php if (has_post_thumbnail()) : ?>
@@ -475,18 +499,16 @@ Template Name: enjoy-relaxation
                                                                     <?php else : ?>
                                                                         <?php if ($event_category && !is_wp_error($event_category)) : ?>
                                                                             <?php
-                                                                            // カテゴリーに応じたデフォルト画像を設定
-                                                                            $category_slug = $event_category[0]->slug;
                                                                             $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-default.jpg'; // デフォルト画像
-
-                                                                            if ($category_slug === 'information') {
+                                                                            if ($category_slug === 'information' || $category_slug_parent === 'information') {
                                                                                 $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-red.jpg';
-                                                                            } elseif ($category_slug === 'event') {
+                                                                            } elseif ($category_slug === 'event' || $category_slug_parent === 'event') {
                                                                                 $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-green.jpg';
-                                                                            } elseif ($category_slug === 'food') {
+                                                                            } elseif ($category_slug === 'food' || $category_slug_parent === 'food') {
                                                                                 $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-yellow.jpg';
-                                                                            } elseif ($category_slug === 'relax') {
+                                                                            } elseif ($category_slug === 'relax' || $category_slug_parent === 'relax') {
                                                                                 $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-blue.jpg';
+                                                                            } elseif ($category_slug === 'tokiwa') {
                                                                             }
                                                                             ?>
                                                                             <img src="<?php echo esc_url($default_image_url); ?>" alt="<?php the_title(); ?>">
@@ -498,13 +520,13 @@ Template Name: enjoy-relaxation
                                                                 <div class="text">
                                                                     <div class="text-info">
                                                                         <?php
-                                                                        if ($category_slug === 'information') {
+                                                                        if ($category_slug === 'information' || $category_slug_parent === 'information') {
                                                                             $cats_class = 'category-red';
-                                                                        } elseif ($category_slug === 'event') {
+                                                                        } elseif ($category_slug === 'event' || $category_slug_parent === 'event') {
                                                                             $cats_class = 'category-green';
-                                                                        } elseif ($category_slug === 'food') {
+                                                                        } elseif ($category_slug === 'food' || $category_slug_parent === 'food') {
                                                                             $cats_class = 'category-yellow';
-                                                                        } elseif ($category_slug === 'relax') {
+                                                                        } elseif ($category_slug === 'relaxation' || $category_slug_parent === 'relaxation') {
                                                                             $cats_class = 'category-blue';
                                                                         }
                                                                         ?>
@@ -537,7 +559,7 @@ Template Name: enjoy-relaxation
                         </section>
                         <section class="sec04" id="sec09">
                             <div class="content-width-sm">
-                                <div class="page-title-center--has-icon">
+                                <div class="page-title-center--has-icon page-title-center--has-icon--font-30">
                                     <h2><i></i>特徴・魅力</h2>
                                 </div>
                                 <div class="sec04-wrap">
@@ -545,25 +567,25 @@ Template Name: enjoy-relaxation
                                         <div class="sec04-wrap-col-img">
                                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec09-img-01.jpg" alt="">
                                         </div>
-                                        <h3>経験豊富な施術者が在籍</h3>
+                                        <h3>本場仕込みのアカスリ技術</h3>
                                         <p>
-                                            確かな技術と知識を持つスタッフが、お客様の身体に合わせた最適なケアを行います。
+                                            技術を磨いた専門施術者による、本格的なケア。
                                         </p>
                                     </div>
                                     <div class="sec04-wrap-col">
                                         <div class="sec04-wrap-col-img">
                                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec09-img-02.jpg" alt="">
                                         </div>
-                                        <h3>豊富な施術メニュー</h3>
+                                        <h3>肌質・目的に合わせた<br>メニュー構成</h3>
                                         <p>
-                                            もみほぐし、アロマトリートメント、タイ式、フェイシャルなど多彩なコースをご用意。
+                                            角質除去に加え、オイルマッサージやフェイシャル付きのセットもご用意。
                                         </p>
                                     </div>
                                     <div class="sec04-wrap-col">
                                         <div class="sec04-wrap-col-img">
                                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec09-img-03.jpg" alt="">
                                         </div>
-                                        <h3>男女ともに利用可能</h3>
+                                        <h3>男女利用可能（専用スペース完備）</h3>
                                         <p>
                                             性別問わずリラックスできる、プライバシーに配慮した空間です。
                                         </p>
@@ -574,7 +596,7 @@ Template Name: enjoy-relaxation
                     </div>
                     <section class="sec05" id="sec10">
                         <div class="content-width-sm">
-                            <div class="page-title-center--has-icon">
+                            <div class="page-title-center--has-icon page-title-center--has-icon--font-30">
                                 <h2><i></i>メニュー</h2>
                             </div>
                             <p class="sec05-desc">
@@ -611,7 +633,7 @@ Template Name: enjoy-relaxation
                     </section>
                     <section class="sec06" id="sec11">
                         <div class="content-width-sm">
-                            <div class="page-title-center--has-icon">
+                            <div class="page-title-center--has-icon page-title-center--has-icon--font-30">
                                 <h2><i></i>予約方法</h2>
                             </div>
                             <div class="sec06-wrap">
@@ -660,26 +682,38 @@ Template Name: enjoy-relaxation
                     </div>
                 </div>
                 <div class="sec07-wrap-faq accordion">
-                    <dl>
-                        <dt><i></i>岩盤浴ウェアやタオルは自分で持っていく必要がありますか？</dt>
-                        <dd></dd>
-                    </dl>
-                    <dl>
-                        <dt><i></i>天然温泉は源泉かけ流しですか？</dt>
-                        <dd></dd>
-                    </dl>
-                    <dl>
-                        <dt><i></i>混雑する時間帯はいつですか？</dt>
-                        <dd></dd>
-                    </dl>
-                    <dl>
-                        <dt><i></i>発汗エリアは誰でも利用できますか？</dt>
-                        <dd></dd>
-                    </dl>
-                    <dl>
-                        <dt><i></i>駐車場はありますか？</dt>
-                        <dd></dd>
-                    </dl>
+                    <?php
+                    $args = array(
+                        'post_type' => 'faq', // カスタム投稿タイプ名
+                        'posts_per_page' => 3, // 表示する記事数
+                        'orderby' => 'date', // 日付で並び替え
+                        'order' => 'DESC', // 降順
+                        //faq_categoryのonsenを表示
+                        'tax_query' => array(
+                            array(
+                                'taxonomy' => 'faq_category',
+                                'field'    => 'slug',
+                                'terms'    => 'relax',
+                            ),
+                        ),
+                    );
+                    ?>
+                    <?php
+                    $faq_query = new WP_Query($args);
+                    if ($faq_query->have_posts()) :
+                        while ($faq_query->have_posts()) : $faq_query->the_post();
+                    ?>
+                            <dl>
+                                <dt><i></i><?php the_title(); ?></dt>
+                                <dd><?php the_content(); ?></dd>
+                            </dl>
+                    <?php
+                        endwhile;
+                        wp_reset_postdata();
+                    else :
+                        echo '<p>まだ記事がありません。</p>';
+                    endif;
+                    ?>
 
                     <div class="com-btn-mobile hidden-sm">
                         <a href="<?php echo home_url(); ?>/faq/">一覧を見る<i></i></a>

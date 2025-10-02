@@ -27,6 +27,11 @@
   max-width: 1155px;
   margin: 0 auto;
 }
+.content-width-medium {
+  width: 85%;
+  max-width: 904px;
+  margin: 0 auto;
+}
 
 .content-width {
   width: 85%;
@@ -54,13 +59,17 @@ img.lazyload {
 img.lazyloaded {
   opacity: 1 !important;
 }
-
+.w-full {
+  width: 100% !important;
+}
 .hidden-middle {
   @include media(middle) {
     display: none !important;
   }
 }
-
+.text-center {
+  text-align: center !important;
+}
 .text-sm {
   font-size: 14px !important;
 }
@@ -77,8 +86,8 @@ img.lazyloaded {
   }
 }
 
-.hidden-middle-small{
-  @include media(middle-small){
+.hidden-middle-small {
+  @include media(middle-small) {
     display: none !important;
   }
 }
@@ -96,12 +105,40 @@ img.lazyloaded {
 .mb-10 {
   margin-bottom: 10px !important;
 }
+.mb-20 {
+  margin-bottom: 20px !important;
+}
+.mb-30 {
+  margin-bottom: 30px !important;
+  @include media(middle) {
+    margin-bottom: 20px !important;
+  }
+}
 
 .text-base {
   font-size: 16px !important;
   @include media(middle) {
     font-size: 14px !important;
   }
+}
+.hidden {
+  display: none !important;
+}
+
+.flex {
+  display: flex;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
 }
 
 .center {
@@ -131,7 +168,7 @@ img.lazyloaded {
     border: 1px solid #3c3636;
 
     &:hover {
-      background-color: #2e549c !important;
+      //background-color: #2e549c !important;
 
       i {
         transform: translateX(10px);
@@ -194,33 +231,32 @@ img.lazyloaded {
     letter-spacing: 0.1em;
     font-weight: bold;
     border: 1px solid #3c3636;
+    @include media(middle) {
+      letter-spacing: 0.05em;
+      font-size: 15px;
+    }
 
     &:hover {
-      background-color: #2e549c !important;
-
+      //background-color: #2e549c !important;
       i {
         transform: translateX(10px);
+        @include media(middle) {
+          transform: translateX(5px);
+        }
       }
-
       .icon-btn--1 {
         transform: translate(10px, -5px) rotate(10deg);
-
         @include media(middle) {
-          transform: translate(10px, -10px) rotate(10deg);
+          transform: translate(10px, -15px) rotate(10deg);
         }
       }
 
       .icon-btn--2 {
         transform: translate(10px, -15px);
-
         @include media(middle) {
-          transform: translate(10px, -20px);
+          transform: translate(10px, -15px);
         }
       }
-    }
-
-    @include media(middle) {
-      font-size: 16px;
     }
 
     i {
@@ -233,6 +269,11 @@ img.lazyloaded {
       transition: transform 0.4s ease;
       right: 20px;
       position: absolute;
+      @include media(middle) {
+        width: 18px;
+        height: 18px;
+        right: 15px;
+      }
 
       &.icon-green {
         background-image: url(("./assets/img/icon/icon-btn-green-2.png")) !important;
@@ -241,6 +282,125 @@ img.lazyloaded {
         background-image: url(("./assets/img/icon/icon-arrow-blue-right.svg")) !important;
       }
     }
+  }
+}
+.com-btn-recruit {
+  a {
+    //background-image: url("./assets/img/icon/icon-arrow-bottom-brown.svg");
+    background-size: 15px;
+    background-repeat: no-repeat;
+    background-position: right 0px center;
+    width: 100%;
+    display: block;
+    padding: 10px 0px 10px 0px;
+    color: #004e64;
+    border: none;
+    max-width: 292px;
+    border-radius: 0px;
+    background-color: inherit;
+    font-family: $font-gothic;
+    letter-spacing: 0.08em;
+    font-size: 17px;
+    font-weight: 600;
+    transition: all 0.3s;
+    text-align: left;
+    position: relative;
+    font-family: $font-en;
+    @include media(middle) {
+      font-size: 18px;
+      max-width: 400px;
+    }
+
+    &:before {
+      width: 100%;
+      height: 2px;
+      background-color: #004e64;
+      position: absolute;
+      bottom: 0px;
+      left: 0;
+      content: '';
+      transition: width 0.3s, left 0.3s;
+
+      //animation-play-state: paused; /* 初期状態では停止 */
+    }
+    &:after {
+      width: 15px;
+      height: 15px;
+      background-image: url('./assets/img/icon_recruit/icon-arrow-bottom-brown.svg');
+      background-size: 15px;
+      background-repeat: no-repeat;
+      background-position: right 0px center;
+      position: absolute;
+      right: 0px;
+      bottom: 50%;
+      transform: translateY(50%);
+      content: '';
+      transition: all 0.3s ease;
+    }
+    &:hover {
+      &:after {
+        right: -5px !important;
+      }
+      &:before {
+        animation: border-animation 4s infinite ease-in-out;
+        width: 0;
+      }
+
+      @keyframes border-animation {
+        0% {
+          width: 100%;
+          left: 0;
+        }
+        10% {
+          width: 0;
+          left: 100%;
+        }
+        90% {
+          width: 0;
+          left: 100%; /* 完全に消える状態をキープ */
+        }
+        91% {
+          left: 0; /* 消えた後、位置をリセット */
+        }
+        100% {
+          width: 100%;
+          left: 0;
+        }
+      }
+    }
+  }
+}
+.back_btn {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: #a0a0a0;
+  padding: 0 25px 5px 0;
+  border-bottom: solid 2px #a0a0a0;
+  position: relative;
+  margin-top: 60px;
+  @include media(mobile) {
+    width: 100%;
+    max-width: 400px;
+    display: block;
+    margin: 40px auto 20px;
+    font-size: 14px;
+    padding: 15px 0px;
+  }
+
+  &::before {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 14px;
+    height: 11px;
+    background-image: url('./assets/img/icon_recruit/icon_arrow_gray.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    right: 0;
+    top: calc(50%);
+    transform: translateY(-50%);
   }
 }
 .com-btn {
@@ -408,6 +568,96 @@ img.lazyloaded {
 
     .title-item-sprout {
       transform: translateY(0px) !important;
+    }
+  }
+  &.com-title--sitemap {
+    .title-item-sprout {
+      right: 1px !important;
+      width: 30px !important;
+    }
+  }
+  &.com-title--food {
+    p {
+      line-height: 1 !important;
+    }
+    h2 {
+      .title {
+        font-size: 50px !important;
+      }
+    }
+    .title-item-sprout {
+      width: 21px !important;
+      height: auto;
+      position: absolute;
+      right: 0px !important;
+      top: -47px !important;
+
+      @include media(middle) {
+        width: 18px;
+        height: 17px;
+        top: -20px;
+        right: -5px;
+        top: -40px;
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+  &.com-title--goods {
+    p {
+      line-height: 1 !important;
+    }
+    h2 {
+      .title {
+        font-size: 50px !important;
+      }
+    }
+    .title-item-sprout {
+      width: 21px !important;
+      height: auto;
+      position: absolute;
+      right: 95px !important;
+      top: 13px !important;
+
+      @include media(middle) {
+        width: 18px;
+        height: 17px;
+        top: -20px;
+        right: -5px;
+        top: -40px;
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+  &.com-title--page {
+    p {
+      line-height: 1 !important;
+    }
+    h2 {
+      .title {
+        font-size: 50px !important;
+      }
+    }
+    .title-item-sprout {
+      width: 21px !important;
+      height: auto;
+      position: absolute;
+      right: 9px !important;
+      top: -47px !important;
+
+      @include media(middle) {
+        width: 18px;
+        height: 17px;
+        top: -20px;
+        right: -5px;
+        top: -40px;
+      }
+      img {
+        width: 100%;
+      }
     }
   }
   p {
@@ -708,7 +958,11 @@ img.lazyloaded {
     }
   }
 }
-
+.com-btn-border--left {
+  text-align: left !important;
+  a {
+  }
+}
 .com-btn-border-black {
   text-align: center;
   a {
@@ -769,6 +1023,12 @@ img.lazyloaded {
     padding: 0px 5px 0px 0px;
     padding-bottom: 5px;
     font-weight: 500;
+    cursor: pointer;
+    &:hover {
+      i {
+        transform: translateX(-5px);
+      }
+    }
     i {
       width: 22px;
       height: 22px;
