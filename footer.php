@@ -10,6 +10,7 @@
             <a class="top-fixed-3" href="<?php echo home_url(); ?>/price/"><i></i>料金・<br>ご利用案内</a>
         </div>
     </div>
+
     <div class="footer-fixed footer-fixed-pc">
         <a href="#">
             <span class="footer-fixed-main"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/footer-fixed.png" alt=""></span>
@@ -254,6 +255,8 @@
 </script>
 
 
+
+<?php /*
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         const targets = document.querySelectorAll('.com-title .title');
@@ -282,6 +285,47 @@
         checkInView(); // 初回実行
     });
 </script>
+*/ ?>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const titleBlocks = document.querySelectorAll(".com-title");
+
+        titleBlocks.forEach((block) => {
+            // sprout は除外したいので、.title から .title-item-sprout を外す
+            const titles = block.querySelectorAll(".title:not(.title-item-sprout)");
+            const sprout = block.querySelector(".title-item-sprout");
+
+            const io = new IntersectionObserver(
+                (entries, obs) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            // 文字を順番に in-view
+                            titles.forEach((t, i) => {
+                                setTimeout(() => t.classList.add("in-view"), i * 120);
+                            });
+
+                            // sprout は最後に追加 delay をつけて in-view
+                            if (sprout) {
+                                const delay = titles.length * 120 + 400; // 文字が終わったあと +0.4s
+                                setTimeout(() => {
+                                    sprout.classList.add("in-view");
+                                }, delay);
+                            }
+
+                            obs.unobserve(entry.target);
+                        }
+                    });
+                }, {
+                    threshold: 0.3
+                }
+            );
+
+            io.observe(block);
+        });
+    });
+</script>
+
 
 <script>
     //600以上の時はloopしない
@@ -294,7 +338,7 @@
 
     const swiper = new Swiper('.swiper-event', {
         slidesPerView: 'auto', // 幅固定 or auto
-        spaceBetween: 24, // スライド間の余白
+        spaceBetween: 15, // スライド間の余白
         centeredSlides: centeredSlides_flg, // 常に中央スライドをセンターに
         loop: loop_flg, // 無限ループ
 
@@ -329,7 +373,7 @@
 
     const swiper_2 = new Swiper('.swiper-event_2', {
         slidesPerView: 'auto', // 幅固定 or auto
-        spaceBetween: 24, // スライド間の余白
+        spaceBetween: 15, // スライド間の余白
         centeredSlides: centeredSlides_flg, // 常に中央スライドをセンターに
         loop: loop_flg, // 無限ループ
         autoplay: {
@@ -362,7 +406,7 @@
 
     const swiper_3 = new Swiper('.swiper-event_3', {
         slidesPerView: 'auto', // 幅固定 or auto
-        spaceBetween: 24, // スライド間の余白
+        spaceBetween: 15, // スライド間の余白
         centeredSlides: centeredSlides_flg, // 常に中央スライドをセンターに
         loop: loop_flg, // 無限ループ
         autoplay: {
@@ -405,7 +449,10 @@
     });
 </script>
 
+
+
 <script>
+    /*
     gsap.registerPlugin(ScrollTrigger);
 
     // sec03-col-item-child-1
@@ -459,7 +506,64 @@
         delay: 2.2,
         ease: "power2.out"
     });
+    */
 </script>
+<script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    // child-1
+    gsap.to(".sec03-col-item-child-1-wrap", {
+        y: "0%",
+        duration: 0.8,
+        delay: 0.2,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: ".sec03-col-item",
+            start: "top 80%",
+            toggleActions: "play none none none"
+        }
+    });
+
+    // child-2
+    gsap.to(".sec03-col-item-child-2-wrap", {
+        y: "0%",
+        duration: 0.8,
+        delay: 0.8,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: ".sec03-col-item",
+            start: "top 80%",
+            toggleActions: "play none none none"
+        }
+    });
+
+    // child-3
+    gsap.to(".sec03-col-item-child-3-wrap", {
+        y: "0%",
+        duration: 0.8,
+        delay: 1.2,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: ".sec03-col-item",
+            start: "top 80%",
+            toggleActions: "play none none none"
+        }
+    });
+
+    // child-4
+    gsap.to(".sec03-col-item-child-4-wrap", {
+        y: "0%",
+        duration: 0.8,
+        delay: 2.2,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: ".sec03-col-item",
+            start: "top 80%",
+            toggleActions: "play none none none"
+        }
+    });
+</script>
+
 
 
 <script>
@@ -487,29 +591,6 @@
         });
     </script>
 <?php endif; ?>
-
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const footer = document.querySelector('footer'); // ページ最下部のフッターを指定
-        const fixed = document.querySelector('.footer-fixed.footer-fixed-pc');
-
-        if (footer && fixed) {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        fixed.classList.add('show'); // 表示用クラスを付与
-                    } else {
-                        fixed.classList.remove('show');
-                    }
-                });
-            }, {
-                threshold: 0 // フッターが1pxでも見えたら発火
-            });
-
-            observer.observe(footer);
-        }
-    });
-</script>
 
 
 

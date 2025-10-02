@@ -56,18 +56,21 @@ $(document).ready(function () {
   );
 });
 
-$('.header-btn').on('click', function () {
-  $('.header-btn').toggleClass('header-btn-active');
-  $('.header-drawer').toggleClass('header-drawer-active');
-  $('.body').toggleClass('body-drawer');
-});
+
 
 //header-drawerのaタグがクリックされたら、.header-drawerからactiveを削除
-$('.header-drawer a').on('click', function () {
-  $('.header-btn').removeClass('header-btn-active');
-  $('.header-drawer').removeClass('header-drawer-active');
-  $('.body').removeClass('body-drawer');
+$('.header-btn').on('click', function () {
+  $(this).toggleClass('header-btn-active');
+  $('.new-drawer').toggleClass('header-drawer-active');
+  $('body').toggleClass('body-drawer');
 });
+
+$('.header-btn').on('click', function () {
+  $(this).toggleClass('is-open');                // ← header-btn-active ではなく is-open
+  $('.header-drawer').toggleClass('drawer-open'); // ← header-drawer-active ではなく drawer-open
+  $('body').toggleClass('body-drawer-open');      // ← body-drawer ではなく body-drawer-open
+});
+
 
 $('.footer-link-btn').on('click', function () {
   $(this).toggleClass('footer-link-btn-active');

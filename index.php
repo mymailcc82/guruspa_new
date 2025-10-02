@@ -185,7 +185,11 @@
                         <div class="wave_nami_v3">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-wave_v3.png" alt="">
                         </div>
-                        <img class="top-visual-mv-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-main.jpg" alt="">
+                        <picture class="">
+                            <source media="(min-width:601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-main_v2.jpg">
+                            <source media="(max-width:600px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-main_sp.jpg">
+                            <img class="top-visual-mv-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-main_v2.jpg" alt="GURUSPA">
+                        </picture>
                     </div>
 
                     <div class="top-visual-title">
@@ -624,9 +628,9 @@
 
         <section class="sec02">
             <div class="sec02-bg-top">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec02-bg-top_v2.png" alt="">
-                <span class="bg-item-06"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/bg-item-06.png" alt=""></span>
-                <span class="bg-item-05"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/bg-item-05.png" alt=""></span>
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec02-bg-top_v3.png" alt="">
+                <span class="bg-item-06"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/bg-item-06_v2.png" alt=""></span>
+                <span class="bg-item-05"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/bg-item-05_v2.png" alt=""></span>
             </div>
             <div class="sec02-bg">
                 <div class="sec02-wrap">
@@ -691,12 +695,15 @@
                                 <h3>MEDIA<a href="<?php echo home_url(); ?>/category/media/">一覧を見る<i></i></a></h3>
                                 <?php
                                 $args = array(
-                                    'post_type' => 'post', // 投稿タイプ
-                                    'posts_per_page' => 3, // 表示件数
-                                    'orderby' => 'date', // 日付でソート
-                                    'order' => 'DESC', // 降順
-                                    'category_name' => 'media', // 特定のカテゴリーを指定する場合
+                                    'post_type'      => 'post',
+                                    'posts_per_page' => 3,
+                                    'orderby'        => 'date',
+                                    'order'          => 'DESC',
+                                    'category_name'  => 'media',  // ←この書き方に戻す
+                                    'ignore_sticky_posts' => true, // 念のため追加
+                                    'no_found_rows'  => true      // ページングをしない場合軽量化
                                 );
+                                $the_query = new WP_Query($args);
                                 ?>
                                 <ul>
                                     <?php
@@ -734,8 +741,8 @@
                 </div>
             </div>
             <div class="sec02-bg-under">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec02-bg-under_v2.png" alt="">
-                <span class="bg-item-04"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/bg-item-04.png" alt=""></span>
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec02-bg-under_v3.png" alt="">
+                <span class="bg-item-04"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/bg-item-04_v2.png" alt=""></span>
             </div>
         </section>
 
@@ -754,7 +761,7 @@
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-sprout-blown.png" alt="">
                             </span>
                             <span class="title title-item-sun-big">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/item-01-big.png" alt="">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/item-01-big_v2.png" alt="">
                             </span>
                         </h2>
                     </div>
@@ -809,7 +816,7 @@
 
                             // stroke 属性など設定
                             path.setAttribute('stroke', '#3C3636');
-                            path.setAttribute('stroke-width', 8);
+                            path.setAttribute('stroke-width', 14);
                             path.setAttribute('stroke-linecap', 'round');
                             path.setAttribute('fill', 'none');
 
@@ -835,10 +842,10 @@
                     </script>
 
 
-                    <div class="sec03-col-item-child sec03-col-item-child-1"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec03-col-item-child-1.png" alt=""></div>
-                    <div class="sec03-col-item-child sec03-col-item-child-2"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec03-col-item-child-2.png" alt=""></div>
-                    <div class="sec03-col-item-child sec03-col-item-child-3"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec03-col-item-child-3.png" alt=""></div>
-                    <div class="sec03-col-item-child sec03-col-item-child-4"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec03-col-item-child-4.png" alt=""></div>
+                    <div class="sec03-col-item-child sec03-col-item-child-1"><img class="sec03-col-item-child-1-wrap" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec03-col-item-child-1.png" alt=""></div>
+                    <div class="sec03-col-item-child sec03-col-item-child-2"><img class="sec03-col-item-child-2-wrap" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec03-col-item-child-2.png" alt=""></div>
+                    <div class="sec03-col-item-child sec03-col-item-child-3"><img class="sec03-col-item-child-3-wrap" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec03-col-item-child-3.png" alt=""></div>
+                    <div class="sec03-col-item-child sec03-col-item-child-4"><img class="sec03-col-item-child-4-wrap" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec03-col-item-child-4.png" alt=""></div>
                 </div>
             </div>
 
@@ -997,7 +1004,7 @@
             </div>
             <div class="sec04-bg-under">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec04-bg-under_v2.png" alt="">
-                <span class="bg-item-07"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/bg-item-07.png" alt=""></span>
+                <span class="bg-item-07"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/bg-item-07_v2.png" alt=""></span>
             </div>
         </section>
 
@@ -1121,7 +1128,7 @@
 
         <section class="sec06">
             <div class="sec06-bg-top">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec06-bg-top.png" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec06-bg-top_v3.png" alt="">
             </div>
             <div class="sec06-bg">
                 <div class="content-width">
@@ -1140,7 +1147,7 @@
 
                     <ul class="sec06-map">
                         <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/map-1.jpg" alt="guruspa"></li>
-                        <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/map-2.jpg" alt="guruspa"></li>
+                        <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/map-2_v2.jpg" alt="guruspa"></li>
                     </ul>
                     <div class="sec06-wrap-under-link">
                         <a href="<?php echo home_url(); ?>/guide/#sec05">くわしく見る<i></i></a>
@@ -1148,7 +1155,7 @@
                 </div>
             </div>
             <div class="sec06-bg-under">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec06-bg-under.png" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec06-bg-under_v3.png" alt="">
             </div>
         </section>
 
@@ -1204,67 +1211,7 @@
             </div>
         </section>
 
-        <aside class="aside">
-            <div class="aside-bg-top"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-top.png" alt=""></div>
-            <div class="aside-bg">
-                <div class="content-width">
-                    <div class="aside-btn-1">
-                        <a href="">
-                            <div class="aside-btn-1-img">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/aside-img.jpg" alt=""><i></i>
-                            </div>
-                            <div class="aside-btn-1-txt">
-                                <div class="aside-title">
-                                    <h2>
-                                        <span class="title">R</span><span class="title">E</span><span class="title">C</span><span class="title">R</span><span class="title">U</span><span class="title">I</span><span class="title">T</span>
-                                        <span class="title-item-sprout">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-sprout-white.png" alt="">
-                                        </span>
-                                        <span class="title-item-sun">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/item-01.png" alt="">
-                                        </span>
-                                    </h2>
-                                </div>
-                                <p>
-                                    お客様にもスタッフにも！<br>
-                                    元気と癒しを届ける仲間を募集中<i></i>
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="aside-btn-flex">
-                        <div class="aside-btn-2">
-                            <a href="<?php echo home_url(); ?>/contact">
-                                <h3><i></i>CONTACT</h3>
-                                <p>お客様お問い合わせ</p>
-                            </a>
-                        </div>
-                        <div class="aside-btn-3">
-                            <a href="<?php echo home_url(); ?>/contact-corporate">
-                                <h3><i></i>CONTACT</h3>
-                                <p>企業様お問い合わせ</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="footer-fixed footer-fixed-sp">
-                <a href="#">
-                    <span class="footer-fixed-main"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/footer-fixed.png" alt=""></span>
-                    <span class="footer-fixed-child footer-fixed-child-1"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/footer-fixed-1.png" alt=""></span>
-                    <span class="footer-fixed-child footer-fixed-child-2"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/footer-fixed-2.png" alt=""></span>
-                    <span class="footer-fixed-child footer-fixed-child-3"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/footer-fixed-3.png" alt=""></span>
-                    <span class="footer-fixed-child footer-fixed-child-4"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/footer-fixed-4.png" alt=""></span>
-                    <span class="footer-fixed-child footer-fixed-child-5"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/footer-fixed-5.png" alt=""></span>
-                    <span class="footer-fixed-child footer-fixed-child-6"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/footer-fixed-6.png" alt=""></span>
-                    <span class="footer-fixed-txt">
-                        <img class="footer-fixed-txt-1" src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/footer-fixed-7.png" alt="">
-                        <img class="footer-fixed-txt-2" src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/footer-fixed-7-sp.png" alt="">
-                    </span>
-                </a>
-            </div>
-        </aside>
+        <?php get_template_part('./inc/inc-aside'); ?>
     </div>
 </main>
 
@@ -1382,7 +1329,7 @@
                 }
             });
         }, {
-            threshold: 0.5 // 画面に50%以上見えたら
+            threshold: 0 // 画面に50%以上見えたら
         });
 
         observer.observe(ring);
