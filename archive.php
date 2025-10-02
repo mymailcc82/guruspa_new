@@ -111,6 +111,6 @@ $category_slug = $category->slug;
 
 
     </section>
-    <?php get_template_part('inc/inc-contact'); ?>
+    <?php get_template_part('inc/inc-aside'); ?>
 </main>
 <?php get_footer(); ?>

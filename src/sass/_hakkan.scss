@@ -674,8 +674,8 @@
       }
       ul {
         display: flex;
-        width: calc(343px * 12);
-        animation: slide 33s linear infinite;
+        width: calc(343px * 20);
+        animation: slide 80s linear infinite;
         @include media(middle) {
           width: 2000px;
         }

@@ -58,9 +58,9 @@ Template Name: enjoy-hakkan
                 </div>
                 <div class="enjoy-wrap-img enjoy-wrap-img--sweating">
                     <ul>
-                        <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/hakkan-img-01.jpg" alt=""></li>
-                        <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/hakkan-img-02.jpg" alt=""></li>
-                        <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/hakkan-img-03.jpg" alt=""></li>
+                        <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/hakkan-img-01_v2.jpg" alt=""></li>
+                        <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/hakkan-img-02_v2.jpg" alt=""></li>
+                        <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/hakkan-img-03_v2.jpg" alt=""></li>
                     </ul>
                 </div>
             </div>
@@ -201,7 +201,7 @@ Template Name: enjoy-hakkan
                 <div class="sec03-wrap">
                     <div class="sec03-wrap-col">
                         <div class="sec03-wrap-col-left">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec03-img-01.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec03-img-01_v2.jpg" alt="">
                         </div>
                         <div class="sec03-wrap-col-right">
                             <h3>多彩な岩盤浴と薬石の癒し</h3>
@@ -214,7 +214,7 @@ Template Name: enjoy-hakkan
                     </div>
                     <div class="sec03-wrap-col">
                         <div class="sec03-wrap-col-left">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec03-img-02.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec03-img-02_v2.jpg" alt="">
                         </div>
                         <div class="sec03-wrap-col-right">
                             <h3>エンターテイメント型アトラクションサウナ</h3>
@@ -226,7 +226,7 @@ Template Name: enjoy-hakkan
                     </div>
                     <div class="sec03-wrap-col">
                         <div class="sec03-wrap-col-left">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec03-img-03.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec03-img-03_v2.jpg" alt="">
                         </div>
                         <div class="sec03-wrap-col-right">
                             <h3>“ととのい”を完成させるクールダウン空間</h3>
@@ -268,21 +268,21 @@ Template Name: enjoy-hakkan
                     <h3>特徴・魅力</h3>
                     <div class="sec04-center-wrap">
                         <div class="sec04-center-wrap-col">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-02.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-02_v2.jpg" alt="">
                             <h4>エンターテイメントロウリュ</h4>
                             <p>
                                 音・光・映像・熱波が融合する、迫力満点のアトラクションロウリュを開催。
                             </p>
                         </div>
                         <div class="sec04-center-wrap-col">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-03.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-03_v2.jpg" alt="">
                             <h4>大人数で楽しめる空間</h4>
                             <p>
                                 約40名が同時に体験できる広さで、仲間と一緒に盛り上がれる特別な時間を。
                             </p>
                         </div>
                         <div class="sec04-center-wrap-col">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-04.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-04_v2.jpg" alt="">
                             <h4>オリジナルコンテンツ演出</h4>
                             <p>
                                 サウナイーグルのDNAを引き継いだ、ここだけのオリジナルプログラムをご用意。
@@ -296,7 +296,7 @@ Template Name: enjoy-hakkan
 
         <div class="sec04-container">
             <div class="sec04-bg">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-05.jpg" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-05_v2.jpg" alt="">
             </div>
             <div class="sec04-wrap" id="area-guide-02">
                 <h3>
@@ -317,7 +317,7 @@ Template Name: enjoy-hakkan
                     <div class="sec03-wrap fadeup">
                         <div class="sec03-wrap-col">
                             <div class="sec03-wrap-col-img">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/test/test-01.jpg" alt="">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec06-img-01.jpg" alt="">
                                 <div class="sec03-wrap-col-img-span">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-06.svg" alt="">
                                 </div>
@@ -328,7 +328,7 @@ Template Name: enjoy-hakkan
                         </div>
                         <div class="sec03-wrap-col">
                             <div class="sec03-wrap-col-img">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/test/test-01.jpg" alt="">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec06-img-02.jpg" alt="">
                                 <div class="sec03-wrap-col-img-span">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-07.svg" alt="">
                                 </div>
@@ -339,7 +339,7 @@ Template Name: enjoy-hakkan
                         </div>
                         <div class="sec03-wrap-col">
                             <div class="sec03-wrap-col-img">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/test/test-01.jpg" alt="">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec06-img-03.jpg" alt="">
                                 <div class="sec03-wrap-col-img-span">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-08.svg" alt="">
                                 </div>
@@ -350,7 +350,7 @@ Template Name: enjoy-hakkan
                         </div>
                         <div class="sec03-wrap-col">
                             <div class="sec03-wrap-col-img">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/test/test-01.jpg" alt="">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec06-img-04.jpg" alt="">
                                 <div class="sec03-wrap-col-img-span">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-09.svg" alt="">
                                 </div>
@@ -361,7 +361,7 @@ Template Name: enjoy-hakkan
                         </div>
                         <div class="sec03-wrap-col">
                             <div class="sec03-wrap-col-img">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/test/test-01.jpg" alt="">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec06-img-05.jpg" alt="">
                                 <div class="sec03-wrap-col-img-span">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-10.svg" alt="">
                                 </div>
@@ -496,7 +496,7 @@ Template Name: enjoy-hakkan
 
         <div class="sec04-container">
             <div class="sec04-bg">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-12.jpg" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-12_v2.jpg" alt="">
             </div>
             <div class="sec04-wrap" id="area-guide-03">
                 <h3>
@@ -536,7 +536,7 @@ Template Name: enjoy-hakkan
 
         <div class="sec04-container">
             <div class="sec04-bg">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-13.jpg" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-13_v2.jpg" alt="">
             </div>
             <div class="sec04-wrap" id="area-guide-04">
                 <h3>
@@ -576,7 +576,7 @@ Template Name: enjoy-hakkan
 
         <div class="sec04-container">
             <div class="sec04-bg">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-14.jpg" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-14_v2.jpg" alt="">
             </div>
             <div class="sec04-wrap">
                 <h3>中温ホール</h3>
@@ -591,19 +591,19 @@ Template Name: enjoy-hakkan
                     <h3>特徴・魅力</h3>
                     <div class="sec04-center-wrap">
                         <div class="sec04-center-wrap-col">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-15.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-15_v2.jpg" alt="">
                             <p>
                                 半個室設計の蜂の巣状くつろぎスペース
                             </p>
                         </div>
                         <div class="sec04-center-wrap-col">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-16.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-16_v2.jpg" alt="">
                             <p>
                                 飲み物の持ち込みOK＆冷蔵庫完備
                             </p>
                         </div>
                         <div class="sec04-center-wrap-col">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-17.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-17_v2.jpg" alt="">
                             <p>
                                 書籍・スマホもOK（静音モード推奨です。）
                             </p>
@@ -634,41 +634,67 @@ Template Name: enjoy-hakkan
             <div class="sec05-yoko">
                 <ul>
                     <li>
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-01.png" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-01_v2.png" alt="">
                     </li>
                     <li>
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-02.png" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-02_v2.png" alt="">
                     </li>
                     <li>
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-03.png" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-03_v2.png" alt="">
                     </li>
                     <li>
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-04.png" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-04_v2.png" alt="">
                     </li>
                     <li>
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-05.png" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-05_v2.png" alt="">
                     </li>
                     <li>
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-05.png" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-01_v2.png" alt="">
                     </li>
                     <li>
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-01.png" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-02_v2.png" alt="">
                     </li>
                     <li>
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-02.png" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-03_v2.png" alt="">
                     </li>
                     <li>
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-03.png" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-04_v2.png" alt="">
                     </li>
                     <li>
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-04.png" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-05_v2.png" alt="">
                     </li>
                     <li>
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-05.png" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-01_v2.png" alt="">
                     </li>
                     <li>
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-05.png" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-02_v2.png" alt="">
                     </li>
+                    <li>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-03_v2.png" alt="">
+                    </li>
+                    <li>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-04_v2.png" alt="">
+                    </li>
+                    <li>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-05_v2.png" alt="">
+                    </li>
+                    <li>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-01_v2.png" alt="">
+                    </li>
+                    <li>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-02_v2.png" alt="">
+                    </li>
+                    <li>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-03_v2.png" alt="">
+                    </li>
+                    <li>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-04_v2.png" alt="">
+                    </li>
+                    <li>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-05_v2.png" alt="">
+                    </li>
+
+
                 </ul>
             </div>
             <div class="content-width-sm">
@@ -676,7 +702,7 @@ Template Name: enjoy-hakkan
                 <div class="sec05-bottom">
                     <div class="sec05-bottom-col">
                         <div class="sec05-bottom-col-left">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-06.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-06_v2.jpg" alt="">
                         </div>
                         <div class="sec05-bottom-col-right">
                             <h5>漫画コーナー</h5>
@@ -688,7 +714,7 @@ Template Name: enjoy-hakkan
                     </div>
                     <div class="sec05-bottom-col">
                         <div class="sec05-bottom-col-left">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-07.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-07_v2.jpg" alt="">
                         </div>
                         <div class="sec05-bottom-col-right">
                             <h5>テレビ付きリクライニングシート</h5>
@@ -700,7 +726,7 @@ Template Name: enjoy-hakkan
                     </div>
                     <div class="sec05-bottom-col">
                         <div class="sec05-bottom-col-left">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-08.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-08_v2.jpg" alt="">
                         </div>
                         <div class="sec05-bottom-col-right">
                             <h5>コワーキングスペース</h5>
@@ -712,7 +738,7 @@ Template Name: enjoy-hakkan
                     </div>
                     <div class="sec05-bottom-col">
                         <div class="sec05-bottom-col-left">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-09.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-09_v2.jpg" alt="">
                         </div>
                         <div class="sec05-bottom-col-right">
                             <h5>カウチベッド</h5>
@@ -724,7 +750,7 @@ Template Name: enjoy-hakkan
                     </div>
                     <div class="sec05-bottom-col">
                         <div class="sec05-bottom-col-left">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-10.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec05-img-10_v2.jpg" alt="">
                         </div>
                         <div class="sec05-bottom-col-right">
                             <h5>屋外テラス</h5>
@@ -795,7 +821,7 @@ Template Name: enjoy-hakkan
             </div>
         </div>
     </section>
-    <?php get_template_part('inc/inc-contact'); ?>
+    <?php get_template_part('inc/inc-aside'); ?>
 
 
     <div class="stone-fixed">

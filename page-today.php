@@ -222,7 +222,12 @@ $days = days_from_today_for_months();
                                     <?php //$valueのpost_idから画像URLを取得
                                     $image_url = get_the_post_thumbnail_url($value, 'full');
                                     ?>
-                                    <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($key); ?>月のイベントスケジュール">
+                                    <?php if ($image_url): ?>
+                                        <?php $image_url = get_template_directory_uri() . '/assets/img/enjoy/enjoy-schedule-coming-soon.png'; ?>
+                                        <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($key); ?>月のイベントスケジュール">
+                                    <?php else: ?>
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/comming-soon.jpg" alt="<?php echo esc_attr($key); ?>月のイベントスケジュール">
+                                    <?php endif; ?>
                                 </div>
                             <?php endforeach; ?>
                         </div>
@@ -247,10 +252,10 @@ $days = days_from_today_for_months();
                         <div class="sec06-bottom-col">
                             <div class="sec-01-col-under">
                                 <a href="<?php echo home_url(); ?>/event/">
-                                    <div class="sec-01-col-under-img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/bnr/page-bnr-today-img.jpg" alt=""></div>
+                                    <div class="sec-01-col-under-img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/bnr/page-bnr-event-img_v2.jpg" alt=""></div>
                                     <div class="sec-01-col-under-title">
-                                        <h3><img src="<?php echo get_template_directory_uri(); ?>/assets/img/bnr/page-bnr-today-txt.png" alt="EVENT SCHEDULE"><i class="icon-btn"></i></h3>
-                                        <p>本日開催しているイベントをチェック！</p>
+                                        <h3><img class="text-event" src="<?php echo get_template_directory_uri(); ?>/assets/img/bnr/page-bnr-event-txt.png" alt="EVENT SCHEDULE"><i class="icon-btn"></i></h3>
+                                        <p>すべてのイベント情報をチェック！</p>
                                     </div>
                                 </a>
                             </div>
@@ -258,7 +263,7 @@ $days = days_from_today_for_months();
                         <div class="sec06-bottom-col">
                             <div class="sec-01-col-under">
                                 <a href="<?php echo home_url(); ?>/schedule/">
-                                    <div class="sec-01-col-under-img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/bnr/page-bnr-event-img.jpg" alt=""></div>
+                                    <div class="sec-01-col-under-img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/bnr/page-bnr-schedule-img_v2.jpg" alt=""></div>
                                     <div class="sec-01-col-under-title">
                                         <h3><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/title-event-schedule_v2.png" alt="EVENT SCHEDULE"><i class="icon-btn"></i></h3>
                                         <p>イベントはこちらをチェック！</p>
@@ -275,7 +280,7 @@ $days = days_from_today_for_months();
     </div>
 
 
-    <?php get_template_part('inc/inc-contact'); ?>
+    <?php get_template_part('inc/inc-aside'); ?>
 </main>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>

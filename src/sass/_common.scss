@@ -262,7 +262,6 @@ img.lazyloaded {
     }
 
     &:hover {
-
       //background-color: #2e549c !important;
       i {
         transform: translateX(10px);
@@ -761,7 +760,6 @@ img.lazyloaded {
       }
     }
 
-
     /*
     .title.in-view {
       opacity: 1;
@@ -904,6 +902,10 @@ img.lazyloaded {
         top: -60px;
         right: -50px;
       }
+
+      @include media(mobile) {
+        top: -70px;
+      }
     }
 
     /*
@@ -1000,6 +1002,10 @@ img.lazyloaded {
     position: absolute;
     right: -10px;
     top: -63px !important;
+
+    @include media(mobile) {
+      top: -48px !important;
+    }
   }
 }
 
@@ -1056,7 +1062,8 @@ img.lazyloaded {
 .com-btn-border--left {
   text-align: left !important;
 
-  a {}
+  a {
+  }
 }
 
 .com-btn-border-black {

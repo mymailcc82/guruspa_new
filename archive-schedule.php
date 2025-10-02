@@ -112,7 +112,7 @@ for ($i = 0; $i < 12; $i++) {
             </div>
         </div>
     </section>
-    <?php get_template_part('inc/inc-contact'); ?>
+    <?php get_template_part('inc/inc-aside'); ?>
 </main>
 
 <script>

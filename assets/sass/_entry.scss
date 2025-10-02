@@ -1,0 +1,738 @@
+@use 'setting' as *;
+.entry {
+  background-color: #f4f1ef;
+  .contact-wrap {
+    justify-content: space-between;
+    padding: 120px 0px 120px;
+    position: relative;
+    z-index: 2;
+    @include media(middle) {
+      padding: 80px 0px;
+    }
+    .contact-wrap-left {
+      width: 34%;
+      @include media(middle) {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+      .contact-wrap-left-txt {
+        background-color: #fcf2d7;
+        border: 1px solid $color-main;
+        padding: 40px;
+        font-size: 14px;
+        line-height: 2;
+        @include media(middle) {
+          padding: 20px;
+          text-align: center;
+        }
+        a {
+          color: $color-main;
+          font-size: 14px;
+          text-decoration: underline;
+          font-weight: 600;
+        }
+      }
+      ul {
+        display: flex;
+        position: relative;
+        margin-bottom: 40px;
+        &:before {
+          width: 100%;
+          height: 2px;
+          background-color: #bac4c3;
+          content: '';
+          display: block;
+          position: absolute;
+          left: 0px;
+          top: 4px;
+          z-index: -1;
+        }
+        .active {
+          span {
+            color: $color-main !important;
+          }
+          &:before {
+            background-color: $color-main !important;
+          }
+          &:after {
+            background-color: rgba($color: $color-main, $alpha: 0.2);
+            width: 27px;
+            height: 27px;
+            content: '';
+            display: block;
+            position: absolute;
+            left: -8px;
+            top: -8px;
+            border-radius: 50%;
+          }
+          &:nth-child(2) {
+            &:after {
+              left: 50%;
+              transform: translateX(-50%);
+            }
+          }
+          &:nth-child(3) {
+            &:after {
+              left: calc(100% - 13px);
+            }
+          }
+        }
+        li {
+          width: 33.33%;
+          position: relative;
+          &:before {
+            width: 11px;
+            height: 11px;
+            background-color: #5d5d60;
+            border-radius: 50%;
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+          }
+          &:nth-child(2) {
+            &:before {
+              left: 50%;
+              transform: translateX(-50%);
+            }
+          }
+          &:nth-child(3) {
+            &:before {
+              left: calc(100% - 0px);
+              transform: translateX(-50%);
+            }
+          }
+          span {
+            font-size: 14px;
+            color: #bac4c3;
+            font-family: $font-gothic;
+            margin-top: 25px;
+            display: block;
+          }
+        }
+      }
+      p {
+        font-size: 14px;
+        color: #5d5d60;
+        font-family: $font-gothic;
+        letter-spacing: 0.12em;
+        margin-top: 40px;
+        line-height: 1.8;
+        @include media(mobile) {
+          text-align: left;
+          color: #000000;
+        }
+        a {
+          color: #5d5d60;
+          @include media(mobile) {
+            color: #000000;
+          }
+        }
+      }
+    }
+    .contact-wrap-right {
+      width: 57%;
+      @include media(middle) {
+        width: 100%;
+        margin-top: 40px;
+      }
+      .contact-wrap-right-finish {
+        .com-btn-normal {
+          a {
+            @include media(mobile) {
+              justify-content: center;
+              padding-left: 0px;
+              padding-right: 10px;
+              height: 70px;
+              font-size: 17px;
+            }
+          }
+        }
+      }
+      .mw_wp_form_confirm {
+        dl {
+          span {
+            display: none;
+          }
+          dt {
+            border-bottom: 1px solid #dedede;
+            padding-bottom: 8px;
+          }
+        }
+        .dl-birth {
+          .col {
+            display: flex;
+            justify-content: left !important;
+            align-items: center;
+            .col-select {
+              width: auto !important;
+              select {
+                width: 100%;
+                @include media(mobile) {
+                  padding-right: 10px;
+                  background-position: right 5px center;
+                }
+              }
+            }
+            .col-text {
+              width: auto !important;
+              select {
+                width: 100%;
+              }
+            }
+          }
+        }
+        .confirm-none {
+          display: none !important;
+        }
+        .contact_form_btn {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          @include media(mobile) {
+            flex-direction: column-reverse;
+          }
+          .contact_form_btn_prev {
+            width: 46%;
+            max-width: 300px;
+            @include media(mobile) {
+              width: 100%;
+              max-width: 400px;
+            }
+            button {
+              background-image: url('./assets/img/icon_recruit/svg-right-white.svg');
+              background-size: 15px;
+              background-repeat: no-repeat;
+              background-position: right 0px center;
+              width: 100%;
+              display: block;
+              background-color: inherit;
+              padding: 10px 0px 10px 0px !important;
+              color: #919191;
+              border-radius: 0px;
+              font-family: $font-gothic;
+              font-weight: 600;
+              border: none;
+              font-size: 17px;
+              transition: opacity 0.5s;
+              border: none;
+              text-align: left;
+              border-bottom: 2px solid #919191;
+              @include media(middle) {
+                font-size: 17px;
+                padding-left: 10px;
+              }
+              &:hover {
+                opacity: 0.5;
+                cursor: pointer;
+              }
+            }
+          }
+          .contact_form_btn_next {
+            max-width: 300px;
+            width: 46%;
+            @include media(mobile) {
+              width: 100%;
+              margin-bottom: 25px;
+              max-width: 400px;
+            }
+            input {
+              padding: 10px 0px 10px 0px !important;
+              letter-spacing: 0.02em;
+              @include media(middle) {
+                font-size: 17px;
+              }
+              @include media(mobile) {
+                width: 100% !important;
+                max-width: 400px !important;
+              }
+            }
+          }
+        }
+
+        .zip-wrap-btn {
+          display: none;
+        }
+        .js-upload-filename-1 {
+          display: none;
+        }
+        .upload-box {
+          label {
+            background: inherit !important;
+            border: none !important;
+            padding: 0px !important;
+          }
+          .mw-wp-form_file {
+            font-size: 14px;
+            font-family: $font-gothic;
+          }
+        }
+      }
+      .contact-wrap-right-main {
+        .p-country-name {
+          display: none;
+        }
+        dl {
+          margin-bottom: 50px;
+          dt {
+            font-family: $font-gothic;
+            font-size: 14px;
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 10px;
+            span {
+              background-color: #eb1210;
+              color: #fff;
+              font-size: 11px;
+              padding: 2px 8px;
+              font-family: $font-gothic;
+              margin-right: 10px;
+            }
+            .nini {
+              background-color: #004e64 !important;
+            }
+          }
+          dd {
+            font-size: 14px;
+            font-family: $font-gothic;
+            input {
+              width: 100%;
+              border-radius: 5px;
+              border: 1px solid #b7b7b7;
+              font-size: 14px;
+              padding: 15px;
+              box-sizing: border-box;
+              &::placeholder {
+                color: #c1c1c1;
+              }
+            }
+            .error {
+              font-family: $font-gothic;
+              font-size: 14px;
+              margin-top: 8px;
+            }
+            select {
+              background-image: url('./assets/img/icon_recruit/icon-select.svg');
+              background-size: 16px;
+              background-repeat: no-repeat;
+              background-position: right 20px center;
+              // appearance: none;
+              width: 100%;
+              appearance: none;
+              background-color: #fff;
+              padding: 15px;
+              padding-right: 50px;
+              font-size: 14px;
+              border: 1px solid #b7b7b7;
+              border-radius: 5px;
+            }
+            textarea {
+              width: 100%;
+              border-radius: 5px;
+              border: 1px solid #b7b7b7;
+              font-size: 14px;
+              padding: 15px;
+              height: 200px;
+              box-sizing: border-box;
+              font-family: $font-gothic;
+              font-weight: normal;
+              &::placeholder {
+                color: #c1c1c1;
+              }
+            }
+            .upload-box {
+              display: flex;
+              align-items: center;
+              input[type='file'] {
+                display: none !important;
+              }
+
+              label {
+                padding: 15px 40px;
+                margin-right: 10px;
+                border-radius: 5px;
+                color: #ffffff;
+                background-color: #fff;
+                border: 1px solid #c9a964;
+                cursor: pointer;
+                text-align: center;
+                color: #c9a964;
+                @include media(mobile) {
+                  padding: 10px 20px;
+                }
+                span {
+                  font-size: 0px;
+                  display: block;
+                  visibility: visible !important;
+                  &:after {
+                    font-size: 14px;
+                    content: 'ファイルを選択';
+                    text-decoration: underline;
+                    color: #c9a964 !important;
+                    display: block;
+                    font-family: $font-gothic;
+                  }
+                }
+              }
+              .js-upload-filename-1 {
+                margin: 0px;
+                font-family: $font-gothic;
+                font-size: 14px;
+              }
+
+              label:hover {
+                opacity: 0.5;
+              }
+            }
+            .js-upload-fileclear {
+              margin: 0px;
+              font-family: $font-gothic;
+              font-size: 14px;
+              text-decoration: underline;
+              display: none;
+            }
+            .js-upload-filename-3 {
+              margin: 0px;
+              font-family: $font-gothic;
+              font-size: 14px;
+              color: #c1c1c1;
+              margin-top: 20px;
+            }
+          }
+        }
+
+        .dl-sei {
+          dd {
+            display: flex;
+            flex-wrap: wrap;
+            @include media(mobile) {
+              justify-content: space-between;
+            }
+          }
+          .error {
+            font-family: $font-gothic;
+            font-size: 14px;
+            margin-top: 8px;
+            display: block;
+            width: 100%;
+          }
+          .mwform-radio-field {
+            @include media(mobile) {
+              width: 40%;
+            }
+            &:nth-of-type(1),
+            &:nth-of-type(2) {
+              @include media(mobile) {
+                width: 26%;
+              }
+              label {
+                width: 110px !important;
+                @include media(mobile) {
+                  width: 100% !important;
+                }
+              }
+            }
+            //inputがチェックされたらlabelの色を変える
+            label input:checked ~ span {
+              color: #fff;
+              &:before {
+                background-color: #71360b !important;
+              }
+            }
+            label {
+              display: flex;
+              position: relative;
+              width: 132px;
+              margin-right: 0px;
+              border: 1px solid #b7b7b7;
+              border-radius: 5px;
+              padding: 15px;
+              justify-content: center;
+              @include media(mobile) {
+                margin-right: 0px;
+                width: 100%;
+              }
+              input {
+                width: 14px;
+                padding: 0px;
+                //色を#13A36Bにする
+                accent-color: $color-main;
+                display: none;
+              }
+              span {
+                font-family: $font-gothic;
+                font-size: 16px;
+                margin-left: 0px;
+                color: #c1c1c1;
+                @include media(middle) {
+                  font-size: 14px;
+                }
+
+                &:before {
+                  position: absolute;
+                  left: 0px;
+                  top: 0px;
+                  width: 100%;
+                  height: 100%;
+                  background-color: #fff;
+                  content: '';
+                  display: block;
+                  z-index: -1;
+                }
+              }
+            }
+          }
+        }
+        .dl-birth {
+          .col {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .col-select {
+              width: 22%;
+              font-family: $font-gothic;
+              @include media(mobile) {
+                width: 25%;
+              }
+              select {
+                width: 100%;
+                font-family: $font-gothic;
+                @include media(mobile) {
+                  padding-right: 10px;
+                  background-position: right 5px center;
+                }
+              }
+            }
+            .col-text {
+              font-family: $font-gothic;
+              width: 5%;
+              @include media(mobile) {
+                width: 3%;
+              }
+              select {
+                width: 100%;
+              }
+            }
+          }
+        }
+
+        .zip-wrap {
+          display: flex;
+          width: 100%;
+          .zip-wrap-input {
+            max-width: 139px;
+            margin-right: 15px;
+            width: 55%;
+            font-family: $font-gothic;
+          }
+          .zip-wrap-btn {
+            max-width: 218px;
+            width: 40%;
+            @include media(mobile) {
+              width: 55%;
+            }
+
+            a {
+              display: block;
+              border: 1px solid #71360b;
+              color: #71360b;
+              border-radius: 5px;
+              text-decoration: underline;
+              font-size: 14px;
+              text-align: center;
+              padding: 15px 0px;
+              @include media(middle) {
+                font-size: 12px;
+                font-family: $font-gothic;
+                text-decoration: underline;
+                letter-spacing: 0.04em;
+              }
+            }
+          }
+        }
+
+        .wpcf7-acceptance {
+          width: 100%;
+          text-align: center;
+          .wpcf7-list-item {
+            margin: 0px;
+            display: block;
+            width: 100%;
+          }
+          .error {
+            font-family: $font-gothic;
+            font-size: 14px;
+            margin-top: 8px;
+            display: block;
+            text-align: left;
+            //text-align: center;
+          }
+          label {
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            font-size: 0px;
+            line-height: 1.5;
+            display: flex;
+          }
+          input {
+            width: 20px;
+            height: 20px;
+            //チェックボックスの色を緑にする
+            margin: 0px;
+          }
+          input[type='checkbox'] {
+            appearance: none; /* 標準のスタイルを無効化 */
+            width: 20px;
+            height: 20px;
+            border: 2px solid #71360b; /* ボーダーの色 */
+            border-radius: 0px; /* 角を丸める（オプション） */
+            background-color: white; /* チェックボックスの背景色 */
+            padding: 0px;
+            cursor: pointer;
+            border: 1px solid #b7b7b7;
+          }
+          /* チェックが入ったときのスタイル */
+          input[type='checkbox']:checked {
+            background-color: #71360b; /* チェック時の背景色 */
+            border-color: #71360b; /* チェック時のボーダー色 */
+          }
+          /* チェックマークのスタイル */
+          input[type='checkbox']:checked::after {
+            content: '✓';
+            color: white; /* チェックマークの色 */
+            font-family: $font-en;
+            font-size: 14px;
+            display: block;
+            text-align: center;
+            line-height: 20px; /* チェックボックスの高さに合わせる */
+          }
+          .mwform-checkbox-field {
+            line-height: 1;
+          }
+          .mwform-checkbox-field-text {
+            font-family: $font-gothic;
+            font-weight: 600;
+            margin-left: 10px;
+            font-size: 14px;
+            a {
+              font-size: 14px;
+              color: #71360b;
+              text-decoration: underline;
+            }
+          }
+        }
+        .contact_form_btn {
+          margin-top: 50px;
+          input {
+            background-image: url('./assets/img/icon_recruit/icon-arrow-bottom-brown.svg');
+            background-size: 15px;
+            background-repeat: no-repeat;
+            background-position: right 0px center;
+            width: 100%;
+            display: block;
+            padding: 10px 0px 10px 0px;
+            color: #004e64;
+            border: none;
+            border-bottom: 2px solid #004e64;
+            max-width: 292px;
+            border-radius: 0px;
+            background-color: inherit;
+            font-family: $font-gothic;
+            letter-spacing: 0.08em;
+            font-size: 17px;
+            font-weight: 600;
+            transition: all 0.3s;
+            text-align: left;
+            margin: 0 auto;
+            @include media(middle) {
+              font-size: 20px;
+              padding-right: 30px;
+            }
+            &:hover {
+              opacity: 0.5;
+              cursor: pointer;
+              /*
+                            background-color: $color-main;
+                            color: #fff;
+                            background-image: url("./assets/img/icon_recruit/icon-arrow-bottom-white.svg");
+                            */
+            }
+          }
+        }
+      }
+      .contact-wrap-right-attention {
+        font-size: 14px;
+        margin-top: 30px;
+        line-height: 1.8;
+        @include media(middle) {
+          font-size: 14px;
+        }
+      }
+    }
+    .wpcf7-not-valid-tip {
+      font-size: 14px;
+      color: red;
+      font-family: $font-gothic;
+      margin-top: 10px;
+    }
+    .wpcf7-response-output {
+      font-family: $font-gothic;
+    }
+    .contact-wrap-right-finish {
+      @include media(middle) {
+        text-align: center;
+      }
+      .title {
+        font-size: 60px;
+        font-family: $font-en;
+        font-weight: 600;
+        margin-bottom: 20px;
+        //縁だけオレンジに
+        -webkit-text-stroke: 1px $color-main;
+        color: transparent;
+        letter-spacing: 0em;
+        @include media(middle) {
+          font-size: 40px;
+          text-align: center;
+        }
+      }
+      h2 {
+        font-size: 25px;
+        margin-bottom: 15px;
+        line-height: 1.2;
+        color: #000000;
+        @include media(middle) {
+          font-size: 20px;
+          text-align: center;
+          line-height: 1.5;
+        }
+      }
+      p {
+        font-size: 14px;
+        letter-spacing: 0.1em;
+        font-family: $font-gothic;
+        line-height: 2;
+        margin-bottom: 60px;
+        letter-spacing: 0.08em;
+        //折り返し禁止
+        white-space: nowrap;
+        @include media(middle) {
+          text-align: center;
+        }
+        a {
+          font-size: 14px;
+          letter-spacing: 0.1em;
+          font-family: $font-gothic;
+        }
+      }
+    }
+    .mw_wp_form_send_error {
+      @include media(middle) {
+        text-align: center;
+      }
+    }
+  }
+}

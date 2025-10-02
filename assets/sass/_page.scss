@@ -1,6 +1,6 @@
 @use 'setting' as *;
 .page-main {
-  padding-top: 100px;
+  padding-top: 110px;
   position: relative;
   background-color: #fefbf5;
   z-index: 3;
@@ -33,12 +33,17 @@
   .page-deco-bg {
     width: 100%;
     position: relative;
-    z-index: -1;
+    z-index: 1;
     img {
       width: 100%;
     }
   }
+
+  .sec02-icon-01 {
+    z-index: 3;
+  }
   .page-deco-container {
+    padding-top: 20px;
     &.page-deco-container--red {
       //background-color: #dce7fb !important;
       background-image: url(("./assets/img/aside/aside-bg-red-content.jpg"));
@@ -67,6 +72,10 @@
     @include media(middle) {
       padding-top: 20px;
       padding-bottom: 30px;
+    }
+    .content-width-sm {
+      position: relative;
+      z-index: 10;
     }
   }
   .page-bg-deco-bg-bottom-yellow {
@@ -210,6 +219,19 @@
       letter-spacing: 0em !important;
     }
   }
+  &.page-title-center--has-icon--font-30 {
+    h2,
+    h3 {
+      font-size: 30px !important;
+      @include media(middle) {
+        font-size: 25px !important;
+      }
+      @include media(mobile) {
+        font-size: 20px !important;
+        padding-right: 10px !important;
+      }
+    }
+  }
   h2,
   h3 {
     display: flex;
@@ -334,7 +356,7 @@
     li {
       a {
         display: flex;
-        font-size: var(--font-size-16);
+        font-size: 12px;
         font-weight: 400;
         letter-spacing: 0em;
         //折り返しをなし

@@ -58,8 +58,8 @@ Template Name: enjoy-relaxation
                 </div>
                 <div class="enjoy-wrap-img">
                     <ul>
-                        <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec01-img-01.jpg" alt=""></li>
-                        <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec01-img-02.jpg" alt=""></li>
+                        <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec01-img-01_v2.jpg" alt=""></li>
+                        <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec01-img-02_v2.jpg" alt=""></li>
                     </ul>
                 </div>
             </div>
@@ -258,7 +258,7 @@ Template Name: enjoy-relaxation
                                     </div>
                                     <div class="sec04-wrap-col">
                                         <div class="sec04-wrap-col-img">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec04-img-03.jpg" alt="">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec04-img-03_v2.jpg" alt="">
                                         </div>
                                         <h3>男女ともに利用可能</h3>
                                         <p>
@@ -283,7 +283,7 @@ Template Name: enjoy-relaxation
                             <div class="sec05-wrap">
                                 <div class="sec05-wrap-col">
                                     <div class="sec05-wrap-col-left">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec05-img-01.jpg" alt="">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec05-img-01_v2.jpg" alt="">
                                     </div>
                                     <div class="sec05-wrap-col-right">
                                         <h3>もみほぐし</h3>
@@ -335,7 +335,7 @@ Template Name: enjoy-relaxation
 
                                 <div class="sec05-wrap-col">
                                     <div class="sec05-wrap-col-left">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec05-img-03.jpg" alt="">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec05-img-03_v2.jpg" alt="">
                                     </div>
                                     <div class="sec05-wrap-col-right">
                                         <h3>フェイシャル・ヘッドスパ</h3>
@@ -383,7 +383,7 @@ Template Name: enjoy-relaxation
                                     </div>
                                 </div>
                                 <div class="sec06-wrap-right">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec06-img-01.jpg" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec06-img-01_v2.jpg" alt="">
                                 </div>
 
                             </div>
@@ -574,7 +574,7 @@ Template Name: enjoy-relaxation
                                     </div>
                                     <div class="sec04-wrap-col">
                                         <div class="sec04-wrap-col-img">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec09-img-02.jpg" alt="">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec09-img-02_v2.jpg" alt="">
                                         </div>
                                         <h3>肌質・目的に合わせた<br>メニュー構成</h3>
                                         <p>
@@ -654,7 +654,7 @@ Template Name: enjoy-relaxation
                                     </div>
                                 </div>
                                 <div class="sec06-wrap-right">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec06-img-01.jpg" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec06-img-01_v2.jpg" alt="">
                                 </div>
 
                             </div>
@@ -726,7 +726,7 @@ Template Name: enjoy-relaxation
 
 
 
-    <?php get_template_part('inc/inc-contact'); ?>
+    <?php get_template_part('inc/inc-aside'); ?>
 
 
 </main>

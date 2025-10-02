@@ -80,8 +80,8 @@
                     </div>
                     <div class="sec02-wrap-img">
                         <ul>
-                            <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/first/sec02-img-01.jpg" alt=""></li>
-                            <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/first/sec02-img-02.jpg" alt=""></li>
+                            <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/first/sec02-img-01_v2.jpg" alt="グルスパ"></li>
+                            <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/first/sec02-img-02_v2.jpg" alt="グルスパ"></li>
                         </ul>
                     </div>
                 </div>
@@ -140,7 +140,7 @@
                             ほっとする時間を。
                         </p>
                         <div class="sec02-list-item-img">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/first/sec02-list-01.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/first/sec02-list-01_v2.png" alt="">
                         </div>
                     </div>
                     <div class="sec02-list-item fadeup-item">
@@ -149,7 +149,7 @@
                             感じられる場所に。
                         </p>
                         <div class="sec02-list-item-img">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/first/sec02-list-02.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/first/sec02-list-02_v2.png" alt="">
                         </div>
                     </div>
                     <div class="sec02-list-item fadeup-item">
@@ -157,7 +157,7 @@
                             心ゆくまでリラックスし、満たされる空間を。
                         </p>
                         <div class="sec02-list-item-img">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/first/sec02-list-03.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/first/sec02-list-03_v2.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -180,7 +180,7 @@
                     <div class="sec02-bottom-wrap">
                         <div class="sec02-bottom-wrap-col fadeup">
                             <div class="sec02-bottom-wrap-col-img">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/first/sec02-bottom-01.jpg" alt="">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/first/sec02-bottom-01_v2.jpg" alt="">
                                 <div class="sec02-bottom-wrap-col-img-num">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/first/sec02-bottom-num-01.svg" alt="01">
                                 </div>
@@ -196,7 +196,7 @@
                         </div>
                         <div class="sec02-bottom-wrap-col fadeup">
                             <div class="sec02-bottom-wrap-col-img">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/first/sec02-bottom-02.jpg" alt="">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/first/sec02-bottom-02_v2.jpg" alt="">
                                 <div class="sec02-bottom-wrap-col-img-num">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/first/sec02-bottom-num-02.svg" alt="02">
                                 </div>
@@ -212,7 +212,7 @@
                         </div>
                         <div class="sec02-bottom-wrap-col fadeup">
                             <div class="sec02-bottom-wrap-col-img">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/first/sec02-bottom-03.jpg" alt="">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/first/sec02-bottom-03_v2.jpg" alt="">
                                 <div class="sec02-bottom-wrap-col-img-num">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/first/sec02-bottom-num-03.svg" alt="03">
                                 </div>
@@ -250,7 +250,7 @@
                 <div class="sec03-wrap fadeup">
                     <div class="sec03-wrap-col">
                         <div class="sec03-wrap-col-img">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/first/sec03-img-01.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/first/sec03-img-01_v2.jpg" alt="">
                         </div>
                         <div class="sec03-wrap-col-txt">
                             <h3>受付・リストバンド<br class="hidden-mobile">登録</h3>
@@ -269,7 +269,7 @@
                     </div>
                     <div class="sec03-wrap-col">
                         <div class="sec03-wrap-col-img">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/first/sec03-img-02.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/first/sec03-img-02_v2.jpg" alt="">
                         </div>
                         <div class="sec03-wrap-col-txt">
                             <h3>館内着・タオル受取<br class="hidden-mobile">（有料）</h3>
@@ -288,7 +288,7 @@
                     </div>
                     <div class="sec03-wrap-col">
                         <div class="sec03-wrap-col-img">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/first/sec03-img-03.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/first/sec03-img-03_v2.jpg" alt="">
                         </div>
                         <div class="sec03-wrap-col-txt">
                             <h3 class="h3-small">温泉・サウナ・岩盤浴・<br class="hidden-middle">リラクゼーションなどを<br class="hidden-middle">お楽しみください</h3>
@@ -307,7 +307,7 @@
                     </div>
                     <div class="sec03-wrap-col">
                         <div class="sec03-wrap-col-img">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/first/sec03-img-04.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/first/sec03-img-04_v2.jpg" alt="">
                         </div>
                         <div class="sec03-wrap-col-txt">
                             <h3>お食事処でひと息</h3>
@@ -325,7 +325,7 @@
                     </div>
                     <div class="sec03-wrap-col">
                         <div class="sec03-wrap-col-img">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/first/sec03-img-05.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/first/sec03-img-05_v2.jpg" alt="">
                         </div>
                         <div class="sec03-wrap-col-txt">
                             <h3>ご精算・退館</h3>
@@ -414,6 +414,6 @@
     </section>
 
 
-    <?php get_template_part('inc/inc-contact'); ?>
+    <?php get_template_part('./inc/inc-aside'); ?>
 </main>
 <?php get_footer(); ?>

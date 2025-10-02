@@ -7,24 +7,27 @@
       padding-top: 60px;
     }
   }
-  .relative {
+  .area {
     position: relative;
-    overflow: hidden;
     .sec02-icon-01 {
-      width: 350px;
+      width: calc(390 * (100vw / 1360));
       position: absolute;
-      left: -50px;
+      left: -100px;
       top: 80px;
       @include media(middle) {
         width: 150px;
         top: -10px;
       }
     }
+  }
+  .relative {
+    position: relative;
+    overflow: hidden;
     .sec02-icon-02 {
-      width: 350px;
+      width: calc(300 * (100vw / 1360));
       position: absolute;
       right: -50px;
-      bottom: 160px;
+      bottom: 60px;
       @include media(middle) {
         width: 150px;
         bottom: inherit;
@@ -59,10 +62,9 @@
     }
   }
   .sec02 {
-    padding-bottom: 80px;
-    padding-top: 120px;
+    padding-bottom: 40px;
+    padding-top: 0px;
     @include media(middle) {
-      padding-top: 20px;
       padding-bottom: 20px;
     }
   }

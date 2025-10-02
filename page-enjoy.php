@@ -310,7 +310,7 @@ Template Name: enjoy
         </div>
     </section>
     <?php get_template_part('inc/inc-bnr'); ?>
-    <?php get_template_part('inc/inc-contact'); ?>
+    <?php get_template_part('inc/inc-aside'); ?>
 
     <div class="enjoy-fixed">
         <div class="enjoy-fixed-bg enjoy-fixed-btn-close"></div>
@@ -403,7 +403,7 @@ Template Name: enjoy
                 </div>
                 <div class="enjoy-fixed-container-wrap-content">
                     <div class="enjoy-fixed-container-wrap-content-img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-img-03.jpg" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-img-03_v2.jpg" alt="">
                         <div class="enjoy-fixed-container-wrap-content-img-left">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-left-red.png" alt="">
                         </div>
@@ -446,7 +446,7 @@ Template Name: enjoy
                 </div>
                 <div class="enjoy-fixed-container-wrap-content">
                     <div class="enjoy-fixed-container-wrap-content-img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-img-04.jpg" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-img-04_v2.jpg" alt="">
                         <div class="enjoy-fixed-container-wrap-content-img-left">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-left.png" alt="">
                         </div>
@@ -488,7 +488,7 @@ Template Name: enjoy
                 </div>
                 <div class="enjoy-fixed-container-wrap-content">
                     <div class="enjoy-fixed-container-wrap-content-img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-img-05.jpg" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-img-05_v2.jpg" alt="">
                         <div class="enjoy-fixed-container-wrap-content-img-left">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-left-blue.png" alt="">
                         </div>
@@ -573,7 +573,7 @@ Template Name: enjoy
                 </div>
                 <div class="enjoy-fixed-container-wrap-content">
                     <div class="enjoy-fixed-container-wrap-content-img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-img-07.jpg" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-img-07_v2.jpg" alt="">
                         <div class="enjoy-fixed-container-wrap-content-img-left">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-left-green.png" alt="">
                         </div>
@@ -605,7 +605,7 @@ Template Name: enjoy
                 </div>
                 <div class="enjoy-fixed-container-wrap-content">
                     <div class="enjoy-fixed-container-wrap-content-img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-img-08.jpg" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-img-08_v2.jpg" alt="">
                         <div class="enjoy-fixed-container-wrap-content-img-left">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-left-green.png" alt="">
                         </div>

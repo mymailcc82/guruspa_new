@@ -238,8 +238,8 @@
               align-items: center;
             }
             &:hover {
-              cursor: pointer;
-              opacity: 0.5;
+              //cursor: pointer;
+              //opacity: 0.5;
             }
             &.active {
               &:after {
@@ -468,7 +468,7 @@
           }
         }
         p {
-          font-size: 16px;
+          font-size: 14px;
           line-height: 1.8;
           margin: 0px;
           padding: 10px 30px;

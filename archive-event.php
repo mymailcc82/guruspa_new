@@ -238,7 +238,7 @@ if (isset($_GET['event_tag'])) {
 
     </section>
     <?php get_template_part('inc/inc-bnr-full'); ?>
-    <?php get_template_part('inc/inc-contact'); ?>
+    <?php get_template_part('inc/inc-aside'); ?>
 
 
 </main>

@@ -56,8 +56,8 @@ Template Name: enjoy-food
                 </div>
                 <div class="enjoy-wrap-img">
                     <ul>
-                        <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec01-img-01.jpg" alt=""></li>
-                        <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec01-img-02.jpg" alt=""></li>
+                        <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec01-img-01_v2.jpg" alt=""></li>
+                        <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec01-img-02_v2.jpg" alt=""></li>
                     </ul>
                 </div>
             </div>
@@ -130,7 +130,7 @@ Template Name: enjoy-food
                         <section class="sec03" id="sec03">
                             <div class="content-width-sm content-width--mobile-full">
                                 <div class="sec03-img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec03-img-01.jpg" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec03-img-01_v2.jpg" alt="">
                                 </div>
                                 <div class="page-title-center--has-icon">
                                     <h2><i></i>味へのこだわり</h2>
@@ -151,19 +151,19 @@ Template Name: enjoy-food
                                 <div class="sec04-wrap">
                                     <div class="sec04-wrap-col">
                                         <div class="sec04-wrap-col-img">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec04-img-01.jpg" alt="">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec04-img-01_v2.jpg" alt="">
                                         </div>
                                         <p>カウンター席</p>
                                     </div>
                                     <div class="sec04-wrap-col">
                                         <div class="sec04-wrap-col-img">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec04-img-02.jpg" alt="">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec04-img-02_v2.jpg" alt="">
                                         </div>
                                         <p>テーブル席</p>
                                     </div>
                                     <div class="sec04-wrap-col">
                                         <div class="sec04-wrap-col-img">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec04-img-03.jpg" alt="">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec04-img-03_v2.jpg" alt="">
                                         </div>
                                         <p>特別ご予約席</p>
                                     </div>
@@ -324,7 +324,7 @@ Template Name: enjoy-food
                             <div class="sec03-wrap fadeup-timelug">
                                 <div class="sec03-wrap-col fadeup-item">
                                     <div class="sec03-wrap-col-img">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec06-img-01.jpg" alt="">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec06-img-01_v2.jpg" alt="">
                                     </div>
                                     <p>
                                         食券発券機にてご注文ください。
@@ -332,7 +332,7 @@ Template Name: enjoy-food
                                 </div>
                                 <div class="sec03-wrap-col fadeup-item">
                                     <div class="sec03-wrap-col-img">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec06-img-01.jpg" alt="">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec06-img-02_v2.jpg" alt="">
                                     </div>
                                     <p>
                                         発行された食券を食券受取カウンターにお渡しください。呼び出しベルをお渡ししますので、お席にてお待ちください。
@@ -340,7 +340,7 @@ Template Name: enjoy-food
                                 </div>
                                 <div class="sec03-wrap-col fadeup-item">
                                     <div class="sec03-wrap-col-img">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec06-img-01.jpg" alt="">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec06-img-03_v2.jpg" alt="">
                                     </div>
                                     <p>
                                         呼び出しベルが鳴りましたら食べ物お渡しカウンターへベルをお持ちください。
@@ -348,7 +348,7 @@ Template Name: enjoy-food
                                 </div>
                                 <div class="sec03-wrap-col fadeup-item">
                                     <div class="sec03-wrap-col-img">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec06-img-01.jpg" alt="">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec06-img-04_v2.jpg" alt="">
                                     </div>
                                     <p>
                                         お食事が終わりましたら食器等を返却口までお返しください。<br>
@@ -386,7 +386,7 @@ Template Name: enjoy-food
 
                                 </div>
                                 <div class="sec07-wrap-right">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec07-img-01.jpg" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec07-img-01_v2.jpg" alt="">
                                 </div>
                             </div>
                         </div>
@@ -445,7 +445,7 @@ Template Name: enjoy-food
                         <section class="sec03" id="sec08">
                             <div class="content-width-sm content-width--mobile-full">
                                 <div class="sec03-img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec08-img-01.jpg" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec08-img-01_v2.jpg" alt="">
                                 </div>
                                 <div class="page-title-center--has-icon">
                                     <h2><i></i>甘味処としてのこだわり</h2>
@@ -472,43 +472,43 @@ Template Name: enjoy-food
                                 <div class="sec04-swiper-wrapper">
                                     <div class="sec04-wrap-swiper-slide">
                                         <div class="sec04-wrap-swiper-slide-img">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec09-img-01.jpg" alt="">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec09-img-01_v2.jpg" alt="">
                                         </div>
                                     </div>
                                     <div class="sec04-wrap-swiper-slide">
                                         <div class="sec04-wrap-swiper-slide-img">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec09-img-02.jpg" alt="">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec09-img-02_v2.jpg" alt="">
                                         </div>
                                     </div>
                                     <div class="sec04-wrap-swiper-slide">
                                         <div class="sec04-wrap-swiper-slide-img">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec09-img-03.jpg" alt="">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec09-img-03_v2.jpg" alt="">
                                         </div>
                                     </div>
                                     <div class="sec04-wrap-swiper-slide">
                                         <div class="sec04-wrap-swiper-slide-img">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec09-img-04.jpg" alt="">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec09-img-04_v2.jpg" alt="">
                                         </div>
                                     </div>
 
                                     <div class="sec04-wrap-swiper-slide">
                                         <div class="sec04-wrap-swiper-slide-img">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec09-img-01.jpg" alt="">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec09-img-01_v2.jpg" alt="">
                                         </div>
                                     </div>
                                     <div class="sec04-wrap-swiper-slide">
                                         <div class="sec04-wrap-swiper-slide-img">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec09-img-02.jpg" alt="">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec09-img-02_v2.jpg" alt="">
                                         </div>
                                     </div>
                                     <div class="sec04-wrap-swiper-slide">
                                         <div class="sec04-wrap-swiper-slide-img">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec09-img-03.jpg" alt="">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec09-img-03_v2.jpg" alt="">
                                         </div>
                                     </div>
                                     <div class="sec04-wrap-swiper-slide">
                                         <div class="sec04-wrap-swiper-slide-img">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec09-img-04.jpg" alt="">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec09-img-04_v2.jpg" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -688,7 +688,7 @@ Template Name: enjoy-food
 
                                 </div>
                                 <div class="sec07-wrap-right">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec11-img-01.jpg" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec11-img-01_v2.jpg" alt="">
                                 </div>
                             </div>
                         </div>
@@ -698,7 +698,7 @@ Template Name: enjoy-food
             </div>
         </div>
     </div>
-    <?php get_template_part('inc/inc-contact'); ?>
+    <?php get_template_part('inc/inc-aside'); ?>
 
 
 </main>

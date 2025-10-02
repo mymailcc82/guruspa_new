@@ -256,7 +256,7 @@
                             <dt>会員平日入泉回数券<br class="hidden-middle">(11枚)</dt>
                             <dd>
                                 <p>
-                                    200<span>円</span><br>
+                                    8,800<span>円</span><br>
                                     <small>※1枚あたり800円</small>
                                 </p>
                             </dd>
@@ -506,131 +506,134 @@
                 <div class="page-title--has-icon">
                     <h2><i></i>ご利用案内</h2>
                 </div>
-                <div class="sec03-container">
-                    <div class="sec03-wrap">
-                        <div class="sec03-wrap-col">
-                            <div class="sec03-wrap-col-img">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/guide/sec03-img-01.jpg" alt="">
+                <div class="sec03-main">
+                    <div class="sec03-container">
+                        <div class="sec03-wrap">
+                            <div class="sec03-wrap-col">
+                                <div class="sec03-wrap-col-img">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/guide/sec03-img-01_v2.jpg" alt="">
+                                </div>
+                                <p>
+                                    入館時は<span>券売機または受付でのチェックイン</span>をお願いいたします。
+                                </p>
                             </div>
-                            <p>
-                                入館時は<span>券売機または受付でのチェックイン</span>をお願いいたします。
-                            </p>
-                        </div>
-                        <div class="sec03-wrap-col">
-                            <div class="sec03-wrap-col-img">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/guide/sec03-img-02.jpg" alt="">
+                            <div class="sec03-wrap-col">
+                                <div class="sec03-wrap-col-img">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/guide/sec03-img-02_v2.jpg" alt="">
+                                </div>
+                                <p>
+                                    発汗エリア（岩盤浴）は<span>別料金・専用ウェア着用必須です。</span>
+                                </p>
                             </div>
-                            <p>
-                                発汗エリア（岩盤浴）は<span>別料金・専用ウェア着用必須です。</span>
-                            </p>
+                        </div>
+                        <div class="com-btn-border-black hidden-mobile">
+                            <a href="<?php echo home_url(); ?>/first-time/">初めてのお客様へ<i class="icon-green"></i></a>
+                        </div>
+                        <div class="com-btn-mobile hidden-sm">
+                            <a href="<?php echo home_url(); ?>/first-time/">初めてのお客様へ<i class="icon-green"></i></a>
                         </div>
                     </div>
-                    <div class="com-btn-border-black hidden-mobile">
-                        <a href="<?php echo home_url(); ?>/first-time/">初めてのお客様へ<i class="icon-green"></i></a>
-                    </div>
-                    <div class="com-btn-mobile hidden-sm">
-                        <a href="<?php echo home_url(); ?>/first-time/">初めてのお客様へ<i class="icon-green"></i></a>
-                    </div>
-                </div>
-                <div class="sec03-container">
-                    <div class="page-title--has-icon page-title--has-icon--mobile-20">
-                        <h2><i></i>ご利用いただけない方</h2>
-                    </div>
-                    <div class="sec03-col">
-                        <div class="sec03-col-img">
-                            <picture>
-                                <source media="(max-width: 601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/guide/sec03-img-03-sp.jpg">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/guide/sec03-img-03.jpg" alt="">
-                            </picture>
+                    <div class="sec03-container">
+                        <div class="page-title--has-icon page-title--has-icon--mobile-20">
+                            <h2><i></i>ご利用いただけない方</h2>
                         </div>
-                        <div class="sec03-col-txt">
-                            <ul>
-                                <li>刺青・タトゥー（シール含む）のある方</li>
-                                <li>泥酔状態の方、伝染病・皮膚病等の疾患をお持ちの方</li>
-                                <li>暴力団関係者や反社会的勢力に属する方</li>
-                            </ul>
+                        <div class="sec03-col">
+                            <div class="sec03-col-img">
+                                <picture>
+                                    <source media="(max-width: 601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/guide/sec03-img-03-sp.jpg">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/guide/sec03-img-03.jpg" alt="">
+                                </picture>
+                            </div>
+                            <div class="sec03-col-txt">
+                                <ul>
+                                    <li>刺青・タトゥー（シール含む）のある方</li>
+                                    <li>泥酔状態の方、伝染病・皮膚病等の疾患をお持ちの方</li>
+                                    <li>暴力団関係者や反社会的勢力に属する方</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="sec03-container">
-                    <div class="page-title--has-icon page-title--has-icon--mobile-20">
-                        <h2><i></i>年齢制限・お子様のご利用</h2>
-                    </div>
-                    <div class="sec03-col">
-                        <div class="sec03-col-img">
-                            <picture>
-                                <source media="(max-width: 601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/guide/sec03-img-04-sp.jpg">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/guide/sec03-img-04.jpg" alt="">
-                            </picture>
+                    <div class="sec03-container">
+                        <div class="page-title--has-icon page-title--has-icon--mobile-20">
+                            <h2><i></i>年齢制限・お子様のご利用</h2>
                         </div>
-                        <div class="sec03-col-txt">
-                            <ul>
-                                <li>小学生以下のお子様は必ず保護者の同伴が必要です。</li>
-                                <li>中学生以下のお客様は<span>21:00までのご利用</span>となります。</li>
-                                <li>身長120cm以上のお子様は混浴禁止（条例に準じます）。</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="sec03-container">
-                    <div class="page-title--has-icon page-title--has-icon--mobile-20">
-                        <h2><i></i>館内マナー・禁止事項</h2>
-                    </div>
-                    <div class="sec03-col">
-                        <div class="sec03-col-img">
-                            <picture>
-                                <source media="(max-width: 601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/guide/sec03-img-05-sp.jpg">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/guide/sec03-img-05.jpg" alt="">
-                            </picture>
-                        </div>
-                        <div class="sec03-col-txt">
-                            <ul>
-                                <li>指定場所以外での喫煙は禁止です。</li>
-                                <li>飲食物の持ち込みはご遠慮ください。</li>
-                                <li>浴室・脱衣場での<span>写真撮影・動画撮影は禁止</span>です。</li>
-                                <li>大声・暴力行為・威圧的な言動など、他のお客様の迷惑となる行為はご遠慮ください。当店が悪質と判断した場合はその場で警察に通報させていただきます。</li>
-                            </ul>
+                        <div class="sec03-col">
+                            <div class="sec03-col-img">
+                                <picture>
+                                    <source media="(max-width: 601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/guide/sec03-img-04-sp.jpg">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/guide/sec03-img-04.jpg" alt="">
+                                </picture>
+                            </div>
+                            <div class="sec03-col-txt">
+                                <ul>
+                                    <li>小学生以下のお子様は必ず保護者の同伴が必要です。</li>
+                                    <li>中学生以下のお客様は<span>21:00までのご利用</span>となります。</li>
+                                    <li>身長120cm以上のお子様は混浴禁止（条例に準じます）。</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="sec03-container">
-                    <div class="page-title--has-icon page-title--has-icon--mobile-20">
-                        <h2><i></i>安全・荷物について</h2>
-                    </div>
-                    <div class="sec03-col">
-                        <div class="sec03-col-img">
-                            <picture>
-                                <source media="(max-width: 601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/guide/sec03-img-06-sp.jpg">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/guide/sec03-img-06.jpg" alt="">
-                            </picture>
+                    <div class="sec03-container">
+                        <div class="page-title--has-icon page-title--has-icon--mobile-20">
+                            <h2><i></i>館内マナー・禁止事項</h2>
                         </div>
-                        <div class="sec03-col-txt">
-                            <ul>
-                                <li>館内での怪我・盗難・紛失について、当店に過失がない場合は責任を負いかねます。</li>
-                                <li>忘れ物は一定期間保管後、貴重品は警察へ届け、それ以外は廃棄いたします。</li>
-                            </ul>
+                        <div class="sec03-col">
+                            <div class="sec03-col-img">
+                                <picture>
+                                    <source media="(max-width: 601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/guide/sec03-img-05-sp.jpg">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/guide/sec03-img-05.jpg" alt="">
+                                </picture>
+                            </div>
+                            <div class="sec03-col-txt">
+                                <ul>
+                                    <li>指定場所以外での喫煙は禁止です。</li>
+                                    <li>飲食物の持ち込みはご遠慮ください。</li>
+                                    <li>浴室・脱衣場での<span>写真撮影・動画撮影は禁止</span>です。</li>
+                                    <li>大声・暴力行為・威圧的な言動など、他のお客様の迷惑となる行為はご遠慮ください。当店が悪質と判断した場合はその場で警察に通報させていただきます。</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="sec03-container">
-                    <div class="page-title--has-icon page-title--has-icon--mobile-20">
-                        <h2><i></i>その他</h2>
-                    </div>
-                    <div class="sec03-col">
-                        <div class="sec03-col-img">
-                            <picture>
-                                <source media="(max-width: 601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/guide/sec03-img-07-sp.jpg">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/guide/sec03-img-07.jpg" alt="">
-                            </picture>
+                    <div class="sec03-container">
+                        <div class="page-title--has-icon page-title--has-icon--mobile-20">
+                            <h2><i></i>安全・荷物について</h2>
                         </div>
-                        <div class="sec03-col-txt">
-                            <ul>
-                                <li>設備点検等により臨時休館となる場合があります。その際は「お知らせ」にてご案内します。</li>
-                                <li>やむを得ない事情により営業時間を変更する場合があります。</li>
-                            </ul>
+                        <div class="sec03-col">
+                            <div class="sec03-col-img">
+                                <picture>
+                                    <source media="(max-width: 601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/guide/sec03-img-06-sp.jpg">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/guide/sec03-img-06.jpg" alt="">
+                                </picture>
+                            </div>
+                            <div class="sec03-col-txt">
+                                <ul>
+                                    <li>館内での怪我・盗難・紛失について、当店に過失がない場合は責任を負いかねます。</li>
+                                    <li>忘れ物は一定期間保管後、貴重品は警察へ届け、それ以外は廃棄いたします。</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sec03-container">
+                        <div class="page-title--has-icon page-title--has-icon--mobile-20">
+                            <h2><i></i>その他</h2>
+                        </div>
+                        <div class="sec03-col">
+                            <div class="sec03-col-img">
+                                <picture>
+                                    <source media="(max-width: 601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/guide/sec03-img-07-sp.jpg">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/guide/sec03-img-07.jpg" alt="">
+                                </picture>
+                            </div>
+                            <div class="sec03-col-txt">
+                                <ul>
+                                    <li>設備点検等により臨時休館となる場合があります。その際は「お知らせ」にてご案内します。</li>
+                                    <li>やむを得ない事情により営業時間を変更する場合があります。</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
+
 
                 <div class="com-btn-border-black hidden-mobile">
                     <a href="<?php echo home_url(); ?>/faq/">よくある質問はこちら<i class="icon-green"></i></a>
@@ -676,6 +679,6 @@
 
 
     <?php get_template_part('inc/inc-bnr'); ?>
-    <?php get_template_part('inc/inc-contact'); ?>
+    <?php get_template_part('inc/inc-aside'); ?>
 </main>
 <?php get_footer(); ?>

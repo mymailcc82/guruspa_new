@@ -30,6 +30,10 @@
 @use 'else';
 
 @use 'contact';
+@use 'entry';
+
+@use 'recruit_top';
+@use 'recruit';
 
 @use 'schedule';
 
@@ -37,3 +41,5 @@
 @use 'common';
 
 @use 'faq';
+
+@use 'aside';

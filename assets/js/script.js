@@ -33,25 +33,20 @@ $('.accordion dl dt').on('click', function () {
 
 // footer-accordion 専用 (SPだけでスライド)
 $(function () {
-  $('.footer-accordion-switch').on('click', function() {
-  const $dd = $(this).next('dd');
-  const isActive = $dd.hasClass('active');
+  $('.footer-accordion-switch').on('click', function () {
+    const $dd = $(this).next('dd');
+    const isActive = $dd.hasClass('active');
 
-  if (!isActive) {
-    const h = $dd.prop('scrollHeight');
-    $dd.css('max-height', h + 'px');
-    $dd.addClass('active');
-  } else {
-    $dd.css('max-height', 0);
-    $dd.removeClass('active');
-  }
+    if (!isActive) {
+      const h = $dd.prop('scrollHeight');
+      $dd.css('max-height', h + 'px');
+      $dd.addClass('active');
+    } else {
+      $dd.css('max-height', 0);
+      $dd.removeClass('active');
+    }
+  });
 });
-});
-
-
-
-
-
 
 //.mwform-checkbox-fieldの.mwform-checkbox-field-textに<a href="/privacy" target="_blank" class="contact_inner_form-link">個人情報保護方針</a>に同意する'を追加
 $(document).ready(function () {
@@ -61,18 +56,21 @@ $(document).ready(function () {
   );
 });
 
-$('.header-btn').on('click', function () {
-  $('.header-btn').toggleClass('header-btn-active');
-  $('.header-drawer').toggleClass('header-drawer-active');
-  $('.body').toggleClass('body-drawer');
-});
+
 
 //header-drawerのaタグがクリックされたら、.header-drawerからactiveを削除
-$('.header-drawer a').on('click', function () {
-  $('.header-btn').removeClass('header-btn-active');
-  $('.header-drawer').removeClass('header-drawer-active');
-  $('.body').removeClass('body-drawer');
+$('.header-btn').on('click', function () {
+  $(this).toggleClass('header-btn-active');
+  $('.new-drawer').toggleClass('header-drawer-active');
+  $('body').toggleClass('body-drawer');
 });
+
+$('.header-btn').on('click', function () {
+  $(this).toggleClass('is-open');                // ← header-btn-active ではなく is-open
+  $('.header-drawer').toggleClass('drawer-open'); // ← header-drawer-active ではなく drawer-open
+  $('body').toggleClass('body-drawer-open');      // ← body-drawer ではなく body-drawer-open
+});
+
 
 $('.footer-link-btn').on('click', function () {
   $(this).toggleClass('footer-link-btn-active');
@@ -258,28 +256,25 @@ $(function () {
   function moveSlideBg(target) {
     const index = target.parent().index();
     const left = index * 33.333; // liの幅に合わせて移動
-    $(".slide-bg").css("left", left + "%");
+    $('.slide-bg').css('left', left + '%');
   }
 
-  $(".tab a").on("click", function () {
-    var idName = $(this).data("id");
-    $(".tab li").removeClass("active");
-    $(this).parent().addClass("active");
+  $('.tab a').on('click', function () {
+    var idName = $(this).data('id');
+    $('.tab li').removeClass('active');
+    $(this).parent().addClass('active');
 
     // 背景スライド移動
     moveSlideBg($(this));
 
-    $(".area").removeClass("is-active");
-    $(idName).addClass("is-active");
+    $('.area').removeClass('is-active');
+    $(idName).addClass('is-active');
     return false;
   });
 
   // 初期表示（すべて）
-  moveSlideBg($(".tab li.active a"));
+  moveSlideBg($('.tab li.active a'));
 });
-
-
-
 
 //enjoy .popup-btnが押されたら、data-idからidを取得して、.popupにactiveを追加
 $(document).ready(function () {
@@ -339,4 +334,48 @@ $(document).ready(function () {
     $('.goods-fixed').removeClass('goods-fixed-active');
     $('.goods-fixed-container-wrap').fadeOut(0);
   });
+});
+
+//読み込み時$('input[name="location[]"]')がからなら.location_reset_buttonに.activeをつける
+$(document).ready(function () {
+  if ($('input[name="location[]"]:checked').length === 0) {
+    $('.location_reset_button').addClass('active');
+  } else {
+    $('.location_reset_button').removeClass('active');
+  }
+});
+
+$('input[type="checkbox"]').on('change', function () {
+  const value = $(this).val();
+  const checked = $(this).prop('checked');
+
+  // 同じvalueのcheckboxを連動させる
+  $('input[type="checkbox"]')
+    .filter(function () {
+      return $(this).val() === value;
+    })
+    .prop('checked', checked);
+});
+
+//.reset-btnが押されたら.recruit-formのcheckboxをリセット
+$('.reset-btn').on('click', function () {
+  $('.recruit-form input[type="checkbox"]').prop('checked', false);
+});
+
+$('.filter_button_trigger input').on('click', function () {
+  //.location_reset buttonのtoggleclass active
+  $('.location_reset_button').removeClass('active');
+});
+//location_reset_buttonが押されたら
+$('.location_reset_button').on('click', function () {
+  //formの送信はしない
+
+  $('.location_reset_button').toggleClass('active');
+
+  //location[]の中身を全てcheck外す
+  $('input[name="location[]"]').prop('checked', false);
+
+  // .filter_button_triggerのinputをすべて非選択にする
+  $('.filter_button_trigger input').prop('checked', false);
+  // .filter_button_triggerのinputのvalueをallにする
 });

@@ -55,8 +55,8 @@ Template Name: enjoy-goods
                 </div>
                 <div class="enjoy-wrap-img">
                     <ul>
-                        <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/goods/sec01-img-01.jpg" alt=""></li>
-                        <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/goods/sec01-img-02.jpg" alt=""></li>
+                        <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/goods/sec01-img-01_v2.jpg" alt=""></li>
+                        <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/goods/sec01-img-02_v2.jpg" alt=""></li>
                     </ul>
                 </div>
             </div>
@@ -295,7 +295,7 @@ Template Name: enjoy-goods
         <div class="page-bg-deco-bg-bottom-red"></div>
 
     </section>
-    <?php get_template_part('inc/inc-contact'); ?>
+    <?php get_template_part('inc/inc-aside'); ?>
 
 
 

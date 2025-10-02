@@ -117,7 +117,11 @@
       .sec01-center-wrap {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        gap: 30px;
+        @include media(middle) {
+          gap: 20px;
+          justify-content: center;
+        }
         .sec01-center-wrap-col {
           width: 31%;
           border: 1px solid #707070;
@@ -440,6 +444,10 @@
             color: #e81e23;
             font-weight: bold;
             letter-spacing: 0.1em;
+            @include media(mobile) {
+              font-size: 14px;
+              line-height: 1.8;
+            }
           }
         }
       }
@@ -506,6 +514,9 @@
                 color: #e81e23;
                 font-weight: bold;
                 letter-spacing: 0.1em;
+                @include media(middle) {
+                  font-size: 14px;
+                }
               }
             }
           }
@@ -585,6 +596,10 @@
     flex-wrap: wrap;
     align-items: stretch;
     margin-top: 50px;
+    background-color: #fff;
+    @include media(mobile) {
+      padding-bottom: 30px;
+    }
 
     .infoWindowBox.s_current {
       display: none;

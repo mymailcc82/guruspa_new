@@ -7,6 +7,54 @@
     }
   }
   .sec02 {
+    position: relative;
+    overflow: hidden;
+    .sec02-icon-01 {
+      width: calc(390 * (100vw / 1360));
+      position: absolute;
+      left: -100px;
+      top: 80px;
+      @include media(middle) {
+        width: 150px;
+        top: 40px;
+      }
+    }
+    .sec02-icon-02 {
+      width: 350px;
+      position: absolute;
+      right: -50px;
+      bottom: 160px;
+      @include media(middle) {
+        width: 150px;
+        bottom: 50px;
+      }
+    }
+    .sec02-icon-03 {
+      width: 102px;
+      position: absolute;
+      left: 90px;
+      bottom: 250px;
+      z-index: 2;
+      @include media(middle) {
+        display: none;
+      }
+      img {
+        width: 100%;
+      }
+    }
+    .sec02-icon-04 {
+      width: 102px;
+      position: absolute;
+      right: 90px;
+      bottom: 30%;
+      z-index: 2;
+      @include media(middle) {
+        display: none;
+      }
+      img {
+        width: 100%;
+      }
+    }
     .sec03-wrap {
       flex-wrap: wrap;
       display: flex;
@@ -230,10 +278,17 @@
       justify-content: space-between;
       position: relative;
       z-index: 2;
+      &.fadeup-timelug-active {
+        &:before {
+          width: 100% !important;
+          opacity: 1 !important;
+        }
+      }
       &:before {
-        width: 100%;
+        width: 0%;
         height: 20px;
         background-color: #f4ba1d;
+        transition: all 2.5s;
         content: '';
         display: block;
         position: absolute;
@@ -315,7 +370,7 @@
     .sec04-wrap-yellow-2-1 {
       display: flex;
       flex-wrap: wrap;
-      margin-top: 60px;
+      margin-top: 0px;
       .sec04-wrap-yellow-2-1-left {
         width: 50%;
         position: relative;
@@ -366,9 +421,9 @@
               color: var(--color-black);
               font-size: 20px;
               font-weight: bold;
+              margin-bottom: 5px;
               @include media(middle) {
                 text-align: center;
-                margin-bottom: 5px;
               }
             }
             dd {
@@ -452,7 +507,7 @@
       }
     }
     .sec06-top {
-      margin-bottom: 60px;
+      margin-bottom: 120px;
       .sec01-col-main {
         margin-bottom: 30px;
         ul {
@@ -807,7 +862,7 @@
           position: relative;
           font-size: 20px;
           font-weight: 600;
-          margin-bottom: 20px;
+          margin-bottom: 35px;
           @include media(middle) {
             font-size: 14px;
             margin-bottom: 15px;

@@ -7,24 +7,27 @@
       }
     }
   }
-  .relative {
+  .area {
     position: relative;
-    overflow: hidden;
     .sec02-icon-01 {
-      width: 350px;
+      width: calc(390 * (100vw / 1360));
       position: absolute;
-      left: -50px;
+      left: -100px;
       top: 80px;
       @include media(middle) {
         width: 150px;
         top: -10px;
       }
     }
+  }
+  .relative {
+    position: relative;
+    overflow: hidden;
     .sec02-icon-02 {
-      width: 350px;
+      width: calc(300 * (100vw / 1360));
       position: absolute;
       right: -50px;
-      bottom: 160px;
+      bottom: -40px;
       @include media(middle) {
         width: 150px;
         bottom: inherit;
@@ -238,8 +241,10 @@
     }
     .sec05-pdf {
       width: 100%;
-      max-width: 500px;
-      height: 700px;
+      max-width: 580px;
+      overflow: hidden;
+      //height: 750px;
+      //max-width: 500px;
       background-color: #eeeeee;
       margin: 30px auto 30px;
       border-radius: 30px;
@@ -256,8 +261,16 @@
       justify-content: space-between;
       position: relative;
       z-index: 2;
+      &.fadeup-timelug-active {
+        &:before {
+          width: 100% !important;
+          opacity: 1 !important;
+        }
+      }
       &:before {
-        width: 100%;
+        width: 0%;
+        opacity: 0;
+        transition: all 2.5s;
         height: 20px;
         background-color: #f4ba1d;
         content: '';

@@ -57,7 +57,7 @@ Template Name: enjoy-sauna
                 </div>
                 <div class="enjoy-wrap-img">
                     <ul>
-                        <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/sauna/sec01-img-01.jpg" alt=""></li>
+                        <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/sauna/sec01-img-01_v2.jpg" alt=""></li>
                         <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/sauna/sec01-img-02.jpg" alt=""></li>
                     </ul>
                 </div>
@@ -115,7 +115,7 @@ Template Name: enjoy-sauna
                 <div class="sec03-wrap">
                     <div class="sec03-wrap-col">
                         <div class="sec03-wrap-col-left">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sauna/sec02-img-01.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sauna/sec02-img-01_v2.jpg" alt="">
                         </div>
                         <div class="sec03-wrap-col-right">
                             <h3>オートロウリュ完備</h3>
@@ -126,7 +126,7 @@ Template Name: enjoy-sauna
                     </div>
                     <div class="sec03-wrap-col">
                         <div class="sec03-wrap-col-left">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sauna/sec02-img-02.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sauna/sec02-img-02_v2.jpg" alt="">
                         </div>
                         <div class="sec03-wrap-col-right">
                             <h3>熱波師によるアウフグース</h3>
@@ -137,7 +137,7 @@ Template Name: enjoy-sauna
                     </div>
                     <div class="sec03-wrap-col">
                         <div class="sec03-wrap-col-left">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sauna/sec02-img-03.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sauna/sec02-img-03_v2.jpg" alt="">
                         </div>
                         <div class="sec03-wrap-col-right">
                             <h3>水風呂バリエーション</h3>
@@ -148,7 +148,7 @@ Template Name: enjoy-sauna
                     </div>
                     <div class="sec03-wrap-col">
                         <div class="sec03-wrap-col-left">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sauna/sec02-img-04.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sauna/sec02-img-04_v2.jpg" alt="">
                         </div>
                         <div class="sec03-wrap-col-right">
                             <h3>初心者も安心</h3>
@@ -174,7 +174,7 @@ Template Name: enjoy-sauna
         </div>
         <div class="sec04-container">
             <div class="sec04-bg">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sauna/sec04-bg-01.jpg" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sauna/sec04-bg-01_v2.jpg" alt="">
             </div>
             <div class="sec04-wrap" id="hot">
                 <h3>ドライサウナ（高温サウナ）</h3>
@@ -195,7 +195,7 @@ Template Name: enjoy-sauna
                 </div>
                 <div class="sec04-wrap-yellow-2-1">
                     <div class="sec04-wrap-yellow-2-1-left">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sauna/sec04-img-01.jpg" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sauna/sec04-img-01_v2.jpg" alt="">
                     </div>
                     <div class="sec04-wrap-yellow-2-1-right">
                         <p>
@@ -219,7 +219,7 @@ Template Name: enjoy-sauna
                 <div class="sec03-wrap fadeup-timelug">
                     <div class="sec03-wrap-col fadeup-item">
                         <div class="sec03-wrap-col-img">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sauna/sec04-img-02.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sauna/sec04-img-02_v2.jpg" alt="">
                         </div>
                         <p>
                             5〜10分入って汗を出します。
@@ -227,7 +227,7 @@ Template Name: enjoy-sauna
                     </div>
                     <div class="sec03-wrap-col fadeup-item">
                         <div class="sec03-wrap-col-img">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sauna/sec04-img-03.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sauna/sec04-img-03_v2.jpg" alt="">
                         </div>
                         <p>
                             塩を大さじ3杯ほど軽く押し付けるようにつけます。
@@ -235,7 +235,7 @@ Template Name: enjoy-sauna
                     </div>
                     <div class="sec03-wrap-col fadeup-item">
                         <div class="sec03-wrap-col-img">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sauna/sec04-img-04.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sauna/sec04-img-04_v2.jpg" alt="">
                         </div>
                         <p>
                             塩が溶けたら優しくマッサージします。
@@ -243,7 +243,7 @@ Template Name: enjoy-sauna
                     </div>
                     <div class="sec03-wrap-col fadeup-item">
                         <div class="sec03-wrap-col-img">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sauna/sec04-img-05.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sauna/sec04-img-05_v2.jpg" alt="">
                         </div>
                         <p>
                             シャワーで洗い流し、仕上げに上り湯でコーティング。
@@ -266,7 +266,7 @@ Template Name: enjoy-sauna
             <div class="sec05-wrap">
                 <div class="sec05-wrap-col">
                     <div class="sec05-wrap-col-img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sauna/sec05-img-01.jpg" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sauna/sec05-img-01_v2.jpg" alt="">
                     </div>
                     <div class="sec05-wrap-col-txt">
                         <h3>外気浴エリア</h3>
@@ -277,7 +277,7 @@ Template Name: enjoy-sauna
                 </div>
                 <div class="sec05-wrap-col">
                     <div class="sec05-wrap-col-img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sauna/sec05-img-02.jpg" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sauna/sec05-img-02_v2.jpg" alt="">
                     </div>
                     <div class="sec05-wrap-col-txt">
                         <h3>室内スペース</h3>
@@ -288,7 +288,7 @@ Template Name: enjoy-sauna
                 </div>
                 <div class="sec05-wrap-col">
                     <div class="sec05-wrap-col-img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sauna/sec05-img-03.jpg" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sauna/sec05-img-03_v2.jpg" alt="">
                     </div>
                     <div class="sec05-wrap-col-txt">
                         <h3>ととのいイス</h3>
@@ -425,7 +425,9 @@ Template Name: enjoy-sauna
                     <div class="sec06-bottom-col">
                         <div class="sec-01-col-under">
                             <a href="<?php echo home_url(); ?>/today/">
-                                <div class="sec-01-col-under-img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/bnr/page-bnr-today-img.jpg" alt=""></div>
+                                <div class="sec-01-col-under-img">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/bnr/page-bnr-today-img_v2.jpg" alt="">
+                                </div>
                                 <div class="sec-01-col-under-title">
                                     <h3><img src="<?php echo get_template_directory_uri(); ?>/assets/img/bnr/page-bnr-today-txt.png" alt="EVENT SCHEDULE"><i class="icon-btn"></i></h3>
                                     <p>本日開催しているイベントをチェック！</p>
@@ -436,7 +438,7 @@ Template Name: enjoy-sauna
                     <div class="sec06-bottom-col">
                         <div class="sec-01-col-under">
                             <a href="<?php echo home_url(); ?>/schedule/">
-                                <div class="sec-01-col-under-img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/bnr/page-bnr-event-img.jpg" alt=""></div>
+                                <div class="sec-01-col-under-img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/bnr/page-bnr-schedule-img_v2.jpg" alt=""></div>
                                 <div class="sec-01-col-under-title">
                                     <h3><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/title-event-schedule_v2.png" alt="EVENT SCHEDULE"><i class="icon-btn"></i></h3>
                                     <p>イベントはこちらをチェック！</p>
@@ -530,7 +532,7 @@ Template Name: enjoy-sauna
     </section>
 
 
-    <?php get_template_part('inc/inc-contact'); ?>
+    <?php get_template_part('inc/inc-aside'); ?>
 
 
 </main>

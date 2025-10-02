@@ -3,6 +3,7 @@
 .hakkan {
   .sec01 {
   }
+
   .sec02 {
     padding-bottom: 100px;
     .sec02-wrap {
@@ -522,6 +523,10 @@
       }
     }
     .sec04-bottom {
+      margin-top: 65px;
+      @include media(middle) {
+        margin-top: 30px;
+      }
       h3 {
         text-align: center;
         margin-bottom: 30px;
@@ -556,12 +561,13 @@
       }
       ul {
         li {
-          padding-left: 50px;
+          padding-left: 55px;
+          letter-spacing: 0.1em;
           position: relative;
           font-size: 20px;
-          font-weight: 600;
+          font-weight: 500;
           line-height: 1.45;
-          margin-bottom: 30px;
+          margin-bottom: 35px;
           @include media(middle) {
             font-size: 14px;
             padding-left: 40px;
@@ -615,7 +621,7 @@
         }
         p {
           font-size: 16px;
-          font-weight: 500;
+          font-weight: 400;
           margin: 10px 0px 0px;
           color: #fff;
           letter-spacing: 0.1em;
@@ -662,15 +668,19 @@
       overflow: hidden;
       width: 100%;
       padding: 40px 0px;
+      margin-bottom: 60px;
+      @include media(middle) {
+        margin-bottom: 30px;
+      }
       ul {
         display: flex;
-        width: 200vw;
+        width: calc(343px * 12);
         animation: slide 33s linear infinite;
         @include media(middle) {
           width: 2000px;
         }
         li {
-          width: 20vw;
+          width: 343px;
           padding: 0px 15px;
           @include media(middle) {
             width: 20%;
@@ -696,7 +706,7 @@
     h4 {
       text-align: center;
       font-size: 25px;
-      margin-bottom: 30px;
+      margin-bottom: 45px;
     }
     .sec05-bottom {
       display: flex;

@@ -117,13 +117,13 @@
       .sec01-center-wrap {
         display: flex;
         flex-wrap: wrap;
-        gap: 30px;
+        gap: 4%;
         @include media(middle) {
           gap: 20px;
           justify-content: center;
         }
         .sec01-center-wrap-col {
-          width: 31%;
+          width: 48%;
           border: 1px solid #707070;
           overflow: hidden;
           border-radius: 30px;
@@ -404,7 +404,10 @@
       padding-bottom: 60px;
     }
     .sec03-container {
-      margin-bottom: 40px;
+      margin-bottom: 50px;
+      &:nth-of-type(1) {
+        margin-bottom: 80px;
+      }
     }
     .sec03-wrap {
       display: flex;

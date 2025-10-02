@@ -94,6 +94,6 @@ Template Name: お問い合わせ(法人のお客様向け)完了
             </div>
         </div>
     </section>
-    <?php get_template_part('inc/inc-contact'); ?>
+    <?php get_template_part('inc/inc-aside'); ?>
 </main>
 <?php get_footer(); ?>
