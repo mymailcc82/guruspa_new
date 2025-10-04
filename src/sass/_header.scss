@@ -15,7 +15,6 @@
   /* ←背景が出た後0.2秒遅れて動く */
 }
 
-
 .header-drawer {
   position: fixed;
   inset: 0;
@@ -44,7 +43,6 @@
     z-index: 999;
     /* パネルより下、でも背景の上 */
   }
-
 
   .header-drawer-container {
     padding-top: 150px;
@@ -234,7 +232,7 @@
               font-size: 16px;
             }
 
-            @include media(middle){
+            @include media(middle) {
               font-size: 14px;
             }
 
@@ -289,7 +287,7 @@
             font-weight: 500;
             background-color: #3c3636;
 
-            @include media(llg){
+            @include media(llg) {
               font-size: 13px;
             }
           }
@@ -298,7 +296,6 @@
 
       .menu-child-blue {
         dt {
-
           span,
           a {
             color: #214995 !important;
@@ -314,49 +311,46 @@
 
       .menu-child-green {
         dt {
-
           span,
           a {
-            color: #5CB232 !important;
+            color: #5cb232 !important;
           }
         }
 
         dd {
           a {
-            background-color: #5CB232 !important;
+            background-color: #5cb232 !important;
           }
         }
       }
 
       .menu-child-yellow {
         dt {
-
           span,
           a {
-            color: #F4BA1D !important;
+            color: #f4ba1d !important;
           }
         }
 
         dd {
           a {
-            background-color: #F4BA1D !important;
-            color: #3C3636 !important;
+            background-color: #f4ba1d !important;
+            color: #3c3636 !important;
           }
         }
       }
 
       .menu-child-red {
         dt {
-
           span,
           a {
-            color: #E81E23 !important;
+            color: #e81e23 !important;
           }
         }
 
         dd {
           a {
-            background-color: #E81E23 !important;
+            background-color: #e81e23 !important;
           }
         }
       }
@@ -481,7 +475,6 @@
     }
 
     @include media(mobile) {
-
       width: 40px;
       height: 40px;
     }
@@ -586,12 +579,21 @@
 .header-wrap-bg {
   position: absolute;
   left: 50%;
-  bottom: 1px;
-  transform: translate(-50%, 100%);
+  top: 0px;
+  background-color: #fefbf5;
+  transform: translate(-50%, -200%);
+  transition: all 0.7s ease;
   width: 100%;
   height: auto;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  z-index: -1;
+  height: 100%;
+  img {
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: calc(-20.7 * (100vw / 1280));
+  }
 
   @include media(middle) {
     bottom: 0.6px;
@@ -600,21 +602,19 @@
 
 .body-header-active,
 .body-drawer {
-
   .header {
-    background-color: #fefbf5;
+    //background-color: #fefbf5;
   }
 
   .header-wrap-bg {
     opacity: 1;
+    transform: translate(-50%, 0) !important;
   }
 }
 
 .header-page,
 .body-drawer {
-
   .header-wrap {
-
     .header-wrap-logo {
       p {
         display: none !important;
@@ -627,7 +627,7 @@
       padding-bottom: 0px !important;
 
       @include media(middle) {
-        display: none !important;
+        //display: none !important;
       }
     }
   }
@@ -645,7 +645,6 @@
   //background-color: transparent;
   background-color: transparent;
   padding: 19px 0;
-
 
   .header-wrap {
     width: 100%;
@@ -694,7 +693,6 @@
             width: 100%;
           }
         }
-
       }
     }
 
@@ -763,6 +761,8 @@
       .header-wrap-list-btn {
         display: flex;
         align-items: center;
+        position: relative;
+        z-index: 2000;
 
         .header-wrap-list-ul-icon {
           width: 40px;

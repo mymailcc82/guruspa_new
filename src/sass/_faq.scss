@@ -69,10 +69,10 @@
         position: relative;
         transition: all 0.3s;
         padding-left: 50px;
-        padding-right: 10px;
+        padding-right: 15px;
         @include media(middle) {
           padding: 15px 0px;
-          padding-right: 10px;
+          padding-right: 15px;
           font-size: 14px;
           padding-left: 35px;
         }
@@ -143,11 +143,20 @@
         padding-left: 55px;
         border-top: 1px solid var(--color-black);
         font-size: 16px;
+        @include media(middle) {
+          padding: 10px 10px 20px 40px;
+          font-size: 14px;
+          padding-left: 40px;
+        }
 
         p {
           font-size: 16px;
           margin: 0px;
           line-height: 1.62;
+          font-weight: 500;
+          @include media(middle) {
+            font-size: 14px;
+          }
         }
 
         i {
@@ -160,6 +169,12 @@
           position: absolute;
           left: 0px;
           top: 15px;
+          @include media(middle) {
+            width: 30px;
+            height: 30px;
+            top: 10px;
+            left: -5px;
+          }
         }
       }
     }

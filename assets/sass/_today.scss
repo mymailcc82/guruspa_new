@@ -189,10 +189,13 @@
             img {
               width: 80%;
               max-width: 221px;
+              &.text-event {
+                max-width: 172px;
+              }
             }
             .icon-btn {
               bottom: 15px;
-              right: 90px;
+              right: 130px;
             }
           }
         }

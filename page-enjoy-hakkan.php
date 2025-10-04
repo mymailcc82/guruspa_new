@@ -38,7 +38,7 @@ Template Name: enjoy-hakkan
         <div class="content-width">
             <div class="enjoy-wrap">
                 <div class="enjoy-wrap-txt">
-                    <div class="com-title com-title--page com-title-hidden">
+                    <div class="com-title com-title--sweating com-title-hidden">
                         <p>発汗エリア（有料岩盤浴エリア）</p>
                         <h2 class="">
                             <span class="title">S</span><span class="title">W</span><span class="title">E</span><span class="title">A</span><span class="title">T</span><span class="title">I</span><span class="title">N</span><span class="title">G</span><span class="title">A</span><span class="title">R</span><span class="title">E</span><span class="title">A</span>
@@ -49,12 +49,27 @@ Template Name: enjoy-hakkan
                     </div>
 
                     <h2>じっくり、ゆっくり。<br>心も身体も整う、温熱体験の楽園へ。</h2>
-                    <p>
-                        火照りと冷たさ、静けさと心地よさ。<br class="hidden-sm">ここは五感すべてで“ととのう”場所。<br>
-                        館内は男女共用の有料エリアとなっており、岩塩やトルマリンなどの天然鉱石で体の内側から温まり、ゆったり過ごせる“ととのいの聖域”。<br><br class="hidden-sm">
-                        個性豊かな岩盤浴ルームや迫力のアトラクションサウナ、そして仕上げのクールルームやテラスまで。<br>
-                        まるで“サウナリゾート”にいるような感覚で、日常を忘れ、自分と向き合う特別な時間をお楽しみください。
-                    </p>
+                    <div class="hidden-mobile">
+                        <p>
+                            火照りと冷たさ、静けさと心地よさ。<br class="hidden-sm">ここは五感すべてで“ととのう”場所。<br><br class="hidden-sm">
+                            館内は男女共用の有料エリアとなっており、岩塩やトルマリンなどの天然鉱石で体の内側から温まり、ゆったり過ごせる“ととのいの聖域”。<br><br class="hidden-sm">
+                            個性豊かな岩盤浴ルームや迫力のアトラクションサウナ、そして仕上げのクールルームやテラスまで。<br>
+                            まるで“サウナリゾート”にいるような感覚で、<br class="hidden-sm">日常を忘れ、自分と向き合う特別な時間を<br class="hidden-sm">お楽しみください。
+                        </p>
+                    </div>
+                    <div class="hidden-sm">
+                        <p>
+                            火照りと冷たさ、静けさと心地よさ。<br class="hidden-sm">ここは五感すべてで“ととのう”場所。
+                        </p>
+                        <p>
+                            館内は男女共用の有料エリアとなっており、岩塩やトルマリンなどの天然鉱石で体の内側から温まり、ゆったり過ごせる“ととのいの聖域”。
+                        </p>
+                        <p>
+                            個性豊かな岩盤浴ルームや迫力のアトラクションサウナ、そして仕上げのクールルームやテラスまで。<br>
+                            まるで“サウナリゾート”にいるような感覚で、<br class="hidden-sm">日常を忘れ、自分と向き合う特別な時間を<br class="hidden-sm">お楽しみください。
+                        </p>
+                    </div>
+
                 </div>
                 <div class="enjoy-wrap-img enjoy-wrap-img--sweating">
                     <ul>
@@ -191,7 +206,11 @@ Template Name: enjoy-hakkan
         </div>
 
         <div class="page-deco-bg">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-red-top.png" alt="">
+            <picture>
+                <source media="(max-width: 601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-red-top-sp.png">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-red-top.png" alt="">
+            </picture>
+
         </div>
         <div class="page-deco-container page-deco-container--red" id="sec03">
             <div class="content-width-sm">
@@ -217,7 +236,7 @@ Template Name: enjoy-hakkan
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec03-img-02_v2.jpg" alt="">
                         </div>
                         <div class="sec03-wrap-col-right">
-                            <h3>エンターテイメント型アトラクションサウナ</h3>
+                            <h3>エンターテイメント型<br class="hidden-sm">アトラクションサウナ</h3>
                             <p>
                                 最大40名収容の大型サウナ「賛照堂」では、音・光・映像・熱波が融合した迫力のロウリュを体感。<br>
                                 ただ汗をかくだけではなく、観て・聴いて・感じて楽しむ新感覚の“エンターテイメントサウナ”で、仲間と盛り上がれる特別な時間をお過ごしいただけます。
@@ -252,13 +271,13 @@ Template Name: enjoy-hakkan
         </div>
         <div class="sec04-container">
             <div class="sec04-bg">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-01.jpg" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-01_v2.jpg" alt="">
             </div>
             <div class="sec04-wrap" id="area-guide-01">
                 <h3>
                     <img class="logo-01" src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-logo-01.jpg" alt="">
                 </h3>
-                <h4>音と光が織りなす、灼熱のエンターテイメントサウナ</h4>
+                <h4>音と光が織りなす、<br class="hidden-sm">灼熱のエンターテイメントサウナ</h4>
                 <p>
                     約40名を収容できる大型チムジルバン空間。ここでは、ただ汗をかくだけではなく「<span>観る・聴く・感じる</span>」をテーマにした全身で楽しむサウナ体験をお届けします。
                 </p>
@@ -381,7 +400,7 @@ Template Name: enjoy-hakkan
                         <div class="sec04-center-col-4-1-item">
                             <a href="javascript:void(0);" class="stone-btn" data-id="stone-01">
                                 <div class="sec04-center-col-4-1-item-img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-11.jpg" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/comming-soon-stone.jpg" alt="">
                                 </div>
                                 <div class="sec04-center-col-4-1-item-btn">
                                     <span>
@@ -393,7 +412,7 @@ Template Name: enjoy-hakkan
                         <div class="sec04-center-col-4-1-item">
                             <a href="javascript:void(0);" class="stone-btn" data-id="stone-02">
                                 <div class="sec04-center-col-4-1-item-img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-11.jpg" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/comming-soon-stone.jpg" alt="">
                                 </div>
                                 <div class="sec04-center-col-4-1-item-btn">
                                     <span>
@@ -405,7 +424,7 @@ Template Name: enjoy-hakkan
                         <div class="sec04-center-col-4-1-item">
                             <a href="javascript:void(0);" class="stone-btn" data-id="stone-03">
                                 <div class="sec04-center-col-4-1-item-img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-11.jpg" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/comming-soon-stone.jpg" alt="">
                                 </div>
                                 <div class="sec04-center-col-4-1-item-btn">
                                     <span>
@@ -417,7 +436,7 @@ Template Name: enjoy-hakkan
                         <div class="sec04-center-col-4-1-item">
                             <a href="javascript:void(0);" class="stone-btn" data-id="stone-04">
                                 <div class="sec04-center-col-4-1-item-img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-11.jpg" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/comming-soon-stone.jpg" alt="">
                                 </div>
                                 <div class="sec04-center-col-4-1-item-btn">
                                     <span>
@@ -429,7 +448,7 @@ Template Name: enjoy-hakkan
                         <div class="sec04-center-col-4-1-item">
                             <a href="javascript:void(0);" class="stone-btn" data-id="stone-05">
                                 <div class="sec04-center-col-4-1-item-img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-11.jpg" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/comming-soon-stone.jpg" alt="">
                                 </div>
                                 <div class="sec04-center-col-4-1-item-btn">
                                     <span>
@@ -441,7 +460,7 @@ Template Name: enjoy-hakkan
                         <div class="sec04-center-col-4-1-item">
                             <a href="javascript:void(0);" class="stone-btn" data-id="stone-06">
                                 <div class="sec04-center-col-4-1-item-img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-11.jpg" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/comming-soon-stone.jpg" alt="">
                                 </div>
                                 <div class="sec04-center-col-4-1-item-btn">
                                     <span>
@@ -453,7 +472,7 @@ Template Name: enjoy-hakkan
                         <div class="sec04-center-col-4-1-item">
                             <a href="javascript:void(0);" class="stone-btn" data-id="stone-07">
                                 <div class="sec04-center-col-4-1-item-img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-11.jpg" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/comming-soon-stone.jpg" alt="">
                                 </div>
                                 <div class="sec04-center-col-4-1-item-btn">
                                     <span>
@@ -465,7 +484,7 @@ Template Name: enjoy-hakkan
                         <div class="sec04-center-col-4-1-item">
                             <a href="javascript:void(0);" class="stone-btn" data-id="stone-08">
                                 <div class="sec04-center-col-4-1-item-img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-11.jpg" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/comming-soon-stone.jpg" alt="">
                                 </div>
                                 <div class="sec04-center-col-4-1-item-btn">
                                     <span>
@@ -616,7 +635,10 @@ Template Name: enjoy-hakkan
     </section>
     <section class="sec05" id="sec05">
         <div class="page-deco-bg">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-red-top.png" alt="">
+            <picture>
+                <source media="(max-width: 601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-red-top-sp.png">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-red-top.png" alt="">
+            </picture>
         </div>
         <div class="page-deco-container page-deco-container--red" id="area-guide-05">
             <div class="content-width-sm">
@@ -829,14 +851,19 @@ Template Name: enjoy-hakkan
         <div class="stone-fixed-container">
             <div class="stone-fixed-container-wrap" id="stone-01">
                 <div class="stone-fixed-container-wrap-close stone-fixed-btn-close">
-                    <a href="javascript:void(0)"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close.svg" alt="閉じる"></a>
+                    <a href="javascript:void(0)">
+                        <picture>
+                            <source media="(max-width: 601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close-sp.svg">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close.svg" alt="閉じる">
+                        </picture>
+                    </a>
                 </div>
                 <div class="stone-fixed-container-wrap-bg">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-bg.jpg" alt="">
                 </div>
                 <div class="stone-fixed-container-wrap-content">
                     <div class="stone-fixed-container-wrap-content-img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-pop-11.jpg" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/comming-soon-stone-main.jpg" alt="">
                         <div class="stone-fixed-container-wrap-content-img-left">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-bg-left.svg" alt="">
                         </div>
@@ -855,14 +882,19 @@ Template Name: enjoy-hakkan
             </div>
             <div class="stone-fixed-container-wrap" id="stone-02">
                 <div class="stone-fixed-container-wrap-close stone-fixed-btn-close">
-                    <a href="javascript:void(0)"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close.svg" alt="閉じる"></a>
+                    <a href="javascript:void(0)">
+                        <picture>
+                            <source media="(max-width: 601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close-sp.svg">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close.svg" alt="閉じる">
+                        </picture>
+                    </a>
                 </div>
                 <div class="stone-fixed-container-wrap-bg">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-bg.jpg" alt="">
                 </div>
                 <div class="stone-fixed-container-wrap-content">
                     <div class="stone-fixed-container-wrap-content-img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-pop-11.jpg" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/comming-soon-stone-main.jpg" alt="">
                         <div class="stone-fixed-container-wrap-content-img-left">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-bg-left.svg" alt="">
                         </div>
@@ -881,14 +913,19 @@ Template Name: enjoy-hakkan
             </div>
             <div class="stone-fixed-container-wrap" id="stone-03">
                 <div class="stone-fixed-container-wrap-close stone-fixed-btn-close">
-                    <a href="javascript:void(0)"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close.svg" alt="閉じる"></a>
+                    <a href="javascript:void(0)">
+                        <picture>
+                            <source media="(max-width: 601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close-sp.svg">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close.svg" alt="閉じる">
+                        </picture>
+                    </a>
                 </div>
                 <div class="stone-fixed-container-wrap-bg">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-bg.jpg" alt="">
                 </div>
                 <div class="stone-fixed-container-wrap-content">
                     <div class="stone-fixed-container-wrap-content-img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-pop-11.jpg" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/comming-soon-stone-main.jpg" alt="">
                         <div class="stone-fixed-container-wrap-content-img-left">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-bg-left.svg" alt="">
                         </div>
@@ -907,14 +944,19 @@ Template Name: enjoy-hakkan
             </div>
             <div class="stone-fixed-container-wrap" id="stone-04">
                 <div class="stone-fixed-container-wrap-close stone-fixed-btn-close">
-                    <a href="javascript:void(0)"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close.svg" alt="閉じる"></a>
+                    <a href="javascript:void(0)">
+                        <picture>
+                            <source media="(max-width: 601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close-sp.svg">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close.svg" alt="閉じる">
+                        </picture>
+                    </a>
                 </div>
                 <div class="stone-fixed-container-wrap-bg">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-bg.jpg" alt="">
                 </div>
                 <div class="stone-fixed-container-wrap-content">
                     <div class="stone-fixed-container-wrap-content-img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-pop-11.jpg" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/comming-soon-stone-main.jpg" alt="">
                         <div class="stone-fixed-container-wrap-content-img-left">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-bg-left.svg" alt="">
                         </div>
@@ -933,14 +975,19 @@ Template Name: enjoy-hakkan
             </div>
             <div class="stone-fixed-container-wrap" id="stone-05">
                 <div class="stone-fixed-container-wrap-close stone-fixed-btn-close">
-                    <a href="javascript:void(0)"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close.svg" alt="閉じる"></a>
+                    <a href="javascript:void(0)">
+                        <picture>
+                            <source media="(max-width: 601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close-sp.svg">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close.svg" alt="閉じる">
+                        </picture>
+                    </a>
                 </div>
                 <div class="stone-fixed-container-wrap-bg">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-bg.jpg" alt="">
                 </div>
                 <div class="stone-fixed-container-wrap-content">
                     <div class="stone-fixed-container-wrap-content-img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-pop-11.jpg" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/comming-soon-stone-main.jpg" alt="">
                         <div class="stone-fixed-container-wrap-content-img-left">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-bg-left.svg" alt="">
                         </div>
@@ -959,14 +1006,19 @@ Template Name: enjoy-hakkan
             </div>
             <div class="stone-fixed-container-wrap" id="stone-06">
                 <div class="stone-fixed-container-wrap-close stone-fixed-btn-close">
-                    <a href="javascript:void(0)"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close.svg" alt="閉じる"></a>
+                    <a href="javascript:void(0)">
+                        <picture>
+                            <source media="(max-width: 601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close-sp.svg">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close.svg" alt="閉じる">
+                        </picture>
+                    </a>
                 </div>
                 <div class="stone-fixed-container-wrap-bg">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-bg.jpg" alt="">
                 </div>
                 <div class="stone-fixed-container-wrap-content">
                     <div class="stone-fixed-container-wrap-content-img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-pop-11.jpg" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/comming-soon-stone-main.jpg" alt="">
                         <div class="stone-fixed-container-wrap-content-img-left">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-bg-left.svg" alt="">
                         </div>
@@ -985,14 +1037,19 @@ Template Name: enjoy-hakkan
             </div>
             <div class="stone-fixed-container-wrap" id="stone-07">
                 <div class="stone-fixed-container-wrap-close stone-fixed-btn-close">
-                    <a href="javascript:void(0)"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close.svg" alt="閉じる"></a>
+                    <a href="javascript:void(0)">
+                        <picture>
+                            <source media="(max-width: 601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close-sp.svg">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close.svg" alt="閉じる">
+                        </picture>
+                    </a>
                 </div>
                 <div class="stone-fixed-container-wrap-bg">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-bg.jpg" alt="">
                 </div>
                 <div class="stone-fixed-container-wrap-content">
                     <div class="stone-fixed-container-wrap-content-img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-pop-11.jpg" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/comming-soon-stone-main.jpg" alt="">
                         <div class="stone-fixed-container-wrap-content-img-left">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-bg-left.svg" alt="">
                         </div>
@@ -1011,14 +1068,19 @@ Template Name: enjoy-hakkan
             </div>
             <div class="stone-fixed-container-wrap" id="stone-08">
                 <div class="stone-fixed-container-wrap-close stone-fixed-btn-close">
-                    <a href="javascript:void(0)"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close.svg" alt="閉じる"></a>
+                    <a href="javascript:void(0)">
+                        <picture>
+                            <source media="(max-width: 601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close-sp.svg">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close.svg" alt="閉じる">
+                        </picture>
+                    </a>
                 </div>
                 <div class="stone-fixed-container-wrap-bg">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-bg.jpg" alt="">
                 </div>
                 <div class="stone-fixed-container-wrap-content">
                     <div class="stone-fixed-container-wrap-content-img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-pop-11.jpg" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/comming-soon-stone-main.jpg" alt="">
                         <div class="stone-fixed-container-wrap-content-img-left">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-bg-left.svg" alt="">
                         </div>
@@ -1044,7 +1106,12 @@ Template Name: enjoy-hakkan
         <div class="enjoy-fixed-container">
             <div class="enjoy-fixed-container-wrap" id="enjoy-01">
                 <div class="enjoy-fixed-container-wrap-close enjoy-fixed-btn-close">
-                    <a href="javascript:void(0)"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close.svg" alt="閉じる"></a>
+                    <a href="javascript:void(0)">
+                        <picture>
+                            <source media="(max-width: 601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close-sp.svg">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close.svg" alt="閉じる">
+                        </picture>
+                    </a>
                 </div>
                 <div class="enjoy-fixed-container-wrap-bg">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-bg-blue.jpg" alt="">
@@ -1107,7 +1174,12 @@ Template Name: enjoy-hakkan
 
             <div class="enjoy-fixed-container-wrap" id="enjoy-03">
                 <div class="enjoy-fixed-container-wrap-close enjoy-fixed-btn-close">
-                    <a href="javascript:void(0)"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close.svg" alt="閉じる"></a>
+                    <a href="javascript:void(0)">
+                        <picture>
+                            <source media="(max-width: 601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close-sp.svg">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close.svg" alt="閉じる">
+                        </picture>
+                    </a>
                 </div>
                 <div class="enjoy-fixed-container-wrap-bg">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-bg-red.jpg" alt="">
@@ -1168,7 +1240,12 @@ Template Name: enjoy-hakkan
 
             <div class="enjoy-fixed-container-wrap" id="enjoy-05">
                 <div class="enjoy-fixed-container-wrap-close enjoy-fixed-btn-close">
-                    <a href="javascript:void(0)"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close.svg" alt="閉じる"></a>
+                    <a href="javascript:void(0)">
+                        <picture>
+                            <source media="(max-width: 601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close-sp.svg">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close.svg" alt="閉じる">
+                        </picture>
+                    </a>
                 </div>
                 <div class="enjoy-fixed-container-wrap-bg">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-bg-blue.jpg" alt="">
@@ -1198,7 +1275,12 @@ Template Name: enjoy-hakkan
 
             <div class="enjoy-fixed-container-wrap" id="enjoy-06">
                 <div class="enjoy-fixed-container-wrap-close enjoy-fixed-btn-close">
-                    <a href="javascript:void(0)"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close.svg" alt="閉じる"></a>
+                    <a href="javascript:void(0)">
+                        <picture>
+                            <source media="(max-width: 601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close-sp.svg">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close.svg" alt="閉じる">
+                        </picture>
+                    </a>
                 </div>
                 <div class="enjoy-fixed-container-wrap-bg">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-bg-red.jpg" alt="">

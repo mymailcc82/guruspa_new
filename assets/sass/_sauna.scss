@@ -61,10 +61,10 @@
       justify-content: space-between;
       .sec03-wrap-col {
         width: 48%;
-        margin-bottom: 70px;
+        margin-bottom: 50px;
         @include media(mobile) {
           width: 100%;
-          margin-bottom: 50px;
+          margin-bottom: 30px;
         }
         .sec03-wrap-col-left {
           width: 100%;
@@ -351,7 +351,7 @@
           }
         }
         p {
-          font-size: 16px;
+          font-size: 14px;
           line-height: 1.8;
           margin: 0px;
           padding: 10px 30px;

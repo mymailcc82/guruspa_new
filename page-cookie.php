@@ -25,7 +25,7 @@
     </div>
     <section class="sec01">
         <div class="content-width-lg">
-            <div class="com-title center com-title-hidden">
+            <div class="com-title center com-title-hidden com-title--else">
                 <p>Cookieについて</p>
                 <h1 class="">
                     <span class="title">C</span><span class="title">O</span><span class="title">O</span><span class="title">K</span><span class="title">I</span><span class="title">E</span>　<span class="title">P</span><span class="title">O</span><span class="title">L</span><span class="title">I</span><span class="title">C</span><span class="title">Y</span>

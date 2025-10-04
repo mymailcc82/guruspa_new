@@ -44,7 +44,7 @@
                 </p>
             </div>
 
-            <div class="page-btn">
+            <div class="page-btn mb-0">
                 <ul>
                     <li>
                         <a href="#sec02">グルスパの魅力<i></i></a>
@@ -212,7 +212,7 @@
                         </div>
                         <div class="sec02-bottom-wrap-col fadeup">
                             <div class="sec02-bottom-wrap-col-img">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/first/sec02-bottom-03_v2.jpg" alt="">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/first/sec02-bottom-03_v3.jpg" alt="">
                                 <div class="sec02-bottom-wrap-col-img-num">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/first/sec02-bottom-num-03.svg" alt="03">
                                 </div>

@@ -1,15 +1,21 @@
 <aside class="aside">
-    <div class="aside-bg-top"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-top.png" alt=""></div>
+    <div class="aside-bg-top">
+        <picture class="">
+            <source media="(min-width:601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-top.png">
+            <source media="(max-width:600px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-top_sp.png">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-top.png" alt="">
+        </picture>
+    </div>
     <div class="aside-bg">
         <div class="content-width">
             <div class="aside-btn-1">
                 <a href="">
                     <div class="aside-btn-1-img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/aside-img.jpg" alt=""><i></i>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-img_v2.jpg" alt=""><i></i>
                     </div>
                     <div class="aside-btn-1-txt">
                         <div class="aside-title">
-                            <h2>
+                            <h2 class="hidden-mobile">
                                 <span class="title">R</span><span class="title">E</span><span class="title">C</span><span class="title">R</span><span class="title">U</span><span class="title">I</span><span class="title">T</span>
                                 <span class="title-item-sprout">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-sprout-white.png" alt="">
@@ -17,6 +23,9 @@
                                 <span class="title-item-sun">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/item-01.png" alt="">
                                 </span>
+                            </h2>
+                            <h2 class="hidden-sm">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-title-sp.png" alt="">
                             </h2>
                         </div>
                         <p>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css?ver=1.2.6">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css?ver=1.2.8">
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,14 +27,12 @@
 <?php endif; ?>
 
 <body <?php body_class($body_class); ?>>
-
-
     <header class="<?php echo $header_class; ?>">
         <div class="header-wrap">
             <div class="header-wrap-logo">
                 <h1>
                     <a href="<?php echo home_url(); ?>">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/header/header-logo_V2.png" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/logo.svg" alt="GURUSPA">
                     </a>
                 </h1>
             </div>
@@ -58,7 +56,9 @@
                 </div>
             </div>
         </div>
-        <img class="header-wrap-bg" src="<?php echo get_template_directory_uri(); ?>/assets/img/header/header-under-bg_v2.png" alt="">
+        <div class="header-wrap-bg">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/header/header-under-bg_v2.png" alt="">
+        </div>
     </header>
     <div class="header-fixed">
         <div class="header-fixed-menu">

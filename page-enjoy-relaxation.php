@@ -38,7 +38,7 @@ Template Name: enjoy-relaxation
         <div class="content-width">
             <div class="enjoy-wrap">
                 <div class="enjoy-wrap-txt">
-                    <div class="com-title com-title--small com-title-hidden">
+                    <div class="com-title com-title--relax com-title-hidden">
                         <p>リラクゼーション</p>
                         <h2 class="">
                             <span class="title">R</span><span class="title">E</span><span class="title">L</span><span class="title">A</span><span class="title">X</span><span class="title">A</span><span class="title">T</span><span class="title">I</span><span class="title">O</span><span class="title">N</span>
@@ -67,7 +67,7 @@ Template Name: enjoy-relaxation
     </section>
     <div class="page-toggle">
         <div class="sec01-col">
-            <ul class="sec01-col-select tab mb-0">
+            <ul class="sec01-col-select tab mb-0 mb-30-mobile">
                 <li class="active"><a href="javascript:void(0)" data-id="#area01">リラクゼーション</a></li>
                 <li><a href="javascript:void(0)" data-id="#area02">アカスリ</a></li>
             </ul>
@@ -77,7 +77,11 @@ Template Name: enjoy-relaxation
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec02-icon-01.png" alt="">
                 </div>
                 <div class="page-deco-bg">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-blue-top_v2.png" alt="">
+                    <picture>
+                        <source media="(max-width: 601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-blue-top-sp_v2.png">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-blue-top_v2.png" alt="">
+                    </picture>
+
                 </div>
                 <div class="page-deco-container page-deco-container--blue">
                     <div class="relative">
@@ -91,6 +95,13 @@ Template Name: enjoy-relaxation
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec02-icon-04.svg" alt="">
                         </div>
                         <section class="sec02">
+                            <div class="content-width-sm">
+                                <h2><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/spareraku_logo.png" alt=""></h2>
+                                <p>
+                                    館内にはリラクゼーションブランド<br class="hidden-sm">「Spa Re.Ra.Ku」がございます。<br>
+                                    “ハンドコミュニケーション”を通じて、<br class="hidden-sm">心と身体の癒しはもちろん、<br class="hidden-sm">美容・ダイエット・パフォーマンスアップなど、<br class="hidden-sm">お客様一人ひとりのお悩みに寄り添います。
+                                </p>
+                            </div>
                             <div class="content-width-sm">
                                 <div class="page-btn">
                                     <ul>
@@ -240,7 +251,7 @@ Template Name: enjoy-relaxation
                                 <div class="sec04-wrap">
                                     <div class="sec04-wrap-col">
                                         <div class="sec04-wrap-col-img">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec04-img-01.jpg" alt="">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec04-img-01_v2.jpg" alt="">
                                         </div>
                                         <h3>経験豊富な施術者が在籍</h3>
                                         <p>
@@ -249,7 +260,7 @@ Template Name: enjoy-relaxation
                                     </div>
                                     <div class="sec04-wrap-col">
                                         <div class="sec04-wrap-col-img">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec04-img-02.jpg" alt="">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec04-img-02_v2.jpg" alt="">
                                         </div>
                                         <h3>豊富な施術メニュー</h3>
                                         <p>
@@ -276,9 +287,11 @@ Template Name: enjoy-relaxation
                                 <h2><i></i>メニュー</h2>
                             </div>
                             <p class="sec05-desc">
-                                各コースの詳細・料金の目安をご紹介します。
+                                施術メニューや料金は後日公開予定です。<br>
+                                お待ちください。
                             </p>
                         </div>
+                        <?php /*
                         <div class="content-width-sm content-width--mobile-full">
                             <div class="sec05-wrap">
                                 <div class="sec05-wrap-col">
@@ -359,6 +372,7 @@ Template Name: enjoy-relaxation
 
                             </div>
                         </div>
+                        */ ?>
                     </section>
                     <section class="sec06" id="sec06">
                         <div class="content-width-sm">
@@ -368,18 +382,23 @@ Template Name: enjoy-relaxation
                             <div class="sec06-wrap">
                                 <div class="sec06-wrap-left">
                                     <p>
-                                        ご予約は館内の専用カウンターまたはタブレット端末から。<br>
+                                        ご予約はWEBまたは館内の専用カウンター、タブレット端末から。<br>
                                         空き状況を確認しながら、お好みの時間帯・コースをお選びいただけます。
                                     </p>
                                     <div class="sec06-dl">
                                         <dl>
-                                            <dt>予約受付場所</dt>
-                                            <dd>○階 リラクゼーション受付</dd>
+                                            <dt>予約方法</dt>
+                                            <dd>
+                                                1階 リラクゼーション受付<br>
+                                            </dd>
                                         </dl>
                                         <dl>
                                             <dt>受付時間</dt>
                                             <dd>10:00〜22:00（最終受付 21:30）</dd>
                                         </dl>
+                                    </div>
+                                    <div class="com-btn-border-black com-btn-border--left">
+                                        <a href="https://reraku.jp/studio/gruspa" target="_blank" rel="noopener noreferrer">ネット予約はこちら<i class="icon-blue"></i></a>
                                     </div>
                                 </div>
                                 <div class="sec06-wrap-right">
@@ -400,7 +419,10 @@ Template Name: enjoy-relaxation
 
             <div class="area02 area" id="area02">
                 <div class="page-deco-bg">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-blue-top_v2.png" alt="">
+                    <picture>
+                        <source media="(max-width: 601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-blue-top-sp_v2.png">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-blue-top_v2.png" alt="">
+                    </picture>
                 </div>
                 <div class="sec02-icon-01">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec02-icon-01.png" alt="">
@@ -418,6 +440,13 @@ Template Name: enjoy-relaxation
                         </div>
 
                         <section class="sec02">
+                            <div class="content-width-sm">
+                                <h2><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/spareraku_logo.png" alt=""></h2>
+                                <p>
+                                    館内にはリラクゼーションブランド<br class="hidden-sm">「Spa Re.Ra.Ku」がございます。<br>
+                                    “ハンドコミュニケーション”を通じて、<br class="hidden-sm">心と身体の癒しはもちろん、<br class="hidden-sm">美容・ダイエット・パフォーマンスアップなど、<br class="hidden-sm">お客様一人ひとりのお悩みに寄り添います。
+                                </p>
+                            </div>
                             <div class="content-width-sm">
                                 <div class="page-btn">
                                     <ul>
@@ -565,7 +594,7 @@ Template Name: enjoy-relaxation
                                 <div class="sec04-wrap">
                                     <div class="sec04-wrap-col">
                                         <div class="sec04-wrap-col-img">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec09-img-01.jpg" alt="">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec09-img-01_v2.jpg" alt="">
                                         </div>
                                         <h3>本場仕込みのアカスリ技術</h3>
                                         <p>
@@ -576,7 +605,7 @@ Template Name: enjoy-relaxation
                                         <div class="sec04-wrap-col-img">
                                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec09-img-02_v2.jpg" alt="">
                                         </div>
-                                        <h3>肌質・目的に合わせた<br>メニュー構成</h3>
+                                        <h3>肌質・目的に合わせた<br class="hidden-mobile">メニュー構成</h3>
                                         <p>
                                             角質除去に加え、オイルマッサージやフェイシャル付きのセットもご用意。
                                         </p>
@@ -600,8 +629,13 @@ Template Name: enjoy-relaxation
                                 <h2><i></i>メニュー</h2>
                             </div>
                             <p class="sec05-desc">
+                                <?php /*
                                 各コースの詳細・料金の目安をご紹介します。
+                                */ ?>
+                                施術メニューや料金は後日公開予定です。<br>
+                                お待ちください。
                             </p>
+                            <?php /*
                             <div class="sec05-wrap">
                                 <div class="sec05-wrap-col-full">
                                     <div class="sec05-table">
@@ -627,8 +661,8 @@ Template Name: enjoy-relaxation
                                         </table>
                                     </div>
                                 </div>
-
                             </div>
+                            */ ?>
                         </div>
                     </section>
                     <section class="sec06" id="sec11">
@@ -639,24 +673,26 @@ Template Name: enjoy-relaxation
                             <div class="sec06-wrap">
                                 <div class="sec06-wrap-left">
                                     <p>
-                                        館内専用端末またはアカスリ受付にてご予約ください。<br>
+                                        ご予約はWEBまたは館内専用端末、アカスリ受付にてご予約ください。<br>
                                         入浴後に施術を受けることをおすすめしています。
                                     </p>
                                     <div class="sec06-dl">
                                         <dl>
-                                            <dt>予約受付場所</dt>
-                                            <dd>○階 リラクゼーション受付</dd>
+                                            <dt>予約方法</dt>
+                                            <dd>1階 リラクゼーション受付</dd>
                                         </dl>
                                         <dl>
                                             <dt>受付時間</dt>
                                             <dd>10:00〜22:00（最終受付 21:30）</dd>
                                         </dl>
                                     </div>
+                                    <div class="com-btn-border-black com-btn-border--left">
+                                        <a href="https://reraku.jp/studio/gruspa" target="_blank" rel="noopener noreferrer">ネット予約はこちら<i class="icon-blue"></i></a>
+                                    </div>
                                 </div>
                                 <div class="sec06-wrap-right">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec06-img-01_v2.jpg" alt="">
                                 </div>
-
                             </div>
                         </div>
                     </section>

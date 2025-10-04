@@ -25,7 +25,7 @@
     </div>
     <section class="sec01">
         <div class="content-width-lg">
-            <div class="com-title center com-title-hidden">
+            <div class="com-title center com-title--else com-title-hidden">
                 <p>プライバシーポリシー</p>
                 <h1 class="">
                     <span class="title">P</span><span class="title">R</span><span class="title">I</span><span class="title">V</span><span class="title">A</span><span class="title">C</span><span class="title">Y</span>　<span class="title">P</span><span class="title">O</span><span class="title">L</span><span class="title">I</span><span class="title">C</span><span class="title">Y</span>

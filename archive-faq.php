@@ -272,7 +272,7 @@
         </div>
     </section>
 
-    <section class="sec02" id="sec06">
+    <section class="sec02" id="sec07">
         <div class="content-width">
             <div class="page-title--has-icon page-title--has-icon--font-23">
                 <h2><i></i>衛生・安全面について</h2></span>
@@ -313,7 +313,7 @@
         </div>
     </section>
 
-    <section class="sec02" id="sec07">
+    <section class="sec02" id="sec08">
         <div class="content-width">
             <div class="page-title--has-icon page-title--has-icon--font-23">
                 <h2><i></i>利用料金・予約について</h2></span>
@@ -354,7 +354,7 @@
         </div>
     </section>
 
-    <section class="sec02" id="sec07">
+    <section class="sec02" id="sec09">
         <div class="content-width">
             <div class="page-title--has-icon page-title--has-icon--font-23">
                 <h2><i></i>アクセス・その他</h2></span>

@@ -282,6 +282,8 @@
       .sec02-about-logo {
         text-align: center;
         img {
+          width: 100%;
+          max-width: 371px;
           @include media(mobile) {
             width: 100%;
             max-width: 269px;
@@ -546,7 +548,10 @@
     }
   }
   .sec03 {
-    padding: 100px 0px;
+    padding: 100px 0px 50px;
+    @include media(middle) {
+      padding: 60px 0px 30px;
+    }
     .sec03-scroll {
       @include media(lg) {
         padding: 0px 7.5%;

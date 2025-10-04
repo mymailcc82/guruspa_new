@@ -59,7 +59,7 @@ $days = days_from_today_for_months();
     </div>
     <section class="sec">
         <div class="content-width">
-            <div class="com-title center com-title-hidden">
+            <div class="com-title com-title--today center com-title-hidden">
                 <p>本日のイベント</p>
                 <h2 class="">
                     <span class="title">T</span><span class="title">O</span><span class="title">D</span><span class="title">A</span><span class="title">Y</span><span class="title">'</span><span class="title">S</span> <span class="title">E</span><span class="title">V</span><span class="title">E</span><span class="title">N</span><span class="title">T</span>
@@ -94,7 +94,7 @@ $days = days_from_today_for_months();
             <p class="sec00-attention"><i></i>:イベント開催日</p>
         </div>
 
-        <div class="content-width">
+        <div class="content-width content-width--mobile-full">
             <div class="page-title--has-icon page-title--has-icon--mobile-20">
                 <h2><i></i>本日のイベント</h2>
             </div>
@@ -135,7 +135,7 @@ $days = days_from_today_for_months();
             ?>
             <?php $the_query = new WP_Query($args); ?>
             <div class="sec01-col-main">
-                <ul id="post_list">
+                <div id="post_list">
                     <?php if ($the_query->have_posts()) : ?>
                         <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
                             <?php
@@ -199,9 +199,9 @@ $days = days_from_today_for_months();
 
                         <?php wp_reset_postdata(); ?>
                     <?php else : ?>
-                        <p>投稿が見つかりませんでした。</p>
+                        <p class="text-base center">イベントが見つかりませんでした。</p>
                     <?php endif; ?>
-                </ul>
+                </div>
             </div>
         </div>
     </section>
@@ -223,7 +223,7 @@ $days = days_from_today_for_months();
                                     $image_url = get_the_post_thumbnail_url($value, 'full');
                                     ?>
                                     <?php if ($image_url): ?>
-                                        <?php $image_url = get_template_directory_uri() . '/assets/img/enjoy/enjoy-schedule-coming-soon.png'; ?>
+                                        <?php $image_url = get_template_directory_uri() . '/assets/img/com/comming-soon.jpg'; ?>
                                         <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($key); ?>月のイベントスケジュール">
                                     <?php else: ?>
                                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/comming-soon.jpg" alt="<?php echo esc_attr($key); ?>月のイベントスケジュール">
@@ -236,14 +236,16 @@ $days = days_from_today_for_months();
                         <div class="swiper-pagination"></div>
                     </div>
                     <div class="sec01-btn">
-                        <div class="com-btn-border-black">
+                        <div class="com-btn-border-black hidden-mobile">
+                            <a href="<?php echo home_url(); ?>/enjoy/sweating/">発汗エリア(有料エリア)について<i></i></a>
+                        </div>
+                        <div class="com-btn-mobile com-btn-mobile--small hidden-sm">
                             <a href="<?php echo home_url(); ?>/enjoy/sweating/">発汗エリア(有料エリア)について<i></i></a>
                         </div>
                     </div>
                 </div>
             </section>
             <section class="sec02">
-
                 <div class="content-width">
                     <div class="page-title--has-icon page-title--has-icon--mobile-20">
                         <h2><i></i>その他イベント案内</h2>
@@ -252,18 +254,26 @@ $days = days_from_today_for_months();
                         <div class="sec06-bottom-col">
                             <div class="sec-01-col-under">
                                 <a href="<?php echo home_url(); ?>/event/">
-                                    <div class="sec-01-col-under-img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/bnr/page-bnr-event-img_v2.jpg" alt=""></div>
+                                    <div class="sec-01-col-under-img">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/bnr/page-bnr-event-img_v2.jpg" alt="">
+                                    </div>
                                     <div class="sec-01-col-under-title">
-                                        <h3><img class="text-event" src="<?php echo get_template_directory_uri(); ?>/assets/img/bnr/page-bnr-event-txt.png" alt="EVENT SCHEDULE"><i class="icon-btn"></i></h3>
+                                        <h3><img src="<?php echo get_template_directory_uri(); ?>/assets/img/bnr/page-bnr-event-txt.png" alt="EVENT SCHEDULE"><i class="icon-btn"></i></h3>
                                         <p>すべてのイベント情報をチェック！</p>
                                     </div>
                                 </a>
                             </div>
                         </div>
-                        <div class="sec06-bottom-col">
+                        <div class="sec06-bottom-col sec06-bottom-col--schedule">
                             <div class="sec-01-col-under">
                                 <a href="<?php echo home_url(); ?>/schedule/">
-                                    <div class="sec-01-col-under-img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/bnr/page-bnr-schedule-img_v2.jpg" alt=""></div>
+                                    <div class="sec-01-col-under-img sec-01-col-under--schedule">
+                                        <picture>
+                                            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/bnr/page-bnr-schedule-img_v3.png" media="(max-width: 600px)">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/bnr/page-bnr-schedule-img_v2.jpg" alt="">
+                                        </picture>
+
+                                    </div>
                                     <div class="sec-01-col-under-title">
                                         <h3><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/title-event-schedule_v2.png" alt="EVENT SCHEDULE"><i class="icon-btn"></i></h3>
                                         <p>イベントはこちらをチェック！</p>
@@ -271,6 +281,7 @@ $days = days_from_today_for_months();
                                 </a>
                             </div>
                         </div>
+
                     </div>
                 </div>
 
@@ -317,14 +328,18 @@ $days = days_from_today_for_months();
                         // post_listの中身をresponse.post_dataで置き換え
                         var postList = $('#post_list');
                         postList.empty(); // 既存の内容をクリア
+
+                        var listItem = '<div class="swiper swiper-event">';
+                        listItem += '<div class="swiper-wrapper">';
+
                         if (response.post_data.length > 0) {
                             response.post_data.forEach(function(post) {
                                 console.log(post);
-                                var listItem = '<li>' +
+                                listItem += '<div class="swiper-slide">' +
                                     '<a href="' + post.link + '">' +
                                     (post.is_hot ? '<span class="hot">' + post.is_hot + '</span>' : '') +
                                     '<span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>' +
-                                    '<div class="img img-event">' +
+                                    '<div class="img img-info">' +
                                     '<img src="' + post.thumbnail + '" alt="' + post.title + '">' +
                                     '</div>' +
                                     '<div class="text">' +
@@ -339,12 +354,62 @@ $days = days_from_today_for_months();
                                     '<h3>' + post.title + '</h3>' +
                                     '</div>' +
                                     '</a>' +
-                                    '</li>';
-                                postList.append(listItem);
+                                    '</div>';
                             });
+                            listItem += '</div></div>'; // swiper-wrapperとswiper-event_2の閉じタグ
+                            postList.append(listItem);
                         } else {
                             postList.append('<p class="text-base center">イベントが見つかりませんでした。</p>');
                         }
+
+                        //600以上の時はloopしない
+                        var loop_flg = true;
+                        var centeredSlides_flg = true;
+                        if (window.innerWidth > 600) {
+                            loop_flg = false;
+                            centeredSlides_flg = false;
+                        }
+
+                        if (!loop_flg) {
+                            console.log("成功")
+                            const swiper = new Swiper('.swiper-event', {
+                                slidesPerView: 'auto', // 幅固定 or auto
+                                spaceBetween: 30, // スライド間の余白
+                                centeredSlides: centeredSlides_flg, // 常に中央スライドをセンターに
+                                loop: loop_flg, // 無限ループ
+
+                                autoplay: {
+                                    delay: 3000, // 3秒ごとに切り替え
+                                    disableOnInteraction: false, // 操作後も自動再生を継続
+                                },
+
+                                navigation: {
+                                    nextEl: '.swiper-button-next', // 「次へ」ボタン要素のクラス
+                                    prevEl: '.swiper-button-prev', // 「前へ」ボタン要素のクラス
+                                },
+                                lazy: {
+                                    loadPrevNext: true,
+                                    loadOnTransitionStart: true,
+                                },
+                                pagination: {
+                                    el: '.swiper-pagination',
+                                    clickable: true,
+                                },
+                                breakpoints: {
+                                    320: {
+                                        //spaceBetween: 12,
+                                        //slidesPerView: 1.1
+                                    },
+                                    768: {
+                                        //spaceBetween: 16,
+                                        //slidesPerView: 2.2
+                                        spaceBetween: 15, // スライド間の余白
+                                    },
+                                }
+                            });
+                        }
+
+
                     }
                 });
             }
@@ -420,6 +485,51 @@ $days = days_from_today_for_months();
                 });
             }
         });
+    });
+</script>
+<script>
+    //600以上の時はloopしない
+    var loop_flg = true;
+    var centeredSlides_flg = true;
+    if (window.innerWidth > 600) {
+        loop_flg = false;
+        centeredSlides_flg = false;
+    }
+
+    const swiper = new Swiper('.swiper-event', {
+        slidesPerView: 'auto', // 幅固定 or auto
+        spaceBetween: 30, // スライド間の余白
+        centeredSlides: centeredSlides_flg, // 常に中央スライドをセンターに
+        loop: loop_flg, // 無限ループ
+
+        autoplay: {
+            delay: 3000, // 3秒ごとに切り替え
+            disableOnInteraction: false, // 操作後も自動再生を継続
+        },
+
+        navigation: {
+            nextEl: '.swiper-button-next', // 「次へ」ボタン要素のクラス
+            prevEl: '.swiper-button-prev', // 「前へ」ボタン要素のクラス
+        },
+        lazy: {
+            loadPrevNext: true,
+            loadOnTransitionStart: true,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        breakpoints: {
+            320: {
+                //spaceBetween: 12,
+                //slidesPerView: 1.1
+            },
+            768: {
+                //spaceBetween: 16,
+                //slidesPerView: 2.2
+                spaceBetween: 15, // スライド間の余白
+            },
+        }
     });
 </script>
 <?php get_footer(); ?>

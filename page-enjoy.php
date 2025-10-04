@@ -60,7 +60,7 @@ Template Name: enjoy
                     <div class="content-width-sm">
                         <div class="sec01-col-main">
                             <div class="sec01-col-main-bg">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-img-01.jpg" alt="">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-img-01_v2.jpg" alt="">
                             </div>
                             <div class="sec01-col-main-01-01">
                                 <a href="javascript:void(0)" class="popup-btn" data-id="enjoy-03">
@@ -88,6 +88,36 @@ Template Name: enjoy
                                 </a>
                             </div>
                             <div class="sec01-col-main-01-06">
+                                <a href="javascript:void(0)" class="pulse-btn popup-btn" data-id="enjoy-08">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-icon-white.png" alt="">
+                                </a>
+                            </div>
+                            <div class="sec01-col-main-01-07">
+                                <a href="javascript:void(0)" class="pulse-btn popup-btn" data-id="enjoy-08">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-icon-white.png" alt="">
+                                </a>
+                            </div>
+                            <div class="sec01-col-main-01-08">
+                                <a href="javascript:void(0)" class="pulse-btn popup-btn" data-id="enjoy-08">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-icon-white.png" alt="">
+                                </a>
+                            </div>
+                            <div class="sec01-col-main-01-09">
+                                <a href="javascript:void(0)" class="pulse-btn popup-btn" data-id="enjoy-08">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-icon-white.png" alt="">
+                                </a>
+                            </div>
+                            <div class="sec01-col-main-01-10">
+                                <a href="javascript:void(0)" class="pulse-btn popup-btn pulse-btn--small" data-id="enjoy-08">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-icon-white.png" alt="">
+                                </a>
+                            </div>
+                            <div class="sec01-col-main-01-11">
+                                <a href="javascript:void(0)" class="pulse-btn popup-btn" data-id="enjoy-08">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-icon-white.png" alt="">
+                                </a>
+                            </div>
+                            <div class="sec01-col-main-01-12">
                                 <a href="javascript:void(0)" class="pulse-btn popup-btn" data-id="enjoy-08">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-icon-white.png" alt="">
                                 </a>

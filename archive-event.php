@@ -1,7 +1,7 @@
 <?php
 // クエリパラメータからタームスラッグを取得
-if (isset($_GET['event_category'])) {
-    $event_category = sanitize_text_field($_GET['event_category']);
+if (isset($_GET['get_event'])) {
+    $event_category = sanitize_text_field($_GET['get_event']);
 } else {
     $event_category = '';
 }
@@ -54,25 +54,6 @@ if (isset($_GET['event_tag'])) {
         </div>
 
         <div class="sec01-col">
-            <?php /*
-            <ul class="sec01-col-select">
-                <?php if ($event_tag === ''): ?>
-                    <li class="active"><a href="<?php echo home_url(); ?>/event/">すべて</a></li>
-                <?php else: ?>
-                    <li><a href="<?php echo home_url(); ?>/event/">すべて</a></li>
-                <?php endif; ?>
-                <?php if ($event_tag === 'limit'): ?>
-                    <li class="active"><a href="<?php echo home_url(); ?>/event/?event_tag=new&event_category=<?php echo $event_category; ?>" data-id="#area01">新着<br class="hidden-sm">イベント</a></li>
-                <?php else: ?>
-                    <li><a href="<?php echo home_url(); ?>/event/?event_tag=limit&event_category=<?php echo $event_category; ?>" data-id="#area02">期間限定<br class="hidden-sm">イベント</a></li>
-                <?php endif; ?>
-                <?php if ($event_tag === 'per_event'): ?>
-                    <li class="active"><a href="<?php echo home_url(); ?>/event/?event_tag=per_event&event_category=<?php echo $event_category; ?>" data-id="#area03">定例<br class="hidden-sm">イベント</a></li>
-                <?php else: ?>
-                    <li><a href="<?php echo home_url(); ?>/event/?event_tag=per_event&event_category=<?php echo $event_category; ?>" data-id="#area03">定例<br class="hidden-sm">イベント</a></li>
-                <?php endif; ?>
-            </ul>
-            */ ?>
             <ul class="sec01-col-select">
                 <li class="active"><a href="javascript:void(0)" class="tab-btn" data-id="">すべて</a></li>
                 <li><a href="javascript:void(0)" class="tab-btn" data-id="limit">期間限定<br class="hidden-sm">イベント</a></li>
@@ -147,6 +128,9 @@ if (isset($_GET['event_tag'])) {
                                         $event_category = get_the_terms(get_the_ID(), 'event_category');
                                         $event_start_date = get_field('event_start_date'); // 開始日
                                         $is_hot = get_field('hot'); // HOT! フラグ
+                                        // カテゴリーに応じたデフォルト画像を設定
+                                        $category_slug = $event_category[0]->slug;
+                                        $category_slug_parent = '';
                                         ?>
                                         <li>
                                             <a href="<?php the_permalink(); ?>">
@@ -160,11 +144,6 @@ if (isset($_GET['event_tag'])) {
                                                     <?php else : ?>
                                                         <?php if ($event_category && !is_wp_error($event_category)) : ?>
                                                             <?php
-                                                            // カテゴリーに応じたデフォルト画像を設定
-                                                            $category_slug = $event_category[0]->slug;
-                                                            $category_slug_parent = '';
-                                                            //$event_category[0]の親カテゴリーを取得
-                                                            //var_dump($event_category[0]);
                                                             if ($event_category[0]->parent) {
                                                                 $parent_term = get_term($event_category[0]->parent, 'event_category');
                                                                 if ($parent_term && !is_wp_error($parent_term)) {

@@ -99,11 +99,14 @@ Template Name: enjoy-spa
         </div>
 
         <div class="page-deco-bg">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-blue-top_v2.png" alt="">
+            <picture>
+                <source media="(max-width: 601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-blue-top-sp_v2.png">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-blue-top_v2.png" alt="">
+            </picture>
         </div>
         <div class="page-deco-container page-deco-container--blue">
             <div class="content-width-sm">
-                <div class="page-title-center--has-icon">
+                <div class="page-title-center--has-icon page-title-center--has-icon--font-30">
                     <h2><i></i>特徴・魅力</h2>
                 </div>
                 <div class="sec03-wrap">
@@ -156,7 +159,7 @@ Template Name: enjoy-spa
 
     <section class="sec04" id="sec04">
         <div class="content-width-sm">
-            <div class="page-title-center--has-icon">
+            <div class="page-title-center--has-icon page-title-center--has-icon--font-30">
                 <h2><i></i>湯めぐり案内</h2>
             </div>
         </div>
@@ -414,7 +417,7 @@ Template Name: enjoy-spa
             </div>
             <div class="content-width-sm">
 
-                <div class="sec04-wrap-blue">
+                <div class="sec04-wrap-blue sec04-wrap-blue--v2">
                     <div class="sec04-wrap-blue-col">
                         <h3>効能</h3>
                         <p>
@@ -468,11 +471,14 @@ Template Name: enjoy-spa
 
     <section class="sec05" id="sec06">
         <div class="page-deco-bg">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-blue-top_v2.png" alt="">
+            <picture>
+                <source media="(max-width: 601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-blue-top-sp_v2.png">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-blue-top_v2.png" alt="">
+            </picture>
         </div>
         <div class="page-deco-container page-deco-container--blue">
             <div class="content-width-sm">
-                <div class="page-title-center--has-icon">
+                <div class="page-title-center--has-icon page-title-center--has-icon--font-30 page-title-center--has-icon--mobile-inline">
                     <h2><i></i>脱衣所・浴室<br class="hidden-sm">ご利用時のご案内</h2>
                 </div>
                 <p class="sec05-desc">
@@ -515,7 +521,7 @@ Template Name: enjoy-spa
                         <h2><i></i>よくある質問</h2>
                     </div>
                     <div class="sec07-btn hidden-mobile">
-                        <a href="<?php echo home_url(); ?>/faq/">一覧を見る<i></i></a>
+                        <a href="<?php echo home_url(); ?>/faq/#sec03">一覧を見る<i></i></a>
                     </div>
                 </div>
                 <div class="sec07-wrap-faq accordion">

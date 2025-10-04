@@ -67,6 +67,9 @@
     bottom: calc(-100vh + 10px);
     left: 0;
     background-color: #fefbf5;
+    @include media(mobile) {
+      bottom: calc(-100vh + 130px);
+    }
   }
 }
 
@@ -176,10 +179,14 @@
     overflow: hidden;
     margin: 0 auto 64px;
     margin-bottom: 64px;
-    max-width: 2000px;
+    //max-width: 2000px;
 
     @include media(middle) {
       margin-bottom: 0;
+      padding-bottom: 100px;
+    }
+    @include media(mobile) {
+      padding-bottom: 60px;
     }
 
     .top-visual-wrap {
@@ -291,11 +298,9 @@
           bottom: 0;
           left: 0;
           z-index: 10;
-
           @include media(middle) {
             height: 12%;
           }
-
           @include media(middle-small) {
             height: 15%;
           }
@@ -309,14 +314,12 @@
           background: #fefbf5;
           //height: 100vh; // ← ここ重要。波が収まる空間を作る
           overflow: hidden; // ← 背景が見えすぎないようにする
-
           @include media(llg) {
             height: 70vh;
           }
-
           @include media(mobile) {
-            //height: auto;
-            height: 503px;
+            //height: calc(200 * (100vw / 375));
+            height: 500px;
           }
 
           .wave {
@@ -331,6 +334,7 @@
 
             @include media(mobile) {
               //bottom: 100px;
+              height: 100%;
             }
 
             svg {
@@ -366,6 +370,9 @@
 
             @include media(mobile) {
               width: 300px;
+            }
+            img {
+              width: 100%;
             }
           }
 
@@ -534,7 +541,7 @@
             font-weight: 900;
             margin-bottom: 17px;
             position: relative;
-            z-index: 3;
+            z-index: 13;
 
             @include media(llg) {
               font-size: 26px;
@@ -542,10 +549,14 @@
 
             @include media(middle) {
               font-size: 18px;
+              //折り返し禁止
+              white-space: nowrap;
+              text-align: center;
             }
 
             @include media(middle-small) {
               font-size: 15px;
+              letter-spacing: 0.072em;
             }
 
             @include media(mobile) {
@@ -655,6 +666,7 @@
                   justify-content: space-between;
                   align-items: center;
                   padding: 0 20px;
+                  position: relative;
 
                   &:hover {
                     i {
@@ -667,14 +679,20 @@
                     font-weight: 500;
                     letter-spacing: 0.08em;
                     color: #3c3636;
+                    width: calc(100% - 15px);
                     border-bottom: 1px solid #3c3636;
+                    @include media(middle) {
+                      font-size: 14px;
+                    }
 
                     time {
                       margin-right: 20px;
+                      font-size: 16px;
 
                       @include media(middle) {
                         width: 100%;
                         display: inline-block;
+                        font-size: 12px;
                       }
                     }
                   }
@@ -687,6 +705,10 @@
                     background-repeat: no-repeat;
                     display: block;
                     transition: transform 0.4s ease;
+                    position: absolute;
+                    right: 10px;
+                    bottom: 50%;
+                    transform: translateY(50%);
                   }
                 }
               }
@@ -764,7 +786,6 @@
           position: relative;
           z-index: 0;
 
-
           .slide-bg {
             position: absolute;
             top: 0;
@@ -777,7 +798,6 @@
             transition: left 0.3s ease;
             z-index: 1;
           }
-
 
           @include media(middle) {
             //max-width: ;
@@ -847,7 +867,7 @@
         .sec01-col-main {
           position: relative;
           z-index: 100;
-
+          padding: 2px 0px;
           .swiper-wrapper {
             padding-top: 88px;
 
@@ -862,6 +882,9 @@
                 display: block;
                 width: 100%;
                 position: relative;
+                border: solid 1px #3c3636;
+                border-radius: 30px;
+                height: 100%;
 
                 &:hover {
                   .fire {
@@ -903,13 +926,20 @@
 
                 .img {
                   text-align: center;
-                  border-radius: 30px 30px 0 0;
-                  border: solid 1px #3c3636;
+                  //border: solid 1px #3c3636;
+                  border-radius: 29px 29px 0 0;
+                  border-bottom: 1px solid #3c3636;
                   width: 100%;
                   overflow: hidden;
+                  height: 200px;
+                  @include media(mobile) {
+                    height: 137px;
+                  }
 
                   img {
                     width: 100%;
+                    height: 100%;
+                    object-fit: cover;
                   }
                 }
 
@@ -929,18 +959,24 @@
                   width: 100%;
                   background-color: #fff;
                   border-radius: 0 0 30px 30px;
-                  border: solid 1px #3c3636;
                   border-top: none;
                   display: flex;
                   flex-wrap: wrap;
                   justify-content: space-between;
                   align-items: center;
-                  padding: 21px 10px 30px;
+                  padding: 21px 20px 30px;
+
+                  @include media(mobile) {
+                    height: auto;
+                  }
 
                   .text-info {
                     display: flex;
                     width: 100%;
                     flex-wrap: wrap;
+                    @include media(middle) {
+                      height: 48px;
+                    }
 
                     .text-info-cat {
                       width: 50%;
@@ -984,8 +1020,8 @@
                   }
 
                   .term {
-                    font-size: 13px;
-                    letter-spacing: 0em;
+                    font-size: 12.5px;
+                    letter-spacing: -0.02em;
                     font-weight: 500;
                   }
 
@@ -995,9 +1031,11 @@
                     width: 100%;
                     font-weight: 500;
                     letter-spacing: 0.1em;
+                    height: 48px;
 
-                    @include media(mobile) {
+                    @include media(middle) {
                       font-size: 14px;
+                      height: 42px;
                     }
                   }
                 }
@@ -1341,11 +1379,14 @@
         z-index: 2;
 
         @include media(middle) {
-          width: 20%;
+          width: 40%;
           left: inherit;
-          right: 5%;
+          right: -2.5%;
           transform: translateX(0);
           top: -130px;
+        }
+        img {
+          width: 100%;
         }
       }
     }
@@ -1490,7 +1531,7 @@
                     span,
                     time,
                     h4 {
-                      opacity: .5;
+                      opacity: 0.5;
                     }
                   }
 
@@ -1589,6 +1630,9 @@
   /*コンセプト*/
   .sec03 {
     padding-top: 107px;
+    @include media(middle) {
+      padding-top: 40px;
+    }
 
     .sec03-col {
       width: 90%;
@@ -1634,7 +1678,8 @@
         }
 
         /* non-scaling-stroke は拡大縮小時に stroke 幅を一定に保つ */
-        path {}
+        path {
+        }
 
         .sec03-col-item-child {
           position: absolute;
@@ -1727,7 +1772,9 @@
           }
 
           @include media(mobile) {
-            font-size: 28px;
+            font-size: 27px;
+            //折り返し禁止
+            white-space: nowrap;
           }
 
           img {
@@ -1748,10 +1795,11 @@
 
           @include media(middle) {
             font-size: 16px;
+            letter-spacing: 0.04em;
           }
 
           @include media(mobile) {
-            font-size: 18px;
+            font-size: 17px;
           }
         }
       }
@@ -2118,8 +2166,6 @@
         width: 100%;
         height: auto;
       }
-
-
 
       .sec04-wrap {
         position: relative;
@@ -2697,8 +2743,6 @@
 
     .sec06-bg-top {
       position: relative;
-
-
     }
 
     .sec06-bg {

@@ -50,15 +50,15 @@ Template Name: enjoy-sauna
 
                     <h2>五感を研ぎ澄ます、<br>ととのい体験</h2>
                     <p>
-                        じんわりと身体の芯から熱が伝わり、汗とともに心のざわめきが消えていく──。<br>
-                        グルスパのサウナは、“ととのう”ための理想的な環境を追求。<br>
-                        本格志向のサウナーから初心者の方まで、どなたでも自分に合ったスタイルで楽しめます。熱・水・休憩の循環が、最高のリラックスとリセットをもたらします。
+                        じんわりと身体の芯から熱が伝わり、<br class="hidden-sm">汗とともに心のざわめきが消えていく──。<br>
+                        グルスパのサウナは、<br class="hidden-sm">“ととのう”ための理想的な環境を追求。<br>
+                        本格志向のサウナーから初心者の方まで、<br class="hidden-sm">どなたでも自分に合ったスタイルで楽しめます。<br class="hidden-sm">熱・水・休憩の循環が、最高のリラックスと<br class="hidden-sm">リセットをもたらします。
                     </p>
                 </div>
                 <div class="enjoy-wrap-img">
                     <ul>
                         <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/sauna/sec01-img-01_v2.jpg" alt=""></li>
-                        <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/sauna/sec01-img-02.jpg" alt=""></li>
+                        <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/sauna/sec01-img-02_v2.jpg" alt=""></li>
                     </ul>
                 </div>
             </div>
@@ -105,7 +105,11 @@ Template Name: enjoy-sauna
         </div>
 
         <div class="page-deco-bg">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-yellow-top.png" alt="">
+            <picture>
+                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-yellow-top-sp.png" media="(max-width: 600px)">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-yellow-top.png" alt="">
+            </picture>
+
         </div>
         <div class="page-deco-container page-deco-container--yellow">
             <div class="content-width-sm">
@@ -168,7 +172,7 @@ Template Name: enjoy-sauna
 
     <section class="sec04" id="sec04">
         <div class="content-width-sm">
-            <div class="page-title-center--has-icon">
+            <div class="page-title-center--has-icon page-title-center--has-icon--nowrap">
                 <h2><i></i>サウナラインナップ</h2>
             </div>
         </div>
@@ -268,46 +272,30 @@ Template Name: enjoy-sauna
                     <div class="sec05-wrap-col-img">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sauna/sec05-img-01_v2.jpg" alt="">
                     </div>
-                    <div class="sec05-wrap-col-txt">
-                        <h3>外気浴エリア</h3>
-                        <p>
-                            リクライニングチェアやベンチを設置し、自然の風を感じながら深い呼吸を。
-                        </p>
-                    </div>
                 </div>
                 <div class="sec05-wrap-col">
                     <div class="sec05-wrap-col-img">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sauna/sec05-img-02_v2.jpg" alt="">
-                    </div>
-                    <div class="sec05-wrap-col-txt">
-                        <h3>室内スペース</h3>
-                        <p>
-                            天候に左右されず、快適にクールダウンできる環境を整備。
-                        </p>
                     </div>
                 </div>
                 <div class="sec05-wrap-col">
                     <div class="sec05-wrap-col-img">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sauna/sec05-img-03_v2.jpg" alt="">
                     </div>
-                    <div class="sec05-wrap-col-txt">
-                        <h3>ととのいイス</h3>
-                        <p>
-                            男女それぞれ約40脚を配置。混雑時も安心してご利用いただけます。
-                        </p>
-                    </div>
                 </div>
-
             </div>
         </div>
     </section>
     <section class="sec06" id="sec06">
         <div class="page-deco-bg">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-yellow-top.png" alt="">
+            <picture>
+                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-yellow-top-sp.png" media="(max-width: 600px)">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-yellow-top.png" alt="">
+            </picture>
         </div>
         <div class="page-deco-container page-deco-container--yellow">
             <div class="content-width-sm">
-                <div class="page-title-center--has-icon">
+                <div class="page-title-center--has-icon page-title-center--has-icon--nowrap">
                     <h2><i></i>サウナイベント情報</h2>
                 </div>
             </div>
@@ -339,6 +327,9 @@ Template Name: enjoy-sauna
                                         $event_category = get_the_terms(get_the_ID(), 'event_category');
                                         $event_start_date = get_field('event_start_date'); // 開始日
                                         $is_hot = get_field('hot'); // HOT! フラグ
+                                        // カテゴリーに応じたデフォルト画像を設定
+                                        $category_slug = $event_category[0]->slug;
+                                        $category_slug_parent = '';
                                 ?>
 
                                         <div class="swiper-slide">
@@ -356,16 +347,27 @@ Template Name: enjoy-sauna
                                                             // カテゴリーに応じたデフォルト画像を設定
                                                             $category_slug = $event_category[0]->slug;
                                                             $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-default.jpg'; // デフォルト画像
+                                                            $default_image_url_sp = get_template_directory_uri() . '/assets/img/archive/archive-default.jpg'; // デフォルト画像
 
-                                                            if ($category_slug === 'information') {
+                                                            if ($category_slug === 'information' || $category_slug_parent === 'information') {
                                                                 $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-red.jpg';
-                                                            } elseif ($category_slug === 'event') {
+                                                                $default_image_url_sp = get_template_directory_uri() . '/assets/img/archive/archive-red_sp.jpg';
+                                                            } elseif ($category_slug === 'event' || $category_slug_parent === 'event') {
                                                                 $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-green.jpg';
-                                                            } elseif ($category_slug === 'food') {
+                                                                $default_image_url_sp = get_template_directory_uri() . '/assets/img/archive/archive-green_sp.jpg';
+                                                            } elseif ($category_slug === 'food' || $category_slug_parent === 'food') {
                                                                 $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-yellow.jpg';
+                                                                $default_image_url_sp = get_template_directory_uri() . '/assets/img/archive/archive-yellow_sp.jpg';
+                                                            } elseif ($category_slug === 'relax' || $category_slug_parent === 'relax') {
+                                                                $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-blue.jpg';
+                                                                $default_image_url_sp = get_template_directory_uri() . '/assets/img/archive/archive-blue_sp.jpg';
+                                                            } elseif ($category_slug === 'tokiwa') {
                                                             }
                                                             ?>
-                                                            <img src="<?php echo esc_url($default_image_url); ?>" alt="<?php the_title(); ?>">
+                                                            <picture>
+                                                                <source srcset="<?php echo esc_url($default_image_url_sp); ?>" media="(max-width: 600px)">
+                                                                <img src="<?php echo esc_url($default_image_url); ?>" alt="<?php the_title(); ?>">
+                                                            </picture>
                                                         <?php else : ?>
                                                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-default.jpg" alt="<?php the_title(); ?>">
                                                         <?php endif; ?>
@@ -374,12 +376,14 @@ Template Name: enjoy-sauna
                                                 <div class="text">
                                                     <div class="text-info">
                                                         <?php
-                                                        if ($category_slug === 'information') {
+                                                        if ($category_slug === 'information' || $category_slug_parent === 'information') {
                                                             $cats_class = 'category-red';
-                                                        } elseif ($category_slug === 'event') {
+                                                        } elseif ($category_slug === 'event' || $category_slug_parent === 'event') {
                                                             $cats_class = 'category-green';
-                                                        } elseif ($category_slug === 'food') {
+                                                        } elseif ($category_slug === 'food' || $category_slug_parent === 'food') {
                                                             $cats_class = 'category-yellow';
+                                                        } elseif ($category_slug === 'relax' || $category_slug_parent === 'relax') {
+                                                            $cats_class = 'category-blue';
                                                         }
                                                         ?>
                                                         <div class="text-info-cat">
@@ -407,13 +411,16 @@ Template Name: enjoy-sauna
                     </div>
 
 
-                    <div class="com-btn-border-black">
-                        <a href="<?php echo home_url(); ?>/event/">イベント情報一覧を見る<i></i></a>
+                    <div class="com-btn-border-black hidden-mobile">
+                        <a href="<?php echo home_url(); ?>/event/?get_event=event">イベント情報一覧を見る<i></i></a>
+                    </div>
+                    <div class="com-btn-mobile hidden-sm">
+                        <a href="<?php echo home_url(); ?>/event/?get_event=event">イベント情報一覧を見る<i></i></a>
                     </div>
                 </div>
             </div>
             <div class="content-width" id="sec07">
-                <div class="page-title-center--has-icon">
+                <div class="page-title-center--has-icon page-title-center--has-icon--nowrap">
                     <h2><i></i>イベントスケジュール</h2>
                 </div>
                 <div class="sec06-desc">
@@ -435,10 +442,16 @@ Template Name: enjoy-sauna
                             </a>
                         </div>
                     </div>
-                    <div class="sec06-bottom-col">
+                    <div class="sec06-bottom-col sec06-bottom-col--schedule">
                         <div class="sec-01-col-under">
                             <a href="<?php echo home_url(); ?>/schedule/">
-                                <div class="sec-01-col-under-img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/bnr/page-bnr-schedule-img_v2.jpg" alt=""></div>
+                                <div class="sec-01-col-under-img sec-01-col-under--schedule">
+                                    <picture>
+                                        <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/bnr/page-bnr-schedule-img_v3.png" media="(max-width: 600px)">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/bnr/page-bnr-schedule-img_v2.jpg" alt="">
+                                    </picture>
+
+                                </div>
                                 <div class="sec-01-col-under-title">
                                     <h3><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/title-event-schedule_v2.png" alt="EVENT SCHEDULE"><i class="icon-btn"></i></h3>
                                     <p>イベントはこちらをチェック！</p>
@@ -457,8 +470,8 @@ Template Name: enjoy-sauna
 
     <section class="sec07" id="sec08">
         <div class="content-width-sm">
-            <div class="page-title-center--has-icon">
-                <h2><i></i>脱衣所・浴室ご利用時のご案内</h2>
+            <div class="page-title-center--has-icon page-title-center--has-icon--mobile-inline">
+                <h2><i></i>脱衣所・浴室<br class="hidden-sm">ご利用時のご案内</h2>
             </div>
             <p class="sec07-desc">
                 当館ではお客様に気持ちよくご利用いただくため、<br class="hidden-mobile">下記の事項をお守りくださいますようお願い申し上げます。

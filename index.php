@@ -329,6 +329,18 @@
                                         $event_category = get_the_terms(get_the_ID(), 'event_category');
                                         $event_start_date = get_field('event_start_date'); // 開始日
                                         $is_hot = get_field('hot'); // HOT! フラグ
+                                        // カテゴリーに応じたデフォルト画像を設定
+                                        $category_slug = $event_category[0]->slug;
+                                        $category_slug_parent = '';
+                                        //$event_category[0]の親カテゴリーを取得
+                                        //var_dump($event_category[0]);
+                                        if ($event_category[0]->parent) {
+                                            $parent_term = get_term($event_category[0]->parent, 'event_category');
+                                            if ($parent_term && !is_wp_error($parent_term)) {
+                                                $category_slug_parent_id = $parent_term->term_id;
+                                                $category_slug_parent = $parent_term->slug;
+                                            }
+                                        }
                                 ?>
 
                                         <div class="swiper-slide">
@@ -343,18 +355,6 @@
                                                     <?php else : ?>
                                                         <?php if ($event_category && !is_wp_error($event_category)) : ?>
                                                             <?php
-                                                            // カテゴリーに応じたデフォルト画像を設定
-                                                            $category_slug = $event_category[0]->slug;
-                                                            $category_slug_parent = '';
-                                                            //$event_category[0]の親カテゴリーを取得
-                                                            //var_dump($event_category[0]);
-                                                            if ($event_category[0]->parent) {
-                                                                $parent_term = get_term($event_category[0]->parent, 'event_category');
-                                                                if ($parent_term && !is_wp_error($parent_term)) {
-                                                                    $category_slug_parent_id = $parent_term->term_id;
-                                                                    $category_slug_parent = $parent_term->slug;
-                                                                }
-                                                            }
                                                             $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-default.jpg'; // デフォルト画像
 
                                                             if ($category_slug === 'information' || $category_slug_parent === 'information') {
@@ -377,13 +377,13 @@
                                                 <div class="text">
                                                     <div class="text-info">
                                                         <?php
-                                                        if ($category_slug === 'information') {
+                                                        if ($category_slug === 'information' || $category_slug_parent === 'information') {
                                                             $cats_class = 'category-red';
-                                                        } elseif ($category_slug === 'event') {
+                                                        } elseif ($category_slug === 'event' || $category_slug_parent === 'event') {
                                                             $cats_class = 'category-green';
-                                                        } elseif ($category_slug === 'food') {
+                                                        } elseif ($category_slug === 'food' || $category_slug_parent === 'food') {
                                                             $cats_class = 'category-yellow';
-                                                        } elseif ($category_slug === 'relax') {
+                                                        } elseif ($category_slug === 'relax' || $category_slug_parent === 'relax') {
                                                             $cats_class = 'category-blue';
                                                         }
                                                         ?>
@@ -604,7 +604,7 @@
                 <div class="com-btn-sp"><a href="<?php echo home_url(); ?>/event/">一覧を見る<i class="black"></i></a></div>
                 <div class="sec-01-col-under">
                     <a href="<?php echo home_url(); ?>/schedule/">
-                        <div class="sec-01-col-under-img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-img-01.jpg" alt=""></div>
+                        <div class="sec-01-col-under-img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-img-01_v2.jpg" alt=""></div>
                         <div class="sec-01-col-under-title">
                             <?php
                             /*
@@ -630,12 +630,12 @@
             <div class="sec02-bg-top">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec02-bg-top_v3.png" alt="">
                 <span class="bg-item-06"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/bg-item-06_v2.png" alt=""></span>
-                <span class="bg-item-05"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/bg-item-05_v2.png" alt=""></span>
+                <span class="bg-item-05"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/bg-item-05_v4.png" alt=""></span>
             </div>
             <div class="sec02-bg">
                 <div class="sec02-wrap">
                     <div class="com-title com-title-left com-title-white com-title-hidden">
-                        <p class="color-white">イベント情報</p>
+                        <p class="color-white">お知らせ</p>
                         <h2 class="color-white">
                             <span class="title">N</span><span class="title">E</span><span class="title">W</span><span class="title">S</span>
                             <span class="title title-item-sprout">
@@ -667,16 +667,17 @@
                                     if ($the_query->have_posts()) :
                                         while ($the_query->have_posts()) : $the_query->the_post();
                                     ?>
+                                            <?php $cats = get_the_category(); ?>
                                             <li><a href="<?php the_permalink(); ?>">
                                                     <div class="sec02-list-img">
                                                         <?php if (has_post_thumbnail()) : ?>
                                                             <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>">
                                                         <?php else : ?>
-                                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/dummy-small.jpg" alt="<?php the_title(); ?>">
+                                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/dummy-small_v2.jpg" alt="<?php the_title(); ?>">
                                                         <?php endif; ?>
                                                     </div>
                                                     <div class="sec02-list-txt">
-                                                        <span class="category">お知らせ</span>
+                                                        <span class="category"><?php echo $cats[0]->name; ?></span>
                                                         <time><?php the_time('Y.m.d'); ?></time>
                                                         <h4><?php the_title(); ?></h4>
                                                     </div>
@@ -711,16 +712,17 @@
                                     if ($the_query->have_posts()) :
                                         while ($the_query->have_posts()) : $the_query->the_post();
                                     ?>
+                                            <?php $cats = get_the_category(); ?>
                                             <li><a href="<?php the_permalink(); ?>">
                                                     <div class="sec02-list-img">
                                                         <?php if (has_post_thumbnail()) : ?>
                                                             <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>">
                                                         <?php else : ?>
-                                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/dummy-small.jpg" alt="<?php the_title(); ?>">
+                                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/dummy-small_v2.jpg" alt="<?php the_title(); ?>">
                                                         <?php endif; ?>
                                                     </div>
                                                     <div class="sec02-list-txt">
-                                                        <span class="category">お知らせ</span>
+                                                        <span class="category"><?php echo $cats[0]->name; ?></span>
                                                         <time><?php the_time('Y.m.d'); ?></time>
                                                         <h4><?php the_title(); ?></h4>
                                                     </div>
@@ -748,8 +750,6 @@
 
         <section class="sec03">
             <div class="sec03-col">
-
-
                 <div class="sec03-col-txt">
                     <div class="com-title com-title-big com-title-concept">
                         <p class="">コンセプト</p>
@@ -770,12 +770,12 @@
 
                     <p>
                         松坂温泉グルスパは<br>
-                        「ウェルビーイング＝心身ともに満たされた状態」をテーマにしたスパリゾートです。<br><br>
+                        「ウェルビーイング＝心身ともに満たさ<br class="hidden-sm">れた状態」をテーマにした<br class="hidden-sm">スパリゾートです。<br><br>
 
-                        この地の恵みを活かした天然温泉・岩盤浴・食・休息。<br><br>
+                        この地の恵みを活かした天然温泉・<br class="hidden-sm">岩盤浴・食・休息。<br><br>
 
-                        すべての体験が、あなたの心と体を解き放つ<br>
-                        “ととのい”につながります。
+                        すべての体験が、あなたの心と体を<br class="hidden-sm">解き放つ<br class="hidden-mobile">
+                        “ととのい”に<br class="hidden-sm">つながります。
                     </p>
                 </div>
                 <div class="sec03-col-item">
@@ -842,10 +842,21 @@
                     </script>
 
 
-                    <div class="sec03-col-item-child sec03-col-item-child-1"><img class="sec03-col-item-child-1-wrap" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec03-col-item-child-1.png" alt=""></div>
-                    <div class="sec03-col-item-child sec03-col-item-child-2"><img class="sec03-col-item-child-2-wrap" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec03-col-item-child-2.png" alt=""></div>
-                    <div class="sec03-col-item-child sec03-col-item-child-3"><img class="sec03-col-item-child-3-wrap" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec03-col-item-child-3.png" alt=""></div>
-                    <div class="sec03-col-item-child sec03-col-item-child-4"><img class="sec03-col-item-child-4-wrap" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec03-col-item-child-4.png" alt=""></div>
+                    <div class="sec03-col-item-child sec03-col-item-child-1">
+                        <img class="sec03-col-item-child-1-wrap hidden-mobile" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec03-col-item-child-1.png" alt="">
+                        <img class="sec03-col-item-child-1-wrap hidden-sm" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec03-col-item-child-1_sp.png" alt="">
+                    </div>
+                    <div class="sec03-col-item-child sec03-col-item-child-2">
+                        <img class="sec03-col-item-child-2-wrap hidden-mobile" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec03-col-item-child-2.png" alt="">
+                        <img class="sec03-col-item-child-2-wrap hidden-sm" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec03-col-item-child-2_sp.png" alt="">
+                    </div>
+                    <div class="sec03-col-item-child sec03-col-item-child-3">
+                        <img class="sec03-col-item-child-3-wrap hidden-mobile" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec03-col-item-child-3.png" alt="">
+                        <img class="sec03-col-item-child-3-wrap hidden-sm" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec03-col-item-child-3_sp.png" alt="">
+                    </div>
+                    <div class="sec03-col-item-child sec03-col-item-child-4">
+                        <img class="sec03-col-item-child-4-wrap" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec03-col-item-child-4.png" alt="">
+                    </div>
                 </div>
             </div>
 
@@ -874,11 +885,11 @@
                         <div class="loop-track" id="sliderTrack">
                             <?php for ($i = 0; $i < 2; $i++) : // 2セット 
                             ?>
-                                <div class="loop-item"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-slider-01.jpg" alt=""></div>
-                                <div class="loop-item loop-item-2"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-slider-02.png" alt=""></div>
-                                <div class="loop-item"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-slider-03.jpg" alt=""></div>
-                                <div class="loop-item loop-item-2"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-slider-04.png" alt=""></div>
-                                <div class="loop-item"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-slider-05.jpg" alt=""></div>
+                                <div class="loop-item"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-slider-01_v2.jpg" alt=""></div>
+                                <div class="loop-item loop-item-2"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-slider-02_v2.png" alt=""></div>
+                                <div class="loop-item"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-slider-03_v2.jpg" alt=""></div>
+                                <div class="loop-item loop-item-2"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-slider-04_v2.png" alt=""></div>
+                                <div class="loop-item"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-slider-05_v2.jpg" alt=""></div>
                             <?php endfor; ?>
                         </div>
                     </div>
@@ -888,7 +899,11 @@
 
         <section class="sec04">
             <div class="sec04-bg-top">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec04-bg-top_v2.png" alt="">
+                <picture class="">
+                    <source media="(min-width:601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec04-bg-top_v2.png">
+                    <source media="(max-width:600px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec04-bg-top_sp.png">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec04-bg-top_v2.png" alt="">
+                </picture>
             </div>
             <div class="sec04-bg">
                 <div class="shizuku-group group-a">
@@ -901,13 +916,6 @@
                     <span class="shizuku shizuku-5"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/item-shizuku-2-2.png" alt=""></span>
                 </div>
 
-                <?php /*
-                <span class="shizuku-1"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/item-shizuku-1-1.png" alt=""></span>
-                <span class="shizuku-2"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/item-shizuku-1-2.png" alt=""></span>
-                <span class="shizuku-3"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/item-shizuku-1-3.png" alt=""></span>
-                <span class="shizuku-4"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/item-shizuku-2-1.png" alt=""></span>
-                <span class="shizuku-5"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/item-shizuku-2-2.png" alt=""></span>
-                */ ?>
                 <span class="ring-1"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec04-item-ring.png" alt=""></span>
                 <span class="ring-2"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec04-item-ring.png" alt=""></span>
                 <div class="content-width-small">
@@ -933,7 +941,7 @@
                         <div class="sec04-wrap">
                             <div class="sec04-wrap-col sec04-wrap-right">
                                 <div class="sec04-wrap-col-img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-img-03.jpg" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-img-03_v2.jpg" alt="">
                                 </div>
                                 <div class="sec04-wrap-col-txt">
                                     <h3>お風呂</h3>
@@ -946,7 +954,7 @@
                             </div>
                             <div class="sec04-wrap-col sec04-wrap-left">
                                 <div class="sec04-wrap-col-img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-img-04.jpg" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-img-04_v2.jpg" alt="">
                                 </div>
                                 <div class="sec04-wrap-col-txt">
                                     <h3>サウナ＆水風呂</h3>
@@ -959,7 +967,7 @@
                             </div>
                             <div class="sec04-wrap-col sec04-wrap-right">
                                 <div class="sec04-wrap-col-img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-img-05.jpg" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-img-05_v2.jpg" alt="">
                                 </div>
                                 <div class="sec04-wrap-col-txt">
                                     <h3>発汗エリア<br class="hidden-sm">(有料岩盤浴エリア)</h3>
@@ -973,7 +981,7 @@
                             </div>
                             <div class="sec04-wrap-col sec04-wrap-left">
                                 <div class="sec04-wrap-col-img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-img-06.jpg" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-img-06_v2.jpg" alt="">
                                 </div>
                                 <div class="sec04-wrap-col-txt">
                                     <h3>ご飲食</h3>
@@ -986,7 +994,7 @@
                             </div>
                             <div class="sec04-wrap-col sec04-wrap-right">
                                 <div class="sec04-wrap-col-img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-img-07.jpg" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-img-07_v2.jpg" alt="">
                                 </div>
                                 <div class="sec04-wrap-col-txt">
                                     <h3>リラクゼーション</h3>
@@ -1147,7 +1155,7 @@
 
                     <ul class="sec06-map">
                         <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/map-1.jpg" alt="guruspa"></li>
-                        <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/map-2_v2.jpg" alt="guruspa"></li>
+                        <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/map-2_v3.jpg" alt="guruspa"></li>
                     </ul>
                     <div class="sec06-wrap-under-link">
                         <a href="<?php echo home_url(); ?>/guide/#sec05">くわしく見る<i></i></a>

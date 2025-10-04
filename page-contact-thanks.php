@@ -81,9 +81,9 @@ Template Name: お問い合わせ(個人のお客様向け)完了
                     <p>
                         担当より3営業日以内にご連絡をさせていただきます。<br>
                         3営業日経っても連絡がない場合は<br>
-                        お手数ですが<a href="tel:000-000-0000">000-000-0000</a>までお電話くださいませ。
+                        お手数ですが<a href="tel:0598-54-2626">0598-54-2626</a>までお電話くださいませ。
                     </p>
-                    <?php //echo do_shortcode('[mwform_formkey key="94"]'); 
+                    <?php echo do_shortcode('[mwform_formkey key="94"]');
                     ?>
                     <div class="com-btn-arrow-left com-btn-arrow-left--text-left hidden-mobile">
                         <a href="<?php echo home_url(); ?>/"><i></i>TOPへ戻る</a>

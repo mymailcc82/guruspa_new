@@ -68,7 +68,7 @@ Template Name: enjoy-food
         <div class="sec01-col">
             <ul class="sec01-col-select tab">
                 <li class="active"><a href="javascript:void(0)" data-id="#area01">キッチントキワ</a></li>
-                <li><a href="javascript:void(0)" data-id="#area02">Sweet Lab</a></li>
+                <li><a href="javascript:void(0)" data-id="#area02">Sweet Labo</a></li>
             </ul>
 
             <div class="area01 area is-active" id="area01">
@@ -76,7 +76,10 @@ Template Name: enjoy-food
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec02-icon-01.png" alt="">
                 </div>
                 <div class="page-deco-bg">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-yellow-top.png" alt="">
+                    <picture>
+                        <source media="(max-width: 601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-yellow-top-sp.png">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-yellow-top.png" alt="">
+                    </picture>
                 </div>
                 <div class="page-deco-container page-deco-container--yellow">
                     <div class="relative">
@@ -142,7 +145,7 @@ Template Name: enjoy-food
                         </section>
                         <section class="sec04" id="sec04">
                             <div class="content-width-sm">
-                                <div class="page-title-center--has-icon">
+                                <div class="page-title-center--has-icon page-title-center--has-icon--nowrap">
                                     <h2><i></i>さまざまな席タイプ</h2>
                                 </div>
                                 <p class="sec04-desc">
@@ -151,15 +154,15 @@ Template Name: enjoy-food
                                 <div class="sec04-wrap">
                                     <div class="sec04-wrap-col">
                                         <div class="sec04-wrap-col-img">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec04-img-01_v2.jpg" alt="">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec04-img-02_v3.jpg" alt="">
                                         </div>
-                                        <p>カウンター席</p>
+                                        <p>テーブル席</p>
                                     </div>
                                     <div class="sec04-wrap-col">
                                         <div class="sec04-wrap-col-img">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec04-img-02_v2.jpg" alt="">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec04-img-01_v3.jpg" alt="">
                                         </div>
-                                        <p>テーブル席</p>
+                                        <p>カウンター席</p>
                                     </div>
                                     <div class="sec04-wrap-col">
                                         <div class="sec04-wrap-col-img">
@@ -217,10 +220,17 @@ Template Name: enjoy-food
                                             'order' => 'DESC', // 降順
                                             //event_categoryが'event'のものを取得
                                             'tax_query' => array(
+                                                'relation' => 'OR',
                                                 array(
                                                     'taxonomy' => 'event_category',
                                                     'field'    => 'slug',
                                                     'terms'    => 'tokiwa', // ここに取得したいカテゴリーのスラッグを指定
+                                                ),
+                                                //foodも表示
+                                                array(
+                                                    'taxonomy' => 'event_category',
+                                                    'field'    => 'slug',
+                                                    'terms'    => 'food', // ここに取得したいカテゴリーのスラッグを指定
                                                 ),
                                             ),
                                         );
@@ -290,7 +300,7 @@ Template Name: enjoy-food
                                                                 }
                                                                 ?>
                                                                 <div class="text-info-cat">
-                                                                    <span class="category <?php echo esc_attr($cats_class); ?>"><?php echo esc_html($event_category[0]->name); ?></span>
+                                                                    <span class="category <?php echo esc_attr($cats_class); ?> cat-<?php echo esc_attr($event_category[0]->slug); ?>"><?php echo esc_html($event_category[0]->name); ?></span>
                                                                 </div>
                                                                 <div class="text-info-term">
                                                                     <span class="term"><?php echo $event_start_date; ?></span>
@@ -304,7 +314,7 @@ Template Name: enjoy-food
                                             endwhile;
                                             wp_reset_postdata();
                                         else :
-                                            echo '<p class="text-base text-center w-full">投稿が見つかりませんでした。</p>';
+                                            echo '<p class="text-base text-center w-full">イベントが見つかりませんでした。</p>';
                                         endif;
                                         ?>
                                     </div>
@@ -561,10 +571,17 @@ Template Name: enjoy-food
                                                 'order' => 'DESC', // 降順
                                                 //event_categoryが'event'のものを取得
                                                 'tax_query' => array(
+                                                    'relation' => 'OR',
                                                     array(
                                                         'taxonomy' => 'event_category',
                                                         'field'    => 'slug',
                                                         'terms'    => 'sweet', // ここに取得したいカテゴリーのスラッグを指定
+                                                    ),
+                                                    //foodも表示
+                                                    array(
+                                                        'taxonomy' => 'event_category',
+                                                        'field'    => 'slug',
+                                                        'terms'    => 'food', // ここに取得したいカテゴリーのスラッグを指定
                                                     ),
                                                 ),
                                             );
@@ -633,7 +650,6 @@ Template Name: enjoy-food
                                                                         $cats_class = 'category-blue';
                                                                     }
                                                                     ?>
-                                                                    ?>
                                                                     <div class="text-info-cat">
                                                                         <span class="category <?php echo esc_attr($cats_class); ?>"><?php echo esc_html($event_category[0]->name); ?></span>
                                                                     </div>
@@ -651,7 +667,7 @@ Template Name: enjoy-food
                                                 endwhile;
                                                 wp_reset_postdata();
                                             else :
-                                                echo '<p class="text-base text-center w-full">投稿が見つかりませんでした。</p>';
+                                                echo '<p class="text-base text-center w-full">イベントが見つかりませんでした。</p>';
                                             endif;
                                             ?>
                                         </div>

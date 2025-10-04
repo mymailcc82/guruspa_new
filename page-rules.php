@@ -25,7 +25,7 @@
     </div>
     <section class="sec01">
         <div class="content-width-lg">
-            <div class="com-title center com-title-hidden">
+            <div class="com-title center com-title-hidden com-title--else">
                 <p>注意事項</p>
                 <h1 class="">
                     <span class="title">H</span><span class="title">O</span><span class="title">U</span><span class="title">S</span><span class="title">E</span>　<span class="title">R</span><span class="title">U</span><span class="title">L</span><span class="title">E</span><span class="title">S</span>

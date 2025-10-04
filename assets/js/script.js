@@ -33,18 +33,23 @@ $('.accordion dl dt').on('click', function () {
 
 // footer-accordion 専用 (SPだけでスライド)
 $(function () {
-  $('.footer-accordion-switch').on('click', function () {
-    const $dd = $(this).next('dd');
-    const isActive = $dd.hasClass('active');
+  $(function () {
+    $('.footer-accordion-switch').on('click', function () {
+      const $dl = $(this).closest('dl'); // ← 親のdlを取得
+      const $dd = $(this).next('dd');
+      const isActive = $dd.hasClass('active');
 
-    if (!isActive) {
-      const h = $dd.prop('scrollHeight');
-      $dd.css('max-height', h + 'px');
-      $dd.addClass('active');
-    } else {
-      $dd.css('max-height', 0);
-      $dd.removeClass('active');
-    }
+      if (!isActive) {
+        const h = $dd.prop('scrollHeight');
+        $dd.css('max-height', h + 'px');
+        $dd.addClass('active');
+        $dl.addClass('open'); // ← dlにopenクラス追加
+      } else {
+        $dd.css('max-height', 0);
+        $dd.removeClass('active');
+        $dl.removeClass('open'); // ← dlからopenクラス削除
+      }
+    });
   });
 });
 
@@ -56,8 +61,6 @@ $(document).ready(function () {
   );
 });
 
-
-
 //header-drawerのaタグがクリックされたら、.header-drawerからactiveを削除
 $('.header-btn').on('click', function () {
   $(this).toggleClass('header-btn-active');
@@ -66,11 +69,10 @@ $('.header-btn').on('click', function () {
 });
 
 $('.header-btn').on('click', function () {
-  $(this).toggleClass('is-open');                // ← header-btn-active ではなく is-open
+  $(this).toggleClass('is-open'); // ← header-btn-active ではなく is-open
   $('.header-drawer').toggleClass('drawer-open'); // ← header-drawer-active ではなく drawer-open
-  $('body').toggleClass('body-drawer-open');      // ← body-drawer ではなく body-drawer-open
+  $('body').toggleClass('body-drawer-open'); // ← body-drawer ではなく body-drawer-open
 });
-
 
 $('.footer-link-btn').on('click', function () {
   $(this).toggleClass('footer-link-btn-active');

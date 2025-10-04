@@ -1,9 +1,9 @@
 <footer class="footer">
-    <img class="footer-bg-top footer-bg-top-pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/footer-bg-item.png" alt="">
-    <img class="footer-bg-top footer-bg-top-sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/footer-bg-item-sp.png" alt="">
+    <img class="footer-bg-top footer-bg-top-pc hidden-mobile" src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/footer-bg-item.png" alt="">
+    <img class="footer-bg-top footer-bg-top-sp hidden-sm" src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/footer-bg-item-sp_v2.png" alt="">
     <div class="top-fixed-sp">
         <div class="top-fixed-sp-btn"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-sp-btn.png" alt=""></div>
-        <div class="top-fixed-sp-wrap is-show">
+        <div class="top-fixed-sp-wrap">
             <a class="top-fixed-1" href="<?php echo home_url(); ?>/today/"><i></i>本日の<br>イベント</a>
             <a class="top-fixed-2" href="<?php echo home_url(); ?>"><i></i>今すぐ<br>行く！</a>
 
@@ -329,7 +329,7 @@
 
 <script>
     //600以上の時はloopしない
-    var loop_flg = true;
+    var loop_flg = false;
     var centeredSlides_flg = true;
     if (window.innerWidth > 600) {
         loop_flg = false;
@@ -338,7 +338,7 @@
 
     const swiper = new Swiper('.swiper-event', {
         slidesPerView: 'auto', // 幅固定 or auto
-        spaceBetween: 15, // スライド間の余白
+        spaceBetween: 30, // スライド間の余白
         centeredSlides: centeredSlides_flg, // 常に中央スライドをセンターに
         loop: loop_flg, // 無限ループ
 
@@ -367,6 +367,7 @@
             768: {
                 //spaceBetween: 16,
                 //slidesPerView: 2.2
+                spaceBetween: 15, // スライド間の余白
             },
         }
     });
@@ -441,14 +442,13 @@
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         const btn = document.querySelector(".top-fixed-sp-btn");
-        const wrap = document.querySelector(".top-fixed-sp-wrap");
+        const target = document.querySelector(".top-fixed-sp");
 
         btn.addEventListener("click", function() {
-            wrap.classList.toggle("is-show");
+            target.classList.toggle("unker");
         });
     });
 </script>
-
 
 
 <script>
@@ -627,7 +627,7 @@
             window.addEventListener('scroll', function() {
                 const sec01Top = sec01.getBoundingClientRect().top;
 
-                if (sec01Top <= window.innerHeight && sec01Top > 0) {
+                if (sec01Top <= window.innerHeight && sec01Top > 100) {
                     // sec01 が画面の下端に触れた瞬間ではなく
                     // 画面の上から入り始めた瞬間で切り替え
                     scrollTxt.classList.remove('show-title-01');
@@ -743,7 +743,7 @@
             return;
         }
 
-        const getYSize = () => (window.innerWidth <= 600 ? 50 : 100);
+        const getYSize = () => (window.innerWidth <= 600 ? 30 : 100);
 
         // 初期状態を一括でセット
         gsap.set(elems, {
@@ -762,8 +762,8 @@
                 immediateRender: false,
                 scrollTrigger: {
                     trigger: el, // 要素自身をトリガーにする
-                    start: 'top 90%', // 要素 top がビューポートの 90% に来たら開始
-                    end: 'top 60%', // 任意：終了位置
+                    start: 'top 100%', // 要素 top がビューポートの 90% に来たら開始
+                    end: 'top 50%', // 任意：終了位置
                     toggleActions: 'play none none none',
                     // scrub: true, // スクロールと完全同期させたい場合は有効にする（duration は無視される）
                     scrub: 0.4, // 軽いスクラブで自然に同期させる（数値にすると滑らか）

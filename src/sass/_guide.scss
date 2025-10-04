@@ -3,7 +3,7 @@
   .sec01 {
   }
   .sec02 {
-    padding-bottom: 120px;
+    padding-bottom: 0px;
     @include media(middle) {
       padding-bottom: 60px;
     }
@@ -993,6 +993,9 @@
   }
 
   .sec04-bottom {
+    width: 100%;
+    max-width: 1040px;
+    margin: 0 auto;
     margin-top: 80px;
     margin-bottom: 40px;
     @include media(middle) {

@@ -77,7 +77,7 @@ Template Name: enjoy-goods
     </section>
     <section class="sec02" id="sec02">
         <div class="content-width-sm">
-            <div class="page-title-center--has-icon page-title-center--has-icon--font-30 mb-20">
+            <div class="page-title-center--has-icon page-title-center--has-icon--font-30 page-title-center--has-icon--font-mobile-20 mb-20 page-title-center--has-icon--nowrap">
                 <h2><i></i>備え付けアメニティ(無料)</h2>
             </div>
             <p class="sec02-desc">
@@ -122,14 +122,14 @@ Template Name: enjoy-goods
                     <div class="sec02-wrap-col-img">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/goods/sec02-icon-05.svg" alt="">
                     </div>
-                    <p>ドライヤー</p>
+                    <p>ドライヤー<small>（女性は全てReFaのドライヤーをご用意しております。）</small></p>
                 </div>
             </div>
         </div>
     </section>
     <section class="sec03" id="sec03">
         <div class="content-width-sm">
-            <div class="page-title-center--has-icon page-title-center--has-icon--font-30 mb-20">
+            <div class="page-title-center--has-icon page-title-center--has-icon--font-30 page-title-center--has-icon--font-mobile-20 mb-20 page-title-center--has-icon--nowrap">
                 <h2 class="letter-spacing-0-mobile"><i></i>レンタルアイテム（有料）</h2>
             </div>
             <p class="sec03-desc">
@@ -152,13 +152,16 @@ Template Name: enjoy-goods
             </div>
         </div>
     </section>
-    <section class="sec04" id="sec04">
+    <section class="sec04">
         <div class="page-deco-bg">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-red-top.png" alt="">
+            <picture>
+                <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-red-top-sp.png">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-red-top.png" alt="">
+            </picture>
         </div>
-        <div class="page-deco-container page-deco-container--red">
+        <div class="page-deco-container page-deco-container--red" id="sec04">
             <div class="content-width-sm">
-                <div class="page-title-center--has-icon">
+                <div class="page-title-center--has-icon page-title-center--has-icon--font-30 page-title-center--has-icon--font-mobile-20 mb-20 page-title-center--has-icon--nowrap">
                     <h2><i></i>グルスパオリジナルグッズ</h2>
                 </div>
                 <p class="sec04-desc">
@@ -271,7 +274,12 @@ Template Name: enjoy-goods
 
                 <div class="sec04-info">
                     <div class="sec04-info-img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/goods/sec04-info_v2.jpg" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/goods/sec04-info_v3.jpg" alt="">
+                        <div class="sec04-info-img-01">
+                            <span class="pulse-btn">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/goods/sec01-main-icon_v2.png" alt="">
+                            </span>
+                        </div>
                     </div>
                     <div class="sec04-info-txt">
                         <dl>
@@ -380,7 +388,12 @@ Template Name: enjoy-goods
                     </div>
                     <div class="sec04-info">
                         <div class="sec04-info-img">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/goods/sec04-info_v2.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/goods/sec04-info_v4.jpg" alt="">
+                            <div class="sec04-info-img-01">
+                                <span class="pulse-btn">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/goods/sec01-main-icon_v2.png" alt="">
+                                </span>
+                            </div>
                         </div>
                         <div class="sec04-info-txt">
                             <dl>
