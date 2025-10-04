@@ -67,6 +67,7 @@
     bottom: calc(-100vh + 10px);
     left: 0;
     background-color: #fefbf5;
+
     @include media(mobile) {
       bottom: calc(-100vh + 130px);
     }
@@ -185,6 +186,7 @@
       margin-bottom: 0;
       padding-bottom: 100px;
     }
+
     @include media(mobile) {
       padding-bottom: 60px;
     }
@@ -298,9 +300,11 @@
           bottom: 0;
           left: 0;
           z-index: 10;
+
           @include media(middle) {
             height: 12%;
           }
+
           @include media(middle-small) {
             height: 15%;
           }
@@ -314,9 +318,11 @@
           background: #fefbf5;
           //height: 100vh; // ← ここ重要。波が収まる空間を作る
           overflow: hidden; // ← 背景が見えすぎないようにする
+
           @include media(llg) {
             height: 70vh;
           }
+
           @include media(mobile) {
             //height: calc(200 * (100vw / 375));
             height: 500px;
@@ -371,6 +377,7 @@
             @include media(mobile) {
               width: 300px;
             }
+
             img {
               width: 100%;
             }
@@ -391,9 +398,15 @@
             animation-delay: -5s;
 
             @include media(mobile) {
-              bottom: -40px;
+              //bottom: -40px;
+              //height: 150px;
+              //left: 0px;
+              bottom: 0;
               height: 150px;
               left: 0px;
+              //width: 46px;
+              height: 61px;
+              background-image: url(("./assets/img/top/visual-wave_v2_sp.png"));
             }
           }
 
@@ -429,9 +442,13 @@
             }
 
             @include media(mobile) {
-              height: 150px;
+              //width: ;
+              height: 61px;
+              //height: 150px;
               left: 0px;
-              bottom: -40px;
+              //bottom: -40px;
+              bottom: 0;
+              background-image: url(("./assets/img/top/visual-wave_v2_sp.png"));
             }
           }
 
@@ -681,6 +698,7 @@
                     color: #3c3636;
                     width: calc(100% - 15px);
                     border-bottom: 1px solid #3c3636;
+
                     @include media(middle) {
                       font-size: 14px;
                     }
@@ -868,6 +886,7 @@
           position: relative;
           z-index: 100;
           padding: 2px 0px;
+
           .swiper-wrapper {
             padding-top: 88px;
 
@@ -932,6 +951,7 @@
                   width: 100%;
                   overflow: hidden;
                   height: 200px;
+
                   @include media(mobile) {
                     height: 137px;
                   }
@@ -974,6 +994,7 @@
                     display: flex;
                     width: 100%;
                     flex-wrap: wrap;
+
                     @include media(middle) {
                       height: 48px;
                     }
@@ -1385,6 +1406,7 @@
           transform: translateX(0);
           top: -130px;
         }
+
         img {
           width: 100%;
         }
@@ -1630,6 +1652,7 @@
   /*コンセプト*/
   .sec03 {
     padding-top: 107px;
+
     @include media(middle) {
       padding-top: 40px;
     }
@@ -1678,8 +1701,7 @@
         }
 
         /* non-scaling-stroke は拡大縮小時に stroke 幅を一定に保つ */
-        path {
-        }
+        path {}
 
         .sec03-col-item-child {
           position: absolute;
@@ -1899,6 +1921,22 @@
               padding: 0 20px 0 30px;
               width: 100%;
               height: 100%;
+
+              @include media(mobile) {
+                pointer-events: none !important;
+              }
+            }
+          }
+
+          .icon-btn--1 {
+            @include media(mobile) {
+              transform: translate(10px, -5px);
+            }
+          }
+
+          .icon-btn--2 {
+            @include media(mobile) {
+              transform: translate(10px, -10px);
             }
           }
         }
@@ -1914,6 +1952,10 @@
           display: flex;
           flex-wrap: nowrap;
           animation: loopScroll var(--duration, 20s) linear infinite;
+
+          @include media(mobile) {
+            animation: loopScrollsp var(--duration, 40s) linear infinite;
+          }
 
           .loop-item {
             flex-shrink: 0;
@@ -1936,6 +1978,16 @@
       }
 
       @keyframes loopScroll {
+        0% {
+          transform: translateX(0);
+        }
+
+        100% {
+          transform: translateX(calc(-1 * var(--scroll-width, 0px)));
+        }
+      }
+
+      @keyframes loopScrollsp {
         0% {
           transform: translateX(0);
         }
@@ -2492,6 +2544,10 @@
         border-bottom: 1px solid #707070;
         vertical-align: middle;
         background-color: #fff;
+
+        @include media(mobile){
+          padding: 20px 0px;
+        }
       }
 
       .price-table td:first-child {
@@ -2613,8 +2669,8 @@
           display: block;
           position: absolute;
           content: '';
-          width: 356px;
-          height: 479px;
+          width: 336px;
+          height: 459px;
           background-image: url(("./assets/img/com/bg-item-10_v2.png"));
           background-size: contain;
           background-repeat: no-repeat;

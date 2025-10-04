@@ -185,11 +185,31 @@
                         <div class="wave_nami_v3">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-wave_v3.png" alt="">
                         </div>
-                        <picture class="">
-                            <source media="(min-width:601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-main_v2.jpg">
-                            <source media="(max-width:600px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-main_sp.jpg">
-                            <img class="top-visual-mv-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-main_v2.jpg" alt="GURUSPA">
-                        </picture>
+                        <div class="swiper top-visual-slide">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <picture class="">
+                                        <source media="(min-width:601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-main_v2.jpg">
+                                        <source media="(max-width:600px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-main_sp.jpg">
+                                        <img class="top-visual-mv-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-main_v2.jpg" alt="GURUSPA">
+                                    </picture>
+                                </div>
+                                <div class="swiper-slide">
+                                    <picture class="">
+                                        <source media="(min-width:601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-main_v2.jpg">
+                                        <source media="(max-width:600px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-main_sp.jpg">
+                                        <img class="top-visual-mv-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-main_v2.jpg" alt="GURUSPA">
+                                    </picture>
+                                </div>
+                                <div class="swiper-slide">
+                                    <picture class="">
+                                        <source media="(min-width:601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-main_v2.jpg">
+                                        <source media="(max-width:600px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-main_sp.jpg">
+                                        <img class="top-visual-mv-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-main_v2.jpg" alt="GURUSPA">
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="top-visual-title">
@@ -1136,7 +1156,7 @@
 
         <section class="sec06">
             <div class="sec06-bg-top">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec06-bg-top_v3.png" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec06-bg-top_v4.png" alt="">
             </div>
             <div class="sec06-bg">
                 <div class="content-width">
@@ -1155,7 +1175,7 @@
 
                     <ul class="sec06-map">
                         <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/map-1.jpg" alt="guruspa"></li>
-                        <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/map-2_v3.jpg" alt="guruspa"></li>
+                        <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/map-2_v4.jpg" alt="guruspa"></li>
                     </ul>
                     <div class="sec06-wrap-under-link">
                         <a href="<?php echo home_url(); ?>/guide/#sec05">くわしく見る<i></i></a>

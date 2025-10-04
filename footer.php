@@ -1,15 +1,18 @@
+<div class="top-fixed-sp">
+    <div class="top-fixed-sp-btn"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-sp-btn.png" alt=""></div>
+    <div class="top-fixed-sp-wrap">
+        <a class="top-fixed-1" href="<?php echo home_url(); ?>/today/"><i></i>本日の<br>イベント</a>
+        <?php if (is_page("guide")): ?>
+            <a class="top-fixed-2" href="#sec05"><i></i>今すぐ<br>行く！</a>
+        <?php else: ?>
+            <a class="top-fixed-2" href="<?php echo home_url(); ?>/guide/#sec05"><i></i>今すぐ<br>行く！</a>
+        <?php endif; ?>
+        <a class="top-fixed-3" href="<?php echo home_url(); ?>/guide/"><i></i>料金・<br>ご利用案内</a>
+    </div>
+</div>
 <footer class="footer">
     <img class="footer-bg-top footer-bg-top-pc hidden-mobile" src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/footer-bg-item.png" alt="">
-    <img class="footer-bg-top footer-bg-top-sp hidden-sm" src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/footer-bg-item-sp_v2.png" alt="">
-    <div class="top-fixed-sp">
-        <div class="top-fixed-sp-btn"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-sp-btn.png" alt=""></div>
-        <div class="top-fixed-sp-wrap">
-            <a class="top-fixed-1" href="<?php echo home_url(); ?>/today/"><i></i>本日の<br>イベント</a>
-            <a class="top-fixed-2" href="<?php echo home_url(); ?>"><i></i>今すぐ<br>行く！</a>
-
-            <a class="top-fixed-3" href="<?php echo home_url(); ?>/price/"><i></i>料金・<br>ご利用案内</a>
-        </div>
-    </div>
+    <img class="footer-bg-top footer-bg-top-sp hidden-sm" src="<?php echo get_template_directory_uri(); ?>/assets/img/footer/footer-bg-item-sp_v3.png" alt="">
 
     <div class="footer-fixed footer-fixed-pc">
         <a href="#">
@@ -85,7 +88,7 @@
                     <dt class="hidden-mobile"><a href="<?php echo home_url(); ?>/event/">イベント情報</a></dt>
                     <dt class="footer-accordion-switch hidden-sm"><a href="javascript:void(0);">イベント情報</a></dt>
                     <dd>
-                        <a href="<?php echo home_url(); ?>/today/">ー当日のイベント</a>
+                        <a href="<?php echo home_url(); ?>/today/">ー本日のイベント</a>
                         <a href="<?php echo home_url(); ?>/schedule/">ーイベントスケジュール</a>
                     </dd>
                 </dl>
@@ -439,17 +442,6 @@
     });
 </script>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const btn = document.querySelector(".top-fixed-sp-btn");
-        const target = document.querySelector(".top-fixed-sp");
-
-        btn.addEventListener("click", function() {
-            target.classList.toggle("unker");
-        });
-    });
-</script>
-
 
 <script>
     /*
@@ -794,6 +786,45 @@
     <?php wp_footer(); ?>
 <?php endif; ?>
 
+<script>
+    const swipervisual = new Swiper('.top-visual-slide', {
+        slidesPerView: 1, // 1枚ずつ表示
+        effect: 'fade', // ← フェードに変更
+        fadeEffect: {
+            crossFade: true, // クロスフェードさせる
+        },
+        loop: true, // 無限ループ
+        autoplay: {
+            delay: 5000, // 3秒ごとに切り替え
+            disableOnInteraction: false, // ユーザー操作後も再生を継続
+        },
+        lazy: {
+            loadPrevNext: true,
+            loadOnTransitionStart: true,
+        },
+        speed: 800 // フェードの切り替わり速度(ms)
+    });
+</script>
+
+<script>
+
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const btn = document.querySelector(".top-fixed-sp-btn");
+        const target = document.querySelector(".top-fixed-sp");
+
+        console.log(btn, target); // null じゃなければOK
+
+        if (btn && target) {
+            btn.addEventListener("click", () => {
+                console.log("clicked!"); // クリック時にコンソール確認
+                target.classList.toggle("unker");
+            });
+        }
+    });
+</script>
 
 
 </body>

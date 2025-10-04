@@ -126,6 +126,7 @@ img.lazyloaded {
     margin-bottom: 20px !important;
   }
 }
+
 .mb-30-mobile {
   @include media(mobile) {
     margin-bottom: 30px !important;
@@ -208,8 +209,10 @@ img.lazyloaded {
             transform: translate(10px, -10px) rotate(10deg);
           }
         }
+
         .icon-btn--2 {
           transform: translate(10px, -15px);
+
           @include media(middle) {
             transform: translate(10px, -20px);
           }
@@ -244,6 +247,7 @@ img.lazyloaded {
   &.com-btn-mobile--full {
     max-width: 100%;
   }
+
   &.com-btn-mobile--small {
     a {
       @include media(middle) {
@@ -274,6 +278,7 @@ img.lazyloaded {
     }
 
     &:hover {
+
       //background-color: #2e549c !important;
       i {
         transform: translateX(10px);
@@ -591,6 +596,18 @@ img.lazyloaded {
       position: absolute !important;
     }
   }
+
+  .title-item-sprout {
+
+    @include media(mobile) {
+      right: -0px !important;
+      top: -39px !important;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
 }
 
 .com-title.in-view .title {
@@ -621,6 +638,7 @@ img.lazyloaded {
   //overflow: hidden;
   //padding-top: 20px;
   &.com-title--else {
+
     h2,
     h1 {
       .title {
@@ -628,12 +646,14 @@ img.lazyloaded {
           font-size: 32px !important;
         }
       }
+
       .title-item-sun {
         @include media(middle) {
           display: none !important;
         }
       }
     }
+
     .title-item-sprout {
       @include media(middle) {
         width: 16px !important;
@@ -667,6 +687,7 @@ img.lazyloaded {
       width: 30px !important;
     }
   }
+
   &.com-title--today {
     p {
       line-height: 1 !important;
@@ -675,10 +696,12 @@ img.lazyloaded {
     h2 {
       .title {
         font-size: 50px !important;
+
         @include media(middle) {
           font-size: 35px !important;
         }
       }
+
       .title-item-sun {
         @include media(middle) {
           display: none !important;
@@ -706,6 +729,7 @@ img.lazyloaded {
       }
     }
   }
+
   &.com-title--food {
     p {
       line-height: 1 !important;
@@ -714,6 +738,7 @@ img.lazyloaded {
     h2 {
       .title {
         font-size: 50px !important;
+
         @include media(middle) {
           font-size: 35px !important;
         }
@@ -740,18 +765,22 @@ img.lazyloaded {
       }
     }
   }
+
   &.com-title--sweating {
     p {
       line-height: 1 !important;
     }
+
     h2 {
       .title {
         font-size: 50px !important;
+
         @include media(middle) {
           font-size: 32px !important;
         }
       }
     }
+
     .title-item-sprout {
       width: 21px !important;
       height: auto;
@@ -772,6 +801,7 @@ img.lazyloaded {
       }
     }
   }
+
   &.com-title--relax {
     p {
       line-height: 1 !important;
@@ -780,11 +810,13 @@ img.lazyloaded {
     h2 {
       .title {
         font-size: 50px !important;
+
         @include media(middle) {
           font-size: 35px !important;
         }
       }
     }
+
     .title-item-sprout {
       width: 21px !important;
       height: auto;
@@ -805,6 +837,7 @@ img.lazyloaded {
       }
     }
   }
+
   &.com-title--goods {
     p {
       line-height: 1 !important;
@@ -1208,8 +1241,7 @@ img.lazyloaded {
 .com-btn-border--left {
   text-align: left !important;
 
-  a {
-  }
+  a {}
 }
 
 .com-btn-border-black {
@@ -1247,6 +1279,7 @@ img.lazyloaded {
       &.icon-green {
         background-image: url(("./assets/img/icon/icon-arrow-green-right.svg")) !important;
       }
+
       &.icon-blue {
         background-image: url(("./assets/img/icon/icon-arrow-blue-right.svg")) !important;
       }

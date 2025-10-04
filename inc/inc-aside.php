@@ -9,7 +9,7 @@
     <div class="aside-bg">
         <div class="content-width">
             <div class="aside-btn-1">
-                <a href="">
+                <a href="https://2508guruspa.onepage-test.com/recruit_top/" target="_blank" rel="noopener noreferrer">
                     <div class="aside-btn-1-img">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-img_v2.jpg" alt=""><i></i>
                     </div>
