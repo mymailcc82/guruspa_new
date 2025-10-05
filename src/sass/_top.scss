@@ -1,5 +1,52 @@
 @use 'setting' as *;
 
+
+.loader {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+
+  .flame-base,
+  .flame-color {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+  }
+
+  .flame-color {
+    overflow: hidden;
+    clip-path: inset(100% 0 0 0); // 初期状態では隠す（上から下に）
+    transition: clip-path 0.2s ease-out;
+  }
+
+  .loader-percent {
+    //position: absolute;
+    //bottom: -100px;
+    margin-top: 30px;
+    transform: translateY(20px);
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+
+    p {
+      font-family: $font-en;
+      font-size: 27px;
+      font-weight: 500;
+      margin-top: 100px;
+      font-weight: 900;
+
+      span {
+        font-family: $font-en;
+        font-size: 27px;
+        font-weight: 900;
+      }
+    }
+  }
+}
+
 .top_logo_img {
   .st0 {
     fill: none;
@@ -96,29 +143,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
-    .page-loading-wrap {
-      width: 200px;
-      text-align: center;
-
-      svg {
-        margin: 0 auto;
-      }
-
-      p {
-        font-family: $font-en;
-        font-size: 27px;
-        font-weight: 500;
-        margin-top: 20px;
-        font-weight: 900;
-
-        span {
-          font-family: $font-en;
-          font-size: 27px;
-          font-weight: 900;
-        }
-      }
-    }
   }
 }
 
@@ -325,7 +349,8 @@
 
           @include media(mobile) {
             //height: calc(200 * (100vw / 375));
-            height: 500px;
+            //height: 400px;
+            height: 60vh;
           }
 
           .wave {
@@ -368,7 +393,8 @@
             bottom: -40px;
             z-index: 9;
             right: -80px;
-            transform: rotate(0deg);
+            transform: translateX(100px) (0deg);
+            opacity: 0;
 
             @include media(llg) {
               width: 600px;
@@ -396,6 +422,7 @@
             //background-postionをアニメーション
             animation: waveMovePosition 20s linear infinite;
             animation-delay: -5s;
+            opacity: 0;
 
             @include media(mobile) {
               //bottom: -40px;
@@ -436,6 +463,7 @@
             //background-postionをアニメーション
             animation: waveMovePositionV2 20s linear infinite;
             animation-delay: -5s;
+            opacity: 0;
 
             @include media(llg) {
               height: 190px;
@@ -2545,7 +2573,7 @@
         vertical-align: middle;
         background-color: #fff;
 
-        @include media(mobile){
+        @include media(mobile) {
           padding: 20px 0px;
         }
       }
