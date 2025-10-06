@@ -278,6 +278,7 @@ img.lazyloaded {
     }
 
     &:hover {
+
       //background-color: #2e549c !important;
       i {
         transform: translateX(10px);
@@ -643,7 +644,9 @@ img.lazyloaded {
       }
     }
   }
+
   &.com-title--else {
+
     h2,
     h1 {
       .title {
@@ -673,6 +676,7 @@ img.lazyloaded {
       }
     }
   }
+
   .in-view {
     font-size: 14px;
   }
@@ -688,6 +692,7 @@ img.lazyloaded {
       transform: translateY(0px) !important;
     }
   }
+
   &.com-title--small {
     .title-item-sprout {
       transform: translateY(30px) !important;
@@ -1254,8 +1259,7 @@ img.lazyloaded {
 .com-btn-border--left {
   text-align: left !important;
 
-  a {
-  }
+  a {}
 }
 
 .com-btn-border-black {
@@ -1482,6 +1486,7 @@ img.lazyloaded {
       position: absolute;
       right: 20px;
     }
+
     .green {
       background-image: url(("./assets/img/icon/icon-btn-green-2.png"));
     }
@@ -1541,17 +1546,22 @@ img.lazyloaded {
     }
 
     &:hover {
+
       &::before {
         transform: translate(10px, -10px) rotate(10deg);
 
         @include media(mobile) {
-          transform: translate(0px, 0px) rotate(-50deg);
+          transform: rotate(-60deg);
         }
       }
 
       .sec-01-col-under-img {
         img {
           transform: scale(1.1);
+
+          @include media(mobile) {
+            transform: scale(1);
+          }
         }
       }
 
@@ -1559,10 +1569,18 @@ img.lazyloaded {
         span {
           &:first-of-type {
             transform: rotate(-10deg);
+
+            @include media(mobile) {
+              transform: rotate(0deg);
+            }
           }
 
           &:nth-of-type(2) {
             transform: translateY(-10px);
+
+            @include media(mobile) {
+              transform: rotate(0deg);
+            }
           }
         }
       }
@@ -1571,6 +1589,17 @@ img.lazyloaded {
         h3 {
           i {
             transform: translate(15px, 5px);
+
+            @include media(mobile) {
+              transform: translate(10px, 5px);
+            }
+          }
+
+          .icon-btn {
+            @include media(mobile) {
+              transform: translate(5px, 8px);
+              pointer-events: none;
+            }
           }
         }
       }
@@ -1776,38 +1805,48 @@ img.lazyloaded {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
   @include media(middle) {
     width: 100%;
     max-width: 700px;
     margin: 0 auto;
   }
+
   .sec06-bottom-col {
     width: 48%;
+
     @include media(middle) {
       width: 49%;
     }
+
     @include media(mobile) {
       width: 100%;
       margin-bottom: 20px;
     }
+
     &.sec06-bottom-col--news {
       a {
         background-image: url(("./assets/img/bnr/page-bnr-news-bg.jpg"));
+
         &:before {
           display: none;
         }
+
         .sec-01-col-under-title {
           p {
             color: #fff !important;
           }
         }
+
         .sec-01-col-under-img {
           overflow: visible !important;
+
           img {
             object-fit: contain !important;
             transition: all 0.3s ease !important;
           }
         }
+
         &:hover {
           @include media(md) {
             .sec-01-col-under-img {
@@ -1819,33 +1858,41 @@ img.lazyloaded {
         }
       }
     }
+
     &.sec06-bottom-col--today {
       a {
         &:before {
           display: none !important;
         }
+
         .sec-01-col-under-title {
           h3 {
             width: 100%;
             max-width: 221px;
+
             @include media(middle) {
               max-width: 160px;
             }
+
             @include media(mobile) {
               max-width: 221px;
             }
+
             img {
               width: 100%;
             }
           }
+
           .icon-btn {
             bottom: 15px;
             right: 40px;
+
             @include media(middle) {
               width: 20px;
               right: 25px;
               bottom: 5px;
             }
+
             @include media(mobile) {
               right: 30px;
               bottom: 12px;
@@ -1855,33 +1902,41 @@ img.lazyloaded {
         }
       }
     }
+
     &.sec06-bottom-col--event {
       a {
         &:before {
           display: none !important;
         }
+
         .sec-01-col-under-title {
           h3 {
             width: 90%;
             max-width: 172px;
+
             @include media(middle) {
               max-width: 120px;
             }
+
             @include media(mobile) {
               max-width: 172px;
             }
+
             img {
               width: 100%;
             }
           }
+
           .icon-btn {
             bottom: 13px;
             right: 25px;
+
             @include media(middle) {
               right: 20px;
               bottom: 5px;
               width: 20px;
             }
+
             @include media(mobile) {
               right: 30px;
               bottom: 13px;
@@ -1891,6 +1946,7 @@ img.lazyloaded {
         }
       }
     }
+
     &.sec06-bottom-col--schedule {
       a {
         &::before {
@@ -1905,23 +1961,28 @@ img.lazyloaded {
           right: -30px;
           top: -50px;
           transition: transform 0.4s ease;
+
           @include media(mobile) {
             display: none;
           }
         }
       }
+
       .sec-01-col-under-img {
         @include media(middle) {
           width: calc(100% - 160px);
         }
+
         @include media(mobile) {
           width: 30%;
         }
       }
+
       .sec-01-col-under-title {
         @include media(mobile) {
           width: 70% !important;
         }
+
         p {
           @include media(mobile) {
             //折り返し禁止
@@ -1931,10 +1992,12 @@ img.lazyloaded {
       }
     }
   }
+
   .sec-01-col-under {
     width: 100%;
     position: relative;
     z-index: 4;
+
     a {
       display: flex;
       flex-direction: row-reverse;
@@ -1945,9 +2008,11 @@ img.lazyloaded {
       position: relative;
       align-items: center;
       height: 176px;
+
       @include media(middle) {
         padding: 8px;
       }
+
       @include media(mobile) {
         padding: 15px;
         height: 155px;
@@ -1958,11 +2023,13 @@ img.lazyloaded {
           &::before {
             transform: translate(10px, -10px) rotate(10deg);
           }
+
           .sec-01-col-under-img {
             img {
               transform: scale(1.1);
             }
           }
+
           .sec-01-col-under-move-item {
             span {
               &:first-of-type {
@@ -1974,6 +2041,7 @@ img.lazyloaded {
               }
             }
           }
+
           .sec-01-col-under-title {
             h3 {
               i {
@@ -1990,18 +2058,22 @@ img.lazyloaded {
         height: 100%;
         border-radius: 22px;
         overflow: hidden;
+
         @include media(middle) {
           width: calc(100% - 160px);
         }
+
         @include media(mobile) {
           width: 125px;
         }
+
         img {
           width: 100%;
           height: 100%;
           object-fit: cover;
           transition: transform 1s ease;
         }
+
         &.sec-01-col-under-img--schedule {
           img {
             height: 124px;
@@ -2014,9 +2086,11 @@ img.lazyloaded {
       .sec-01-col-under-title {
         width: calc(100% - 192px);
         padding: 0 10px;
+
         @include media(middle) {
           width: 160px;
         }
+
         @include media(mobile) {
           width: calc(100% - 125px);
           padding: 0 5px;
@@ -2028,6 +2102,7 @@ img.lazyloaded {
           color: #000;
           font-family: $font-en;
           display: flex;
+
           img {
             width: 100%;
             max-width: 218px;
@@ -2039,6 +2114,7 @@ img.lazyloaded {
             color: transparent;
             -webkit-text-stroke: 2px black;
           }
+
           .icon-fire {
             width: 37px;
             height: 53px;
@@ -2049,6 +2125,7 @@ img.lazyloaded {
             display: inline-block;
             transform: translateX(10px);
           }
+
           .icon-btn {
             width: 30px;
             height: 30px;
@@ -2062,6 +2139,7 @@ img.lazyloaded {
             right: 30px;
             bottom: 10px;
             transition: transform 0.4s ease;
+
             @include media(middle) {
               width: 25px;
               height: 25px;
@@ -2076,9 +2154,11 @@ img.lazyloaded {
           font-weight: 500;
           letter-spacing: 0.07em;
           margin-bottom: 0;
+
           @include media(middle) {
             font-size: 10px;
           }
+
           @include media(mobile) {
             font-size: 13px;
           }
@@ -2088,19 +2168,23 @@ img.lazyloaded {
       .sec-01-col-under-move-item {
         width: 139px;
         position: relative;
+
         span {
           position: absolute;
           transition: transform 0.4s ease;
+
           &:nth-of-type(3) {
             width: 35px;
             right: 0;
             top: 29px;
           }
+
           &:last-of-type {
             width: 50px;
             left: 0;
             bottom: 0;
           }
+
           img {
             width: 100%;
           }

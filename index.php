@@ -556,7 +556,7 @@
             <div class="sec04-bg-top">
                 <picture class="">
                     <source media="(min-width:601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec04-bg-top_v2.png">
-                    <source media="(max-width:600px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec04-bg-top_sp.png">
+                    <source media="(max-width:600px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec04-bg-top_sp_v3.png">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec04-bg-top_v2.png" alt="">
                 </picture>
             </div>
@@ -666,7 +666,11 @@
                 </div>
             </div>
             <div class="sec04-bg-under">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec04-bg-under_v2.png" alt="">
+                <picture class="">
+                    <source media="(min-width:601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec04-bg-under_v2.png">
+                    <source media="(max-width:600px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec04-bg-under_sp_v2.png">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec04-bg-under_v2.png" alt="">
+                </picture>
                 <span class="bg-item-07"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/bg-item-07_v2.png" alt=""></span>
             </div>
         </section>
@@ -791,7 +795,11 @@
 
         <section class="sec06">
             <div class="sec06-bg-top">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec06-bg-top_v4.png" alt="">
+                <picture class="">
+                    <source media="(min-width:601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec06-bg-top_v4.png">
+                    <source media="(max-width:600px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec06-bg-top_v4_sp.png">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec06-bg-top_v4.png" alt="">
+                </picture>
             </div>
             <div class="sec06-bg">
                 <div class="content-width">
@@ -818,7 +826,11 @@
                 </div>
             </div>
             <div class="sec06-bg-under">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec06-bg-under_v3.png" alt="">
+                <picture class="">
+                    <source media="(min-width:601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec06-bg-under_v3.png">
+                    <source media="(max-width:600px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec06-bg-under_v4_sp.png">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec06-bg-under_v3.png" alt="">
+                </picture>
             </div>
         </section>
 

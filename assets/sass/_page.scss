@@ -392,13 +392,6 @@
   margin: 40px auto 40px;
   position: relative;
   z-index: 3;
-  &.page-btn--spa {
-    ul {
-      @include media(mobile) {
-        max-width: 240px;
-      }
-    }
-  }
   ul {
     display: flex;
     flex-wrap: wrap;

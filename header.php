@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css?ver=1.3.1">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css?ver=1.3.2">
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -149,7 +149,7 @@
                             </li>
                         <?php endif; ?>
                     </ul>
-                    <ul class="header-drawer-wrap-menu-child  menu-child-yellow">
+                    <ul class="header-drawer-wrap-menu-child header-drawer-wrap-menu-child-center menu-child-yellow">
                         <li>EVENT</li>
                         <li><a class="jp-title" href="<?php echo home_url(); ?>/event/">イベント情報</a></li>
                         <li>

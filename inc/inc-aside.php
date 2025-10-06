@@ -25,7 +25,8 @@
                                 </span>
                             </h2>
                             <h2 class="hidden-sm">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-title-sp.png" alt="">
+                                <span class="aside-title-sp_sun"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-title-sp_sun.png" alt=""></span>
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-title-sp_v2.png" alt="">
                             </h2>
                         </div>
                         <p>

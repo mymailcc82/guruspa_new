@@ -1370,7 +1370,7 @@
         background-color: #fff;
         border: solid 1px #3c3636;
         border-radius: 16px;
-        padding: 0px;
+        padding: 0px 15px;
 
         &:last-child {
           margin-bottom: 0;
@@ -1379,7 +1379,7 @@
         dt {
           font-size: 16px;
           font-weight: 800;
-          padding: 20px 20px;
+          padding: 20px 0px;
           color: #3c3636;
           display: flex;
           align-items: center;
@@ -1388,10 +1388,10 @@
           padding-left: 50px;
           padding-right: 10px;
           @include media(middle) {
-            padding: 15px 15px 15px 15px;
-            padding-right: 30px;
+            padding: 15px 10px 15px 0px;
+            padding-right: 20px;
             font-size: 14px;
-            padding-left: 45px;
+            padding-left: 35px;
           }
           &:hover {
             cursor: pointer;
@@ -1411,9 +1411,9 @@
             height: 2.5px;
             background-color: #3c3636;
             border-radius: 5px;
-            right: 15px;
+            right: 10px;
             @include media(middle) {
-              right: 10px;
+              right: -5px;
             }
           }
 
@@ -1426,10 +1426,10 @@
             height: 2.5px;
             background-color: #3c3636;
             border-radius: 5px;
-            right: 15px;
+            right: 10px;
             transform: rotate(90deg);
             @include media(middle) {
-              right: 10px;
+              right: -5px;
             }
           }
 
@@ -1442,14 +1442,13 @@
             display: block;
             margin-right: 20px;
             position: absolute;
-            left: 10px;
-            top: 50%;
-            transform: translateY(-50%);
+            left: 0px;
+            top: 14px;
             @include media(middle) {
               width: 30px;
               height: 30px;
-              //top: 10px;
-              left: 8px;
+              top: 10px;
+              left: -5px;
             }
           }
         }
@@ -1457,21 +1456,20 @@
         dd {
           display: none;
           position: relative;
-          padding: 15px 25px;
+          padding: 15px;
           padding-left: 55px;
           border-top: 1px solid var(--color-black);
           font-size: 16px;
           font-weight: 500;
           @include media(middle) {
             padding: 10px;
-            padding-left: 45px;
+            padding-left: 35px;
             font-size: 14px;
           }
           p {
             font-size: 16px;
             margin: 0px;
             line-height: 1.62;
-            font-weight: 500;
             @include media(middle) {
               font-size: 14px;
             }
@@ -1485,13 +1483,13 @@
             background-repeat: no-repeat;
             display: block;
             position: absolute;
-            left: 10px;
+            left: 0px;
             top: 15px;
             @include media(middle) {
               width: 30px;
               height: 30px;
               top: 10px;
-              left: 8px;
+              left: -5px;
             }
           }
         }

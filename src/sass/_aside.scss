@@ -115,6 +115,16 @@
                 width: 202px;
               }
 
+              .aside-title-sp_sun{
+                position: absolute;
+                width: 40.93px;
+                height: 41.15px;
+                z-index: -1;
+                left: -25px;
+                top: -5px;
+
+              }
+
               .title {
                 display: inline-block;
                 font-size: 57px;
@@ -334,6 +344,11 @@
                 width: 16.43px;
                 height: 30.61px;
               }
+
+              @include media(mobile) {
+                width: 26.43px;
+                height: 40.61px;
+              }
             }
           }
 
@@ -426,6 +441,11 @@
               @include media(middle) {
                 width: 16.43px;
                 height: 30.61px;
+              }
+
+              @include media(mobile) {
+                width: 26.43px;
+                height: 40.61px;
               }
             }
           }

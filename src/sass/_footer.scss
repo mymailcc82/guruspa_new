@@ -49,6 +49,20 @@
     position: relative;
 
     &:hover {
+
+      @include media(mobile) {
+        pointer-events: none !important;
+      }
+
+      .footer-fixed-child {
+        img {
+          @include media(mobile) {
+            transform: translate(0, 0px) rotate(0deg) scale(1) !important;
+          }
+        }
+
+      }
+
       .footer-fixed-child-1 {
         img {
           transform: translate(0, -3px) rotate(360deg) scale(1.2);
@@ -88,6 +102,10 @@
       .footer-fixed-txt {
         img {
           transform: scale(1.1);
+
+          @include media(mobile) {
+            transform: scale(1);
+          }
         }
       }
     }
@@ -308,6 +326,7 @@
 
       dl {
         overflow: hidden;
+
         dt {
           margin-bottom: 20px;
 
@@ -585,6 +604,7 @@
   left: 12px;
   top: 150px;
   margin-bottom: 0;
+
   @include media(middle) {
     left: 0px;
   }
@@ -597,6 +617,7 @@
     display: block;
     width: 37px;
     height: 440px;
+
     @include media(middle) {
       width: 25px;
       height: auto;
