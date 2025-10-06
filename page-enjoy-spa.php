@@ -63,7 +63,7 @@ Template Name: enjoy-spa
                 </div>
             </div>
 
-            <div class="page-btn">
+            <div class="page-btn page-btn--spa">
                 <ul>
                     <li>
                         <a href="#sec02">特徴・魅力<i></i></a>

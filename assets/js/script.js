@@ -64,13 +64,19 @@ $(document).ready(function () {
 //header-drawerのaタグがクリックされたら、.header-drawerからactiveを削除
 $('.header-btn').on('click', function () {
   $(this).toggleClass('header-btn-active');
-  $('.new-drawer').toggleClass('header-drawer-active');
-  $('body').toggleClass('body-drawer');
-});
-
-$('.header-btn').on('click', function () {
   $(this).toggleClass('is-open'); // ← header-btn-active ではなく is-open
   $('.header-drawer').toggleClass('drawer-open'); // ← header-drawer-active ではなく drawer-open
+  $('.new-drawer').toggleClass('header-drawer-active');
+  $('body').toggleClass('body-drawer');
+  $('body').toggleClass('body-drawer-open'); // ← body-drawer ではなく body-drawer-open
+});
+
+$('.header-drawer-wrap a').on('click', function () {
+  $('.header-btn').toggleClass('header-btn-active');
+  $('.header-btn').toggleClass('is-open'); // ← header-btn-active ではなく is-open
+  $('.header-drawer').toggleClass('drawer-open'); // ← header-drawer-active ではなく drawer-open
+  $('.new-drawer').toggleClass('header-drawer-active');
+  $('body').toggleClass('body-drawer');
   $('body').toggleClass('body-drawer-open'); // ← body-drawer ではなく body-drawer-open
 });
 
@@ -263,16 +269,24 @@ $(function () {
 
   $('.tab a').on('click', function () {
     var idName = $(this).data('id');
+    //#を削除にしてから再度追加
+    var isName_no_hash = idName.replace('#', '');
     $('.tab li').removeClass('active');
     $(this).parent().addClass('active');
-    $('.tab').removeClass();
-    $(this).parent().parent().addClass(idName);
 
     // 背景スライド移動
     moveSlideBg($(this));
 
     $('.area').removeClass('is-active');
     $(idName).addClass('is-active');
+
+    //.tabの.active-area02と.active-area01を削除
+    $('.tab').removeClass('active-area01 active-area02 active-area03');
+
+    $(this)
+      .parent()
+      .parent()
+      .addClass('active-' + isName_no_hash);
     return false;
   });
 

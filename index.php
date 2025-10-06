@@ -350,7 +350,7 @@
                                     endif;
                                     ?>
                                 </ul>
-                                <div class="com-btn-sp"><a href="<?php echo home_url(); ?>/category/news/">NEWS一覧を見る<i class="black"></i></a></div>
+                                <div class="com-btn-sp"><a href="<?php echo home_url(); ?>/category/news/">NEWS一覧を見る<i class="green"></i></a></div>
                             </div>
                             <div class="sec02-list-wrap sec02-list-wrap-right">
                                 <h3>MEDIA<a href="<?php echo home_url(); ?>/category/media/">一覧を見る<i></i></a></h3>
@@ -395,7 +395,7 @@
                                     endif;
                                     ?>
                                 </ul>
-                                <div class="com-btn-sp"><a href="<?php echo home_url(); ?>/category/media/">MEDIA一覧を見る<i class="black"></i></a></div>
+                                <div class="com-btn-sp"><a href="<?php echo home_url(); ?>/category/media/">MEDIA一覧を見る<i class="green"></i></a></div>
                             </div>
                         </div>
                     </div>

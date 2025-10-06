@@ -42,7 +42,10 @@
       bottom: 250px;
       z-index: 2;
       @include media(middle) {
-        display: none;
+        width: 30px;
+        bottom: inherit;
+        top: -50px;
+        left: 10px;
       }
       img {
         width: 100%;
@@ -55,7 +58,10 @@
       bottom: 30%;
       z-index: 2;
       @include media(middle) {
-        display: none;
+        width: 30px;
+        bottom: inherit;
+        top: -50px;
+        right: 10px;
       }
       img {
         width: 100%;
@@ -227,6 +233,16 @@
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
+      position: relative;
+      .sec04-wrap-icon {
+        position: absolute;
+        display: none;
+        width: 56px;
+        bottom: -65px;
+        @include media(middle) {
+          display: block;
+        }
+      }
       .sec04-wrap-col {
         width: 30%;
         @include media(middle) {
@@ -250,6 +266,7 @@
           margin-top: 15px;
           @include media(mobile) {
             margin-top: 10px;
+            letter-spacing: 0.02em;
             text-align: center;
             //折り返し禁止
             white-space: nowrap;
@@ -272,6 +289,20 @@
     @include media(middle) {
       padding-bottom: 40px;
     }
+    .content-width-sm {
+      position: relative;
+    }
+    .sec05-wrap-icon {
+      position: absolute;
+      display: none;
+      width: 56px;
+      bottom: -65px;
+      right: 0px;
+      @include media(middle) {
+        display: block;
+      }
+    }
+
     .sec05-desc {
       font-size: 16px;
       text-align: center;
@@ -500,6 +531,9 @@
   }
   .sec06 {
     padding-bottom: 80px;
+    @include media(middle) {
+      padding-bottom: 30px;
+    }
     .sec06-wrap {
       display: flex;
       flex-wrap: wrap;

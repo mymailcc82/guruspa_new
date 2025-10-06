@@ -64,8 +64,6 @@
     @include media(middle-small) {
       width: 90%;
     }
-
-
   }
 
   .header-drawer-wrap {
@@ -187,10 +185,9 @@
         }
 
         li {
-
           &:first-child {
-            width: 25%;
-            font-size: 14px;
+            width: 130px;
+            font-size: clamp(15px, 1.4vw, 18px);
             font-weight: 900;
             font-family: $font-en;
             letter-spacing: 0.05em;
@@ -215,10 +212,8 @@
               @include media(llg) {
                 width: 154px;
               }
-
             }
           }
-
         }
       }
 
@@ -242,7 +237,8 @@
           letter-spacing: 0.05em;
 
           &:first-of-type {
-            width: 25%;
+            //width: 25%;
+            width: 130px;
 
             @include media(llg) {
               font-size: 16px;
@@ -261,7 +257,8 @@
           }
 
           &:nth-of-type(2) {
-            width: 35%;
+            //width: 35%;
+            width: 170px;
 
             @include media(llg) {
               font-size: 14px;
@@ -288,8 +285,7 @@
             display: flex;
             flex-wrap: wrap;
             gap: 22px;
-            width: 40%;
-
+            width: calc(100% - 300px);
 
             @include media(llg) {
               gap: 15px;
