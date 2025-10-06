@@ -6,10 +6,10 @@ Template Name: enjoy-goods
 <?php get_header(); ?>
 <main class="page-main enjoy goods">
     <div class="page-main-left-img">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/page/page-img-left.png" alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/page/page-img-left.webp" alt="">
     </div>
     <div class="page-main-right-img">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/page/page-img-right.png" alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/page/page-img-right.webp" alt="">
     </div>
 
     <div class="page-breadcrumbs">
@@ -239,7 +239,7 @@ Template Name: enjoy-goods
                             }
                             ?>
                             <div class="sec04-wrap-col <?php echo $class_col; ?>">
-                                <a href="javacript:void(0);" class="goods-btn" data-id="goods_<?php echo $post->ID; ?>">
+                                <a href="javascript:void(0);" class="goods-btn" data-id="goods_<?php echo $post->ID; ?>">
                                     <div class="sec04-wrap-col-img">
                                         <?php if (has_post_thumbnail()): ?>
                                             <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>">
@@ -251,9 +251,6 @@ Template Name: enjoy-goods
                                                 SOLD OUT
                                             </div>
                                         <?php endif; ?>
-
-
-
                                     </div>
                                     <div class="sec04-wrap-col-cat">
                                         <ul>
@@ -335,10 +332,11 @@ Template Name: enjoy-goods
                             <div class="goods-fixed-container-wrap-content-main-img">
                                 <div class="goods-swiper swiper">
                                     <div class="swiper-wrapper">
-                                        <?php if ($loop_img): ?>
+
+                                        <?php if ($loop_img[0]): ?>
                                             <?php foreach ($loop_img as $img): ?>
                                                 <div class="swiper-slide">
-                                                    <img src="<?php echo esc_url($img['loop_img_item']); ?>" alt="<?php echo esc_attr($img['alt']); ?>">
+                                                    <img src="<?php echo esc_url($img['loop_img_item']); ?>" alt="">
                                                 </div>
                                             <?php endforeach; ?>
                                         <?php else: ?>
@@ -354,10 +352,10 @@ Template Name: enjoy-goods
                                 </div>
                                 <div class="goods-swiper-thum swiper">
                                     <div class="swiper-wrapper">
-                                        <?php if ($loop_img): ?>
+                                        <?php if ($loop_img[0]): ?>
                                             <?php foreach ($loop_img as $img): ?>
                                                 <div class="swiper-slide">
-                                                    <img src="<?php echo esc_url($img['loop_img_item']); ?>" alt="<?php echo esc_attr($img['alt']); ?>">
+                                                    <img src="<?php echo esc_url($img['loop_img_item']); ?>" alt="">
                                                 </div>
                                             <?php endforeach; ?>
                                         <?php else: ?>

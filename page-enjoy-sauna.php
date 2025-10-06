@@ -6,10 +6,10 @@ Template Name: enjoy-sauna
 <?php get_header(); ?>
 <main class="page-main enjoy sauna">
     <div class="page-main-left-img">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/page/page-img-left.png" alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/page/page-img-left.webp" alt="">
     </div>
     <div class="page-main-right-img">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/page/page-img-right.png" alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/page/page-img-right.webp" alt="">
     </div>
 
     <div class="page-breadcrumbs">
@@ -112,7 +112,7 @@ Template Name: enjoy-sauna
 
         </div>
         <div class="page-deco-container page-deco-container--yellow">
-            <div class="content-width-sm">
+            <div class="content-width-sm fadeup">
                 <div class="page-title-center--has-icon">
                     <h2><i></i>特徴・魅力</h2>
                 </div>
@@ -180,14 +180,14 @@ Template Name: enjoy-sauna
             <div class="sec04-bg">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sauna/sec04-bg-01_v2.jpg" alt="">
             </div>
-            <div class="sec04-wrap" id="hot">
+            <div class="sec04-wrap fadeup" id="hot">
                 <h3>ドライサウナ（高温サウナ）</h3>
                 <p>
                     しっかりと汗をかきたい方におすすめの本格派ドライサウナ。温度は約90〜100℃で、毎時20分おきのオートロウリュ。<br>
                     サウナストーンの遠赤外線効果で、体の芯からじんわり温まり、デトックス効果も抜群。熱波師によるアウフグースも定時開催しております。
                 </p>
             </div>
-            <div class="content-width-sm">
+            <div class="content-width-sm fadeup">
                 <div class="sec04-effect">
                     <dl>
                         <dt>効能</dt>
@@ -267,18 +267,18 @@ Template Name: enjoy-sauna
             <p class="sec05-desc">
                 サウナの後は“ととのう”時間。<br class="hidden-mobile">グルスパでは、ととのいスペースにも徹底的にこだわっています。
             </p>
-            <div class="sec05-wrap">
-                <div class="sec05-wrap-col">
+            <div class="sec05-wrap fadeup-timelug">
+                <div class="sec05-wrap-col fadeup-item">
                     <div class="sec05-wrap-col-img">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sauna/sec05-img-01_v2.jpg" alt="">
                     </div>
                 </div>
-                <div class="sec05-wrap-col">
+                <div class="sec05-wrap-col fadeup-item">
                     <div class="sec05-wrap-col-img">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sauna/sec05-img-02_v2.jpg" alt="">
                     </div>
                 </div>
-                <div class="sec05-wrap-col">
+                <div class="sec05-wrap-col fadeup-item">
                     <div class="sec05-wrap-col-img">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sauna/sec05-img-03_v2.jpg" alt="">
                     </div>
@@ -300,7 +300,7 @@ Template Name: enjoy-sauna
                 </div>
             </div>
             <div class="content-width-small content-width--mobile-full">
-                <div class="sec06-top">
+                <div class="sec06-top fadeup">
                     <div class="area-event">
                         <div class="swiper swiper-event sec01-col-main">
                             <div class="swiper-wrapper">
@@ -419,7 +419,7 @@ Template Name: enjoy-sauna
                     </div>
                 </div>
             </div>
-            <div class="content-width" id="sec07">
+            <div class="content-width fadeup" id="sec07">
                 <div class="page-title-center--has-icon page-title-center--has-icon--nowrap">
                     <h2><i></i>イベントスケジュール</h2>
                 </div>
@@ -428,8 +428,8 @@ Template Name: enjoy-sauna
                     週末限定のスペシャルロウリュや、季節に応じたアロマ水使用など、訪れるたびに新しい楽しみをご用意しています。
                 </div>
 
-                <div class="sec06-bottom">
-                    <div class="sec06-bottom-col">
+                <div class="com-bnr-sec06-bottom">
+                    <div class="sec06-bottom-col sec06-bottom-col--today">
                         <div class="sec-01-col-under">
                             <a href="<?php echo home_url(); ?>/today/">
                                 <div class="sec-01-col-under-img">
@@ -459,7 +459,6 @@ Template Name: enjoy-sauna
                             </a>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -498,7 +497,7 @@ Template Name: enjoy-sauna
                         <h2><i></i>よくある質問</h2>
                     </div>
                     <div class="sec07-btn hidden-mobile">
-                        <a href="<?php echo home_url(); ?>/faq/">一覧を見る<i></i></a>
+                        <a href="<?php echo home_url(); ?>/faq/#sec04">一覧を見る<i></i></a>
                     </div>
                 </div>
                 <div class="sec07-wrap-faq accordion">
@@ -525,7 +524,7 @@ Template Name: enjoy-sauna
                     ?>
                             <dl>
                                 <dt><i></i><?php the_title(); ?></dt>
-                                <dd><?php the_content(); ?></dd>
+                                <dd><i></i><?php the_content(); ?></dd>
                             </dl>
                     <?php
                         endwhile;

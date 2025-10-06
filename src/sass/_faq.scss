@@ -25,7 +25,11 @@
       }
     }
     .sec03-container {
-      background-color: #e5e5e5;
+      background-image: url(('./assets/img/aside/aside-bg-green-center.png'));
+      background-size: contain;
+      background-repeat: repeat;
+      background-position: center top;
+
       padding: 75px 0px 0px;
     }
     p {
@@ -33,6 +37,7 @@
       font-weight: bold;
       text-align: center;
       line-height: 1.7;
+      margin: 0px;
       @include media(middle) {
         font-size: 15px;
       }

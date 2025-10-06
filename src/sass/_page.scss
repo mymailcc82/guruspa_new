@@ -51,15 +51,15 @@
     padding-top: 20px;
     &.page-deco-container--red {
       //background-color: #dce7fb !important;
-      background-image: url(("./assets/img/aside/aside-bg-red-content.jpg"));
+      background-image: url(("./assets/img/aside/aside-bg-red-content_v2.png"));
       background-repeat: repeat;
-      background-size: 200px;
+      background-size: contain;
     }
     &.page-deco-container--yellow {
       //background-color: #dce7fb !important;
-      background-image: url(("./assets/img/aside/aside-bg-yellow-content.jpg"));
+      background-image: url(("./assets/img/aside/aside-bg-yellow-content_v2.png"));
       background-repeat: repeat;
-      background-size: 200px;
+      background-size: contain;
     }
 
     &.page-deco-container--blue {
@@ -94,13 +94,13 @@
     left: 0;
   }
   .page-bg-deco-bg-bottom-red {
-    background-image: url(("./assets/img/aside/aside-bg-red-content.jpg"));
+    background-image: url(("./assets/img/aside/aside-bg-red-content_v3.png"));
     background-repeat: repeat;
-    background-size: 200px;
+    background-size: contain;
     position: absolute;
     width: 100%;
-    height: calc(200 * (100vw / 1240));
-    bottom: calc(-200 * (100vw / 1240));
+    height: calc(240 * (100vw / 1240));
+    bottom: calc(-240 * (100vw / 1240));
     left: 0;
   }
   .page-deco-bg-bottom {
@@ -157,7 +157,7 @@
             }
             .sec-01-col-under-title {
               img {
-                width: 80%;
+                width: 100%;
                 max-width: 221px;
                 &.text-event {
                   max-width: 172px;
@@ -166,6 +166,13 @@
               .icon-btn {
                 bottom: 15px;
                 right: 130px;
+                @include media(mobile) {
+                  right: clamp(20px, calc(15 * (100vw / 375)), 50px);
+                  bottom: clamp(2px, calc(13 * (100vw / 375)), 30px);
+                  width: calc(25 * (100vw / 375));
+                  height: calc(25 * (100vw / 375));
+                  max-width: 25px;
+                }
               }
             }
           }
@@ -183,9 +190,11 @@
               display: none;
             }
             &:hover {
-              .sec-01-col-under-img {
-                img {
-                  transform: scale(1) rotate(5deg);
+              @include media(md) {
+                .sec-01-col-under-img {
+                  img {
+                    transform: scale(1) rotate(5deg);
+                  }
                 }
               }
             }
@@ -218,32 +227,34 @@
           }
 
           &:hover {
-            &::before {
-              transform: translate(10px, -10px) rotate(10deg);
-            }
-
-            .sec-01-col-under-img {
-              img {
-                transform: scale(1.1);
+            @include media(md) {
+              &::before {
+                transform: translate(10px, -10px) rotate(10deg);
               }
-            }
 
-            .sec-01-col-under-move-item {
-              span {
-                &:first-of-type {
-                  transform: rotate(-10deg);
-                }
-
-                &:nth-of-type(2) {
-                  transform: translateY(-10px);
+              .sec-01-col-under-img {
+                img {
+                  transform: scale(1.1);
                 }
               }
-            }
 
-            .sec-01-col-under-title {
-              h3 {
-                i {
-                  transform: translate(15px, 5px);
+              .sec-01-col-under-move-item {
+                span {
+                  &:first-of-type {
+                    transform: rotate(-10deg);
+                  }
+
+                  &:nth-of-type(2) {
+                    transform: translateY(-10px);
+                  }
+                }
+              }
+
+              .sec-01-col-under-title {
+                h3 {
+                  i {
+                    transform: translate(15px, 5px);
+                  }
                 }
               }
             }
@@ -281,6 +292,8 @@
               color: #000;
               font-family: $font-en;
               display: flex;
+              width: 100%;
+              max-width: 218px;
               img {
                 width: 100%;
                 max-width: 218px;

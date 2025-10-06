@@ -1,10 +1,10 @@
 <?php get_header(); ?>
 <main class="page-main faq">
     <div class="page-main-left-img">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/page/page-img-left.png" alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/page/page-img-left.webp" alt="">
     </div>
     <div class="page-main-right-img">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/page/page-img-right.png" alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/page/page-img-right.webp" alt="">
     </div>
 
     <div class="page-breadcrumbs">
@@ -398,7 +398,7 @@
 
     <section class="sec03">
         <div class="sec03-bg">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-gray-top.png" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-gray-top_v2.png" alt="">
         </div>
         <div class="sec03-container">
             <div class="content-width">

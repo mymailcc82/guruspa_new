@@ -179,7 +179,7 @@
               background-image: url('./assets/img/icon/icon-arrow-left.svg');
               background-size: 22px;
               background-repeat: no-repeat;
-              background-position: left 0px center;
+              background-position: left 5px center;
               display: inline-block;
               background-color: inherit;
               padding: 5px 5px 5px 40px !important;
@@ -189,13 +189,18 @@
               font-weight: 600;
               border: none;
               font-size: 16px;
-              transition: opacity 0.5s;
+              transition: all 0.5s;
               border: none;
               text-align: left;
               border-bottom: 2px solid #3c3636;
               @include media(middle) {
                 font-size: 17px;
                 padding-left: 10px;
+              }
+              &:hover {
+                opacity: 0.5;
+                cursor: pointer;
+                background-position: left 0px center;
               }
             }
           }

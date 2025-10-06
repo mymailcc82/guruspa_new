@@ -14,10 +14,10 @@ if (isset($_GET['event_tag'])) {
 <?php get_header(); ?>
 <main class="page-main archive event">
     <div class="page-main-left-img">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/page/page-img-left.png" alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/page/page-img-left.webp" alt="">
     </div>
     <div class="page-main-right-img">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/page/page-img-right.png" alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/page/page-img-right.webp" alt="">
     </div>
 
     <div class="page-breadcrumbs">
@@ -30,12 +30,11 @@ if (isset($_GET['event_tag'])) {
                     <meta itemprop="position" content="1" />
                 </li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <span itemprop="name">NEWS</span>
+                    <span itemprop="name">イベント情報</span>
                     <meta itemprop="position" content="2" />
                 </li>
             </ol>
         </nav>
-
     </div>
     <section class="sec">
         <div class="content-width">
@@ -55,7 +54,7 @@ if (isset($_GET['event_tag'])) {
 
         <div class="sec01-col">
             <ul class="sec01-col-select">
-                <li class="active"><a href="javascript:void(0)" class="tab-btn" data-id="">すべて</a></li>
+                <li class="active"><a href="javascript:void(0)" class="tab-btn" data-id="all">すべて</a></li>
                 <li><a href="javascript:void(0)" class="tab-btn" data-id="limit">期間限定<br class="hidden-sm">イベント</a></li>
                 <li><a href="javascript:void(0)" class="tab-btn" data-id="per_event">定例<br class="hidden-sm">イベント</a></li>
             </ul>
@@ -138,61 +137,8 @@ if (isset($_GET['event_tag'])) {
                                                     <span class="hot"><?php echo $is_hot; ?></span>
                                                 <?php endif; ?>
                                                 <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
-                                                <div class="img img-event">
-                                                    <?php if (has_post_thumbnail()) : ?>
-                                                        <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>">
-                                                    <?php else : ?>
-                                                        <?php if ($event_category && !is_wp_error($event_category)) : ?>
-                                                            <?php
-                                                            if ($event_category[0]->parent) {
-                                                                $parent_term = get_term($event_category[0]->parent, 'event_category');
-                                                                if ($parent_term && !is_wp_error($parent_term)) {
-                                                                    $category_slug_parent_id = $parent_term->term_id;
-                                                                    $category_slug_parent = $parent_term->slug;
-                                                                }
-                                                            }
-                                                            $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-default.jpg'; // デフォルト画像
-
-                                                            if ($category_slug === 'information' || $category_slug_parent === 'information') {
-                                                                $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-red.jpg';
-                                                            } elseif ($category_slug === 'event' || $category_slug_parent === 'event') {
-                                                                $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-green.jpg';
-                                                            } elseif ($category_slug === 'food' || $category_slug_parent === 'food') {
-                                                                $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-yellow.jpg';
-                                                            } elseif ($category_slug === 'relax' || $category_slug_parent === 'relax') {
-                                                                $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-blue.jpg';
-                                                            } elseif ($category_slug === 'tokiwa') {
-                                                            }
-                                                            ?>
-                                                            <img src="<?php echo esc_url($default_image_url); ?>" alt="<?php the_title(); ?>">
-                                                        <?php else : ?>
-                                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-default.jpg" alt="<?php the_title(); ?>">
-                                                        <?php endif; ?>
-                                                    <?php endif; ?>
-                                                </div>
-                                                <div class="text">
-                                                    <div class="text-info">
-                                                        <?php
-                                                        if ($category_slug === 'information' || $category_slug_parent === 'information') {
-                                                            $cats_class = 'category-red';
-                                                        } elseif ($category_slug === 'event' || $category_slug_parent === 'event') {
-                                                            $cats_class = 'category-green';
-                                                        } elseif ($category_slug === 'food' || $category_slug_parent === 'food') {
-                                                            $cats_class = 'category-yellow';
-                                                        } elseif ($category_slug === 'relax' || $category_slug_parent === 'relax') {
-                                                            $cats_class = 'category-blue';
-                                                        }
-                                                        ?>
-                                                        <div class="text-info-cat">
-                                                            <span class="category <?php echo esc_attr($cats_class); ?> cat-<?php echo esc_attr($category_slug); ?>"><?php echo esc_html($event_category[0]->name); ?></span>
-                                                        </div>
-                                                        <div class="text-info-term">
-                                                            <span class="term"><?php echo $event_start_date; ?></span>
-                                                        </div>
-
-                                                    </div>
-                                                    <h3><?php the_title(); ?></h3>
-                                                </div>
+                                                <?php get_template_part('inc/inc-event-img'); ?>
+                                                <?php get_template_part('inc/inc-event-text'); ?>
                                             </a>
                                         </li>
 
@@ -210,21 +156,12 @@ if (isset($_GET['event_tag'])) {
                     </div>
                 </div>
             </div>
-
-
         </div>
-
-
     </section>
     <?php get_template_part('inc/inc-bnr-full'); ?>
     <?php get_template_part('inc/inc-aside'); ?>
-
-
 </main>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-
-
 <script>
     $(document).ready(function() {
         function get_event_ajax(page = 1) {
@@ -263,7 +200,11 @@ if (isset($_GET['event_tag'])) {
                             }
                             post_html += '<span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>';
                             post_html += '<div class="img img-event">';
+                            //pictureでspとpcの画像を切り替え
+                            post_html += '<picture>';
+                            post_html += '<source media="(max-width:600px)" srcset="' + post.thumbnail_sp + '">';
                             post_html += '<img src="' + post.thumbnail + '" alt="' + post.title + '">';
+                            post_html += '</picture>';
                             post_html += '</div>';
                             post_html += `
                             <div class="text">
@@ -272,7 +213,7 @@ if (isset($_GET['event_tag'])) {
                                         <span class="category ${post.category_class} cat-${post.category_slug}">${post.category}</span>
                                     </div>
                                     <div class="text-info-term">
-                                        <span class="term"><?php echo $event_start_date; ?></span>
+                                        <span class="term">${post.event_start_date}</span>
                                     </div>
                                 </div>
                                 <h3>${post.title}</h3>
@@ -338,7 +279,12 @@ if (isset($_GET['event_tag'])) {
         })
         //.tab-btnがクリックされたら
         $(document).on('click', '.tab-btn', function() {
+
             var slug = $(this).data('id');
+            //親の親に.active-<slug>を付与
+            //active-allとかactive-limitとactive-per_eventをsec01-col-selectから消す
+            $('.sec01-col-select').removeClass('active-all active-limit active-per_event');
+            $(this).parent().parent().addClass('active-' + slug);
             $('#event_tag').val(slug);
             get_event_ajax();
 
@@ -356,6 +302,22 @@ if (isset($_GET['event_tag'])) {
 
         get_event_ajax();
     });
+
+    $(document).on('click', '.tab-btn', function() {
+
+        var slug = $(this).data('id');
+        //親の親に.active-<slug>を付与
+        //active-allとかactive-limitとactive-per_eventをsec01-col-selectから消す
+        $('.sec01-col-select').removeClass('active-all active-news active-media');
+        $(this).parent().parent().addClass('active-' + slug);
+        $('#event_tag').val(slug);
+        get_event_ajax();
+
+        //thisの親のliにactiveを付与し、他のliからはactiveを外す
+        $('.sec01-col-select li').removeClass('active');
+        //thisの親のliにactiveを付与
+        $(this).parent().addClass('active');
+    })
 </script>
 
 

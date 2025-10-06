@@ -1,40 +1,29 @@
 <?php get_header(); ?>
-
-
 <style>
+    /*
     .icon {
         width: 160px;
         height: 160px;
         display: block;
     }
 
-    /* clipRect を下端基準で縦スケールする */
     .clip-rect {
         transform-box: fill-box;
-        /* SVG要素の transform を fill-box 基準にする */
         transform-origin: 50% 100%;
     }
-
-    /* ループさせたい場合は alternate/ infinite を使う（コメント外して使って下さい） */
-    /* animation: reveal 2s ease-in-out infinite alternate; */
-
-
-    /* 見やすい背景 */
+        */
 </style>
-
-
 <div class="page-loading">
-  <div class="page-loading-wrap-container">
-    <div class="loader">
-      <img class="flame-base" src="<?php echo get_template_directory_uri(); ?>/assets/img/mv/loader-base.png" alt="">
-      <img class="flame-color" src="<?php echo get_template_directory_uri(); ?>/assets/img/mv/loader-color.png" alt="">
-      <div class="loader-percent">
-        <p><span id="count">0</span>%</p>
-      </div>
+    <div class="page-loading-wrap-container">
+        <div class="loader">
+            <img class="flame-base" src="<?php echo get_template_directory_uri(); ?>/assets/img/mv/loader-base.webp" alt="GURUSPA">
+            <img class="flame-color" src="<?php echo get_template_directory_uri(); ?>/assets/img/mv/loader-color.webp" alt="GURUSPA">
+            <div class="loader-percent">
+                <p><span id="count">0</span>%</p>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
-
 <main class="top">
     <div class="top-bg">
         <div class="top-visual">
@@ -44,241 +33,79 @@
                 <span class="icon-01 icon-01_ani"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01.png" alt=""></span>
                 <div class="top-visual-mv">
                     <div class="top-visual-mv-container">
-                        <div class="wave">
-                            <svg viewBox="0 0 2726.2 318.1" width="100%" id="waveWrap" xmlns="http://www.w3.org/2000/svg">
-                                <defs>
-                                    <path id="wavePath" d="M0,314.2l0-91.1c0,0,409.3-199.3,749.3-196.8s302.1,196.2,610.7,207c308.6,10.8,284.4-185,623.7-163.8
-      s733.7,248.7,733.7,248.7" />
-                                    <!-- 反射用のフェード -->
-                                    <linearGradient id="fade" x1="0" x2="0" y1="0" y2="1">
-                                        <stop offset="0%" stop-color="#000" stop-opacity="0.35" />
-                                        <stop offset="60%" stop-color="#000" stop-opacity="0.12" />
-                                        <stop offset="100%" stop-color="#000" stop-opacity="0" />
-                                    </linearGradient>
-                                    <mask id="fadeMask">
-                                        <rect x="0" y="0" width="100%" height="100%" fill="url(#fade)" />
-                                    </mask>
-                                </defs>
-
-                                <!-- 波グループ（動かす本体）-->
-                                <g id="waveGroup" transform="translate(0,10)">
-                                    <use href="#wavePath" fill="#FEFBF5" class="wave-fill" />
-                                </g>
-
-                                <!-- 反射（下に複製して反転）-->
-                                <g id="waveReflect" transform="translate(0,320)" mask="url(#fadeMask)">
-                                    <!-- scaleY=-1 で上下反転。translateは見た目合わせで調整 -->
-                                    <use href="#wavePath" transform="scale(1,-1)" fill="#FEFBF5" opacity="0.6" />
-                                </g>
-                            </svg>
-                            <style>
-                                /* 横にゆっくりループ（シームレスに見せるためにはパス幅を揃えて複数重ねるのが良い） */
-                                @keyframes slideX {
-                                    0% {
-                                        transform: translateX(25%);
-                                    }
-
-                                    50% {
-                                        transform: translateX(10%);
-                                    }
-
-                                    100% {
-                                        transform: translateX(25%);
-                                    }
-                                }
-
-                                /* 小さな上下ゆらぎ */
-                                @keyframes bob {
-                                    0% {
-                                        transform: translateY(0);
-                                    }
-
-                                    50% {
-                                        transform: translateY(26px);
-                                    }
-
-                                    100% {
-                                        transform: translateY(0);
-                                    }
-                                }
-
-                                /* 適用 */
-                                #waveGroup {
-                                    animation: slideX 18s linear infinite;
-                                    transform-origin: center;
-                                }
-
-                                #waveGroup .wave-fill {
-                                    filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.02));
-                                }
-
-                                #waveReflect {
-                                    animation: slideX 18s linear infinite, bob 18s ease-in-out infinite;
-                                    transform-origin: center;
-                                }
-                            </style>
-                        </div>
+                        <?php get_template_part('inc/svg-wave'); ?>
                         <div class="wave_nami">
                         </div>
                         <div class="wave_nami_v2">
                         </div>
                         <div class="wave_nami_v3">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-wave_v3.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-wave_v3.webp" alt="">
                         </div>
                         <div class="swiper top-visual-slide">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <picture class="">
-                                        <source media="(min-width:601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-main_v2.jpg">
-                                        <source media="(max-width:600px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-main_sp.jpg">
-                                        <img class="top-visual-mv-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-main_v2.jpg" alt="GURUSPA">
+                                        <source media="(min-width:601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-main_v2.webp">
+                                        <source media="(max-width:600px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-main_sp.webp">
+                                        <img class="top-visual-mv-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-main_v2.webp" alt="GURUSPA">
                                     </picture>
                                 </div>
                                 <div class="swiper-slide">
                                     <picture class="">
-                                        <source media="(min-width:601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-3.jpg">
-                                        <source media="(max-width:600px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-3_sp.jpg">
-                                        <img class="top-visual-mv-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-3.jpg" alt="GURUSPA">
+                                        <source media="(min-width:601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-3.webp">
+                                        <source media="(max-width:600px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-3_sp.webp">
+                                        <img class="top-visual-mv-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-3.webp" alt="GURUSPA">
                                     </picture>
                                 </div>
                                 <div class="swiper-slide">
                                     <picture class="">
-                                        <source media="(min-width:601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-4.jpg">
-                                        <source media="(max-width:600px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-4_sp.jpg">
-                                        <img class="top-visual-mv-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-4.jpg" alt="GURUSPA">
+                                        <source media="(min-width:601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-4.webp">
+                                        <source media="(max-width:600px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-4_sp.webp">
+                                        <img class="top-visual-mv-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-4.webp" alt="GURUSPA">
                                     </picture>
                                 </div>
                                 <div class="swiper-slide">
                                     <picture class="">
-                                        <source media="(min-width:601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-5.jpg">
-                                        <source media="(max-width:600px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-5_sp.jpg">
-                                        <img class="top-visual-mv-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-5.jpg" alt="GURUSPA">
+                                        <source media="(min-width:601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-5.webp">
+                                        <source media="(max-width:600px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-5_sp.webp">
+                                        <img class="top-visual-mv-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-5.webp" alt="GURUSPA">
                                     </picture>
                                 </div>
                                 <div class="swiper-slide">
                                     <picture class="">
-                                        <source media="(min-width:601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-6.jpg">
-                                        <source media="(max-width:600px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-6_sp.jpg">
-                                        <img class="top-visual-mv-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-6.jpg" alt="GURUSPA">
+                                        <source media="(min-width:601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-6.webp">
+                                        <source media="(max-width:600px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-6_sp.webp">
+                                        <img class="top-visual-mv-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-6.webp" alt="GURUSPA">
                                     </picture>
                                 </div>
                                 <div class="swiper-slide">
                                     <picture class="">
-                                        <source media="(min-width:601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-7.jpg">
-                                        <source media="(max-width:600px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-7_sp.jpg">
-                                        <img class="top-visual-mv-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-7.jpg" alt="GURUSPA">
+                                        <source media="(min-width:601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-7.webp">
+                                        <source media="(max-width:600px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-7_sp.webp">
+                                        <img class="top-visual-mv-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-7.webp" alt="GURUSPA">
                                     </picture>
                                 </div>
                                 <div class="swiper-slide">
                                     <picture class="">
-                                        <source media="(min-width:601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-8.jpg">
-                                        <source media="(max-width:600px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-8_sp.jpg">
-                                        <img class="top-visual-mv-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-8.jpg" alt="GURUSPA">
+                                        <source media="(min-width:601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-8.webp">
+                                        <source media="(max-width:600px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-8_sp.webp">
+                                        <img class="top-visual-mv-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-8.webp" alt="GURUSPA">
                                     </picture>
                                 </div>
                                 <div class="swiper-slide">
                                     <picture class="">
-                                        <source media="(min-width:601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-9.jpg">
-                                        <source media="(max-width:600px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-9_sp.jpg">
-                                        <img class="top-visual-mv-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-9.jpg" alt="GURUSPA">
+                                        <source media="(min-width:601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-9.webp">
+                                        <source media="(max-width:600px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-9_sp.webp">
+                                        <img class="top-visual-mv-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-9.webp" alt="GURUSPA">
                                     </picture>
                                 </div>
-
                             </div>
                         </div>
                     </div>
-
                     <div class="top-visual-title">
-                        <h1>
-                            <div class="top_logo">
-                                <div class="top_logo_img">
-                                    <!-- Generator: Adobe Illustrator 27.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-                                    <svg version="1.1" id="レイヤー_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                                        y="0px" viewBox="0 0 340.6 73.5" style="enable-background:new 0 0 340.6 73.5;" xml:space="preserve">
-                                        <rect class="st0" width="340.6" height="73.5" />
-                                        <path id="path_1000" class="st1" d="M175,64.9c-12.1,0-20.9-4.8-21.6-19.1V14h10.9v31.2c0,2.2,0.6,4.4,1.8,6.3
-	c2.1,3,5,4.1,8.5,4.1c3.6,0,6.9-0.6,9.2-4.1c1.1-1.9,1.6-4,1.5-6.2l0.1-31.3h11.2v30.2C197,58.5,187,64.9,175,64.9" />
-                                        <path id="path_1001" class="st2" d="M66.4,68c0,1.7-1.4,3.1-3.1,3.1c-1.7,0-3.1-1.4-3.1-3.1c0-1.7,1.4-3.1,3.1-3.1
-	C65,64.8,66.4,66.2,66.4,68" />
-                                        <path id="path_1002" class="st2" d="M77.3,70.4c0,1.7-1.3,3.1-3.1,3.1c0,0,0,0,0,0c-1.8,0-3.2-1.4-3.2-3.2c0-1.7,1.4-3.1,3.1-3.1
-	c1.7,0,3.1,1.3,3.2,3C77.3,70.2,77.3,70.3,77.3,70.4" />
-                                        <path id="path_1003" class="st2" d="M87.8,68.1c0,1.7-1.4,3.1-3.1,3.1c-1.7,0-3.2-1.3-3.2-3.1c0-1.7,1.3-3.2,3.1-3.2
-	C86.3,64.9,87.7,66.3,87.8,68.1C87.8,68,87.8,68.1,87.8,68.1" />
-                                        <path id="path_1004" class="st1" d="M134.9,63.9l-12.6-18.5h-5.1v18.5h-11.1V13.9h17.7c13.9,0,20,5.8,20.6,15.1
-	c0.5,7-5.2,13-10.8,14.6l14.3,20.2L134.9,63.9z M133.8,29.1c0-3.9-4.5-6.1-9.1-6h-7.4v13h7.2C129.1,36.3,133.8,33.2,133.8,29.1" />
-                                        <path id="path_1005" class="st1" d="M238.9,25.2c-4.5-1.9-9.4-2.9-14.3-3c-3.1,0-8.7,0.3-8.7,5.4c0,10.6,25.9,0.3,25.9,22.1
-	c0,12.1-12.6,15.3-21.7,15.3c-5.3,0-10.5-1.2-15.3-3.4l-0.1-9.3c4.1,2.1,11.1,3,15.2,3.1c5.7,0.1,10.8-2.6,10.8-5.7
-	c0-10.6-25.7-2-25.7-21.1c0-11.1,7.7-15.8,21-15.8c4.4,0,9.2,1.8,12.9,3.1L238.9,25.2z" />
-                                        <path id="path_1007" class="st3" d="M286.3,14.1l-4.9-2l2-12.1l5.8,2.5L286.3,14.1z" />
-                                        <path id="path_1008" class="st3" d="M291.1,18.2l-4-3.5l5.8-10.8l4.7,4.3L291.1,18.2z" />
-                                        <path id="path_1011" class="st1" d="M21.7,36.2v9.2h11.4v10.1c-1.2,0-4.3,0.1-6.7,0.1c-10.5,0-15-7.6-15-16.8
-	c0-10.1,8.7-16.4,15.4-16.5c5.7-0.1,12.2,0.8,15.5,2.3v-9.7c-2.9-1.3-8.2-1.9-15.7-1.9C10.7,12.9,0,26.1,0,38.7
-	C0,54.4,8.7,65,26.8,65c5.8,0.1,11.6-0.9,17.1-2.7L44,45.3v-9.2H21.7z" />
-                                        <path id="path_1012" class="st4" d="M63.5,35.8c0,12.2-1.2,20.1,11,20.1c12.3,0,11-9,11-14.8c-2.4,0.4-6.8,1.6-9.2-1
-	C74,37.8,70,33.2,63.5,35.8" />
-                                        <path id="path_1013" class="st3" d="M280.6,31.9c-0.8,4.7-3.2,7.2-5.6,8.5c-2.3,1.3-5.9,1.8-7.9,0.8c-3.9-1.9-6.4-5.8-6.3-10.2
-	c0-2.4,0.9-4.7,2.5-6.5c2.7-3.2,6.7-4.9,10.8-4.6c1.5,0.7,2.9,1.8,4,3C280.1,25.5,281,28.7,280.6,31.9" />
-                                        <path id="path_1014" class="st5" d="M306.6,51.2h17.5l-8.6-23.3L306.6,51.2z" />
-                                        <g>
-                                            <path class="st1" d="M273.3,11.7L273.3,11.7c-4.5-0.1-9,1.3-12.6,3.9v-3.2H249v51.5h11.7V47c3.7,2.7,8.1,4.1,12.6,4
-		c9.5,0,20.4-7.4,20.4-20C293.7,20.3,284.7,11.7,273.3,11.7z M273,42.7L273,42.7c-2,0-4-0.4-5.7-1.3c0.1,0,0.2,0.1,0.3,0.1
-		c-0.2-0.1-0.3-0.1-0.5-0.2c-3.9-1.9-6.4-5.8-6.3-10.2c0-2.4,0.9-4.7,2.5-6.5c2.7-3.2,6.7-4.9,10.8-4.6c0.1,0.1,0.2,0.1,0.3,0.2
-		c-0.1-0.1-0.2-0.1-0.3-0.2c6.1,0.3,11.3,5.5,11.3,11.3C285.3,37.7,279.7,42.7,273,42.7z" />
-                                            <path class="st1" d="M273.1,41.2c0.2,0,0.3-0.1,0.5-0.2C273.4,41.1,273.2,41.2,273.1,41.2z" />
-                                            <path class="st1" d="M268.4,41.6c-0.1,0-0.2,0-0.3-0.1C268.1,41.6,268.3,41.6,268.4,41.6z" />
-                                            <path class="st1" d="M274.1,40.9c0.1,0,0.1,0,0.2-0.1C274.2,40.8,274.1,40.8,274.1,40.9z" />
-                                            <path class="st1" d="M269.3,41.7c-0.1,0-0.2,0-0.3,0C269.1,41.7,269.2,41.7,269.3,41.7z" />
-                                            <path class="st1" d="M271,41.7c0.1,0,0.3,0,0.4-0.1C271.2,41.6,271.1,41.6,271,41.7z" />
-                                            <path class="st1" d="M269.9,41.7c0.1,0,0.2,0,0.3,0C270.2,41.7,270.1,41.7,269.9,41.7z" />
-                                            <path class="st1" d="M272,41.5c0.2,0,0.3-0.1,0.5-0.1C272.3,41.4,272.2,41.5,272,41.5z" />
-                                        </g>
-                                        <g>
-                                            <path class="st1" d="M85.3,14l0,27.1h0c0,5.7,1.3,14.6-10.6,14.6C62.9,55.6,64,47.8,64,35.8V14H52.9v31.9
-		C53.6,60.1,62.4,65,74.5,65c13.5,0,22-6.4,21.6-20.7l0,0V14H85.3z" />
-                                        </g>
-                                        <polygon class="st1" points="320.1,13.6 310.3,13.6 290.1,64.2 301.6,64.2 303.8,58.6 312.3,58.6 312.3,51.2 306.6,51.2 315.5,27.9 
-	324.1,51.2 317.3,51.2 317.3,58.5 326.9,58.5 329,64.2 340.6,64.2 " />
-                                    </svg>
-                                </div>
-                            </div>
-                        </h1>
+                        <?php get_template_part('inc/svg-logo'); ?>
                         <h2>心と身体がととのう、<span>ウェルビーイング</span>の楽園。</h2>
-                        <?php
-                        $args = array(
-                            'post_type' => 'post', // カスタム投稿タイプ名
-                            'posts_per_page' => 1, // 表示する記事数
-                            'orderby' => 'date', // 日付でソート
-                            'order' => 'DESC', // 降順
-                            'category_name' => 'important', // 特定のカテゴリーを指定する場合
-                        );
-
-                        $important_title = get_field('important_title', 111); // 固定ページIDを指定
-                        ?>
-                        <?php
-                        $the_query = new WP_Query($args);
-                        if ($the_query->have_posts()) : ?>
-                            <div class="top-news">
-                                <ul>
-                                    <li><?php echo $important_title; ?></li>
-                                    <li>
-
-
-                                        <?php
-                                        while ($the_query->have_posts()) : $the_query->the_post();
-                                        ?>
-                                            <a href="<?php the_permalink(); ?>">
-                                                <h3><time><?php the_time('Y.m.d'); ?> 更新</time>
-                                                    <?php the_title(); ?></h3>
-                                                <i></i>
-                                            </a>
-                                        <?php
-                                        endwhile;
-                                        wp_reset_postdata();
-                                        ?>
-                                    </li>
-                                </ul>
-                            </div>
-                        <?php endif; ?>
+                        <?php get_template_part('inc/inc-top-news'); ?>
                     </div>
                 </div>
             </div>
@@ -328,8 +155,6 @@
                                         // カテゴリーに応じたデフォルト画像を設定
                                         $category_slug = $event_category[0]->slug;
                                         $category_slug_parent = '';
-                                        //$event_category[0]の親カテゴリーを取得
-                                        //var_dump($event_category[0]);
                                         if ($event_category[0]->parent) {
                                             $parent_term = get_term($event_category[0]->parent, 'event_category');
                                             if ($parent_term && !is_wp_error($parent_term)) {
@@ -338,62 +163,14 @@
                                             }
                                         }
                                 ?>
-
                                         <div class="swiper-slide">
                                             <a href="<?php the_permalink(); ?>">
                                                 <?php if ($is_hot) : ?>
                                                     <span class="hot"><?php echo $is_hot; ?></span>
                                                 <?php endif; ?>
                                                 <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
-                                                <div class="img img-info">
-                                                    <?php if (has_post_thumbnail()) : ?>
-                                                        <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>">
-                                                    <?php else : ?>
-                                                        <?php if ($event_category && !is_wp_error($event_category)) : ?>
-                                                            <?php
-                                                            $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-default.jpg'; // デフォルト画像
-
-                                                            if ($category_slug === 'information' || $category_slug_parent === 'information') {
-                                                                $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-red.jpg';
-                                                            } elseif ($category_slug === 'event' || $category_slug_parent === 'event') {
-                                                                $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-green.jpg';
-                                                            } elseif ($category_slug === 'food' || $category_slug_parent === 'food') {
-                                                                $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-yellow.jpg';
-                                                            } elseif ($category_slug === 'relax' || $category_slug_parent === 'relax') {
-                                                                $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-blue.jpg';
-                                                            } elseif ($category_slug === 'tokiwa') {
-                                                            }
-                                                            ?>
-                                                            <img src="<?php echo esc_url($default_image_url); ?>" alt="<?php the_title(); ?>">
-                                                        <?php else : ?>
-                                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-default.jpg" alt="<?php the_title(); ?>">
-                                                        <?php endif; ?>
-                                                    <?php endif; ?>
-                                                </div>
-                                                <div class="text">
-                                                    <div class="text-info">
-                                                        <?php
-                                                        if ($category_slug === 'information' || $category_slug_parent === 'information') {
-                                                            $cats_class = 'category-red';
-                                                        } elseif ($category_slug === 'event' || $category_slug_parent === 'event') {
-                                                            $cats_class = 'category-green';
-                                                        } elseif ($category_slug === 'food' || $category_slug_parent === 'food') {
-                                                            $cats_class = 'category-yellow';
-                                                        } elseif ($category_slug === 'relax' || $category_slug_parent === 'relax') {
-                                                            $cats_class = 'category-blue';
-                                                        }
-                                                        ?>
-                                                        <div class="text-info-cat">
-                                                            <span class="category <?php echo esc_attr($cats_class); ?>"><?php echo esc_html($event_category[0]->name); ?></span>
-                                                        </div>
-                                                        <div class="text-info-term">
-                                                            <span class="term"><?php echo $event_start_date; ?></span>
-                                                        </div>
-
-                                                    </div>
-
-                                                    <h3><?php the_title(); ?></h3>
-                                                </div>
+                                                <?php get_template_part('inc/inc-event-img'); ?>
+                                                <?php get_template_part('inc/inc-event-text'); ?>
                                             </a>
                                         </div>
                                 <?php
@@ -428,14 +205,14 @@
                                 ?>
                                 <?php
                                 $the_query = new WP_Query($args);
-                                if ($the_query->have_posts()) :
-                                    while ($the_query->have_posts()) : $the_query->the_post();
+                                ?>
+                                <?php if ($the_query->have_posts()) : ?>
+                                    <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+                                        <?php
                                         $event_category = get_the_terms(get_the_ID(), 'event_category');
                                         $event_start_date = get_field('event_start_date'); // 開始日
-
-
                                         $is_hot = get_field('hot'); // HOT! フラグ
-                                ?>
+                                        ?>
 
                                         <div class="swiper-slide">
                                             <a href="<?php the_permalink(); ?>">
@@ -443,61 +220,15 @@
                                                     <span class="hot"><?php echo $is_hot; ?></span>
                                                 <?php endif; ?>
                                                 <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
-                                                <div class="img img-info">
-                                                    <?php if (has_post_thumbnail()) : ?>
-                                                        <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>">
-                                                    <?php else : ?>
-                                                        <?php if ($event_category && !is_wp_error($event_category)) : ?>
-                                                            <?php
-                                                            // カテゴリーに応じたデフォルト画像を設定
-                                                            $category_slug = $event_category[0]->slug;
-                                                            $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-default.jpg'; // デフォルト画像
-
-                                                            if ($category_slug === 'information') {
-                                                                $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-red.jpg';
-                                                            } elseif ($category_slug === 'event') {
-                                                                $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-green.jpg';
-                                                            } elseif ($category_slug === 'food') {
-                                                                $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-yellow.jpg';
-                                                            }
-                                                            ?>
-                                                            <img src="<?php echo esc_url($default_image_url); ?>" alt="<?php the_title(); ?>">
-                                                        <?php else : ?>
-                                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-default.jpg" alt="<?php the_title(); ?>">
-                                                        <?php endif; ?>
-                                                    <?php endif; ?>
-                                                </div>
-                                                <div class="text">
-                                                    <div class="text-info">
-                                                        <?php
-                                                        if ($category_slug === 'information') {
-                                                            $cats_class = 'category-red';
-                                                        } elseif ($category_slug === 'event') {
-                                                            $cats_class = 'category-green';
-                                                        } elseif ($category_slug === 'food') {
-                                                            $cats_class = 'category-yellow';
-                                                        }
-                                                        ?>
-                                                        <div class="text-info-cat">
-                                                            <span class="category <?php echo esc_attr($cats_class); ?>"><?php echo esc_html($event_category[0]->name); ?></span>
-                                                        </div>
-                                                        <div class="text-info-term">
-                                                            <span class="term"><?php echo $event_start_date; ?></span>
-                                                        </div>
-
-                                                    </div>
-
-                                                    <h3><?php the_title(); ?></h3>
-                                                </div>
+                                                <?php get_template_part('inc/inc-event-img'); ?>
+                                                <?php get_template_part('inc/inc-event-text'); ?>
                                             </a>
                                         </div>
-                                <?php
-                                    endwhile;
-                                    wp_reset_postdata();
-                                else :
-                                    echo '<p class="text-base">イベントが見つかりませんでした。</p>';
-                                endif;
-                                ?>
+                                    <?php endwhile; ?>
+                                    <?php wp_reset_postdata(); ?>
+                                <?php else : ?>
+                                    <?php echo '<p class="text-base">イベントが見つかりませんでした。</p>'; ?>
+                                <?php endif; ?>
                             </div>
                         </div>
                     </div>
@@ -527,63 +258,16 @@
                                     while ($the_query->have_posts()) : $the_query->the_post();
                                         $event_category = get_the_terms(get_the_ID(), 'event_category');
                                         $event_start_date = get_field('event_start_date'); // 開始日
-
-
                                         $is_hot = get_field('hot'); // HOT! フラグ
                                 ?>
-
                                         <div class="swiper-slide">
                                             <a href="<?php the_permalink(); ?>">
                                                 <?php if ($is_hot) : ?>
                                                     <span class="hot"><?php echo $is_hot; ?></span>
                                                 <?php endif; ?>
                                                 <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
-                                                <div class="img img-info">
-                                                    <?php if (has_post_thumbnail()) : ?>
-                                                        <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>">
-                                                    <?php else : ?>
-                                                        <?php if ($event_category && !is_wp_error($event_category)) : ?>
-                                                            <?php
-                                                            // カテゴリーに応じたデフォルト画像を設定
-                                                            $category_slug = $event_category[0]->slug;
-                                                            $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-default.jpg'; // デフォルト画像
-
-                                                            if ($category_slug === 'information') {
-                                                                $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-red.jpg';
-                                                            } elseif ($category_slug === 'event') {
-                                                                $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-green.jpg';
-                                                            } elseif ($category_slug === 'food') {
-                                                                $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-yellow.jpg';
-                                                            }
-                                                            ?>
-                                                            <img src="<?php echo esc_url($default_image_url); ?>" alt="<?php the_title(); ?>">
-                                                        <?php else : ?>
-                                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-default.jpg" alt="<?php the_title(); ?>">
-                                                        <?php endif; ?>
-                                                    <?php endif; ?>
-                                                </div>
-                                                <div class="text">
-                                                    <div class="text-info">
-                                                        <?php
-                                                        if ($category_slug === 'information') {
-                                                            $cats_class = 'category-red';
-                                                        } elseif ($category_slug === 'event') {
-                                                            $cats_class = 'category-green';
-                                                        } elseif ($category_slug === 'food') {
-                                                            $cats_class = 'category-yellow';
-                                                        }
-                                                        ?>
-                                                        <div class="text-info-cat">
-                                                            <span class="category <?php echo esc_attr($cats_class); ?>"><?php echo esc_html($event_category[0]->name); ?></span>
-                                                        </div>
-                                                        <div class="text-info-term">
-                                                            <span class="term"><?php echo $event_start_date; ?></span>
-                                                        </div>
-
-                                                    </div>
-
-                                                    <h3><?php the_title(); ?></h3>
-                                                </div>
+                                                <?php get_template_part('inc/inc-event-img'); ?>
+                                                <?php get_template_part('inc/inc-event-text'); ?>
                                             </a>
                                         </div>
                                 <?php
@@ -598,27 +282,7 @@
                     </div>
                 </div>
                 <div class="com-btn-sp"><a href="<?php echo home_url(); ?>/event/">一覧を見る<i class="black"></i></a></div>
-                <div class="sec-01-col-under">
-                    <a href="<?php echo home_url(); ?>/schedule/">
-                        <div class="sec-01-col-under-img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-img-01_v2.jpg" alt=""></div>
-                        <div class="sec-01-col-under-title">
-                            <?php
-                            /*
-                                <h3>E<span>VENT</span><i class="icon-fire"></i><br>S<span>CHEDUL<span class="item-text">E</span></span><i class="icon-btn"></i></h3>
-                                */
-                            ?>
-                            <h3><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/title-event-schedule_v2.png" alt="EVENT SCHEDULE"><i class="icon-btn"></i></h3>
-                            <p>イベントはこちらをチェック！</p>
-                        </div>
-                        <div class="sec-01-col-under-move-item">
-                            <span><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-speaker.png" alt=""></span>
-                            <span><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-box.png" alt=""></span>
-                            <span><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-decoration-02.png" alt=""></span>
-                            <span><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-decoration-01.png" alt=""></span>
-                        </div>
-                    </a>
-                </div>
-
+                <?php get_template_part('inc/inc-bnr-full'); ?>
             </div>
         </section>
 
@@ -839,19 +503,19 @@
 
 
                     <div class="sec03-col-item-child sec03-col-item-child-1">
-                        <img class="sec03-col-item-child-1-wrap hidden-mobile" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec03-col-item-child-1.png" alt="">
-                        <img class="sec03-col-item-child-1-wrap hidden-sm" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec03-col-item-child-1_sp.png" alt="">
+                        <img class="sec03-col-item-child-1-wrap hidden-mobile" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec03-col-item-child-1.webp" alt="">
+                        <img class="sec03-col-item-child-1-wrap hidden-sm" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec03-col-item-child-1_sp.webp" alt="">
                     </div>
                     <div class="sec03-col-item-child sec03-col-item-child-2">
-                        <img class="sec03-col-item-child-2-wrap hidden-mobile" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec03-col-item-child-2.png" alt="">
-                        <img class="sec03-col-item-child-2-wrap hidden-sm" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec03-col-item-child-2_sp.png" alt="">
+                        <img class="sec03-col-item-child-2-wrap hidden-mobile" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec03-col-item-child-2.webp" alt="">
+                        <img class="sec03-col-item-child-2-wrap hidden-sm" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec03-col-item-child-2_sp.webp" alt="">
                     </div>
                     <div class="sec03-col-item-child sec03-col-item-child-3">
-                        <img class="sec03-col-item-child-3-wrap hidden-mobile" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec03-col-item-child-3.png" alt="">
-                        <img class="sec03-col-item-child-3-wrap hidden-sm" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec03-col-item-child-3_sp.png" alt="">
+                        <img class="sec03-col-item-child-3-wrap hidden-mobile" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec03-col-item-child-3.webp" alt="">
+                        <img class="sec03-col-item-child-3-wrap hidden-sm" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec03-col-item-child-3_sp.webp" alt="">
                     </div>
                     <div class="sec03-col-item-child sec03-col-item-child-4">
-                        <img class="sec03-col-item-child-4-wrap" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec03-col-item-child-4.png" alt="">
+                        <img class="sec03-col-item-child-4-wrap" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec03-col-item-child-4.webp" alt="">
                     </div>
                 </div>
             </div>
@@ -861,12 +525,7 @@
                     <div class="sec03-col-under-wrap">
                         <div class="sec03-col-under-title">
                             <h3>
-                                <?php
-                                /*
-                                A<span>BOUT</span><i class="icon-fire"></i><br>G<span>URUSP<span class="item-text">A</span></span>
-                                */
-                                ?>
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/title-about-guruspa_v2.png" alt="ABOUT GURUSPA">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/title-about-guruspa_v2.webp" alt="ABOUT GURUSPA">
                             </h3>
                             <p>グルスパについて</p>
                         </div>
@@ -881,11 +540,11 @@
                         <div class="loop-track" id="sliderTrack">
                             <?php for ($i = 0; $i < 2; $i++) : // 2セット 
                             ?>
-                                <div class="loop-item"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-slider-01_v2.jpg" alt=""></div>
-                                <div class="loop-item loop-item-2"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-slider-02_v2.png" alt=""></div>
-                                <div class="loop-item"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-slider-03_v2.jpg" alt=""></div>
-                                <div class="loop-item loop-item-2"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-slider-04_v2.png" alt=""></div>
-                                <div class="loop-item"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-slider-05_v2.jpg" alt=""></div>
+                                <div class="loop-item"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-slider-01_v2.webp" alt=""></div>
+                                <div class="loop-item loop-item-2"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-slider-02_v2.webp" alt=""></div>
+                                <div class="loop-item"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-slider-03_v2.webp" alt=""></div>
+                                <div class="loop-item loop-item-2"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-slider-04_v2.webp" alt=""></div>
+                                <div class="loop-item"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-slider-05_v2.webp" alt=""></div>
                             <?php endfor; ?>
                         </div>
                     </div>
@@ -912,8 +571,8 @@
                     <span class="shizuku shizuku-5"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/item-shizuku-2-2.png" alt=""></span>
                 </div>
 
-                <span class="ring-1"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec04-item-ring.png" alt=""></span>
-                <span class="ring-2"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec04-item-ring.png" alt=""></span>
+                <span class="ring-1"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec04-item-ring.webp" alt=""></span>
+                <span class="ring-2"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec04-item-ring.webp" alt=""></span>
                 <div class="content-width-small">
                     <div class="sec04-wrap">
                         <div class="com-title center com-title-white com-title-hidden">
@@ -937,7 +596,7 @@
                         <div class="sec04-wrap">
                             <div class="sec04-wrap-col sec04-wrap-right">
                                 <div class="sec04-wrap-col-img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-img-03_v2.jpg" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-img-03_v2.webp" alt="">
                                 </div>
                                 <div class="sec04-wrap-col-txt">
                                     <h3>お風呂</h3>
@@ -950,7 +609,7 @@
                             </div>
                             <div class="sec04-wrap-col sec04-wrap-left">
                                 <div class="sec04-wrap-col-img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-img-04_v2.jpg" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-img-04_v2.webp" alt="">
                                 </div>
                                 <div class="sec04-wrap-col-txt">
                                     <h3>サウナ＆水風呂</h3>
@@ -963,7 +622,7 @@
                             </div>
                             <div class="sec04-wrap-col sec04-wrap-right">
                                 <div class="sec04-wrap-col-img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-img-05_v2.jpg" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-img-05_v2.webp" alt="">
                                 </div>
                                 <div class="sec04-wrap-col-txt">
                                     <h3>発汗エリア<br class="hidden-sm">(有料岩盤浴エリア)</h3>
@@ -977,7 +636,7 @@
                             </div>
                             <div class="sec04-wrap-col sec04-wrap-left">
                                 <div class="sec04-wrap-col-img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-img-06_v2.jpg" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-img-06_v2.webp" alt="">
                                 </div>
                                 <div class="sec04-wrap-col-txt">
                                     <h3>ご飲食</h3>
@@ -990,7 +649,7 @@
                             </div>
                             <div class="sec04-wrap-col sec04-wrap-right">
                                 <div class="sec04-wrap-col-img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-img-07_v2.jpg" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-img-07_v2.webp" alt="">
                                 </div>
                                 <div class="sec04-wrap-col-txt">
                                     <h3>リラクゼーション</h3>
@@ -1150,8 +809,8 @@
                     </div>
 
                     <ul class="sec06-map">
-                        <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/map-1.jpg" alt="guruspa"></li>
-                        <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/map-2_v4.jpg" alt="guruspa"></li>
+                        <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/map-1.webp" alt="guruspa"></li>
+                        <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/map-2_v4.webp" alt="guruspa"></li>
                     </ul>
                     <div class="sec06-wrap-under-link">
                         <a href="<?php echo home_url(); ?>/guide/#sec05">くわしく見る<i></i></a>
@@ -1196,7 +855,7 @@
                         ?>
                                 <dl>
                                     <dt><i></i><?php the_title(); ?></dt>
-                                    <dd><?php the_content(); ?></dd>
+                                    <dd><i></i><?php the_content(); ?></dd>
                                 </dl>
                             <?php
                             endwhile;
@@ -1254,234 +913,26 @@
     }
 </style>
 
-
-
-
-
+<script src="<?php echo get_template_directory_uri(); ?>/assets/js/top.js"></script>
 <script>
-    // Group A
-    (function() {
-        const groupA = document.querySelector(".group-a");
-        const shizukuA = groupA.querySelectorAll(".shizuku");
-        let aFired = false;
+    //TOPのスライド
+    const swipervisual = new Swiper('.top-visual-slide', {
+        slidesPerView: 1, // 1枚ずつ表示
+        effect: 'fade', // ← フェードに変更
+        speed: 2000, // フェードの切り替わり速度(ms)
+        fadeEffect: {
+            crossFade: true, // クロスフェードさせる
+        },
+        loop: true, // 無限ループ
+        autoplay: {
+            delay: 5000, // 3秒ごとに切り替え
+            disableOnInteraction: false, // ユーザー操作後も再生を継続
+        },
+        lazy: {
+            loadPrevNext: true,
+            loadOnTransitionStart: true,
+        },
 
-        window.addEventListener("scroll", () => {
-            if (aFired) return;
-
-            const rect = groupA.getBoundingClientRect();
-            if (rect.top < 0 && rect.bottom < window.innerHeight) {
-                aFired = true;
-
-                shizukuA.forEach((el, i) => {
-                    el.classList.remove("animate");
-                    void el.offsetWidth; // トリガー再初期化
-                    setTimeout(() => {
-                        el.classList.add("animate");
-                    }, i * 300); // タイミングずらし
-                });
-
-                // 再発火可能にしたいなら一定時間後にリセット
-                setTimeout(() => {
-                    aFired = false;
-                }, 2000);
-            }
-        });
-    })();
-</script>
-
-<script>
-    // Group B
-
-    (function() {
-        const groupB = document.querySelector(".group-b");
-        const shizukuB = groupB.querySelectorAll(".shizuku");
-        let bFired = false;
-
-        window.addEventListener("scroll", () => {
-            if (bFired) return;
-
-            const rect = groupB.getBoundingClientRect();
-            if (rect.top < 0 && rect.bottom < window.innerHeight) {
-                bFired = true;
-
-                shizukuB.forEach((el, i) => {
-                    el.classList.remove("animate");
-                    void el.offsetWidth;
-                    setTimeout(() => {
-                        el.classList.add("animate");
-                    }, i * 300);
-                });
-
-                setTimeout(() => {
-                    bFired = false;
-                }, 2000);
-            }
-        });
-    })();
-</script>
-
-<script>
-    function observeRingAnimation(ringSelector) {
-        const ring = document.querySelector(ringSelector);
-        if (!ring) return;
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    ring.classList.add('ring-animate');
-                    observer.unobserve(entry.target); // 一度だけ発火
-                }
-            });
-        }, {
-            threshold: 0 // 画面に50%以上見えたら
-        });
-
-        observer.observe(ring);
-    }
-
-    observeRingAnimation('.ring-1');
-    observeRingAnimation('.ring-2');
-</script>
-
-
-
-<script>
-    /*
-    let percent = 0;
-    const flameColor = document.querySelector('.flame-color');
-    const loaderPercent = document.querySelector('.loader-percent');
-
-    const loadingInterval = setInterval(() => {
-        percent++;
-        loaderPercent.textContent = percent + '%';
-        flameColor.style.clipPath = `inset(${100 - percent}% 0 0 0)`;
-
-        if (percent >= 100) {
-            clearInterval(loadingInterval);
-            // ローディング完了処理へ
-        }
-    }, 30);
-    */
-</script>
-
-
-
-
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-  const countEl = document.getElementById('count');
-  const flameColor = document.querySelector('.flame-color');
-  const checkEl = document.getElementById('check');
-  if (!countEl || !flameColor) return;
-
-  const resources = [];
-  document.querySelectorAll('img').forEach(n => resources.push(n));
-  document.querySelectorAll('link[rel="stylesheet"]').forEach(n => resources.push(n));
-  document.querySelectorAll('iframe').forEach(n => resources.push(n));
-
-  let total = Math.max(1, resources.length) + 1;
-  let loaded = 0;
-  const proxy = { v: 0 };
-  let tween = null;
-  let finished = false;
-
-  function finishSequence() {
-    if (finished) return;
-    finished = true;
-
-    setTimeout(() => { logoAnimation(); }, 1000);
-
-    gsap.to('.bg-item-01', { opacity: 1, duration: 1, delay: 1 });
-    gsap.to('.bg-item-02', { opacity: 1, duration: 1, delay: 1 });
-    gsap.to('.wave', { y: 0, duration: 1, });
-    gsap.to('.wave_nami', { opacity: 1, duration: .5, delay: 1.5 });
-    gsap.to('.wave_nami_v2', { opacity: 1, duration: .5, delay: 1.5 });
-    gsap.to('.wave_nami_v3', { opacity: 1, duration: .5, delay: 2, x: -0, });
-    gsap.to('.icon-01', { opacity: 1, duration: .5, delay: 2.5 });
-    
-
-    gsap.to('.page-loading', {
-      opacity: 0,
-      duration: 0.3,
-      ease: 'power2.out',
-      onComplete: () => {
-        gsap.set('.page-loading', { display: 'none' });
-        const event = new CustomEvent('pageLoadingComplete', { detail: { message: 'Page loading is complete.' }});
-        window.dispatchEvent(event);
-      }
     });
-
-    gsap.to('.page-loading-wrap-container', {
-      opacity: 0,
-      duration: 0,
-      onComplete: () => { if (checkEl) checkEl.style.display = 'none'; }
-    });
-  }
-
-  function animateTo(newPercent) {
-    if (tween) tween.kill();
-    const delta = Math.abs(newPercent - proxy.v);
-    const dur = Math.max(0.6, Math.min(1.6, (delta / 100) * 1.2));
-
-    tween = gsap.to(proxy, {
-      v: newPercent,
-      duration: dur,
-      ease: 'power2.out',
-      onUpdate: () => {
-        const val = proxy.v;
-        countEl.textContent = Math.round(val);
-        flameColor.style.clipPath = `inset(${100 - val}% 0 0 0)`;
-      },
-      onComplete: () => { if (Math.round(proxy.v) === 100) finishSequence(); }
-    });
-  }
-
-  function updateTarget() {
-    let target = Math.round((loaded / total) * 100);
-    if (target < 3 && loaded > 0) target = 3;
-    if (loaded >= total) target = 100;
-    animateTo(target);
-  }
-
-  function markOne() {
-    loaded = Math.min(total, loaded + 1);
-    updateTarget();
-  }
-
-  resources.forEach(node => {
-    const t = node.tagName?.toLowerCase();
-    if (t === 'img') {
-      if (node.complete && node.naturalWidth !== 0) markOne();
-      else { node.addEventListener('load', markOne, { once: true }); node.addEventListener('error', markOne, { once: true }); }
-    } else if (t === 'link') {
-      if (node.sheet) markOne();
-      else { node.addEventListener('load', markOne, { once: true }); node.addEventListener('error', markOne, { once: true }); }
-    } else if (t === 'iframe') {
-      node.addEventListener('load', markOne, { once: true });
-      node.addEventListener('error', markOne, { once: true });
-    }
-  });
-
-  if (document.fonts?.ready) {
-    total += 1;
-    document.fonts.ready.then(markOne).catch(markOne);
-  }
-
-  window.addEventListener('load', () => {
-    const rem = total - loaded;
-    for (let i = 0; i < rem; i++) setTimeout(markOne, i * 30);
-  });
-
-  if (document.readyState === 'complete') {
-    setTimeout(() => { while (loaded < total) markOne(); updateTarget(); }, 40);
-  } else {
-    animateTo(0);
-  }
-});
-
 </script>
-
-
-
-
 <?php get_footer(); ?>

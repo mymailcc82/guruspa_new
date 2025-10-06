@@ -6,9 +6,15 @@ require_once('../../../../wp-load.php');
 header('Content-Type: application/json; charset=utf-8');
 
 
-$event_category = $_GET['category_type']; // 例: "tokiwa"
-$event_tag = $_GET['event_tag']; // 例: "fixed" or "limited"
-$page_ajax = $_GET['page_ajax'];
+$event_category = isset($_GET['category_type']) ? $_GET['category_type'] : ''; // 例: "tokiwa"
+if ($event_category === 'all') {
+    $event_category = '';
+}
+$event_tag = isset($_GET['event_tag']) ? $_GET['event_tag'] : ''; // 例: "fixed" or "limited"
+if ($event_tag === 'all') {
+    $event_tag = '';
+}
+$page_ajax = isset($_GET['page_ajax']) ? $_GET['page_ajax'] : '';
 $tax_query = [];
 if ($event_category) {
     $tax_query[] = [
@@ -64,20 +70,27 @@ while ($the_query->have_posts()) {
     }
     if (has_post_thumbnail()) {
         $post_data_row["thumbnail"] = get_the_post_thumbnail_url($post_id, 'full');
+        $post_data_row["thumbnail_sp"] = get_the_post_thumbnail_url($post_id, 'medium');
     } else {
         $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-default.jpg'; // デフォルト画像
+        $default_image_url_sp = get_template_directory_uri() . '/assets/img/archive/archive-default_sp.jpg'; // デフォルト画像
 
         if ($category_slug === 'information' || $category_slug_parent === 'information') {
             $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-red.jpg';
+            $default_image_url_sp = get_template_directory_uri() . '/assets/img/archive/archive-red_sp.jpg';
         } elseif ($category_slug === 'event' || $category_slug_parent === 'event') {
             $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-green.jpg';
+            $default_image_url_sp = get_template_directory_uri() . '/assets/img/archive/archive-green_sp.jpg';
         } elseif ($category_slug === 'food' || $category_slug_parent === 'food') {
             $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-yellow.jpg';
+            $default_image_url_sp = get_template_directory_uri() . '/assets/img/archive/archive-yellow_sp.jpg';
         } elseif ($category_slug === 'relax' || $category_slug_parent === 'relax') {
             $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-blue.jpg';
+            $default_image_url_sp = get_template_directory_uri() . '/assets/img/archive/archive-blue_sp.jpg';
         } elseif ($category_slug === 'tokiwa') {
         }
         $post_data_row["thumbnail"] = $default_image_url;
+        $post_data_row["thumbnail_sp"] = $default_image_url_sp;
     }
 
     $cats_class = '';

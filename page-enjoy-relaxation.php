@@ -2,14 +2,16 @@
 /*
 Template Name: enjoy-relaxation
 */
+
+$type = isset($_GET['type']) ? $_GET['type'] : 'relaxation';
 ?>
 <?php get_header(); ?>
 <main class="page-main enjoy relax">
     <div class="page-main-left-img">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/page/page-img-left.png" alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/page/page-img-left.webp" alt="">
     </div>
     <div class="page-main-right-img">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/page/page-img-right.png" alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/page/page-img-right.webp" alt="">
     </div>
 
     <div class="page-breadcrumbs">
@@ -68,11 +70,25 @@ Template Name: enjoy-relaxation
     <div class="page-toggle">
         <div class="sec01-col">
             <ul class="sec01-col-select tab mb-0 mb-30-mobile">
-                <li class="active"><a href="javascript:void(0)" data-id="#area01">リラクゼーション</a></li>
-                <li><a href="javascript:void(0)" data-id="#area02">アカスリ</a></li>
+                <?php
+                if ($type === 'relaxation') {
+                    $relax_active = 'active';
+                    $akasuri_active = '';
+                } elseif ($type === 'akasuri') {
+                    $relax_active = '';
+                    $akasuri_active = 'active';
+                } else {
+                    $relax_active = 'active';
+                    $akasuri_active = '';
+                }
+                ?>
+                <li class="<?php echo $relax_active; ?>"><a href="<?php echo home_url(); ?>/enjoy/relaxation/?type=relaxation" data-id="#area01">リラクゼーション</a></li>
+                <li class="<?php echo $akasuri_active; ?>"><a href="<?php echo home_url(); ?>/enjoy/relaxation/?type=akasuri" data-id="#area02">アカスリ</a></li>
             </ul>
 
-            <div class="area01 area is-active" id="area01">
+
+
+            <div class="area01 area is-<?php echo $relax_active; ?>" id="area01">
                 <div class="sec02-icon-01">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec02-icon-01.png" alt="">
                 </div>
@@ -89,10 +105,16 @@ Template Name: enjoy-relaxation
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec02-icon-02.png" alt="">
                         </div>
                         <div class="sec02-icon-03">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec02-icon-03.svg" alt="">
+                            <picture>
+                                <source media="(max-width:600px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec02-icon-03_sp.svg">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec02-icon-03.svg" alt="">
+                            </picture>
                         </div>
                         <div class="sec02-icon-04">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec02-icon-04.svg" alt="">
+                            <picture>
+                                <source media="(max-width:600px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec02-icon-04_sp.svg">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec02-icon-04.svg" alt="">
+                            </picture>
                         </div>
                         <section class="sec02">
                             <div class="content-width-sm">
@@ -128,7 +150,7 @@ Template Name: enjoy-relaxation
                                         <h2><i></i>イベント情報</h2>
                                     </div>
                                 </div>
-                                <div class="content-width-small content-width--mobile-full">
+                                <div class="content-width-small content-width--mobile-full fadeup">
                                     <div class="area-event">
                                         <div class="swiper swiper-event sec01-col-main">
                                             <div class="swiper-wrapper">
@@ -248,7 +270,10 @@ Template Name: enjoy-relaxation
                                     <h2><i></i>特徴・魅力</h2>
                                 </div>
 
-                                <div class="sec04-wrap">
+                                <div class="sec04-wrap fadeup">
+                                    <div class="sec04-wrap-icon">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec02-icon-05.svg" alt="">
+                                    </div>
                                     <div class="sec04-wrap-col">
                                         <div class="sec04-wrap-col-img">
                                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec04-img-01_v2.jpg" alt="">
@@ -282,7 +307,10 @@ Template Name: enjoy-relaxation
                     </div>
 
                     <section class="sec05" id="sec05">
-                        <div class="content-width-sm">
+                        <div class="content-width-sm fadeup">
+                            <div class="sec05-wrap-icon">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec02-icon-06.svg" alt="">
+                            </div>
                             <div class="page-title-center--has-icon page-title-center--has-icon--font-30 mb-20">
                                 <h2><i></i>メニュー</h2>
                             </div>
@@ -375,7 +403,7 @@ Template Name: enjoy-relaxation
                         */ ?>
                     </section>
                     <section class="sec06" id="sec06">
-                        <div class="content-width-sm">
+                        <div class="content-width-sm fadeup">
                             <div class="page-title-center--has-icon page-title-center--has-icon--font-30">
                                 <h2><i></i>予約方法</h2>
                             </div>
@@ -417,7 +445,7 @@ Template Name: enjoy-relaxation
 
             </div>
 
-            <div class="area02 area" id="area02">
+            <div class="area02 area is-<?php echo $akasuri_active; ?>" id="area02">
                 <div class="page-deco-bg">
                     <picture>
                         <source media="(max-width: 601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-blue-top-sp_v2.png">
@@ -433,10 +461,16 @@ Template Name: enjoy-relaxation
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec02-icon-02.png" alt="">
                         </div>
                         <div class="sec02-icon-03">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec02-icon-03.svg" alt="">
+                            <picture>
+                                <source media="(max-width:600px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec02-icon-03_sp.svg">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec02-icon-03.svg" alt="">
+                            </picture>
                         </div>
                         <div class="sec02-icon-04">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec02-icon-04.svg" alt="">
+                            <picture>
+                                <source media="(max-width:600px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec02-icon-04_sp.svg">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec02-icon-04.svg" alt="">
+                            </picture>
                         </div>
 
                         <section class="sec02">
@@ -522,54 +556,8 @@ Template Name: enjoy-relaxation
                                                                 }
                                                                 ?>
                                                                 <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
-                                                                <div class="img img-info">
-                                                                    <?php if (has_post_thumbnail()) : ?>
-                                                                        <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>">
-                                                                    <?php else : ?>
-                                                                        <?php if ($event_category && !is_wp_error($event_category)) : ?>
-                                                                            <?php
-                                                                            $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-default.jpg'; // デフォルト画像
-                                                                            if ($category_slug === 'information' || $category_slug_parent === 'information') {
-                                                                                $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-red.jpg';
-                                                                            } elseif ($category_slug === 'event' || $category_slug_parent === 'event') {
-                                                                                $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-green.jpg';
-                                                                            } elseif ($category_slug === 'food' || $category_slug_parent === 'food') {
-                                                                                $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-yellow.jpg';
-                                                                            } elseif ($category_slug === 'relax' || $category_slug_parent === 'relax') {
-                                                                                $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-blue.jpg';
-                                                                            } elseif ($category_slug === 'tokiwa') {
-                                                                            }
-                                                                            ?>
-                                                                            <img src="<?php echo esc_url($default_image_url); ?>" alt="<?php the_title(); ?>">
-                                                                        <?php else : ?>
-                                                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-default.jpg" alt="<?php the_title(); ?>">
-                                                                        <?php endif; ?>
-                                                                    <?php endif; ?>
-                                                                </div>
-                                                                <div class="text">
-                                                                    <div class="text-info">
-                                                                        <?php
-                                                                        if ($category_slug === 'information' || $category_slug_parent === 'information') {
-                                                                            $cats_class = 'category-red';
-                                                                        } elseif ($category_slug === 'event' || $category_slug_parent === 'event') {
-                                                                            $cats_class = 'category-green';
-                                                                        } elseif ($category_slug === 'food' || $category_slug_parent === 'food') {
-                                                                            $cats_class = 'category-yellow';
-                                                                        } elseif ($category_slug === 'relaxation' || $category_slug_parent === 'relaxation') {
-                                                                            $cats_class = 'category-blue';
-                                                                        }
-                                                                        ?>
-                                                                        <div class="text-info-cat">
-                                                                            <span class="category <?php echo esc_attr($cats_class); ?>"><?php echo esc_html($event_category[0]->name); ?></span>
-                                                                        </div>
-                                                                        <div class="text-info-term">
-                                                                            <span class="term"><?php echo $event_start_date; ?></span>
-                                                                        </div>
-
-                                                                    </div>
-
-                                                                    <h3><?php the_title(); ?></h3>
-                                                                </div>
+                                                                <?php get_template_part('inc/inc-event-img'); ?>
+                                                                <?php get_template_part('inc/inc-event-text'); ?>
                                                             </a>
                                                         </div>
                                                 <?php
@@ -592,6 +580,9 @@ Template Name: enjoy-relaxation
                                     <h2><i></i>特徴・魅力</h2>
                                 </div>
                                 <div class="sec04-wrap">
+                                    <div class="sec04-wrap-icon">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec02-icon-05.svg" alt="">
+                                    </div>
                                     <div class="sec04-wrap-col">
                                         <div class="sec04-wrap-col-img">
                                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec09-img-01_v2.jpg" alt="">
@@ -625,6 +616,9 @@ Template Name: enjoy-relaxation
                     </div>
                     <section class="sec05" id="sec10">
                         <div class="content-width-sm">
+                            <div class="sec05-wrap-icon">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec02-icon-06.svg" alt="">
+                            </div>
                             <div class="page-title-center--has-icon page-title-center--has-icon--font-30">
                                 <h2><i></i>メニュー</h2>
                             </div>
@@ -714,7 +708,7 @@ Template Name: enjoy-relaxation
                         <h2><i></i>よくある質問</h2>
                     </div>
                     <div class="sec07-btn hidden-mobile">
-                        <a href="<?php echo home_url(); ?>/faq/">一覧を見る<i></i></a>
+                        <a href="<?php echo home_url(); ?>/faq/#sec06">一覧を見る<i></i></a>
                     </div>
                 </div>
                 <div class="sec07-wrap-faq accordion">
@@ -741,7 +735,7 @@ Template Name: enjoy-relaxation
                     ?>
                             <dl>
                                 <dt><i></i><?php the_title(); ?></dt>
-                                <dd><?php the_content(); ?></dd>
+                                <dd><i></i><?php the_content(); ?></dd>
                             </dl>
                     <?php
                         endwhile;

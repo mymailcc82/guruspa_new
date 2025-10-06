@@ -8,7 +8,6 @@
 }
 
 .footer-fixed-pc {
-
   @include media(mobile) {
     display: none;
   }
@@ -279,7 +278,6 @@
           padding-bottom: 20px;
           margin-bottom: 20px;
         }
-
       }
 
       .accordion-none {
@@ -303,7 +301,6 @@
               @include media(mobile) {
                 display: none !important;
               }
-
             }
           }
         }
@@ -391,7 +388,6 @@
           //display: block !important;
 
           @include media(mobile) {
-
             margin-bottom: 0;
             max-height: 0;
             transition: max-height 0.5s ease, opacity 0.5s ease;
@@ -409,8 +405,8 @@
             width: 100%;
             line-height: 2;
 
-            &:last-child{
-              @include media(mobile){
+            &:last-child {
+              @include media(mobile) {
                 margin-bottom: 0;
               }
             }
@@ -427,7 +423,6 @@
           }
 
           &.active {
-
             @include media(mobile) {
               max-height: 500px; // 十分な高さを指定
               transition: max-height 0.5s ease, opacity 0.4s ease;
@@ -440,7 +435,6 @@
                 margin-top: 20px;
               }
             }
-
           }
         }
       }
@@ -497,8 +491,6 @@
           letter-spacing: 0.1em;
           line-height: 1.35;
           margin-bottom: 0;
-
-
 
           @include media(middle-small) {
             text-align: center;
@@ -593,6 +585,9 @@
   left: 12px;
   top: 150px;
   margin-bottom: 0;
+  @include media(middle) {
+    left: 0px;
+  }
 
   @include media(mobile) {
     display: none;
@@ -602,6 +597,10 @@
     display: block;
     width: 37px;
     height: 440px;
+    @include media(middle) {
+      width: 25px;
+      height: auto;
+    }
 
     img {
       width: 100%;
@@ -657,7 +656,7 @@
 
     &:hover {
       span {
-        opacity: .5;
+        opacity: 0.5;
       }
     }
 
@@ -686,7 +685,7 @@
     height: 192px;
 
     &:hover {
-      background-color: #F9DD8F;
+      background-color: #f9dd8f;
     }
 
     span {
@@ -706,7 +705,7 @@
     height: 176px;
 
     &:hover {
-      background-color: #F38D8F;
+      background-color: #f38d8f;
     }
 
     span {
@@ -783,7 +782,6 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-
 
     a {
       display: flex;

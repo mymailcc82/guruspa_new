@@ -1,10 +1,10 @@
 <?php get_header(); ?>
 <main class="page-main first">
     <div class="page-main-left-img">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/page/page-img-left.png" alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/page/page-img-left.webp" alt="">
     </div>
     <div class="page-main-right-img">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/page/page-img-right.png" alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/page/page-img-right.webp" alt="">
     </div>
 
     <div class="page-breadcrumbs">
@@ -25,7 +25,7 @@
     </div>
     <section class="sec01">
         <div class="content-width">
-            <div class="com-title center com-title-hidden">
+            <div class="com-title com-title--first center com-title-hidden">
                 <p>初めてのお客様へ</p>
                 <h2 class="">
                     <span class="title">F</span><span class="title">I</span><span class="title">R</span><span class="title">S</span><span class="title">T</span><span class="title">-</span><span class="title">T</span><span class="title">I</span><span class="title">M</span><span class="title">E</span>

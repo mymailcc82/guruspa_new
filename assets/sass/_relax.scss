@@ -16,7 +16,8 @@
       top: 80px;
       @include media(middle) {
         width: 150px;
-        top: -10px;
+        top: 15px;
+        left: -40px;
       }
     }
   }
@@ -65,7 +66,29 @@
     padding-bottom: 40px;
     padding-top: 0px;
     @include media(middle) {
+      padding-top: 20px;
       padding-bottom: 20px;
+    }
+    h2 {
+      text-align: center;
+      img {
+        width: 80%;
+        max-width: 611px;
+      }
+    }
+    p {
+      font-size: 18px;
+      text-align: center;
+      line-height: 2.3;
+      font-weight: 500;
+      margin: 20px 0px 0px;
+      position: relative;
+      z-index: 4;
+      @include media(middle) {
+        font-size: 14px;
+        line-height: 1.8;
+        margin: 10px 0px 0px;
+      }
     }
   }
   .sec03 {
@@ -228,6 +251,8 @@
           @include media(mobile) {
             margin-top: 10px;
             text-align: center;
+            //折り返し禁止
+            white-space: nowrap;
           }
         }
         p {
@@ -483,7 +508,7 @@
         flex-direction: column-reverse;
       }
       .sec06-wrap-left {
-        width: 45%;
+        width: 40%;
         @include media(mobile) {
           width: 100%;
         }
@@ -495,11 +520,14 @@
           font-size: 16px;
           line-height: 1.68;
           font-weight: 500;
+          letter-spacing: 0.05em;
+          margin-bottom: 30px;
           @include media(middle) {
             font-size: 14px;
           }
         }
         .sec06-dl {
+          margin-bottom: 30px;
           dl {
             margin-bottom: 10px;
             &:last-child {
@@ -525,7 +553,7 @@
         }
       }
       .sec06-wrap-right {
-        width: 50%;
+        width: 55%;
         @include media(mobile) {
           width: 100%;
           margin-bottom: 20px;

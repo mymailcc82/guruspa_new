@@ -33,10 +33,10 @@ for ($i = 0; $i < 12; $i++) {
 <?php get_header(); ?>
 <main class="page-main archive schedule">
     <div class="page-main-left-img">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/page/page-img-left.png" alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/page/page-img-left.webp" alt="">
     </div>
     <div class="page-main-right-img">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/page/page-img-right.png" alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/page/page-img-right.webp" alt="">
     </div>
 
     <div class="page-breadcrumbs">
@@ -98,16 +98,32 @@ for ($i = 0; $i < 12; $i++) {
             <div class="page-title--has-icon page-title--has-icon--mobile-20">
                 <h2><i></i>その他イベント案内</h2>
             </div>
-            <div class="sec02-wrap">
-                <div class="sec02-wrap-col">
-                    <a href="<?php echo home_url(); ?>/today/">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/bnr/bnr-02.jpg" alt="イベント案内1">
-                    </a>
+            <div class="com-bnr-sec06-bottom">
+                <div class="sec06-bottom-col sec06-bottom-col--today">
+                    <div class="sec-01-col-under">
+                        <a href="<?php echo home_url(); ?>/today/">
+                            <div class="sec-01-col-under-img">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/bnr/page-bnr-today-img_v2.jpg" alt="">
+                            </div>
+                            <div class="sec-01-col-under-title">
+                                <h3><img src="<?php echo get_template_directory_uri(); ?>/assets/img/bnr/page-bnr-today-txt.png" alt="EVENT SCHEDULE"><i class="icon-btn"></i></h3>
+                                <p>本日開催しているイベントをチェック！</p>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-                <div class="sec02-wrap-col">
-                    <a href="<?php echo home_url(); ?>/event/">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/bnr/bnr-01.jpg" alt="イベント案内1">
-                    </a>
+                <div class="sec06-bottom-col sec06-bottom-col--event">
+                    <div class="sec-01-col-under">
+                        <a href="<?php echo home_url(); ?>/event/">
+                            <div class="sec-01-col-under-img">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/bnr/page-bnr-event-img_v2.jpg" alt="">
+                            </div>
+                            <div class="sec-01-col-under-title">
+                                <h3><img src="<?php echo get_template_directory_uri(); ?>/assets/img/bnr/page-bnr-event-txt.png" alt="EVENT SCHEDULE"><i class="icon-btn"></i></h3>
+                                <p>すべてのイベント情報をチェック！</p>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

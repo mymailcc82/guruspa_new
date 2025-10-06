@@ -10,21 +10,26 @@
     z-index: 3;
   }
   .page-main-left-img {
-    width: 253px;
+    width: calc(253 * (100vw / 1240));
+    min-width: 253px;
+    max-width: 350px;
     position: absolute;
-    left: -50px;
+    left: -75px;
     top: 100px;
     @include media(middle) {
+      min-width: auto;
       width: 113px;
       left: -40px;
     }
   }
   .page-main-right-img {
-    width: 253px;
+    width: calc(253 * (100vw / 1240));
     position: absolute;
     right: 30px;
     top: -30px;
+    min-width: 253px;
     @include media(middle) {
+      min-width: auto;
       width: 116px;
       top: 70px;
       right: -40px;
@@ -59,9 +64,9 @@
 
     &.page-deco-container--blue {
       //background-color: #dce7fb !important;
-      background-image: url(("./assets/img/aside/aside-bg-blue-content.jpg"));
+      background-image: url(("./assets/img/aside/aside-bg-blue-content_v3.png"));
       background-repeat: repeat;
-      background-size: 200px;
+      background-size: 100%;
     }
     &.page-deco-container--green {
       background-color: #e8f2dd !important;
@@ -429,10 +434,18 @@
   margin-bottom: 40px;
   @include media(middle) {
     margin-bottom: 20px;
+    padding-right: 30px;
   }
   .letter-spacing-0-mobile {
     @include media(mobile) {
       letter-spacing: 0em !important;
+    }
+  }
+  &.page-title-center--has-icon--nowrap {
+    h2 {
+      @include media(mobile) {
+        white-space: nowrap;
+      }
     }
   }
   &.page-title-center--has-icon--font-30 {
@@ -442,9 +455,30 @@
       @include media(middle) {
         font-size: 25px !important;
       }
+    }
+  }
+  &.page-title-center--has-icon--font-mobile-20 {
+    h2 {
       @include media(mobile) {
-        font-size: 20px !important;
-        padding-right: 10px !important;
+        font-size: 22px !important;
+      }
+    }
+  }
+  &.page-title-center--has-icon--mobile-inline {
+    @include media(mobile) {
+      padding-right: 0px !important;
+    }
+    h2 {
+      @include media(mobile) {
+        display: inline-block;
+        font-size: 24px !important;
+      }
+      i {
+        @include media(mobile) {
+          display: inline-block !important;
+          margin-right: 5px !important;
+          transform: translateY(8px) !important;
+        }
       }
     }
   }
@@ -579,6 +613,9 @@
         white-space: nowrap;
         align-items: center;
         color: var(--color-black);
+        @include media(middle) {
+          font-size: 10px;
+        }
         span {
           color: var(--color-black);
         }
@@ -588,17 +625,24 @@
           margin: 0 10px 0 10px;
           display: block;
           font-size: 12px;
+          @include media(middle) {
+            font-size: 10px;
+            margin: 0 3px;
+          }
         }
       }
 
       span {
         display: flex;
-        font-size: var(--font-size-12);
+        font-size: 12px;
         letter-spacing: 0em;
         //white-space: nowrap;
         color: var(--color-black);
         font-weight: 400;
         //color: #959595;
+        @include media(middle) {
+          font-size: 10px;
+        }
       }
     }
   }

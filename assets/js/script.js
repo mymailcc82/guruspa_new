@@ -265,6 +265,8 @@ $(function () {
     var idName = $(this).data('id');
     $('.tab li').removeClass('active');
     $(this).parent().addClass('active');
+    $('.tab').removeClass();
+    $(this).parent().parent().addClass(idName);
 
     // 背景スライド移動
     moveSlideBg($(this));

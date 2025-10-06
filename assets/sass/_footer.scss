@@ -24,7 +24,7 @@
   position: absolute;
   right: 50px;
   top: -80px;
-  z-index: 1000;
+  z-index: 10000;
 
   @include media(mobile) {
     position: absolute;
@@ -229,6 +229,10 @@
   }
 }
 
+.footer-fixed a.hovered .footer-fixed-child-1 img {
+  transform: translate(0, -3px) rotate(360deg) scale(1.2);
+}
+
 .footer {
   background-color: #fefbf5;
   position: relative;
@@ -306,6 +310,7 @@
       }
 
       dl {
+        overflow: hidden;
         dt {
           margin-bottom: 20px;
 
@@ -398,11 +403,17 @@
 
           a {
             font-size: 14px;
-            font-weight: 500;
+            font-weight: 400;
             letter-spacing: 0.1em;
             display: block;
             width: 100%;
             line-height: 2;
+
+            &:last-child{
+              @include media(mobile){
+                margin-bottom: 0;
+              }
+            }
 
             @include media(sm) {
               margin-bottom: 10px;
@@ -411,6 +422,7 @@
             @include media(mobile) {
               line-height: 2;
               opacity: 0;
+              margin-bottom: 25px;
             }
           }
 
@@ -423,6 +435,10 @@
 
             a {
               opacity: 1;
+
+              &:first-child {
+                margin-top: 20px;
+              }
             }
 
           }
@@ -511,6 +527,16 @@
 
           li {
             padding: 0 10px;
+
+            &:nth-of-type(3) {
+              a {
+                &::before {
+                  @include media(mobile) {
+                    display: none;
+                  }
+                }
+              }
+            }
 
             &:last-of-type {
               a {
@@ -714,44 +740,50 @@
 .top-fixed-sp {
   width: 100%;
   position: fixed;
-  bottom: 0;
-  //top: 0%;
+  bottom: 0px;
+  transform: translateY(68px);
+  transition: transform 0.3s ease;
+  z-index: 100000 !important;
 
-  //opacity: 0;
-  //visibility: hidden;
   @include media(sm) {
     display: none !important;
+  }
+
+  &.unker {
+    transform: translateY(0px) !important;
+
+    .top-fixed-sp-btn {
+      transform: rotate(0deg);
+    }
   }
 
   .top-fixed-sp-btn {
     width: 36px;
     height: 36px;
     margin-left: auto;
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
 
     &:hover {
       cursor: pointer !important;
     }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .rotate {
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
   }
 
   .top-fixed-sp-wrap {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    opacity: 0;
-    visibility: hidden;
-    transition: transform 0.4s ease, opacity 0.4s ease;
-    transform: translateY(100px);
 
-    &.is-show {
-      transform: translateY(0);
-      opacity: 1;
-      visibility: visible;
-      transform: translateY(0px);
-    }
-
-    &.hide {
-      display: none; // footer手前で完全に非表示
-    }
 
     a {
       display: flex;
@@ -815,6 +847,11 @@
   height: 27px;
   display: block;
   top: -26px;
+
+  @include media(mobile) {
+    height: 12px;
+    top: -12px;
+  }
 }
 
 .footer-bg-top-pc {

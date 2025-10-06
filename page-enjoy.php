@@ -6,10 +6,10 @@ Template Name: enjoy
 <?php get_header(); ?>
 <main class="page-main enjoy">
     <div class="page-main-left-img">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/page/page-img-left.png" alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/page/page-img-left.webp" alt="">
     </div>
     <div class="page-main-right-img">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/page/page-img-right.png" alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/page/page-img-right.webp" alt="">
     </div>
 
     <div class="page-breadcrumbs">
@@ -65,61 +65,98 @@ Template Name: enjoy
                             <div class="sec01-col-main-01-01">
                                 <a href="javascript:void(0)" class="popup-btn" data-id="enjoy-03">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-01.png" alt="">
+                                    <div class="sec01-col-main-hover-txt sec01-col-main-hover-txt-01-01">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/hover-text-01-01.png" alt="">
+                                    </div>
                                 </a>
                             </div>
                             <div class="sec01-col-main-01-02">
                                 <a href="javascript:void(0)" class="popup-btn" data-id="enjoy-04">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-02.png" alt="">
+                                    <div class="sec01-col-main-hover-txt sec01-col-main-hover-txt-01-02">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/hover-text-01-02.png" alt="">
+                                    </div>
                                 </a>
                             </div>
                             <div class="sec01-col-main-01-03">
                                 <a href="javascript:void(0)" class="pulse-btn popup-btn" data-id="enjoy-06">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-icon.png" alt="">
+                                    <div class="sec01-col-main-hover-txt sec01-col-main-hover-txt-01-03">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/hover-text-01-03.png" alt="">
+                                    </div>
                                 </a>
                             </div>
                             <div class="sec01-col-main-01-04">
                                 <a href="javascript:void(0)" class="pulse-btn popup-btn" data-id="enjoy-05">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-icon.png" alt="">
+                                    <div class="sec01-col-main-hover-txt sec01-col-main-hover-txt-01-04">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/hover-text-01-04.png" alt="">
+                                    </div>
                                 </a>
                             </div>
                             <div class="sec01-col-main-01-05">
-                                <a href="javascript:void(0)" class="pulse-btn popup-btn" data-id="enjoy-07">
+                                <a href="javascript:void(0)" class="pulse-btn popup-btn" data-id="enjoy-06">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-icon-white.png" alt="">
+                                    <div class="sec01-col-main-hover-txt sec01-col-main-hover-txt-01-05">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/hover-text-01-05.png" alt="">
+                                    </div>
                                 </a>
                             </div>
                             <div class="sec01-col-main-01-06">
                                 <a href="javascript:void(0)" class="pulse-btn popup-btn" data-id="enjoy-08">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-icon-white.png" alt="">
+
+                                    <div class="sec01-col-main-hover-txt sec01-col-main-hover-txt-01-06">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/hover-text-01-06.png" alt="">
+                                    </div>
                                 </a>
                             </div>
                             <div class="sec01-col-main-01-07">
-                                <a href="javascript:void(0)" class="pulse-btn popup-btn" data-id="enjoy-08">
+                                <a href="<?php echo home_url(); ?>/enjoy/sweating/#area-guide-01" class="pulse-btn">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-icon-white.png" alt="">
+                                    <div class="sec01-col-main-hover-txt sec01-col-main-hover-txt-01-07">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/hover-text-01-07.png" alt="">
+                                    </div>
                                 </a>
                             </div>
                             <div class="sec01-col-main-01-08">
-                                <a href="javascript:void(0)" class="pulse-btn popup-btn" data-id="enjoy-08">
+                                <a href="<?php echo home_url(); ?>/enjoy/sweating/#area-guide-02" class="pulse-btn">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-icon-white.png" alt="">
+                                    <div class="sec01-col-main-hover-txt sec01-col-main-hover-txt-01-08">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/hover-text-01-08.png" alt="">
+                                    </div>
                                 </a>
                             </div>
                             <div class="sec01-col-main-01-09">
-                                <a href="javascript:void(0)" class="pulse-btn popup-btn" data-id="enjoy-08">
+                                <a href="<?php echo home_url(); ?>/enjoy/sweating/#area-guide-03" class="pulse-btn">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-icon-white.png" alt="">
+                                    <div class="sec01-col-main-hover-txt sec01-col-main-hover-txt-01-09">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/hover-text-01-09.png" alt="">
+                                    </div>
                                 </a>
                             </div>
                             <div class="sec01-col-main-01-10">
-                                <a href="javascript:void(0)" class="pulse-btn popup-btn pulse-btn--small" data-id="enjoy-08">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-icon-white.png" alt="">
+                                <a href="<?php echo home_url(); ?>/enjoy/sweating/#area-guide-04" class="pulse-btn">
+                                    <img class="pulse-btn--small-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-icon-white.png" alt="">
+                                    <div class="sec01-col-main-hover-txt sec01-col-main-hover-txt-01-10">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/hover-text-01-10.png" alt="">
+                                    </div>
                                 </a>
                             </div>
                             <div class="sec01-col-main-01-11">
-                                <a href="javascript:void(0)" class="pulse-btn popup-btn" data-id="enjoy-08">
+                                <a href="<?php echo home_url(); ?>/enjoy/sweating/#area-guide-05" class="pulse-btn">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-icon-white.png" alt="">
+                                    <div class="sec01-col-main-hover-txt sec01-col-main-hover-txt-01-11">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/hover-text-01-11.png" alt="">
+                                    </div>
                                 </a>
                             </div>
                             <div class="sec01-col-main-01-12">
-                                <a href="javascript:void(0)" class="pulse-btn popup-btn" data-id="enjoy-08">
+                                <a href="javascript:void(0)" class="pulse-btn popup-btn" data-id="enjoy-07">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-icon-white.png" alt="">
+                                    <div class="sec01-col-main-hover-txt sec01-col-main-hover-txt-01-12">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/hover-text-01-12.png" alt="">
+                                    </div>
                                 </a>
                             </div>
                         </div>
@@ -194,61 +231,105 @@ Template Name: enjoy
                             <div class="sec01-col-main-02-01">
                                 <a href="<?php echo home_url(); ?>/enjoy/sauna/#hot" class="pulse-btn">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-icon.png" alt="">
+                                    <div class="sec01-col-main-hover-txt sec01-col-main-hover-txt-02-01">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/hover-text-02-01.png" alt="">
+                                    </div>
                                 </a>
                             </div>
                             <div class="sec01-col-main-02-02">
                                 <a href="<?php echo home_url(); ?>/enjoy/sauna/#salt" class="pulse-btn">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-icon.png" alt="">
+                                    <div class="sec01-col-main-hover-txt sec01-col-main-hover-txt-02-02">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/hover-text-02-02.png" alt="">
+                                    </div>
                                 </a>
                             </div>
                             <div class="sec01-col-main-02-03">
                                 <a href="<?php echo home_url(); ?>/enjoy/spa/#else-01" class="pulse-btn">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-icon.png" alt="">
+                                    <div class="sec01-col-main-hover-txt sec01-col-main-hover-txt-02-03">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/hover-text-02-03.png" alt="">
+                                    </div>
                                 </a>
                             </div>
                             <div class="sec01-col-main-02-04">
                                 <a href="<?php echo home_url(); ?>/enjoy/spa/#else-03" class="pulse-btn">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-icon.png" alt="">
+                                    <div class="sec01-col-main-hover-txt sec01-col-main-hover-txt-02-04">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/hover-text-02-04.png" alt="">
+                                    </div>
                                 </a>
                             </div>
                             <div class="sec01-col-main-02-05">
                                 <a href="<?php echo home_url(); ?>/enjoy/spa/#natural" class="pulse-btn">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-icon.png" alt="">
+                                    <div class="sec01-col-main-hover-txt sec01-col-main-hover-txt-02-05">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/hover-text-02-05.png" alt="">
+                                    </div>
                                 </a>
                             </div>
                             <div class="sec01-col-main-02-06">
-                                <a href="<?php echo home_url(); ?>/enjoy/relaxation/" class="pulse-btn">
+                                <a href="<?php echo home_url(); ?>/enjoy/relaxation/?type=akasuri" class="pulse-btn">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-icon.png" alt="">
+                                    <div class="sec01-col-main-hover-txt sec01-col-main-hover-txt-02-06">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/hover-text-02-06.png" alt="">
+                                    </div>
                                 </a>
                             </div>
                             <div class="sec01-col-main-02-07">
                                 <a href="<?php echo home_url(); ?>/enjoy/spa/#else-04" class="pulse-btn">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-icon.png" alt="">
+                                    <div class="sec01-col-main-hover-txt sec01-col-main-hover-txt-02-07">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/hover-text-02-07.png" alt="">
+                                    </div>
                                 </a>
                             </div>
                             <div class="sec01-col-main-02-08">
                                 <a href="<?php echo home_url(); ?>/enjoy/spa/#else-04" class="pulse-btn">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-icon.png" alt="">
+                                    <div class="sec01-col-main-hover-txt sec01-col-main-hover-txt-02-08">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/hover-text-02-08.png" alt="">
+                                    </div>
                                 </a>
                             </div>
                             <div class="sec01-col-main-02-09">
-                                <a href="javascript:void(0)" class="pulse-btn popup-btn" data-id="enjoy-06">
+                                <a href="<?php echo home_url(); ?>/enjoy/spa/#tansan" class="pulse-btn">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-icon.png" alt="">
+                                    <div class="sec01-col-main-hover-txt sec01-col-main-hover-txt-02-09">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/hover-text-02-09.png" alt="">
+                                    </div>
                                 </a>
                             </div>
                             <div class="sec01-col-main-02-10">
                                 <a href="<?php echo home_url(); ?>/enjoy/spa/#else-01" class="pulse-btn">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-icon.png" alt="">
+                                    <div class="sec01-col-main-hover-txt sec01-col-main-hover-txt-02-10">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/hover-text-02-10.png" alt="">
+                                    </div>
                                 </a>
                             </div>
                             <div class="sec01-col-main-02-11">
                                 <a href="<?php echo home_url(); ?>/enjoy/spa/#bihou" class="pulse-btn">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-icon.png" alt="">
+                                    <div class="sec01-col-main-hover-txt sec01-col-main-hover-txt-02-11">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/hover-text-02-11.png" alt="">
+                                    </div>
                                 </a>
                             </div>
                             <div class="sec01-col-main-02-12">
                                 <a href="<?php echo home_url(); ?>/enjoy/spa/#bihou" class="pulse-btn">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-icon.png" alt="">
+                                    <div class="sec01-col-main-hover-txt sec01-col-main-hover-txt-02-12">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/hover-text-02-12.png" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="sec01-col-main-02-13">
+                                <a href="javascript:void(0)" class="popup-btn pulse-btn" data-id="enjoy-01">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-icon.png" alt="">
+                                    <div class="sec01-col-main-hover-txt sec01-col-main-hover-txt-02-13">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/hover-text-02-13.png" alt="">
+                                    </div>
                                 </a>
                             </div>
                         </div>
@@ -306,7 +387,7 @@ Template Name: enjoy
                                 </li>
                                 <li>
                                     <div class="com-btn-mobile com-btn-mobile--full">
-                                        <a href="<?php echo home_url(); ?>/enjoy/spa/#bohou">
+                                        <a href="<?php echo home_url(); ?>/enjoy/spa/#bihou">
                                             美泡壺風呂<i></i>
                                         </a>
                                     </div>
@@ -327,7 +408,7 @@ Template Name: enjoy
                                 </li>
                                 <li>
                                     <div class="com-btn-mobile com-btn-mobile--full">
-                                        <a href="<?php echo home_url(); ?>/enjoy/relaxation/">
+                                        <a href="<?php echo home_url(); ?>/enjoy/relaxation/?type=akasuri">
                                             アカスリ<i></i>
                                         </a>
                                     </div>

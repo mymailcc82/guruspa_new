@@ -786,25 +786,7 @@
     <?php wp_footer(); ?>
 <?php endif; ?>
 
-<script>
-    const swipervisual = new Swiper('.top-visual-slide', {
-        slidesPerView: 1, // 1枚ずつ表示
-        effect: 'fade', // ← フェードに変更
-        fadeEffect: {
-            crossFade: true, // クロスフェードさせる
-        },
-        loop: true, // 無限ループ
-        autoplay: {
-            delay: 5000, // 3秒ごとに切り替え
-            disableOnInteraction: false, // ユーザー操作後も再生を継続
-        },
-        lazy: {
-            loadPrevNext: true,
-            loadOnTransitionStart: true,
-        },
-        speed: 800 // フェードの切り替わり速度(ms)
-    });
-</script>
+
 
 <script>
 
@@ -823,6 +805,31 @@
                 target.classList.toggle("unker");
             });
         }
+    });
+
+    //.sec02-icon-03が差し掛かったらgsapでyを100pxにする
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.to('.sec02-icon-03', {
+        scrollTrigger: {
+            trigger: '.sec02-icon-03',
+            start: 'top 80%',
+            scrub: true,
+        },
+        y: 100,
+        opacity: 1,
+        delay: 0,
+        ease: "power2.out"
+    });
+    gsap.to('.sec02-icon-04', {
+        scrollTrigger: {
+            trigger: '.sec02-icon-02',
+            start: 'top 80%',
+            scrub: true,
+        },
+        y: 100,
+        opacity: 1,
+        delay: 0,
+        ease: "power2.out"
     });
 </script>
 

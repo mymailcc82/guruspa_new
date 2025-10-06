@@ -6,10 +6,10 @@ Template Name: enjoy-food
 <?php get_header(); ?>
 <main class="page-main enjoy food">
     <div class="page-main-left-img">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/page/page-img-left.png" alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/page/page-img-left.webp" alt="">
     </div>
     <div class="page-main-right-img">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/page/page-img-right.png" alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/page/page-img-right.webp" alt="">
     </div>
 
     <div class="page-breadcrumbs">
@@ -88,16 +88,22 @@ Template Name: enjoy-food
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec02-icon-02.png" alt="">
                         </div>
                         <div class="sec02-icon-03">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec02-icon-03.svg" alt="">
+                            <picture>
+                                <source media="(max-width:600px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec02-icon-03_sp.svg">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec02-icon-03.svg" alt="">
+                            </picture>
                         </div>
                         <div class="sec02-icon-04">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec02-icon-04.svg" alt="">
+                            <picture>
+                                <source media="(max-width:600px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec02-icon-04_sp.svg">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec02-icon-04.svg" alt="">
+                            </picture>
                         </div>
 
                         <section class="sec02">
 
 
-                            <div class="content-width-sm">
+                            <div class="content-width-sm fadeup">
                                 <h2>
                                     <img class="logo-01" src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec02-logo.png" alt="キッチントキワ">
                                     <span>キッチントキワ</span>
@@ -105,7 +111,7 @@ Template Name: enjoy-food
                                 <p class="sec02-desc">
                                     和洋さまざまなサウナ飯や定食を、<br class="hidden-sm">フードコート形式でご提供します。<br>
                                     おしゃれなソファーやランダムに配置されたチェアが、ゆったりとくつろげる空間を演出。<br>
-                                    店名には「お客様の時間が和みますように」という想いが込められています。
+                                    店名には「お客様の時間が和みますように」<br class="hidden-sm">という想いが込められています。
                                 </p>
 
                                 <div class="page-btn">
@@ -131,7 +137,7 @@ Template Name: enjoy-food
 
                         </section>
                         <section class="sec03" id="sec03">
-                            <div class="content-width-sm content-width--mobile-full">
+                            <div class="content-width-sm content-width--mobile-full fadeup">
                                 <div class="sec03-img">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec03-img-01_v2.jpg" alt="">
                                 </div>
@@ -144,14 +150,17 @@ Template Name: enjoy-food
                             </div>
                         </section>
                         <section class="sec04" id="sec04">
-                            <div class="content-width-sm">
+                            <div class="content-width-sm fadeup">
                                 <div class="page-title-center--has-icon page-title-center--has-icon--nowrap">
                                     <h2><i></i>さまざまな席タイプ</h2>
                                 </div>
                                 <p class="sec04-desc">
                                     おひとりでも気軽に利用できるカウンター席、仲間とゆっくり過ごせるテーブル席、ファミリーやグループでくつろげる座敷席など、多彩なスタイルでお楽しみいただけます。
                                 </p>
-                                <div class="sec04-wrap">
+                                <div class="sec04-wrap fadeup">
+                                    <div class="sec04-wrap-icon">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec02-icon-09.svg" alt="">
+                                    </div>
                                     <div class="sec04-wrap-col">
                                         <div class="sec04-wrap-col-img">
                                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec04-img-02_v3.jpg" alt="">
@@ -177,10 +186,10 @@ Template Name: enjoy-food
                     <section class="sec05" id="sec05">
                         <div class="relative">
 
-                            <div class="sec02-icon-03">
+                            <div class="sec02-icon-03 hidden-mobile">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec02-icon-05.svg" alt="">
                             </div>
-                            <div class="sec02-icon-04">
+                            <div class="sec02-icon-04 hidden-mobile">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec02-icon-06.svg" alt="">
                             </div>
                             <div class="content-width-sm">
@@ -208,7 +217,7 @@ Template Name: enjoy-food
                             </div>
                         </div>
 
-                        <div class="content-width-small content-width--mobile-full">
+                        <div class="content-width-small content-width--mobile-full fadeup">
                             <div class="area-event">
                                 <div class="swiper swiper-event sec01-col-main">
                                     <div class="swiper-wrapper">
@@ -328,6 +337,9 @@ Template Name: enjoy-food
 
                     <section class="sec06" id="sec06">
                         <div class="content-width-sm">
+                            <div class="sec06-icon">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec02-icon-10.svg" alt="">
+                            </div>
                             <div class="page-title-center--has-icon">
                                 <h2><i></i>ご利用方法</h2>
                             </div>
@@ -369,7 +381,7 @@ Template Name: enjoy-food
                         </div>
                     </section>
                     <section class="sec07" id="sec07">
-                        <div class="content-width-sm">
+                        <div class="content-width-sm fadeup">
                             <div class="page-title-center--has-icon">
                                 <h2><i></i>店舗情報</h2>
                             </div>
@@ -417,13 +429,19 @@ Template Name: enjoy-food
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec02-icon-02.png" alt="">
                         </div>
                         <div class="sec02-icon-03">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec02-icon-03.svg" alt="">
+                            <picture>
+                                <source media="(max-width:600px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec02-icon-03_sp.svg">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec02-icon-03.svg" alt="">
+                            </picture>
                         </div>
                         <div class="sec02-icon-04">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec02-icon-04.svg" alt="">
+                            <picture>
+                                <source media="(max-width:600px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec02-icon-04_sp.svg">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec02-icon-04.svg" alt="">
+                            </picture>
                         </div>
                         <section class="sec02">
-                            <div class="content-width-sm">
+                            <div class="content-width-sm fadeup">
                                 <h2>
                                     <img class="logo-02" src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec02-logo-02.svg" alt="キッチントキワ">
                                     <span>スイートラボ</span>
@@ -453,7 +471,7 @@ Template Name: enjoy-food
                             </div>
                         </section>
                         <section class="sec03" id="sec08">
-                            <div class="content-width-sm content-width--mobile-full">
+                            <div class="content-width-sm content-width--mobile-full fadeup">
                                 <div class="sec03-img">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec08-img-01_v2.jpg" alt="">
                                 </div>
@@ -530,10 +548,16 @@ Template Name: enjoy-food
                     </section>
                     <div class="relative">
                         <div class="sec02-icon-03">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec02-icon-07.svg" alt="">
+                            <picture>
+                                <source media="(max-width:600px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec02-icon-03_sp.svg">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec02-icon-03.svg" alt="">
+                            </picture>
                         </div>
                         <div class="sec02-icon-04">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec02-icon-08.svg" alt="">
+                            <picture>
+                                <source media="(max-width:600px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec02-icon-04_sp.svg">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec02-icon-04.svg" alt="">
+                            </picture>
                         </div>
                         <section class="sec05" id="sec10">
                             <div class="content-width-sm">

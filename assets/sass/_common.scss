@@ -27,31 +27,31 @@
 }
 
 .content-width-lg {
-  width: 85%;
+  width: 88%;
   max-width: 1155px;
   margin: 0 auto;
 }
 
 .content-width-medium {
-  width: 85%;
+  width: 88%;
   max-width: 904px;
   margin: 0 auto;
 }
 
 .content-width {
-  width: 85%;
+  width: 88%;
   max-width: 1088px;
   margin: 0 auto;
 }
 
 .content-width-small {
-  width: 85%;
+  width: 88%;
   max-width: 996px;
   margin: 0 auto;
 }
 
 .content-width-sm {
-  width: 85%;
+  width: 88%;
   max-width: 950px;
   margin: 0 auto;
 }
@@ -127,6 +127,12 @@ img.lazyloaded {
   }
 }
 
+.mb-30-mobile {
+  @include media(mobile) {
+    margin-bottom: 30px !important;
+  }
+}
+
 .text-base {
   font-size: 16px !important;
 
@@ -191,23 +197,25 @@ img.lazyloaded {
     &:hover {
       //background-color: #2e549c !important;
 
-      i {
-        transform: translateX(10px);
-      }
-
-      .icon-btn--1 {
-        transform: translate(10px, -5px) rotate(10deg);
-
-        @include media(middle) {
-          transform: translate(10px, -10px) rotate(10deg);
+      @include media(md) {
+        i {
+          transform: translateX(10px);
         }
-      }
 
-      .icon-btn--2 {
-        transform: translate(10px, -15px);
+        .icon-btn--1 {
+          transform: translate(10px, -5px) rotate(10deg);
 
-        @include media(middle) {
-          transform: translate(10px, -20px);
+          @include media(middle) {
+            transform: translate(10px, -10px) rotate(10deg);
+          }
+        }
+
+        .icon-btn--2 {
+          transform: translate(10px, -15px);
+
+          @include media(middle) {
+            transform: translate(10px, -20px);
+          }
         }
       }
     }
@@ -240,6 +248,14 @@ img.lazyloaded {
     max-width: 100%;
   }
 
+  &.com-btn-mobile--small {
+    a {
+      @include media(middle) {
+        font-size: 12px !important;
+      }
+    }
+  }
+
   a {
     background-color: #fff;
     display: flex;
@@ -262,6 +278,7 @@ img.lazyloaded {
     }
 
     &:hover {
+
       //background-color: #2e549c !important;
       i {
         transform: translateX(10px);
@@ -579,6 +596,18 @@ img.lazyloaded {
       position: absolute !important;
     }
   }
+
+  .title-item-sprout {
+
+    @include media(mobile) {
+      right: -0px !important;
+      top: -39px !important;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
 }
 
 .com-title.in-view .title {
@@ -608,6 +637,38 @@ img.lazyloaded {
 
   //overflow: hidden;
   //padding-top: 20px;
+  &.com-title--else {
+
+    h2,
+    h1 {
+      .title {
+        @include media(middle) {
+          font-size: 32px !important;
+        }
+      }
+
+      .title-item-sun {
+        @include media(middle) {
+          display: none !important;
+        }
+      }
+    }
+
+    .title-item-sprout {
+      @include media(middle) {
+        width: 16px !important;
+        height: auto;
+        position: absolute;
+        right: 0px !important;
+        top: -32px !important;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
   &.com-title--small {
     h2 {
       .title {
@@ -627,7 +688,7 @@ img.lazyloaded {
     }
   }
 
-  &.com-title--food {
+  &.com-title--today {
     p {
       line-height: 1 !important;
     }
@@ -635,6 +696,16 @@ img.lazyloaded {
     h2 {
       .title {
         font-size: 50px !important;
+
+        @include media(middle) {
+          font-size: 35px !important;
+        }
+      }
+
+      .title-item-sun {
+        @include media(middle) {
+          display: none !important;
+        }
       }
     }
 
@@ -646,11 +717,119 @@ img.lazyloaded {
       top: -47px !important;
 
       @include media(middle) {
-        width: 18px;
-        height: 17px;
-        top: -20px;
-        right: -5px;
-        top: -40px;
+        width: 16px !important;
+        height: auto;
+        position: absolute;
+        right: 0px !important;
+        top: -32px !important;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  &.com-title--food {
+    p {
+      line-height: 1 !important;
+    }
+
+    h2 {
+      .title {
+        font-size: 50px !important;
+
+        @include media(middle) {
+          font-size: 35px !important;
+        }
+      }
+    }
+
+    .title-item-sprout {
+      width: 21px !important;
+      height: auto;
+      position: absolute;
+      right: 0px !important;
+      top: -47px !important;
+
+      @include media(middle) {
+        width: 16px !important;
+        height: auto;
+        position: absolute;
+        right: 0px !important;
+        top: -32px !important;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  &.com-title--sweating {
+    p {
+      line-height: 1 !important;
+    }
+
+    h2 {
+      .title {
+        font-size: 50px !important;
+
+        @include media(middle) {
+          font-size: 32px !important;
+        }
+      }
+    }
+
+    .title-item-sprout {
+      width: 21px !important;
+      height: auto;
+      position: absolute;
+      right: 9px !important;
+      top: -47px !important;
+
+      @include media(middle) {
+        width: 16px !important;
+        height: auto;
+        position: absolute;
+        right: 5px !important;
+        top: -30px !important;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  &.com-title--relax {
+    p {
+      line-height: 1 !important;
+    }
+
+    h2 {
+      .title {
+        font-size: 50px !important;
+
+        @include media(middle) {
+          font-size: 35px !important;
+        }
+      }
+    }
+
+    .title-item-sprout {
+      width: 21px !important;
+      height: auto;
+      position: absolute;
+      right: 9px !important;
+      top: -47px !important;
+
+      @include media(middle) {
+        width: 18px !important;
+        height: 17px !important;
+        top: -15px !important;
+        right: -3px !important;
+        top: -33px !important;
       }
 
       img {
@@ -681,7 +860,7 @@ img.lazyloaded {
         width: 18px;
         height: 17px;
         top: -20px;
-        right: -5px;
+        right: 50px !important;
         top: -40px;
       }
 
@@ -1062,8 +1241,7 @@ img.lazyloaded {
 .com-btn-border--left {
   text-align: left !important;
 
-  a {
-  }
+  a {}
 }
 
 .com-btn-border-black {
@@ -1100,6 +1278,10 @@ img.lazyloaded {
 
       &.icon-green {
         background-image: url(("./assets/img/icon/icon-arrow-green-right.svg")) !important;
+      }
+
+      &.icon-blue {
+        background-image: url(("./assets/img/icon/icon-arrow-blue-right.svg")) !important;
       }
 
       &.icon-opacity {

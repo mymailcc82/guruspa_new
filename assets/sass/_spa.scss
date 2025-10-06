@@ -16,7 +16,8 @@
       top: 80px;
       @include media(middle) {
         width: 150px;
-        top: 40px;
+        top: 5px;
+        left: -40px;
       }
     }
     .sec02-icon-02 {
@@ -110,6 +111,7 @@
             font-size: 16px;
             line-height: 2;
             margin: 0px;
+            font-weight: 500;
             @include media(mobile) {
               font-size: 14px;
             }
@@ -131,7 +133,7 @@
         width: 132px;
         position: absolute;
         top: 30px;
-        left: calc(50% - 450px);
+        left: calc(50% - 495px);
         z-index: 3;
         @include media(middle) {
           width: 100px;
@@ -394,16 +396,21 @@
       justify-content: space-between;
       position: relative;
       z-index: 2;
+
       &.fadeup-timelug-active {
         &:before {
           width: 100% !important;
           opacity: 1 !important;
+          @include media(mobile) {
+            width: 20px !important;
+            height: 100% !important;
+          }
         }
       }
       &:before {
         width: 0%;
         opacity: 0;
-        transition: all 2.5s;
+        transition: all 2.5s 1s;
         height: 20px;
         background-color: #214995;
         content: '';
@@ -413,7 +420,8 @@
         top: 145px;
         z-index: -1;
         @include media(mobile) {
-          height: 100%;
+          transition: all 2.5s 1s;
+          height: 0%;
           width: 20px;
           top: 0px;
           left: 50%;
@@ -516,13 +524,24 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+      &.sec04-wrap-blue--v2 {
+        align-items: baseline !important;
+        .sec04-wrap-blue-col {
+          &:first-child {
+            padding-bottom: 80px !important;
+            @include media(mobile) {
+              padding-bottom: 30px !important;
+            }
+          }
+        }
+      }
       .sec04-wrap-blue-col {
         width: 48%;
         background-image: url('./assets/img/spa/sec04-bg-blue.jpg');
         background-size: cover;
         background-position: center;
         border-radius: 30px;
-        padding: 30px 40px;
+        padding: 30px 40px 40px;
         position: relative;
         z-index: 2;
         @include media(mobile) {
@@ -552,11 +571,12 @@
         p {
           font-size: 16px;
           font-weight: 400;
-          margin: 10px 0px 0px;
+          margin: 20px 0px 0px;
           color: #fff;
           letter-spacing: 0.1em;
           line-height: 1.8;
           @include media(middle) {
+            margin-top: 10px;
             font-size: 14px;
           }
         }
@@ -645,10 +665,6 @@
     padding-bottom: 120px;
     @include media(middle) {
       padding-bottom: 60px;
-    }
-    .page-title-center--has-icon {
-      h2 {
-      }
     }
     .page-deco-container {
       padding-top: 40px;

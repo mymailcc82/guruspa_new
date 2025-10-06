@@ -6,10 +6,10 @@ Template Name: enjoy-spa
 <?php get_header(); ?>
 <main class="page-main enjoy spa">
     <div class="page-main-left-img">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/page/page-img-left.png" alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/page/page-img-left.webp" alt="">
     </div>
     <div class="page-main-right-img">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/page/page-img-right.png" alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/page/page-img-right.webp" alt="">
     </div>
 
     <div class="page-breadcrumbs">
@@ -105,7 +105,7 @@ Template Name: enjoy-spa
             </picture>
         </div>
         <div class="page-deco-container page-deco-container--blue">
-            <div class="content-width-sm">
+            <div class="content-width-sm fadeup">
                 <div class="page-title-center--has-icon page-title-center--has-icon--font-30">
                     <h2><i></i>特徴・魅力</h2>
                 </div>
@@ -158,7 +158,7 @@ Template Name: enjoy-spa
     </section>
 
     <section class="sec04" id="sec04">
-        <div class="content-width-sm">
+        <div class="content-width-sm fadeup">
             <div class="page-title-center--has-icon page-title-center--has-icon--font-30">
                 <h2><i></i>湯めぐり案内</h2>
             </div>
@@ -171,7 +171,7 @@ Template Name: enjoy-spa
                 </div>
 
             </div>
-            <div class="sec04-wrap">
+            <div class="sec04-wrap fadeup" id="tansan">
                 <h3>炭酸風呂</h3>
                 <p>
                     炭酸泉とは、お湯に炭酸ガスが溶け込んだ温泉のことです。<br>
@@ -228,7 +228,7 @@ Template Name: enjoy-spa
                         </p>
                     </div>
                 </div>
-                <div class="sec04-wrap-blue">
+                <div class="sec04-wrap-blue fadeup">
                     <div class="sec04-wrap-blue-col">
                         <h3>効能</h3>
                         <p>
@@ -247,7 +247,7 @@ Template Name: enjoy-spa
                         </div>
                     </div>
                 </div>
-                <div class="sec04-center">
+                <div class="sec04-center fadeup">
                     <h3>他のお風呂</h3>
                     <div class="sec04-center-wrap">
                         <div class="sec04-center-wrap-col" id="else-01">
@@ -408,14 +408,14 @@ Template Name: enjoy-spa
                 </div>
 
             </div>
-            <div class="sec04-wrap" id="natural">
+            <div class="sec04-wrap fadeup" id="natural">
                 <h3>天然温泉</h3>
                 <p>
                     当店の天然温泉は、保湿成分の1つであるメタけい酸が多く含まれているため、 肌の新陳代謝を促し、美肌効果が期待できる美肌の湯と呼ばれています。<br>
                     また、湯冷めがしにくく、肌への刺激が少ないことも特徴であり、敏感肌の人や高齢者、子どもまで安心してご入浴いただけます。
                 </p>
             </div>
-            <div class="content-width-sm">
+            <div class="content-width-sm fadeup">
 
                 <div class="sec04-wrap-blue sec04-wrap-blue--v2">
                     <div class="sec04-wrap-blue-col">
@@ -548,7 +548,7 @@ Template Name: enjoy-spa
                     ?>
                             <dl>
                                 <dt><i></i><?php the_title(); ?></dt>
-                                <dd><?php the_content(); ?></dd>
+                                <dd><i></i><?php the_content(); ?></dd>
                             </dl>
                     <?php
                         endwhile;

@@ -111,6 +111,10 @@
               display: inline-block;
               z-index: 2;
 
+              @include media(mobile) {
+                width: 202px;
+              }
+
               .title {
                 display: inline-block;
                 font-size: 57px;

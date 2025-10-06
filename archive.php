@@ -8,10 +8,10 @@ $category_slug = $category->slug;
 <?php get_header(); ?>
 <main class="page-main archive">
     <div class="page-main-left-img">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/page/page-img-left.png" alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/page/page-img-left.webp" alt="">
     </div>
     <div class="page-main-right-img">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/page/page-img-right.png" alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/page/page-img-right.webp" alt="">
     </div>
 
     <div class="page-breadcrumbs">
@@ -47,7 +47,7 @@ $category_slug = $category->slug;
             </div>
         </div>
         <div class="sec01-col">
-            <ul class="sec01-col-select">
+            <ul class="sec01-col-select active-<?php echo $category_slug; ?>">
                 <li><a href="<?php echo home_url(); ?>/archive/">すべて</a></li>
                 <?php if ($category_slug === 'news'): ?>
                     <li class="active"><a href="javascript:void(0)" data-id="#area01">お知らせ</a></li>
@@ -59,8 +59,6 @@ $category_slug = $category->slug;
                 <?php else: ?>
                     <li><a href="<?php echo home_url(); ?>/category/media/">メディア</a></li>
                 <?php endif; ?>
-
-
             </ul>
 
             <div id="area01" class="area is-active">

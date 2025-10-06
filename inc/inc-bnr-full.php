@@ -1,13 +1,13 @@
 <div class="com-sec-01-col-under">
     <a href="<?php echo home_url(); ?>/schedule/">
-        <div class="sec-01-col-under-img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-img-01.jpg" alt=""></div>
+        <div class="sec-01-col-under-img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-img-01_v2.webp" alt=""></div>
         <div class="sec-01-col-under-title">
             <?php
             /*
                                 <h3>E<span>VENT</span><i class="icon-fire"></i><br>S<span>CHEDUL<span class="item-text">E</span></span><i class="icon-btn"></i></h3>
                                 */
             ?>
-            <h3><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/title-event-schedule_v2.png" alt="EVENT SCHEDULE"><i class="icon-btn"></i></h3>
+            <h3><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/title-event-schedule_v2.webp" alt="EVENT SCHEDULE"><i class="icon-btn"></i></h3>
             <p>イベントはこちらをチェック！</p>
         </div>
         <div class="sec-01-col-under-move-item">
