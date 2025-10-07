@@ -39,6 +39,9 @@
     width: 100%;
     position: relative;
     z-index: 1;
+    @include media(middle) {
+      top: 1px;
+    }
     img {
       width: 100%;
     }
@@ -57,16 +60,16 @@
     }
     &.page-deco-container--yellow {
       //background-color: #dce7fb !important;
-      background-image: url(("./assets/img/aside/aside-bg-yellow-content_v2.png"));
+      background-image: url(("./assets/img/aside/aside-bg-yellow-content_v3.jpg"));
       background-repeat: repeat;
       background-size: contain;
     }
 
     &.page-deco-container--blue {
       //background-color: #dce7fb !important;
-      background-image: url(("./assets/img/aside/aside-bg-blue-content_v3.png"));
+      background-image: url(("./assets/img/aside/aside-bg-blue-content_v4.jpg"));
       background-repeat: repeat;
-      background-size: 100%;
+      background-size: contain;
     }
     &.page-deco-container--green {
       background-color: #e8f2dd !important;

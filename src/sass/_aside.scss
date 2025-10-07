@@ -39,7 +39,7 @@
       content: '';
       width: 100%;
       height: 100%;
-      background-image: url(("./assets/img/aside/aside-bg-main_v2.png"));
+      background-image: url(("./assets/img/aside/aside-bg-main.jpg"));
       background-size: contain;
       background-repeat: repeat;
     }
@@ -69,6 +69,13 @@
         background-color: #fbe19e;
         padding: 19px 20px 19px 60px;
         border-radius: 30px;
+        @include media(middle) {
+          padding: 25px 20px 25px 50px;
+        }
+
+        @include media(middle-small) {
+          padding: 15px 15px 25px;
+        }
 
         &:hover {
           .aside-btn-1-img {
@@ -80,14 +87,6 @@
               transform: translateX(3px);
             }
           }
-        }
-
-        @include media(middle) {
-          padding: 25px 20px 25px 50px;
-        }
-
-        @include media(middle-small) {
-          padding: 15px;
         }
 
         .aside-btn-1-txt {
@@ -115,14 +114,13 @@
                 width: 202px;
               }
 
-              .aside-title-sp_sun{
+              .aside-title-sp_sun {
                 position: absolute;
                 width: 40.93px;
                 height: 41.15px;
                 z-index: -1;
                 left: -25px;
                 top: -5px;
-
               }
 
               .title {
@@ -213,9 +211,8 @@
                 display: block;
                 width: 30px;
                 height: 30px;
-                top: 50%;
+                bottom: 0px;
                 right: -5px;
-                transform: translateY(-50%);
               }
             }
           }
@@ -287,6 +284,9 @@
           border-radius: 30px;
           text-align: center;
           position: relative;
+          @include media(middle) {
+            padding: 15px 10px 25px;
+          }
 
           &::before {
             position: absolute;
@@ -304,7 +304,7 @@
             @include media(middle) {
               width: 30.86px;
               height: 30.86px;
-              bottom: 30px;
+              bottom: 15px;
             }
           }
 
@@ -346,8 +346,8 @@
               }
 
               @include media(mobile) {
-                width: 26.43px;
-                height: 40.61px;
+                width: 30px;
+                height: 45px;
               }
             }
           }
@@ -368,10 +368,8 @@
           }
         }
       }
-
       .aside-btn-3 {
         width: 49%;
-
         @include media(middle-small) {
           width: 100%;
           margin-top: 19px;
@@ -385,6 +383,9 @@
           border-radius: 30px;
           text-align: center;
           position: relative;
+          @include media(middle) {
+            padding: 15px 10px 25px;
+          }
 
           &::before {
             position: absolute;
@@ -402,7 +403,7 @@
             @include media(middle) {
               width: 30.86px;
               height: 30.86px;
-              bottom: 30px;
+              bottom: 15px;
             }
           }
 
@@ -417,7 +418,6 @@
               }
             }
           }
-
           h3 {
             font-size: 50px;
             font-family: $font-en;
@@ -428,7 +428,6 @@
             @include media(middle) {
               font-size: 33px;
             }
-
             i {
               width: 33px;
               height: 55px;
@@ -442,10 +441,9 @@
                 width: 16.43px;
                 height: 30.61px;
               }
-
               @include media(mobile) {
-                width: 26.43px;
-                height: 40.61px;
+                width: 30px;
+                height: 45px;
               }
             }
           }

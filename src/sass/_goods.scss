@@ -259,11 +259,17 @@
 
         .sec04-wrap-col-img {
           position: relative;
+          &.sec04-wrap-col-img--finish {
+            img {
+              opacity: 0.5;
+            }
+          }
           .sec04-wrap-col-img-span {
             font-size: 30px;
             font-family: $font-en;
             color: transparent;
             font-weight: bold;
+            z-index: 5;
             text-align: center;
             //縁を黒く
             -webkit-text-stroke: 1px #222;
@@ -274,6 +280,9 @@
             width: 100%;
             @include media(middle) {
               font-size: 14px;
+            }
+            img {
+              opacity: 1 !important;
             }
           }
           img {

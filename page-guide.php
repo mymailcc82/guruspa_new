@@ -285,11 +285,11 @@
                             <td>
                                 10:00〜24:00
                             </td>
-                            <td>10:00〜翌1:00</td>
-                            <td>10:00〜翌1:00</td>
+                            <td>10:00～24:00</td>
+                            <td>10:00～24:00</td>
                             <td>10:00〜24:00</td>
                             <td>10:00〜24:00</td>
-                            <td>10:00〜翌1:00</td>
+                            <td>10:00～24:00</td>
                         </tr>
                         <tr>
                             <td>発汗エリア<br><small>(有料岩盤浴)</small></td>
@@ -318,11 +318,11 @@
                         <tr>
                             <td>ご飲食</td>
                             <td>11:00〜23:00</td>
-                            <td>11:00〜24:00</td>
-                            <td>11:00〜24:00</td>
+                            <td>11:00～23:00</td>
+                            <td>11:00～23:00</td>
                             <td>11:00〜23:00</td>
                             <td>11:00〜23:00</td>
-                            <td>11:00〜24:00</td>
+                            <td>11:00～23:00</td>
                         </tr>
 
                     </table>
@@ -359,7 +359,7 @@
                             <table>
                                 <tr>
                                     <th>通常入泉</th>
-                                    <td>10:00〜翌1:00</td>
+                                    <td>10:00〜24:00</td>
                                 </tr>
                                 <tr>
                                     <th>発汗エリア<br><small>(有料岩盤浴)</small></th>
@@ -373,7 +373,7 @@
                                 </tr>
                                 <tr>
                                     <th>ご飲食</th>
-                                    <td>11:00〜24:00</td>
+                                    <td>11:00〜23:00</td>
                                 </tr>
                             </table>
                         </dd>
@@ -384,7 +384,7 @@
                             <table>
                                 <tr>
                                     <th>通常入泉</th>
-                                    <td>10:00〜翌1:00</td>
+                                    <td>10:00〜24:00</td>
                                 </tr>
                                 <tr>
                                     <th>発汗エリア<br><small>(有料岩盤浴)</small></th>
@@ -398,7 +398,7 @@
                                 </tr>
                                 <tr>
                                     <th>ご飲食</th>
-                                    <td>11:00〜24:00</td>
+                                    <td>11:00〜23:00</td>
                                 </tr>
                             </table>
                         </dd>
@@ -459,7 +459,7 @@
                             <table>
                                 <tr>
                                     <th>通常入泉</th>
-                                    <td>10:00〜翌1:00</td>
+                                    <td>10:00〜24:00</td>
                                 </tr>
                                 <tr>
                                     <th>発汗エリア<br><small>(有料岩盤浴)</small></th>
@@ -473,7 +473,7 @@
                                 </tr>
                                 <tr>
                                     <th>ご飲食</th>
-                                    <td>11:00〜24:00</td>
+                                    <td>11:00〜23:00</td>
                                 </tr>
                             </table>
                         </dd>
@@ -511,15 +511,15 @@
                         <div class="sec03-wrap">
                             <div class="sec03-wrap-col">
                                 <div class="sec03-wrap-col-img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/guide/sec03-img-01_v2.jpg" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/guide/sec03-img-01_v2.webp" alt="">
                                 </div>
                                 <p>
-                                    入館時は<span>券売機または受付でのチェックイン</span>をお願いいたします。
+                                    入館時は券売機にて受付をお願いいたします。
                                 </p>
                             </div>
                             <div class="sec03-wrap-col">
                                 <div class="sec03-wrap-col-img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/guide/sec03-img-02_v2.jpg" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/guide/sec03-img-02_v2.webp" alt="">
                                 </div>
                                 <p>
                                     発汗エリア（岩盤浴）は<span>別料金・専用ウェア着用必須です。</span>
@@ -540,8 +540,8 @@
                         <div class="sec03-col">
                             <div class="sec03-col-img">
                                 <picture>
-                                    <source media="(max-width: 601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/guide/sec03-img-03-sp.jpg">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/guide/sec03-img-03.jpg" alt="">
+                                    <source media="(max-width: 601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/guide/sec03-img-03-sp.webp">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/guide/sec03-img-03.webp" alt="">
                                 </picture>
                             </div>
                             <div class="sec03-col-txt">
@@ -560,8 +560,8 @@
                         <div class="sec03-col">
                             <div class="sec03-col-img">
                                 <picture>
-                                    <source media="(max-width: 601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/guide/sec03-img-04-sp.jpg">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/guide/sec03-img-04.jpg" alt="">
+                                    <source media="(max-width: 601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/guide/sec03-img-04-sp.webp">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/guide/sec03-img-04.webp" alt="">
                                 </picture>
                             </div>
                             <div class="sec03-col-txt">
@@ -580,8 +580,8 @@
                         <div class="sec03-col">
                             <div class="sec03-col-img">
                                 <picture>
-                                    <source media="(max-width: 601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/guide/sec03-img-05-sp.jpg">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/guide/sec03-img-05.jpg" alt="">
+                                    <source media="(max-width: 601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/guide/sec03-img-05-sp.webp">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/guide/sec03-img-05.webp" alt="">
                                 </picture>
                             </div>
                             <div class="sec03-col-txt">
@@ -601,8 +601,8 @@
                         <div class="sec03-col">
                             <div class="sec03-col-img">
                                 <picture>
-                                    <source media="(max-width: 601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/guide/sec03-img-06-sp.jpg">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/guide/sec03-img-06.jpg" alt="">
+                                    <source media="(max-width: 601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/guide/sec03-img-06-sp.webp">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/guide/sec03-img-06.webp" alt="">
                                 </picture>
                             </div>
                             <div class="sec03-col-txt">
@@ -620,8 +620,8 @@
                         <div class="sec03-col">
                             <div class="sec03-col-img">
                                 <picture>
-                                    <source media="(max-width: 601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/guide/sec03-img-07-sp.jpg">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/guide/sec03-img-07.jpg" alt="">
+                                    <source media="(max-width: 601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/guide/sec03-img-07-sp.webp">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/guide/sec03-img-07.webp" alt="">
                                 </picture>
                             </div>
                             <div class="sec03-col-txt">
@@ -671,7 +671,7 @@
         </div>
         <div class="content-width">
             <div class="sec04-bottom">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/guide/sec05-img-01_v3.jpg" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/guide/sec05-img-01_v3.webp" alt="">
             </div>
         </div>
     </section>

@@ -164,9 +164,264 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/jquery.tmpl.min.js?ver=1.0.1"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/assets/js/all.min.js?ver=1.0.4"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/assets/js/all.min.js?ver=1.0.5"></script>
 <script src="https://yubinbango.github.io/yubinbango/yubinbango.js" charset="UTF-8"></script>
+<script>
+    //ページリンクのスムーズスクロール
+    (function() {
+        if (!location.hash) return;
+        var id = location.hash.slice(1);
+        var el = document.getElementById(id);
+        if (!el) return;
+        // id を一時的に外しておく（ブラウザが自動でスクロールできないようにする）
+        el.setAttribute('data-temp-id', id);
+        el.removeAttribute('id');
 
+        // 履歴復元スクロールの自動動作を抑制（対応ブラウザ）
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+    })();
+</script>
+
+<!-- === 2) DOM が準備できてから id を戻してアニメーション === -->
+<script>
+    $(function() {
+        // --- waitForStablePosition は元のまま（軽微に変更） ---
+        function waitForStablePosition($el, options) {
+            options = $.extend({
+                checkInterval: 100,
+                stableCount: 3,
+                maxWait: 2500
+            }, options || {});
+
+            return new Promise(function(resolve) {
+                if (!$el || !$el.length) {
+                    resolve();
+                    return;
+                }
+
+                var lastTop = null;
+                var stable = 0;
+                var elapsed = 0;
+                var intervalId = null;
+
+                // 監視対象画像（ターゲット位置付近の画像だけ監視して軽くする）
+                var imgs = $('img').filter(function() {
+                    var $i = $(this);
+                    try {
+                        return !this.complete && $i.offset().top <= ($el.offset().top + $(window).height());
+                    } catch (e) {
+                        return false;
+                    }
+                });
+
+                function checkOnce() {
+                    var top;
+                    try {
+                        top = Math.round($el.offset().top);
+                    } catch (e) {
+                        top = null;
+                    }
+                    if (top === lastTop && top !== null) {
+                        stable++;
+                    } else {
+                        stable = 0;
+                    }
+                    lastTop = top;
+
+                    if (stable >= options.stableCount) {
+                        cleanup();
+                        resolve();
+                    }
+                }
+
+                function cleanup() {
+                    if (intervalId) clearInterval(intervalId);
+                    imgs.off('load.waitScroll error.waitScroll');
+                }
+
+                imgs.on('load.waitScroll error.waitScroll', function() {
+                    checkOnce();
+                });
+
+                intervalId = setInterval(function() {
+                    elapsed += options.checkInterval;
+                    checkOnce();
+                    if (elapsed >= options.maxWait) {
+                        cleanup();
+                        resolve(); // タイムアウトでも先に進む（フォールバック）
+                    }
+                }, options.checkInterval);
+
+                // 最初の即時チェック
+                checkOnce();
+            });
+        }
+
+        // --- 新規: ターゲット付近の画像が全部読み込まれるのを待つ ---
+        function waitForNearImages($el, options) {
+            options = $.extend({
+                maxWait: 5000, // 最大待ち時間（ms）
+                checkAreaExtra: 0 // ターゲット下にさらに何px見るか（必要に応じて）
+            }, options || {});
+
+            return new Promise(function(resolve) {
+                if (!$el || !$el.length) {
+                    resolve();
+                    return;
+                }
+
+                var areaBottom;
+                try {
+                    areaBottom = $el.offset().top + $(window).height() + options.checkAreaExtra;
+                } catch (e) {
+                    resolve();
+                    return;
+                }
+
+                // 監視対象の画像（ページ内だが target の表示領域までの画像）
+                var $imgs = $('img').filter(function() {
+                    try {
+                        var top = $(this).offset().top;
+                        return top <= areaBottom && !this.complete;
+                    } catch (e) {
+                        return false;
+                    }
+                });
+
+                // ブラウザの lazy 属性がある場合は一時的に eager にしてみる（読み込みを促す）
+                $imgs.each(function() {
+                    try {
+                        if (typeof this.loading !== 'undefined') this.loading = 'eager';
+                        // data-src などの lazy-loading 実装があるならトリガーしてみる（よくある属性）
+                        var $i = $(this);
+                        if (!$i.attr('src') && $i.attr('data-src')) {
+                            $i.attr('src', $i.attr('data-src'));
+                        }
+                    } catch (e) {}
+                });
+
+                if (!$imgs.length) {
+                    resolve();
+                    return;
+                }
+
+                var remaining = $imgs.length;
+                var resolved = false;
+
+                function tryResolve() {
+                    if (resolved) return;
+                    if (remaining <= 0) {
+                        resolved = true;
+                        resolve();
+                    }
+                }
+
+                // タイムアウト防止
+                var to = setTimeout(function() {
+                    resolved = true;
+                    resolve();
+                }, options.maxWait);
+
+                $imgs.on('load.waitImages error.waitImages', function() {
+                    remaining--;
+                    tryResolve();
+                    if (remaining <= 0) clearTimeout(to);
+                });
+            });
+        }
+
+        // --- オーバーレイの作成・表示関数 ---
+        function showOverlay() {
+            /*
+            if ($('#page-load-overlay').length) return;
+            var $ov = $('<div id="page-load-overlay"></div>');
+            $('body').append($ov);
+            // すぐに表示（CSS で初期 opacity:1 にしています）
+            // prevent scroll while overlay shown
+            $('html,body').css('overflow', 'hidden');
+            */
+        }
+
+        function hideOverlayAndRemove() {
+            var $ov = $('#page-load-overlay');
+            if (!$ov.length) return;
+            $ov.addClass('hidden'); // CSS transition でフェードアウト
+            // 少し待ってから DOM から削除してスクロールを戻す
+            setTimeout(function() {
+                $ov.remove();
+                $('html,body').css('overflow', '');
+            }, 500);
+        }
+
+        // --- main: data-temp-id 復元 + ハッシュ遷移(全読み込み待ち) ---
+        var $temp = $('[data-temp-id]');
+        var hash = location.hash;
+        if ($temp.length) {
+            var origId = $temp.attr('data-temp-id');
+            $temp.attr('id', origId).removeAttr('data-temp-id');
+
+            if (hash) {
+                var $target = $(hash);
+                if ($target.length) {
+                    showOverlay();
+
+                    // 画像待ちと位置安定の両方を待つ（同時並行）
+                    Promise.all([
+                        waitForNearImages($target, {
+                            maxWait: 5000
+                        }),
+                        waitForStablePosition($target, {
+                            maxWait: 2500
+                        })
+                    ]).then(function() {
+                        // 再計算してスクロール
+                        var headerHeight = $('header').outerHeight() || 0;
+                        var position = Math.max(0, $target.offset().top - headerHeight - 60);
+                        $('html, body').animate({
+                            scrollTop: position
+                        }, 600, 'swing', function() {
+                            try {
+                                history.replaceState(null, null, location.pathname + location.search + location.hash);
+                            } catch (e) {}
+                            // フェードアウト
+                            hideOverlayAndRemove();
+                        });
+                    }).catch(function() {
+                        // 何かあってもフォールバックで進める（安全側）
+                        hideOverlayAndRemove();
+                    });
+                }
+            }
+        } else {
+            if (hash) {
+                var $t = $(hash);
+                if ($t.length) {
+                    showOverlay();
+                    Promise.all([
+                        waitForNearImages($t, {
+                            maxWait: 5000
+                        }),
+                        waitForStablePosition($t, {
+                            maxWait: 2500
+                        })
+                    ]).then(function() {
+                        var headerHeight = $('header').outerHeight() || 0;
+                        var pos = Math.max(0, $t.offset().top - headerHeight - 60);
+                        $('html, body').stop().animate({
+                            scrollTop: pos
+                        }, 600, 'swing', function() {
+                            hideOverlayAndRemove();
+                        });
+                    }).catch(function() {
+                        hideOverlayAndRemove();
+                    });
+                }
+            }
+        }
+    });
+</script>
 
 <script>
     (function() {

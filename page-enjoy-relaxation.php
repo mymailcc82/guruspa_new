@@ -60,8 +60,8 @@ $type = isset($_GET['type']) ? $_GET['type'] : 'relaxation';
                 </div>
                 <div class="enjoy-wrap-img">
                     <ul>
-                        <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec01-img-01_v2.jpg" alt=""></li>
-                        <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec01-img-02_v2.jpg" alt=""></li>
+                        <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec01-img-01_v2.webp" alt=""></li>
+                        <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec01-img-02_v2.webp" alt=""></li>
                     </ul>
                 </div>
             </div>
@@ -69,19 +69,23 @@ $type = isset($_GET['type']) ? $_GET['type'] : 'relaxation';
     </section>
     <div class="page-toggle">
         <div class="sec01-col">
-            <ul class="sec01-col-select tab mb-0 mb-30-mobile">
-                <?php
-                if ($type === 'relaxation') {
-                    $relax_active = 'active';
-                    $akasuri_active = '';
-                } elseif ($type === 'akasuri') {
-                    $relax_active = '';
-                    $akasuri_active = 'active';
-                } else {
-                    $relax_active = 'active';
-                    $akasuri_active = '';
-                }
-                ?>
+            <?php
+            if ($type === 'relaxation') {
+                $relax_active = 'active';
+                $akasuri_active = '';
+                $active_ul = 'active-area01';
+            } elseif ($type === 'akasuri') {
+                $relax_active = '';
+                $akasuri_active = 'active';
+                $active_ul = 'active-area02';
+            } else {
+                $relax_active = 'active';
+                $akasuri_active = '';
+                $active_ul = 'active-area01';
+            }
+            ?>
+            <ul class="sec01-col-select tab mb-0 mb-30-mobile <?php echo $active_ul; ?>">
+
                 <li class="<?php echo $relax_active; ?>"><a href="<?php echo home_url(); ?>/enjoy/relaxation/?type=relaxation" data-id="#area01">リラクゼーション</a></li>
                 <li class="<?php echo $akasuri_active; ?>"><a href="<?php echo home_url(); ?>/enjoy/relaxation/?type=akasuri" data-id="#area02">アカスリ</a></li>
             </ul>
@@ -138,6 +142,9 @@ $type = isset($_GET['type']) ? $_GET['type'] : 'relaxation';
                                         </li>
                                         <li>
                                             <a href="#sec06">予約方法<i></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#sec07">よくある質問<i></i></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -198,56 +205,8 @@ $type = isset($_GET['type']) ? $_GET['type'] : 'relaxation';
                                                                 }
                                                                 ?>
                                                                 <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
-                                                                <div class="img img-info">
-                                                                    <?php if (has_post_thumbnail()) : ?>
-                                                                        <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>">
-                                                                    <?php else : ?>
-                                                                        <?php if ($event_category && !is_wp_error($event_category)) : ?>
-                                                                            <?php
-
-                                                                            $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-default.jpg'; // デフォルト画像
-
-                                                                            if ($category_slug === 'information' || $category_slug_parent === 'information') {
-                                                                                $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-red.jpg';
-                                                                            } elseif ($category_slug === 'event' || $category_slug_parent === 'event') {
-                                                                                $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-green.jpg';
-                                                                            } elseif ($category_slug === 'food' || $category_slug_parent === 'food') {
-                                                                                $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-yellow.jpg';
-                                                                            } elseif ($category_slug === 'relax' || $category_slug_parent === 'relax') {
-                                                                                $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-blue.jpg';
-                                                                            } elseif ($category_slug === 'tokiwa') {
-                                                                            }
-                                                                            ?>
-                                                                            <img src="<?php echo esc_url($default_image_url); ?>" alt="<?php the_title(); ?>">
-                                                                        <?php else : ?>
-                                                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-default.jpg" alt="<?php the_title(); ?>">
-                                                                        <?php endif; ?>
-                                                                    <?php endif; ?>
-                                                                </div>
-                                                                <div class="text">
-                                                                    <div class="text-info">
-                                                                        <?php
-                                                                        if ($category_slug === 'information' || $category_slug_parent === 'information') {
-                                                                            $cats_class = 'category-red';
-                                                                        } elseif ($category_slug === 'event' || $category_slug_parent === 'event') {
-                                                                            $cats_class = 'category-green';
-                                                                        } elseif ($category_slug === 'food' || $category_slug_parent === 'food') {
-                                                                            $cats_class = 'category-yellow';
-                                                                        } elseif ($category_slug === 'relax' || $category_slug_parent === 'relax') {
-                                                                            $cats_class = 'category-blue';
-                                                                        }
-                                                                        ?>
-                                                                        <div class="text-info-cat">
-                                                                            <span class="category <?php echo esc_attr($cats_class); ?> cat-<?php echo esc_attr($category_slug); ?>"><?php echo esc_html($event_category[0]->name); ?></span>
-                                                                        </div>
-                                                                        <div class="text-info-term">
-                                                                            <span class="term"><?php echo $event_start_date; ?></span>
-                                                                        </div>
-
-                                                                    </div>
-
-                                                                    <h3><?php the_title(); ?></h3>
-                                                                </div>
+                                                                <?php get_template_part('inc/inc-event-img'); ?>
+                                                                <?php get_template_part('inc/inc-event-text'); ?>
                                                             </a>
                                                         </div>
                                                 <?php
@@ -276,7 +235,7 @@ $type = isset($_GET['type']) ? $_GET['type'] : 'relaxation';
                                     </div>
                                     <div class="sec04-wrap-col">
                                         <div class="sec04-wrap-col-img">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec04-img-01_v2.jpg" alt="">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec04-img-01_v2.webp" alt="">
                                         </div>
                                         <h3>経験豊富な施術者が在籍</h3>
                                         <p>
@@ -285,7 +244,7 @@ $type = isset($_GET['type']) ? $_GET['type'] : 'relaxation';
                                     </div>
                                     <div class="sec04-wrap-col">
                                         <div class="sec04-wrap-col-img">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec04-img-02_v2.jpg" alt="">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec04-img-02_v2.webp" alt="">
                                         </div>
                                         <h3>豊富な施術メニュー</h3>
                                         <p>
@@ -294,7 +253,7 @@ $type = isset($_GET['type']) ? $_GET['type'] : 'relaxation';
                                     </div>
                                     <div class="sec04-wrap-col">
                                         <div class="sec04-wrap-col-img">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec04-img-03_v2.jpg" alt="">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec04-img-03_v2.webp" alt="">
                                         </div>
                                         <h3>男女ともに利用可能</h3>
                                         <p>
@@ -324,7 +283,7 @@ $type = isset($_GET['type']) ? $_GET['type'] : 'relaxation';
                             <div class="sec05-wrap">
                                 <div class="sec05-wrap-col">
                                     <div class="sec05-wrap-col-left">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec05-img-01_v2.jpg" alt="">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec05-img-01_v2.webp" alt="">
                                     </div>
                                     <div class="sec05-wrap-col-right">
                                         <h3>もみほぐし</h3>
@@ -352,7 +311,7 @@ $type = isset($_GET['type']) ? $_GET['type'] : 'relaxation';
 
                                 <div class="sec05-wrap-col">
                                     <div class="sec05-wrap-col-left">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec05-img-02.jpg" alt="">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec05-img-02.webp" alt="">
                                     </div>
                                     <div class="sec05-wrap-col-right">
                                         <h3>アロマトリートメント</h3>
@@ -376,7 +335,7 @@ $type = isset($_GET['type']) ? $_GET['type'] : 'relaxation';
 
                                 <div class="sec05-wrap-col">
                                     <div class="sec05-wrap-col-left">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec05-img-03_v2.jpg" alt="">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec05-img-03_v2.webp" alt="">
                                     </div>
                                     <div class="sec05-wrap-col-right">
                                         <h3>フェイシャル・ヘッドスパ</h3>
@@ -430,7 +389,7 @@ $type = isset($_GET['type']) ? $_GET['type'] : 'relaxation';
                                     </div>
                                 </div>
                                 <div class="sec06-wrap-right">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec06-img-01_v2.jpg" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec06-img-01_v2.webp" alt="">
                                 </div>
 
                             </div>
@@ -440,11 +399,7 @@ $type = isset($_GET['type']) ? $_GET['type'] : 'relaxation';
                 <div class="page-deco-bg-bottom">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-blue-bottom.png" alt="">
                 </div>
-
-
-
             </div>
-
             <div class="area02 area is-<?php echo $akasuri_active; ?>" id="area02">
                 <div class="page-deco-bg">
                     <picture>
@@ -495,6 +450,9 @@ $type = isset($_GET['type']) ? $_GET['type'] : 'relaxation';
                                         </li>
                                         <li>
                                             <a href="#sec11">予約方法<i></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#sec07">よくある質問<i></i></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -585,7 +543,7 @@ $type = isset($_GET['type']) ? $_GET['type'] : 'relaxation';
                                     </div>
                                     <div class="sec04-wrap-col">
                                         <div class="sec04-wrap-col-img">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec09-img-01_v2.jpg" alt="">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec09-img-01_v2.webp" alt="">
                                         </div>
                                         <h3>本場仕込みのアカスリ技術</h3>
                                         <p>
@@ -594,7 +552,7 @@ $type = isset($_GET['type']) ? $_GET['type'] : 'relaxation';
                                     </div>
                                     <div class="sec04-wrap-col">
                                         <div class="sec04-wrap-col-img">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec09-img-02_v2.jpg" alt="">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec09-img-02_v2.webp" alt="">
                                         </div>
                                         <h3>肌質・目的に合わせた<br class="hidden-mobile">メニュー構成</h3>
                                         <p>
@@ -603,7 +561,7 @@ $type = isset($_GET['type']) ? $_GET['type'] : 'relaxation';
                                     </div>
                                     <div class="sec04-wrap-col">
                                         <div class="sec04-wrap-col-img">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec09-img-03.jpg" alt="">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec09-img-03_v2.webp" alt="">
                                         </div>
                                         <h3>男女利用可能（専用スペース完備）</h3>
                                         <p>
@@ -685,7 +643,7 @@ $type = isset($_GET['type']) ? $_GET['type'] : 'relaxation';
                                     </div>
                                 </div>
                                 <div class="sec06-wrap-right">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec06-img-01_v2.jpg" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec06-img-01_v2.webp" alt="">
                                 </div>
                             </div>
                         </div>
@@ -701,7 +659,7 @@ $type = isset($_GET['type']) ? $_GET['type'] : 'relaxation';
     </div>
 
     <section class="sec07-com">
-        <div class="content-width">
+        <div class="content-width" id="sec07">
             <div class="sec07-wrap">
                 <div class="sec07-wrap-title">
                     <div class="page-title--has-icon">

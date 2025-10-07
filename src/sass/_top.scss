@@ -567,7 +567,7 @@
           @include media(mobile) {
             position: static;
             margin: 0 auto;
-            width: 95%;
+            width: 88%;
             text-align: center;
           }
 
@@ -659,6 +659,9 @@
               z-index: 10;
               overflow: hidden;
               background-color: #ffffff;
+              @include media(middle) {
+                border-radius: 15px;
+              }
 
               &::before {
                 position: absolute;
@@ -988,6 +991,10 @@
                   transform: translateX(-50%);
                   transition: opacity 0.3s, transform 0.3s;
                   opacity: 1;
+                  @include media(mobile) {
+                    width: 38px;
+                    top: -65px;
+                  }
 
                   img {
                     width: 100%;
@@ -1480,7 +1487,8 @@
         }
 
         /* non-scaling-stroke は拡大縮小時に stroke 幅を一定に保つ */
-        path {}
+        path {
+        }
 
         .sec03-col-item-child {
           position: absolute;

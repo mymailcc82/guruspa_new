@@ -97,26 +97,6 @@ $(function () {
   });
 });
 
-//
-$(document).ready(function () {
-  // ハッシュが存在する場合（URLが#で終わっている）
-  if (window.location.hash) {
-    // ハッシュをターゲットに変換
-    var target = $(window.location.hash);
-    // ターゲットが存在する場合
-    if (target.length) {
-      //headerの高さを取得
-      var headerHeight = $('header').outerHeight();
-      // ターゲットの位置を取得
-
-      // スクロール位置を取得し、50px上に余白を設定
-      var position = target.offset().top - headerHeight - 20; // 50px上に設定
-      // アニメーションでスクロール
-      $('html, body').animate({ scrollTop: position }, 600, 'swing');
-    }
-  }
-});
-
 // #にダブルクォーテーションが必要
 $('a[href^="#"]').click(function () {
   var speed = 600;

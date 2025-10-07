@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css?ver=1.3.2">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css?ver=1.3.7">
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,20 +47,20 @@
             </div>
             <div class="header-wrap-list">
                 <ul class="header-wrap-list-ul">
-                    <li class="header-wrap-list-ul-item"><a href="<?php echo home_url(); ?>/guide/" class="no-link">ご利用案内</a></li>
-                    <li class="header-wrap-list-ul-item"><a href="<?php echo home_url(); ?>/enjoy/" class="no-link">館内の楽しみ方</a></li>
-                    <li class="header-wrap-list-ul-item"><a href="<?php echo home_url(); ?>/first-time/" class="no-link">初めてのお客様へ</a></li>
-                    <li class="header-wrap-list-ul-item"><a href="<?php echo home_url(); ?>/event/" class="no-link">イベント情報</a></li>
-                    <li class="header-wrap-list-ul-item"><a href="<?php echo home_url(); ?>/archive/" class="no-link">お知らせ</a></li>
-                    <li class="header-wrap-list-ul-item"><a href="<?php echo home_url(); ?>/faq/" class="no-link">FAQ</a></li>
+                    <li class="header-wrap-list-ul-item"><a href="<?php echo home_url(); ?>/guide/">ご利用案内</a></li>
+                    <li class="header-wrap-list-ul-item"><a href="<?php echo home_url(); ?>/enjoy/">館内の楽しみ方</a></li>
+                    <li class="header-wrap-list-ul-item"><a href="<?php echo home_url(); ?>/first-time/">初めてのお客様へ</a></li>
+                    <li class="header-wrap-list-ul-item"><a href="<?php echo home_url(); ?>/event/">イベント情報</a></li>
+                    <li class="header-wrap-list-ul-item"><a href="<?php echo home_url(); ?>/archive/">お知らせ</a></li>
+                    <li class="header-wrap-list-ul-item"><a href="<?php echo home_url(); ?>/faq/">FAQ</a></li>
                 </ul>
                 <div class="header-wrap-list-btn">
                     <a class="header-wrap-list-ul-icon" href="https://x.com/GURUSPA_/" target="_blank" rel="noopener noreferrer"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-x.png" alt=""></a>
                     <a class="header-wrap-list-ul-icon" href="https://www.instagram.com/guruspa_/" target="_blank" rel="noopener noreferrer"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-insta.png" alt=""></a>
                     <?php if (is_page("guide")): ?>
-                        <a href="#sec03" class="no-link header-wrap-list-ul-btn">営業時間<i></i></a></li>
+                        <a href="#sec03" class="header-wrap-list-ul-btn">営業時間<i></i></a></li>
                     <?php else: ?>
-                        <a href="<?php echo home_url(); ?>/guide/#sec03" class="no-link header-wrap-list-ul-btn">営業時間<i></i></a>
+                        <a href="<?php echo home_url(); ?>/guide/#sec03" class="header-wrap-list-ul-btn">営業時間<i></i></a>
                     <?php endif; ?>
                 </div>
             </div>

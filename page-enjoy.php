@@ -229,7 +229,7 @@ Template Name: enjoy
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-img-02.jpg" alt="">
                             </div>
                             <div class="sec01-col-main-02-01">
-                                <a href="<?php echo home_url(); ?>/enjoy/sauna/#hot" class="pulse-btn">
+                                <a href="<?php echo home_url(); ?>/enjoy/sauna/?type_id=sauna#hot" class="pulse-btn">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-icon.png" alt="">
                                     <div class="sec01-col-main-hover-txt sec01-col-main-hover-txt-02-01">
                                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/hover-text-02-01.png" alt="">
@@ -237,7 +237,7 @@ Template Name: enjoy
                                 </a>
                             </div>
                             <div class="sec01-col-main-02-02">
-                                <a href="<?php echo home_url(); ?>/enjoy/sauna/#salt" class="pulse-btn">
+                                <a href="<?php echo home_url(); ?>/enjoy/sauna/?type_id=salt#salt" class="pulse-btn">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-icon.png" alt="">
                                     <div class="sec01-col-main-hover-txt sec01-col-main-hover-txt-02-02">
                                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/hover-text-02-02.png" alt="">
@@ -245,7 +245,7 @@ Template Name: enjoy
                                 </a>
                             </div>
                             <div class="sec01-col-main-02-03">
-                                <a href="<?php echo home_url(); ?>/enjoy/spa/#else-01" class="pulse-btn">
+                                <a href="<?php echo home_url(); ?>/enjoy/spa/?type_id=else-01#else-01" class="pulse-btn">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-icon.png" alt="">
                                     <div class="sec01-col-main-hover-txt sec01-col-main-hover-txt-02-03">
                                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/hover-text-02-03.png" alt="">
@@ -253,7 +253,7 @@ Template Name: enjoy
                                 </a>
                             </div>
                             <div class="sec01-col-main-02-04">
-                                <a href="<?php echo home_url(); ?>/enjoy/spa/#else-03" class="pulse-btn">
+                                <a href="<?php echo home_url(); ?>/enjoy/spa/?type_id=else-03#else-03" class="pulse-btn">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-icon.png" alt="">
                                     <div class="sec01-col-main-hover-txt sec01-col-main-hover-txt-02-04">
                                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/hover-text-02-04.png" alt="">
@@ -261,7 +261,7 @@ Template Name: enjoy
                                 </a>
                             </div>
                             <div class="sec01-col-main-02-05">
-                                <a href="<?php echo home_url(); ?>/enjoy/spa/#natural" class="pulse-btn">
+                                <a href="<?php echo home_url(); ?>/enjoy/spa/?type_id=natur#natural" class="pulse-btn">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-icon.png" alt="">
                                     <div class="sec01-col-main-hover-txt sec01-col-main-hover-txt-02-05">
                                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/hover-text-02-05.png" alt="">
@@ -277,7 +277,7 @@ Template Name: enjoy
                                 </a>
                             </div>
                             <div class="sec01-col-main-02-07">
-                                <a href="<?php echo home_url(); ?>/enjoy/spa/#else-04" class="pulse-btn">
+                                <a href="<?php echo home_url(); ?>/enjoy/spa/?type_id=else-04#else-04" class="pulse-btn">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-icon.png" alt="">
                                     <div class="sec01-col-main-hover-txt sec01-col-main-hover-txt-02-07">
                                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/hover-text-02-07.png" alt="">
@@ -285,7 +285,7 @@ Template Name: enjoy
                                 </a>
                             </div>
                             <div class="sec01-col-main-02-08">
-                                <a href="<?php echo home_url(); ?>/enjoy/spa/#else-04" class="pulse-btn">
+                                <a href="<?php echo home_url(); ?>/enjoy/spa/?type_id=else-04#else-04" class="pulse-btn">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-icon.png" alt="">
                                     <div class="sec01-col-main-hover-txt sec01-col-main-hover-txt-02-08">
                                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/hover-text-02-08.png" alt="">
@@ -293,7 +293,7 @@ Template Name: enjoy
                                 </a>
                             </div>
                             <div class="sec01-col-main-02-09">
-                                <a href="<?php echo home_url(); ?>/enjoy/spa/#tansan" class="pulse-btn">
+                                <a href="<?php echo home_url(); ?>/enjoy/spa/?type_id=tansan#tansan" class="pulse-btn">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-icon.png" alt="">
                                     <div class="sec01-col-main-hover-txt sec01-col-main-hover-txt-02-09">
                                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/hover-text-02-09.png" alt="">
@@ -301,7 +301,7 @@ Template Name: enjoy
                                 </a>
                             </div>
                             <div class="sec01-col-main-02-10">
-                                <a href="<?php echo home_url(); ?>/enjoy/spa/#else-01" class="pulse-btn">
+                                <a href="<?php echo home_url(); ?>/enjoy/spa/?type_id=else-01#else-01" class="pulse-btn">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-icon.png" alt="">
                                     <div class="sec01-col-main-hover-txt sec01-col-main-hover-txt-02-10">
                                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/hover-text-02-10.png" alt="">
@@ -309,7 +309,7 @@ Template Name: enjoy
                                 </a>
                             </div>
                             <div class="sec01-col-main-02-11">
-                                <a href="<?php echo home_url(); ?>/enjoy/spa/#bihou" class="pulse-btn">
+                                <a href="<?php echo home_url(); ?>/enjoy/spa/?type_id=bihou#bihou" class="pulse-btn">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-icon.png" alt="">
                                     <div class="sec01-col-main-hover-txt sec01-col-main-hover-txt-02-11">
                                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/hover-text-02-11.png" alt="">
@@ -317,7 +317,7 @@ Template Name: enjoy
                                 </a>
                             </div>
                             <div class="sec01-col-main-02-12">
-                                <a href="<?php echo home_url(); ?>/enjoy/spa/#bihou" class="pulse-btn">
+                                <a href="<?php echo home_url(); ?>/enjoy/spa/?type_id=bihou#bihou" class="pulse-btn">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-icon.png" alt="">
                                     <div class="sec01-col-main-hover-txt sec01-col-main-hover-txt-02-12">
                                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/hover-text-02-12.png" alt="">
@@ -338,70 +338,70 @@ Template Name: enjoy
                             <ul>
                                 <li>
                                     <div class="com-btn-mobile com-btn-mobile--full">
-                                        <a href="<?php echo home_url(); ?>/enjoy/spa/#sec04">
+                                        <a href="<?php echo home_url(); ?>/enjoy/spa/?type_id=sec04#sec04">
                                             炭酸風呂<i></i>
                                         </a>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="com-btn-mobile com-btn-mobile--full">
-                                        <a href="<?php echo home_url(); ?>/enjoy/spa/#else-01">
+                                        <a href="<?php echo home_url(); ?>/enjoy/spa/?type_id=else-01#else-01">
                                             極冷水風呂(7℃)<i></i>
                                         </a>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="com-btn-mobile com-btn-mobile--full">
-                                        <a href="<?php echo home_url(); ?>/enjoy/spa/#else-02">
+                                        <a href="<?php echo home_url(); ?>/enjoy/spa/?type_id=else-02#else-02">
                                             水風呂(17℃)<i></i>
                                         </a>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="com-btn-mobile com-btn-mobile--full">
-                                        <a href="<?php echo home_url(); ?>/enjoy/spa/#else-03">
+                                        <a href="<?php echo home_url(); ?>/enjoy/spa/?type_id=else-03#else-03">
                                             電気風呂<i></i>
                                         </a>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="com-btn-mobile com-btn-mobile--full">
-                                        <a href="<?php echo home_url(); ?>/enjoy/spa/#else-04">
+                                        <a href="<?php echo home_url(); ?>/enjoy/spa/?type_id=else-04#else-04">
                                             ジェットバス<i></i>
                                         </a>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="com-btn-mobile com-btn-mobile--full">
-                                        <a href="<?php echo home_url(); ?>/enjoy/spa/#else-05">
+                                        <a href="<?php echo home_url(); ?>/enjoy/spa/?type_id=else-05#else-05">
                                             スーパージェットバス<i></i>
                                         </a>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="com-btn-mobile com-btn-mobile--full">
-                                        <a href="<?php echo home_url(); ?>/enjoy/spa/#sec05">
+                                        <a href="<?php echo home_url(); ?>/enjoy/spa/?type_id=sec05#sec05">
                                             天然温泉<i></i>
                                         </a>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="com-btn-mobile com-btn-mobile--full">
-                                        <a href="<?php echo home_url(); ?>/enjoy/spa/#bihou">
+                                        <a href="<?php echo home_url(); ?>/enjoy/spa/?type_id=bihou#bihou">
                                             美泡壺風呂<i></i>
                                         </a>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="com-btn-mobile com-btn-mobile--full">
-                                        <a href="<?php echo home_url(); ?>/enjoy/sauna/#hot">
+                                        <a href="<?php echo home_url(); ?>/enjoy/sauna/?type_id=hot#hot">
                                             高温サウナ<i></i>
                                         </a>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="com-btn-mobile com-btn-mobile--full">
-                                        <a href="<?php echo home_url(); ?>/enjoy/sauna/#salt">
+                                        <a href="<?php echo home_url(); ?>/enjoy/sauna/?type_id=salt#salt">
                                             塩サウナ<i></i>
                                         </a>
                                     </div>
@@ -444,10 +444,10 @@ Template Name: enjoy
                     <div class="enjoy-fixed-container-wrap-content-img">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-img-01.jpg" alt="">
                         <div class="enjoy-fixed-container-wrap-content-img-left">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-left.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-left-blue.png" alt="">
                         </div>
                         <div class="enjoy-fixed-container-wrap-content-img-right">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-right.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-right-blue.png" alt="">
                         </div>
                     </div>
                     <div class="enjoy-fixed-container-wrap-content-txt">

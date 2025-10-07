@@ -58,7 +58,7 @@ for ($i = 0; $i < 12; $i++) {
     </div>
     <section class="sec">
         <div class="content-width">
-            <div class="com-title center com-title-hidden">
+            <div class="com-title com-title--schedule center com-title-hidden">
                 <p>イベントスケジュール</p>
                 <h2 class="">
                     <span class="title">E</span><span class="title">V</span><span class="title">E</span><span class="title">N</span><span class="title">T</span> <span class="title">S</span><span class="title">C</span><span class="title">H</span><span class="title">E</span><span class="title">D</span><span class="title">U</span><span class="title">L</span><span class="title">E</span>

@@ -9,6 +9,20 @@
   --font-size-18: 18px;
   --font-size-65: 65px;
 }
+//一時的に案内非表示にしたので追加
+.sec04--no-annai {
+  padding-bottom: 120px !important;
+  @include media(middle) {
+    padding-bottom: 60px !important;
+  }
+}
+.no-link {
+  pointer-events: none !important;
+  cursor: default !important;
+  &:hover {
+    opacity: 1 !important;
+  }
+}
 
 .color-white {
   color: #fff !important;
@@ -278,7 +292,6 @@ img.lazyloaded {
     }
 
     &:hover {
-
       //background-color: #2e549c !important;
       i {
         transform: translateX(10px);
@@ -644,9 +657,7 @@ img.lazyloaded {
       }
     }
   }
-
-  &.com-title--else {
-
+  &.com-title--schedule {
     h2,
     h1 {
       .title {
@@ -657,7 +668,39 @@ img.lazyloaded {
 
       .title-item-sun {
         @include media(middle) {
-          display: none !important;
+          top: -23px !important;
+          left: 0px !important;
+        }
+      }
+    }
+    .title-item-sprout {
+      @include media(middle) {
+        width: 16px !important;
+        height: auto;
+        position: absolute;
+        right: 0px !important;
+        top: -30px !important;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  &.com-title--else {
+    h2,
+    h1 {
+      .title {
+        @include media(middle) {
+          font-size: 32px !important;
+        }
+      }
+
+      .title-item-sun {
+        @include media(middle) {
+          left: 0px !important;
+          top: -25px !important;
         }
       }
     }
@@ -667,8 +710,8 @@ img.lazyloaded {
         width: 16px !important;
         height: auto;
         position: absolute;
-        right: 0px !important;
-        top: -32px !important;
+        right: -3px !important;
+        top: -31px !important;
       }
 
       img {
@@ -722,7 +765,8 @@ img.lazyloaded {
 
       .title-item-sun {
         @include media(middle) {
-          display: none !important;
+          top: -23px !important;
+          left: 0px !important;
         }
       }
     }
@@ -1259,7 +1303,8 @@ img.lazyloaded {
 .com-btn-border--left {
   text-align: left !important;
 
-  a {}
+  a {
+  }
 }
 
 .com-btn-border-black {
@@ -1546,7 +1591,6 @@ img.lazyloaded {
     }
 
     &:hover {
-
       &::before {
         transform: translate(10px, -10px) rotate(10deg);
 

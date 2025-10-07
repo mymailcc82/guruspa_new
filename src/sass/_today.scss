@@ -16,6 +16,60 @@
 
   .sec00 {
     padding-bottom: 100px;
+    .sec00-loading {
+      text-align: center;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.8);
+      z-index: 10;
+      top: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      span {
+        font-size: 20px;
+        margin-bottom: 20px;
+        font-weight: 500;
+      }
+      .loader {
+        width: 40px;
+        height: 40px;
+        border: 4px solid #e81e23;
+        border-radius: 50%;
+        border-top-color: transparent;
+        animation: spin 1s linear infinite;
+        .dot {
+          width: 12px;
+          height: 12px;
+          background-color: #e81e23;
+          border-radius: 50%;
+          position: absolute;
+          top: -6px;
+          left: 50%;
+          transform: translateX(-50%);
+          animation: dot-spin 1s linear infinite;
+        }
+        @keyframes dot-spin {
+          0% {
+            transform: translateX(-50%) rotate(0deg);
+          }
+          100% {
+            transform: translateX(-50%) rotate(360deg);
+          }
+        }
+        @keyframes spin {
+          0% {
+            transform: rotate(0deg);
+          }
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+      }
+    }
     .sec00-container {
       background-color: #fff;
       overflow: hidden;
@@ -45,6 +99,14 @@
           border-radius: 50%;
           margin-right: 3px;
         }
+      }
+    }
+    #post_list {
+      padding-top: 0px !important;
+      display: block;
+      .post_list_li {
+        padding-top: 88px;
+        width: 314px;
       }
     }
     .sec00-swiper {

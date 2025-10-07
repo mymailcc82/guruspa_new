@@ -1,7 +1,7 @@
 <aside class="page-bnr">
     <div class="content-width">
         <div class="com-bnr-sec06-bottom">
-            <div class="sec06-bottom-col">
+            <div class="sec06-bottom-col sec06-bottom-col--event">
                 <div class="sec-01-col-under">
                     <a href="<?php echo home_url(); ?>/event/">
                         <div class="sec-01-col-under-img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/bnr/page-bnr-event-img_v2.jpg" alt=""></div>

@@ -3,6 +3,9 @@
 Template Name: enjoy-spa
 */
 ?>
+<?php
+$type_id = isset($_GET['type_id']) ? $_GET['type_id'] : '';
+?>
 <?php get_header(); ?>
 <main class="page-main enjoy spa">
     <div class="page-main-left-img">
@@ -57,8 +60,8 @@ Template Name: enjoy-spa
                 </div>
                 <div class="enjoy-wrap-img">
                     <ul>
-                        <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec01-img-01_v2.jpg" alt=""></li>
-                        <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec01-img-02_v2.jpg" alt=""></li>
+                        <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec01-img-01_v2.webp" alt=""></li>
+                        <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec01-img-02_v2.webp" alt=""></li>
                     </ul>
                 </div>
             </div>
@@ -86,10 +89,10 @@ Template Name: enjoy-spa
     </section>
     <section class="sec02" id="sec02">
         <div class="sec02-icon-01">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec02-icon-01.png" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec02-icon-01.webp" alt="">
         </div>
         <div class="sec02-icon-02">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec02-icon-02.png" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec02-icon-02.webp" alt="">
         </div>
         <div class="sec02-icon-03">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec02-icon-03.svg" alt="">
@@ -112,7 +115,7 @@ Template Name: enjoy-spa
                 <div class="sec03-wrap">
                     <div class="sec03-wrap-col">
                         <div class="sec03-wrap-col-left">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec02-img-01_v2.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec02-img-01_v2.webp" alt="">
                         </div>
                         <div class="sec03-wrap-col-right">
                             <h3>天然温泉100％の恵み</h3>
@@ -125,7 +128,7 @@ Template Name: enjoy-spa
                     </div>
                     <div class="sec03-wrap-col">
                         <div class="sec03-wrap-col-left">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec02-img-02_v2.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec02-img-02_v2.webp" alt="">
                         </div>
                         <div class="sec03-wrap-col-right">
                             <h3>気分に合わせて選べる多彩な湯船</h3>
@@ -137,7 +140,7 @@ Template Name: enjoy-spa
                     </div>
                     <div class="sec03-wrap-col">
                         <div class="sec03-wrap-col-left">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec02-img-03_v2.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec02-img-03_v2.webp" alt="">
                         </div>
                         <div class="sec03-wrap-col-right">
                             <h3>露天風呂で自然と調和する癒し</h3>
@@ -157,7 +160,7 @@ Template Name: enjoy-spa
 
     </section>
 
-    <section class="sec04" id="sec04">
+    <section class="sec04 sec04--no-annai" id="sec04">
         <div class="content-width-sm fadeup">
             <div class="page-title-center--has-icon page-title-center--has-icon--font-30">
                 <h2><i></i>湯めぐり案内</h2>
@@ -165,7 +168,7 @@ Template Name: enjoy-spa
         </div>
         <div class="sec04-container">
             <div class="sec04-bg">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-bg-01_v2.jpg" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-bg-01_v2.webp" alt="">
                 <div class="sec04-bg-icon">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-title-01.svg" alt="">
                 </div>
@@ -186,7 +189,7 @@ Template Name: enjoy-spa
                 <div class="sec03-wrap fadeup-timelug">
                     <div class="sec03-wrap-col fadeup-item">
                         <div class="sec03-wrap-col-img">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-img-01_v2.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-img-01_v2.webp" alt="">
                         </div>
                         <p>
                             サウナで毛穴の汚れを落とし、炭酸を吸収しやすい状態にしてから15分以上じっくり浸かるのがおすすめです。
@@ -194,7 +197,7 @@ Template Name: enjoy-spa
                     </div>
                     <div class="sec03-wrap-col fadeup-item">
                         <div class="sec03-wrap-col-img">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-img-02_v2.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-img-02_v2.webp" alt="">
                         </div>
                         <p>
                             炭酸が気化しないように波を立てず、ゆっくりと入りましょう。
@@ -202,7 +205,7 @@ Template Name: enjoy-spa
                     </div>
                     <div class="sec03-wrap-col fadeup-item">
                         <div class="sec03-wrap-col-img">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-img-03_v2.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-img-03_v2.webp" alt="">
                         </div>
                         <p>
                             体についた気泡はわらずに上がるのが効果的です。
@@ -210,7 +213,7 @@ Template Name: enjoy-spa
                     </div>
                     <div class="sec03-wrap-col fadeup-item">
                         <div class="sec03-wrap-col-img">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-img-04_v2.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-img-04_v2.webp" alt="">
                         </div>
                         <p>
                             毎日繰り返すことで、より効果を実感できます。
@@ -250,20 +253,29 @@ Template Name: enjoy-spa
                 <div class="sec04-center fadeup">
                     <h3>他のお風呂</h3>
                     <div class="sec04-center-wrap">
-                        <div class="sec04-center-wrap-col" id="else-01">
-                            <div class="sec04-center-wrap-col-img-dt">
+                        <?php
+                        if ($type_id == "else-01") {
+                            $active = "active";
+                            $active_style = "style='display: block;'";
+                        } else {
+                            $active = "";
+                            $active_style = "";
+                        }
+                        ?>
+                        <div class="sec04-center-wrap-col " id="else-01">
+                            <div class="sec04-center-wrap-col-img-dt <?php echo $active; ?>">
                                 <div class="sec04-center-wrap-col-img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-img-05_v2.jpg" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-img-05_v2.webp" alt="">
                                     <div class="sec04-center-wrap-col-img-span hidden-mobile">
                                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-title-01.svg" alt="">
                                     </div>
                                 </div>
                                 <h4>極冷水風呂(7℃)</h4>
                             </div>
-                            <div class="sec04-center-wrap-col-img-dd">
+                            <div class="sec04-center-wrap-col-img-dd" <?php echo $active_style; ?>>
                                 <div class="hidden-sm">
                                     <div class="sec04-center-wrap-col-img-sp">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-img-05_v2.jpg" alt="">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-img-05_v2.webp" alt="">
                                         <div class="sec04-center-wrap-col-img-span">
                                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-title-01.svg" alt="">
                                         </div>
@@ -277,21 +289,29 @@ Template Name: enjoy-spa
                                 </dl>
                             </div>
                         </div>
-
+                        <?php
+                        if ($type_id == "else-02") {
+                            $active = "active";
+                            $active_style = "style='display: block;'";
+                        } else {
+                            $active = "";
+                            $active_style = "";
+                        }
+                        ?>
                         <div class="sec04-center-wrap-col" id="else-02">
-                            <div class="sec04-center-wrap-col-img-dt">
+                            <div class="sec04-center-wrap-col-img-dt <?php echo $active; ?>">
                                 <div class="sec04-center-wrap-col-img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-img-06_v2.jpg" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-img-06_v2.webp" alt="">
                                     <div class="sec04-center-wrap-col-img-span hidden-mobile">
                                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-title-01.svg" alt="">
                                     </div>
                                 </div>
                                 <h4>水風呂(17℃)</h4>
                             </div>
-                            <div class="sec04-center-wrap-col-img-dd">
+                            <div class="sec04-center-wrap-col-img-dd" <?php echo $active_style; ?>>
                                 <div class="hidden-sm">
                                     <div class="sec04-center-wrap-col-img-sp">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-img-06_v2.jpg" alt="">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-img-06_v2.webp" alt="">
                                         <div class="sec04-center-wrap-col-img-span">
                                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-title-01.svg" alt="">
                                         </div>
@@ -305,21 +325,29 @@ Template Name: enjoy-spa
                                 </dl>
                             </div>
                         </div>
-
+                        <?php
+                        if ($type_id == "else-03") {
+                            $active = "active";
+                            $active_style = "style='display: block;'";
+                        } else {
+                            $active = "";
+                            $active_style = "";
+                        }
+                        ?>
                         <div class="sec04-center-wrap-col" id="else-03">
-                            <div class="sec04-center-wrap-col-img-dt">
+                            <div class="sec04-center-wrap-col-img-dt <?php echo $active; ?>">
                                 <div class="sec04-center-wrap-col-img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-img-07_v2.jpg" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-img-07_v2.webp" alt="">
                                     <div class="sec04-center-wrap-col-img-span hidden-mobile">
                                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-title-01.svg" alt="">
                                     </div>
                                 </div>
                                 <h4>電気風呂</h4>
                             </div>
-                            <div class="sec04-center-wrap-col-img-dd">
+                            <div class="sec04-center-wrap-col-img-dd " <?php echo $active_style; ?>>
                                 <div class="hidden-sm">
                                     <div class="sec04-center-wrap-col-img-sp">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-img-07_v2.jpg" alt="">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-img-07_v2.webp" alt="">
                                         <div class="sec04-center-wrap-col-img-span">
                                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-title-01.svg" alt="">
                                         </div>
@@ -338,19 +366,28 @@ Template Name: enjoy-spa
                         </div>
 
                         <div class="sec04-center-wrap-col" id="else-04">
-                            <div class="sec04-center-wrap-col-img-dt">
+                            <?php
+                            if ($type_id == "else-04") {
+                                $active = "active";
+                                $active_style = "style='display: block;'";
+                            } else {
+                                $active = "";
+                                $active_style = "";
+                            }
+                            ?>
+                            <div class="sec04-center-wrap-col-img-dt <?php echo $active; ?>">
                                 <div class="sec04-center-wrap-col-img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-img-08_v2.jpg" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-img-08_v2.webp" alt="">
                                     <div class="sec04-center-wrap-col-img-span hidden-mobile">
                                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-title-01.svg" alt="">
                                     </div>
                                 </div>
                                 <h4>ジェットバス</h4>
                             </div>
-                            <div class="sec04-center-wrap-col-img-dd">
+                            <div class="sec04-center-wrap-col-img-dd" <?php echo $active_style; ?>>
                                 <div class="hidden-sm">
                                     <div class="sec04-center-wrap-col-img-sp">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-img-08_v2.jpg" alt="">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-img-08_v2.webp" alt="">
                                         <div class="sec04-center-wrap-col-img-span">
                                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-title-01.svg" alt="">
                                         </div>
@@ -368,19 +405,28 @@ Template Name: enjoy-spa
                             </div>
                         </div>
                         <div class="sec04-center-wrap-col" id="else-05">
-                            <div class="sec04-center-wrap-col-img-dt">
+                            <?php
+                            if ($type_id == "else-05") {
+                                $active = "active";
+                                $active_style = "style='display: block;'";
+                            } else {
+                                $active = "";
+                                $active_style = "";
+                            }
+                            ?>
+                            <div class="sec04-center-wrap-col-img-dt <?php echo $active; ?>">
                                 <div class="sec04-center-wrap-col-img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-img-09_v2.jpg" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-img-09_v2.webp" alt="">
                                     <div class="sec04-center-wrap-col-img-span hidden-mobile">
                                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-title-01.svg" alt="">
                                     </div>
                                 </div>
                                 <h4>スーパージェットバス</h4>
                             </div>
-                            <div class="sec04-center-wrap-col-img-dd">
+                            <div class="sec04-center-wrap-col-img-dd" <?php echo $active_style; ?>>
                                 <div class="hidden-sm">
                                     <div class="sec04-center-wrap-col-img-sp">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-img-09_v2.jpg" alt="">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-img-09_v2.webp" alt="">
                                         <div class="sec04-center-wrap-col-img-span">
                                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-title-01.svg" alt="">
                                         </div>
@@ -402,7 +448,7 @@ Template Name: enjoy-spa
 
         <div class="sec04-container" id="sec05">
             <div class="sec04-bg">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-bg-02_v2.jpg" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-bg-02_v2.webp" alt="">
                 <div class="sec04-bg-icon">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-title-02.svg" alt="">
                 </div>
@@ -443,7 +489,7 @@ Template Name: enjoy-spa
 
                 <div class="sec04-wrap-blue-2-1" id="bihou">
                     <div class="sec04-wrap-blue-2-1-left">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-img-10.jpg" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-img-10.webp" alt="">
                         <div class="sec04-wrap-blue-2-1-left-span">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-title-02.svg" alt="">
                         </div>
@@ -468,7 +514,7 @@ Template Name: enjoy-spa
             </div>
         </div>
     </section>
-
+    <?php /*
     <section class="sec05" id="sec06">
         <div class="page-deco-bg">
             <picture>
@@ -512,6 +558,7 @@ Template Name: enjoy-spa
         </div>
 
     </section>
+    */ ?>
 
     <section class="sec07-com" id="sec07">
         <div class="content-width">

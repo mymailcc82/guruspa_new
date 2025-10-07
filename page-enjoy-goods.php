@@ -240,7 +240,14 @@ Template Name: enjoy-goods
                             ?>
                             <div class="sec04-wrap-col <?php echo $class_col; ?>">
                                 <a href="javascript:void(0);" class="goods-btn" data-id="goods_<?php echo $post->ID; ?>">
-                                    <div class="sec04-wrap-col-img">
+                                    <?php if ($class_col) {
+                                        $class_col = 'sec04-wrap-col-img--finish';
+                                    } else {
+                                        $class_col = '';
+                                    }
+                                    ?>
+
+                                    <div class="sec04-wrap-col-img <?php echo $class_col; ?>">
                                         <?php if (has_post_thumbnail()): ?>
                                             <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>">
                                         <?php else: ?>
@@ -273,7 +280,7 @@ Template Name: enjoy-goods
                     <div class="sec04-info-img">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/goods/sec04-info_v3.jpg" alt="">
                         <div class="sec04-info-img-01">
-                            <span class="pulse-btn">
+                            <span class="pulse-btn no-link">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/goods/sec01-main-icon_v2.png" alt="">
                             </span>
                         </div>
@@ -388,7 +395,7 @@ Template Name: enjoy-goods
                         <div class="sec04-info-img">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/goods/sec04-info_v4.jpg" alt="">
                             <div class="sec04-info-img-01">
-                                <span class="pulse-btn">
+                                <span class="pulse-btn no-link">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/goods/sec01-main-icon_v2.png" alt="">
                                 </span>
                             </div>
@@ -396,12 +403,14 @@ Template Name: enjoy-goods
                         <div class="sec04-info-txt">
                             <dl>
                                 <dt>販売場所</dt>
-                                <dd>○階 ○○○○○</dd>
+                                <dd>1F 待合ホール スイートラボ前 </dd>
                             </dl>
+                            <?php /*
                             <dl>
                                 <dt>販売時間</dt>
                                 <dd>10:00〜22:00</dd>
                             </dl>
+                            */ ?>
                             <p>
                                 ※ネットショップは行っておりません。お買い求めの際は店頭にお越しください。
                             </p>

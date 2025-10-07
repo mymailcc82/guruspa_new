@@ -186,6 +186,10 @@ template name: 採用ページトップ
         <div class="content-width fadeup">
             <div class="sec01-desc">
                 <p>
+                    松阪温泉GURUSPA、<br class="hidden-sm">2025年10月オープン！<br>
+                    新しいピカピカの施設で、<br class="hidden-mobile">接客スタッフとして働きませんか？<br>
+                    お風呂や温泉、サウナが好きな方大歓迎！<br class="hidden-mobile">おもてなしを通じて、その”好き”な気持ちをお客様にお届けしましょう！<br>
+                    正社員も募集中です。是非、お気軽にエントリーくださいませ！
                     <?php
                     /*
                     <span class="brown">従業員もお客様もサウナ好き！<br class="hidden-sm"></span>そんな施設で働きませんか。<br>
@@ -221,10 +225,10 @@ template name: 採用ページトップ
                         <div class="sec01-wrap-col-img">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/recruit_top/sec01-img-02_v2.webp" alt="">
                         </div>
-                        <h2>オープングスタッフに<br>なりたい！</h2>
+                        <h2>新しい施設で<br>働きたい</h2>
                         <p>
-                            これから働く仲間達も<br>
-                            みんな一緒のスタートだから安心！
+                            新しい施設だからみんな初心者！<br>
+                            いっしょに成長していける！
                         </p>
                     </div>
                 </div>

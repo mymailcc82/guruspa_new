@@ -57,42 +57,68 @@ while ($the_query->have_posts()) {
     $post_data_row["id"] = get_the_ID();
     $post_data_row["title"] = get_the_title();
     $post_data_row["link"] = get_permalink();
-    $post_data_row["thumbnail"] = get_the_post_thumbnail_url($post_id, 'full');
+    $post_data_row["is_hot"] = get_field("hot");
     $post_data_row["event_start_date"] = get_field('event_start_date', false, false);
-    $post_data_row["event_all_day_flg"] = get_field('event_all_day_flg');
-
-    //event_categoryのタームを取得
-    $category_event = get_the_terms($post_id, 'event_category');
-    $category_name = $category_event[0]->name;
-    $post_data_row["category_name"] = $category_name;
-    if ($category_event && !is_wp_error($category_event)) {
-        $post_data_row["event_category"] = $category_event[0]->name;
-        $category_slug = $category_event[0]->slug;
+    $taxonomy_event_category = get_the_terms($post_id, 'event_category');
+    $category_slug = $taxonomy_event_category[0]->slug;
+    $category_slug_parent = '';
+    //$event_category[0]の親カテゴリーを取得
+    //var_dump($event_category[0]);
+    if ($taxonomy_event_category[0]->parent) {
+        $parent_term = get_term($taxonomy_event_category[0]->parent, 'event_category');
+        if ($parent_term && !is_wp_error($parent_term)) {
+            $category_slug_parent_id = $parent_term->term_id;
+            $category_slug_parent = $parent_term->slug;
+        }
+    }
+    if (has_post_thumbnail()) {
+        $post_data_row["thumbnail"] = get_the_post_thumbnail_url($post_id, 'full');
+        $post_data_row["thumbnail_sp"] = get_the_post_thumbnail_url($post_id, 'medium');
     } else {
-        $post_data_row["event_category"] = '';
-        $category_slug = '';
+        $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-default.jpg'; // デフォルト画像
+        $default_image_url_sp = get_template_directory_uri() . '/assets/img/archive/archive-default_sp.jpg'; // デフォルト画像
+
+        if ($category_slug === 'information' || $category_slug_parent === 'information') {
+            $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-red.jpg';
+            $default_image_url_sp = get_template_directory_uri() . '/assets/img/archive/archive-red_sp.jpg';
+        } elseif ($category_slug === 'event' || $category_slug_parent === 'event') {
+            $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-green.jpg';
+            $default_image_url_sp = get_template_directory_uri() . '/assets/img/archive/archive-green_sp.jpg';
+        } elseif ($category_slug === 'food' || $category_slug_parent === 'food') {
+            $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-yellow.jpg';
+            $default_image_url_sp = get_template_directory_uri() . '/assets/img/archive/archive-yellow_sp.jpg';
+        } elseif ($category_slug === 'relax' || $category_slug_parent === 'relax') {
+            $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-blue.jpg';
+            $default_image_url_sp = get_template_directory_uri() . '/assets/img/archive/archive-blue_sp.jpg';
+        } elseif ($category_slug === 'tokiwa') {
+        }
+        $post_data_row["thumbnail"] = $default_image_url;
+        $post_data_row["thumbnail_sp"] = $default_image_url_sp;
     }
 
-    if ($category_slug === 'information') {
+    $cats_class = '';
+    if ($category_slug === 'information' || $category_slug_parent === 'information') {
         $cats_class = 'category-red';
-    } elseif ($category_slug === 'event') {
+    } elseif ($category_slug === 'event' || $category_slug_parent === 'event') {
         $cats_class = 'category-green';
-    } elseif ($category_slug === 'food') {
+    } elseif ($category_slug === 'food' || $category_slug_parent === 'food') {
         $cats_class = 'category-yellow';
+    } elseif ($category_slug === 'relax' || $category_slug_parent === 'relax') {
+        $cats_class = 'category-blue';
     }
     $post_data_row["category_class"] = $cats_class;
 
 
-    if ($post_data_row["thumbnail"] == '') {
-        $post_data_row["thumbnail"] = get_template_directory_uri() . '/assets/img/archive/archive-default.jpg';
-        if ($category_slug === 'information') {
-            $post_data_row["thumbnail"] = get_template_directory_uri() . '/assets/img/archive/archive-red.jpg';
-        } elseif ($category_slug === 'event') {
-            $post_data_row["thumbnail"] = get_template_directory_uri() . '/assets/img/archive/archive-green.jpg';
-        } elseif ($category_slug === 'food') {
-            $post_data_row["thumbnail"] = get_template_directory_uri() . '/assets/img/archive/archive-yellow.jpg';
-        }
+    $categories = get_the_terms($post_id, 'event_category');
+    if (! empty($categories) && ! is_wp_error($categories)) {
+        $post_data_row["category_name"] = $categories[0]->name;
+        $post_data_row["category_slug"] = $categories[0]->slug;
+    } else {
+        $post_data_row["category_name"] = '';
+        $post_data_row["category_slug"] = '';
     }
+    $post_data_row["start_day"] = get_post_meta($post_id, 'sys_start_day', true);
+    $post_data_row["finish_day"] = get_post_meta($post_id, 'sys_finish_day', true);
     $post_data[] = $post_data_row;
 }
 

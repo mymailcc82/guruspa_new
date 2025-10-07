@@ -3,6 +3,9 @@
 .archive {
   .sec {
     padding-bottom: 100px;
+    @include media(middle) {
+      padding-bottom: 50px;
+    }
   }
   .sec01-col {
     margin: 45px auto 115px;

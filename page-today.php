@@ -75,6 +75,12 @@ $days = days_from_today_for_months();
     </section>
     <section class="sec00">
         <div class="sec00-container">
+            <div class="sec00-loading">
+                <span>Loading...</span>
+                <div class="loader">
+                    <div class="dot"></div>
+                </div>
+            </div>
             <div class="sec00-swiper swiper">
                 <div class="swiper-wrapper">
                     <?php foreach ($days as $day): ?>
@@ -135,7 +141,7 @@ $days = days_from_today_for_months();
             ?>
             <?php $the_query = new WP_Query($args); ?>
             <div class="sec01-col-main">
-                <div id="post_list">
+                <ul id="post_list">
                     <?php if ($the_query->have_posts()) : ?>
                         <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
                             <?php
@@ -143,56 +149,14 @@ $days = days_from_today_for_months();
                             $event_start_date = get_field('event_start_date'); // 開始日
                             $is_hot = get_field('hot'); // HOT! フラグ
                             ?>
-                            <li>
+                            <li class="post_list_li">
                                 <a href="<?php the_permalink(); ?>">
                                     <?php if ($is_hot) : ?>
                                         <span class="hot"><?php echo $is_hot; ?></span>
                                     <?php endif; ?>
                                     <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
-                                    <div class="img img-event">
-                                        <?php if (has_post_thumbnail()) : ?>
-                                            <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>">
-                                        <?php else : ?>
-                                            <?php if ($event_category && !is_wp_error($event_category)) : ?>
-                                                <?php
-                                                // カテゴリーに応じたデフォルト画像を設定
-                                                $category_slug = $event_category[0]->slug;
-                                                $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-default.jpg'; // デフォルト画像
-
-                                                if ($category_slug === 'information') {
-                                                    $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-red.jpg';
-                                                } elseif ($category_slug === 'event') {
-                                                    $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-green.jpg';
-                                                } elseif ($category_slug === 'food') {
-                                                    $default_image_url = get_template_directory_uri() . '/assets/img/archive/archive-yellow.jpg';
-                                                }
-                                                ?>
-                                                <img src="<?php echo esc_url($default_image_url); ?>" alt="<?php the_title(); ?>">
-                                            <?php else : ?>
-                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-default.jpg" alt="<?php the_title(); ?>">
-                                            <?php endif; ?>
-                                        <?php endif; ?>
-                                    </div>
-                                    <div class="text">
-                                        <div class="text-info">
-                                            <?php
-                                            if ($category_slug === 'information') {
-                                                $cats_class = 'category-red';
-                                            } elseif ($category_slug === 'event') {
-                                                $cats_class = 'category-green';
-                                            } elseif ($category_slug === 'food') {
-                                                $cats_class = 'category-yellow';
-                                            }
-                                            ?>
-                                            <div class="text-info-cat">
-                                                <span class="category <?php echo esc_attr($cats_class); ?>"><?php echo esc_html($event_category[0]->name); ?></span>
-                                            </div>
-                                            <div class="text-info-term">
-                                                <span class="term"><?php echo $event_start_date; ?></span>
-                                            </div>
-                                        </div>
-                                        <h3><?php the_title(); ?></h3>
-                                    </div>
+                                    <?php get_template_part('inc/inc-event-img'); ?>
+                                    <?php get_template_part('inc/inc-event-text'); ?>
                                 </a>
                             </li>
                         <?php endwhile; ?>
@@ -201,7 +165,7 @@ $days = days_from_today_for_months();
                     <?php else : ?>
                         <p class="text-base center">イベントが見つかりませんでした。</p>
                     <?php endif; ?>
-                </div>
+                </ul>
             </div>
         </div>
     </section>
@@ -233,7 +197,7 @@ $days = days_from_today_for_months();
                         </div>
                         <div class="swiper-button-prev swiper-button-prev-01"></div>
                         <div class="swiper-button-next swiper-button-next-01"></div>
-                        <div class="swiper-pagination"></div>
+                        <div class="swiper-pagination swiper-pagination-01"></div>
                     </div>
                     <div class="sec01-btn">
                         <div class="com-btn-border-black hidden-mobile">
@@ -296,15 +260,30 @@ $days = days_from_today_for_months();
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
     //swiper
+    // next ボタンをカスタムで処理
+    document.querySelector('.swiper-button-next-00').addEventListener('click', function(e) {
+        e.preventDefault();
+        // realIndex は 0..(N-1) の実インデックス
+        swiper_00.slideToLoop(swiper_00.realIndex + 6, 500); // 500ms アニメーション
+    });
+
+    // prev ボタン（戻る場合）
+    document.querySelector('.swiper-button-prev-00').addEventListener('click', function(e) {
+        e.preventDefault();
+        swiper_00.slideToLoop(swiper_00.realIndex - 6, 500);
+    });
+
     const swiper_00 = new Swiper('.sec00-swiper', {
         // Optional parameters
         loop: true,
         slidesPerView: "auto",
         spaceBetween: 0,
+        threshold: 6, // 最低ドラッグ量(px)
+        preventClicks: false, // native click を抑制しない
+        preventClicksPropagation: false,
+        touchStartPreventDefault: false,
         //centeredSlides: true,
         // Navigation arrows
-
-
         navigation: {
             nextEl: '.swiper-button-next-00',
             prevEl: '.swiper-button-prev-00',
@@ -371,28 +350,27 @@ $days = days_from_today_for_months();
                         }
 
                         if (!loop_flg) {
-                            console.log("成功")
                             const swiper = new Swiper('.swiper-event', {
                                 slidesPerView: 'auto', // 幅固定 or auto
                                 spaceBetween: 30, // スライド間の余白
-                                centeredSlides: centeredSlides_flg, // 常に中央スライドをセンターに
+                                centeredSlides: false, // 常に中央スライドをセンターに
                                 loop: loop_flg, // 無限ループ
+                                threshold: 6, // 最低ドラッグ量(px)
+                                preventClicks: false, // native click を抑制しない
+                                preventClicksPropagation: false,
+                                touchStartPreventDefault: false,
 
                                 autoplay: {
                                     delay: 3000, // 3秒ごとに切り替え
                                     disableOnInteraction: false, // 操作後も自動再生を継続
                                 },
 
-                                navigation: {
-                                    nextEl: '.swiper-button-next', // 「次へ」ボタン要素のクラス
-                                    prevEl: '.swiper-button-prev', // 「前へ」ボタン要素のクラス
-                                },
                                 lazy: {
                                     loadPrevNext: true,
                                     loadOnTransitionStart: true,
                                 },
                                 pagination: {
-                                    el: '.swiper-pagination',
+                                    el: '.swiper-pagination-00',
                                     clickable: true,
                                 },
                                 breakpoints: {
@@ -408,37 +386,15 @@ $days = days_from_today_for_months();
                                 }
                             });
                         }
-
-
                     }
                 });
             }
-
         }
         //initの時に実行
         // 現在の active スライド要素
     });
 
-    // Swiper の click イベントを使う方法（推奨）
-    swiper_00.on('click', function(swiper, e) {
-        // クリックされた DOM ノードから .swiper-slide を探す
-        const slideEl = e.target.closest('.swiper-slide');
-        if (!slideEl) return;
 
-        // 重複スライドでも正しいインデックスが取れる data 属性
-        const realIndexAttr = slideEl.getAttribute('data-swiper-slide-index');
-        if (realIndexAttr != null) {
-            const realIndex = Number(realIndexAttr);
-            // ループを考慮してそのスライドへ移動（active になる）
-            swiper.slideToLoop(realIndex, 300); // 300ms のアニメーション
-            return;
-        }
-
-        // 保険：clickedIndex が使える場合
-        if (typeof swiper.clickedIndex === 'number' && swiper.clickedIndex >= 0) {
-            swiper.slideToLoop(swiper.clickedIndex, 300);
-        }
-    });
 
     //swiper
     const swiper_01 = new Swiper('.sec01-swiper', {
@@ -447,11 +403,8 @@ $days = days_from_today_for_months();
         slidesPerView: 1,
         spaceBetween: 80,
         centeredSlides: true,
-
-
-        // If we need pagination
         pagination: {
-            el: '.swiper-pagination',
+            el: '.swiper-pagination-01',
             clickable: true,
         },
 
@@ -483,6 +436,8 @@ $days = days_from_today_for_months();
                         $(this).addClass('active-event');
                     }
                 });
+                //loadingを非表示
+                $('.sec00-loading').fadeOut();
             }
         });
     });
@@ -500,24 +455,16 @@ $days = days_from_today_for_months();
         slidesPerView: 'auto', // 幅固定 or auto
         spaceBetween: 30, // スライド間の余白
         centeredSlides: centeredSlides_flg, // 常に中央スライドをセンターに
-        loop: loop_flg, // 無限ループ
+        loop: false, // 無限ループ
 
         autoplay: {
             delay: 3000, // 3秒ごとに切り替え
             disableOnInteraction: false, // 操作後も自動再生を継続
         },
 
-        navigation: {
-            nextEl: '.swiper-button-next', // 「次へ」ボタン要素のクラス
-            prevEl: '.swiper-button-prev', // 「前へ」ボタン要素のクラス
-        },
         lazy: {
             loadPrevNext: true,
             loadOnTransitionStart: true,
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
         },
         breakpoints: {
             320: {
@@ -530,6 +477,27 @@ $days = days_from_today_for_months();
                 spaceBetween: 15, // スライド間の余白
             },
         }
+    });
+    // イベントハンドラ（tap を優先、click を保険で両方監視）
+    function goToSlideFromElem(slideEl, swiper) {
+        if (!slideEl) return;
+        const realIndexAttr = slideEl.getAttribute('data-swiper-slide-index');
+        if (realIndexAttr != null) {
+            swiper.slideToLoop(Number(realIndexAttr), 300);
+            return;
+        }
+        if (typeof swiper.clickedIndex === 'number' && swiper.clickedIndex >= 0) {
+            swiper.slideToLoop(swiper.clickedIndex, 300);
+        }
+    }
+    // Swiper の click イベントを使う方法（推奨）
+    swiper_00.on('tap click', function(swiper, e) {
+        // デバッグ（発火しない時は console を見てください）
+        // console.log('swiper event', e.type, 'clickedIndex', swiper.clickedIndex, 'clickedSlide', swiper.clickedSlide, 'target', e.target);
+
+        // まず Swiper が保持する clickedSlide を優先
+        const slideEl = swiper.clickedSlide || e.target.closest('.swiper-slide');
+        goToSlideFromElem(slideEl, swiper);
     });
 </script>
 <?php get_footer(); ?>

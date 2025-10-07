@@ -711,6 +711,7 @@
                   align-items: center;
                   padding: 0 20px;
                   position: relative;
+
                   @include media(middle) {
                     padding: 0 20px 0px 12px;
                   }
@@ -734,6 +735,7 @@
                     @include media(middle) {
                       font-size: 14px;
                     }
+
                     span {
                       font-size: 16px;
                       letter-spacing: 0.02em;
@@ -746,6 +748,7 @@
                       vertical-align: bottom;
                       line-height: 1.4;
                       max-width: 100%;
+
                       @include media(middle) {
                         font-size: 14px;
                       }
@@ -1203,6 +1206,10 @@
           left: 0;
           transform: translateX(0px);
         }
+
+        @include media(mobile) {
+          bottom: -130px;
+        }
       }
     }
 
@@ -1473,8 +1480,7 @@
         }
 
         /* non-scaling-stroke は拡大縮小時に stroke 幅を一定に保つ */
-        path {
-        }
+        path {}
 
         .sec03-col-item-child {
           position: absolute;
@@ -1815,6 +1821,12 @@
         background-image: url(("./assets/img/com/sec04-bg-main.jpg"));
         background-size: cover;
         background-repeat: no-repeat;
+
+        @include media(mobile) {
+          background-image: url(("./assets/img/com/sec04-bg-main_sp.jpg"));
+          background-size: contain;
+          background-repeat: repeat;
+        }
       }
 
       @keyframes drop {
@@ -1897,6 +1909,10 @@
         z-index: 3;
         left: 3%;
         top: 150px;
+
+        @include media(mobile) {
+          width: 15.78px;
+        }
       }
 
       .shizuku-2 {
@@ -1905,6 +1921,10 @@
         z-index: 3;
         left: 6%;
         top: 225px;
+
+        @include media(mobile) {
+          width: 31.52px;
+        }
       }
 
       .shizuku-3 {
@@ -1913,6 +1933,10 @@
         left: 3%;
         top: 350px;
         z-index: 3;
+
+        @include media(mobile) {
+          width: 37.52px;
+        }
       }
 
       .shizuku-4 {
@@ -1921,6 +1945,10 @@
         z-index: 3;
         right: 3%;
         bottom: 650px;
+
+        @include media(mobile) {
+          width: 22.35px;
+        }
       }
 
       .shizuku-5 {
@@ -1929,6 +1957,10 @@
         z-index: 3;
         right: 5%;
         bottom: 550px;
+
+        @include media(mobile) {
+          width: 37.3px;
+        }
       }
 
       .ring-1,
@@ -1972,6 +2004,11 @@
         @include media(middle) {
           width: 351px;
         }
+
+        @include media(mobile) {
+          left: -30%;
+          top: 27%;
+        }
       }
 
       .ring-2 {
@@ -1982,6 +2019,10 @@
 
         @include media(middle) {
           width: 250px;
+        }
+
+        @include media(mobile) {
+          bottom: 6%;
         }
       }
 
@@ -2098,6 +2139,10 @@
             a {
               left: 3vw;
               bottom: 0;
+
+              @include media(mobile) {
+                left: 0;
+              }
             }
           }
         }
@@ -2460,7 +2505,8 @@
           @include media(middle-small) {
             width: 159px;
             height: 212px;
-            bottom: 50px;
+            bottom: -210px;
+            right: -15px;
           }
         }
       }
@@ -2588,6 +2634,10 @@
         background-image: url(("./assets/img/com/sec06-bg-main.jpg"));
         background-size: cover;
         background-repeat: no-repeat;
+
+        @include media(mobile) {
+          background-image: url(("./assets/img/com/sec06-bg-main_sp.png"));
+        }
       }
 
       @include media(mobile) {
@@ -2690,7 +2740,7 @@
       flex-wrap: wrap;
 
       @include media(mobile) {
-        padding-bottom: 80px;
+        padding-bottom: 30px;
       }
 
       .sec07-wrap-title {
