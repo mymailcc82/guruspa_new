@@ -409,8 +409,8 @@
           bottom: 355px;
           @include media(middle) {
             width: calc(18 * (100vw / 390));
-            right: calc(111 * (100vw / 390));
-            bottom: calc(125 * (100vw / 390));
+            right: calc(147 * (100vw / 390));
+            bottom: calc(120 * (100vw / 390));
           }
         }
         .sec01-col-main-01-08 {
@@ -418,10 +418,11 @@
           width: 45px;
           right: 310px;
           bottom: 357px;
+
           @include media(middle) {
             width: calc(18 * (100vw / 390));
             right: calc(111 * (100vw / 390));
-            bottom: calc(100 * (100vw / 390));
+            bottom: calc(125 * (100vw / 390));
           }
         }
         .sec01-col-main-01-09 {
@@ -429,10 +430,11 @@
           width: 45px;
           right: 311px;
           bottom: 286px;
+
           @include media(middle) {
             width: calc(18 * (100vw / 390));
             right: calc(111 * (100vw / 390));
-            bottom: calc(75 * (100vw / 390));
+            bottom: calc(100 * (100vw / 390));
           }
         }
         .sec01-col-main-01-10 {
@@ -440,10 +442,11 @@
           width: 45px;
           right: 293px;
           bottom: 254px;
+
           @include media(middle) {
             width: calc(18 * (100vw / 390));
-            right: calc(42 * (100vw / 390));
-            bottom: calc(95 * (100vw / 390));
+            right: calc(111 * (100vw / 390));
+            bottom: calc(75 * (100vw / 390));
           }
         }
         .sec01-col-main-01-11 {
@@ -453,8 +456,8 @@
           bottom: 247px;
           @include media(middle) {
             width: calc(18 * (100vw / 390));
-            right: calc(147 * (100vw / 390));
-            bottom: calc(120 * (100vw / 390));
+            right: calc(42 * (100vw / 390));
+            bottom: calc(95 * (100vw / 390));
           }
         }
         .sec01-col-main-01-12 {

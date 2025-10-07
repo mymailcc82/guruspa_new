@@ -180,11 +180,11 @@
                         </tr>
                         <tr>
                             <td>
-                                幼児<br><span>※3歳以下</span>
+								幼児<br><span>※小学生未満</span>
                             </td>
                             <td colspan="2">
-                                ご利用できません
-                            </td>
+								小学生未満 ご利用できません
+                            </td>
                         </tr>
                     </table>
                 </div>

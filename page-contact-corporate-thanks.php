@@ -76,7 +76,7 @@ Template Name: お問い合わせ(法人のお客様向け)完了
                     </div>
                 </div>
                 <div class="sec02-about-txt">
-                    <h2>thank you！</h2>
+                    <h2>THANK YOU！</h2>
                     <h3>お問い合わせありがとうございました。</h3>
                     <p>
                         担当より3営業日以内にご連絡をさせていただきます。<br>

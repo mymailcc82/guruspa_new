@@ -78,6 +78,9 @@
           font-weight: bold;
           line-height: 1.5;
           margin: 10px 0px 0px;
+          width: calc(100% + 20px);
+          position: relative;
+          left: -10px;
           @include media(middle) {
             font-size: 12px;
           }
@@ -116,10 +119,10 @@
         gap: 2%;
       }
       .sec03-wrap-col {
-        width: 18.5%;
+        width: 26.5%;
         margin-right: 1.6%;
         @include media(mobile) {
-          width: 33%;
+          width: 48%;
           margin-right: 0px;
           margin-bottom: 20px;
         }
@@ -140,6 +143,27 @@
           margin: 10px 0px 0px;
           @include media(middle) {
             font-size: 12px;
+          }
+          strong {
+            font-size: 16px;
+            display: flex;
+            height: 48px;
+            justify-content: center;
+            align-items: center;
+            @include media(middle) {
+              font-size: 12px;
+              //折り返し禁止
+              height: 40px;
+            }
+          }
+          span {
+            display: block;
+            margin: 10px 0px;
+            font-size: 14px;
+            color: #c64448;
+            @include media(middle) {
+              font-size: 12px;
+            }
           }
         }
       }

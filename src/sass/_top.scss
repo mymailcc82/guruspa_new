@@ -2350,6 +2350,9 @@
         @include media(mobile) {
           text-align: center;
         }
+        &.red {
+          color: #e81e23 !important;
+        }
       }
 
       .price-table {
@@ -2361,6 +2364,11 @@
         overflow: hidden;
         table-layout: fixed;
         text-align: center;
+        &.price-table--red {
+          th {
+            background-color: #e81e23 !important;
+          }
+        }
       }
 
       .price-table th,

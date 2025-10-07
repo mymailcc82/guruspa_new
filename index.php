@@ -740,8 +740,8 @@
                         </p>
                     </div>
                     <div class="sec05-wrap-under-item">
-                        <h3>発汗エリア(有料岩盤浴)</h3>
-                        <table class="price-table">
+                        <h3 class="red">発汗エリア(有料岩盤浴)</h3>
+                        <table class="price-table price-table--red">
                             <thead>
                                 <tr>
                                     <th class="col-left"></th>
@@ -773,16 +773,16 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        幼児<br><span class="note">※3歳以下</span>
+                                        幼児<br><span class="note">※小学生未満</span>
                                     </td>
-                                    <td colspan="2"><strong>無料</strong></td>
+                                    <td colspan="2"><strong>小学生未満　ご利用できません</strong></td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                     <div class="sec05-wrap-txt">
                         <p>
-                            ※ 発汗エリアセットには専用ウェア・タオルが含まれます。<br>
+                            ※ 発汗エリア料金には専用ウェア・岩盤浴用大判タオルが含まれます。<br>
                             ※ 小学生未満のお子様はご利用できません。
                         </p>
                     </div>
