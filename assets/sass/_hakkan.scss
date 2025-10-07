@@ -410,6 +410,7 @@
         margin-bottom: 60px;
         padding: 0px 7.5%;
         overflow: scroll;
+        overflow-y: visible;
         //scrollbar消す
         -ms-overflow-style: none; // IE and Edge
         scrollbar-width: none; // Firefox
@@ -431,10 +432,6 @@
         &:before {
           width: 100% !important;
           opacity: 1 !important;
-          @include media(mobile) {
-            width: 20px !important;
-            height: 100% !important;
-          }
         }
       }
       &:before {

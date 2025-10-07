@@ -143,11 +143,11 @@
           opacity: 1 !important;
           transition-delay: 1s;
         }
-        .sec02-icon-03 {
+        .sec02-icon-03-first {
           opacity: 1 !important;
           transition-delay: 0.2s;
         }
-        .sec02-icon-04 {
+        .sec02-icon-04-first {
           opacity: 1 !important;
           transition-delay: 0.2s;
         }
@@ -158,7 +158,7 @@
           opacity: 1 !important;
         }
       }
-      .sec02-icon-04 {
+      .sec02-icon-04-first {
         width: 308px;
         position: absolute;
         left: -100px;
@@ -245,7 +245,7 @@
           bottom: 0px;
         }
       }
-      .sec02-icon-03 {
+      .sec02-icon-03-first {
         width: 143px;
         position: absolute;
         left: 30px;
@@ -313,6 +313,18 @@
           z-index: -1;
           @include media(mobile) {
             display: none;
+          }
+        }
+        p {
+          @include media(mobile) {
+            font-size: 14px;
+            letter-spacing: -0.02em;
+          }
+          span {
+            @include media(mobile) {
+              font-size: 15px;
+              letter-spacing: -0.02em;
+            }
           }
         }
       }

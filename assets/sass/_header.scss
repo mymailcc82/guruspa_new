@@ -3,6 +3,7 @@
 .header-drawer.drawer-open {
   transform: translateY(0);
   visibility: visible;
+  opacity: 1 !important;
 }
 
 .header-drawer.drawer-open .header-drawer-bg {
@@ -22,6 +23,8 @@
   z-index: 1000;
   visibility: hidden;
   overflow: hidden;
+  opacity: 0;
+  transition: all 0.4s ease;
 
   @include media(lg) {
     overflow-y: scroll;

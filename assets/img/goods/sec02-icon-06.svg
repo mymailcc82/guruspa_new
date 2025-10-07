@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="180" viewBox="0 0 180 180">
+  <g id="グループ_24118" data-name="グループ 24118" transform="translate(-592 -1194)">
+    <rect id="浴場_" data-name="浴場１" width="180" height="180" transform="translate(592 1194)" fill="#fff"/>
+    <g id="グループ_23616" data-name="グループ 23616" transform="translate(649.222 1230.001)">
+      <g id="グループ_23614" data-name="グループ 23614" transform="translate(44.086 0) rotate(31)">
+        <line id="線_2597" data-name="線 2597" y2="62.1" transform="translate(5.874 12.588)" fill="none" stroke="#e81e23" stroke-width="4.5"/>
+        <g id="楕円形_612" data-name="楕円形 612" transform="translate(0 0)" fill="#e81e23" stroke="#e81e23" stroke-width="1">
+          <ellipse cx="5.874" cy="9.231" rx="5.874" ry="9.231" stroke="none"/>
+          <ellipse cx="5.874" cy="9.231" rx="5.374" ry="8.731" fill="none"/>
+        </g>
+        <g id="楕円形_613" data-name="楕円形 613" transform="translate(0 67.135)" fill="#e81e23" stroke="#e81e23" stroke-width="1">
+          <ellipse cx="5.874" cy="9.231" rx="5.874" ry="9.231" stroke="none"/>
+          <ellipse cx="5.874" cy="9.231" rx="5.374" ry="8.731" fill="none"/>
+        </g>
+      </g>
+      <g id="グループ_23615" data-name="グループ 23615" transform="translate(44.786 21.476) rotate(11)">
+        <line id="線_2597-2" data-name="線 2597" y2="62.1" transform="translate(5.874 12.588)" fill="none" stroke="#e81e23" stroke-width="4.5"/>
+        <g id="楕円形_612-2" data-name="楕円形 612" transform="translate(0 0)" fill="#e81e23" stroke="#e81e23" stroke-width="1">
+          <ellipse cx="5.874" cy="9.231" rx="5.874" ry="9.231" stroke="none"/>
+          <ellipse cx="5.874" cy="9.231" rx="5.374" ry="8.731" fill="none"/>
+        </g>
+        <g id="楕円形_613-2" data-name="楕円形 613" transform="translate(0 67.135)" fill="#e81e23" stroke="#e81e23" stroke-width="1">
+          <ellipse cx="5.874" cy="9.231" rx="5.874" ry="9.231" stroke="none"/>
+          <ellipse cx="5.874" cy="9.231" rx="5.374" ry="8.731" fill="none"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -70,7 +70,7 @@
 
             <div class="sec02-container">
                 <h3>通常入泉</h3>
-                <div class="sec02-table">
+                <div class="sec02-table sec02-table--normal">
                     <table>
                         <tr>
                             <th></th>
@@ -118,6 +118,14 @@
                                 <strong>無料</strong>
                             </td>
                         </tr>
+                        <tr>
+                            <td>
+                                タオルセット レンタル<br><span>※バスタオル・フェイスタオル</span>
+                            </td>
+                            <td colspan="2">
+                                <strong>300円</strong>
+                            </td>
+                        </tr>
                     </table>
                 </div>
                 <p>
@@ -129,8 +137,8 @@
             </div>
 
             <div class="sec02-container">
-                <h3>発汗エリア(有料岩盤浴)</h3>
-                <div class="sec02-table">
+                <h3 class="red">発汗エリア(有料岩盤浴)</h3>
+                <div class="sec02-table sec02-table--red">
                     <table>
                         <tr>
                             <th></th>
@@ -175,13 +183,13 @@
                                 幼児<br><span>※3歳以下</span>
                             </td>
                             <td colspan="2">
-                                <strong>無料</strong>
+                                ご利用できません
                             </td>
                         </tr>
                     </table>
                 </div>
                 <p>
-                    ※発汗エリアセットには専用ウェア・タオルが含まれます。<br>
+                    ※発汗エリア料金には専用ウェア・岩盤浴用大判タオルが含まれます。<br>
                     ※小学生未満のお子様はご利用できません。
                 </p>
             </div>

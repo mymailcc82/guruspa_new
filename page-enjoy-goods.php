@@ -97,13 +97,7 @@ Template Name: enjoy-goods
                     <div class="sec02-wrap-col-img">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/goods/sec02-icon-01.svg" alt="">
                     </div>
-                    <p>シャンプー・<br>コンディショナー</p>
-                </div>
-                <div class="sec02-wrap-col">
-                    <div class="sec02-wrap-col-img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/goods/sec02-icon-02.svg" alt="">
-                    </div>
-                    <p>ボディソープ・<br>フェイスソープ</p>
+                    <p>シャンプー・コンディショナー・ボディソープ</p>
                 </div>
                 <div class="sec02-wrap-col">
                     <div class="sec02-wrap-col-img">
@@ -113,16 +107,22 @@ Template Name: enjoy-goods
                 </div>
                 <div class="sec02-wrap-col">
                     <div class="sec02-wrap-col-img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/goods/sec02-icon-04.svg" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/goods/sec02-icon-06.svg" alt="">
                     </div>
-                    <p>綿棒・コットン・<br>ヘアブラシ</p>
+                    <p>綿棒</p>
                 </div>
-
                 <div class="sec02-wrap-col">
                     <div class="sec02-wrap-col-img">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/goods/sec02-icon-05.svg" alt="">
                     </div>
-                    <p>ドライヤー<small>（女性は全てReFaのドライヤーをご用意しております。）</small></p>
+                    <p>ドライヤー<br>（女性はすべて）</p>
+                </div>
+
+                <div class="sec02-wrap-col">
+                    <div class="sec02-wrap-col-img">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/goods/sec02-icon-07.svg" alt="">
+                    </div>
+                    <p>Refaシャワーヘッド<br>（男女浴場カラン一部）</p>
                 </div>
             </div>
         </div>
@@ -139,16 +139,23 @@ Template Name: enjoy-goods
             <div class="sec03-wrap">
                 <div class="sec03-wrap-col">
                     <div class="sec03-wrap-col-img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/goods/sec03-icon-01.svg" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/goods/sec03-icon-01_v2.svg" alt="">
                     </div>
-                    <p>フェイスタオル<br>(レンタル・販売)</p>
+                    <p><strong>レンタルタオルセット<br class="hidden-mobile">（フェイスタオル・バスタオル）</strong><span>受付でお申し込みください</span>300円</p>
                 </div>
                 <div class="sec03-wrap-col">
                     <div class="sec03-wrap-col-img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/goods/sec03-icon-02.svg" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/goods/sec03-icon-02_v2.svg" alt="">
                     </div>
-                    <p>バスタオル<br>(レンタル・販売)</p>
+                    <p><strong>オリジナルフェイスタオル</strong><span>脱衣所自販機にて販売</span>150円</p>
                 </div>
+                <div class="sec03-wrap-col">
+                    <div class="sec03-wrap-col-img">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/goods/sec03-icon-03_v2.svg" alt="">
+                    </div>
+                    <p><strong>簡易下着・<br>身だしなみ用品など</strong><span>脱衣所自販機にて販売</span></p>
+                </div>
+
             </div>
         </div>
     </section>

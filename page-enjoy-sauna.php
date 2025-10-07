@@ -315,7 +315,7 @@ Template Name: enjoy-sauna
                                         array(
                                             'taxonomy' => 'event_category',
                                             'field'    => 'slug',
-                                            'terms'    => 'event', // ここに取得したいカテゴリーのスラッグを指定
+                                            'terms'    => 'sauna', // ここに取得したいカテゴリーのスラッグを指定
                                         ),
                                     ),
                                 );

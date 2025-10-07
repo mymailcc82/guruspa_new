@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="248" height="180" viewBox="0 0 248 180">
+  <g id="グループ_24121" data-name="グループ 24121" transform="translate(-458 -1651)">
+    <rect id="_07f4c313ffc8abe1bc83c51995f4ff6d" data-name="07f4c313ffc8abe1bc83c51995f4ff6d" width="248" height="180" transform="translate(458 1651)" fill="#fff"/>
+    <g id="グループ_23605" data-name="グループ 23605" transform="translate(-17153.811 9237.01)">
+      <line id="線_2594" data-name="線 2594" x1="14.761" transform="translate(17771.246 -7536.411)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3"/>
+      <path id="パス_108371" data-name="パス 108371" d="M379.072,115.061v12.463H315.81v-12.99h9.3v.527h53.962Z" transform="translate(17392.195 -7575.832)" fill="#214995"/>
+      <path id="パス_108372" data-name="パス 108372" d="M313.033,77.724a3.7,3.7,0,0,1,2.994-1.94c2.32,0,4.217,2.952,4.217,6.6H311.81a8.779,8.779,0,0,1,1.223-4.66" transform="translate(17387.76 -7618.793)" fill="#fff"/>
+      <path id="パス_108373" data-name="パス 108373" d="M320.245,157.1H311.81V78.913h8.435V157.1Z" transform="translate(17387.76 -7615.324)" fill="#fff"/>
+      <path id="パス_108376" data-name="パス 108376" d="M320.245,160.576V82.384c0-3.648-1.9-6.6-4.217-6.6a3.7,3.7,0,0,0-2.994,1.94,8.779,8.779,0,0,0-1.223,4.66v78.191h8.435" transform="translate(17387.76 -7618.793)" fill="#214995"/>
+      <path id="パス_108377" data-name="パス 108377" d="M313.81,75.784h61.617c3.226,0,5.862,4.112,5.862,9.194v85.509H318.027v-9.911" transform="translate(17389.979 -7618.793)" fill="none"/>
+      <line id="線_2595" data-name="線 2595" x2="53.941" transform="translate(17717.307 -7460.771)" fill="none"/>
+      <path id="パス_108375" data-name="パス 108375" d="M328.006,78.914h-23.2" transform="translate(17380 -7615.324)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3"/>
+      <path id="パス_108374" data-name="パス 108374" d="M327.327,157.5h-9.3V82.384c0-3.648-1.9-6.6-4.217-6.6h61.617c3.226,0,5.862,4.112,5.862,9.194v73.046H327.327Z" transform="translate(17389.979 -7618.793)" fill="#d8e4fa"/>
+    </g>
+  </g>
+</svg>

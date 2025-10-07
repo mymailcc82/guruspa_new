@@ -271,6 +271,11 @@
       @include media(middle) {
         height: 450px;
       }
+      .df-lite {
+        @include media(md) {
+          height: 750px !important;
+        }
+      }
     }
   }
   .sec06 {
