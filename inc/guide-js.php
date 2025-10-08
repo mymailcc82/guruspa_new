@@ -10,7 +10,7 @@ $lc_spots = array(
         "time" => "国道23号経由：約50分<br>伊勢道経由(伊勢IC〜松阪IC)：約40分",
         "url" => "https://maps.app.goo.gl/uHvKBPxLkwGKbBHG6",
         "image" => get_template_directory_uri() .
-            "/assets/img/guide/sec04-img-01.jpg"
+            "/assets/img/guide/sec04-img-01.webp"
     ),
     array(
         'id' => 2,
@@ -22,7 +22,7 @@ $lc_spots = array(
         "time" => "国道23号経由：約50分<br>伊勢道経由(伊勢IC〜松阪IC)：約40分",
         "url" => "https://maps.app.goo.gl/LtgqibMJVSvfMHuPA",
         "image" => get_template_directory_uri() .
-            "/assets/img/guide/sec04-img-02.jpg"
+            "/assets/img/guide/sec04-img-02.webp"
     ),
     array(
         'id' => 3,
@@ -34,7 +34,19 @@ $lc_spots = array(
         "time" => "国道167号 無料道路経由：約1時間10分<br>伊勢道＋第二伊勢道経由：約1時間",
         "url" => "https://maps.app.goo.gl/y7oGNx57sBkwHJBYA",
         "image" => get_template_directory_uri() .
-            "/assets/img/guide/sec04-img-03.jpg"
+            "/assets/img/guide/sec04-img-03.webp"
+    ),
+    array(
+        'id' => 4,
+        "title" => "おやつタウン",
+        "latitude" => 34.686924,
+        "longitude" => 136.42458,
+        "address" => "〒514-1254 三重県津市森町１９４５−１１",
+        "tel" => "059-255-1082",
+        "time" => "国道23号経由：約50分<br>伊勢道経由（久居IC〜松阪IC）：約40分",
+        "url" => "https://maps.app.goo.gl/kXastoYsBpZfEKnS6",
+        "image" => get_template_directory_uri() .
+            "/assets/img/guide/sec04-img-04.webp"
     ),
 
 );

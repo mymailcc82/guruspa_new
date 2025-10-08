@@ -30,6 +30,26 @@ for ($i = 0; $i < 12; $i++) {
 //今月の月と日にちを今日を初めに、昨日を終わりに配列にする
 $days = days_from_today_for_months();
 
+//毎日スケジュールの画像を取得
+$select_date = '';
+if (isset($_GET['date'])) {
+    $select_date = $_GET['date'];
+    $year = date('Y', strtotime($select_date));
+    $month = date('m', strtotime($select_date));
+    $day = date('d', strtotime($select_date));
+    $w = date('w', strtotime($select_date));
+} else {
+    $select_date = date('Y-m-d');
+    //現在の年取得
+    $year = date('Y');
+    //現在の月取得
+    $month = date('m');
+    //現在の日取得
+    $day = date('d');
+    //曜日取得
+
+    $w = date('w');
+}
 
 ?>
 <?php get_header(); ?>
@@ -142,29 +162,34 @@ $days = days_from_today_for_months();
             <?php $the_query = new WP_Query($args); ?>
             <div class="sec01-col-main">
                 <ul id="post_list">
-                    <?php if ($the_query->have_posts()) : ?>
-                        <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-                            <?php
-                            $event_category = get_the_terms(get_the_ID(), 'event_category');
-                            $event_start_date = get_field('event_start_date'); // 開始日
-                            $is_hot = get_field('hot'); // HOT! フラグ
-                            ?>
-                            <li class="post_list_li">
-                                <a href="<?php the_permalink(); ?>">
-                                    <?php if ($is_hot) : ?>
-                                        <span class="hot"><?php echo $is_hot; ?></span>
-                                    <?php endif; ?>
-                                    <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
-                                    <?php get_template_part('inc/inc-event-img'); ?>
-                                    <?php get_template_part('inc/inc-event-text'); ?>
-                                </a>
-                            </li>
-                        <?php endwhile; ?>
+                    <div class="swiper swiper-event">
+                        <div class="swiper-wrapper">
 
-                        <?php wp_reset_postdata(); ?>
-                    <?php else : ?>
-                        <p class="text-base center">イベントが見つかりませんでした。</p>
-                    <?php endif; ?>
+                            <?php if ($the_query->have_posts()) : ?>
+                                <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+                                    <?php
+                                    $event_category = get_the_terms(get_the_ID(), 'event_category');
+                                    $event_start_date = get_field('event_start_date'); // 開始日
+                                    $is_hot = get_field('hot'); // HOT! フラグ
+                                    ?>
+                                    <div class="swiper-slide">
+                                        <a href="<?php the_permalink(); ?>">
+                                            <?php if ($is_hot) : ?>
+                                                <span class="hot"><?php echo $is_hot; ?></span>
+                                            <?php endif; ?>
+                                            <span class="fire"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01-small.png" alt=""></span>
+                                            <?php get_template_part('inc/inc-event-img'); ?>
+                                            <?php get_template_part('inc/inc-event-text'); ?>
+                                        </a>
+                                    </div>
+                                <?php endwhile; ?>
+
+                                <?php wp_reset_postdata(); ?>
+                            <?php else : ?>
+                                <p class="text-base center">イベントが見つかりませんでした。</p>
+                            <?php endif; ?>
+                        </div>
+                    </div>
                 </ul>
             </div>
         </div>
@@ -177,9 +202,73 @@ $days = days_from_today_for_months();
             <section class="sec01">
                 <div class="content-width">
                     <div class="page-title-center--has-icon page-title--has-icon--mobile-20">
-						<h2><i></i>本日のスケジュール</h2>
+                        <h2><i></i>毎日スケジュール</h2>
                     </div>
-                    <div class="sec01-swiper swiper">
+                    <?php
+                    function getMonthAndDay($select_date, $n = 0)
+                    {
+                        //$targetDate = date('Y-m-d', strtotime("+$n days", strtotime($select_date)));
+                        $targetDate = strtotime("$select_date +$n days");
+                        $month = (int)date('m', $targetDate); // 月を取得
+                        $day = (int)date('d', $targetDate);   // 日を取得
+                        $year = (int)date('Y', $targetDate);  // 年も取得（オプション）
+
+                        return [
+                            'year' => $year,
+                            'month' => $month,
+                            'day' => $day
+                        ];
+                    }
+                    // 例: 今日から10日後の月と日を取得/
+                    for ($i = 0; $i < 8; $i++) {
+                        $result_day_arr[] = getMonthAndDay($select_date, $i);
+                    }
+                    ?>
+                    <div class="sec01-swiper swiper sec01-swiper-02">
+                        <div class="swiper-wrapper">
+                            <?php foreach ($result_day_arr as $result_day): ?>
+                                <?php $type_day = get_field('type_day', $mont_data_origin[$result_day['month']]); ?>
+                                <?php if ($type_day): ?>
+                                    <?php foreach ($type_day as $type): ?>
+                                        <?php if ($type['day'] == $result_day['day']): ?>
+                                            <?php if ($type['img']): ?>
+                                                <div class="swiper-slide">
+                                                    <a href="javascript:void(0);" data-img="<?php echo $type['img']; ?>" class="popup-link">
+                                                        <img src="<?php echo $type['img']; ?>" alt="">
+                                                        <?php
+                                                        /*
+                                                    <p><?php echo $result_day['month']; ?><?php echo $type['day']; ?></p>
+                                                    */
+                                                        ?>
+                                                    </a>
+                                                </div>
+                                            <?php endif; ?>
+                                        <?php endif; ?>
+                                    <?php endforeach; ?>
+                                <?php endif; ?>
+                            <?php endforeach; ?>
+                        </div>
+                        <div class="swiper-button-prev swiper-button-prev-02"></div>
+                        <div class="swiper-button-next swiper-button-next-02"></div>
+                        <div class="swiper-pagination swiper-pagination-02"></div>
+                    </div>
+                    <div class="sec01-btn">
+                        <div class="com-btn-border-black hidden-mobile">
+                            <a href="<?php echo home_url(); ?>/enjoy/sweating/">発汗エリア(有料エリア)について<i></i></a>
+                        </div>
+                        <div class="com-btn-mobile com-btn-mobile--small hidden-sm">
+                            <a href="<?php echo home_url(); ?>/enjoy/sweating/">発汗エリア(有料エリア)について<i></i></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <?php /*
+            <section class="sec01">
+                <div class="content-width">
+                    <div class="page-title-center--has-icon page-title--has-icon--mobile-20">
+                        <h2><i></i>月間スケジュール</h2>
+                    </div>
+                    <div class="sec01-swiper swiper sec01-swiper-01">
                         <div class="swiper-wrapper">
                             <?php foreach ($mont_data as $key => $value) : ?>
                                 <div class="swiper-slide">
@@ -209,6 +298,7 @@ $days = days_from_today_for_months();
                     </div>
                 </div>
             </section>
+            */ ?>
             <section class="sec02">
                 <div class="content-width">
                     <div class="page-title--has-icon page-title--has-icon--mobile-20">
@@ -257,7 +347,27 @@ $days = days_from_today_for_months();
 
     <?php get_template_part('inc/inc-aside'); ?>
 </main>
+<div class="popup" id="modal">
+    <div class="popup-bg"></div>
+    <div class="popup-img" id="popup-img"></div>
+</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    //.popup-linkがクリックされた時の処理
+    $('.popup-link').on('click', function() {
+        //data-imgの値を取得
+        var img = $(this).data('img');
+        //取得したimgを.popup-imgの背景画像に設定
+        $('#popup-img').css('background-image', 'url(' + img + ')');
+        //.popupを表示
+        $('#modal').fadeIn();
+    });
+
+    //.popup-bgがクリックでmodalを閉じる
+    $('.popup-bg').on('click', function() {
+        $('#modal').fadeOut();
+    });
+</script>
 <script>
     //swiper
     // next ボタンをカスタムで処理
@@ -397,7 +507,7 @@ $days = days_from_today_for_months();
 
 
     //swiper
-    const swiper_01 = new Swiper('.sec01-swiper', {
+    const swiper_01 = new Swiper('.sec01-swiper-01', {
         // Optional parameters
         loop: true,
         slidesPerView: 1,
@@ -412,6 +522,24 @@ $days = days_from_today_for_months();
         navigation: {
             nextEl: '.swiper-button-next-01',
             prevEl: '.swiper-button-prev-01',
+        },
+
+    });
+    const swiper_02 = new Swiper('.sec01-swiper-02', {
+        // Optional parameters
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 80,
+        centeredSlides: true,
+        pagination: {
+            el: '.swiper-pagination-02',
+            clickable: true,
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next-02',
+            prevEl: '.swiper-button-prev-02',
         },
 
     });

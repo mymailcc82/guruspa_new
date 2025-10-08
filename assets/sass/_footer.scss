@@ -31,7 +31,7 @@
     left: 50%;
     transform: translate(-50%);
     width: 132px;
-    z-index: 2;
+    z-index: 12;
     top: inherit;
     bottom: -10px;
     width: 132px;
@@ -49,62 +49,61 @@
     position: relative;
 
     &:hover {
-
       @include media(mobile) {
-        pointer-events: none !important;
+        //pointer-events: none !important;
       }
-
-      .footer-fixed-child {
-        img {
-          @include media(mobile) {
-            transform: translate(0, 0px) rotate(0deg) scale(1) !important;
+      @include media(md) {
+        .footer-fixed-child {
+          img {
+            @include media(mobile) {
+              transform: translate(0, 0px) rotate(0deg) scale(1) !important;
+            }
           }
         }
 
-      }
-
-      .footer-fixed-child-1 {
-        img {
-          transform: translate(0, -3px) rotate(360deg) scale(1.2);
+        .footer-fixed-child-1 {
+          img {
+            transform: translate(0, -3px) rotate(360deg) scale(1.2);
+          }
         }
-      }
 
-      .footer-fixed-child-2 {
-        img {
-          transform: translate(2px, -3px) rotate(360deg) scale(1.2);
+        .footer-fixed-child-2 {
+          img {
+            transform: translate(2px, -3px) rotate(360deg) scale(1.2);
+          }
         }
-      }
 
-      .footer-fixed-child-3 {
-        img {
-          transform: translate(4px, -3px) rotate(360deg) scale(1.2);
+        .footer-fixed-child-3 {
+          img {
+            transform: translate(4px, -3px) rotate(360deg) scale(1.2);
+          }
         }
-      }
 
-      .footer-fixed-child-4 {
-        img {
-          transform: translate(6px, -3px) rotate(360deg) scale(1.2);
+        .footer-fixed-child-4 {
+          img {
+            transform: translate(6px, -3px) rotate(360deg) scale(1.2);
+          }
         }
-      }
 
-      .footer-fixed-child-5 {
-        img {
-          transform: translate(7px, -3px) rotate(360deg) scale(1.2);
+        .footer-fixed-child-5 {
+          img {
+            transform: translate(7px, -3px) rotate(360deg) scale(1.2);
+          }
         }
-      }
 
-      .footer-fixed-child-6 {
-        img {
-          transform: translate(8px, 0px) rotate(360deg) scale(1.2);
+        .footer-fixed-child-6 {
+          img {
+            transform: translate(8px, 0px) rotate(360deg) scale(1.2);
+          }
         }
-      }
 
-      .footer-fixed-txt {
-        img {
-          transform: scale(1.1);
+        .footer-fixed-txt {
+          img {
+            transform: scale(1.1);
 
-          @include media(mobile) {
-            transform: scale(1);
+            @include media(mobile) {
+              transform: scale(1);
+            }
           }
         }
       }

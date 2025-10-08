@@ -17,7 +17,6 @@ $mont_data_origin = array(
 //現在の月を取得
 $current_month = date('n');
 
-
 $mont_data = [];
 for ($i = 0; $i < 12; $i++) {
     // 計算は 1..12 の範囲に戻す
@@ -26,6 +25,26 @@ for ($i = 0; $i < 12; $i++) {
     if (isset($mont_data_origin[$key])) {
         $mont_data[$key] = $mont_data_origin[$key];
     }
+}
+//毎日スケジュールの画像を取得
+$select_date = '';
+if (isset($_GET['date'])) {
+    $select_date = $_GET['date'];
+    $year = date('Y', strtotime($select_date));
+    $month = date('m', strtotime($select_date));
+    $day = date('d', strtotime($select_date));
+    $w = date('w', strtotime($select_date));
+} else {
+    $select_date = date('Y-m-d');
+    //現在の年取得
+    $year = date('Y');
+    //現在の月取得
+    $month = date('m');
+    //現在の日取得
+    $day = date('d');
+    //曜日取得
+
+    $w = date('w');
 }
 
 
@@ -75,9 +94,64 @@ for ($i = 0; $i < 12; $i++) {
     <section class="sec01">
         <div class="content-width">
             <div class="page-title-center--has-icon page-title--has-icon--mobile-20">
+                <h2><i></i>毎日スケジュール</h2>
+            </div>
+            <?php
+            function getMonthAndDay($select_date, $n = 0)
+            {
+                //$targetDate = date('Y-m-d', strtotime("+$n days", strtotime($select_date)));
+                $targetDate = strtotime("$select_date +$n days");
+                $month = (int)date('m', $targetDate); // 月を取得
+                $day = (int)date('d', $targetDate);   // 日を取得
+                $year = (int)date('Y', $targetDate);  // 年も取得（オプション）
+
+                return [
+                    'year' => $year,
+                    'month' => $month,
+                    'day' => $day
+                ];
+            }
+            // 例: 今日から10日後の月と日を取得/
+            for ($i = 0; $i < 8; $i++) {
+                $result_day_arr[] = getMonthAndDay($select_date, $i);
+            }
+            ?>
+            <div class="sec01-swiper swiper sec01-swiper-01">
+                <div class="swiper-wrapper">
+                    <?php foreach ($result_day_arr as $result_day): ?>
+                        <?php $type_day = get_field('type_day', $mont_data_origin[$result_day['month']]); ?>
+                        <?php if ($type_day): ?>
+                            <?php foreach ($type_day as $type): ?>
+                                <?php if ($type['day'] == $result_day['day']): ?>
+                                    <?php if ($type['img']): ?>
+                                        <div class="swiper-slide">
+                                            <a href="javascript:void(0);" data-img="<?php echo $type['img']; ?>" class="popup-link">
+                                                <img src="<?php echo $type['img']; ?>" alt="">
+                                                <?php
+                                                /*
+                                                    <p><?php echo $result_day['month']; ?><?php echo $type['day']; ?></p>
+                                                    */
+                                                ?>
+                                            </a>
+                                        </div>
+                                    <?php endif; ?>
+                                <?php endif; ?>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
+                </div>
+                <div class="swiper-button-prev swiper-button-prev-01"></div>
+                <div class="swiper-button-next swiper-button-next-01"></div>
+                <div class="swiper-pagination swiper-pagination-01"></div>
+            </div>
+    </section>
+
+    <section class="sec01">
+        <div class="content-width">
+            <div class="page-title-center--has-icon page-title--has-icon--mobile-20">
                 <h2><i></i>月間スケジュール</h2>
             </div>
-            <div class="sec01-swiper swiper">
+            <div class="sec01-swiper swiper sec01-swiper-02">
                 <div class="swiper-wrapper">
                     <?php foreach ($mont_data as $key => $value) : ?>
                         <div class="swiper-slide">
@@ -88,9 +162,9 @@ for ($i = 0; $i < 12; $i++) {
                         </div>
                     <?php endforeach; ?>
                 </div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev swiper-button-prev-02"></div>
+                <div class="swiper-button-next swiper-button-next-02"></div>
+                <div class="swiper-pagination swiper-pagination-02"></div>
             </div>
     </section>
     <section class="sec02">
@@ -129,11 +203,17 @@ for ($i = 0; $i < 12; $i++) {
         </div>
     </section>
     <?php get_template_part('inc/inc-aside'); ?>
+
+
 </main>
+<div class="popup" id="modal">
+    <div class="popup-bg"></div>
+    <div class="popup-img" id="popup-img"></div>
+</div>
 
 <script>
     //swiper
-    const swiper = new Swiper('.sec01-swiper', {
+    const swiper = new Swiper('.sec01-swiper-01', {
         // Optional parameters
         loop: true,
         slidesPerView: 1,
@@ -143,16 +223,54 @@ for ($i = 0; $i < 12; $i++) {
 
         // If we need pagination
         pagination: {
-            el: '.swiper-pagination',
+            el: '.swiper-pagination-01',
             clickable: true,
         },
 
         // Navigation arrows
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: '.swiper-button-next-01',
+            prevEl: '.swiper-button-prev-01',
+        },
+    });
+
+    const swiper_02 = new Swiper('.sec01-swiper-02', {
+        // Optional parameters
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 80,
+        centeredSlides: true,
+
+
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination-02',
+            clickable: true,
         },
 
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next-02',
+            prevEl: '.swiper-button-prev-02',
+        },
+    });
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    //.popup-linkがクリックされた時の処理
+    $('.popup-link').on('click', function() {
+        //data-imgの値を取得
+        var img = $(this).data('img');
+        //取得したimgを.popup-imgの背景画像に設定
+        $('#popup-img').css('background-image', 'url(' + img + ')');
+        //.popupを表示
+        $('#modal').fadeIn();
+    });
+
+    //.popup-bgがクリックでmodalを閉じる
+    $('.popup-bg').on('click', function() {
+        $('#modal').fadeOut();
     });
 </script>
 <?php get_footer(); ?>

@@ -136,6 +136,32 @@
                 </p>
             </div>
 
+            <div class="sec01-center mb-60">
+                <div class="sec01-center-wrap">
+                    <div class="sec01-center-wrap-col">
+                        <dl>
+                            <dt>会員入会金</dt>
+                            <dd>
+                                <p>
+                                    200<span>円</span>
+                                </p>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="sec01-center-wrap-col">
+                        <dl>
+                            <dt>会員平日入泉回数券<br class="hidden-middle">(11枚)</dt>
+                            <dd>
+                                <p>
+                                    8,800<span>円</span><br>
+                                    <small>※1枚あたり800円</small>
+                                </p>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+
             <div class="sec02-container">
                 <h3 class="red">発汗エリア(有料岩盤浴)</h3>
                 <div class="sec02-table sec02-table--red">
@@ -180,11 +206,11 @@
                         </tr>
                         <tr>
                             <td>
-								幼児<br><span>※小学生未満</span>
+                                幼児<br><span>※小学生未満</span>
                             </td>
                             <td colspan="2">
-								小学生未満 ご利用できません
-                            </td>
+                                小学生未満 ご利用できません
+                                                           </td>
                         </tr>
                     </table>
                 </div>
@@ -247,31 +273,7 @@
             */ ?>
 
 
-            <div class="sec01-center">
-                <div class="sec01-center-wrap">
-                    <div class="sec01-center-wrap-col">
-                        <dl>
-                            <dt>会員入会金</dt>
-                            <dd>
-                                <p>
-                                    200<span>円</span>
-                                </p>
-                            </dd>
-                        </dl>
-                    </div>
-                    <div class="sec01-center-wrap-col">
-                        <dl>
-                            <dt>会員平日入泉回数券<br class="hidden-middle">(11枚)</dt>
-                            <dd>
-                                <p>
-                                    8,800<span>円</span><br>
-                                    <small>※1枚あたり800円</small>
-                                </p>
-                            </dd>
-                        </dl>
-                    </div>
-                </div>
-            </div>
+
             <div class="sec01-bottom" id="sec03">
                 <div class="page-title--has-icon page-title--has-icon--mobile-left">
                     <h2><i></i>営業時間(年中無休)</h2>

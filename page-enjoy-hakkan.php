@@ -306,7 +306,7 @@ Template Name: enjoy-hakkan
                             </p>
                         </div>
                         <div class="sec04-center-wrap-col">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-03_v2.webp" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-03_v3.webp" alt="">
                             <h4>大人数で楽しめる空間</h4>
                             <p>
                                 約40名が同時に体験できる広さで、仲間と一緒に盛り上がれる特別な時間を。
@@ -630,7 +630,7 @@ Template Name: enjoy-hakkan
                         <div class="sec04-center-wrap-col">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-16_v2.webp" alt="">
                             <p>
-								館内購入の飲み物の持ち込みOK＆冷蔵庫完備
+                                館内購入の飲み物の持ち込みOK＆冷蔵庫完備
                             </p>
                         </div>
                         <div class="sec04-center-wrap-col">

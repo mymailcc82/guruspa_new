@@ -103,7 +103,7 @@ $type = isset($_GET['type']) ? $_GET['type'] : 'relaxation';
                     </picture>
 
                 </div>
-                <div class="page-deco-container page-deco-container--blue">
+                <div class="page-deco-container page-deco-container--blue-relax">
                     <div class="relative">
                         <div class="sec02-icon-02">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec02-icon-02.png" alt="">
@@ -274,92 +274,296 @@ $type = isset($_GET['type']) ? $_GET['type'] : 'relaxation';
                                 <h2><i></i>メニュー</h2>
                             </div>
                             <p class="sec05-desc">
-                                施術メニューや料金は後日公開予定です。<br>
-                                お待ちください。
+                                各コースの詳細・料金の目安をご紹介します。
                             </p>
                         </div>
-                        <?php /*
-                        <div class="content-width-sm content-width--mobile-full">
+
+                        <div class="content-width-small">
                             <div class="sec05-wrap">
-                                <div class="sec05-wrap-col">
-                                    <div class="sec05-wrap-col-left">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec05-img-01_v2.webp" alt="">
-                                    </div>
-                                    <div class="sec05-wrap-col-right">
-                                        <h3>もみほぐし</h3>
-                                        <p>
-                                            凝り固まった筋肉をじっくりとほぐし、全身の巡りを促進します。
-                                        </p>
-                                        <div class="sec05-table">
-                                            <table>
-                                                <tr>
-                                                    <th>30分</th>
-                                                    <td><strong>3,300</strong>円<small>(税込)</small></td>
-                                                </tr>
-                                                <tr>
-                                                    <th>60分</th>
-                                                    <td><strong>6,000</strong>円<small>(税込)</small></td>
-                                                </tr>
-                                                <tr>
-                                                    <th>90分</th>
-                                                    <td><strong>8,500</strong>円<small>(税込)</small></td>
-                                                </tr>
-                                            </table>
-                                        </div>
-                                    </div>
+                                <div class="sec05-wrap-col accordion">
+                                    <dl class="sec05-wrap-col-dl">
+                                        <dt class="sec05-wrap-col-dt">
+                                            <i></i>
+                                            <div class="sec05-wrap-col-left">
+                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec05-img-01_v3.webp" alt="">
+                                            </div>
+                                            <div class="sec05-wrap-col-right">
+                                                <h3>ボディケア部門</h3>
+                                                <p>
+                                                    お疲れの箇所を中心に全身をほぐしていきます。<br>
+                                                    凝り固まった筋肉をじっくりとほぐし、全身の巡りを促進します。
+                                                </p>
+                                            </div>
+                                        </dt>
+                                        <dd class="sec05-wrap-col-dd">
+                                            <div class="sec05-wrap-col-right hidden-sm">
+                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec05-img-01_v3.webp" alt="">
+                                                <p>
+                                                    お疲れの箇所を中心に全身をほぐしていきます。凝り固まった筋肉をじっくりとほぐし、全身の巡りを促進します。
+                                                </p>
+                                            </div>
+                                            <div class="sec05-table">
+                                                <table>
+                                                    <tr>
+                                                        <th colspan="2" class="hidden-sm main-th">ボディケア</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th rowspan="3" class="main-th hidden-mobile">ボディケア</th>
+                                                        <th>30分</th>
+                                                        <td><strong>3,300</strong>円<small>(税込)</small></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>60分</th>
+                                                        <td><strong>6,000</strong>円<small>(税込)</small></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>90分</th>
+                                                        <td><strong>8,500</strong>円<small>(税込)</small></td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="sec05-table">
+                                                <table>
+                                                    <tr>
+                                                        <th colspan="2" class="hidden-sm main-th">フットケア</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th rowspan="3" class="main-th hidden-mobile">フットケア</th>
+                                                        <th>30分</th>
+                                                        <td><strong>3,300</strong>円<small>(税込)</small></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>60分</th>
+                                                        <td><strong>6,000</strong>円<small>(税込)</small></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>90分</th>
+                                                        <td><strong>8,500</strong>円<small>(税込)</small></td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="sec05-table">
+                                                <table>
+                                                    <tr>
+                                                        <th colspan="2" class="hidden-sm main-th">超絶睡眠ヘッドスパ</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th rowspan="2" class="hidden-mobile main-th">超絶睡眠ヘッドスパ</th>
+                                                        <th>30分</th>
+                                                        <td><strong>3,300</strong>円<small>(税込)</small></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>60分</th>
+                                                        <td><strong>6,000</strong>円<small>(税込)</small></td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <h3>オプション</h3>
+                                            <div class="sec01-center-wrap">
+                                                <div class="sec01-center-wrap-col">
+                                                    <dl>
+                                                        <dt>延長10分</dt>
+                                                        <dd>
+                                                            <p>
+                                                                1,100<span>円</span><small>(税込)</small>
+                                                            </p>
+                                                        </dd>
+                                                    </dl>
+                                                </div>
+                                                <div class="sec01-center-wrap-col">
+                                                    <dl>
+                                                        <dt>指名料</dt>
+                                                        <dd>
+                                                            <p>
+                                                                220<span>円</span><small>(税込)</small>
+                                                            </p>
+                                                        </dd>
+                                                    </dl>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
                                 </div>
+                                <div class="sec05-wrap-col accordion">
+                                    <dl class="sec05-wrap-col-dl">
+                                        <dt class="sec05-wrap-col-dt">
+                                            <i></i>
+                                            <div class="sec05-wrap-col-left">
+                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec05-img-02_v3.webp" alt="">
+                                            </div>
+                                            <div class="sec05-wrap-col-right">
+                                                <h3>エステ部門</h3>
+                                                <p>
+                                                    気になる部分をスッキリ整えながら、むくみや冷えの改善にも効果が期待できます。<br>
+                                                    入浴後の温まった身体に心地よく働きかけ、リフレッシュした軽やかさを実感いただけます。
+                                                </p>
+                                            </div>
+                                        </dt>
+                                        <dd class="sec05-wrap-col-dd">
+                                            <div class="sec05-wrap-col-right hidden-sm">
+                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec05-img-02_v3.webp" alt="">
+                                                <p>
+                                                    気になる部分をスッキリ整えながら、むくみや冷えの改善にも効果が期待できます。<br>
+                                                    入浴後の温まった身体に心地よく働きかけ、リフレッシュした軽やかさを実感いただけます。
+                                                </p>
+                                            </div>
 
-                                <div class="sec05-wrap-col">
-                                    <div class="sec05-wrap-col-left">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec05-img-02.webp" alt="">
-                                    </div>
-                                    <div class="sec05-wrap-col-right">
-                                        <h3>アロマトリートメント</h3>
-                                        <p>
-                                            植物由来のアロマオイルを使用し、心地よい香りとタッチで深い癒しへ。
-                                        </p>
-                                        <div class="sec05-table">
-                                            <table>
-                                                <tr>
-                                                    <th>60分</th>
-                                                    <td><strong>7,000</strong>円<small>(税込)</small></td>
-                                                </tr>
-                                                <tr>
-                                                    <th>90分</th>
-                                                    <td><strong>9,000</strong>円<small>(税込)</small></td>
-                                                </tr>
-                                            </table>
-                                        </div>
-                                    </div>
+                                            <div class="sec05-table">
+                                                <table>
+                                                    <tr>
+                                                        <th colspan="2" class="hidden-sm main-th">アロマリンパ</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th rowspan="3" class="main-th hidden-mobile">アロマリンパ</th>
+                                                        <th>60分</th>
+                                                        <td><strong>7,100</strong>円<small>(税込)</small></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>90分</th>
+                                                        <td><strong>10,100</strong>円<small>(税込)</small></td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="sec05-table">
+                                                <table>
+                                                    <tr>
+                                                        <th colspan="2" class="hidden-sm main-th">筋膜アロマ</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th rowspan="3" class="main-th hidden-mobile">筋膜アロマ</th>
+                                                        <th>60分</th>
+                                                        <td><strong>8,600</strong>円<small>(税込)</small></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>90分</th>
+                                                        <td><strong>12,400</strong>円<small>(税込)</small></td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+
+                                            <div class="sec05-table">
+                                                <table>
+                                                    <tr>
+                                                        <th colspan="2" class="hidden-sm main-th">脂肪溶解キャビテーション</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th rowspan="2" class="hidden-mobile main-th">脂肪溶解<br>キャビテーション</th>
+                                                        <th rowspan="2">30分</th>
+                                                        <td rowspan="2"><strong>5,700</strong>円<small>(税込)</small></td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="sec05-table">
+                                                <table>
+                                                    <tr>
+                                                        <th colspan="2" class="hidden-sm main-th">小顔美肌フェイシャル</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th rowspan="2" class="main-th hidden-mobile">小顔美肌<br>フェイシャル</th>
+                                                        <th rowspan="2">60分</th>
+                                                        <td rowspan="2"><strong>10,700</strong>円<small>(税込)</small></td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="sec05-table">
+                                                <table>
+                                                    <tr>
+                                                        <th colspan="2" class="hidden-sm main-th">ディープリラックス</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th rowspan="2" class="main-th hidden-mobile">ディープ<br>リラックス</th>
+                                                        <th rowspan="2">100分</th>
+                                                        <td rowspan="2"><strong>11,900</strong>円<small>(税込)</small></td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="sec05-table">
+                                                <table>
+                                                    <tr>
+                                                        <th colspan="2" class="hidden-sm main-th">ホットリラックス</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th rowspan="2" class="main-th hidden-mobile">ホットリラックス</th>
+                                                        <th rowspan="2">100分</th>
+                                                        <td rowspan="2"><strong>12,900</strong>円<small>(税込)</small></td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="sec05-table">
+                                                <table>
+                                                    <tr>
+                                                        <th colspan="2" class="hidden-sm main-th">肩甲骨リンパストレッチ</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th rowspan="2" class="main-th hidden-mobile">肩甲骨<br>リンパストレッチ</th>
+                                                        <th rowspan="2">100分</th>
+                                                        <td rowspan="2"><strong>12,200</strong>円<small>(税込)</small></td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="sec05-table">
+                                                <table>
+                                                    <tr>
+                                                        <th colspan="2" class="hidden-sm main-th">脂肪セルライトクラッシュ</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th rowspan="2" class="main-th hidden-mobile">脂肪セルライト<br>クラッシュ</th>
+                                                        <th rowspan="2">100分</th>
+                                                        <td rowspan="2"><strong>12,700</strong>円<small>(税込)</small></td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="sec05-table">
+                                                <table>
+                                                    <tr>
+                                                        <th colspan="2" class="hidden-sm main-th">フェイシャル&フルボディ</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th rowspan="2" class="main-th hidden-mobile">フェイシャル&<br>フルボディ</th>
+                                                        <th rowspan="2">100分</th>
+                                                        <td rowspan="2"><strong>16,100</strong>円<small>(税込)</small></td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+
+                                            <h3>オプション</h3>
+                                            <div class="sec01-center-wrap sec01-center-wrap--3-1 sec01-center-wrap--heigh-2">
+                                                <div class="sec01-center-wrap-col">
+                                                    <dl>
+                                                        <dt>アロマ<br>延長10分</dt>
+                                                        <dd>
+                                                            <p>
+                                                                1,400<span>円</span><small>(税込)</small>
+                                                            </p>
+                                                        </dd>
+                                                    </dl>
+                                                </div>
+                                                <div class="sec01-center-wrap-col">
+                                                    <dl>
+                                                        <dt>キャビテーション<br>延長30分</dt>
+                                                        <dd>
+                                                            <p>
+                                                                6,000<span>円</span><small>(税込)</small>
+                                                            </p>
+                                                        </dd>
+                                                    </dl>
+                                                </div>
+                                                <div class="sec01-center-wrap-col">
+                                                    <dl>
+                                                        <dt>指名料</dt>
+                                                        <dd>
+                                                            <p>
+                                                                220<span>円</span><small>(税込)</small>
+                                                            </p>
+                                                        </dd>
+                                                    </dl>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
                                 </div>
-
-                                <div class="sec05-wrap-col">
-                                    <div class="sec05-wrap-col-left">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec05-img-03_v2.webp" alt="">
-                                    </div>
-                                    <div class="sec05-wrap-col-right">
-                                        <h3>フェイシャル・ヘッドスパ</h3>
-                                        <p>
-                                            顔まわりのむくみや疲れをすっきり解消。デスクワークの方にもおすすめです。
-                                        </p>
-                                        <div class="sec05-table">
-                                            <table>
-                                                <tr>
-                                                    <th>フェイシャル<br><span>(45分)</span></th>
-                                                    <td><strong>4,500</strong>円<small>(税込)</small></td>
-                                                </tr>
-                                                <tr>
-                                                    <th>ヘッドスパ<br><span>(30分)</span></th>
-                                                    <td><strong>3,800</strong>円<small>(税込)</small></td>
-                                                </tr>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-
                             </div>
                         </div>
-                        */ ?>
                     </section>
                     <section class="sec06" id="sec06">
                         <div class="content-width-sm fadeup">
@@ -381,7 +585,7 @@ $type = isset($_GET['type']) ? $_GET['type'] : 'relaxation';
                                         </dl>
                                         <dl>
                                             <dt>受付時間</dt>
-											<dd>11:00～23:00（最終受付22:30）</dd>
+                                            <dd>11:00～23:00（最終受付22:30）</dd>
                                         </dl>
                                     </div>
                                     <div class="com-btn-border-black com-btn-border--left">
@@ -410,7 +614,7 @@ $type = isset($_GET['type']) ? $_GET['type'] : 'relaxation';
                 <div class="sec02-icon-01">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec02-icon-01.png" alt="">
                 </div>
-                <div class="page-deco-container page-deco-container--blue">
+                <div class="page-deco-container page-deco-container--blue-relax">
                     <div class="relative">
                         <div class="sec02-icon-02">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec02-icon-02.png" alt="">
@@ -581,40 +785,133 @@ $type = isset($_GET['type']) ? $_GET['type'] : 'relaxation';
                                 <h2><i></i>メニュー</h2>
                             </div>
                             <p class="sec05-desc">
-                                <?php /*
                                 各コースの詳細・料金の目安をご紹介します。
-                                */ ?>
-                                施術メニューや料金は後日公開予定です。<br>
-                                お待ちください。
                             </p>
-                            <?php /*
+                        </div>
+
+                        <div class="content-width-small">
                             <div class="sec05-wrap">
-                                <div class="sec05-wrap-col-full">
-                                    <div class="sec05-table">
-                                        <table>
-                                            <tr>
-                                                <th>ベーシックコース<br>（約30分）</th>
-                                                <td>
-                                                    <strong>4,200</strong>円<small>(税込)</small><br>
-                                                    <p>(アカスリ＋ボディソープ洗浄＋<br class="hidden-sm">軽いオイルマッサージ)</p>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                    <div class="sec05-table">
-                                        <table>
-                                            <tr>
-                                                <th>スペシャルコース<br>（約50分）</th>
-                                                <td>
-                                                    <strong>6,800</strong>円<small>(税込)</small><br>
-                                                    <p>(アカスリ＋オイルトリートメント＋<br class="hidden-sm">フェイスケア)</p>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </div>
+                                <div class="sec05-wrap-col accordion">
+                                    <dl class="sec05-wrap-col-dl">
+                                        <dt class="sec05-wrap-col-dt">
+                                            <i></i>
+                                            <div class="sec05-wrap-col-left">
+                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec05-img-03_v3.webp" alt="">
+                                            </div>
+                                            <div class="sec05-wrap-col-right">
+                                                <h3>アカスリ部門</h3>
+                                                <p>
+                                                    お身体にたまった古い角質を取り除くことで、皮膚の生まれ変わりを促進する効果が期待できます。<br>
+                                                    お肌をサッパリ、プルプルにしたい方におすすめです。
+                                                </p>
+                                            </div>
+                                        </dt>
+                                        <dd class="sec05-wrap-col-dd">
+                                            <div class="sec05-wrap-col-right hidden-sm">
+                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/relax/sec05-img-03_v3.webp" alt="">
+                                                <p>
+                                                    お身体にたまった古い角質を取り除くことで、皮膚の生まれ変わりを促進する効果が期待できます。<br>
+                                                    お肌をサッパリ、プルプルにしたい方におすすめです。
+                                                </p>
+                                            </div>
+                                            <div class="sec05-table">
+                                                <table>
+                                                    <tr>
+                                                        <th colspan="2" class="hidden-sm main-th">アカスリ</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th rowspan="3" class="main-th hidden-mobile">アカスリ</th>
+                                                        <th>30分</th>
+                                                        <td><strong>4,200</strong>円<small>(税込)</small></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>60分</th>
+                                                        <td><strong>5,300</strong>円<small>(税込)</small></td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="sec05-table">
+                                                <table>
+                                                    <tr>
+                                                        <th colspan="2" class="hidden-sm main-th">セットコース</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th rowspan="4" class="main-th hidden-mobile">セットコース</th>
+                                                        <th>60分</th>
+                                                        <td><strong>9,200</strong>円<small>(税込)</small></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>80分</th>
+                                                        <td><strong>12,000</strong>円<small>(税込)</small></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>100分</th>
+                                                        <td><strong>14,800</strong>円<small>(税込)</small></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>120分</th>
+                                                        <td><strong>17,500</strong>円<small>(税込)</small></td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="sec05-table">
+                                                <table>
+                                                    <tr>
+                                                        <th colspan="2" class="hidden-sm main-th">韓流リンパエステ</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th rowspan="3" class="main-th hidden-mobile">韓流リンパエステ</th>
+                                                        <th>30分</th>
+                                                        <td><strong>4,600</strong>円<small>(税込)</small></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>40分</th>
+                                                        <td><strong>5,900</strong>円<small>(税込)</small></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>60分</th>
+                                                        <td><strong>8,700</strong>円<small>(税込)</small></td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+
+                                            <h3>オプション</h3>
+                                            <div class="sec01-center-wrap sec01-center-wrap--3-1">
+                                                <div class="sec01-center-wrap-col">
+                                                    <dl>
+                                                        <dt>かかと角質ケア10分</dt>
+                                                        <dd>
+                                                            <p>
+                                                                1,400<span>円</span><small>(税込)</small>
+                                                            </p>
+                                                        </dd>
+                                                    </dl>
+                                                </div>
+                                                <div class="sec01-center-wrap-col">
+                                                    <dl>
+                                                        <dt>延長10分</dt>
+                                                        <dd>
+                                                            <p>
+                                                                1,400<span>円</span><small>(税込)</small>
+                                                            </p>
+                                                        </dd>
+                                                    </dl>
+                                                </div>
+                                                <div class="sec01-center-wrap-col">
+                                                    <dl>
+                                                        <dt>指名料</dt>
+                                                        <dd>
+                                                            <p>
+                                                                300<span>円</span><small>(税込)</small>
+                                                            </p>
+                                                        </dd>
+                                                    </dl>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
                                 </div>
                             </div>
-                            */ ?>
                         </div>
                     </section>
                     <section class="sec06" id="sec11">
@@ -635,7 +932,7 @@ $type = isset($_GET['type']) ? $_GET['type'] : 'relaxation';
                                         </dl>
                                         <dl>
                                             <dt>受付時間</dt>
-											<dd>11:00～23:00（最終受付22:30）</dd>
+                                            <dd>11:00～23:00（最終受付22:30）</dd>
                                         </dl>
                                     </div>
                                     <div class="com-btn-border-black com-btn-border--left">

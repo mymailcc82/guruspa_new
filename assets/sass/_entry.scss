@@ -1,6 +1,56 @@
 @use 'setting' as *;
 .entry {
   background-color: #f4f1ef;
+  .page_visual {
+    padding: 199px 0 86px;
+    background-color: #ebe8e5;
+    @include media(middle) {
+      padding: 160px 0px 60px;
+    }
+    .page_visual_title--ja {
+      h1 {
+        font-family: $font-gothic !important;
+        font-size: 35px !important;
+        @include media(middle) {
+          font-size: 25px !important;
+        }
+      }
+    }
+    .page_visual_title {
+      width: 90%;
+      max-width: 1086px;
+      margin: 0 auto;
+
+      h1 {
+        font-size: 60px;
+        letter-spacing: 0.08em;
+        font-weight: bold;
+        font-family: $font-en;
+        color: #71360b;
+        line-height: 1;
+
+        @include media(middle) {
+          font-size: 50px;
+        }
+        @include media(mobile) {
+          font-size: 40px;
+        }
+      }
+
+      span {
+        font-size: 17px;
+        letter-spacing: 0.02em;
+        font-weight: 500;
+        color: #71360b;
+        line-height: 1;
+
+        @include media(middle) {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
   .contact-wrap {
     justify-content: space-between;
     padding: 120px 0px 120px;
