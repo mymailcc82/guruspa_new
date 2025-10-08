@@ -630,7 +630,7 @@ Template Name: enjoy-hakkan
                         <div class="sec04-center-wrap-col">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/sec04-img-16_v2.webp" alt="">
                             <p>
-                                飲み物の持ち込みOK＆冷蔵庫完備
+								館内購入の飲み物の持ち込みOK＆冷蔵庫完備
                             </p>
                         </div>
                         <div class="sec04-center-wrap-col">

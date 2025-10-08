@@ -177,7 +177,7 @@ $days = days_from_today_for_months();
             <section class="sec01">
                 <div class="content-width">
                     <div class="page-title-center--has-icon page-title--has-icon--mobile-20">
-                        <h2><i></i>月間スケジュール</h2>
+						<h2><i></i>本日のスケジュール</h2>
                     </div>
                     <div class="sec01-swiper swiper">
                         <div class="swiper-wrapper">

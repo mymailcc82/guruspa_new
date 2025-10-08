@@ -381,7 +381,7 @@ $type = isset($_GET['type']) ? $_GET['type'] : 'relaxation';
                                         </dl>
                                         <dl>
                                             <dt>受付時間</dt>
-                                            <dd>10:00〜22:00（最終受付 21:30）</dd>
+											<dd>11:00～23:00（最終受付22:30）</dd>
                                         </dl>
                                     </div>
                                     <div class="com-btn-border-black com-btn-border--left">
@@ -635,7 +635,7 @@ $type = isset($_GET['type']) ? $_GET['type'] : 'relaxation';
                                         </dl>
                                         <dl>
                                             <dt>受付時間</dt>
-                                            <dd>10:00〜22:00（最終受付 21:30）</dd>
+											<dd>11:00～23:00（最終受付22:30）</dd>
                                         </dl>
                                     </div>
                                     <div class="com-btn-border-black com-btn-border--left">
