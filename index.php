@@ -429,7 +429,7 @@
                     <h3><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/title-well-being.svg" alt="Well-beiing">な時間を、<br>すべての人に。</h3>
 
                     <p>
-                        松坂温泉グルスパは<br>
+                        松阪温泉グルスパは<br>
                         「ウェルビーイング＝心身ともに満たさ<br class="hidden-sm">れた状態」をテーマにした<br class="hidden-sm">スパリゾートです。<br><br>
 
                         この地の恵みを活かした天然温泉・<br class="hidden-sm">岩盤浴・食・休息。<br><br>

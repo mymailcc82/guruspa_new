@@ -120,7 +120,7 @@
                         <span>「SAUNA EAGLE SPA&RESORT」</span>から<br class="hidden-sm">名付けられました。<br><br>
                         ロゴにはコンセプトである<br class="hidden-sm">「ウェルビーイング」を育むための<br>
                         「水・火・光・緑」といった<br class="hidden-sm">自然のエネルギーを表現。<br><br>
-                        松坂という自然豊かな地で<br class="hidden-sm">心を体を癒し、より良い毎日を<br>
+                        松阪という自然豊かな地で<br class="hidden-sm">心を体を癒し、より良い毎日を<br>
                         皆様に提供できる施設を目指しています。
                     </p>
                     <div class="sec02-about-logo">
