@@ -307,8 +307,31 @@
 
                     </table>
                 </div>
+
+                <div class="sec01-bottom-table-mobile hidden-md">
+                    <div class="sec01-bottom-table-sp">
+                        <dl>
+                            <dt>通常入泉</dt>
+                            <dd>10:00〜24:00</dd>
+                        </dl>
+                        <dl>
+                            <dt>発汗エリア(有料岩盤浴)</dt>
+                            <dd>10:00〜23:15</dd>
+                        </dl>
+                        <dl>
+                            <dt>ご飲食</dt>
+                            <dd>11:00〜24:00</dd>
+                        </dl>
+
+                    </div>
+
+                </div>
+
+
+                <?php /*
                 <div class="sec01-bottom-table-mobile hidden-md accordion">
-                    <dl>
+                <div class="sec01-bottom-table-sp_v2">
+                <dl>
                         <dt>月〜木</dt>
                         <dd>
                             <table>
@@ -459,6 +482,10 @@
                         </dd>
                     </dl>
                 </div>
+
+                    
+                </div>
+                */ ?>
                 <p class="sec01-bottom-attention">
                     ※当館は年中無休で営業しております。<br>
                     ※設備点検などに伴う臨時休館がある場合は、事前にお知らせページにてご案内いたします。

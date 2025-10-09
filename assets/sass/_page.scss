@@ -71,6 +71,12 @@
       background-repeat: repeat;
       background-size: contain;
     }
+    &.page-deco-container--blue-relax {
+      //background-color: #dce7fb !important;
+      background-image: url(("./assets/img/aside/aside-bg-blue-content_v3.png"));
+      background-repeat: repeat;
+      background-size: cover;
+    }
     &.page-deco-container--green {
       background-color: #e8f2dd !important;
     }
