@@ -103,7 +103,7 @@ Template Name: enjoy-goods
                     <div class="sec02-wrap-col-img">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/goods/sec02-icon-03.svg" alt="">
                     </div>
-                    <p>化粧水・乳液・<br>クレンジング</p>
+                    <p>化粧水・<br>乳液（女性のみ）</p>
                 </div>
                 <div class="sec02-wrap-col">
                     <div class="sec02-wrap-col-img">
@@ -115,7 +115,7 @@ Template Name: enjoy-goods
                     <div class="sec02-wrap-col-img">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/goods/sec02-icon-05.svg" alt="">
                     </div>
-                    <p>ドライヤー<br>（女性はすべて）</p>
+                    <p>ドライヤー<br>（女性はすべてRefa）</p>
                 </div>
 
                 <div class="sec02-wrap-col">
