@@ -489,7 +489,7 @@ $type_id = isset($_GET['type_id']) ? $_GET['type_id'] : '';
 
                 <div class="sec04-wrap-blue-2-1" id="bihou">
                     <div class="sec04-wrap-blue-2-1-left">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-img-10.webp" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-img-10_v3.webp" alt="">
                         <div class="sec04-wrap-blue-2-1-left-span">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spa/sec04-title-02.svg" alt="">
                         </div>

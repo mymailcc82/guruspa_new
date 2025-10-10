@@ -679,7 +679,7 @@
         </div>
         <div class="content-width">
             <div class="sec04-bottom">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/guide/sec05-img-01_v3.webp" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/guide/sec05-img-01_v4.webp" alt="">
             </div>
         </div>
     </section>

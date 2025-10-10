@@ -817,8 +817,8 @@
                     </div>
 
                     <ul class="sec06-map">
-                        <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/map-1.webp" alt="guruspa"></li>
-                        <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/map-2_v4.webp" alt="guruspa"></li>
+                        <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/map-1_v2.webp" alt="guruspa"></li>
+                        <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/map-2_v5.webp" alt="guruspa"></li>
                     </ul>
                     <div class="sec06-wrap-under-link">
                         <a href="<?php echo home_url(); ?>/guide/#sec05">くわしく見る<i></i></a>
