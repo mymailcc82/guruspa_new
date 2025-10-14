@@ -309,16 +309,16 @@ $type = isset($_GET['type']) ? $_GET['type'] : 'relaxation';
                                                     </tr>
                                                     <tr>
                                                         <th rowspan="3" class="main-th hidden-mobile">ボディケア</th>
-                                                        <th>30分</th>
-                                                        <td><strong>3,300</strong>円<small>(税込)</small></td>
+                                                        <th>40分</th>
+                                                        <td><strong>4,200</strong>円<small>(税込)</small></td>
                                                     </tr>
                                                     <tr>
-                                                        <th>60分</th>
-                                                        <td><strong>6,000</strong>円<small>(税込)</small></td>
+                                                        <th>70分</th>
+                                                        <td><strong>6,930</strong>円<small>(税込)</small></td>
                                                     </tr>
                                                     <tr>
                                                         <th>90分</th>
-                                                        <td><strong>8,500</strong>円<small>(税込)</small></td>
+                                                        <td><strong>8,910</strong>円<small>(税込)</small></td>
                                                     </tr>
                                                 </table>
                                             </div>
@@ -330,15 +330,15 @@ $type = isset($_GET['type']) ? $_GET['type'] : 'relaxation';
                                                     <tr>
                                                         <th rowspan="3" class="main-th hidden-mobile">フットケア</th>
                                                         <th>30分</th>
-                                                        <td><strong>3,300</strong>円<small>(税込)</small></td>
+                                                        <td><strong>3,600</strong>円<small>(税込)</small></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>40分</th>
+                                                        <td><strong>4,400</strong>円<small>(税込)</small></td>
                                                     </tr>
                                                     <tr>
                                                         <th>60分</th>
-                                                        <td><strong>6,000</strong>円<small>(税込)</small></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>90分</th>
-                                                        <td><strong>8,500</strong>円<small>(税込)</small></td>
+                                                        <td><strong>6,600</strong>円<small>(税込)</small></td>
                                                     </tr>
                                                 </table>
                                             </div>
@@ -350,11 +350,11 @@ $type = isset($_GET['type']) ? $_GET['type'] : 'relaxation';
                                                     <tr>
                                                         <th rowspan="2" class="hidden-mobile main-th">超絶睡眠ヘッドスパ</th>
                                                         <th>30分</th>
-                                                        <td><strong>3,300</strong>円<small>(税込)</small></td>
+                                                        <td><strong>4,000</strong>円<small>(税込)</small></td>
                                                     </tr>
                                                     <tr>
-                                                        <th>60分</th>
-                                                        <td><strong>6,000</strong>円<small>(税込)</small></td>
+                                                        <th>50分</th>
+                                                        <td><strong>5,500</strong>円<small>(税込)</small></td>
                                                     </tr>
                                                 </table>
                                             </div>

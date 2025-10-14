@@ -347,7 +347,7 @@ Template Name: enjoy-goods
                                 <div class="goods-swiper swiper">
                                     <div class="swiper-wrapper">
 
-                                        <?php if ($loop_img[0]): ?>
+                                        <?php if ($loop_img): ?>
                                             <?php foreach ($loop_img as $img): ?>
                                                 <div class="swiper-slide">
                                                     <img src="<?php echo esc_url($img['loop_img_item']); ?>" alt="">
@@ -366,7 +366,7 @@ Template Name: enjoy-goods
                                 </div>
                                 <div class="goods-swiper-thum swiper">
                                     <div class="swiper-wrapper">
-                                        <?php if ($loop_img[0]): ?>
+                                        <?php if ($loop_img): ?>
                                             <?php foreach ($loop_img as $img): ?>
                                                 <div class="swiper-slide">
                                                     <img src="<?php echo esc_url($img['loop_img_item']); ?>" alt="">
