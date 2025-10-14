@@ -130,19 +130,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     gsap.to('.wave_nami_v2', {
       opacity: 1,
-      duration: 0.5,
-      delay: 1.5,
+      duration: 0.9,
+      delay: 2,
     });
     gsap.to('.wave_nami_v3', {
       opacity: 1,
-      duration: 0.5,
-      delay: 2,
+      duration: 0.9,
+      delay: 2.5,
       x: -0,
     });
     gsap.to('.icon-01', {
       opacity: 1,
-      duration: 0.5,
-      delay: 2.5,
+      duration: 1,
+      delay: 4,
     });
 
     gsap.to('.page-loading', {
@@ -373,7 +373,7 @@ function logoAnimation() {
     '+=0.08'
   );
 }
-
+/*
 window.addEventListener('load', function () {
   const track = document.querySelector('.loop-track');
 
@@ -385,3 +385,5 @@ window.addEventListener('load', function () {
 
   track.style.setProperty('--scroll-width', `${singleSetWidth}px`);
 });
+
+*/

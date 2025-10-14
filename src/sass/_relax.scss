@@ -704,13 +704,14 @@
                 background-color: #dce7fa;
                 color: #222222;
                 padding: 14px 0px;
-                font-size: 14px;
+                font-size: 18px;
                 font-weight: bold;
                 width: 30%;
                 vertical-align: middle;
                 border-bottom: 1px solid #222;
                 border-right: 1px solid #222;
                 line-height: 1.2;
+                letter-spacing: 0.1em;
                 @include media(middle) {
                   font-size: 16px;
                 }

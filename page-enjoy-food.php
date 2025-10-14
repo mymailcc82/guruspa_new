@@ -77,8 +77,8 @@ Template Name: enjoy-food
                 </div>
                 <div class="page-deco-bg">
                     <picture>
-                        <source media="(max-width: 601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-yellow-top-sp.png">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-yellow-top.png" alt="">
+                        <source media="(max-width: 601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-yellow-top-sp.webp">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-yellow-top.webp" alt="">
                     </picture>
                 </div>
                 <div class="page-deco-container page-deco-container--yellow">
@@ -377,7 +377,7 @@ Template Name: enjoy-food
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/food/sec02-icon-01.webp" alt="">
                 </div>
                 <div class="page-deco-bg">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-yellow-top.png" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-yellow-top.webp" alt="">
                 </div>
                 <div class="page-deco-container page-deco-container--yellow">
                     <div class="relative">

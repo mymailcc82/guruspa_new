@@ -87,7 +87,7 @@ if (isset($_GET['date'])) {
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-sprout-blown.png" alt="">
                     </span>
                     <span class="title title-item-sun">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/item-01.png" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/item-01.webp" alt="">
                     </span>
                 </h2>
             </div>
@@ -196,7 +196,7 @@ if (isset($_GET['date'])) {
     </section>
     <div class="relative">
         <div class="page-deco-bg">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-yellow-top.png" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-yellow-top.webp" alt="">
         </div>
         <div class="page-deco-container page-deco-container--yellow">
             <section class="sec01">
@@ -276,10 +276,10 @@ if (isset($_GET['date'])) {
                                     $image_url = get_the_post_thumbnail_url($value, 'full');
                                     ?>
                                     <?php if ($image_url): ?>
-                                        <?php $image_url = get_template_directory_uri() . '/assets/img/com/comming-soon.jpg'; ?>
+                                        <?php $image_url = get_template_directory_uri() . '/assets/img/com/comming-soon.webp'; ?>
                                         <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($key); ?>月のイベントスケジュール">
                                     <?php else: ?>
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/comming-soon.jpg" alt="<?php echo esc_attr($key); ?>月のイベントスケジュール">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/comming-soon.webp" alt="<?php echo esc_attr($key); ?>月のイベントスケジュール">
                                     <?php endif; ?>
                                 </div>
                             <?php endforeach; ?>
@@ -309,10 +309,10 @@ if (isset($_GET['date'])) {
                             <div class="sec-01-col-under">
                                 <a href="<?php echo home_url(); ?>/event/">
                                     <div class="sec-01-col-under-img">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/bnr/page-bnr-event-img_v2.jpg" alt="">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/bnr/page-bnr-event-img_v2.webp" alt="">
                                     </div>
                                     <div class="sec-01-col-under-title">
-                                        <h3><img src="<?php echo get_template_directory_uri(); ?>/assets/img/bnr/page-bnr-event-txt.png" alt="EVENT SCHEDULE"><i class="icon-btn"></i></h3>
+                                        <h3><img src="<?php echo get_template_directory_uri(); ?>/assets/img/bnr/page-bnr-event-txt.webp" alt="EVENT SCHEDULE"><i class="icon-btn"></i></h3>
                                         <p>すべてのイベント情報をチェック！</p>
                                     </div>
                                 </a>
@@ -323,8 +323,8 @@ if (isset($_GET['date'])) {
                                 <a href="<?php echo home_url(); ?>/schedule/">
                                     <div class="sec-01-col-under-img sec-01-col-under--schedule">
                                         <picture>
-                                            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/bnr/page-bnr-schedule-img_v3.png" media="(max-width: 600px)">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/bnr/page-bnr-schedule-img_v2.jpg" alt="">
+                                            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/bnr/page-bnr-schedule-img_v3.webp" media="(max-width: 600px)">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/bnr/page-bnr-schedule-img_v2.webp" alt="">
                                         </picture>
 
                                     </div>

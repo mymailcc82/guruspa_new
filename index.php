@@ -28,9 +28,9 @@
     <div class="top-bg">
         <div class="top-visual">
             <div class="top-visual-wrap">
-                <span class="bg-item-01"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/bg-item-01_v2.png" alt=""></span>
-                <span class="bg-item-02"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/bg-item-02_v2.png" alt=""></span>
-                <span class="icon-01 icon-01_ani"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01.png" alt=""></span>
+                <span class="bg-item-01"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/bg-item-01_v2.webp" alt=""></span>
+                <span class="bg-item-02"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/bg-item-02_v2.webp" alt=""></span>
+                <span class="icon-01 icon-01_ani"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01_v2.webp" alt=""></span>
                 <div class="top-visual-mv">
                     <div class="top-visual-mv-container">
                         <?php get_template_part('inc/svg-wave'); ?>
@@ -121,7 +121,7 @@
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-sprout-blown.png" alt="">
                             </span>
                             <span class="title title-item-sun">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/item-01.png" alt="">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/item-01.webp" alt="">
                             </span>
                         </h2>
                         <a href="<?php echo home_url(); ?>/event/">一覧を見る<i></i></a>
@@ -288,9 +288,9 @@
 
         <section class="sec02">
             <div class="sec02-bg-top">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec02-bg-top_v3.png" alt="">
-                <span class="bg-item-06"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/bg-item-06_v2.png" alt=""></span>
-                <span class="bg-item-05"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/bg-item-05_v4.png" alt=""></span>
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec02-bg-top_v3.webp" alt="">
+                <span class="bg-item-06"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/bg-item-06_v2.webp" alt=""></span>
+                <span class="bg-item-05"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/bg-item-05_v4.webp" alt=""></span>
             </div>
             <div class="sec02-bg">
                 <div class="sec02-wrap">
@@ -302,7 +302,7 @@
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-sprout-white.png" alt="">
                             </span>
                             <span class="title title-item-sun">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/item-01.png" alt="">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/item-01.webp" alt="">
                             </span>
                         </h2>
                         <a href="<?php echo home_url(); ?>/archive/">一覧を見る<i></i></a>
@@ -333,7 +333,7 @@
                                                         <?php if (has_post_thumbnail()) : ?>
                                                             <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>">
                                                         <?php else : ?>
-                                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/dummy-small_v2.jpg" alt="<?php the_title(); ?>">
+                                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/dummy-small_v2.webp" alt="<?php the_title(); ?>">
                                                         <?php endif; ?>
                                                     </div>
                                                     <div class="sec02-list-txt">
@@ -378,7 +378,7 @@
                                                         <?php if (has_post_thumbnail()) : ?>
                                                             <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>">
                                                         <?php else : ?>
-                                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/dummy-small_v2.jpg" alt="<?php the_title(); ?>">
+                                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/dummy-small_v2.webp" alt="<?php the_title(); ?>">
                                                         <?php endif; ?>
                                                     </div>
                                                     <div class="sec02-list-txt">
@@ -403,8 +403,8 @@
                 </div>
             </div>
             <div class="sec02-bg-under">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec02-bg-under_v3.png" alt="">
-                <span class="bg-item-04"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/bg-item-04_v2.png" alt=""></span>
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec02-bg-under_v3.webp" alt="">
+                <span class="bg-item-04"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/bg-item-04_v2.webp" alt=""></span>
             </div>
         </section>
 
@@ -421,7 +421,7 @@
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-sprout-blown.png" alt="">
                             </span>
                             <span class="title title-item-sun-big">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/item-01-big_v2.png" alt="">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/item-01-big_v2.webp" alt="">
                             </span>
                         </h2>
                     </div>
@@ -555,9 +555,9 @@
         <section class="sec04">
             <div class="sec04-bg-top">
                 <picture class="">
-                    <source media="(min-width:601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec04-bg-top_v2.png">
-                    <source media="(max-width:600px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec04-bg-top_sp_v3.png">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec04-bg-top_v2.png" alt="">
+                    <source media="(min-width:601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec04-bg-top_v2.webp">
+                    <source media="(max-width:600px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec04-bg-top_sp_v3.webp">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec04-bg-top_v2.webp" alt="">
                 </picture>
             </div>
             <div class="sec04-bg">
@@ -583,7 +583,7 @@
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-sprout-white.png" alt="">
                                 </span>
                                 <span class="title title-item-sun">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/item-01.png" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/item-01.webp" alt="">
                                 </span>
                             </h2>
                         </div>
@@ -667,11 +667,11 @@
             </div>
             <div class="sec04-bg-under">
                 <picture class="">
-                    <source media="(min-width:601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec04-bg-under_v2.png">
-                    <source media="(max-width:600px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec04-bg-under_sp_v2.png">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec04-bg-under_v2.png" alt="">
+                    <source media="(min-width:601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec04-bg-under_v2.webp">
+                    <source media="(max-width:600px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec04-bg-under_sp_v2.webp">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec04-bg-under_v2.webp" alt="">
                 </picture>
-                <span class="bg-item-07"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/bg-item-07_v2.png" alt=""></span>
+                <span class="bg-item-07"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/bg-item-07_v2.webp" alt=""></span>
             </div>
         </section>
 
@@ -686,7 +686,7 @@
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-sprout-blown.png" alt="">
                             </span>
                             <span class="title title-item-sun">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/item-01.png" alt="">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/item-01.webp" alt="">
                             </span>
                         </h2>
                     </div>
@@ -775,7 +775,7 @@
                                     <td>
                                         幼児<br><span class="note">※小学生未満</span>
                                     </td>
-                                    <td colspan="2"><strong>小学生未満　ご利用できません</strong></td>
+                                    <td colspan="2"><strong>小学生未満　<br class="hidden-sm">ご利用できません</strong></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -796,9 +796,9 @@
         <section class="sec06">
             <div class="sec06-bg-top">
                 <picture class="">
-                    <source media="(min-width:601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec06-bg-top_v4.png">
-                    <source media="(max-width:600px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec06-bg-top_v4_sp.png">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec06-bg-top_v4.png" alt="">
+                    <source media="(min-width:601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec06-bg-top_v4.webp">
+                    <source media="(max-width:600px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec06-bg-top_v4_sp.webp">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec06-bg-top_v4.webp" alt="">
                 </picture>
             </div>
             <div class="sec06-bg">
@@ -811,7 +811,7 @@
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-sprout-blown.png" alt="">
                             </span>
                             <span class="title title-item-sun">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/item-01-white.png" alt="">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/item-01-white.webp" alt="">
                             </span>
                         </h2>
                     </div>
@@ -827,9 +827,9 @@
             </div>
             <div class="sec06-bg-under">
                 <picture class="">
-                    <source media="(min-width:601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec06-bg-under_v3.png">
-                    <source media="(max-width:600px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec06-bg-under_v4_sp.png">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec06-bg-under_v3.png" alt="">
+                    <source media="(min-width:601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec06-bg-under_v3.webp">
+                    <source media="(max-width:600px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec06-bg-under_v4_sp.webp">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/sec06-bg-under_v3.webp" alt="">
                 </picture>
             </div>
         </section>
@@ -848,7 +848,7 @@
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-sprout-blown.png" alt="">
                                 </span>
                                 <span class="title title-item-sun">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/item-01.png" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/item-01.webp" alt="">
                                 </span>
                             </h2>
                             <a href="<?php echo home_url(); ?>/faq">一覧を見る<i></i></a>
@@ -925,7 +925,7 @@
     }
 </style>
 
-<script src="<?php echo get_template_directory_uri(); ?>/assets/js/top.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/assets/js/top.js?ver=1.1"></script>
 <script>
     //TOPのスライド
     const swipervisual = new Swiper('.top-visual-slide', {

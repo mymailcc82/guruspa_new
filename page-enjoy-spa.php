@@ -103,8 +103,8 @@ $type_id = isset($_GET['type_id']) ? $_GET['type_id'] : '';
 
         <div class="page-deco-bg">
             <picture>
-                <source media="(max-width: 601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-blue-top-sp_v2.png">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-blue-top_v2.png" alt="">
+                <source media="(max-width: 601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-blue-top-sp_v2.webp">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-blue-top_v2.webp" alt="">
             </picture>
         </div>
         <div class="page-deco-container page-deco-container--blue">
@@ -155,7 +155,7 @@ $type_id = isset($_GET['type_id']) ? $_GET['type_id'] : '';
             </div>
         </div>
         <div class="page-deco-bg-bottom">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-blue-bottom.png" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-blue-bottom.webp" alt="">
         </div>
 
     </section>
@@ -518,8 +518,8 @@ $type_id = isset($_GET['type_id']) ? $_GET['type_id'] : '';
     <section class="sec05" id="sec06">
         <div class="page-deco-bg">
             <picture>
-                <source media="(max-width: 601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-blue-top-sp_v2.png">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-blue-top_v2.png" alt="">
+                <source media="(max-width: 601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-blue-top-sp_v2.webp">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-blue-top_v2.webp" alt="">
             </picture>
         </div>
         <div class="page-deco-container page-deco-container--blue">
@@ -554,7 +554,7 @@ $type_id = isset($_GET['type_id']) ? $_GET['type_id'] : '';
             </div>
         </div>
         <div class="page-deco-bg-bottom">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-blue-bottom.png" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-blue-bottom.webp" alt="">
         </div>
 
     </section>

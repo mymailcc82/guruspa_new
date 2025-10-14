@@ -33,7 +33,7 @@
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-sprout-blown.png" alt="">
                     </span>
                     <span class="title title-item-sun">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/item-01.png" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/item-01.webp" alt="">
                     </span>
                 </h2>
             </div>
@@ -62,8 +62,8 @@
     <section class="sec02" id="sec02">
         <div class="page-deco-bg">
             <picture>
-                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-blue-top-sp_v2.png?ver=1.0.0" media="(max-width: 601px)">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-blue-top_v2.png" alt="">
+                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-blue-top-sp_v2.webp?ver=1.0.0" media="(max-width: 601px)">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-blue-top_v2.webp" alt="">
             </picture>
 
         </div>
@@ -237,7 +237,7 @@
             </div>
         </div>
         <div class="page-deco-bg-bottom">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-blue-bottom.png" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-blue-bottom.webp" alt="">
         </div>
     </section>
     <section class="sec03" id="sec03">
@@ -342,8 +342,8 @@
     <section class="sec04" id="sec04">
         <div class="page-deco-bg">
             <picture>
-                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-red-top-sp.png" media="(max-width: 601px)">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-red-top.png" alt="">
+                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-red-top-sp.webp" media="(max-width: 601px)">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-red-top.webp" alt="">
             </picture>
 
         </div>
@@ -371,10 +371,10 @@
                         <dl>
                             <dt>営業時間</dt>
                             <dd>
-								通常入泉	10:00〜24:00<br>
-								発汗エリア 10:00〜23:15<br>
-								(有料岩盤浴)<br>
-								ご飲食 11:00〜23:00<br>
+                                通常入泉 10:00〜24:00<br>
+                                発汗エリア 10:00〜23:15<br>
+                                (有料岩盤浴)<br>
+                                ご飲食 11:00〜23:00<br>
                             </dd>
                         </dl>
                         <dl>

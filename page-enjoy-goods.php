@@ -162,8 +162,8 @@ Template Name: enjoy-goods
     <section class="sec04">
         <div class="page-deco-bg">
             <picture>
-                <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-red-top-sp.png">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-red-top.png" alt="">
+                <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-red-top-sp.webp">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-red-top.webp" alt="">
             </picture>
         </div>
         <div class="page-deco-container page-deco-container--red" id="sec04">
@@ -258,7 +258,7 @@ Template Name: enjoy-goods
                                         <?php if (has_post_thumbnail()): ?>
                                             <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>">
                                         <?php else: ?>
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-default.jpg" alt="デフォルト画像">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-default.webp" alt="デフォルト画像">
                                         <?php endif; ?>
                                         <?php if ($class_col): ?>
                                             <div class="sec04-wrap-col-img-span">
@@ -358,7 +358,7 @@ Template Name: enjoy-goods
                                                 <?php if (has_post_thumbnail()): ?>
                                                     <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>">
                                                 <?php else: ?>
-                                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-default.jpg" alt="デフォルト画像">
+                                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-default.webp" alt="デフォルト画像">
                                                 <?php endif; ?>
                                             </div>
                                         <?php endif; ?>
@@ -377,7 +377,7 @@ Template Name: enjoy-goods
                                                 <?php if (has_post_thumbnail()): ?>
                                                     <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>">
                                                 <?php else: ?>
-                                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-default.jpg" alt="デフォルト画像">
+                                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-default.webp" alt="デフォルト画像">
                                                 <?php endif; ?>
                                             </div>
                                         <?php endif; ?>

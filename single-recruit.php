@@ -184,7 +184,7 @@ foreach ($_GET as $key => $value) {
                         <?php endwhile; ?>
                     <?php else : ?>
                         <div class="swiper-slide">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/noimage_v2.jpg" alt="no image">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/noimage_v2.webp" alt="no image">
                         </div>
                     <?php endif; ?>
                 </div>
@@ -204,7 +204,7 @@ foreach ($_GET as $key => $value) {
                         <?php endwhile; ?>
                     <?php else : ?>
                         <div class="swiper-slide">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/noimage_v2.jpg" alt="no image">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/noimage_v2.webp" alt="no image">
                         </div>
                     <?php endif; ?>
                 </div>

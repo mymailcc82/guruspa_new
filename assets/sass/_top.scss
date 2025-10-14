@@ -1232,7 +1232,7 @@
         content: '';
         width: 100%;
         height: 100%;
-        background-image: url(("./assets/img/com/sec02-bg-main_v2.jpg"));
+        background-image: url(("./assets/img/com/sec02-bg-main_v2.webp"));
         background-size: contain;
         background-repeat: repeat;
         z-index: 4;
@@ -1826,12 +1826,12 @@
         content: '';
         width: 100%;
         height: 100%;
-        background-image: url(("./assets/img/com/sec04-bg-main.jpg"));
+        background-image: url(("./assets/img/com/sec04-bg-main.webp"));
         background-size: cover;
         background-repeat: no-repeat;
 
         @include media(mobile) {
-          background-image: url(("./assets/img/com/sec04-bg-main_sp.jpg"));
+          background-image: url(("./assets/img/com/sec04-bg-main_sp.webp"));
           background-size: contain;
           background-repeat: repeat;
         }
@@ -2317,7 +2317,7 @@
           content: '';
           width: 150px;
           height: 191px;
-          background-image: url(("./assets/img/com/bg-item-11_v2.png"));
+          background-image: url(("./assets/img/com/bg-item-11_v2.webp"));
           background-size: contain;
           background-repeat: no-repeat;
           right: -100px;
@@ -2485,7 +2485,7 @@
           content: '';
           width: 150px;
           height: 207px;
-          background-image: url(("./assets/img/com/bg-item-09.png"));
+          background-image: url(("./assets/img/com/bg-item-09.webp"));
           background-size: contain;
           background-repeat: no-repeat;
           left: -120px;
@@ -2505,7 +2505,7 @@
           content: '';
           width: 336px;
           height: 459px;
-          background-image: url(("./assets/img/com/bg-item-10_v2.png"));
+          background-image: url(("./assets/img/com/bg-item-10_v2.webp"));
           background-size: contain;
           background-repeat: no-repeat;
           right: -120px;
@@ -2647,12 +2647,12 @@
         content: '';
         width: 100%;
         height: 100%;
-        background-image: url(("./assets/img/com/sec06-bg-main.jpg"));
+        background-image: url(("./assets/img/com/sec06-bg-main.webp"));
         background-size: cover;
         background-repeat: no-repeat;
 
         @include media(mobile) {
-          background-image: url(("./assets/img/com/sec06-bg-main_sp.png"));
+          background-image: url(("./assets/img/com/sec06-bg-main_sp.webp"));
         }
       }
 

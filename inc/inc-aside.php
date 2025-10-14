@@ -1,9 +1,9 @@
 <aside class="aside">
     <div class="aside-bg-top">
         <picture class="">
-            <source media="(min-width:601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-top.png">
-            <source media="(max-width:600px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-top_sp_v2.png">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-top.png" alt="">
+            <source media="(min-width:601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-top.webp">
+            <source media="(max-width:600px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-top_sp_v2.webp">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-top.webp" alt="">
         </picture>
     </div>
     <div class="aside-bg">
@@ -11,7 +11,7 @@
             <div class="aside-btn-1">
                 <a href="<?php echo home_url(); ?>/recruit_top/" target="_blank" rel="noopener noreferrer">
                     <div class="aside-btn-1-img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-img_v2.jpg" alt=""><i></i>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-img_v2.webp" alt=""><i></i>
                     </div>
                     <div class="aside-btn-1-txt">
                         <div class="aside-title">
@@ -21,12 +21,12 @@
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-sprout-white.png" alt="">
                                 </span>
                                 <span class="title-item-sun">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/item-01.png" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/item-01.webp" alt="">
                                 </span>
                             </h2>
                             <h2 class="hidden-sm">
-                                <span class="aside-title-sp_sun"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-title-sp_sun.png" alt=""></span>
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-title-sp_v2.png" alt="">
+                                <span class="aside-title-sp_sun"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-title-sp_sun.webp" alt=""></span>
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-title-sp_v2.webp" alt="">
                             </h2>
                         </div>
                         <p>

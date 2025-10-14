@@ -33,7 +33,7 @@
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-sprout-blown.png" alt="">
                     </span>
                     <span class="title title-item-sun">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/item-01.png" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/item-01.webp" alt="">
                     </span>
                 </h2>
             </div>
@@ -504,8 +504,8 @@
     <section class="sec03" id="sec04">
         <div class="page-deco-bg">
             <picture>
-                <source media="(max-width: 601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-green-top-sp_v3.png">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-green-top-v3.png" alt="">
+                <source media="(max-width: 601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-green-top-sp_v3.webp">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-green-top-v3.webp" alt="">
             </picture>
 
         </div>
@@ -575,7 +575,7 @@
                             <div class="sec03-col-txt">
                                 <ul>
                                     <li>小学生以下のお子様は必ず保護者の同伴が必要です。</li>
-									<li>成人保護者の同伴のない18歳未満のお客様の施設ご利用は<span>22時までのご利用</span>となります。</li>
+                                    <li>成人保護者の同伴のない18歳未満のお客様の施設ご利用は、<span>22時までのご利用</span>となります。</li>
                                     <li>身長120cm以上のお子様は混浴禁止（条例に準じます）。</li>
                                 </ul>
                             </div>
@@ -652,7 +652,7 @@
             </div>
         </div>
         <div class="page-deco-bg-bottom">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-green-bottom.png" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-green-bottom.webp" alt="">
         </div>
     </section>
     <section class="sec04" id="sec05">

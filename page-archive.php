@@ -39,7 +39,7 @@ if (isset($_GET['event_tag'])) {
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-sprout-blown.png" alt="">
                     </span>
                     <span class="title title-item-sun">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/item-01.png" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/item-01.webp" alt="">
                     </span>
                 </h2>
             </div>
@@ -74,7 +74,7 @@ if (isset($_GET['event_tag'])) {
                                                     <?php the_post_thumbnail('medium'); // サムネイルを表示 
                                                     ?>
                                                 <?php else : ?>
-                                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/dummy-small.jpg" alt="デフォルト画像">
+                                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/dummy-small.webp" alt="デフォルト画像">
                                                 <?php endif; ?>
                                             </div>
                                             <div class="archive-wrap-col-txt">

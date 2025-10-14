@@ -106,8 +106,8 @@ Template Name: enjoy-sauna
 
         <div class="page-deco-bg">
             <picture>
-                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-yellow-top-sp.png" media="(max-width: 600px)">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-yellow-top.png" alt="">
+                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-yellow-top-sp.webp" media="(max-width: 600px)">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-yellow-top.webp" alt="">
             </picture>
 
         </div>
@@ -166,7 +166,7 @@ Template Name: enjoy-sauna
             </div>
         </div>
         <div class="page-bg-deco-bg-bottom">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-yellow-bottom.png" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-yellow-bottom.webp" alt="">
         </div>
     </section>
 
@@ -289,8 +289,8 @@ Template Name: enjoy-sauna
     <section class="sec06" id="sec06">
         <div class="page-deco-bg">
             <picture>
-                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-yellow-top-sp.png" media="(max-width: 600px)">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-yellow-top.png" alt="">
+                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-yellow-top-sp.webp" media="(max-width: 600px)">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-yellow-top.webp" alt="">
             </picture>
         </div>
         <div class="page-deco-container page-deco-container--yellow">
@@ -375,10 +375,10 @@ Template Name: enjoy-sauna
                         <div class="sec-01-col-under">
                             <a href="<?php echo home_url(); ?>/today/">
                                 <div class="sec-01-col-under-img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/bnr/page-bnr-today-img_v2.jpg" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/bnr/page-bnr-today-img_v2.webp" alt="">
                                 </div>
                                 <div class="sec-01-col-under-title">
-                                    <h3><img src="<?php echo get_template_directory_uri(); ?>/assets/img/bnr/page-bnr-today-txt.png" alt="EVENT SCHEDULE"><i class="icon-btn"></i></h3>
+                                    <h3><img src="<?php echo get_template_directory_uri(); ?>/assets/img/bnr/page-bnr-today-txt.webp" alt="EVENT SCHEDULE"><i class="icon-btn"></i></h3>
                                     <p>本日開催しているイベントをチェック！</p>
                                 </div>
                             </a>
@@ -389,8 +389,8 @@ Template Name: enjoy-sauna
                             <a href="<?php echo home_url(); ?>/schedule/">
                                 <div class="sec-01-col-under-img sec-01-col-under--schedule">
                                     <picture>
-                                        <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/bnr/page-bnr-schedule-img_v3.png" media="(max-width: 600px)">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/bnr/page-bnr-schedule-img_v2.jpg" alt="">
+                                        <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/bnr/page-bnr-schedule-img_v3.webp" media="(max-width: 600px)">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/bnr/page-bnr-schedule-img_v2.webp" alt="">
                                     </picture>
 
                                 </div>
@@ -405,7 +405,7 @@ Template Name: enjoy-sauna
             </div>
         </div>
         <div class="page-bg-deco-bg-bottom">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-yellow-bottom.png" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-yellow-bottom.webp" alt="">
         </div>
     </section>
     <?php /*

@@ -54,26 +54,26 @@
     padding-top: 20px;
     &.page-deco-container--red {
       //background-color: #dce7fb !important;
-      background-image: url(("./assets/img/aside/aside-bg-red-content_v2.png"));
+      background-image: url(("./assets/img/aside/aside-bg-red-content_v2.webp"));
       background-repeat: repeat;
       background-size: contain;
     }
     &.page-deco-container--yellow {
       //background-color: #dce7fb !important;
-      background-image: url(("./assets/img/aside/aside-bg-yellow-content_v3.jpg"));
+      background-image: url(("./assets/img/aside/aside-bg-yellow-content_v3.webp"));
       background-repeat: repeat;
       background-size: contain;
     }
 
     &.page-deco-container--blue {
       //background-color: #dce7fb !important;
-      background-image: url(("./assets/img/aside/aside-bg-blue-content_v4.jpg"));
+      background-image: url(("./assets/img/aside/aside-bg-blue-content_v4.webp"));
       background-repeat: repeat;
       background-size: contain;
     }
     &.page-deco-container--blue-relax {
       //background-color: #dce7fb !important;
-      background-image: url(("./assets/img/aside/aside-bg-blue-content_v3.png"));
+      background-image: url(("./assets/img/aside/aside-bg-blue-content_v3.webp"));
       background-repeat: repeat;
       background-size: cover;
     }
@@ -93,7 +93,7 @@
     }
   }
   .page-bg-deco-bg-bottom-yellow {
-    background-image: url(("./assets/img/aside/aside-bg-yellow-content.jpg"));
+    background-image: url(("./assets/img/aside/aside-bg-yellow-content.webp"));
     background-repeat: repeat;
     background-size: 200px;
     position: absolute;
@@ -103,7 +103,7 @@
     left: 0;
   }
   .page-bg-deco-bg-bottom-red {
-    background-image: url(("./assets/img/aside/aside-bg-red-content_v3.png"));
+    background-image: url(("./assets/img/aside/aside-bg-red-content_v3.webp"));
     background-repeat: repeat;
     background-size: contain;
     position: absolute;
@@ -193,7 +193,7 @@
         z-index: 4;
         &.sec-01-col-under--news {
           a {
-            background-image: url(("./assets/img/bnr/page-bnr-news-bg.jpg"));
+            background-image: url(("./assets/img/bnr/page-bnr-news-bg.webp"));
             padding: 15px 30px;
             &:before {
               display: none;

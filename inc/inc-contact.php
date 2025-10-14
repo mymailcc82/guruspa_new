@@ -1,5 +1,5 @@
 <aside class="aside">
-    <div class="aside-bg-top"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-top.png" alt=""></div>
+    <div class="aside-bg-top"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-top.webp" alt=""></div>
     <div class="aside-bg">
         <div class="content-width">
             <div class="aside-btn-1">
@@ -12,7 +12,7 @@
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-sprout-white.png" alt="">
                                 </span>
                                 <span class="title-item-sun">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/item-01.png" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/item-01.webp" alt="">
                                 </span>
                             </h2>
                         </div>
@@ -22,7 +22,7 @@
                         </p>
                     </div>
                     <div class="aside-btn-1-img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/aside-img.jpg" alt=""><i></i>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/aside-img.webp" alt=""><i></i>
                     </div>
                 </a>
             </div>
@@ -42,5 +42,5 @@
             </div>
         </div>
     </div>
-    <div class="aside-bg-under"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-under_v2.png" alt=""></div>
+    <div class="aside-bg-under"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-under_v2.webp" alt=""></div>
 </aside>

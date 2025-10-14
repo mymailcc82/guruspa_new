@@ -33,7 +33,7 @@
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-sprout-blown.png" alt="">
                     </span>
                     <span class="title title-item-sun">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/item-01.png" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/item-01.webp" alt="">
                     </span>
                 </h2>
             </div>
@@ -398,7 +398,7 @@
 
     <section class="sec03">
         <div class="sec03-bg">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-gray-top_v2.png" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-gray-top_v2.webp" alt="">
         </div>
         <div class="sec03-container">
             <div class="content-width">

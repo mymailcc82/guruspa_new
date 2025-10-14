@@ -3246,7 +3246,7 @@ img.alignright {
   content: "";
   width: 100%;
   height: 100%;
-  background-image: url("./assets/img/com/sec02-bg-main.jpg");
+  background-image: url("./assets/img/com/sec02-bg-main.webp");
   background-size: contain;
   background-repeat: repeat;
   z-index: 4;
@@ -3770,7 +3770,7 @@ img.alignright {
   content: "";
   width: 100%;
   height: 100%;
-  background-image: url("./assets/img/com/sec04-bg-main.jpg");
+  background-image: url("./assets/img/com/sec04-bg-main.webp");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -4216,7 +4216,7 @@ img.alignright {
   content: "";
   width: 150px;
   height: 191px;
-  background-image: url("./assets/img/com/bg-item-11.png");
+  background-image: url("./assets/img/com/bg-item-11.webp");
   background-size: contain;
   background-repeat: no-repeat;
   right: -100px;
@@ -4363,7 +4363,7 @@ img.alignright {
   content: "";
   width: 150px;
   height: 207px;
-  background-image: url("./assets/img/com/bg-item-09.png");
+  background-image: url("./assets/img/com/bg-item-09.webp");
   background-size: contain;
   background-repeat: no-repeat;
   left: -120px;
@@ -4478,7 +4478,7 @@ img.alignright {
   content: "";
   width: 356px;
   height: 479px;
-  background-image: url("./assets/img/com/bg-item-10.png");
+  background-image: url("./assets/img/com/bg-item-10.webp");
   background-size: contain;
   background-repeat: no-repeat;
   right: -20px;
@@ -4508,7 +4508,7 @@ img.alignright {
   content: "";
   width: 100%;
   height: 100%;
-  background-image: url("./assets/img/com/sec06-bg-main.jpg");
+  background-image: url("./assets/img/com/sec06-bg-main.webp");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -4656,7 +4656,7 @@ img.alignright {
   content: "";
   width: 100%;
   height: 100%;
-  background-image: url("./assets/img/aside/aside-bg-main.jpg");
+  background-image: url("./assets/img/aside/aside-bg-main.webp");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -5136,17 +5136,17 @@ img.alignright {
   background-repeat: repeat;
 }
 .page-main .page-deco-container.page-deco-container--red {
-  background-image: url("./assets/img/aside/aside-bg-red-content.jpg");
+  background-image: url("./assets/img/aside/aside-bg-red-content.webp");
   background-repeat: repeat;
   background-size: 200px;
 }
 .page-main .page-deco-container.page-deco-container--yellow {
-  background-image: url("./assets/img/aside/aside-bg-yellow-content.jpg");
+  background-image: url("./assets/img/aside/aside-bg-yellow-content.webp");
   background-repeat: repeat;
   background-size: 200px;
 }
 .page-main .page-deco-container.page-deco-container--blue {
-  background-image: url("./assets/img/aside/aside-bg-blue-content.jpg");
+  background-image: url("./assets/img/aside/aside-bg-blue-content.webp");
   background-repeat: repeat;
   background-size: 200px;
 }
@@ -5164,7 +5164,7 @@ img.alignright {
   z-index: 10;
 }
 .page-main .page-bg-deco-bg-bottom-yellow {
-  background-image: url("./assets/img/aside/aside-bg-yellow-content.jpg");
+  background-image: url("./assets/img/aside/aside-bg-yellow-content.webp");
   background-repeat: repeat;
   background-size: 200px;
   position: absolute;
@@ -5174,7 +5174,7 @@ img.alignright {
   left: 0;
 }
 .page-main .page-bg-deco-bg-bottom-red {
-  background-image: url("./assets/img/aside/aside-bg-red-content.jpg");
+  background-image: url("./assets/img/aside/aside-bg-red-content.webp");
   background-repeat: repeat;
   background-size: 200px;
   position: absolute;

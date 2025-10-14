@@ -152,10 +152,10 @@
 
     <p class="scroll-txt scroll-txt-change">
         <span class="sub-title-01">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/sub-title-01.png" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/sub-title-01.webp" alt="">
         </span>
         <span class="sub-title-02">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/sub-title-02.png" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/sub-title-02.webp" alt="">
         </span>
     </p>
 </footer>
@@ -466,7 +466,6 @@
                 cancelFlag = true;
             });
         }
-
     })();
 </script>
 <script>
@@ -514,37 +513,6 @@
 
 
 
-<?php /*
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const targets = document.querySelectorAll('.com-title .title');
-
-        function isInViewport(element) {
-            const rect = element.getBoundingClientRect();
-            return (
-                rect.top >= 0 &&
-                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
-            );
-        }
-
-        function checkInView() {
-            targets.forEach((el) => {
-                // すでにin-viewクラスがあるならスキップ（1回だけにするため）
-                if (el.classList.contains('in-view')) return;
-
-                if (isInViewport(el)) {
-                    el.classList.add('in-view');
-                }
-            });
-        }
-
-        window.addEventListener('scroll', checkInView);
-        window.addEventListener('resize', checkInView);
-        checkInView(); // 初回実行
-    });
-</script>
-*/ ?>
-
 <script>
     document.addEventListener("DOMContentLoaded", () => {
         const titleBlocks = document.querySelectorAll(".com-title");
@@ -578,7 +546,6 @@
                     threshold: 0.3
                 }
             );
-
             io.observe(block);
         });
     });
@@ -697,64 +664,6 @@
     });
 </script>
 
-
-<script>
-    /*
-    gsap.registerPlugin(ScrollTrigger);
-
-    // sec03-col-item-child-1
-    gsap.to('.sec03-col-item-child-1', {
-        scrollTrigger: {
-            trigger: '.sec03-col-item',
-            start: 'top 80%',
-            toggleActions: 'play none none none',
-        },
-        opacity: 1,
-        duration: 0.8,
-        delay: 0.2,
-        ease: "power2.out"
-    });
-
-    // sec03-col-item-child-2
-    gsap.to('.sec03-col-item-child-2', {
-        scrollTrigger: {
-            trigger: '.sec03-col-item',
-            start: 'top 80%',
-            toggleActions: 'play none none none',
-        },
-        opacity: 1,
-        duration: 0.8,
-        delay: 0.8,
-        ease: "power2.out"
-    });
-
-    // sec03-col-item-child-3
-    gsap.to('.sec03-col-item-child-3', {
-        scrollTrigger: {
-            trigger: '.sec03-col-item',
-            start: 'top 80%',
-            toggleActions: 'play none none none',
-        },
-        opacity: 1,
-        duration: 0.8,
-        delay: 1.2,
-        ease: "power2.out"
-    });
-
-    // sec03-col-item-child-4
-    gsap.to('.sec03-col-item-child-4', {
-        scrollTrigger: {
-            trigger: '.sec03-col-item',
-            start: 'top 80%',
-            toggleActions: 'play none none none',
-        },
-        opacity: 1,
-        duration: 0.8,
-        delay: 2.2,
-        ease: "power2.out"
-    });
-    */
-</script>
 <script>
     gsap.registerPlugin(ScrollTrigger);
 
@@ -813,18 +722,10 @@
 
 
 
-<script>
-    var lazyLoadInstance = new LazyLoad({
-        elements_selector: ".lazyload",
-        callback_loaded: function(element) {
-            element.classList.add("lazyloaded");
-        }
-    });
-</script>
-
 
 <?php if (is_home() || is_front_page()): ?>
     <script>
+        //headerのアニメーション
         $(document).ready(function() {
             $(window).on('scroll', function() {
                 if ($(window).scrollTop() > 200) {
@@ -835,6 +736,23 @@
                     $('.body').removeClass('body-header-active');
                 }
             });
+        });
+
+        //aboutグルスパの横スライドアニメーション
+        //.loop-trackをx0から50%まで永遠にスライド
+
+        const track = document.querySelector('.loop-track');
+
+        const items = Array.from(track.children);
+
+        const singleSetWidth = items
+            .slice(0, items.length / 2)
+            .reduce((acc, item) => acc + item.offsetWidth + 20, 0);
+        gsap.to(".loop-track", {
+            xPercent: singleSetWidth / track.offsetWidth * -100,
+            ease: "none",
+            duration: 30,
+            repeat: -1
         });
     </script>
 <?php endif; ?>
@@ -889,9 +807,6 @@
         });
     </script>
 <?php endif; ?>
-
-
-
 </script>
 <script>
     gsap.utils.toArray(".fadeup").forEach((el) => {
@@ -1040,8 +955,6 @@
 <?php if (!is_404()): ?>
     <?php wp_footer(); ?>
 <?php endif; ?>
-
-
 
 <script>
 

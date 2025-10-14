@@ -219,8 +219,8 @@ Template Name: enjoy-hakkan
 
         <div class="page-deco-bg">
             <picture>
-                <source media="(max-width: 601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-red-top-sp.png">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-red-top.png" alt="">
+                <source media="(max-width: 601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-red-top-sp.webp">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-red-top.webp" alt="">
             </picture>
 
         </div>
@@ -272,7 +272,7 @@ Template Name: enjoy-hakkan
             </div>
         </div>
         <div class="page-bg-deco-bg-bottom">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-red-bottom.png" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-red-bottom.webp" alt="">
         </div>
     </section>
     <section class="sec04" id="sec04">
@@ -412,7 +412,7 @@ Template Name: enjoy-hakkan
                         <div class="sec04-center-col-4-1-item fadeup-item">
                             <a href="javascript:void(0);" class="stone-btn" data-id="stone-01">
                                 <div class="sec04-center-col-4-1-item-img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/comming-soon-stone.jpg" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-img-01.webp" alt="">
                                 </div>
                                 <div class="sec04-center-col-4-1-item-btn">
                                     <span>
@@ -424,7 +424,7 @@ Template Name: enjoy-hakkan
                         <div class="sec04-center-col-4-1-item fadeup-item">
                             <a href="javascript:void(0);" class="stone-btn" data-id="stone-02">
                                 <div class="sec04-center-col-4-1-item-img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/comming-soon-stone.jpg" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-img-02.webp" alt="">
                                 </div>
                                 <div class="sec04-center-col-4-1-item-btn">
                                     <span>
@@ -436,7 +436,7 @@ Template Name: enjoy-hakkan
                         <div class="sec04-center-col-4-1-item fadeup-item">
                             <a href="javascript:void(0);" class="stone-btn" data-id="stone-03">
                                 <div class="sec04-center-col-4-1-item-img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/comming-soon-stone.jpg" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-img-03.webp" alt="">
                                 </div>
                                 <div class="sec04-center-col-4-1-item-btn">
                                     <span>
@@ -448,7 +448,7 @@ Template Name: enjoy-hakkan
                         <div class="sec04-center-col-4-1-item fadeup-item">
                             <a href="javascript:void(0);" class="stone-btn" data-id="stone-04">
                                 <div class="sec04-center-col-4-1-item-img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/comming-soon-stone.jpg" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-img-04.webp" alt="">
                                 </div>
                                 <div class="sec04-center-col-4-1-item-btn">
                                     <span>
@@ -460,7 +460,7 @@ Template Name: enjoy-hakkan
                         <div class="sec04-center-col-4-1-item fadeup-item">
                             <a href="javascript:void(0);" class="stone-btn" data-id="stone-05">
                                 <div class="sec04-center-col-4-1-item-img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/comming-soon-stone.jpg" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-img-05.webp" alt="">
                                 </div>
                                 <div class="sec04-center-col-4-1-item-btn">
                                     <span>
@@ -472,7 +472,7 @@ Template Name: enjoy-hakkan
                         <div class="sec04-center-col-4-1-item fadeup-item">
                             <a href="javascript:void(0);" class="stone-btn" data-id="stone-06">
                                 <div class="sec04-center-col-4-1-item-img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/comming-soon-stone.jpg" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-img-06.webp" alt="">
                                 </div>
                                 <div class="sec04-center-col-4-1-item-btn">
                                     <span>
@@ -484,7 +484,7 @@ Template Name: enjoy-hakkan
                         <div class="sec04-center-col-4-1-item fadeup-item">
                             <a href="javascript:void(0);" class="stone-btn" data-id="stone-07">
                                 <div class="sec04-center-col-4-1-item-img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/comming-soon-stone.jpg" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-img-07.webp" alt="">
                                 </div>
                                 <div class="sec04-center-col-4-1-item-btn">
                                     <span>
@@ -496,11 +496,23 @@ Template Name: enjoy-hakkan
                         <div class="sec04-center-col-4-1-item fadeup-item">
                             <a href="javascript:void(0);" class="stone-btn" data-id="stone-08">
                                 <div class="sec04-center-col-4-1-item-img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/comming-soon-stone.jpg" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-img-08.webp" alt="">
                                 </div>
                                 <div class="sec04-center-col-4-1-item-btn">
                                     <span>
                                         鳳緑石<i></i>
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="sec04-center-col-4-1-item fadeup-item">
+                            <a href="javascript:void(0);" class="stone-btn" data-id="stone-09">
+                                <div class="sec04-center-col-4-1-item-img">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-img-09.webp" alt="">
+                                </div>
+                                <div class="sec04-center-col-4-1-item-btn">
+                                    <span>
+                                        七宝石<i></i>
                                     </span>
                                 </div>
                             </a>
@@ -648,8 +660,8 @@ Template Name: enjoy-hakkan
     <section class="sec05" id="sec05">
         <div class="page-deco-bg">
             <picture>
-                <source media="(max-width: 601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-red-top-sp.png">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-red-top.png" alt="">
+                <source media="(max-width: 601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-red-top-sp.webp">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-red-top.webp" alt="">
             </picture>
         </div>
         <div class="page-deco-container page-deco-container--red" id="area-guide-05">
@@ -798,7 +810,7 @@ Template Name: enjoy-hakkan
             </div>
         </div>
         <div class="page-bg-deco-bg-bottom">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-red-bottom.png" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-red-bottom.webp" alt="">
         </div>
     </section>
 
@@ -875,7 +887,7 @@ Template Name: enjoy-hakkan
                 </div>
                 <div class="stone-fixed-container-wrap-content">
                     <div class="stone-fixed-container-wrap-content-img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/comming-soon-stone-main.jpg" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-img-01-main.webp" alt="">
                         <div class="stone-fixed-container-wrap-content-img-left">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-bg-left.svg" alt="">
                         </div>
@@ -906,7 +918,7 @@ Template Name: enjoy-hakkan
                 </div>
                 <div class="stone-fixed-container-wrap-content">
                     <div class="stone-fixed-container-wrap-content-img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/comming-soon-stone-main.jpg" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-img-02-main.webp" alt="">
                         <div class="stone-fixed-container-wrap-content-img-left">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-bg-left.svg" alt="">
                         </div>
@@ -937,7 +949,7 @@ Template Name: enjoy-hakkan
                 </div>
                 <div class="stone-fixed-container-wrap-content">
                     <div class="stone-fixed-container-wrap-content-img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/comming-soon-stone-main.jpg" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-img-03-main.webp" alt="">
                         <div class="stone-fixed-container-wrap-content-img-left">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-bg-left.svg" alt="">
                         </div>
@@ -968,7 +980,7 @@ Template Name: enjoy-hakkan
                 </div>
                 <div class="stone-fixed-container-wrap-content">
                     <div class="stone-fixed-container-wrap-content-img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/comming-soon-stone-main.jpg" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-img-04-main.webp" alt="">
                         <div class="stone-fixed-container-wrap-content-img-left">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-bg-left.svg" alt="">
                         </div>
@@ -999,7 +1011,7 @@ Template Name: enjoy-hakkan
                 </div>
                 <div class="stone-fixed-container-wrap-content">
                     <div class="stone-fixed-container-wrap-content-img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/comming-soon-stone-main.jpg" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-img-05-main.webp" alt="">
                         <div class="stone-fixed-container-wrap-content-img-left">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-bg-left.svg" alt="">
                         </div>
@@ -1030,7 +1042,7 @@ Template Name: enjoy-hakkan
                 </div>
                 <div class="stone-fixed-container-wrap-content">
                     <div class="stone-fixed-container-wrap-content-img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/comming-soon-stone-main.jpg" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-img-06-main.webp" alt="">
                         <div class="stone-fixed-container-wrap-content-img-left">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-bg-left.svg" alt="">
                         </div>
@@ -1061,7 +1073,7 @@ Template Name: enjoy-hakkan
                 </div>
                 <div class="stone-fixed-container-wrap-content">
                     <div class="stone-fixed-container-wrap-content-img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/comming-soon-stone-main.jpg" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-img-07-main.webp" alt="">
                         <div class="stone-fixed-container-wrap-content-img-left">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-bg-left.svg" alt="">
                         </div>
@@ -1092,7 +1104,7 @@ Template Name: enjoy-hakkan
                 </div>
                 <div class="stone-fixed-container-wrap-content">
                     <div class="stone-fixed-container-wrap-content-img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/comming-soon-stone-main.jpg" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-img-08-main.webp" alt="">
                         <div class="stone-fixed-container-wrap-content-img-left">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-bg-left.svg" alt="">
                         </div>
@@ -1105,6 +1117,36 @@ Template Name: enjoy-hakkan
                         <p>
                             この石は古来より健康玉石として幅広く活用され、パワーストーンとして歴史ある天然石のひとつです。<br>
                             遠赤外線、マイナスイオンを放出し、ミネラル成分を多く含み、新陳代謝を活発にし、酸素補給の増加が見込まれると言われます。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="stone-fixed-container-wrap" id="stone-09">
+                <div class="stone-fixed-container-wrap-close stone-fixed-btn-close">
+                    <a href="javascript:void(0)">
+                        <picture>
+                            <source media="(max-width: 601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close-sp.svg">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/popup-icon-close.svg" alt="閉じる">
+                        </picture>
+                    </a>
+                </div>
+                <div class="stone-fixed-container-wrap-bg">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-bg.webp" alt="">
+                </div>
+                <div class="stone-fixed-container-wrap-content">
+                    <div class="stone-fixed-container-wrap-content-img">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-img-09-main.webp" alt="">
+                        <div class="stone-fixed-container-wrap-content-img-left">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-bg-left.svg" alt="">
+                        </div>
+                        <div class="stone-fixed-container-wrap-content-img-right">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hakkan/stone-bg-right.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="stone-fixed-container-wrap-content-txt">
+                        <h3>七宝石</h3>
+                        <p>
+                            岩盤浴に効果が高いとされるゲルマニュウムが多く含まれており、マイナスイオンの放出、脱臭・殺菌効果、体内細胞の活性化が高いと言われています。
                         </p>
                     </div>
                 </div>

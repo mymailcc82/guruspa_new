@@ -98,8 +98,8 @@ $type = isset($_GET['type']) ? $_GET['type'] : 'relaxation';
                 </div>
                 <div class="page-deco-bg">
                     <picture>
-                        <source media="(max-width: 601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-blue-top-sp_v2.png">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-blue-top_v2.png" alt="">
+                        <source media="(max-width: 601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-blue-top-sp_v2.webp">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-blue-top_v2.webp" alt="">
                     </picture>
 
                 </div>
@@ -601,14 +601,14 @@ $type = isset($_GET['type']) ? $_GET['type'] : 'relaxation';
                     </section>
                 </div>
                 <div class="page-deco-bg-bottom">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-blue-bottom.png" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-blue-bottom.webp" alt="">
                 </div>
             </div>
             <div class="area02 area is-<?php echo $akasuri_active; ?>" id="area02">
                 <div class="page-deco-bg">
                     <picture>
-                        <source media="(max-width: 601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-blue-top-sp_v2.png">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-blue-top_v2.png" alt="">
+                        <source media="(max-width: 601px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-blue-top-sp_v2.webp">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-blue-top_v2.webp" alt="">
                     </picture>
                 </div>
                 <div class="sec02-icon-01">
@@ -825,7 +825,7 @@ $type = isset($_GET['type']) ? $_GET['type'] : 'relaxation';
                                                         <td><strong>4,200</strong>円<small>(税込)</small></td>
                                                     </tr>
                                                     <tr>
-                                                        <th>60分</th>
+                                                        <th>40分</th>
                                                         <td><strong>5,300</strong>円<small>(税込)</small></td>
                                                     </tr>
                                                 </table>
@@ -947,7 +947,7 @@ $type = isset($_GET['type']) ? $_GET['type'] : 'relaxation';
                     </section>
                 </div>
                 <div class="page-deco-bg-bottom">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-blue-bottom.png" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-blue-bottom.webp" alt="">
                 </div>
 
 

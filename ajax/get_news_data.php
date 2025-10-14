@@ -49,7 +49,7 @@ while ($the_query->have_posts()) {
         $thumbnail = wp_get_attachment_image_src($thumbnail_id, 'medium');
         $post_data_row["thumbnail"] = $thumbnail[0];
     } else {
-        $post_data_row["thumbnail"] = get_template_directory_uri() . '/assets/img/archive/archive-default.jpg'; // デフォルト画像
+        $post_data_row["thumbnail"] = get_template_directory_uri() . '/assets/img/archive/archive-default.webp'; // デフォルト画像
     }
     //日付情報を追加
     $post_data_row["date"] = get_the_date('Y.m.d');
