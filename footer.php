@@ -935,6 +935,7 @@
         });
 
         // ウィンドウ幅が変わったら y を再セットして ScrollTrigger をリフレッシュ
+        /*
         let resizeTimer;
         window.addEventListener('resize', () => {
             clearTimeout(resizeTimer);
@@ -946,6 +947,7 @@
                 ScrollTrigger.refresh();
             }, 120);
         });
+		*/
     });
 </script>
 

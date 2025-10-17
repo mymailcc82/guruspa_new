@@ -12,6 +12,12 @@
         transform-origin: 50% 100%;
     }
         */
+	
+	@media screen and (max-width: 600px) {
+		.top-visual-mv-container{
+			height:450px !important;
+		}
+}
 </style>
 <div class="page-loading">
     <div class="page-loading-wrap-container">

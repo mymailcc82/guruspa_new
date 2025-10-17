@@ -22,7 +22,7 @@
     </script>
     <!-- End Google Tag Manager -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css?ver=1.4.8">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css?ver=1.4.9">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Barlow+Semi+Condensed:wght@400;600;700&family=Urbanist:wght@600&family=Noto+Serif+JP:wght@200..900&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
@@ -78,7 +78,7 @@
                     <a class="header-wrap-list-ul-icon" href="https://x.com/GURUSPA_/" target="_blank" rel="noopener noreferrer"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-x.png" alt=""></a>
                     <a class="header-wrap-list-ul-icon" href="https://www.instagram.com/guruspa_/" target="_blank" rel="noopener noreferrer"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-insta.png" alt=""></a>
                     <?php if (is_page("guide")): ?>
-                        <a href="#sec03" class="header-wrap-list-ul-btn">営業時間<i></i></a></li>
+                        <a href="#sec03" class="header-wrap-list-ul-btn">営業時間<i></i></a>
                     <?php else: ?>
                         <a href="<?php echo home_url(); ?>/guide/#sec03" class="header-wrap-list-ul-btn">営業時間<i></i></a>
                     <?php endif; ?>
