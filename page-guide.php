@@ -223,9 +223,9 @@
 
 
 
-            <?php /*
+
             <div class="sec02-container">
-                <h3>朝風呂</h3>
+                <h3>朝風呂（土日祝 朝7:00～10:00）</h3>
                 <div class="sec02-table sec02-table--col-2">
                     <table>
                         <tr>
@@ -234,10 +234,10 @@
                         </tr>
                         <tr>
                             <td>
-								一般<br><span>※中学生以上</span>
+                                一般<br><span>※中学生以上</span>
                             </td>
                             <td>
-                                <strong>980</strong>円
+                                <strong>900</strong>円
                             </td>
                         </tr>
                         <tr>
@@ -245,7 +245,7 @@
                                 会員
                             </td>
                             <td>
-                                <strong>930</strong>円
+                                <strong>850</strong>円
                             </td>
                         </tr>
                         <tr>
@@ -253,7 +253,7 @@
                                 子供<br><span>※小学生以下</span>
                             </td>
                             <td>
-                                <strong>400</strong>円
+                                <strong>300</strong>円
                             </td>
                         </tr>
                         <tr>
@@ -267,10 +267,12 @@
                     </table>
                 </div>
                 <p>
-                    ※朝風呂は土日祝日のみの営業となります
+                    ※朝風呂は土日祝日のみの営業となります<br>
+                    ※月～金の営業はございません<br>
+                    ※10時を過ぎられますと自動的に通常入泉料金に切り替わります
                 </p>
             </div>
-            */ ?>
+
 
 
 
@@ -284,27 +286,15 @@
                             <th>通常入泉</th>
                             <th>発汗エリア（有料岩盤浴）</th>
                             <th>ご飲食</th>
+                            <th>朝風呂</th>
                         </tr>
 
                         <tr>
                             <td>10:00～24:00<br><small>（最終受付 23:00）</small></td>
                             <td>10:00～23:15</td>
-                            <td>11:00〜23:00<br><small>（ラストオーダー 22:30）</small>
-                            </td>
+                            <td>11:00〜23:00<br><small>（ラストオーダー 22:30）</small></td>
+                            <td>7:00〜10:00<br><small>（土日祝のみ）</small></td>
                         </tr>
-                        <?php /*
-                        <tr>
-                            <td>朝風呂</td>
-                            <td>
-                                <span class="none"></span>
-                            </td>
-                            <td><span class="none"></span></td>
-                            <td>7:00〜10:00</td>
-                            <td>7:00〜10:00</td>
-                            <td>7:00〜10:00</td>
-                            <td><span class="none"></span></td>
-                        </tr>
-                        */ ?>
 
                     </table>
                 </div>
@@ -322,6 +312,10 @@
                         <dl>
                             <dt>ご飲食</dt>
                             <dd>11:00〜23:00<br>（ラストオーダー 22:30）</dd>
+                        </dl>
+                        <dl>
+                            <dt>朝風呂</dt>
+                            <dd>7:00〜10:00<br>（土日祝のみ）</dd>
                         </dl>
 
                     </div>
@@ -672,6 +666,7 @@
         <div class="spotMapInner">
             <div class="spotMapBox">
                 <div class="spotMapBoxCanvas" id="map_canvas"></div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.409215079823!2d136.52354497656518!3d34.593812388939135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60046ba93a44daa5%3A0x5fde559abd009be2!2z5p2-6Ziq5rip5rOJR1VSVVNQQQ!5e0!3m2!1sja!2sjp!4v1760665151709!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div class="spotMapListWrap" data-simplebar data-simplebar-auto-hide="false">
                 <ul class="spotMapList" id="mapList"></ul>

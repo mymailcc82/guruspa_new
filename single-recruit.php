@@ -16,7 +16,8 @@ foreach ($_GET as $key => $value) {
         <div class="page-breadcrumbs">
             <ul>
                 <li><a href="<?php echo home_url(); ?>">TOP</a></li>
-                <li><span>RECRUIT</span></li>
+                <li><a href="<?php echo home_url(); ?>/recruit_top/">RECRUIT</a></li>
+                <li><span><?php the_title(); ?></span></li>
             </ul>
         </div>
         <div class="recruit_detaill_visual">

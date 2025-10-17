@@ -163,7 +163,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/assets/js/jquery.tmpl.min.js?ver=1.0.1"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/all.min.js?ver=1.0.5"></script>
 <script src="https://yubinbango.github.io/yubinbango/yubinbango.js" charset="UTF-8"></script>
 <script>
@@ -664,61 +663,7 @@
     });
 </script>
 
-<script>
-    gsap.registerPlugin(ScrollTrigger);
 
-    // child-1
-    gsap.to(".sec03-col-item-child-1-wrap", {
-        y: "0%",
-        duration: 0.8,
-        delay: 0.2,
-        ease: "power2.out",
-        scrollTrigger: {
-            trigger: ".sec03-col-item",
-            start: "top 80%",
-            toggleActions: "play none none none"
-        }
-    });
-
-    // child-2
-    gsap.to(".sec03-col-item-child-2-wrap", {
-        y: "0%",
-        duration: 0.8,
-        delay: 0.8,
-        ease: "power2.out",
-        scrollTrigger: {
-            trigger: ".sec03-col-item",
-            start: "top 80%",
-            toggleActions: "play none none none"
-        }
-    });
-
-    // child-3
-    gsap.to(".sec03-col-item-child-3-wrap", {
-        y: "0%",
-        duration: 0.8,
-        delay: 1.2,
-        ease: "power2.out",
-        scrollTrigger: {
-            trigger: ".sec03-col-item",
-            start: "top 80%",
-            toggleActions: "play none none none"
-        }
-    });
-
-    // child-4
-    gsap.to(".sec03-col-item-child-4-wrap", {
-        y: "0%",
-        duration: 0.8,
-        delay: 2.2,
-        ease: "power2.out",
-        scrollTrigger: {
-            trigger: ".sec03-col-item",
-            start: "top 80%",
-            toggleActions: "play none none none"
-        }
-    });
-</script>
 
 
 

@@ -387,3 +387,62 @@ window.addEventListener('load', function () {
 });
 
 */
+
+gsap.registerPlugin(ScrollTrigger);
+
+// child-1
+gsap.to('.sec03-col-item-child-1-wrap', {
+  y: 0,
+  duration: 0.7,
+  delay: 0.2,
+  opacity: 1,
+  ease: 'power2.out',
+  scrollTrigger: {
+    trigger: '.sec03-col-item',
+    start: 'top 80%',
+    toggleActions: 'play none none none',
+  },
+});
+
+// child-2
+gsap.to('.sec03-col-item-child-2-wrap', {
+  y: 0,
+  duration: 0.7,
+  delay: 0.7,
+  opacity: 1,
+  ease: 'power2.out',
+  scrollTrigger: {
+    trigger: '.sec03-col-item',
+    start: 'top 80%',
+    toggleActions: 'play none none none',
+  },
+});
+
+// child-3
+gsap.to('.sec03-col-item-child-3-wrap', {
+  y: 0,
+  duration: 0.7,
+  opacity: 1,
+  delay: 1.2,
+  ease: 'power2.out',
+  scrollTrigger: {
+    trigger: '.sec03-col-item',
+    start: 'top 80%',
+    toggleActions: 'play none none none',
+  },
+});
+
+// child-4
+gsap.to('.sec03-col-item-child-4-wrap', {
+  y: 0,
+  duration: 0.7,
+  delay: 1.7,
+  //透明度100%
+  opacity: 1,
+  ease: 'power2.out',
+  scrollTrigger: {
+    trigger: '.sec03-col-item',
+    start: 'top 80%',
+    toggleActions: 'play none none none',
+  },
+});

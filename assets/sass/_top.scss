@@ -343,13 +343,13 @@
           overflow: hidden; // ← 背景が見えすぎないようにする
 
           @include media(llg) {
-            height: 70vh;
+            height: 70dvh;
           }
 
           @include media(mobile) {
             //height: calc(200 * (100vw / 375));
             //height: 400px;
-            height: 60vh;
+            height: 60dvh;
           }
 
           .wave {
@@ -532,7 +532,7 @@
           display: block;
 
           @include media(middle) {
-            height: 70vh;
+            height: 70dvh;
           }
 
           @include media(mobile) {
@@ -722,7 +722,7 @@
                   &:hover {
                     @include media(md) {
                       i {
-                        transform: translateX(5px);
+                        transform: translateY(50%) translateX(5px) !important;
                       }
                     }
                   }
@@ -748,12 +748,13 @@
                       //一行だけ表示して、...で省略
                       text-overflow: ellipsis;
                       white-space: nowrap;
-                      vertical-align: bottom;
-                      line-height: 1.4;
+                      vertical-align: center;
+                      line-height: 29px;
                       max-width: 100%;
 
                       @include media(middle) {
-                        font-size: 14px;
+                        font-size: 13px;
+                        line-height: 23px;
                       }
                     }
 
@@ -764,7 +765,9 @@
                       @include media(middle) {
                         width: 100%;
                         display: inline-block;
-                        font-size: 12px;
+                        font-size: 11px;
+                        letter-spacing: 0.05em;
+                        margin-right: 10px;
                       }
                     }
                   }
@@ -1738,10 +1741,10 @@
         .loop-track {
           display: flex;
           flex-wrap: nowrap;
-          animation: loopScroll 20s linear infinite;
+          //animation: loopScroll 20s linear infinite;
 
           @include media(mobile) {
-            animation: loopScrollsp 40s linear infinite;
+            //animation: loopScrollsp 40s linear infinite;
           }
 
           .loop-item {
@@ -1763,7 +1766,7 @@
           }
         }
       }
-
+      /*
       @keyframes loopScroll {
         0% {
           transform: translateX(0);
@@ -1783,6 +1786,7 @@
           transform: translateX(calc(-1 * var(--scroll-width, 0px)));
         }
       }
+        */
     }
   }
 

@@ -12,6 +12,7 @@ $work_locations = get_terms('work_location', 'hide_empty=0');
         <div class="page-breadcrumbs">
             <ul>
                 <li><a href="<?php echo home_url(); ?>">TOP</a></li>
+                <li><a href="<?php echo home_url(); ?>/recruit_top/">RECRUIT TOP</a></li>
                 <li><span>RECRUIT</span></li>
             </ul>
         </div>
@@ -273,7 +274,7 @@ $work_locations = get_terms('work_location', 'hide_empty=0');
                             </div>
 
                             <h3><?php the_title(); ?></h3>
-							<?php /*
+                            <?php /*
                             <time><?php echo get_the_date('Y.m.d'); ?></time>
 							*/ ?>
                         </a>

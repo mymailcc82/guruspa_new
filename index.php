@@ -12,12 +12,12 @@
         transform-origin: 50% 100%;
     }
         */
-	
-	@media screen and (max-width: 600px) {
-		.top-visual-mv-container{
-			height:450px !important;
-		}
-}
+
+    @media screen and (max-width: 600px) {
+        .top-visual-mv-container {
+            height: 450px !important;
+        }
+    }
 </style>
 <div class="page-loading">
     <div class="page-loading-wrap-container">
@@ -509,16 +509,22 @@
 
 
                     <div class="sec03-col-item-child sec03-col-item-child-1">
-                        <img class="sec03-col-item-child-1-wrap hidden-mobile" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec03-col-item-child-1.webp" alt="">
-                        <img class="sec03-col-item-child-1-wrap hidden-sm" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec03-col-item-child-1_sp.webp" alt="">
+                        <picture>
+                            <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec03-col-item-child-1_sp.webp">
+                            <img class="sec03-col-item-child-1-wrap visible-mobile" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec03-col-item-child-1.webp" alt="">
+                        </picture>
                     </div>
                     <div class="sec03-col-item-child sec03-col-item-child-2">
-                        <img class="sec03-col-item-child-2-wrap hidden-mobile" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec03-col-item-child-2.webp" alt="">
-                        <img class="sec03-col-item-child-2-wrap hidden-sm" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec03-col-item-child-2_sp.webp" alt="">
+                        <picture>
+                            <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec03-col-item-child-2_sp.webp">
+                            <img class="sec03-col-item-child-2-wrap visible-mobile" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec03-col-item-child-2.webp" alt="">
+                        </picture>
                     </div>
                     <div class="sec03-col-item-child sec03-col-item-child-3">
-                        <img class="sec03-col-item-child-3-wrap hidden-mobile" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec03-col-item-child-3.webp" alt="">
-                        <img class="sec03-col-item-child-3-wrap hidden-sm" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec03-col-item-child-3_sp.webp" alt="">
+                        <picture>
+                            <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec03-col-item-child-3_sp.webp">
+                            <img class="sec03-col-item-child-3-wrap visible-mobile" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec03-col-item-child-3.webp" alt="">
+                        </picture>
                     </div>
                     <div class="sec03-col-item-child sec03-col-item-child-4">
                         <img class="sec03-col-item-child-4-wrap" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/sec03-col-item-child-4.webp" alt="">
@@ -931,7 +937,7 @@
     }
 </style>
 
-<script src="<?php echo get_template_directory_uri(); ?>/assets/js/top.js?ver=1.1"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/assets/js/top.js?ver=1.2"></script>
 <script>
     //TOPのスライド
     const swipervisual = new Swiper('.top-visual-slide', {
