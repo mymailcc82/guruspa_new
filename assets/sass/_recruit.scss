@@ -75,14 +75,17 @@
 
       @include media(mobile) {
         //justify-content: center;
-        padding: 0 0 10px;
-        width: 100%;
-        border-bottom: solid 2px #c9c9c9;
+        padding: 0 0 0px;
+        width: 95%;
+        //border-bottom: solid 2px #c9c9c9;
         margin-bottom: 30px;
       }
       li {
         width: 30.8%;
         line-height: 1.8;
+        @include media(middle) {
+          width: 32%;
+        }
         button,
         a {
           display: block;
@@ -98,6 +101,9 @@
           line-height: 1;
           text-align: center;
           position: relative;
+          @include media(middle) {
+            font-size: 16px;
+          }
         }
         .filter_button {
           color: #71360b;
@@ -151,6 +157,9 @@
             width: 100% !important;
             position: relative;
             text-align: center;
+            @include media(middle) {
+              font-size: 14px;
+            }
             &::before {
               position: absolute;
               display: block;
@@ -169,7 +178,7 @@
                 background-image: none;
                 background-color: #004e64;
                 width: 41px;
-                height: 5px;
+                height: 0px;
                 border-radius: 2px;
                 top: inherit;
                 bottom: -13.5px;
@@ -200,7 +209,7 @@
             background-image: none;
             background-color: #004e64;
             width: 41px;
-            height: 5px;
+            height: 0px;
             border-radius: 2px;
             top: inherit;
             bottom: -13.5px;

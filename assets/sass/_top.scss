@@ -1495,11 +1495,13 @@
 
         .sec03-col-item-child {
           position: absolute;
-          overflow: hidden;
+          //overflow: hidden;
 
           img {
+            opacity: 0;
             display: block;
-            transform: translateY(100%);
+            transform: translateY(30px);
+            position: relative;
             /* 下に非表示状態 */
             width: 100%;
             height: 100%;
