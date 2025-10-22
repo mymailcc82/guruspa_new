@@ -85,9 +85,6 @@
                 </div>
             </div>
         </div>
-        <div class="header-wrap-bg">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/header/header-under-bg_v2.png" alt="">
-        </div>
     </header>
     <div class="header-fixed">
         <div class="header-fixed-menu">
