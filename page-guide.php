@@ -666,7 +666,30 @@
         <div class="spotMapInner">
             <div class="spotMapBox">
                 <div class="spotMapBoxCanvas" id="map_canvas"></div>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.409215079823!2d136.52354497656518!3d34.593812388939135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60046ba93a44daa5%3A0x5fde559abd009be2!2z5p2-6Ziq5rip5rOJR1VSVVNQQQ!5e0!3m2!1sja!2sjp!4v1760665151709!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="spotMapBox-bg">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/guide/spot_map.webp" alt="" class="">
+                </div>
+                <div class="spotMapBox-icon spotMapBox-01">
+                    <a href="javascript:void(0);" data-id="spot1" class="spot-btn">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/guide/spot_icon_1.webp" alt="">
+                    </a>
+                </div>
+                <div class="spotMapBox-icon spotMapBox-02">
+                    <a href="javascript:void(0);" data-id="spot2" class="spot-btn">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/guide/spot_icon_2.webp" alt="">
+                    </a>
+                </div>
+                <div class="spotMapBox-icon spotMapBox-03">
+                    <a href="javascript:void(0);" data-id="spot3" class="spot-btn">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/guide/spot_icon_3.webp" alt="">
+                    </a>
+                </div>
+                <div class="spotMapBox-icon spotMapBox-04">
+                    <a href="javascript:void(0);" data-id="spot4" class="spot-btn">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/guide/spot_icon_4.webp" alt="">
+                    </a>
+                </div>
+
             </div>
             <div class="spotMapListWrap" data-simplebar data-simplebar-auto-hide="false">
                 <ul class="spotMapList" id="mapList"></ul>
@@ -682,5 +705,25 @@
 
     <?php get_template_part('inc/inc-bnr'); ?>
     <?php get_template_part('inc/inc-aside'); ?>
+
+    <script>
+        //.spot-btnをクリックしたら
+        const spotBtns = document.querySelectorAll('.spot-btn');
+        spotBtns.forEach(spotBtn => {
+            spotBtn.addEventListener('click', function() {
+                const id = this.getAttribute('data-id');
+                //.spotMapList_itemを非表示
+                const spotMapListItems = document.querySelectorAll('.spotMapList_item');
+                spotMapListItems.forEach(item => {
+                    item.style.display = 'none';
+                });
+                //クリックされたdata-idと同じidを持つ要素を表示
+                const targetElement = document.getElementById(id);
+                if (targetElement) {
+                    targetElement.style.display = 'block';
+                }
+            });
+        });
+    </script>
 </main>
 <?php get_footer(); ?>
