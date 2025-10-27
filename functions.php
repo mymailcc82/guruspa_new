@@ -654,3 +654,61 @@ add_filter('mwform_redirect_url_mw-wp-form-531', function ($url, $data) {
 
     return $url; // ← htmlspecialchars は不要！
 }, 10, 2);
+
+
+//カスタム投稿menuを追加
+function create_post_type_menu()
+{
+    register_post_type(
+        'menu', // 投稿タイプ名の定義
+        array(
+            'labels' => array(
+                'name' => __('メニュー'), // 管理画面上の表示名
+                'singular_name' => __('menu') // 管理画面上の表示名
+            ),
+            'public' => true, // 投稿タイプをpublicにするかどうか
+            'has_archive' => true, // アーカイブページを有効にするかどうか
+            'menu_position' => 5, // 管理画面上のメニューの位置
+            'menu_icon' => 'dashicons-food', // 管理画面上のメニューのアイコン
+            'supports' => array('title', 'editor', 'thumbnail'), // 投稿タイプでサポートする機能
+            'rewrite' => array('slug' => 'menu'), // パーマリンクのスラッグを指定
+        )
+    );
+    //menu_categoryのタクソノミーを追加
+    register_taxonomy(
+        'menu_category', // タクソノミー名の定義
+        'menu', // 投稿タイプ名の定義
+        array(
+            'hierarchical' => true, // 階層構造を持つかどうか
+            'labels' => array(
+                'name' => 'メニューカテゴリー', // 管理画面上の表示名
+                'singular_name' => 'メニューカテゴリー', // 管理画面上の表示名
+                'search_items' => 'メニューカテゴリーを検索', // 管理画面上の表示名
+                'all_items' => 'すべてのメニューカテゴリー', // 管理画面上の表示名
+                'parent_item' => '親メニューカテゴリー', // 管理画面上の表示名
+                'parent_item_colon' => '親メニューカテゴリー:', // 管理画面上の表示名
+                'edit_item' => 'メニューカテゴリーを編集', // 管理画面上の表示名
+                'update_item' => 'メニューカテゴリーを更新', // 管理画面上の表示名
+                'add_new_item' => '新規メニューカテゴリーを追加', // 管理画面上の表示名
+                'new_item_name' => '新規メニューカテゴリー名', // 管理画面上の表示名
+                'menu_name' => 'メニューカテゴリー', // 管理画面上の表示名
+            ),
+            'show_admin_column' => true, // 管理画面の投稿一覧にタクソノミーを表示するかどうか
+            'rewrite' => array('slug' => 'menu_category'), // パーマリンクのスラッグを指定
+        )
+    );
+}
+add_action('init', 'create_post_type_menu');
+
+
+//output_price
+function output_price($price)
+{
+    //,や円や¥が入っていても対応
+    $price = preg_replace('/[^\d]/', '', $price);
+    $price = intval($price);
+    if ($price) {
+        return '' . number_format($price) . '<em>円</em><span>（税込）</span>';
+    }
+    return '価格未設定';
+}

@@ -196,6 +196,9 @@ Template Name: enjoy-food
                                 <div class="page-title-center--has-icon">
                                     <h2><i></i>メニュー</h2>
                                 </div>
+                                <div class="com-btn-border-black mb-30">
+                                    <a href="<?php echo home_url(); ?>/menu/" class="font-13-sp">スマホ用電子メニューはこちら！<i></i></a>
+                                </div>
                                 <div class="sec05-title">
                                     <dl>
                                         <dt>グランドメニュー</dt>
@@ -519,6 +522,9 @@ Template Name: enjoy-food
                             <div class="content-width-sm">
                                 <div class="page-title-center--has-icon">
                                     <h2><i></i>メニュー</h2>
+                                </div>
+                                <div class="com-btn-border-black mb-30">
+                                    <a href="<?php echo home_url(); ?>/menu/" class="font-13-sp">スマホ用電子メニューはこちら！<i></i></a>
                                 </div>
                                 <div class="sec05-title">
                                     <dl>
