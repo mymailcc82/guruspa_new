@@ -76,8 +76,6 @@
                     $args = array(
                         'post_type' => 'menu', // カスタム投稿タイプのスラッグを指定
                         'posts_per_page' => -1, // すべての投稿を取得
-                        'orderby' => 'date', // 日付で並び替え
-                        'order' => 'DESC', // 降順
                     )
                     ?>
                     <?php $the_query = new WP_Query($args); ?>
@@ -147,13 +145,17 @@
                                     <div class="goods-fixed-container-wrap-content-main-txt-full">
                                         <?php $content = get_the_content(); ?>
                                         <?php if ($content): ?>
+										<?php /*
                                             <h4>商品説明</h4>
+											*/ ?>
                                             <div class="sec04-desc">
                                                 <?php echo nl2br($content); ?>
                                             </div>
                                         <?php endif; ?>
                                         <?php if ($allergy): ?>
+										<?php /*
                                             <h4>アレルギー説明文</h4>
+											*/ ?>
                                             <div class="sec04-desc">
                                                 <?php echo nl2br($allergy); ?>
                                             </div>

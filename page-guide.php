@@ -112,7 +112,7 @@
                         </tr>
                         <tr>
                             <td>
-                                幼児<br><span>※3歳以下</span>
+                                幼児<br><span>※3歳未満</span>
                             </td>
                             <td colspan="2">
                                 <strong>無料</strong>
@@ -258,7 +258,7 @@
                         </tr>
                         <tr>
                             <td>
-                                幼児<br><span>※3歳以下</span>
+                                幼児<br><span>※3歳未満</span>
                             </td>
                             <td colspan="2">
                                 <strong>無料</strong>
@@ -280,47 +280,166 @@
                 <div class="page-title--has-icon page-title--has-icon--mobile-left">
                     <h2><i></i>営業時間(年中無休)</h2>
                 </div>
-                <div class="sec01-bottom-table hidden-middle">
-                    <table>
-                        <tr>
-                            <th>通常入泉</th>
-                            <th>発汗エリア（有料岩盤浴）</th>
-                            <th>ご飲食</th>
-                            <th>朝風呂</th>
-                        </tr>
+                <?php
+                //今日が2025年11月1日以降なら$flgをtrueにする
+                //東京時間で判定
+                date_default_timezone_set('Asia/Tokyo');
+                $flg = false;
+                $current_date = date('Y-m-d');
+                echo $current_date_time;
+                if ($current_date >= '2025-11-01') {
+                    $flg = true;
+                }
+                ?>
+                <?php if ($flg): ?>
+                    <div class="sec01-bottom-table hidden-middle">
+                        <table>
+                            <tr>
+                                <th>通常入泉</th>
+                                <th>発汗エリア（有料岩盤浴）</th>
+                                <th>ご飲食</th>
+                                <th>朝風呂</th>
+                            </tr>
 
-                        <tr>
-                            <td>10:00～24:00<br><small>（最終受付 23:00）</small></td>
-                            <td>10:00～23:15</td>
-                            <td>11:00〜23:00<br><small>（ラストオーダー 22:30）</small></td>
-                            <td>7:00〜10:00<br><small>（土日祝のみ）</small></td>
-                        </tr>
+                            <tr>
+                                <td>
+                                    <span class="border">
+                                        <strong>10:00~24:00</strong><br>（最終受付 23:00）
+                                    </span>
+                                    <small class="small">
+                                        金曜日・土曜日・祝前日のみ<br>
+                                        <strong>10:00～26:00</strong><br>
+                                        （最終受付 25:00）
+                                    </small>
+                                </td>
+                                <td>
+                                    <span class="border">
+                                        <strong>10:00~23:15</strong>
+                                    </span>
+                                    <small class="small">
+                                        金曜日・土曜日・祝前日のみ<br>
+                                        <strong>10:00～25:15</strong>
+                                    </small>
+                                </td>
+                                <td>
+                                    <strong class="strong">11:00~23:00</strong><br>
+                                    <small>（ラストオーダー 22:30）</small>
+                                </td>
+                                <td>
+                                    <strong class="strong">7:00〜10:00</strong><br>
+                                    <small>（土日祝のみ）</small>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="sec01-bottom-table sec01-bottom-table-mobile hidden-md accordion">
+                        <table>
+                            <tr>
+                                <th>通常入泉</th>
+                            </tr>
 
-                    </table>
-                </div>
+                            <tr>
+                                <td>
+                                    <span class="border">
+                                        <strong>10:00~24:00</strong><br>（最終受付 23:00）
+                                    </span>
+                                    <small class="small">
+                                        金曜日・土曜日・祝前日のみ<br>
+                                        <strong>10:00～26:00</strong><br>
+                                        （最終受付 25:00）
+                                    </small>
+                                </td>
+                            </tr>
+                        </table>
+                        <table>
+                            <tr>
+                                <th>発汗エリア（有料岩盤浴）</th>
+                            </tr>
 
-                <div class="sec01-bottom-table-mobile hidden-md">
-                    <div class="sec01-bottom-table-sp">
-                        <dl>
-                            <dt>通常入泉</dt>
-                            <dd>10:00〜24:00</dd>
-                        </dl>
-                        <dl>
-                            <dt>発汗エリア(有料岩盤浴)</dt>
-                            <dd>10:00〜23:15</dd>
-                        </dl>
-                        <dl>
-                            <dt>ご飲食</dt>
-                            <dd>11:00〜23:00<br>（ラストオーダー 22:30）</dd>
-                        </dl>
-                        <dl>
-                            <dt>朝風呂</dt>
-                            <dd>7:00〜10:00<br>（土日祝のみ）</dd>
-                        </dl>
+                            <tr>
+                                <td>
+                                    <span class="border">
+                                        <strong>10:00~23:15</strong>
+                                    </span>
+                                    <small class="small">
+                                        金曜日・土曜日・祝前日のみ<br>
+                                        <strong>10:00～25:15</strong>
+                                    </small>
+                                </td>
+                            </tr>
+                        </table>
+                        <table>
+                            <tr>
+                                <th>ご飲食</th>
+                            </tr>
 
+                            <tr>
+                                <td>
+                                    <strong class="strong">11:00~23:00</strong><br>
+                                    <small>（ラストオーダー 22:30）</small>
+                                </td>
+                            </tr>
+                        </table>
+                        <table>
+                            <tr>
+                                <th>朝風呂</th>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <strong class="strong">7:00〜10:00</strong><br>
+                                    <small>（土日祝のみ）</small>
+                                </td>
+                            </tr>
+                        </table>
                     </div>
 
-                </div>
+
+
+                <?php else: ?>
+                    <div class="sec01-bottom-table hidden-middle">
+                        <table>
+                            <tr>
+                                <th>通常入泉</th>
+                                <th>発汗エリア（有料岩盤浴）</th>
+                                <th>ご飲食</th>
+                                <th>朝風呂</th>
+                            </tr>
+
+                            <tr>
+                                <td>10:00～24:00<br><small>（最終受付 23:00）</small></td>
+                                <td>10:00～23:15</td>
+                                <td>11:00〜23:00<br><small>（ラストオーダー 22:30）</small></td>
+                                <td>7:00〜10:00<br><small>（土日祝のみ）</small></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="sec01-bottom-table-mobile hidden-md">
+                        <div class="sec01-bottom-table-sp">
+                            <dl>
+                                <dt>通常入泉</dt>
+                                <dd>10:00〜24:00</dd>
+                            </dl>
+                            <dl>
+                                <dt>発汗エリア(有料岩盤浴)</dt>
+                                <dd>10:00〜23:15</dd>
+                            </dl>
+                            <dl>
+                                <dt>ご飲食</dt>
+                                <dd>11:00〜23:00<br>（ラストオーダー 22:30）</dd>
+                            </dl>
+                            <dl>
+                                <dt>朝風呂</dt>
+                                <dd>7:00〜10:00<br>（土日祝のみ）</dd>
+                            </dl>
+
+                        </div>
+
+                    </div>
+                <?php endif; ?>
+
+
+
 
 
                 <?php /*
@@ -671,7 +790,7 @@
                 </div>
                 <div class="spotMapBox-icon spotMapBox-01">
                     <a href="javascript:void(0);" data-id="spot1" class="spot-btn">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/guide/spot_icon_1.webp" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/guide/spot_icon_1_v3.webp" alt="">
                     </a>
                 </div>
                 <div class="spotMapBox-icon spotMapBox-02">

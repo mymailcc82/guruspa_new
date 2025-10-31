@@ -8,7 +8,7 @@ $lc_spots = array(
         "address" => "〒516-0042 三重県伊勢市豊川町２７９",
         "tel" => "0596-24-1111",
         "time" => "国道23号経由：約50分<br>伊勢道経由(伊勢IC〜松阪IC)：約40分",
-        "url" => "https://maps.app.goo.gl/uHvKBPxLkwGKbBHG6",
+        "url" => "https://www.google.co.jp/maps/dir/%E4%B8%89%E9%87%8D%E7%9C%8C%E6%9D%BE%E9%98%AA%E5%B8%82%E5%A4%A7%E5%A1%9A%E7%94%BA%EF%BC%92%EF%BC%92%EF%BC%90%E2%88%92%EF%BC%91+%E6%9D%BE%E9%98%AA%E6%B8%A9%E6%B3%89GURUSPA/%E3%80%92516-0023+%E4%B8%89%E9%87%8D%E7%9C%8C%E4%BC%8A%E5%8B%A2%E5%B8%82%E5%AE%87%E6%B2%BB%E9%A4%A8%E7%94%BA%EF%BC%91+%E7%9A%87%E5%A4%A7%E7%A5%9E%E5%AE%AE%EF%BC%88%E4%BC%8A%E5%8B%A2%E7%A5%9E%E5%AE%AE+%E5%86%85%E5%AE%AE%EF%BC%89/@34.5243427,136.5432405,12z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x60046ba93a44daa5:0x5fde559abd009be2!2m2!1d136.5261199!2d34.593808!1m5!1m1!1s0x600450ebdf9f37f3:0xf009663753f60ca7!2m2!1d136.7251851!2d34.4550157!3e2?entry=ttu&g_ep=EgoyMDI1MTAyNy4wIKXMDSoASAFQAw%3D%3D",
         "image" => get_template_directory_uri() .
             "/assets/img/guide/sec04-img-01.webp"
     ),
@@ -20,7 +20,7 @@ $lc_spots = array(
         "address" => "〒517-8617 三重県鳥羽市鳥羽3-3-6",
         "tel" => "0599-25-2555",
         "time" => "国道23号経由：約50分<br>伊勢道経由(伊勢IC〜松阪IC)：約40分",
-        "url" => "https://maps.app.goo.gl/LtgqibMJVSvfMHuPA",
+        "url" => "https://maps.app.goo.gl/U62arMuNxyoAzJJX7",
         "image" => get_template_directory_uri() .
             "/assets/img/guide/sec04-img-02.webp"
     ),
@@ -32,7 +32,7 @@ $lc_spots = array(
         "address" => "〒517-0212 三重県志摩市磯部町坂崎字下山952-4",
         "tel" => "0599-57-3333",
         "time" => "国道167号 無料道路経由：約1時間10分<br>伊勢道＋第二伊勢道経由：約1時間",
-        "url" => "https://maps.app.goo.gl/y7oGNx57sBkwHJBYA",
+        "url" => "https://maps.app.goo.gl/JuBM2sQqkLpwHqXs7",
         "image" => get_template_directory_uri() .
             "/assets/img/guide/sec04-img-03.webp"
     ),
@@ -44,7 +44,7 @@ $lc_spots = array(
         "address" => "〒514-1254 三重県津市森町１９４５−１１",
         "tel" => "059-255-1082",
         "time" => "国道23号経由：約50分<br>伊勢道経由（久居IC〜松阪IC）：約40分",
-        "url" => "https://maps.app.goo.gl/kXastoYsBpZfEKnS6",
+        "url" => "https://maps.app.goo.gl/3En8tt49VHCJinvR6",
         "image" => get_template_directory_uri() .
             "/assets/img/guide/sec04-img-04.webp"
     ),

@@ -736,7 +736,7 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        幼児<br><span class="note">※3歳以下</span>
+										幼児<br><span class="note">※3歳未満</span>
                                     </td>
                                     <td colspan="2"><strong>無料</strong></td>
                                 </tr>
