@@ -29,7 +29,6 @@ for ($i = 0; $i < 12; $i++) {
 
 //今月の月と日にちを今日を初めに、昨日を終わりに配列にする
 $days = days_from_today_for_months();
-
 //毎日スケジュールの画像を取得
 $select_date = '';
 if (isset($_GET['date'])) {
@@ -50,7 +49,6 @@ if (isset($_GET['date'])) {
 
     $w = date('w');
 }
-
 ?>
 <?php get_header(); ?>
 <main class="page-main event schedule today">
@@ -164,7 +162,6 @@ if (isset($_GET['date'])) {
                 <ul id="post_list">
                     <div class="swiper swiper-event">
                         <div class="swiper-wrapper">
-
                             <?php if ($the_query->have_posts()) : ?>
                                 <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
                                     <?php
@@ -191,6 +188,7 @@ if (isset($_GET['date'])) {
                         </div>
                     </div>
                 </ul>
+                <div class="swiper-pagination-00 swiper-pagination"></div>
             </div>
         </div>
     </section>
@@ -459,43 +457,41 @@ if (isset($_GET['date'])) {
                             centeredSlides_flg = false;
                         }
 
-                        if (!loop_flg) {
-                            const swiper = new Swiper('.swiper-event', {
-                                slidesPerView: 'auto', // 幅固定 or auto
-                                spaceBetween: 30, // スライド間の余白
-                                centeredSlides: false, // 常に中央スライドをセンターに
-                                loop: loop_flg, // 無限ループ
-                                threshold: 6, // 最低ドラッグ量(px)
-                                preventClicks: false, // native click を抑制しない
-                                preventClicksPropagation: false,
-                                touchStartPreventDefault: false,
+                        const swiper = new Swiper('.swiper-event', {
+                            slidesPerView: 1.5, // 幅固定 or auto
+                            spaceBetween: 30, // スライド間の余白
+                            centeredSlides: centeredSlides_flg, // 常に中央スライドをセンターに
+                            loop: loop_flg, // 無限ループ
+                            //threshold: 6, // 最低ドラッグ量(px)
+                            //preventClicks: false, // native click を抑制しない
+                            //preventClicksPropagation: false,
+                            //touchStartPreventDefault: false,
 
-                                autoplay: {
-                                    delay: 3000, // 3秒ごとに切り替え
-                                    disableOnInteraction: false, // 操作後も自動再生を継続
-                                },
+                            autoplay: {
+                                delay: 3000, // 3秒ごとに切り替え
+                                disableOnInteraction: false, // 操作後も自動再生を継続
+                            },
 
-                                lazy: {
-                                    loadPrevNext: true,
-                                    loadOnTransitionStart: true,
+                            lazy: {
+                                loadPrevNext: true,
+                                loadOnTransitionStart: true,
+                            },
+                            pagination: {
+                                el: '.swiper-pagination-00',
+                                clickable: true,
+                            },
+                            breakpoints: {
+                                320: {
+                                    //spaceBetween: 12,
+                                    //slidesPerView: 1.1
                                 },
-                                pagination: {
-                                    el: '.swiper-pagination-00',
-                                    clickable: true,
+                                768: {
+                                    //spaceBetween: 16,
+                                    slidesPerView: 3,
+                                    spaceBetween: 15, // スライド間の余白
                                 },
-                                breakpoints: {
-                                    320: {
-                                        //spaceBetween: 12,
-                                        //slidesPerView: 1.1
-                                    },
-                                    768: {
-                                        //spaceBetween: 16,
-                                        //slidesPerView: 2.2
-                                        spaceBetween: 15, // スライド間の余白
-                                    },
-                                }
-                            });
-                        }
+                            }
+                        });
                     }
                 });
             }
@@ -601,7 +597,7 @@ if (isset($_GET['date'])) {
             },
             768: {
                 //spaceBetween: 16,
-                //slidesPerView: 2.2
+                slidesPerView: 3,
                 spaceBetween: 15, // スライド間の余白
             },
         }

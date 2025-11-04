@@ -1,4 +1,6 @@
 <?php
+//時間を東京に設定
+date_default_timezone_set('Asia/Tokyo');
 
 add_filter('show_admin_bar', '__return_false');
 
@@ -235,23 +237,35 @@ function custom_pagination($the_query, $pages = '', $range = 2)
 function days_from_today_for_months($months = 1, $tz = 'Asia/Tokyo')
 {
     $tzObj = new DateTimeZone($tz);
-    $start = new DateTime('now', $tzObj);
-    // 終端（含む） = 今日 + $months month
+    $now = new DateTime('now', $tzObj);
+
+    // ここで判定：0-3時は「前日扱い」、4時以降は「当日扱い」
+    $hour = (int)$now->format('G'); // 0-23
+    if ($hour < 4) {
+        // 前日を開始日にする（かつ時刻は 00:00:00 に揃える）
+        $start = (clone $now)->modify('-1 day')->setTime(0, 0, 0);
+    } else {
+        // 当日を開始日にする（時刻は 00:00:00）
+        $start = (clone $now)->setTime(0, 0, 0);
+    }
+
+    // 終端（含む） = 開始日 + $months 月（終端の時刻も 00:00:00）
     $end = (clone $start)->modify("+{$months} month");
 
+    // 1日刻みで回す（終端を含めるため +1 day）
     $interval = new DateInterval('P1D');
-    // DatePeriod の第3引数は排他的なので、終端を含めたければ +1 day する
     $period = new DatePeriod($start, $interval, (clone $end)->modify('+1 day'));
 
     $out = [];
     foreach ($period as $dt) {
         $key = $dt->format('Y-m-d'); // 重複を避けるためフル日付をキーに
         $out[$key] = [
-            'y'   => (int)$dt->format('Y'),
-            'm'    => (int)$dt->format('n'),
-            'd'    => (int)$dt->format('j'),
-            'week' => strtolower($dt->format('D')) . '.', // ex: "sat."
-            'week_class' => strtolower($dt->format('D')) // ex: "sat."
+            'y'          => (int)$dt->format('Y'),
+            'm'          => (int)$dt->format('n'),
+            'd'          => (int)$dt->format('j'),
+            'week'       => strtolower($dt->format('D')) . '.',    // ex: "sat."
+            'week_class' => strtolower($dt->format('D')),         // ex: "sat"
+            'time'       => $dt->format('H:i:s'),                // 基本は "00:00:00"
         ];
     }
 

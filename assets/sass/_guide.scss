@@ -229,6 +229,9 @@
             font-size: 20px;
             letter-spacing: 0.1em;
             background-color: #214995;
+            @include media(middle) {
+              font-size: 16px;
+            }
             &:last-child {
               border-right: none;
             }
@@ -272,6 +275,34 @@
                 height: 1px;
                 background-color: #222222;
               }
+            }
+            .border {
+              border-bottom: 1px solid #222;
+              font-size: 14px;
+              display: block;
+              width: 90%;
+              margin: 0 auto 10px;
+              padding-bottom: 10px;
+              letter-spacing: 0em;
+              strong {
+                letter-spacing: 0em;
+                font-size: 24px;
+                font-weight: normal;
+              }
+            }
+
+            .small {
+              font-size: 12px;
+              display: block;
+              letter-spacing: 0em;
+              strong {
+                font-size: 18px;
+                font-weight: 500;
+              }
+            }
+            .strong {
+              font-weight: 500;
+              font-size: 22px;
             }
             small {
               font-size: 14px;

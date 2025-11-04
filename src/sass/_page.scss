@@ -16,6 +16,8 @@
     position: absolute;
     left: -75px;
     top: 100px;
+    //リンク無効
+    pointer-events: none;
     @include media(middle) {
       min-width: auto;
       width: 113px;
