@@ -286,7 +286,6 @@
                 date_default_timezone_set('Asia/Tokyo');
                 $flg = false;
                 $current_date = date('Y-m-d');
-                echo $current_date_time;
                 if ($current_date >= '2025-11-01') {
                     $flg = true;
                 }
