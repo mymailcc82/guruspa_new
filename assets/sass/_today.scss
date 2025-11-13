@@ -494,6 +494,9 @@
     position: relative;
     z-index: 100;
     width: 100% !important;
+    .swiper-pagination-00 {
+      bottom: -30px;
+    }
 
     .swiper-wrapper {
       padding-top: 88px;

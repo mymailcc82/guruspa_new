@@ -669,7 +669,6 @@ Template Name: enjoy
                     </div>
                 </div>
             </div>
-
             <div class="enjoy-fixed-container-wrap" id="enjoy-07">
                 <div class="enjoy-fixed-container-wrap-close enjoy-fixed-btn-close">
                     <a href="javascript:void(0)">
@@ -701,7 +700,6 @@ Template Name: enjoy
                     </div>
                 </div>
             </div>
-
             <div class="enjoy-fixed-container-wrap" id="enjoy-08">
                 <div class="enjoy-fixed-container-wrap-close enjoy-fixed-btn-close">
                     <a href="javascript:void(0)">
@@ -733,13 +731,7 @@ Template Name: enjoy
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 </main>
-
-
-
-
-
 <?php get_footer(); ?>

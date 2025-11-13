@@ -48,6 +48,18 @@ $lc_spots = array(
         "image" => get_template_directory_uri() .
             "/assets/img/guide/sec04-img-04.webp"
     ),
+    array(
+        'id' => 5,
+        "title" => "キング666セノパーク津店",
+        "latitude" => 34.770168,
+        "longitude" => 136.526905,
+        "address" => "〒514-0104 三重県津市栗真小川町571",
+        "tel" => "059-236-5588",
+        "time" => "国道23号経由：約35分<br>伊勢道経由(松阪IC〜津IC)：約25分",
+        "url" => "https://maps.app.goo.gl/sdwkRHS4WYTz6RkF6",
+        "image" => get_template_directory_uri() .
+            "/assets/img/guide/sec04-img-05.webp"
+    ),
 
 );
 ?>

@@ -785,7 +785,7 @@
             <div class="spotMapBox">
                 <div class="spotMapBoxCanvas" id="map_canvas"></div>
                 <div class="spotMapBox-bg">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/guide/spot_map.webp" alt="" class="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/guide/spot_map_v2.webp" alt="" class="">
                 </div>
                 <div class="spotMapBox-icon spotMapBox-01">
                     <a href="javascript:void(0);" data-id="spot1" class="spot-btn">
@@ -807,7 +807,11 @@
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/guide/spot_icon_4.webp" alt="">
                     </a>
                 </div>
-
+                <div class="spotMapBox-icon spotMapBox-05">
+                    <a href="javascript:void(0);" data-id="spot5" class="spot-btn">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/guide/spot_icon_5.webp" alt="">
+                    </a>
+                </div>
             </div>
             <div class="spotMapListWrap" data-simplebar data-simplebar-auto-hide="false">
                 <ul class="spotMapList" id="mapList"></ul>
@@ -838,7 +842,7 @@
                 //クリックされたdata-idと同じidを持つ要素を表示
                 const targetElement = document.getElementById(id);
                 if (targetElement) {
-                    targetElement.style.display = 'block';
+                    targetElement.style.display = 'flex';
                 }
             });
         });
