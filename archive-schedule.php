@@ -146,6 +146,7 @@ if (isset($_GET['date'])) {
             </div>
     </section>
 
+    <!--
     <section class="sec01">
         <div class="content-width">
             <div class="page-title-center--has-icon page-title--has-icon--mobile-20">
@@ -167,6 +168,8 @@ if (isset($_GET['date'])) {
                 <div class="swiper-pagination swiper-pagination-02"></div>
             </div>
     </section>
+    -->
+    
     <section class="sec02">
         <div class="content-width">
             <div class="page-title--has-icon page-title--has-icon--mobile-20">

@@ -1,4 +1,21 @@
 <?php get_header(); ?>
+<style>
+	.attention-add{
+		font-size:13px;
+		width:48%;
+		margin-top:10px;
+		margin-left: auto;
+		text-align:center;
+		font-weight:bold;
+	}
+	@media screen and (max-width: 600px) {
+		.attention-add{
+			width:100%;
+			margin-top:-20px;
+		}
+		
+	}
+</style>
 <main class="page-main guide">
     <div class="page-main-left-img">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/page/page-img-left.webp" alt="">
@@ -153,12 +170,15 @@
                             <dt>会員平日入泉回数券<br class="hidden-middle">(11枚)</dt>
                             <dd>
                                 <p>
-                                    8,800<span>円</span><br>
-                                    <small>※1枚あたり800円</small>
+									<small>平日用…</small><span>8,800円</span><br class="hidden-md"><small>(1回800円・有効期限3ヶ月)</small><br>
+									<small style="color:#214995;">土</small><small style="color:#e81e23;">日祝</small><small>用…</small><span>11,300円</span><br class="hidden-md"><small>(1回1,028円・有効期限6ヶ月)</small>
                                 </p>
                             </dd>
                         </dl>
                     </div>
+					<p class="attention-add">
+						※ご本人様のみご利用可能。<br class="hidden-md">他の方への分割・譲渡は出来ません。
+						</p>
                 </div>
             </div>
 

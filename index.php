@@ -47,6 +47,21 @@
                         <div class="wave_nami_v3">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/visual-wave_v3.webp" alt="">
                         </div>
+                        <div class="top-visual-bnr">
+                            <ul>
+                                <li>
+                                    <a href="https://onsen.nifty.com/rank/year/newopen/" target="_blank" rel="noopener noreferrer">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-bnr-02.png" alt="GURUSPA OPEN ">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://onsen.nifty.com/rank/year/newopen/" target="_blank" rel="noopener noreferrer">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-bnr-01.png" alt="GURUSPA OPEN">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
                         <div class="swiper top-visual-slide">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
@@ -736,7 +751,7 @@
                                 </tr>
                                 <tr>
                                     <td>
-										幼児<br><span class="note">※3歳未満</span>
+                                        幼児<br><span class="note">※3歳未満</span>
                                     </td>
                                     <td colspan="2"><strong>無料</strong></td>
                                 </tr>
