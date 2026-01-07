@@ -54,11 +54,13 @@
                                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-bnr-02.png" alt="GURUSPA OPEN ">
                                     </a>
                                 </li>
+                                <?php /*
                                 <li>
                                     <a href="https://onsen.nifty.com/rank/year/newopen/" target="_blank" rel="noopener noreferrer">
                                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-bnr-01.png" alt="GURUSPA OPEN">
                                     </a>
                                 </li>
+                                */ ?>
                             </ul>
                         </div>
 

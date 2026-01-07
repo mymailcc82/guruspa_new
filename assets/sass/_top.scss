@@ -213,6 +213,32 @@
     @include media(mobile) {
       padding-bottom: 60px;
     }
+    .top-visual-bnr {
+      position: absolute;
+      left: 10%;
+      top: 15px;
+      z-index: 10;
+      @include media(mobile) {
+        top: 10px;
+        left: 5%;
+      }
+      ul {
+        li {
+          a {
+            display: block;
+          }
+          &:nth-child(1) {
+            max-width: 480px;
+            width: 95%;
+            margin-bottom: 15px;
+          }
+          &:nth-child(2) {
+            max-width: 150px;
+            width: 35%;
+          }
+        }
+      }
+    }
 
     .top-visual-wrap {
       position: relative;
