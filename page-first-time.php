@@ -47,15 +47,129 @@
             <div class="page-btn mb-0">
                 <ul>
                     <li>
-                        <a href="#sec02">グルスパの魅力<i></i></a>
-                    </li>
-                    <li>
                         <a href="#sec03">入館の流れ<i></i></a>
                     </li>
+                    <li>
+                        <a href="#sec02">グルスパの魅力<i></i></a>
+                    </li>
+
                     <li>
                         <a href="#sec04">施設案内<i></i></a>
                     </li>
                 </ul>
+            </div>
+        </div>
+    </section>
+    <section class="sec03" id="sec03">
+        <div class="content-width-lg content-width--middle-full">
+            <div class="page-title-center--has-icon">
+                <h2><i></i>入館の流れ</h2>
+            </div>
+
+            <div class="sec03-scroll">
+                <div class="sec03-wrap fadeup">
+                    <div class="sec03-wrap-col">
+                        <div class="sec03-wrap-col-img">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/first/sec03-img-06_v2.webp" alt="">
+                        </div>
+                        <div class="sec03-wrap-col-txt">
+                            <h3 class="h3-small">履物をロッカーに入れる</h3>
+                            <p>
+                                下足ロッカーキーを受付カウンターにお持ちください。<br>
+                                ※３歳以上のお客様は一人一つロッカーをお使いください。
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="sec03-wrap-col">
+                        <div class="sec03-wrap-col-img">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/first/sec03-img-01_v2.webp" alt="">
+                        </div>
+                        <div class="sec03-wrap-col-txt">
+                            <h3 class="h3-small">受付・リストバンド<br class="hidden-mobile">登録（下足ロッカーキー）</h3>
+                            <p>
+                                受付カウンターにてリストバンドをご登録いただきます。<br>
+                                入館後はこちらのリストバンドにてキャッシュレスでお食事やお買い物が可能です。
+                            </p>
+                            <div class="com-btn-border-black com-btn-border-black--small hidden-mobile">
+                                <a href="<?php echo home_url('/guide/#sec02'); ?>">料金案内はこちら<i></i></a>
+                            </div>
+                            <div class="com-btn-mobile hidden-sm">
+                                <a href="<?php echo home_url('/guide/#sec02'); ?>">料金案内はこちら<i class="icon-black"></i></a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="sec03-wrap-col">
+                        <div class="sec03-wrap-col-img">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/first/sec03-img-02_v2.webp" alt="">
+                        </div>
+                        <div class="sec03-wrap-col-txt">
+                            <h3 class="h3-small">館内着・タオル受取<br class="hidden-mobile">（有料）</h3>
+                            <p>
+                                発汗エリア（岩盤浴）ご利用のお客様は、館内着とレンタルタオルをお渡しします。
+                            </p>
+
+                            <div class="com-btn-border-black com-btn-border-black--small hidden-mobile">
+                                <a href="<?php echo home_url('/enjoy/goods/#sec02'); ?>">アメニティ詳細はこちら<i></i></a>
+                            </div>
+                            <div class="com-btn-mobile hidden-sm">
+                                <a href="<?php echo home_url('/enjoy/goods/#sec02'); ?>">アメニティ詳細はこちら<i class="icon-black"></i></a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="sec03-wrap-col">
+                        <div class="sec03-wrap-col-img">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/first/sec03-img-03_v2.webp" alt="">
+                        </div>
+                        <div class="sec03-wrap-col-txt">
+                            <h3 class="h3-small">温泉・サウナ・岩盤浴・<br class="hidden-middle">リラクゼーションなどを<br class="hidden-middle">お楽しみください</h3>
+                            <p>
+                                様々な温浴設備で癒しのひと時をお過ごしください。<br>
+                                発汗エリア、リラクゼーションのご利用は別料金となります。
+                            </p>
+                            <div class="com-btn-border-black com-btn-border-black--small hidden-mobile">
+                                <a href="<?php echo home_url('/enjoy/sweating/'); ?>">発汗エリアについて<i></i></a>
+                            </div>
+                            <div class="com-btn-mobile hidden-sm">
+                                <a href="<?php echo home_url('/enjoy/sweating/'); ?>">発汗エリアについて<i class="icon-black"></i></a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <?php /*
+                    <div class="sec03-wrap-col">
+                        <div class="sec03-wrap-col-img">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/first/sec03-img-04_v2.webp" alt="">
+                        </div>
+                        <div class="sec03-wrap-col-txt">
+                            <h3>お食事処でひと息</h3>
+                            <p>
+                                キッチントキワやスイートラボにて、お食事やドリンクをお楽しみいただけます。
+                            </p>
+                            <div class="com-btn-border-black com-btn-border-black--small hidden-mobile">
+                                <a href="<?php echo home_url('/enjoy/food/'); ?>">お食事メニューについて<i></i></a>
+                            </div>
+                            <div class="com-btn-mobile hidden-sm">
+                                <a href="<?php echo home_url('/enjoy/food/'); ?>">お食事メニューについて<i class="icon-black"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    */ ?>
+                    <div class="sec03-wrap-col">
+                        <div class="sec03-wrap-col-img">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/first/sec03-img-07_v2.webp" alt="">
+                        </div>
+                        <div class="sec03-wrap-col-txt">
+                            <h3>ご精算・退館</h3>
+                            <p>
+                                精算機にてリストバンドに登録されたご利用料金を支払いいただきます。<br>
+                                お忘れ物の内容にご注意くださいませ。
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -240,105 +354,7 @@
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/aside/aside-bg-blue-bottom.webp" alt="">
         </div>
     </section>
-    <section class="sec03" id="sec03">
-        <div class="content-width-lg content-width--middle-full">
-            <div class="page-title-center--has-icon">
-                <h2><i></i>入館の流れ</h2>
-            </div>
 
-            <div class="sec03-scroll">
-                <div class="sec03-wrap fadeup">
-                    <div class="sec03-wrap-col">
-                        <div class="sec03-wrap-col-img">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/first/sec03-img-01_v2.webp" alt="">
-                        </div>
-                        <div class="sec03-wrap-col-txt">
-                            <h3>受付・リストバンド<br class="hidden-mobile">登録</h3>
-                            <p>
-                                受付カウンターにてリストバンドをご登録いただきます。<br>
-                                入館後はこちらのリストバンドにてキャッシュレスでお食事やお買い物が可能です。
-                            </p>
-                            <div class="com-btn-border-black com-btn-border-black--small hidden-mobile">
-                                <a href="<?php echo home_url('/guide/#sec02'); ?>">料金案内はこちら<i></i></a>
-                            </div>
-                            <div class="com-btn-mobile hidden-sm">
-                                <a href="<?php echo home_url('/guide/#sec02'); ?>">料金案内はこちら<i class="icon-black"></i></a>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="sec03-wrap-col">
-                        <div class="sec03-wrap-col-img">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/first/sec03-img-02_v2.webp" alt="">
-                        </div>
-                        <div class="sec03-wrap-col-txt">
-                            <h3>館内着・タオル受取<br class="hidden-mobile">（有料）</h3>
-                            <p>
-                                発汗エリア（岩盤浴）ご利用のお客様は、館内着とレンタルタオルをお渡しします。
-                            </p>
-
-                            <div class="com-btn-border-black com-btn-border-black--small hidden-mobile">
-                                <a href="<?php echo home_url('/enjoy/goods/#sec02'); ?>">アメニティ詳細はこちら<i></i></a>
-                            </div>
-                            <div class="com-btn-mobile hidden-sm">
-                                <a href="<?php echo home_url('/enjoy/goods/#sec02'); ?>">アメニティ詳細はこちら<i class="icon-black"></i></a>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="sec03-wrap-col">
-                        <div class="sec03-wrap-col-img">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/first/sec03-img-03_v2.webp" alt="">
-                        </div>
-                        <div class="sec03-wrap-col-txt">
-                            <h3 class="h3-small">温泉・サウナ・岩盤浴・<br class="hidden-middle">リラクゼーションなどを<br class="hidden-middle">お楽しみください</h3>
-                            <p>
-                                様々な温浴設備で癒しのひと時をお過ごしください。<br>
-                                発汗エリア、リラクゼーションのご利用は別料金となります。
-                            </p>
-                            <div class="com-btn-border-black com-btn-border-black--small hidden-mobile">
-                                <a href="<?php echo home_url('/enjoy/sweating/'); ?>">発汗エリアについて<i></i></a>
-                            </div>
-                            <div class="com-btn-mobile hidden-sm">
-                                <a href="<?php echo home_url('/enjoy/sweating/'); ?>">発汗エリアについて<i class="icon-black"></i></a>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="sec03-wrap-col">
-                        <div class="sec03-wrap-col-img">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/first/sec03-img-04_v2.webp" alt="">
-                        </div>
-                        <div class="sec03-wrap-col-txt">
-                            <h3>お食事処でひと息</h3>
-                            <p>
-                                キッチントキワやスイートラボにて、お食事やドリンクをお楽しみいただけます。
-                            </p>
-                            <div class="com-btn-border-black com-btn-border-black--small hidden-mobile">
-                                <a href="<?php echo home_url('/enjoy/food/'); ?>">お食事メニューについて<i></i></a>
-                            </div>
-                            <div class="com-btn-mobile hidden-sm">
-                                <a href="<?php echo home_url('/enjoy/food/'); ?>">お食事メニューについて<i class="icon-black"></i></a>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="sec03-wrap-col">
-                        <div class="sec03-wrap-col-img">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/first/sec03-img-05_v2.webp" alt="">
-                        </div>
-                        <div class="sec03-wrap-col-txt">
-                            <h3>ご精算・退館</h3>
-                            <p>
-                                精算機にてリストバンドに登録されたご利用料金を支払いいただきます。<br>
-                                お忘れ物の内容にご注意くださいませ。
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <section class="sec04" id="sec04">
         <div class="page-deco-bg">
             <picture>
