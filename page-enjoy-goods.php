@@ -344,7 +344,7 @@ Template Name: enjoy-goods
                     <div class="goods-fixed-container-wrap-content">
                         <div class="goods-fixed-container-wrap-content-main">
                             <div class="goods-fixed-container-wrap-content-main-img">
-                                <div class="goods-swiper swiper">
+                                <div class="goods-swiper goods-swiper-<?php echo get_the_ID(); ?> swiper">
                                     <div class="swiper-wrapper">
 
                                         <?php if ($loop_img): ?>
@@ -364,7 +364,7 @@ Template Name: enjoy-goods
                                         <?php endif; ?>
                                     </div>
                                 </div>
-                                <div class="goods-swiper-thum swiper">
+                                <div class="goods-swiper-thum goods-swiper-thum-<?php echo get_the_ID(); ?> swiper">
                                     <div class="swiper-wrapper">
                                         <?php if ($loop_img): ?>
                                             <?php foreach ($loop_img as $img): ?>
@@ -437,58 +437,76 @@ Template Name: enjoy-goods
 <script>
     // DOM 準備後に初期化
     document.addEventListener('DOMContentLoaded', function() {
-        // スライド数チェック（セレクタはテンプレートに合わせてあります）
-        const mainWrapper = document.querySelector('.goods-swiper .swiper-wrapper');
-        const slideCount = mainWrapper ? mainWrapper.children.length : 0;
+        // 各商品ごとにSwiperを初期化
+        const goodsItems = document.querySelectorAll('.goods-fixed-container-wrap');
 
-        // サムネイル側 Swiper（先に作る）
-        const thumbSwiper = new Swiper('.goods-swiper-thum', {
-            direction: 'horizontal',
-            loop: false, // スライドが1枚だけなら loop を無効化
-            spaceBetween: 8,
-            //slidesPerView: Math.min(6, Math.max(1, slideCount)), // 最大6個表示
-            slidesPerView: 5,
-            freeMode: true,
-            watchSlidesProgress: true,
-            watchSlidesVisibility: true,
-            slideToClickedSlide: true, // クリックでメインを切替
-            breakpoints: {
-                480: {
-                    slidesPerView: Math.min(4, slideCount)
-                },
-                768: {
-                    slidesPerView: 5
+        goodsItems.forEach(function(item) {
+            // IDからpost_idを取得（例: goods_123 → 123）
+            const postId = item.id.replace('goods_', '');
+            const mainSelector = '.goods-swiper-' + postId;
+            const thumbSelector = '.goods-swiper-thum-' + postId;
+
+            // スライド数チェック
+            const mainWrapper = item.querySelector('.goods-swiper .swiper-wrapper');
+            const slideCount = mainWrapper ? mainWrapper.children.length : 0;
+
+            // サムネイル側 Swiper（先に作る）
+            const thumbSwiper = new Swiper(thumbSelector, {
+                direction: 'horizontal',
+                loop: false,
+                spaceBetween: 8,
+                slidesPerView: 5,
+                freeMode: true,
+                watchSlidesProgress: true,
+                watchSlidesVisibility: true,
+                slideToClickedSlide: true,
+                breakpoints: {
+                    480: {
+                        slidesPerView: Math.min(4, slideCount)
+                    },
+                    768: {
+                        slidesPerView: 5
+                    }
                 }
+            });
+
+            // メインの Swiper（thumbs オプションで紐付け）
+            const mainSwiper = new Swiper(mainSelector, {
+                loop: slideCount > 1,
+                spaceBetween: 10,
+                preloadImages: false,
+                lazy: {
+                    loadPrevNext: true
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                thumbs: {
+                    swiper: thumbSwiper
+                },
+                effect: 'slide',
+                speed: 400
+            });
+
+            // スライドが1枚だけのときは、サムネイルのクリック無効化や見た目調整
+            if (slideCount <= 1) {
+                const thumEl = item.querySelector('.goods-swiper-thum');
+                if (thumEl) thumEl.classList.add('goods-thum--single');
             }
-        });
 
-        // メインの Swiper（thumbs オプションで紐付け）
-        const mainSwiper = new Swiper('.goods-swiper', {
-            loop: slideCount > 1,
-            spaceBetween: 10,
-            preloadImages: false,
-            lazy: {
-                loadPrevNext: true
-            },
-            // 必要ならナビゲーションを追加（テンプレートに next/prev ボタンがあれば有効）
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            // ここで thumbSwiper を渡すだけで連動します（Swiper の thumbs 機能を利用）
-            thumbs: {
-                swiper: thumbSwiper
-            },
-            // 見た目のエフェクト（お好みで）
-            effect: 'slide', // 'fade' にしても良い
-            speed: 400
+            // サムネイルクリックでメインスライドを切り替え
+            const thumbSlides = item.querySelectorAll('.goods-swiper-thum .swiper-slide');
+            thumbSlides.forEach((slide, index) => {
+                slide.addEventListener('click', function() {
+                    if (mainSwiper.params.loop) {
+                        mainSwiper.slideToLoop(index);
+                    } else {
+                        mainSwiper.slideTo(index);
+                    }
+                });
+            });
         });
-
-        // スライドが1枚だけのときは、サムネイルのクリック無効化や見た目調整
-        if (slideCount <= 1) {
-            const thumEl = document.querySelector('.goods-swiper-thum');
-            if (thumEl) thumEl.classList.add('goods-thum--single');
-        }
     });
 </script>
 

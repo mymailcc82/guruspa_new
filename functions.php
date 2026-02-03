@@ -730,3 +730,154 @@ function output_price($price)
     }
     return '価格未設定';
 }
+
+
+// functions.php の末尾に追加してください（WordPress 用の安全なサンプル）
+
+/**
+ * 1) video ショートコードを上書き（classic editor 用）
+ */
+add_action('init', function () {
+    // 上書きのために既存の video ショートコードを remove して独自登録
+    remove_shortcode('video');
+    add_shortcode('video', 'sv_custom_video_shortcode');
+});
+
+function sv_custom_video_shortcode($atts, $content = null)
+{
+    $a = shortcode_atts([
+        'src'    => '',
+        'mp4'    => '',
+        'width'  => '',
+        'height' => '',
+        'poster' => '',
+        'autoplay' => '0',
+        'muted'   => '0',
+        'loop'    => '0',
+    ], $atts, 'video');
+
+    // mp4 属性優先、なければ src
+    $src = esc_url_raw($a['mp4'] ?: $a['src']);
+    if (empty($src)) return '<!-- video: no src -->';
+
+    $width  = intval($a['width']);
+    $height = intval($a['height']);
+    $poster = esc_url($a['poster']);
+
+    // build attrs safely
+    $attrs = [
+        'controls'    => 'controls',
+        'playsinline' => 'playsinline',
+        'preload'     => 'metadata',
+        // crossorigin は別ドメイン（CDN等）に安全性を持たせる
+        'crossorigin' => 'anonymous',
+    ];
+    if ($a['autoplay'] === '1') $attrs['autoplay'] = 'autoplay';
+    if ($a['muted'] === '1') $attrs['muted'] = 'muted';
+    if ($a['loop'] === '1') $attrs['loop'] = 'loop';
+    if ($width)  $attrs['width']  = 'width="' . esc_attr($width) . '"';
+    if ($height) $attrs['height'] = 'height="' . esc_attr($height) . '"';
+    if ($poster) $attrs['poster'] = 'poster="' . esc_attr($poster) . '"';
+
+    // attribute string
+    $attr_parts = [];
+    foreach ($attrs as $k => $v) {
+        // boolean-like keys already have value = value, else raw attr string
+        if ($k === $v) {
+            $attr_parts[] = $v;
+        } else {
+            $attr_parts[] = is_string($v) ? $v : esc_attr($v);
+        }
+    }
+    $attr_str = implode(' ', array_filter($attr_parts));
+
+    // 出力（mp4 の type を明示）
+    $html  = "<video {$attr_str}>\n";
+    $html .= '  <source src="' . esc_url($src) . '" type="video/mp4">' . "\n";
+    $html .= '  お使いのブラウザは video タグに対応していません。' . "\n";
+    $html .= "</video>\n";
+
+    return $html;
+}
+
+/**
+ * 2) Gutenberg (core/video) や他プラグイン出力の <video> をレンダリング時に修正
+ *    render_block フィルタで出力 HTML の <video> タグをスキャンして属性を追加します。
+ */
+add_filter('render_block', 'sv_ensure_video_attrs_on_block', 10, 2);
+
+function sv_ensure_video_attrs_on_block($block_content, $block)
+{
+    // video タグを含む出力にだけ適用（効率化）
+    if (strpos($block_content, '<video') === false) return $block_content;
+
+    // コールバックで属性が既にあれば上書きせず、ないものだけ追加
+    $callback = function ($matches) {
+        $inside = $matches[1]; // 既存の属性部分（例: ' controls muted'）
+        // 追加したい属性（値付きは exact text）
+        $want = [
+            'playsinline' => 'playsinline',
+            'preload'     => 'preload="metadata"',
+            'crossorigin' => 'crossorigin="anonymous"',
+            'controls'    => 'controls',
+        ];
+        foreach ($want as $key => $attr_text) {
+            if (stripos($inside, $key) === false) {
+                // 先頭か末尾に空白を足して追加
+                $inside .= ' ' . $attr_text;
+            }
+        }
+        return '<video' . $inside . '>';
+    };
+
+    // 一つ目の <video ...> タグだけ修正（普通は1つ）
+    $new = preg_replace_callback('/<video([^>]*)>/i', $callback, $block_content, 1);
+    if ($new === null) return $block_content; // 正規表現エラー時は元のまま
+    return $new;
+}
+
+/**
+ * 3) オプション：アップロード時に ffmpeg があれば軽く再パッケージ（非同期 spawn）
+ *    ※ サーバに ffmpeg があり、exec が使える環境向け。失敗しても続行する（安全設計）。
+ *    - 実行環境がない場合はログに記録。
+ */
+add_action('add_attachment', 'sv_optimize_uploaded_mp4_nonblocking', 10, 1);
+
+function sv_optimize_uploaded_mp4_nonblocking($post_id)
+{
+    // attached file のパスと mime を確認
+    $file = get_attached_file($post_id);
+    if (! $file || ! file_exists($file)) return;
+
+    $wp_filetype = wp_check_filetype($file);
+    if (empty($wp_filetype['type']) || strpos($wp_filetype['type'], 'video') === false) return;
+
+    $ext = strtolower(pathinfo($file, PATHINFO_EXTENSION));
+    if ($ext !== 'mp4') return; // mp4 のみ処理対象
+
+    // ffmpeg のパスを想定（要調整）
+    $ffmpeg = '/usr/bin/ffmpeg';
+    if (! file_exists($ffmpeg) || ! is_executable($ffmpeg)) {
+        error_log('[sv_video] ffmpeg not found or not executable: ' . $ffmpeg);
+        return;
+    }
+
+    // tmp 出力先（同じフォルダに .svtmp を作る）
+    $tmp = $file . '.svtmp.mp4';
+    // コマンド：再パッケージ（faststart）して tmp を作る。バックグラウンドで実行（非同期）。
+    // -y: 上書き、-movflags +faststart: moov atom を先頭へ
+    $cmd = escapeshellcmd($ffmpeg) . ' -y -i ' . escapeshellarg($file)
+        . ' -c:v copy -c:a copy -movflags +faststart '
+        . escapeshellarg($tmp)
+        . ' > /dev/null 2>&1 & echo $!';
+
+    // セキュリティ上、exec の利用は管理者の同意が必要です（ホスティングによっては無効）。
+    @exec($cmd, $out, $ret);
+    if ($ret !== 0) {
+        // spawn に失敗した可能性。ログだけ残して続行（非致命）
+        error_log('[sv_video] ffmpeg spawn failed for ' . $file . ' cmd:' . $cmd);
+    } else {
+        // ジョブが起動したことを示すメタを残す（管理用）
+        update_post_meta($post_id, '_sv_video_opt_queued', time());
+    }
+}
