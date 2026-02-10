@@ -93,6 +93,7 @@ $work_locations = get_terms('work_location', 'hide_empty=0');
                             </div>
 
 
+                            <!--
                             <div class="filter-section">
                                 <h4>勤務開始</h4>
                                 <?php
@@ -112,6 +113,8 @@ $work_locations = get_terms('work_location', 'hide_empty=0');
                                     <?php endforeach; ?>
                                 </div>
                             </div>
+                            -->
+                            
                             <div class="filter-section">
                                 <h4>業務内容</h4>
                                 <?php

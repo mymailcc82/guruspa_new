@@ -49,7 +49,7 @@ Template Name: お問い合わせ(法人のお客様向け)完了
             </div>
         </div>
         <div class="content-width content-width--mobile-full">
-            <div class="com-bnr com-bnr--contact">
+            <div class="com-bnr com-bnr--large com-bnr--contact">
                 <div class="sec02-icon-04">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/first/sec02-icon-04_v3.png" alt="">
                 </div>
@@ -81,7 +81,13 @@ Template Name: お問い合わせ(法人のお客様向け)完了
                     <p>
                         担当より3営業日以内にご連絡をさせていただきます。<br>
                         3営業日経っても連絡がない場合は<br>
-                        お手数ですが<a href="tel:0598-54-2626">0598-54-2626</a>までお電話くださいませ。
+                        お手数ですが<a href="tel:0598-54-2626">0598-54-2626</a>までお電話くださいませ。<br><br>
+						<span>
+                            「guruspa@royal.gr.jp」よりメールの返信をさせて頂いておりますが、セキュリティ設定や、迷惑メール対策等によりメールが正しく届かない場合がございます。<br>
+                            お手数をおかけしますが下記ドメインのメールを受信できるように、 迷惑メール設定から解除もしくは受信許可設定をしていただきますようお願いいたします。<br><br>
+                            ※受信設定の方法につきましては、各メールソフトや端末、キャリアによって設定方法が異なります。<br>
+                            誠にお手数ではございますが、お使いのメールソフト及び携帯会社へお問い合わせくださいますようお願いいたします。
+                        </span>
                     </p>
                     <?php echo do_shortcode('[mwform_formkey key="105"]'); ?>
                     <div class="com-btn-arrow-left com-btn-arrow-left--text-left hidden-mobile">

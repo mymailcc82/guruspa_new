@@ -260,7 +260,7 @@ if (isset($_GET['date'])) {
                     </div>
                 </div>
             </section>
-            <?php /*
+
             <section class="sec01">
                 <div class="content-width">
                     <div class="page-title-center--has-icon page-title--has-icon--mobile-20">
@@ -273,8 +273,8 @@ if (isset($_GET['date'])) {
                                     <?php //$valueのpost_idから画像URLを取得
                                     $image_url = get_the_post_thumbnail_url($value, 'full');
                                     ?>
+
                                     <?php if ($image_url): ?>
-                                        <?php $image_url = get_template_directory_uri() . '/assets/img/com/comming-soon.webp'; ?>
                                         <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($key); ?>月のイベントスケジュール">
                                     <?php else: ?>
                                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/comming-soon.webp" alt="<?php echo esc_attr($key); ?>月のイベントスケジュール">
@@ -296,7 +296,7 @@ if (isset($_GET['date'])) {
                     </div>
                 </div>
             </section>
-            */ ?>
+
             <section class="sec02">
                 <div class="content-width">
                     <div class="page-title--has-icon page-title--has-icon--mobile-20">
