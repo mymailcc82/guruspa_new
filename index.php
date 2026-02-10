@@ -844,10 +844,48 @@
                             </span>
                         </h2>
                     </div>
+                    <div class="sec06-time">
+                        <dl>
+                            <dt><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-access-car.png" alt=""><span>車でお越しの場合</span></dt>
+                            <dd>
+                                ・国道166号沿い、イオンタウン松阪船江隣接<br>
+                                ・<a href="https://maps.app.goo.gl/GMUg3iHyxVGQc5Tq7" target="_blank" rel="noopener noreferrer">伊勢自動車道「松阪IC」より北東方向へ約20分</a><br>
+                                ・<a href="https://maps.app.goo.gl/vPLxTd8RwUr9HJZ46" target="_blank" rel="noopener noreferrer">伊勢自動車道「一志嬉野IC」より南東方向へ約25分</a><br>
+                                ※カーナビの目的地は「三重県松阪市大塚町220-1」をセットしてください。
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-access-bus.png" alt=""><span>バスでお越しの場合</span></dt>
+                            <dd>
+                                ・鈴の音バス「三雲松阪線」「7イオンタウン松阪船江（松阪公民館）」バス停より、東へ徒歩5分。<br>
+                                ※鈴の音バス「三雲松阪線」については<a href="https://www.city.matsusaka.mie.jp/site/community-koutu/mikumo-line.html" target="_blank" rel="noopener noreferrer">コチラ</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-access-train.png" alt=""><span>電車・徒歩でお越しの場合</span></dt>
+                            <dd>
+                                ・<a href="https://maps.app.goo.gl/soPtJC7N2DYumbjw6" target="_blank" rel="noopener noreferrer">近鉄山田線「松ヶ崎駅」より、南東方向へ徒歩約15分</a><br>
+                                ・<a href="https://maps.app.goo.gl/npkvKHVcLsxLos3W6" target="_blank" rel="noopener noreferrer">JR紀勢本線＆近鉄山田線「松阪駅」より、北西方向へ徒歩約35分</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-access-train.png" alt=""><span>電車・タクシーでお越しの場合</span></dt>
+                            <dd>
+                                ・<a href="https://maps.app.goo.gl/R4YgvKnpgKPdidsW6" target="_blank" rel="noopener noreferrer">JR紀勢本線＆近鉄山田線「松阪駅」より、北西方向へタクシー約15分</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-access-park_v2.png" alt=""><span>駐車場</span></dt>
+                            <dd>
+                                無料<br>
+                                イオンタウン松阪船江駐車場と共同
+                            </dd>
+                        </dl>
+                    </div>
 
                     <ul class="sec06-map">
-                        <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/map-1_v2.webp" alt="guruspa"></li>
                         <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/map-2_v5.webp" alt="guruspa"></li>
+                        <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/map-1_v2.webp" alt="guruspa"></li>
                     </ul>
                     <div class="sec06-wrap-under-link">
                         <a href="<?php echo home_url(); ?>/guide/#sec05">くわしく見る<i></i></a>

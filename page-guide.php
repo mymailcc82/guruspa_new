@@ -1,20 +1,21 @@
 <?php get_header(); ?>
 <style>
-	.attention-add{
-		font-size:13px;
-		width:48%;
-		margin-top:10px;
-		margin-left: auto;
-		text-align:center;
-		font-weight:bold;
-	}
-	@media screen and (max-width: 600px) {
-		.attention-add{
-			width:100%;
-			margin-top:-20px;
-		}
-		
-	}
+    .attention-add {
+        font-size: 13px;
+        width: 48%;
+        margin-top: 10px;
+        margin-left: auto;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    @media screen and (max-width: 600px) {
+        .attention-add {
+            width: 100%;
+            margin-top: -20px;
+        }
+
+    }
 </style>
 <main class="page-main guide">
     <div class="page-main-left-img">
@@ -170,15 +171,15 @@
                             <dt>会員平日入泉回数券<br class="hidden-middle">(11枚)</dt>
                             <dd>
                                 <p>
-									<small>平日用…</small><span>8,800円</span><br class="hidden-md"><small>(1回800円・有効期限3ヶ月)</small><br>
-									<small style="color:#214995;">土</small><small style="color:#e81e23;">日祝</small><small>用…</small><span>11,300円</span><br class="hidden-md"><small>(1回1,028円・有効期限6ヶ月)</small>
+                                    <small>平日用…</small><span>8,800円</span><br class="hidden-md"><small>(1回800円・有効期限3ヶ月)</small><br>
+                                    <small style="color:#214995;">土</small><small style="color:#e81e23;">日祝</small><small>用…</small><span>11,300円</span><br class="hidden-md"><small>(1回1,028円・有効期限6ヶ月)</small>
                                 </p>
                             </dd>
                         </dl>
                     </div>
-					<p class="attention-add">
-						※ご本人様のみご利用可能。<br class="hidden-md">他の方への分割・譲渡は出来ません。
-						</p>
+                    <p class="attention-add">
+                        ※ご本人様のみご利用可能。<br class="hidden-md">他の方への分割・譲渡は出来ません。
+                    </p>
                 </div>
             </div>
 
@@ -801,6 +802,50 @@
             </div>
         </div>
 
+        <div class="content-width">
+            <div class="sec06-time">
+                <dl>
+                    <dt><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-access-car.png" alt=""><span>車でお越しの場合</span></dt>
+                    <dd>
+                        ・国道166号沿い、イオンタウン松阪船江隣接<br>
+                        ・<a href="https://maps.app.goo.gl/GMUg3iHyxVGQc5Tq7" target="_blank" rel="noopener noreferrer">伊勢自動車道「松阪IC」より北東方向へ約20分</a><br>
+                        ・<a href="https://maps.app.goo.gl/vPLxTd8RwUr9HJZ46" target="_blank" rel="noopener noreferrer">伊勢自動車道「一志嬉野IC」より南東方向へ約25分</a><br>
+                        ※カーナビの目的地は「三重県松阪市大塚町220-1」をセットしてください。
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-access-bus.png" alt=""><span>バスでお越しの場合</span></dt>
+                    <dd>
+                        ・鈴の音バス「三雲松阪線」「7イオンタウン松阪船江（松阪公民館）」バス停より、東へ徒歩5分。<br>
+                        ※鈴の音バス「三雲松阪線」については<a href="https://www.city.matsusaka.mie.jp/site/community-koutu/mikumo-line.html" target="_blank" rel="noopener noreferrer">コチラ</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-access-train.png" alt=""><span>電車・徒歩でお越しの場合</span></dt>
+                    <dd>
+                        ・<a href="https://maps.app.goo.gl/soPtJC7N2DYumbjw6" target="_blank" rel="noopener noreferrer">近鉄山田線「松ヶ崎駅」より、南東方向へ徒歩約15分</a><br>
+                        ・<a href="https://maps.app.goo.gl/npkvKHVcLsxLos3W6" target="_blank" rel="noopener noreferrer">JR紀勢本線＆近鉄山田線「松阪駅」より、北西方向へ徒歩約35分</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-access-train.png" alt=""><span>電車・タクシーでお越しの場合</span></dt>
+                    <dd>
+                        ・<a href="https://maps.app.goo.gl/R4YgvKnpgKPdidsW6" target="_blank" rel="noopener noreferrer">JR紀勢本線＆近鉄山田線「松阪駅」より、北西方向へタクシー約15分</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-access-park_v2.png" alt=""><span>駐車場</span></dt>
+                    <dd>
+                        無料<br>
+                        イオンタウン松阪船江駐車場と共同
+                    </dd>
+                </dl>
+            </div>
+            <div class="sec04-bottom">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/guide/sec05-img-01_v4.webp" alt="">
+            </div>
+        </div>
+
         <div class="spotMapInner">
             <div class="spotMapBox">
                 <div class="spotMapBoxCanvas" id="map_canvas"></div>
@@ -837,11 +882,7 @@
                 <ul class="spotMapList" id="mapList"></ul>
             </div>
         </div>
-        <div class="content-width">
-            <div class="sec04-bottom">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/guide/sec05-img-01_v4.webp" alt="">
-            </div>
-        </div>
+
     </section>
 
 
