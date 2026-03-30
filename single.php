@@ -40,11 +40,15 @@
                 <time datetime="<?php the_time('c'); ?>"><?php the_time('Y.m.d'); ?></time>
             </div>
             <h1><?php the_title(); ?></h1>
+
+            <?php /*
             <?php if (has_post_thumbnail()): ?>
                 <div class="article-img">
                     <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>">
                 </div>
             <?php endif; ?>
+            */ ?>
+            
             <div class="article-content">
                 <?php the_content(); ?>
             </div>

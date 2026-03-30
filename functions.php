@@ -881,3 +881,14 @@ function sv_optimize_uploaded_mp4_nonblocking($post_id)
         update_post_meta($post_id, '_sv_video_opt_queued', time());
     }
 }
+
+
+add_filter('acf/update_value/type=date_time_picker', function($value, $post_id, $field) {
+    // UTCに変換されているなら9時間戻す
+    if ($value) {
+        $dt = new DateTime($value, new DateTimeZone('UTC'));
+        $dt->setTimezone(new DateTimeZone('Asia/Tokyo'));
+        return $dt->format('Y-m-d H:i:s');
+    }
+    return $value;
+}, 20, 3);

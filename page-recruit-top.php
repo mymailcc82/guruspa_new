@@ -248,6 +248,8 @@ template name: 採用ページトップ
             </div>
         </div>
     </section>
+    
+    <!--
     <section class="sec03">
         <div class="sec03_bg">
             <div class="sec03_txt">
@@ -330,6 +332,8 @@ template name: 採用ページトップ
             </div>
         </div>
     </section>
+    -->
+    
     <section class="sec04" id="recurit">
         <div class="sec04_bg">
             <div class="content-width_recruit fadeup">
