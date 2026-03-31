@@ -1061,6 +1061,28 @@
             }
           }
         }
+        a {
+          display: flex;
+          flex-wrap: wrap;
+          .recruit_list-left {
+            width: 200px;
+            @include media(mobile) {
+              width: 100%;
+              text-align: center;
+            }
+            img {
+              border-radius: 10px;
+            }
+          }
+          .recruit_list-right {
+            width: calc(100% - 200px);
+            padding-left: 20px;
+            @include media(mobile) {
+              width: 100%;
+              padding: 10px 0px 0px;
+            }
+          }
+        }
 
         p {
           font-size: 14px;

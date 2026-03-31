@@ -163,7 +163,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/assets/js/all.min.js?ver=1.0.5"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/assets/js/all.min.js?ver=1.0.6"></script>
 <script src="https://yubinbango.github.io/yubinbango/yubinbango.js" charset="UTF-8"></script>
 <script>
     //ページリンクのスムーズスクロール

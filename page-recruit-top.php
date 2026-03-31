@@ -248,92 +248,8 @@ template name: 採用ページトップ
             </div>
         </div>
     </section>
-    
-    <!--
-    <section class="sec03">
-        <div class="sec03_bg">
-            <div class="sec03_txt">
-                <h3>GURUSPAの最新情報は<br>こちらをチェック！</h3>
-            </div>
-
-            <div class="content-width fadeup">
-                <div class="recruit_detall_guide">
-                    <div class="recruit_detall_guide_list">
-                        <div class="recruit_detall_guide_title">
-                            <h2>NEWS</h2>
-                            <span>お知らせ</span>
-                        </div>
-                        <div class="com-btn-border-black hidden-mobile com-btn-border--left">
-                            <a href="<?php echo home_url(); ?>/archive/">お知らせ一覧<i></i></a>
-                        </div>
-
-                    </div>
-
-                    <div class="recruit_detall_guide_list_wrap">
-                        <?php
-                        $args = array(
-                            'post_type' => 'post',
-                            'posts_per_page' => 4,
-                            //現在のtermのIDを取得
-                            'paged' => get_query_var('paged'),
-                            //$current_termを取得
-                        );
-                        ?>
-                        <?php $the_query = new WP_Query($args); ?>
-                        <?php if ($the_query->have_posts()) : ?>
-                            <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-                                <?php $title = get_the_title(); ?>
-                                <?php //60文字制限
-                                $title = mb_strimwidth($title, 0, 100, "…", "UTF-8");
-                                $title_flg = true;
-                                ?>
-                                <div class="recruit_list">
-                                    <a href="<?php the_permalink(); ?>">
-                                        <div class="recruit_category">
-                                            <?php $cats = get_the_category(); ?>
-                                            <?php
-                                            //$cats[0]の親がある場合
-                                            if (isset($cats[0]->parent) && $cats[0]->parent != 0) {
-                                                $parent_cat = get_category($cats[0]->parent);
-                                                echo '<span class="recruit_category_wrap">' . esc_html($parent_cat->name) . '</span>';
-                                            } else {
-                                                echo '<span class="recruit_category_wrap">' . esc_html($cats[0]->name) . '</span>';
-                                            }
-                                            ?>
-                                            <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
-                                            <ul>
-                                                <?php foreach ($cats as $cat) : ?>
-                                                    <?php
-                                                    //親カテゴリーがある場合はその名前を表示
-                                                    if ($cat->parent != 0) {
-                                                        echo '<li>' . esc_html($cat->name) . '</li>';
-                                                    }
-                                                    ?>
-                                                <?php endforeach; ?>
-                                            </ul>
-                                        </div>
-                                        <h3><?php the_title(); ?></h3>
-                                    </a>
-                                </div>
 
 
-
-                            <?php endwhile; ?>
-                        <?php else : ?>
-                            <p class="not_found">
-                                投稿がまだありません。
-                            </p>
-                        <?php endif; ?>
-                    </div>
-                </div>
-                <div class="com-btn-mobile hidden-sm">
-                    <a href="<?php echo home_url(); ?>/archive/">VIEW MORE<i></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-    -->
-    
     <section class="sec04" id="recurit">
         <div class="sec04_bg">
             <div class="content-width_recruit fadeup">
@@ -345,26 +261,26 @@ template name: 採用ページトップ
                         </div>
                         <div class="recruit_detall_guide_list_select">
                             <?php
-                            $category_item = "";
-                            if (!empty($_GET['category'])) {
-                                $category_item = $_GET['category'];
+                            $employment = "";
+                            if (!empty($_GET['employment'])) {
+                                $employment = $_GET['employment'];
                             };
 
 
                             ?>
                             <ul>
-                                <?php if ($category_item == "guruspa"): ?>
+                                <?php if ($employment == "arbeit"): ?>
                                     <li><a href="<?php echo home_url(); ?>/recruit_top/#recurit/" class="reload-link">すべて</a></li>
-                                    <li><a href="<?php echo home_url(); ?>/recruit_top/?category=guruspa#recurit" class="active_chenge">グルスパ求人</a></li>
-                                    <li><a href="<?php echo home_url(); ?>/recruit_top/?category=eagle#recurit" class="reload-link">サウナイーグル求人</a></li>
-                                <?php elseif ($category_item == "eagle"): ?>
+                                    <li><a href="<?php echo home_url(); ?>/recruit_top/?employment=arbeit#recurit" class="active_chenge">アルバイト</a></li>
+                                    <li><a href="<?php echo home_url(); ?>/recruit_top/?employment=fulltime#recurit" class="reload-link">正社員</a></li>
+                                <?php elseif ($employment == "fulltime"): ?>
                                     <li><a href="<?php echo home_url(); ?>/recruit_top/#recurit/" class="reload-link">すべて</a></li>
-                                    <li><a href="<?php echo home_url(); ?>/recruit_top/?category=guruspa#recurit" class="reload-link">グルスパ求人</a></li>
-                                    <li><a href="<?php echo home_url(); ?>/recruit_top/?category=eagle#recurit" class="active_chenge">サウナイーグル求人</a></li>
+                                    <li><a href="<?php echo home_url(); ?>/recruit_top/?employment=arbeit#recurit" class="reload-link">アルバイト</a></li>
+                                    <li><a href="<?php echo home_url(); ?>/recruit_top/?employment=fulltime#recurit" class="active_chenge">正社員</a></li>
                                 <?php else: ?>
                                     <li><a href="<?php echo home_url(); ?>/recruit_top/#recurit/" class="active_chenge">すべて</a></li>
-                                    <li><a href="<?php echo home_url(); ?>/recruit_top/?category=guruspa#recurit" class="reload-link">グルスパ求人</a></li>
-                                    <li><a href="<?php echo home_url(); ?>/recruit_top/?category=eagle#recurit" class="reload-link">サウナイーグル求人</a></li>
+                                    <li><a href="<?php echo home_url(); ?>/recruit_top/?employment=arbeit#recurit" class="reload-link">アルバイト</a></li>
+                                    <li><a href="<?php echo home_url(); ?>/recruit_top/?employment=fulltime#recurit" class="reload-link">正社員</a></li>
                                 <?php endif; ?>
 
                             </ul>
@@ -386,11 +302,11 @@ template name: 採用ページトップ
                         ];
                         // 選択されたカテゴリーに応じてタクソノミーを追加
                         $tax_query = array('relation' => 'AND'); // 絞り込み用の配列
-                        if ($category_item) {
+                        if ($employment) {
                             $tax_query[] = array(
-                                'taxonomy' => 'work_location', // カテゴリー（カスタムタクソノミー）
+                                'taxonomy' => 'employment_status', // カテゴリー（カスタムタクソノミー）
                                 'field'    => 'slug',
-                                'terms'    => $category_item, // 選択したカテゴリーを取得
+                                'terms'    => $employment, // 選択したカテゴリーを取得
                             );
                         }
 
@@ -407,31 +323,41 @@ template name: 採用ページトップ
                         ?>
                                 <div class="recruit_list">
                                     <a href="<?php the_permalink(); ?>">
-                                        <div class="recruit_category">
-                                            <?php
-                                            $tax_query = array('relation' => 'OR');
-                                            $taxonomies = ['work_location', 'employment_status', 'start_work', 'duties', 'others'];
-                                            foreach ($taxonomies as $taxonomy) {
-                                                $terms = get_the_terms(get_the_ID(), $taxonomy);
-                                                if ($terms && !is_wp_error($terms)) :
-                                                    foreach ($terms as $term) :
-                                            ?>
-                                                        <span class="recruit_category_wrap"><?php echo esc_html($term->name); ?></span>
-                                            <?php
-                                                    endforeach;
-                                                endif;
-                                            }
-                                            ?>
+                                        <div class="recruit_list-left">
+                                            <?php if (has_post_thumbnail()) : ?>
+                                                <?php the_post_thumbnail('medium'); ?>
+                                            <?php else : ?>
+                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/dummy-small.webp" alt="no image">
+                                            <?php endif; ?>
                                         </div>
-                                        <?php $title = get_the_title(); ?>
-                                        <?php
-                                        //日本語で38文字にして、それ以降は「...」を表示
-                                        //$title = mb_strimwidth($title, 0, 76, '…', 'UTF-8');
-                                        ?>
-                                        <h3><?php echo $title; ?></h3>
-                                        <?php /*
+                                        <div class="recruit_list-right">
+                                            <div class="recruit_category">
+                                                <?php
+                                                $tax_query = array('relation' => 'OR');
+                                                $taxonomies = ['work_location', 'employment_status', 'start_work', 'duties', 'others'];
+                                                foreach ($taxonomies as $taxonomy) {
+                                                    $terms = get_the_terms(get_the_ID(), $taxonomy);
+                                                    if ($terms && !is_wp_error($terms)) :
+                                                        foreach ($terms as $term) :
+                                                ?>
+                                                            <span class="recruit_category_wrap"><?php echo esc_html($term->name); ?></span>
+                                                <?php
+                                                        endforeach;
+                                                    endif;
+                                                }
+                                                ?>
+                                            </div>
+                                            <?php $title = get_the_title(); ?>
+                                            <?php
+                                            //日本語で38文字にして、それ以降は「...」を表示
+                                            //$title = mb_strimwidth($title, 0, 76, '…', 'UTF-8');
+                                            ?>
+                                            <h3><?php echo $title; ?></h3>
+                                            <?php /*
                                         <time><?php echo get_the_date('Y.m.d'); ?></time>
 										*/ ?>
+                                        </div>
+
                                     </a>
                                 </div>
                         <?php

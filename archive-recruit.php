@@ -35,14 +35,13 @@ $work_locations = get_terms('work_location', 'hide_empty=0');
                         <a href="javascript:void(0);" class="location_reset_button" data-location="">すべて</a>
                     </div>
                 </li>
-                <?php foreach ($work_locations as $key) : ?>
-                    <?php if ($key->slug !== 'eagle' && $key->slug !== 'guruspa') continue; ?>
+                <?php foreach ($employment_statuses as $key) : ?>
                     <li>
                         <label class="filter_button filter_button_trigger">
-                            <?php if (!empty($_GET['location']) && in_array($key->slug, $_GET['location'])): ?>
-                                <input type="checkbox" name="location[]" value="<?php echo esc_attr($key->slug); ?>" checked>
+                            <?php if (!empty($_GET['employment']) && in_array($key->slug, $_GET['employment'])): ?>
+                                <input type="checkbox" name="employment[]" value="<?php echo esc_attr($key->slug); ?>" checked>
                             <?php else: ?>
-                                <input type="checkbox" name="location[]" value="<?php echo esc_attr($key->slug); ?>">
+                                <input type="checkbox" name="employment[]" value="<?php echo esc_attr($key->slug); ?>">
                             <?php endif; ?>
                             <span><?php echo esc_html($key->name); ?></span>
                         </label>
@@ -59,22 +58,6 @@ $work_locations = get_terms('work_location', 'hide_empty=0');
                             ・条件は複数選択可能で、選択は任意です。
                         </p>
                         <div class="acdn_body_wrap">
-                            <div class="filter-section">
-                                <h4>雇用形態</h4>
-
-                                <div class="filter-section-check">
-                                    <?php foreach ($employment_statuses as $key) : ?>
-                                        <label class="custom-checkbox">
-                                            <?php if (!empty($_GET['employment']) && in_array($key->slug, $_GET['employment'])): ?>
-                                                <input type="checkbox" name="employment[]" value="<?php echo esc_attr($key->slug); ?>" checked>
-                                            <?php else: ?>
-                                                <input type="checkbox" name="employment[]" value="<?php echo esc_attr($key->slug); ?>">
-                                            <?php endif; ?>
-                                            <span><?php echo esc_html($key->name); ?></span>
-                                        </label>
-                                    <?php endforeach; ?>
-                                </div>
-                            </div>
                             <div class="filter-section">
                                 <h4>勤務地</h4>
 
@@ -114,7 +97,7 @@ $work_locations = get_terms('work_location', 'hide_empty=0');
                                 </div>
                             </div>
                             -->
-                            
+
                             <div class="filter-section">
                                 <h4>業務内容</h4>
                                 <?php
@@ -260,26 +243,35 @@ $work_locations = get_terms('work_location', 'hide_empty=0');
             ?>
 
                     <div class="recruit_list">
-
                         <a href="<?php echo esc_url(add_query_arg($_GET, get_permalink())); ?>">
-                            <div class="recruit_category">
-                                <?php
-                                $display_taxonomies = ['work_location', 'employment_status', 'start_work', 'duties', 'others'];
-                                foreach ($display_taxonomies as $taxonomy) {
-                                    $terms = get_the_terms(get_the_ID(), $taxonomy);
-                                    if ($terms && !is_wp_error($terms)) {
-                                        foreach ($terms as $term) {
-                                            echo '<span class="recruit_category_wrap">' . esc_html($term->name) . '</span>';
+                            <div class="recruit_list-left">
+                                <?php if (has_post_thumbnail()) : ?>
+                                    <?php the_post_thumbnail('medium'); ?>
+                                <?php else : ?>
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/dummy-small.webp" alt="no image">
+                                <?php endif; ?>
+                            </div>
+                            <div class="recruit_list-right">
+                                <div class="recruit_category">
+                                    <?php
+                                    $display_taxonomies = ['work_location', 'employment_status', 'start_work', 'duties', 'others'];
+                                    foreach ($display_taxonomies as $taxonomy) {
+                                        $terms = get_the_terms(get_the_ID(), $taxonomy);
+                                        if ($terms && !is_wp_error($terms)) {
+                                            foreach ($terms as $term) {
+                                                echo '<span class="recruit_category_wrap">' . esc_html($term->name) . '</span>';
+                                            }
                                         }
                                     }
-                                }
-                                ?>
-                            </div>
+                                    ?>
+                                </div>
 
-                            <h3><?php the_title(); ?></h3>
-                            <?php /*
+                                <h3><?php the_title(); ?></h3>
+                                <?php /*
                             <time><?php echo get_the_date('Y.m.d'); ?></time>
 							*/ ?>
+                            </div>
+
                         </a>
                     </div>
             <?php
@@ -317,28 +309,17 @@ $work_locations = get_terms('work_location', 'hide_empty=0');
 </script>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        const buttons = document.querySelectorAll('.filter_button[data-location]');
+        const resetButton = document.querySelector('.location_reset_button');
         const form = document.querySelector('.recruit-form');
 
-        buttons.forEach(button => {
-            button.addEventListener('click', function() {
-                // location[] チェックボックスを一度すべて外す
-                document.querySelectorAll('input[name="location[]"]').forEach(input => {
-                    input.checked = false;
-                });
-
-                // ボタンが「すべて」でなければチェックを付ける
-                const value = this.getAttribute('data-location');
-                if (value) {
-                    const checkbox = document.querySelector(`input[name="location[]"][value="${value}"]`);
-                    if (checkbox) {
-                        checkbox.checked = true;
-                    }
-                }
-
-                // フォーム送信
-                form.submit();
+        resetButton.addEventListener('click', function() {
+            // すべてのチェックボックスを外す
+            form.querySelectorAll('input[type="checkbox"]').forEach(input => {
+                input.checked = false;
             });
+
+            // フォーム送信
+            form.submit();
         });
     });
 </script>
