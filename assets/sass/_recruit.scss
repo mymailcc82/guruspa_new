@@ -105,6 +105,12 @@
             font-size: 16px;
           }
         }
+        .location_reset {
+          &.active a {
+            color: #fff;
+            background: #71360b;
+          }
+        }
         .filter_button {
           color: #71360b;
           font-weight: bold;
@@ -515,6 +521,29 @@
   width: 100%;
   padding: 25px 0 35px;
   border-bottom: solid 1px #c9c9c9;
+  a {
+    display: flex;
+    flex-wrap: wrap;
+    .recruit_list-left {
+      width: 200px;
+      @include media(mobile) {
+        width: 100%;
+        text-align: center;
+      }
+      img {
+        border-radius: 10px;
+      }
+    }
+    .recruit_list-right {
+      width: calc(100% - 200px);
+      padding-left: 20px;
+      @include media(mobile) {
+        width: 100%;
+        padding: 10px 0px 0px;
+      }
+    }
+  }
+
   ul {
     display: inline-block;
     li {
@@ -536,10 +565,6 @@
 
   &:first-child {
     border-top: solid 1px #c9c9c9;
-  }
-
-  a {
-    display: block;
   }
 
   .recruit_category {
@@ -1460,7 +1485,9 @@
           bottom: 0px;
           left: 0;
           content: '';
-          transition: width 0.3s, left 0.3s;
+          transition:
+            width 0.3s,
+            left 0.3s;
 
           //animation-play-state: paused; /* 初期状態では停止 */
         }

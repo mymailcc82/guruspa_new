@@ -26,14 +26,14 @@ template name: 採用ページトップ
                     </li>
                     <li class="fadeup-item">
                         <picture>
-                            <source media="(max-width:600px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/recruit_top/top-visual-list-03_v2.webp">
+                            <source media="(max-width:600px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/recruit_top/top-visual-list-03_v3.webp">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/recruit_top/top-visual-list-02_v2.webp" alt="">
                         </picture>
                     </li>
                     <li class="fadeup-item">
                         <picture>
                             <source media="(max-width:600px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/recruit_top/top-visual-list-04_v2.webp">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/recruit_top/top-visual-list-03_v2.webp" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/recruit_top/top-visual-list-03_v3.webp" alt="">
                         </picture>
                     </li>
                     <li class="fadeup-item">
@@ -45,7 +45,7 @@ template name: 採用ページトップ
                     <li class="fadeup-item">
                         <picture>
                             <source media="(max-width:600px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/recruit_top/top-visual-list-04-sp_v2.webp">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/recruit_top/top-visual-list-05_v2.webp" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/recruit_top/top-visual-list-05_v3.webp" alt="">
                         </picture>
                     </li>
                     <li class="fadeup-item">
@@ -57,7 +57,7 @@ template name: 採用ページトップ
                     <li class="fadeup-item">
                         <picture>
                             <source media="(max-width:600px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/recruit_top/top-visual-list-01_v3.webp">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/recruit_top/top-visual-list-07_v2.webp" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/recruit_top/top-visual-list-07_v3.webp" alt="">
                         </picture>
                     </li>
                     <li class="fadeup-item">
@@ -80,7 +80,7 @@ template name: 採用ページトップ
                     </li>
                     <li class="fadeup-item hidden-md">
                         <picture>
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/recruit_top/top-visual-list-03_v2.webp" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/recruit_top/top-visual-list-03_v3.webp" alt="">
                         </picture>
                     </li>
                     <li class="fadeup-item hidden-md">

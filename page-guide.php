@@ -168,7 +168,7 @@
                     </div>
                     <div class="sec01-center-wrap-col">
                         <dl>
-                            <dt>会員平日入泉回数券<br class="hidden-middle">(11枚)</dt>
+                            <dt>会員入泉回数券<br class="hidden-middle">(11枚)</dt>
                             <dd>
                                 <p>
                                     <small>平日用…</small><span>8,800円</span><br class="hidden-md"><small>(1回800円・有効期限3ヶ月)</small><br>
@@ -246,16 +246,20 @@
 
 
             <div class="sec02-container">
-                <h3>朝風呂（土日祝 朝7:00～10:00）</h3>
+                <h3>朝風呂（月金・土日祝 朝7:00～10:00）</h3>
                 <div class="sec02-table sec02-table--col-2">
                     <table>
                         <tr>
                             <th></th>
+                            <th>月金</th>
                             <th>土日祝日</th>
                         </tr>
                         <tr>
                             <td>
                                 一般<br><span>※中学生以上</span>
+                            </td>
+                            <td>
+                                <strong>800</strong>円
                             </td>
                             <td>
                                 <strong>900</strong>円
@@ -266,12 +270,18 @@
                                 会員
                             </td>
                             <td>
+                                <strong>750</strong>円
+                            </td>
+                            <td>
                                 <strong>850</strong>円
                             </td>
                         </tr>
                         <tr>
                             <td>
                                 子供<br><span>※小学生以下</span>
+                            </td>
+                            <td>
+                                <strong>300</strong>円
                             </td>
                             <td>
                                 <strong>300</strong>円
@@ -288,8 +298,8 @@
                     </table>
                 </div>
                 <p>
-                    ※朝風呂は土日祝日のみの営業となります<br>
-                    ※月～金の営業はございません<br>
+                    ※朝風呂は月・金・土・日・祝日のみの営業となります<br>
+                    ※平日火曜日～木曜日の営業はございません<br>
                     ※10時を過ぎられますと自動的に通常入泉料金に切り替わります
                 </p>
             </div>

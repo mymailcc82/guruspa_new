@@ -57,7 +57,7 @@ $(function () {
 $(document).ready(function () {
   // .mwform-checkbox-field の中の .mwform-checkbox-field-text を探す
   $('.mwform-checkbox-field .mwform-checkbox-field-text').html(
-    '<a href="/privacy" target="_blank" class="contact_inner_form-link">個人情報保護方針</a>に同意する'
+    '<a href="/privacy" target="_blank" class="contact_inner_form-link">個人情報保護方針</a>に同意する',
   );
 });
 
@@ -129,7 +129,7 @@ elements_fade.forEach((element) => {
         markers: false, // マーカー表示
         //once: true // 一度だけ発火
       },
-    }
+    },
   );
 });
 
@@ -186,11 +186,11 @@ elements_check.forEach((element) => {
               duration: 0.1, // 0.6秒で変化
               stagger: 0.05, // 0.1秒ごとに順番にアニメーション
               //ease: "power2.out"
-            }
+            },
           );
         },
       },
-    }
+    },
   );
 });
 
@@ -336,7 +336,7 @@ $(document).ready(function () {
 
 //読み込み時$('input[name="location[]"]')がからなら.location_reset_buttonに.activeをつける
 $(document).ready(function () {
-  if ($('input[name="location[]"]:checked').length === 0) {
+  if ($('input[name="employment[]"]:checked').length === 0) {
     $('.location_reset_button').addClass('active');
   } else {
     $('.location_reset_button').removeClass('active');
@@ -371,7 +371,7 @@ $('.location_reset_button').on('click', function () {
   $('.location_reset_button').toggleClass('active');
 
   //location[]の中身を全てcheck外す
-  $('input[name="location[]"]').prop('checked', false);
+  $('input[name="employment[]"]').prop('checked', false);
 
   // .filter_button_triggerのinputをすべて非選択にする
   $('.filter_button_trigger input').prop('checked', false);
