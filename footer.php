@@ -572,15 +572,15 @@
         },
 
         navigation: {
-            nextEl: '.swiper-button-next', // 「次へ」ボタン要素のクラス
-            prevEl: '.swiper-button-prev', // 「前へ」ボタン要素のクラス
+            nextEl: '.swiper-event-next',
+            prevEl: '.swiper-event-prev',
         },
         lazy: {
             loadPrevNext: true,
             loadOnTransitionStart: true,
         },
         pagination: {
-            el: '.swiper-pagination',
+            el: '.swiper-event-pagination',
             clickable: true,
         },
         breakpoints: {
@@ -606,15 +606,15 @@
             disableOnInteraction: false, // 操作後も自動再生を継続
         },
         navigation: {
-            nextEl: '.swiper-button-next', // 「次へ」ボタン要素のクラス
-            prevEl: '.swiper-button-prev', // 「前へ」ボタン要素のクラス
+            nextEl: '.swiper-event_2-next',
+            prevEl: '.swiper-event_2-prev',
         },
         lazy: {
             loadPrevNext: true,
             loadOnTransitionStart: true,
         },
         pagination: {
-            el: '.swiper-pagination',
+            el: '.swiper-event_2-pagination',
             clickable: true,
         },
         breakpoints: {
@@ -639,15 +639,15 @@
             disableOnInteraction: false, // 操作後も自動再生を継続
         },
         navigation: {
-            nextEl: '.swiper-button-next', // 「次へ」ボタン要素のクラス
-            prevEl: '.swiper-button-prev', // 「前へ」ボタン要素のクラス
+            nextEl: '.swiper-event_3-next',
+            prevEl: '.swiper-event_3-prev',
         },
         lazy: {
             loadPrevNext: true,
             loadOnTransitionStart: true,
         },
         pagination: {
-            el: '.swiper-pagination',
+            el: '.swiper-event_3-pagination',
             clickable: true,
         },
         breakpoints: {

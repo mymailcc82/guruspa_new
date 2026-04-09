@@ -53,11 +53,19 @@
                                     <a href="https://onsen.nifty.com/rank/year/newopen/" target="_blank" rel="noopener noreferrer">
                                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-bnr-02.png" alt="GURUSPA OPEN ">
                                     </a>
+                                    <a href="https://onsen.nifty.com/rank/year/newopen/" target="_blank" rel="noopener noreferrer" class="hidden-md">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-bnr-01.png" alt="GURUSPA OPEN">
+                                    </a>
                                 </li>
 
-                                <li>
+                                <li class="hidden-middle">
                                     <a href="https://onsen.nifty.com/rank/year/newopen/" target="_blank" rel="noopener noreferrer">
                                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-bnr-01.png" alt="GURUSPA OPEN">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://guru-spa.jp/event/1886/"">
+                                        <img src=" <?php echo get_template_directory_uri(); ?>/assets/img/top/top-bnr-20260309.webp" alt="GURUSPA OPEN ">
                                     </a>
                                 </li>
                             </ul>
@@ -162,7 +170,7 @@
                                 <?php
                                 $args = array(
                                     'post_type' => 'event', // カスタム投稿タイプ名
-                                    'posts_per_page' => 3, // 表示する記事数
+                                    'posts_per_page' => 5, // 表示する記事数
                                     'orderby' => 'date', // 日付でソート
                                     'order' => 'DESC', // 降順
                                 );
@@ -203,6 +211,9 @@
                                 endif;
                                 ?>
                             </div>
+                            <div class="swiper-button-prev swiper-event-prev"></div>
+                            <div class="swiper-button-next swiper-event-next"></div>
+                            <div class="swiper-pagination swiper-event-pagination"></div>
                         </div>
                     </div>
 
@@ -212,7 +223,7 @@
                                 <?php
                                 $args = array(
                                     'post_type' => 'event', // カスタム投稿タイプ名
-                                    'posts_per_page' => 3, // 表示する記事数
+                                    'posts_per_page' => 5, // 表示する記事数
                                     'orderby' => 'date', // 日付でソート
                                     'order' => 'DESC', // 降順
                                     //event_tagがlumitedのものを取得
@@ -252,6 +263,9 @@
                                     <?php echo '<p class="text-base">イベントが見つかりませんでした。</p>'; ?>
                                 <?php endif; ?>
                             </div>
+                            <div class="swiper-button-prev swiper-event_2-prev"></div>
+                            <div class="swiper-button-next swiper-event_2-next"></div>
+                            <div class="swiper-pagination swiper-event_2-pagination"></div>
                         </div>
                     </div>
 
@@ -300,6 +314,9 @@
                                 endif;
                                 ?>
                             </div>
+                            <div class="swiper-button-prev swiper-event_3-prev"></div>
+                            <div class="swiper-button-next swiper-event_3-next"></div>
+                            <div class="swiper-pagination swiper-event_3-pagination"></div>
                         </div>
                     </div>
                 </div>
