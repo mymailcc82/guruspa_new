@@ -8,6 +8,8 @@
             <a class="top-fixed-2" href="<?php echo home_url(); ?>/guide/#sec05"><i></i>今すぐ<br>行く！</a>
         <?php endif; ?>
         <a class="top-fixed-3" href="<?php echo home_url(); ?>/guide/"><i></i>料金・<br>ご利用案内</a>
+        <a class="top-fixed-4" href="https://reraku.jp/studio/gruspa" target="_blank" rel="noopener noreferrer"><i></i>リラク<br>予約</a>
+
     </div>
 </div>
 <footer class="footer">
@@ -147,6 +149,8 @@
         <?php endif; ?>
 
         <a class="top-fixed-3" href="<?php echo home_url(); ?>/guide/"><span>料金・<br>ご利用案内</span><i></i></a>
+
+        <a class="top-fixed-4" href="https://reraku.jp/studio/gruspa" target="_blank" rel="noopener noreferrer"><span>リラク予約</span><i></i></a>
 
     </div>
 
