@@ -8,7 +8,7 @@
             <a class="top-fixed-2" href="<?php echo home_url(); ?>/guide/#sec05"><i></i>今すぐ<br>行く！</a>
         <?php endif; ?>
         <a class="top-fixed-3" href="<?php echo home_url(); ?>/guide/"><i></i>料金・<br>ご利用案内</a>
-        <a class="top-fixed-4" href="https://reraku.jp/studio/gruspa" target="_blank" rel="noopener noreferrer"><i></i>リラク<br>予約</a>
+        <a class="top-fixed-4" href="https://reraku.jp/studio/gruspa" target="_blank" rel="noopener noreferrer"><i></i>ボディケア<br>予約</a>
 
     </div>
 </div>
@@ -150,7 +150,7 @@
 
         <a class="top-fixed-3" href="<?php echo home_url(); ?>/guide/"><span>料金・<br>ご利用案内</span><i></i></a>
 
-        <a class="top-fixed-4" href="https://reraku.jp/studio/gruspa" target="_blank" rel="noopener noreferrer"><span>リラク予約</span><i></i></a>
+        <a class="top-fixed-4" href="https://reraku.jp/studio/gruspa" target="_blank" rel="noopener noreferrer"><span>ボディケア予約</span><i></i></a>
 
     </div>
 
@@ -170,6 +170,34 @@
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/all.min.js?ver=1.0.6"></script>
 <script src="https://yubinbango.github.io/yubinbango/yubinbango.js" charset="UTF-8"></script>
 <script>
+    //lazyload .lazyload
+    document.addEventListener("DOMContentLoaded", function() {
+        var lazyImages = [].slice.call(document.querySelectorAll("img.lazyload"));
+
+        if ("IntersectionObserver" in window) {
+            let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        let lazyImage = entry.target;
+                        lazyImage.src = lazyImage.dataset.src;
+                        lazyImage.classList.remove("lazyload");
+                        lazyImageObserver.unobserve(lazyImage);
+                    }
+                });
+            });
+
+            lazyImages.forEach(function(lazyImage) {
+                lazyImageObserver.observe(lazyImage);
+            });
+        } else {
+            // Fallback for older browsers
+            lazyImages.forEach(function(lazyImage) {
+                lazyImage.src = lazyImage.dataset.src;
+                lazyImage.classList.remove("lazyload");
+            });
+        }
+    });
+
     //ページリンクのスムーズスクロール
     (function() {
         if (!location.hash) return;

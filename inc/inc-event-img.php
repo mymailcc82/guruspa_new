@@ -36,10 +36,10 @@ $category_slug_parent = '';
             ?>
             <picture>
                 <source media="(max-width: 600px)" srcset="<?php echo esc_url($default_image_url_sp); ?>">
-                <img src="<?php echo esc_url($default_image_url); ?>" alt="<?php the_title(); ?>">
+                <img class="lazyload" data-src="<?php echo esc_url($default_image_url); ?>" alt="<?php the_title(); ?>">
             </picture>
         <?php else : ?>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-default.webp" alt="<?php the_title(); ?>">
+            <img class="lazyload" data-src="<?php echo get_template_directory_uri(); ?>/assets/img/archive/archive-default.webp" alt="<?php the_title(); ?>">
         <?php endif; ?>
     <?php endif; ?>
 </div>

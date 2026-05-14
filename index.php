@@ -63,11 +63,13 @@
                                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-bnr-01.png" alt="GURUSPA OPEN">
                                     </a>
                                 </li>
+                                <?php /*
                                 <li>
                                     <a href="https://guru-spa.jp/event/1886/"">
                                         <img src=" <?php echo get_template_directory_uri(); ?>/assets/img/top/top-bnr-20260309.webp" alt="GURUSPA OPEN ">
                                     </a>
                                 </li>
+                                */ ?>
                             </ul>
                         </div>
 
@@ -370,9 +372,9 @@
                                             <li><a href="<?php the_permalink(); ?>">
                                                     <div class="sec02-list-img">
                                                         <?php if (has_post_thumbnail()) : ?>
-                                                            <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>">
+                                                            <img class="lazyload" data-src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>">
                                                         <?php else : ?>
-                                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/dummy-small_v2.webp" alt="<?php the_title(); ?>">
+                                                            <img class="lazyload" data-src="<?php echo get_template_directory_uri(); ?>/assets/img/com/dummy-small_v2.webp" alt="<?php the_title(); ?>">
                                                         <?php endif; ?>
                                                     </div>
                                                     <div class="sec02-list-txt">
@@ -415,9 +417,9 @@
                                             <li><a href="<?php the_permalink(); ?>">
                                                     <div class="sec02-list-img">
                                                         <?php if (has_post_thumbnail()) : ?>
-                                                            <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>">
+                                                            <img class="lazyload" data-src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>">
                                                         <?php else : ?>
-                                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/dummy-small_v2.webp" alt="<?php the_title(); ?>">
+                                                            <img class="lazyload" data-src="<?php echo get_template_directory_uri(); ?>/assets/img/com/dummy-small_v2.webp" alt="<?php the_title(); ?>">
                                                         <?php endif; ?>
                                                     </div>
                                                     <div class="sec02-list-txt">
