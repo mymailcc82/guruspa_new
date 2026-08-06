@@ -1,4 +1,4 @@
-<div class="top-fixed-sp">
+<div class="top-fixed-sp unker">
     <div class="top-fixed-sp-btn"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-sp-btn.png" alt=""></div>
     <div class="top-fixed-sp-wrap">
         <a class="top-fixed-1" href="<?php echo home_url(); ?>/today/"><i></i>本日の<br>イベント</a>

@@ -156,12 +156,15 @@ template name: 採用ページトップ
             <span class="text">SCROLL</span>
         </p>
 
+        <!--
         <div class="top-visual-bnr">
             <ul>
                 <li><a href="https://sauna-eagle.jp/" target="_blank" rel="noopener noreferrer"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/recruit_top/top-visual-bnr-01.svg" alt=""></a></li>
                 <li><a href="<?php echo home_url(); ?>/topics/388/" target="_blank" rel="noopener noreferrer"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/recruit_top/top-visual-bnr-02.svg" alt=""></a></li>
             </ul>
         </div>
+        -->
+        
     </div>
     <?php
     /*
@@ -174,7 +177,7 @@ template name: 採用ページトップ
     */ ?>
     <div class="hidden-md top-visual-txt-sp">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/recruit_top/top-visual-txt-sp_v5.webp" alt="温泉が好き!から始まるおもてなし">
-        <h3>オープニングスタッフ近日募集開始！</h3>
+        <h3>共に働く仲間、募集中！</h3>
         <p>
             ※当ページは現在採用サイトとして運営しております。<br>
             グルスパ公式ホームページは2025年10月頃にオープン予定です。

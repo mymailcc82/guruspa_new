@@ -91,8 +91,8 @@
                     $args = array(
                         'post_type' => 'menu', // カスタム投稿タイプのスラッグを指定
                         'posts_per_page' => -1, // すべての投稿を取得
-                        'orderby' => 'date', // 日付で並び替え
-                        'order' => 'DESC', // 降順
+                        //'orderby' => 'date', // 日付で並び替え
+                        //'order' => 'DESC', // 降順
                         //menu_category タクソノミーの特定のタームに絞る場合は以下を追加
                         'tax_query' => array(
                             array(

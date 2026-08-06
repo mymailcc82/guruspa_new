@@ -352,12 +352,18 @@
                                     </small>
                                 </td>
                                 <td>
-                                    <strong class="strong">11:00~23:00</strong><br>
-                                    <small>（ラストオーダー 22:30）</small>
+                                    <span class="border">
+                                        <strong>11:00~23:00</strong><br>（ラストオーダー 22:30）
+                                    </span>
+                                    <small class="small">
+                                        金曜日・土曜日・祝前日のみ<br>（※キッチントキワのみ）<br>
+                                        <strong>11:00～24:00</strong><br>
+                                        （ラストオーダー 23:30）
+                                    </small>
                                 </td>
                                 <td>
                                     <strong class="strong">7:00〜10:00</strong><br>
-                                    <small>（土日祝のみ）</small>
+                                    <small>（月金・土日祝のみ）</small>
                                 </td>
                             </tr>
                         </table>
@@ -405,8 +411,14 @@
 
                             <tr>
                                 <td>
-                                    <strong class="strong">11:00~23:00</strong><br>
-                                    <small>（ラストオーダー 22:30）</small>
+                                    <span class="border">
+                                        <strong>11:00~23:00</strong><br>（ラストオーダー 22:30）
+                                    </span>
+                                    <small class="small">
+                                        金曜日・土曜日・祝前日のみ<br>（※キッチントキワのみ）<br>
+                                        <strong>11:00～24:00</strong><br>
+                                        （ラストオーダー 23:30）
+                                    </small>
                                 </td>
                             </tr>
                         </table>
@@ -418,7 +430,7 @@
                             <tr>
                                 <td>
                                     <strong class="strong">7:00〜10:00</strong><br>
-                                    <small>（土日祝のみ）</small>
+                                    <small>（月金・土日祝のみ）</small>
                                 </td>
                             </tr>
                         </table>

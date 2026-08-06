@@ -41,7 +41,24 @@
         #cn-notice-text {
             color: #fff;
         }
+		.today .sec01-col-main .swiper-wrapper .swiper-slide a .img{
+			height: calc(200 * (100vw) / 1040));
+			max-height:200px;
+			min-height:137px;
+		}
+		.today .sec01-col-main .swiper-wrapper .swiper-slide a .img img{
+			width:100%;
+			height:100%;
+			object-fit:cover;
+		}
+		@media screen and (max-width: 600px) {
+  .today .sec01-col-main .swiper-wrapper .swiper-slide a .img {
+    height: 137px;
+  }
+}
     </style>
+	
+	
 </head>
 
 <?php $header_class = 'header header-page'; ?>

@@ -275,7 +275,8 @@ if (isset($_GET['date'])) {
                                     ?>
 
                                     <?php if ($image_url): ?>
-                                        <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($key); ?>月のイベントスケジュール">
+                                        <a href="javascript:void(0);" data-img="<?php echo esc_url($image_url); ?>" class="popup-link">
+                                        <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($key); ?>月のイベントスケジュール"></a>
                                     <?php else: ?>
                                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/comming-soon.webp" alt="<?php echo esc_attr($key); ?>月のイベントスケジュール">
                                     <?php endif; ?>

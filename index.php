@@ -37,6 +37,9 @@
                 <span class="bg-item-01"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/bg-item-01_v2.webp" alt=""></span>
                 <span class="bg-item-02"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/com/bg-item-02_v2.webp" alt=""></span>
                 <span class="icon-01 icon-01_ani"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon/icon-01_v2.webp" alt=""></span>
+                <span class="bg-item-02">
+                    <a href="<?php echo home_url(); ?>/news/2700/"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/bnr/obon_price_bnr.webp" alt="お盆特別営業料金のお知らせ"></a></span>
+
                 <div class="top-visual-mv">
                     <div class="top-visual-mv-container">
                         <?php get_template_part('inc/svg-wave'); ?>
@@ -63,13 +66,11 @@
                                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-bnr-01.png" alt="GURUSPA OPEN">
                                     </a>
                                 </li>
-                                <?php /*
                                 <li>
-                                    <a href="https://guru-spa.jp/event/1886/"">
-                                        <img src=" <?php echo get_template_directory_uri(); ?>/assets/img/top/top-bnr-20260309.webp" alt="GURUSPA OPEN ">
+                                    <a href="https://guru-spa.jp/event/2678/">
+                                        <img src=" <?php echo get_template_directory_uri(); ?>/assets/img/top/top-bnr-20260730.webp" alt="【期間限定】「プリティーシリーズ ほかほか湯めぐり」開催！">
                                     </a>
                                 </li>
-                                */ ?>
                             </ul>
                         </div>
 
