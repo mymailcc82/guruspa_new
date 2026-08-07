@@ -279,6 +279,12 @@
       padding-top: 40px;
       margin-bottom: 50px;
     }
+    .content-width {
+      @include media(llg) {
+        max-width: 700px;
+      }
+    }
+
     .article-info {
       display: flex;
       position: relative;
@@ -355,9 +361,18 @@
       }
       p {
         font-size: 16px;
-        line-height: 2;
+        line-height: 1.8;
         margin-bottom: 20px;
         font-weight: 500;
+        @include media(middle) {
+          font-size: 14px;
+        }
+      }
+      a {
+        font-size: 16px;
+        line-height: 1.8;
+        font-weight: 500;
+        text-decoration: underline;
         @include media(middle) {
           font-size: 14px;
         }

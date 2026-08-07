@@ -372,6 +372,7 @@
               width: 100%;
               appearance: none;
               background-color: #fff;
+              color: #000000;
               padding: 15px;
               padding-right: 50px;
               font-size: 14px;
@@ -409,6 +410,7 @@
                 cursor: pointer;
                 text-align: center;
                 color: #c9a964;
+                display: block;
                 @include media(mobile) {
                   padding: 10px 20px;
                 }
@@ -549,6 +551,7 @@
               select {
                 width: 100%;
                 font-family: $font-gothic;
+                color: #000000;
                 @include media(mobile) {
                   padding-right: 10px;
                   background-position: right 5px center;

@@ -22,7 +22,7 @@
     </script>
     <!-- End Google Tag Manager -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css?ver=1.6.9">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css?ver=1.7.4">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Barlow+Semi+Condensed:wght@400;600;700&family=Urbanist:wght@600&family=Noto+Serif+JP:wght@200..900&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
@@ -41,24 +41,27 @@
         #cn-notice-text {
             color: #fff;
         }
-		.today .sec01-col-main .swiper-wrapper .swiper-slide a .img{
-			height: calc(200 * (100vw) / 1040));
-			max-height:200px;
-			min-height:137px;
-		}
-		.today .sec01-col-main .swiper-wrapper .swiper-slide a .img img{
-			width:100%;
-			height:100%;
-			object-fit:cover;
-		}
-		@media screen and (max-width: 600px) {
-  .today .sec01-col-main .swiper-wrapper .swiper-slide a .img {
-    height: 137px;
-  }
-}
+
+        .today .sec01-col-main .swiper-wrapper .swiper-slide a .img {
+            height: calc(200 * (100vw) / 1040));
+            max-height: 200px;
+            min-height: 137px;
+        }
+
+        .today .sec01-col-main .swiper-wrapper .swiper-slide a .img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @media screen and (max-width: 600px) {
+            .today .sec01-col-main .swiper-wrapper .swiper-slide a .img {
+                height: 137px;
+            }
+        }
     </style>
-	
-	
+
+
 </head>
 
 <?php $header_class = 'header header-page'; ?>

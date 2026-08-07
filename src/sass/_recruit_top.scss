@@ -73,7 +73,7 @@
     }
     @include media(mobile) {
       width: 100%;
-      padding-top: 140px;
+      padding-top: 70px;
     }
     .top-visual-img {
       width: 70%;
@@ -106,7 +106,7 @@
             //flex-wrap: nowrap; // ← wrapをなくす
             justify-content: center;
             //横にアニメーション
-            //animation: topVisualList 5s linear infinite;
+            animation: topVisualList 35s linear infinite;
             will-change: transform;
             backface-visibility: hidden;
           }

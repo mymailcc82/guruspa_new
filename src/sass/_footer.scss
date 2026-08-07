@@ -830,6 +830,7 @@
       height: 68px;
       width: 25%;
       border: solid 1px #3c3636;
+      border-left: none;
       //font-size: 15px;
       font-size: 2.5vw;
       font-weight: bold;
@@ -880,6 +881,7 @@
     .top-fixed-4 {
       background-color: #d8efb8;
       color: #3c3636;
+      border-right: none;
 
       i {
         width: 29px;

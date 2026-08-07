@@ -10,7 +10,8 @@
     z-index: 3;
   }
   .page-main-left-img {
-    width: calc(253 * (100vw / 1240));
+    //width: calc(253 * (100vw / 1240));
+    width: calc(253 * (100vw / 1400));
     min-width: 253px;
     max-width: 350px;
     position: absolute;
@@ -623,10 +624,14 @@
   -ms-overflow-style: none;
 
   /* Internet Explorer 10+ */
+  @include media(llg) {
+    position: relative;
+    padding: 0px 5% 0px 5%;
+    margin-bottom: 0px;
+  }
   @include media(middle) {
     position: relative;
     padding: 0px 5% 20px 5%;
-    margin-bottom: 0px;
   }
 
   ul,
