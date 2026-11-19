@@ -1,4 +1,54 @@
 <?php
+if ( ! ( defined( 'WP_DEBUG' ) && WP_DEBUG ) ) {
+	@ini_set( 'display_errors', '0' );
+	@ini_set( 'display_startup_errors', '0' );
+	@ini_set( 'log_errors', '1' );
+}
+// =============================================
+// MW WP Form: フォームページのキャッシュを抑止する
+//
+// フォームの HTML には CSRF トークン（mw_wp_form_token）が焼き込まれる。
+// 入力画面がキャッシュされると「キャッシュされた時点の他人のトークン」が配られ、
+// MW_WP_Form_Csrf::validate() が hash_equals() で失敗する。失敗時は
+// classes/controllers/class.main.php:148 が POST を保存せずリダイレクトするため、
+// 「確認画面に進まない」「入力し直した値が元に戻る」が同時に発生する。
+// （Xserver のXアクセラレータ／ブラウザキャッシュ有効時に発生。ローカルでは再現しない）
+//
+// MW WP Form 自身にも nocache 機構はあるが、send_headers フック時点では
+// get_post() が null を返すため機能していない（プラグイン側に @todo NOT WORKING と明記）。
+// そのため、クエリが確定する template_redirect でテーマ側から送出する。
+// =============================================
+add_action('template_redirect', function () {
+$form_templates = array(
+'page-entry.php',
+'page-entry-confirm.php',
+'page-entry-thanks.php',
+'page-contact-corporate.php',
+'page-contact-corporate-confirm.php',
+'page-contact-corporate-thanks.php',
+'page-contact.php',
+'page-contact-confirm.php',
+'page-contact-thanks.php',
+);
+
+$is_form_page = false;
+foreach ($form_templates as $template) {
+if (is_page_template($template)) {
+$is_form_page = true;
+break;
+}
+}
+
+if (!$is_form_page || headers_sent()) {
+return;
+}
+
+nocache_headers();
+// nginx 系リバースプロキシ（Xserver のXアクセラレータ等）向け
+header('Cache-Control: private, no-store, no-cache, must-revalidate, max-age=0');
+header('X-Accel-Expires: 0');
+});
+
 //時間を東京に設定
 date_default_timezone_set('Asia/Tokyo');
 
@@ -728,7 +778,7 @@ function output_price($price)
     if ($price) {
         return '' . number_format($price) . '<em>円</em><span>（税込）</span>';
     }
-    return '価格未設定';
+    return ' ';
 }
 
 

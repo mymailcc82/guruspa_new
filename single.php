@@ -34,8 +34,8 @@
         <div class="content-width">
             <div class="article-info">
                 <?php $cats = get_the_category(); ?>
-                <?php if ($cats[0]): ?>
-                    <span class="cat"><?php echo $cats[0]->name; ?></span>
+                <?php if ( ! empty( $cats ) ) : ?>
+                    <span class="cat"><?php echo esc_html( $cats[0]->name ); ?></span>
                 <?php endif; ?>
                 <time datetime="<?php the_time('c'); ?>"><?php the_time('Y.m.d'); ?></time>
             </div>

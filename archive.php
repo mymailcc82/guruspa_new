@@ -1,9 +1,10 @@
 <?php
-//現在のカテゴリを取得
-$category = get_queried_object();
-$category_id = $category->term_id;
-$category_name = $category->name;
-$category_slug = $category->slug;
+// 現在のカテゴリを取得（カテゴリーアーカイブ以外では空にする）
+$category      = get_queried_object();
+$is_term       = ( $category instanceof WP_Term );
+$category_id   = $is_term ? $category->term_id : 0;
+$category_name = $is_term ? $category->name    : '';
+$category_slug = $is_term ? $category->slug    : '';
 ?>
 <?php get_header(); ?>
 <main class="page-main archive">

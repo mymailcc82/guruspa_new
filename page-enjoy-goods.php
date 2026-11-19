@@ -55,8 +55,8 @@ Template Name: enjoy-goods
                 </div>
                 <div class="enjoy-wrap-img">
                     <ul>
-                        <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/goods/sec01-img-01_v2.jpg" alt=""></li>
-                        <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/goods/sec01-img-02_v2.jpg" alt=""></li>
+                        <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/goods/sec01-img-01_v2.webp" alt=""></li>
+                        <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/goods/sec01-img-02_v3.webp" alt=""></li>
                     </ul>
                 </div>
             </div>
@@ -111,11 +111,18 @@ Template Name: enjoy-goods
                     </div>
                     <p>綿棒</p>
                 </div>
-                <div class="sec02-wrap-col">
+                <div class="sec02-wrap-col sec02-wrap-col--dryer">
                     <div class="sec02-wrap-col-img">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/goods/sec02-icon-05.svg" alt="">
                     </div>
-                    <p>ドライヤー<br>（女性はすべてRefa）</p>
+                    <p>
+                        ドライヤー
+                        <span class="sec02-dryer-detail">
+                            <span>女性：Refa・KINUJO</span>
+                            <span>男性：ゴリラのひとふき</span>
+                            <span>など特別ドライヤーも設置</span>
+                        </span>
+                    </p>
                 </div>
 
                 <div class="sec02-wrap-col">

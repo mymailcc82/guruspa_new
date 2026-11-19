@@ -100,10 +100,10 @@
                                 一般<br><span>※中学生以上</span>
                             </td>
                             <td>
-                                <strong>980</strong>円
+                                <strong>1,000</strong>円
                             </td>
                             <td>
-                                <strong>1,180</strong>円
+                                <strong>1,200</strong>円
                             </td>
                         </tr>
                         <tr>
@@ -111,10 +111,10 @@
                                 会員
                             </td>
                             <td>
-                                <strong>930</strong>円
+                                <strong>950</strong>円
                             </td>
                             <td>
-                                <strong>1,130</strong>円
+                                <strong>1,150</strong>円
                             </td>
                         </tr>
                         <tr>
@@ -236,7 +236,9 @@
                     </table>
                 </div>
                 <p>
-                    ※発汗エリア料金には専用ウェア・岩盤浴用大判タオルが含まれます。<br>
+                    ※発汗エリア料金には館内着（専用ウェア）・岩盤浴用大判タオルが含まれます。<br>
+                    ※館内着は一度のご利用中１回無料にて交換が可能です。フロントにてお申し付けください。<br>
+                    ※岩盤浴用大判タオルの交換は１回200円頂戴いたします。<br>
                     ※小学生未満のお子様はご利用できません。
                 </p>
             </div>
@@ -259,10 +261,10 @@
                                 一般<br><span>※中学生以上</span>
                             </td>
                             <td>
-                                <strong>800</strong>円
+                                <strong>820</strong>円
                             </td>
                             <td>
-                                <strong>900</strong>円
+                                <strong>920</strong>円
                             </td>
                         </tr>
                         <tr>
@@ -270,10 +272,10 @@
                                 会員
                             </td>
                             <td>
-                                <strong>750</strong>円
+                                <strong>770</strong>円
                             </td>
                             <td>
-                                <strong>850</strong>円
+                                <strong>870</strong>円
                             </td>
                         </tr>
                         <tr>
@@ -334,12 +336,12 @@
                             <tr>
                                 <td>
                                     <span class="border">
-                                        <strong>10:00~24:00</strong><br>（最終受付 23:00）
+                                        <strong>10:00~24:00</strong><br>（最終受付 23:20）
                                     </span>
                                     <small class="small">
                                         金曜日・土曜日・祝前日のみ<br>
                                         <strong>10:00～26:00</strong><br>
-                                        （最終受付 25:00）
+                                        （最終受付 25:20）
                                     </small>
                                 </td>
                                 <td>
@@ -377,12 +379,12 @@
                             <tr>
                                 <td>
                                     <span class="border">
-                                        <strong>10:00~24:00</strong><br>（最終受付 23:00）
+                                        <strong>10:00~24:00</strong><br>（最終受付 23:20）
                                     </span>
                                     <small class="small">
                                         金曜日・土曜日・祝前日のみ<br>
                                         <strong>10:00～26:00</strong><br>
-                                        （最終受付 25:00）
+                                        （最終受付 25:20）
                                     </small>
                                 </td>
                             </tr>
@@ -449,7 +451,7 @@
                             </tr>
 
                             <tr>
-                                <td>10:00～24:00<br><small>（最終受付 23:00）</small></td>
+                                <td>10:00～24:00<br><small>（最終受付 23:20）</small></td>
                                 <td>10:00～23:15</td>
                                 <td>11:00〜23:00<br><small>（ラストオーダー 22:30）</small></td>
                                 <td>7:00〜10:00<br><small>（土日祝のみ）</small></td>
@@ -732,6 +734,9 @@
                                     <li>小学生以下のお子様は必ず保護者の同伴が必要です。</li>
                                     <li>成人保護者の同伴のない18歳未満のお客様の施設ご利用は、<span>22時までのご利用</span>となります。</li>
                                     <li>身長120cm以上のお子様は混浴禁止（条例に準じます）。</li>
+                                    <li>オムツを着用したままでのご入浴はお断りさせていただいております。<br>
+                                    ※浴場へのご入室は可能です。</li>
+                                    <li>小学生未満のお子様は発汗エリアをご利用いただけません。</li>
                                 </ul>
                             </div>
                         </div>

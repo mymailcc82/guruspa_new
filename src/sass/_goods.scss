@@ -91,6 +91,29 @@
             }
           }
         }
+        // ドライヤー（特別ドライヤーの説明は1行ずつ折り返さずに収める）
+        &.sec02-wrap-col--dryer {
+          p {
+            .sec02-dryer-detail {
+              display: block;
+              font-size: 15px;
+              span {
+                display: block;
+                font-size: inherit;
+                white-space: nowrap;
+              }
+              @include media(lg) {
+                font-size: min(15px, 1.4vw);
+              }
+              @include media(middle) {
+                font-size: min(12px, 1.45vw);
+              }
+              @include media(mobile) {
+                font-size: min(12px, 2.5vw);
+              }
+            }
+          }
+        }
       }
     }
   }

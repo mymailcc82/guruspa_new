@@ -1,17 +1,33 @@
 <?php get_header(); ?>
 <style>
-    /*
-    .icon {
-        width: 160px;
-        height: 160px;
-        display: block;
-    }
+                        /* 2026/09/24 トップFV 料金・休館日バナー */
+                        .top .top-visual .top-visual-bnr ul li.top-visual-bnr-info {
+                            display: flex;
+                            justify-content: space-between;
+                            gap: 14px;
+                            max-width: 400px;
+                            width: 95%;
+                            margin-bottom: 0;
+                        }
+                        .top .top-visual .top-visual-bnr ul li.top-visual-bnr-info a {
+                            width: calc((100% - 14px) / 2);
+                        }
+                        .top .top-visual .top-visual-bnr ul li.top-visual-bnr-info img {
+                            display: block;
+                            width: 100%;
+                            height: auto;
+                        }
+                        @media screen and (max-width: 1024px) {
+                            .top .top-visual .top-visual-bnr ul li.top-visual-bnr-info {
+                                gap: 8px;
+                                width: 55%;
+                                margin-top: 10px;
+                            }
+                            .top .top-visual .top-visual-bnr ul li.top-visual-bnr-info a {
+                                width: calc((100% - 8px) / 2);
+                            }
+                        }
 
-    .clip-rect {
-        transform-box: fill-box;
-        transform-origin: 50% 100%;
-    }
-        */
 
     @media screen and (max-width: 600px) {
         .top-visual-mv-container {
@@ -66,14 +82,31 @@
                                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-bnr-01.png" alt="GURUSPA OPEN">
                                     </a>
                                 </li>
+								<!-- 2026/09/24 料金・休館日バナー追加 -->
+								<?php
+								// 日本時間 2026/11/14 0:00 を過ぎたら発汗エリアGOGOキャンペーンバナーを非表示
+$tz  = new DateTimeZone( 'Asia/Tokyo' );
+$now = new DateTimeImmutable( 'now', $tz );
+$end = new DateTimeImmutable( '2026-11-14 00:00:00', $tz );
+?>
+								
+                                <li class="top-visual-bnr-info">
+                                    <a href="https://onsen.nifty.com/matsusaka-onsen/onsen024615/">
+                                        <img src="<?php echo esc_url( home_url( '/wp-content/uploads/2026/10/vote_bnr.webp' ) ); ?>" alt="ニフティの投票受付" width="1403" height="844">
+                                    </a>
+									<?php if ( $now < $end ) : ?>
+                                    <a href="<?php echo esc_url( home_url( '/event/3011/' ) ); ?>">
+                                        <img src="<?php echo esc_url( home_url( '/wp-content/uploads/2026/10/261000_gogo_campaign.webp' ) ); ?>" alt="発汗エリアGOGOキャンペーン" width="800" height="481">
+                                    </a>
+									<?php endif; ?>
+                                </li>
+                                <!-- 2026/089/01 非表示
                                 <li>
                                     <a href="https://guru-spa.jp/event/2678/">
                                         <img src=" <?php echo get_template_directory_uri(); ?>/assets/img/top/top-bnr-20260730.webp" alt="【期間限定】「プリティーシリーズ ほかほか湯めぐり」開催！">
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="<?php echo home_url(); ?>/news/2700/"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/bnr/obon_price_bnr.webp" alt="お盆特別営業料金のお知らせ"></a>
-                                </li>
+                                -->
                             </ul>
                         </div>
 
@@ -756,15 +789,15 @@
                                     <td>
                                         一般<br><span class="note">※中学生以上</span>
                                     </td>
-                                    <td><strong>980</strong><small>円</small></td>
-                                    <td><strong>1,180</strong><small>円</small></td>
+                                    <td><strong>1,000</strong><small>円</small></td>
+                                    <td><strong>1,200</strong><small>円</small></td>
                                 </tr>
                                 <tr>
                                     <td>
                                         会員
                                     </td>
-                                    <td><strong>930</strong><small>円</small></td>
-                                    <td><strong>1,130</strong><small>円</small></td>
+                                    <td><strong>950</strong><small>円</small></td>
+                                    <td><strong>1,150</strong><small>円</small></td>
                                 </tr>
                                 <tr>
                                     <td>
