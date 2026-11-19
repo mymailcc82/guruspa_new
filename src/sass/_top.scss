@@ -1206,6 +1206,11 @@
                   align-items: center;
                   padding: 21px 20px 30px;
 
+                  @include media(middle) {
+                    padding-left: 14px;
+                    padding-right: 14px;
+                  }
+
                   @include media(mobile) {
                     height: auto;
                   }
@@ -1215,17 +1220,28 @@
                     width: 100%;
                     flex-wrap: wrap;
 
+                    // SPはカテゴリ（1段目）と日付（2段目）を縦に並べ、長いカテゴリ名でも日付と重ならないようにする
                     @include media(middle) {
-                      height: 48px;
+                      height: auto;
+                      row-gap: 6px;
                     }
 
                     .text-info-cat {
                       width: 50%;
+
+                      @include media(middle) {
+                        width: 100%;
+                      }
                     }
 
                     .text-info-term {
                       width: 50%;
                       text-align: right;
+
+                      @include media(middle) {
+                        width: 100%;
+                        text-align: left;
+                      }
                     }
                   }
 

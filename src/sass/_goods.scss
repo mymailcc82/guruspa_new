@@ -476,15 +476,15 @@
           height: auto;
           border-radius: 30px;
         }
+        // 販売場所（1F入館ゲート先 フロント前）。地図画像に対する％で位置指定し、アイコンの中心を合わせる
         .sec04-info-img-01 {
           position: absolute;
           width: 55px;
-          right: 62px;
-          bottom: 66px;
+          left: 25.5%;
+          top: 53%;
+          transform: translate(-50%, -50%);
           @include media(middle) {
-            width: calc(18 * (100vw / 390));
-            right: calc(70 * (100vw / 390));
-            bottom: calc(50 * (100vw / 390));
+            width: calc(25 * (100vw / 390));
           }
         }
         .pulse-btn {
@@ -526,19 +526,23 @@
           border-radius: 50%;
           box-sizing: border-box;
           pointer-events: none;
-          animation: pulsate 2s linear infinite;
+          animation: pulsate 2s cubic-bezier(0.25, 0.6, 0.4, 1) infinite;
+
         }
 
         .pulse-btn::after {
-          animation-delay: 1s;
+          animation-delay: -1s;
         }
 
         @keyframes pulsate {
+          // 透明な状態から始めてループのつなぎ目で輪が急に現れないようにする
           0% {
             transform: scale(1);
+            opacity: 0;
+          }
+          15% {
             opacity: 1;
           }
-
           100% {
             transform: scale(2);
             opacity: 0;
@@ -855,15 +859,15 @@
         height: auto;
         border-radius: 30px;
       }
+      // 販売場所（1F入館ゲート先 フロント前）。地図画像に対する％で位置指定し、アイコンの中心を合わせる
       .sec04-info-img-01 {
         position: absolute;
         width: 55px;
-        right: 100px;
-        bottom: 49px;
+        left: 20.5%;
+        top: 46%;
+        transform: translate(-50%, -50%);
         @include media(middle) {
-          width: calc(18 * (100vw / 390));
-          right: calc(88 * (100vw / 390));
-          bottom: calc(45 * (100vw / 390));
+          width: calc(25 * (100vw / 390));
         }
       }
       .pulse-btn {
@@ -905,19 +909,23 @@
         border-radius: 50%;
         box-sizing: border-box;
         pointer-events: none;
-        animation: pulsate 2s linear infinite;
+        animation: pulsate 2s cubic-bezier(0.25, 0.6, 0.4, 1) infinite;
+
       }
 
       .pulse-btn::after {
-        animation-delay: 1s;
+        animation-delay: -1s;
       }
 
       @keyframes pulsate {
+        // 透明な状態から始めてループのつなぎ目で輪が急に現れないようにする
         0% {
           transform: scale(1);
+          opacity: 0;
+        }
+        15% {
           opacity: 1;
         }
-
         100% {
           transform: scale(2);
           opacity: 0;

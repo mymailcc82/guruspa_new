@@ -379,16 +379,17 @@
             bottom: calc(55 * (100vw / 390));
           }
         }
+        // アメニティ・グッズ（販売場所：1F入館ゲート先 フロント前）
         .sec01-col-main-01-05 {
           position: absolute;
           width: 50px;
-          left: 383px;
-          bottom: 230px;
+          left: 101px;
+          bottom: 255px;
           z-index: 4;
           @include media(middle) {
             width: calc(50 * (100vw / 390));
-            left: calc(135 * (100vw / 390));
-            bottom: calc(80 * (100vw / 390));
+            left: calc(35 * (100vw / 390));
+            bottom: calc(90 * (100vw / 390));
           }
         }
         .sec01-col-main-01-06 {
@@ -790,19 +791,23 @@
           border-radius: 50%;
           box-sizing: border-box;
           pointer-events: none;
-          animation: pulsate 2s linear infinite;
+          animation: pulsate 2s cubic-bezier(0.25, 0.6, 0.4, 1) infinite;
+
         }
 
         .pulse-btn::after {
-          animation-delay: 1s;
+          animation-delay: -1s;
         }
 
         @keyframes pulsate {
+          // 透明な状態から始めてループのつなぎ目で輪が急に現れないようにする
           0% {
             transform: scale(1);
+            opacity: 0;
+          }
+          15% {
             opacity: 1;
           }
-
           100% {
             transform: scale(2);
             opacity: 0;

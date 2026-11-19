@@ -302,7 +302,7 @@ Template Name: enjoy-goods
                     <div class="sec04-info-txt">
                         <dl>
                             <dt>販売場所</dt>
-                            <dd>1F 待合ホール スイートラボ前</dd>
+                            <dd>1F入館ゲート先 フロント前</dd>
                         </dl>
                         <?php /*
                         <dl>
@@ -417,7 +417,7 @@ Template Name: enjoy-goods
                         <div class="sec04-info-txt">
                             <dl>
                                 <dt>販売場所</dt>
-                                <dd>1F 待合ホール スイートラボ前 </dd>
+                                <dd>1F入館ゲート先 フロント前</dd>
                             </dl>
                             <?php /*
                             <dl>

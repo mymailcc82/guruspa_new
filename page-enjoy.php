@@ -96,7 +96,7 @@ Template Name: enjoy
                             </div>
                             <div class="sec01-col-main-01-05">
                                 <a href="javascript:void(0)" class="pulse-btn popup-btn" data-id="enjoy-06">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-icon-white.webp" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/sec01-main-icon.webp" alt="">
                                     <div class="sec01-col-main-hover-txt sec01-col-main-hover-txt-01-05">
                                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enjoy/hover-text-01-05.webp" alt="">
                                     </div>
